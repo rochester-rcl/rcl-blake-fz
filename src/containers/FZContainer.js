@@ -18,8 +18,10 @@ class FZContainer extends Component {
     this.props.loadXMLAction(xml);
   }
   render() {
-    const { xml2json } = this.props;
-    if (xml2json) {
+    const { pageObjects, bad } = this.props;
+    console.log(bad);
+    console.log(pageObjects);
+    if (pageObjects) {
       return (
         <div className="fz-container">
           <h4>Hi</h4>
@@ -39,7 +41,8 @@ class FZContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    xml2json: state.xml2json,
+    bad: state.bad,
+    pageObjects: state.pageObjects,
   }
 }
 
