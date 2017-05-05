@@ -1,8 +1,5 @@
 /* @flow */
 
-// XML 2 JSON
-const X2JS = require('../../lib/x2js/xml2json.js');
-
 function xmlToJson(xml) {
 
 	// Create the return object
