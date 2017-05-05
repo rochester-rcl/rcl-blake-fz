@@ -1,7 +1,8 @@
 /* @flow */
 
 const defaultState = {
-  data: [],
+  xml2json: null,
+  currentStage: null,
 }
 
 export default function appReducer(state: Object = defaultState, action: Object): Object {

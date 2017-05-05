@@ -10,26 +10,18 @@ import { bindActionCreators } from 'redux';
 // Actions
 import * as AppActionCreators from '../actions/actions';
 
-// Semantic UI
-import { Icon } from 'semantic-ui-react';
+// Containers
+import FZContainer from './FZContainer';
 
 // CSS
 import 'semantic-ui-css/semantic.css';
 
-// XML
-import xml from '../../fz-pages/BB209.1.xml'
-
 class App extends Component {
-  componentDidMount() {
-    // Call this here to load initial data
-    this.props.loadXMLAction(xml);
-  }
   render() {
-    const { xml2json } = this.props;
-    console.log(xml2json);
+    const { loadXMLAction } = this.props;
     return (
       <div className="app-root-container">
-        <h4>Hi</h4>
+        <FZContainer loadXMLAction={loadXMLAction} />
       </div>
     );
   }
@@ -38,7 +30,6 @@ class App extends Component {
 function mapStateToProps(state) {
   // Do sorting here
   return {
-    xml2json: state.xml2json,
   }
 }
 
