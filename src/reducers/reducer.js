@@ -29,7 +29,7 @@ const normalizeZone = (zone: Object): Object => {
       lines: forceArray(lg.l) ? forceArray(lg.l).map((line) => {
         return {
           id: shortid.generate(),
-          diplomatic: line.diplomatic ? line.diplomatic['#text'] : null,
+          diplomatic: line.diplomatic ? line.diplomatic : null,
           stage: {
             id: shortid.generate(),
             content: forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
