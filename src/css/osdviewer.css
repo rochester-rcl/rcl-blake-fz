@@ -1,0 +1,64 @@
+.osd-viewer-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  border-right: 2px solid #454545;
+}
+
+.openseadragon-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.openseadragon-prompt-container {
+  color: #ccc;
+  text-align: center;
+}
+
+.openseadragon-viewer {
+  width: 100%;
+	height: 100%;
+  margin: 0 auto;
+	clear: both;
+	background: #000;
+	overflow-x: hidden !important;
+	position:absolute;
+}
+
+.osd-viewer-toolbar {
+  position: absolute;
+   display: flex !important;
+   width: 100%;
+   display: block;
+   color: #ccc;
+   margin: 0 auto;
+   top: 0px;
+   left: 0px;
+   z-index: 1000;
+   align-items: space-around;
+   background: rgba(27,28,29,0.2);
+}
+
+.osd-controls-button {
+  padding:10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.osd-controls-button.roi-selecting {
+  background-color: #ccc;
+  color: #3e4452;
+}
+
+
+.border-0,
+.border-1,
+.border-2,
+.border-3, {
+  background: rgb(0,0,0) !important;
+}

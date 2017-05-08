@@ -4,48 +4,43 @@ import React, {Component} from 'react';
 // OpenSeadragon
 import OpenSeadragon from 'openseadragon';
 
-// classnames
-const classNames = require('classnames');
-
 // Semantic UI
-import { Icon, Input } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
+
+import lodash from 'lodash';
 
 export default class OpenSeadragonViewer extends Component {
-  state: Object = {
+  state = {
     defaultOptions: {
       minZoomImageRatio: 0.3,
       defaultZoomLevel: 0.8,
       maxZoomPixelRatio: 5,
-      animationTime: 2.5,
+      animationTime: 5,
       blendTime: 0.5,
       constrainDuringPan: true,
-      springStiffness: 6,
+      springStiffness: 4,
       visibilityRatio: 0.5,
       showReferenceStrip: false,
       showNavigator:  false,
       showNavigationControl: true,
-      showControls: true,
-      toolbar: 'osd-viewer-controls',
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
     }
   }
 
-  constructor(props: Object) {
+  constructor(props) {
     super(props);
-    (this: any).initOpenSeadragon = this.initOpenSeadragon.bind(this);
-    (this: any).removeTileSources = this.removeTileSources.bind(this);
-    (this: any).setOptions = this.setOptions.bind(this);
-    (this: any).setTileSources = this.setTileSources.bind(this);
-    (this: any).renderCustomControls = this.renderCustomControls.bind(this);
-    (this: any).regions = [];
+    this.initOpenSeadragon = this.initOpenSeadragon.bind(this);
+    this.removeTileSources = this.removeTileSources.bind(this);
+    this.setOptions = this.setOptions.bind(this);
+    this.setTileSources = this.setTileSources.bind(this);
   }
 
-  componentDidMount(): void {
+  componentDidMount() {
     this.initOpenSeadragon();
   }
 
-  initOpenSeadragon(): void {
+  initOpenSeadragon() {
     const { tileSources, viewerId, options } = this.props;
     options.id = viewerId;
     options.tileSources = tileSources;
@@ -53,7 +48,7 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
   }
 
-  setOptions(options: Object): Object {
+  setOptions(options) {
     let defaultOptionsCopy = {...this.state.defaultOptions};
     Object.keys(options).forEach((optionKey) => {
       defaultOptionsCopy[optionKey] = options[optionKey];
@@ -65,44 +60,51 @@ export default class OpenSeadragonViewer extends Component {
     this.props.customButtons.find((button) => button)
   }
 
-  bindCustomControlActions(): void {
+  bindCustomControlActions() {
     this.props.customControlActions.map((control) => {
       this.openSeaDragonViewer.addControl(control);
     });
   }
 
-  removeTileSources(): void {
+  removeTileSources() {
     this.openSeaDragonViewer.world.resetItems();
   }
 
-  setTileSources(tileSources: Object): void {
+  setTileSources(tileSources) {
     this.openSeaDragonViewer.open(tileSources);
   }
 
-  renderCustomControls(): void {
-    if (!this.props.customControls) {
-      return(
-        <div className="osd-viewer-toolbar" id="osd-viewer-controls">
-          <div id="zoom-in-button" className="osd-controls-button">
-              <Icon name="plus" size="large"/>
-          </div>
-          <div id="zoom-out-button" className="osd-controls-button">
-              <Icon name="minus" size="large"/>
-          </div>
+  renderControls() {
+    return(
+      <div className="osd-viewer-toolbar" id="osd-viewer-controls">
+        <div id="zoom-in-button" className="osd-controls-button">
+          <Icon name="plus" size="large"/>
+         </div>
+        <div id="zoom-out-button" className="osd-controls-button">
+             <Icon name="minus" size="large"/>
         </div>
-      )
-    }
+      </div>);
+  }
+
+  componentWillReceiveProps(nextProps: Object, nextState: Object) {
+    if (!lodash.isEqual(this.props.tileSources, nextProps.tileSources)) this.setTileSources(nextProps.tileSources);
+  }
+
+  drawROIOverlay(pixelArray: Array<Number>): void {
+
   }
 
   render() {
     const { viewerId } = this.props;
     return (
       <div className="osd-viewer-container">
-        {this.renderCustomControls()}
+        {this.renderControls()}
+        <div ref="selectionROI" id="osd-selection-roi"></div>
         <div
           ref="openSeadragonDiv"
           className="openseadragon-viewer"
           id={viewerId}>
+          {this.props.children}
         </div>
       </div>
     );

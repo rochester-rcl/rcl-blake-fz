@@ -7,7 +7,7 @@ import { IMAGE_DIR, DEFAULT_PPI, DEFAULT_FORMAT } from '../constants/image-utils
 import shortid from 'shortid';
 
 const formatImageURL = (imageID: string): string => {
-  return IMAGE_DIR + '/' + imageID.toUpperCase() + '.' + DEFAULT_PPI + '.' + DEFAULT_FORMAT;
+  return imageID.toUpperCase() + '.' + DEFAULT_PPI + '.' + DEFAULT_FORMAT;
 }
 
 const normalizeZone = (zone: Object): Object => {
@@ -50,7 +50,7 @@ const normalizeZone = (zone: Object): Object => {
 const defaultState = {
   bad: null, // the raw bad object
   pageObjects: null,
-  currentPageObject: {
+  currentPage: {
     id: null,
     currentZone: {
       id: null,
@@ -65,26 +65,37 @@ const defaultState = {
           }
         }
       }
-    }
+    },
+    pageNo: 1,
   }
 }
 
 export default function appReducer(state: Object = defaultState, action: Object): Object {
   switch (action.type) {
     case 'XML_LOADED':
-      return {
+    let pageObjects = action.xml2json.bad.objdesc.desc.map((pageObj, index) => {
+      return({
+        id: pageObj.attributes.dbi,
+        imageURL: formatImageURL(pageObj.attributes.dbi),
+        pageNo: index,
+        pageDisplayNo: index + 1,
+        surface: { zone: pageObj.phystext.surface.zone.map((zone) => normalizeZone(zone)),
+          points: pageObj.phystext.surface.attributes.points
+        }
+      });
+    });
+    return {
         ...state,
         bad: action.xml2json,
-        pageObjects: action.xml2json.bad.objdesc.desc.map((pageObj, index) => {
-          return({
-            id: pageObj.attributes.dbi,
-            imageURL: formatImageURL(pageObj.attributes.dbi),
-            pageNo: index + 1,
-            surface: { zone: pageObj.phystext.surface.zone.map((zone) => normalizeZone(zone)),
-              points: pageObj.phystext.surface.attributes.points
-            }
-          });
-        })
+        pageObjects: pageObjects,
+        currentPage: pageObjects[0],
+    };
+
+    case 'CURRENT_PAGE_SET':
+      let { surface, ...pageInfo } = state.pageObjects[action.pageIndex];
+      return {
+        ...state,
+        currentPage: pageInfo,
       };
 
     default:

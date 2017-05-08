@@ -18,10 +18,9 @@ import 'semantic-ui-css/semantic.css';
 
 class App extends Component {
   render() {
-    const { loadXMLAction } = this.props;
     return (
       <div className="app-root-container">
-        <FZContainer loadXMLAction={loadXMLAction} />
+        <FZContainer />
       </div>
     );
   }
@@ -33,8 +32,4 @@ function mapStateToProps(state) {
   }
 }
 
-function mapActionCreatorsToProps(dispatch: Object) {
-  return bindActionCreators(AppActionCreators, dispatch);
-}
-
-export default connect(mapStateToProps, mapActionCreatorsToProps)(App);
+export default connect(mapStateToProps)(App);

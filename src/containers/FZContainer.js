@@ -5,12 +5,22 @@ import React, { Component } from 'react';
 
 // Redux
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// Actions
+import * as AppActionCreators from '../actions/actions';
 
 // XML
 import xml from '../../fz-pages/BB209.1.xml'
 
 // Components
 import LoaderModal from '../components/LoaderModal';
+import FZNavigation from '../components/FZNavigation';
+import OpenSeadragonViewer from '../components/OpenSeadragonViewer';
+import FZTextView from '../components/FZTextView';
+
+// Semantic UI
+import { Divider } from 'semantic-ui-react';
 
 class FZContainer extends Component {
   componentDidMount() {
@@ -18,13 +28,41 @@ class FZContainer extends Component {
     this.props.loadXMLAction(xml);
   }
   render() {
-    const { pageObjects, bad } = this.props;
+    const {
+      pageObjects,
+      bad,
+      currentPage,
+      goToPageAction,
+      toggleZoneROIAction,
+      toggleZoomToZoneAction
+      } = this.props;
     console.log(bad);
     console.log(pageObjects);
     if (pageObjects) {
+      let tileSources = {
+        type: 'image',
+        url: window.location.href + '/' + currentPage.imageURL,
+        crossOriginPolicy: 'Anonymous',
+        ajaxWithCredentials: false
+      }
       return (
-        <div className="fz-container">
-          <h4>Hi</h4>
+        <div className="fz-app-container">
+          <FZNavigation
+            currentPageDisplay={currentPage.pageDisplayNo}
+            currentPage={currentPage.pageNo}
+            maxPages={pageObjects.length}
+            goToPageAction={goToPageAction}
+            toggleZoneROIAction={toggleZoneROIAction}
+            toggleZoomToZoneAction={toggleZoomToZoneAction}
+          />
+          <div className="fz-display-container">
+            <OpenSeadragonViewer
+              tileSources={tileSources}
+              options={{}}
+              viewerId='fz-osd-image-viewer'
+            />
+            <FZTextView />
+          </div>
         </div>
       );
     } else {
@@ -43,7 +81,12 @@ function mapStateToProps(state) {
   return {
     bad: state.bad,
     pageObjects: state.pageObjects,
+    currentPage: state.currentPage,
   }
 }
 
-export default connect(mapStateToProps)(FZContainer);
+function mapActionCreatorsToProps(dispatch: Object) {
+  return bindActionCreators(AppActionCreators, dispatch);
+}
+
+export default connect(mapStateToProps, mapActionCreatorsToProps)(FZContainer);
