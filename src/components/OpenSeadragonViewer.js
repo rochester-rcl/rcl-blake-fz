@@ -9,6 +9,9 @@ import { Icon } from 'semantic-ui-react';
 
 import lodash from 'lodash';
 
+// shortid
+import shortid from 'shortid';
+
 export default class OpenSeadragonViewer extends Component {
   state = {
     defaultOptions: {
@@ -34,6 +37,7 @@ export default class OpenSeadragonViewer extends Component {
     this.removeTileSources = this.removeTileSources.bind(this);
     this.setOptions = this.setOptions.bind(this);
     this.setTileSources = this.setTileSources.bind(this);
+    this.drawOverlays = this.drawOverlays.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +50,7 @@ export default class OpenSeadragonViewer extends Component {
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
+    if (this.props.overlays) this.drawOverlays();
   }
 
   setOptions(options) {
@@ -90,8 +95,20 @@ export default class OpenSeadragonViewer extends Component {
     if (!lodash.isEqual(this.props.tileSources, nextProps.tileSources)) this.setTileSources(nextProps.tileSources);
   }
 
-  drawROIOverlay(pixelArray: Array<Number>): void {
-
+  drawOverlays(): void {
+    console.log('does it get called??');
+    let viewport = this.openSeaDragonViewer.viewport;
+    this.props.overlays.forEach((points) => {
+      let overlay = document.createElement('div');
+      overlay.id = shortid.generate();
+      overlay.className = 'fz-osd-overlay';
+      overlay.style.border = '2px solid #E9BC47';
+      console.log(viewport.imageToViewportRectangle(...points));
+      this.openSeaDragonViewer.addOverlay({
+        element: overlay,
+        location: viewport.imageToViewportRectangle(...points),
+      });
+    });
   }
 
   render() {

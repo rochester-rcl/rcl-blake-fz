@@ -1,79 +1,23 @@
 /* @flow */
-
-// constants
-import { IMAGE_DIR, DEFAULT_PPI, DEFAULT_FORMAT } from '../constants/image-utils';
-
-// shortid
-import shortid from 'shortid';
-
-const formatImageURL = (imageID: string): string => {
-  return imageID.toUpperCase() + '.' + DEFAULT_PPI + '.' + DEFAULT_FORMAT;
-}
-
-const normalizeZone = (zone: Object): Object => {
-  const forceArray = (arrayOrObj): Array<Object> => {
-    if (arrayOrObj) {
-      if (arrayOrObj.constructor === Array) return arrayOrObj;
-      return [arrayOrObj];
-    } else {
-      return undefined;
-    }
-  }
-
-  return {
-    id: shortid.generate(),
-    points: zone.attributes.points,
-    type: zone.attributes.type,
-    lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
-      id: shortid.generate(),
-      lines: forceArray(lg.l) ? forceArray(lg.l).map((line) => {
-        return {
-          id: shortid.generate(),
-          diplomatic: line.diplomatic ? line.diplomatic : null,
-          stage: {
-            id: shortid.generate(),
-            content: forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
-              let { attributes, text, ...rest } = stage;
-              return {
-                id: shortid.generate(),
-                type: stage.attributes ? stage.attributes.type : null,
-                ...rest,
-              }
-            }) : null,
-          }
-        }
-      }) : null,
-    }}) : null,
-  }
-}
+// Utils
+import { formatImageURL, normalizeZone, flattenZones, setZones } from '../utils/data-utils';
 
 const defaultState = {
   bad: null, // the raw bad object
   pageObjects: null,
   currentPage: {
     id: null,
-    currentZone: {
-      id: null,
-      currentLineGroup: {
-        id: null,
-        currentLine: {
-          id: null,
-          currentStage: {
-            id: null,
-            type: null,
-            text: null,
-          }
-        }
-      }
-    },
     pageNo: 1,
-  }
+  },
+  currentZones: [],
+  zones: [],
 }
 
 export default function appReducer(state: Object = defaultState, action: Object): Object {
   switch (action.type) {
     case 'XML_LOADED':
-    let pageObjects = action.xml2json.bad.objdesc.desc.map((pageObj, index) => {
+    let root = action.xml2json.bad.objdesc.desc;
+    let pageObjects = root.map((pageObj, index) => {
       return({
         id: pageObj.attributes.dbi,
         imageURL: formatImageURL(pageObj.attributes.dbi),
@@ -84,11 +28,16 @@ export default function appReducer(state: Object = defaultState, action: Object)
         }
       });
     });
+    let currentPage = pageObjects[0];
+    let currentZoneIds = currentPage.surface.zone.map((zone) => zone.id );
+    let zones = flattenZones(pageObjects);
     return {
         ...state,
         bad: action.xml2json,
         pageObjects: pageObjects,
-        currentPage: pageObjects[0],
+        currentPage: currentPage,
+        zones: zones,
+        currentZones: setZones(currentZoneIds, zones),
     };
 
     case 'CURRENT_PAGE_SET':
@@ -97,6 +46,13 @@ export default function appReducer(state: Object = defaultState, action: Object)
         ...state,
         currentPage: pageInfo,
       };
+
+    /*case 'CURRENT_ZONE_SET':
+      let currentZone =
+      return {
+        ...state,
+        currentPage: { ...state.c}
+      }*/
 
     default:
       return state;

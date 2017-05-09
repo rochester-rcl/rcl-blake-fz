@@ -22,6 +22,9 @@ import FZTextView from '../components/FZTextView';
 // Semantic UI
 import { Divider } from 'semantic-ui-react';
 
+// utils
+import { pointsToNumbers } from '../utils/data-utils';
+
 class FZContainer extends Component {
   componentDidMount() {
     // Call this here to load initial data
@@ -34,10 +37,14 @@ class FZContainer extends Component {
       currentPage,
       goToPageAction,
       toggleZoneROIAction,
-      toggleZoomToZoneAction
+      toggleZoomToZoneAction,
+      zones,
+      lineGroups,
+      lines,
+      stages,
+      currentZones,
       } = this.props;
-    console.log(bad);
-    console.log(pageObjects);
+    console.log(currentZones.map((zone) => pointsToNumbers(zone.points)));
     if (pageObjects) {
       let tileSources = {
         type: 'image',
@@ -45,6 +52,7 @@ class FZContainer extends Component {
         crossOriginPolicy: 'Anonymous',
         ajaxWithCredentials: false
       }
+
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -60,6 +68,7 @@ class FZContainer extends Component {
               tileSources={tileSources}
               options={{}}
               viewerId='fz-osd-image-viewer'
+              overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
             />
             <FZTextView />
           </div>
@@ -82,6 +91,8 @@ function mapStateToProps(state) {
     bad: state.bad,
     pageObjects: state.pageObjects,
     currentPage: state.currentPage,
+    zones: state.zones,
+    currentZones: state.currentZones,
   }
 }
 
