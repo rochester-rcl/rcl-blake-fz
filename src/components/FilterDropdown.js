@@ -28,10 +28,9 @@ export default class FilterDropdown extends Component {
     }
     console.log('placeholder', placeholderValues);
     return(
-      <div className="itf-filter-dropdown-container">
-        <h4 className="itf-filter-dropdown-label">{label}</h4>
+      <div className="fz-filter-dropdown-container">
         <Dropdown
-          className="itf-filter-dropdown"
+          className="fz-filter-dropdown"
           options={options}
           placeholder={placeholderText}
           search

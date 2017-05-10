@@ -23,6 +23,12 @@
 
 .fz-main-menu {
   background-color: #454545;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.fz-filter-dropdown-container {
+  width: 30%;
 }
 
 .fz-text-view {

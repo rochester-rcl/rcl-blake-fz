@@ -12,6 +12,9 @@ import lodash from 'lodash';
 // shortid
 import shortid from 'shortid';
 
+// utils
+import { getBounds } from '../utils/data-utils';
+
 export default class OpenSeadragonViewer extends Component {
   state = {
     defaultOptions: {
@@ -28,6 +31,7 @@ export default class OpenSeadragonViewer extends Component {
       showNavigationControl: true,
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
+      bounds: null,
     }
   }
 
@@ -50,7 +54,11 @@ export default class OpenSeadragonViewer extends Component {
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
-    if (this.props.overlays) this.drawOverlays();
+    if (this.props.overlays) {
+      this.openSeaDragonViewer.addHandler('open', () => {
+        this.drawOverlays(this.props.overlays);
+      });
+    }
   }
 
   setOptions(options) {
@@ -92,23 +100,36 @@ export default class OpenSeadragonViewer extends Component {
   }
 
   componentWillReceiveProps(nextProps: Object, nextState: Object) {
+    console.log('overlays', this.props.overlays, nextProps.overlays);
     if (!lodash.isEqual(this.props.tileSources, nextProps.tileSources)) this.setTileSources(nextProps.tileSources);
+    if (!lodash.isEqual(this.props.overlays, nextProps.overlays)) this.drawOverlays(nextProps.overlays);
   }
 
-  drawOverlays(): void {
-    console.log('does it get called??');
+  drawOverlays(overlays: Array<Object>): void {
+    this.openSeaDragonViewer.clearOverlays();
     let viewport = this.openSeaDragonViewer.viewport;
-    this.props.overlays.forEach((points) => {
+    let bounds = [];
+    overlays.forEach((points) => {
       let overlay = document.createElement('div');
       overlay.id = shortid.generate();
       overlay.className = 'fz-osd-overlay';
       overlay.style.border = '2px solid #E9BC47';
-      console.log(viewport.imageToViewportRectangle(...points));
+      let rect = viewport.imageToViewportRectangle(...points);
       this.openSeaDragonViewer.addOverlay({
         element: overlay,
-        location: viewport.imageToViewportRectangle(...points),
+        location: rect,
       });
+      bounds.push(rect);
     });
+    let { x, y, w, h } = getBounds(bounds);
+    console.log(x, y, w, h);
+    /*this.bounds = new OpenSeadragon.Point(x, y);
+    let avgX = bounds.reduce((x1, x2) => x1 + x2.x, 0) / bounds.length;
+    let avgY = bounds.reduce((y1, y2) => y1 + y2.y, 0) / bounds.length;
+    this.bounds = new OpenSeadragon.Point(avgX, avgY);*/
+    if (this.props.zoomToZones) {
+      viewport.fitBounds(new OpenSeadragon.Rect(x,y,w,h));
+    }
   }
 
   render() {

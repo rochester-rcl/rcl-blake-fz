@@ -41,13 +41,13 @@
    left: 0px;
    z-index: 1000;
    align-items: space-around;
-   background: rgba(27,28,29,0.2);
 }
 
 .osd-controls-button {
   padding:10px;
   position: relative;
   cursor: pointer;
+  background: rgba(27,28,29,0.2);
 }
 
 .osd-controls-button.roi-selecting {

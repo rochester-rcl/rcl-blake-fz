@@ -24,6 +24,14 @@ export function* goToPageSaga(goToPageAction: Object): Generator<Promise<Object>
   }
 }
 
+export function* setCurrentZonesSaga(currentZonesAction: Object): Generator<any, any, any> {
+  try {
+    yield put({ type: 'CURRENT_ZONES_SET', zoneIds: currentZonesAction.zoneIds.currentZones });
+  } catch(error) {
+    console.log(error);
+  }
+}
+
 export function* watchForLoadXML(): Generator<any, any, any> {
   yield takeEvery('LOAD_XML_FILE', loadXMLSaga);
 }
@@ -32,10 +40,15 @@ export function* watchForGoToPage(): Generator<any, any, any> {
   yield takeEvery('SET_CURRENT_PAGE', goToPageSaga);
 }
 
+export function* watchForSetCurrentZones(): Generator<any, any, any> {
+  yield takeEvery('SET_CURRENT_ZONES', setCurrentZonesSaga);
+}
+
 
 export default function* rootSaga(): Generator<any, any, any> {
   yield[
     watchForLoadXML(),
     watchForGoToPage(),
+    watchForSetCurrentZones(),
   ]
 }

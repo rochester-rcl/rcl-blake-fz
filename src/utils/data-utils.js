@@ -79,15 +79,28 @@ export const setZones = (zoneIds: Array<string>, zones: Object): Array<Object> =
 }
 
 export const pointsToNumbers = (points: string): Array<Number> => {
+  let coords = points.split(' ');
+  let usefulPoints = [coords[2], coords[0]].map((pixel) => {
+    return pixel.split(',').map((pixel) => Number(pixel))}).reduce((x,y) => x.concat(y));
+  let x = usefulPoints[0];
+  let y = usefulPoints[1];
+  let w = usefulPoints[2] - x;
+  let h = usefulPoints[3] - y;
+  return [x, y, w, h];
+}
 
-  let pixelCoords = points.split(' ').map((pixelTuple) => {
-    return pixelTuple.split(',');
-  }).reduce((x,y) => x.concat(y)).map((pixel) => parseInt(pixel, 10));
-  console.log(pixelCoords);
-  let x = pixelCoords[0];
-  let y = pixelCoords[3];
-  let w = x - pixelCoords[5];
-  let h = y - pixelCoords[6];
-  console.log(x, y, w, h);
-  return [x, y, w, h].map((point) => parseInt(point, 10));
+export const getBounds = (bounds: Array<Number>): Object => {
+  let minX = bounds.sort((bound1, bound2) => bound1.x - bound2.x)[0].x;
+  let minY = bounds.sort((bound1, bound2) => bound1.y - bound2.y)[0].y;
+  let maxX = bounds.sort((bound1, bound2) => {
+    if (bound1.x < bound2.x) return 1;
+    if (bound1.x > bound2.x) return -1;
+    return 0;
+  })[0].x;
+  let maxY = bounds.sort((bound1, bound2) => {
+    if (bound1.y < bound2.y) return 1;
+    if (bound1.y > bound2.y) return -1;
+    return 0;
+  })[0].y;
+  return { x: minX, y: minY, w: maxX, h: maxY };
 }

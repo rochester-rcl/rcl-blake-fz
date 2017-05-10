@@ -28,3 +28,11 @@ export function toggleZoomToZoneAction(): Object {
     type: ActionConstants.TOGGLE_ZOOM_TO_ZONE,
   }
 }
+
+export function setZonesAction(zoneIds: Array<string>): Object {
+  console.log(zoneIds);
+  return {
+    type: ActionConstants.SET_CURRENT_ZONES,
+    zoneIds: zoneIds,
+  }
+}

@@ -16,8 +16,10 @@ const FZNavigation = (props: Object) => {
       currentPageDisplay,
       maxPages,
       goToPageAction,
+      setZonesAction,
       toggleZoneROIAction,
-      toggleZoomToZoneAction } = props;
+      toggleZoomToZoneAction,
+      zoneOptions } = props;
 
     let controls = [
       {
@@ -69,6 +71,13 @@ const FZNavigation = (props: Object) => {
           key={'current_page'}
           content={'Page ' + currentPageDisplay + ' of ' + maxPages}
           disabled={true}
+        />
+        <FilterDropdown
+          className='fz-zone-select-dropdown'
+          placeholderText='Zones'
+          options={zoneOptions}
+          filterKey='currentZones'
+          updateFilterParams={setZonesAction}
         />
       </div>
     );

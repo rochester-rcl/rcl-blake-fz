@@ -41,18 +41,20 @@ export default function appReducer(state: Object = defaultState, action: Object)
     };
 
     case 'CURRENT_PAGE_SET':
+      console.log(action.pageIndex);
       let { surface, ...pageInfo } = state.pageObjects[action.pageIndex];
+      let test = surface.zone.map((zone) => zone.id );
       return {
         ...state,
         currentPage: pageInfo,
+        currentZones: setZones(test, state.zones),
       };
 
-    /*case 'CURRENT_ZONE_SET':
-      let currentZone =
+    case 'CURRENT_ZONES_SET':
       return {
         ...state,
-        currentPage: { ...state.c}
-      }*/
+        currentZones: setZones(action.zoneIds, state.zones),
+      }
 
     default:
       return state;
