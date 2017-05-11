@@ -18,14 +18,13 @@ import { getBounds } from '../utils/data-utils';
 export default class OpenSeadragonViewer extends Component {
   state = {
     defaultOptions: {
-      minZoomImageRatio: 0.3,
       defaultZoomLevel: 0.8,
-      maxZoomPixelRatio: 5,
-      animationTime: 5,
+      maxZoomPixelRatio: 2,
+      animationTime: 2,
       blendTime: 0.5,
       constrainDuringPan: true,
-      springStiffness: 4,
-      visibilityRatio: 0.5,
+      springStiffness: 1,
+      visibilityRatio: 0.2,
       showReferenceStrip: false,
       showNavigator:  false,
       showNavigationControl: true,
@@ -42,6 +41,8 @@ export default class OpenSeadragonViewer extends Component {
     this.setOptions = this.setOptions.bind(this);
     this.setTileSources = this.setTileSources.bind(this);
     this.drawOverlays = this.drawOverlays.bind(this);
+    this.zoomToOverlays = this.zoomToOverlays.bind(this);
+    this.bounds = [];
   }
 
   componentDidMount() {
@@ -54,9 +55,12 @@ export default class OpenSeadragonViewer extends Component {
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
+    this.viewport = this.openSeaDragonViewer.viewport;
     if (this.props.overlays) {
       this.openSeaDragonViewer.addHandler('open', () => {
-        this.drawOverlays(this.props.overlays);
+        this.bounds = this.props.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
+        if (this.showZoneROI) this.drawOverlays(this.bounds);
+        if (this.zoomToZones) this.zoomToBounds(this.bounds);
       });
     }
   }
@@ -100,40 +104,44 @@ export default class OpenSeadragonViewer extends Component {
   }
 
   componentWillReceiveProps(nextProps: Object, nextState: Object) {
-    console.log('overlays', this.props.overlays, nextProps.overlays);
-    if (!lodash.isEqual(this.props.tileSources, nextProps.tileSources)) this.setTileSources(nextProps.tileSources);
-    if (!lodash.isEqual(this.props.overlays, nextProps.overlays)) this.drawOverlays(nextProps.overlays);
+    if (this.props.tileSources.url !== nextProps.tileSources.url) {
+      this.setTileSources(nextProps.tileSources);
+    }
+    if (nextProps.overlays.length > 0) {
+      this.bounds = nextProps.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
+      if (nextProps.showZoneROI) this.drawOverlays();
+      if (nextProps.zoomToZones) this.zoomToOverlays();
+    } else {
+      if (nextProps.zoomToZones) this.viewport.goHome();
+    }
+    if (this.props.showZoneROI && !nextProps.showZoneROI) this.openSeaDragonViewer.clearOverlays();
   }
 
-  drawOverlays(overlays: Array<Object>): void {
+  zoomToOverlays(): void {
+    let { x, y, w, h } = getBounds(this.bounds);
+    this.viewport.fitBoundsWithConstraints(new OpenSeadragon.Rect(x,y,w,h));
+  }
+
+  drawOverlays(): void {
     this.openSeaDragonViewer.clearOverlays();
-    let viewport = this.openSeaDragonViewer.viewport;
-    let bounds = [];
-    overlays.forEach((points) => {
+    this.bounds.forEach((rect) => {
       let overlay = document.createElement('div');
       overlay.id = shortid.generate();
       overlay.className = 'fz-osd-overlay';
       overlay.style.border = '2px solid #E9BC47';
-      let rect = viewport.imageToViewportRectangle(...points);
       this.openSeaDragonViewer.addOverlay({
         element: overlay,
         location: rect,
       });
-      bounds.push(rect);
     });
-    let { x, y, w, h } = getBounds(bounds);
-    console.log(x, y, w, h);
-    /*this.bounds = new OpenSeadragon.Point(x, y);
-    let avgX = bounds.reduce((x1, x2) => x1 + x2.x, 0) / bounds.length;
-    let avgY = bounds.reduce((y1, y2) => y1 + y2.y, 0) / bounds.length;
-    this.bounds = new OpenSeadragon.Point(avgX, avgY);*/
-    if (this.props.zoomToZones) {
-      viewport.fitBounds(new OpenSeadragon.Rect(x,y,w,h));
-    }
+  }
+
+  shouldComponentUpdate(nextProps: Object, nextState: Object): boolean {
+    return false;
   }
 
   render() {
-    const { viewerId } = this.props;
+    const { viewerId, showZoneROI, zoomToZones } = this.props;
     return (
       <div className="osd-viewer-container">
         {this.renderControls()}

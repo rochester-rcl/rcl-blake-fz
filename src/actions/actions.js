@@ -17,20 +17,22 @@ export function goToPageAction(pageIndex: Number): Object {
   }
 }
 
-export function toggleZoneROIAction(): Object {
+export function toggleZoneROIAction(status: boolean): Object {
+  console.log(status);
   return {
     type: ActionConstants.TOGGLE_ZONE_ROI,
+    status: status,
   }
 }
 
-export function toggleZoomToZoneAction(): Object {
+export function toggleZoomToZoneAction(status: boolean): Object {
   return {
     type: ActionConstants.TOGGLE_ZOOM_TO_ZONE,
+    status: status,
   }
 }
 
 export function setZonesAction(zoneIds: Array<string>): Object {
-  console.log(zoneIds);
   return {
     type: ActionConstants.SET_CURRENT_ZONES,
     zoneIds: zoneIds,

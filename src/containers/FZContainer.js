@@ -45,8 +45,9 @@ class FZContainer extends Component {
       currentZones,
       zoneOptions,
       setZonesAction,
+      showZoneROI,
+      zoomToZones,
       } = this.props;
-  
     if (pageObjects) {
       let tileSources = {
         type: 'image',
@@ -66,6 +67,8 @@ class FZContainer extends Component {
             toggleZoomToZoneAction={toggleZoomToZoneAction}
             zoneOptions={zoneOptions}
             setZonesAction={setZonesAction}
+            zoomToZones={zoomToZones}
+            showZoneROI={showZoneROI}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
@@ -73,7 +76,8 @@ class FZContainer extends Component {
               options={{}}
               viewerId='fz-osd-image-viewer'
               overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
-              zoomToZones={true}
+              zoomToZones={zoomToZones}
+              showZoneROI={showZoneROI}
             />
             <FZTextView />
           </div>
@@ -92,15 +96,16 @@ class FZContainer extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log(state.currentPage);
   return {
     bad: state.bad,
     pageObjects: state.pageObjects,
     currentPage: state.currentPage,
     zones: state.zones,
     currentZones: state.currentZones,
-    zoneOptions: state.currentPage.id ? state.currentPage.surface.zone.map((zone) =>
-                                      { return { text: zone.type, value: zone.id } }) :
-                                      null,
+    zoneOptions: state.zoneOptions,
+    showZoneROI: state.showZoneROI,
+    zoomToZones: state.zoomToZones,
   }
 }
 

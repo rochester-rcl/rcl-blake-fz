@@ -11,12 +11,16 @@ export default class FilterDropdown extends Component {
   constructor(props: Object) {
     super(props);
     (this :any).handleFilterChange = this.handleFilterChange.bind(this);
+    (this :any).clearSelection = this.clearSelection.bind(this);
   }
   handleFilterChange(event: Object, { value }: Array<string>): void {
     let updatedState = {};
     updatedState[this.props.filterKey] = value;
     this.setState({ filterOptions: value });
     this.props.updateFilterParams(updatedState);
+  }
+  clearSelection(): void {
+    this.setState({ filterOptions: [] });
   }
   render() {
     const { options, placeholderText, label, populatedValues } = this.props;
@@ -26,7 +30,6 @@ export default class FilterDropdown extends Component {
     } else {
       placeholderValues = populatedValues;
     }
-    console.log('placeholder', placeholderValues);
     return(
       <div className="fz-filter-dropdown-container">
         <Dropdown

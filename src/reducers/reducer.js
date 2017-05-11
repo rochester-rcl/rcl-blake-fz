@@ -11,6 +11,9 @@ const defaultState = {
   },
   currentZones: [],
   zones: [],
+  zoneOptions: [],
+  zoomToZones: false,
+  showZoneROI: false,
 }
 
 export default function appReducer(state: Object = defaultState, action: Object): Object {
@@ -37,23 +40,34 @@ export default function appReducer(state: Object = defaultState, action: Object)
         pageObjects: pageObjects,
         currentPage: currentPage,
         zones: zones,
-        currentZones: setZones(currentZoneIds, zones),
+        zoneOptions: currentPage.surface.zone.map((zone) => { return { text: zone.type, value: zone.id } })
     };
 
     case 'CURRENT_PAGE_SET':
-      console.log(action.pageIndex);
       let { surface, ...pageInfo } = state.pageObjects[action.pageIndex];
       let test = surface.zone.map((zone) => zone.id );
       return {
         ...state,
         currentPage: pageInfo,
-        currentZones: setZones(test, state.zones),
+        zoneOptions: surface.zone.map((zone) => { return { text: zone.type, value: zone.id } }),
       };
 
     case 'CURRENT_ZONES_SET':
       return {
         ...state,
         currentZones: setZones(action.zoneIds, state.zones),
+      }
+    // These aren't handled via a saga because they're so simple
+    case 'TOGGLE_ZOOM_TO_ZONE':
+      return {
+        ...state,
+        zoomToZones: action.status,
+      }
+
+    case 'TOGGLE_ZONE_ROI':
+      return {
+        ...state,
+        showZoneROI: action.status,
       }
 
     default:
