@@ -96,7 +96,7 @@
             </physdesc>
             <phystext>
                <surface points="2531,3283 2531,0 0,0 0,3283">
-                   <zone type="body" points="529,458 2253,458 2235,2229 529,2223">
+                   <zone type="body" points="2267,2246 2267,373 487,373 487,2246">
                     <lg justify="left">
                         <l n="bb209.1.ms.03.01" indent="15"><!--should we indent the line or the stage?--><!-- the line, if indentation is applicable to all stages; I went ahead and changed a few to follow this formatting (EL) -->
                             <stage type="one">V<space extent="1"/>A<space extent="1"/>L<space extent="1"/>A</stage>
@@ -606,7 +606,7 @@
                             </l>
                         </lg>                        
                     </zone>
-                    <zone type="right" points="2204,2112 2204,793 1869,793 793,2112">
+                    <zone type="right" points="2204,2112 2204,793 1869,789 793,2112">
                         <lg justify="left" rend="writing-mode: vertical-rl; text-orientation: sideways-right"><!--this is just from TEI-->
                             <l>
                                 <stage type="one>">They stood above the heavens forsaken desolate suspended in blood</stage>

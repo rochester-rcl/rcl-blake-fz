@@ -6,28 +6,84 @@ import React, { Component } from 'react';
 // Semantic UI
 import { Segment } from 'semantic-ui-react';
 
-class FZStage extends Component {
-  render() {
-    const { expanded, stageType, text } = this.props;
-    let expandedState = expanded ? 'expanded' : 'collapsed';
+export default class FZTextView extends Component {
+  state = { expanded: false };
+  constructor(props: Object) {
+    super(props);
+    (this :any).expandStages = this.expandStages.bind(this);
+  }
+  expandStages(): void {
+    if (this.state.expanded) {
+      this.setState({ expanded: false });
+    } else {
+      this.setState({ expanded: true });
+    }
+  }
+  render(){
+    const { zones, diplomaticMode } = this.props;
+    const { expanded } = this.state;
+    let sortedZones = zones.sort((zone) => {
+      let zoneType = zone.type;
+      if (zoneType === 'left') return -1;
+      if (zoneType === 'right') return 1;
+      return 0;
+    });
+
     return(
-      <div className={'fz-text-display-stage ' + stageType + ' ' + expandedState}>
-        {text}
+      <div className="fz-text-view">
+        <div className="fz-text-display">
+          {sortedZones.map((zone) =>
+            <FZZoneView
+              key={zone.id}
+              diplomaticMode={diplomaticMode}
+              expanded={expanded}
+              expandStages={this.expandStages}
+              zone={zone}/>
+          )}
+        </div>
       </div>
     );
   }
 }
 
-const FZTextView = (props: Object) => {
+class FZStageView extends Component {
+  state = { expanded: false }
+  constructor(props: Object) {
+    super(props);
+    (this :any).expandStages = this.expandStages.bind(this);
+  }
+  expandStages(): void {
+    if (this.state.expanded) {
+      this.setState({ expanded: false });
+    } else {
+      this.setState({ expanded: true });
+    }
+  }
+  render(){
+    const { stages } = this.props;
+    const { expanded } = this.state;
+    return(
+      <div className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
+        {stages.map((stage, index) =>
+          <FZStage key={index} expanded={expanded} text={stage['#text']} stageType={stage.type} />
+        )}
+      </div>
+    );
+  }
+}
 
-  const { zones, diplomaticMode } = props;
+const FZStage = (props: Object) => {
+  const { expanded, stageType, text } = props;
+  let expandedState = expanded ? 'expanded' : 'collapsed';
+  return(
+    <div className={'fz-text-display-stage ' + stageType + ' ' + expandedState}>
+      {text}
+    </div>
+  );
+}
 
-  let sortedZones = zones.sort((zone) => {
-    let zoneType = zone.type;
-    if (zoneType === 'left') return -1;
-    if (zoneType === 'right') return 1;
-    return 0;
-  });
+const FZZoneView = (props: Object) => {
+  const { zone, expanded, expandStages, diplomaticMode } = props;
 
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
@@ -50,49 +106,11 @@ const FZTextView = (props: Object) => {
     );
   }
 
-  let stagesExpanded = false;
-
-  const expandStages = (props: Object) => {
-    if (!stagesExpanded) {
-      stagesExpanded = true;
-    } else {
-      stagesExpanded = false;
-    }
-  }
-
-  const FZStageView = (props: Object) => {
-    const { stages } = props;
-    console.log(stages);
-
-    return(
-      <div className="fz-text-display-line stages" onClick={ () => expandStages() }>
-        {stages.map((stage, index) =>
-          <FZStage key={index} expanded={stagesExpanded} text={stage['#text']} stageType={stage.type} />
-        )}
-      </div>
-    );
-  }
-
-  const FZZoneView = (props: Object) => {
-    const { zone } = props;
-    return(
-      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
-        {zone.lineGroups.map((lineGroup) =>
-          <FZLineGroupView key={lineGroup.id} lineGroup={lineGroup} />
-        )}
-      </div>
-    );
-  }
-
   return(
-    <div className="fz-text-view">
-      <div className="fz-text-display">
-        {sortedZones.map((zone) =>
-          <FZZoneView key={zone.id} zone={zone}/>
-        )}
-      </div>
+    <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
+      {zone.lineGroups.map((lineGroup) =>
+        <FZLineGroupView key={lineGroup.id} lineGroup={lineGroup} />
+      )}
     </div>
-  )
+  );
 }
-
-export default FZTextView;
