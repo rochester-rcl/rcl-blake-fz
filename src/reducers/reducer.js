@@ -14,6 +14,7 @@ const defaultState = {
   zoneOptions: [],
   zoomToZones: false,
   showZoneROI: false,
+  diplomaticMode: true,
 }
 
 export default function appReducer(state: Object = defaultState, action: Object): Object {
@@ -70,6 +71,11 @@ export default function appReducer(state: Object = defaultState, action: Object)
         showZoneROI: action.status,
       }
 
+    case 'TOGGLE_TRANSCRIPTION_MODE':
+      return {
+        ...state,
+        diplomaticMode: action.status,
+      }
     default:
       return state;
   }

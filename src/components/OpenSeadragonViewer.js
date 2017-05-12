@@ -113,8 +113,10 @@ export default class OpenSeadragonViewer extends Component {
       if (nextProps.zoomToZones) this.zoomToOverlays();
     } else {
       if (nextProps.zoomToZones) this.viewport.goHome();
+      if (nextProps.showZoneROI) this.openSeaDragonViewer.clearOverlays();
     }
     if (this.props.showZoneROI && !nextProps.showZoneROI) this.openSeaDragonViewer.clearOverlays();
+
   }
 
   zoomToOverlays(): void {

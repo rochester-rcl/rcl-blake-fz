@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 
 // semantic ui
-import { Button } from 'semantic-ui-react';
+import { Button, Radio } from 'semantic-ui-react';
 
 // Dropdown
 import FilterDropdown from './FilterDropdown';
@@ -16,7 +16,9 @@ export default class FZNavigation extends Component {
       (this :any).handleToggleZoneROI = this.handleToggleZoneROI.bind(this);
       (this :any).handleToggleZoomToZones = this.handleToggleZoomToZones.bind(this);
       (this :any).handleGoToPage = this.handleGoToPage.bind(this);
+      (this :any).handleToggleTranscriptionMode = this.handleToggleTranscriptionMode.bind(this);
     }
+
     handleToggleZoneROI(): void {
       let status;
       if (!this.props.showZoneROI) {
@@ -41,6 +43,11 @@ export default class FZNavigation extends Component {
       this.refs.zoneFilterDropdown.clearSelection();
       this.props.goToPageAction(pageNo);
     }
+
+    handleToggleTranscriptionMode(event: typeof SyntheticEvent, data: Object): void {
+      this.props.toggleTranscriptionModeAction(data.checked);
+    }
+
     render() {
       const {
         currentPage,
@@ -53,6 +60,7 @@ export default class FZNavigation extends Component {
         zoneOptions,
         showZoneROI,
         zoomToZones,
+        diplomaticMode,
       } = this.props;
 
       let controls = [
@@ -89,6 +97,7 @@ export default class FZNavigation extends Component {
           disabled: false,
         },
       ];
+      console.log('diplomatic', diplomaticMode);
       return(
         <div className='fz-main-menu'>
           {controls.map((menuItem, index) =>
@@ -115,6 +124,13 @@ export default class FZNavigation extends Component {
             filterKey='currentZones'
             ref='zoneFilterDropdown'
             updateFilterParams={setZonesAction}
+          />
+          <Radio
+            className="fz-toggle-transcription-mode-button"
+            toggle
+            checked={ diplomaticMode }
+            label={ diplomaticMode ? 'Diplomatic Transcription' : 'Genetic Transcription' }
+            onChange={this.handleToggleTranscriptionMode}
           />
         </div>
       );

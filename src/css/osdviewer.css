@@ -1,9 +1,8 @@
 .osd-viewer-container {
   position: relative;
   width: 100%;
-  height: 100%;
-  flex: 1;
-  border-right: 5px solid #454545;
+  height: 90%;
+  flex: 0.7;
 }
 
 .openseadragon-placeholder {
@@ -25,7 +24,7 @@
 	height: 100%;
   margin: 0 auto;
 	clear: both;
-	background: #000;
+	background: #1D1D1D;
 	overflow-x: hidden !important;
 	position:absolute;
 }

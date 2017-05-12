@@ -38,3 +38,10 @@ export function setZonesAction(zoneIds: Array<string>): Object {
     zoneIds: zoneIds,
   }
 }
+
+export function toggleTranscriptionModeAction(status: boolean): Object {
+  return {
+    type: ActionConstants.TOGGLE_TRANSCRIPTION_MODE,
+    status: status,
+  }
+}

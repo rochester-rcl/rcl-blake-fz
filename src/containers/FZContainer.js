@@ -38,6 +38,7 @@ class FZContainer extends Component {
       goToPageAction,
       toggleZoneROIAction,
       toggleZoomToZoneAction,
+      toggleTranscriptionModeAction,
       zones,
       lineGroups,
       lines,
@@ -47,7 +48,9 @@ class FZContainer extends Component {
       setZonesAction,
       showZoneROI,
       zoomToZones,
+      diplomaticMode,
       } = this.props;
+    
     if (pageObjects) {
       let tileSources = {
         type: 'image',
@@ -65,10 +68,12 @@ class FZContainer extends Component {
             goToPageAction={goToPageAction}
             toggleZoneROIAction={toggleZoneROIAction}
             toggleZoomToZoneAction={toggleZoomToZoneAction}
+            toggleTranscriptionModeAction={toggleTranscriptionModeAction}
             zoneOptions={zoneOptions}
             setZonesAction={setZonesAction}
             zoomToZones={zoomToZones}
             showZoneROI={showZoneROI}
+            diplomaticMode={diplomaticMode}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
@@ -79,7 +84,10 @@ class FZContainer extends Component {
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
             />
-            <FZTextView />
+            <FZTextView
+              zones={currentZones}
+              diplomaticMode={diplomaticMode}
+            />
           </div>
         </div>
       );
@@ -96,7 +104,6 @@ class FZContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state.currentPage);
   return {
     bad: state.bad,
     pageObjects: state.pageObjects,
@@ -106,6 +113,7 @@ function mapStateToProps(state) {
     zoneOptions: state.zoneOptions,
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
+    diplomaticMode: state.diplomaticMode,
   }
 }
 
