@@ -29,7 +29,7 @@
   background-color: #454545;
   display: flex;
   justify-content: flex-start;
-  padding-bottom: 5px;
+  padding: 5px 0px 5px 0px;
 }
 
 .fz-filter-dropdown {
@@ -41,8 +41,13 @@
   width: 30%;
 }
 
-.fz-toggle-transcription-mode-button.label:before {
-  background-color: #E9BC47 !important;
+.fz-toggle-transcription-mode-button {
+  position: relative;
+  padding: 10px;
+}
+
+.fz-toggle-transcription-mode-button label {
+  color: #fff !important;
 }
 
 .fz-text-view {
@@ -57,31 +62,63 @@
 
 .fz-text-display {
   color: #fff;
-  width: 100%;
+  width: 90%;
   height: 80%;
   position: relative;
   margin: 0 auto;
   top: 10%;
   padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 15px;
+  overflow: auto;
 }
 
 .fz-text-display-zone {
-  position: relative;
-  display: flex;
+  flex: 0.5;
 }
 
 .fz-text-display-zone.left {
-  float: left;
+  margin-right: auto;
 }
 
 .fz-text-display-zone.right {
-  float: right;
+  margin-left: auto;
 }
 
 .fz-text-display-zone.head {
+  display: inline-block;
+  position: absolute;
   top: 0px;
 }
 
 .fz-text-display-zone.body {
+  align-self: center;
+  flex: 1;
+}
 
+.fz-text-display-zone.foot {
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+}
+
+/** Stages **/
+.fz-text-display-line-group {
+  position: relative;
+  display: block;
+}
+.fz-text-display-line.stages {
+  display: block;
+  position: relative;
+}
+
+.fz-text-display-stage.one.collapsed {
+  position: relative;
+}
+
+.fz-text-display-stage.two.collapsed {
+  position: absolute;
 }

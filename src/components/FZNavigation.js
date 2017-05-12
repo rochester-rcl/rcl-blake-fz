@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 
 // semantic ui
-import { Button, Radio } from 'semantic-ui-react';
+import { Button, Checkbox} from 'semantic-ui-react';
 
 // Dropdown
 import FilterDropdown from './FilterDropdown';
@@ -97,7 +97,7 @@ export default class FZNavigation extends Component {
           disabled: false,
         },
       ];
-      console.log('diplomatic', diplomaticMode);
+
       return(
         <div className='fz-main-menu'>
           {controls.map((menuItem, index) =>
@@ -125,11 +125,10 @@ export default class FZNavigation extends Component {
             ref='zoneFilterDropdown'
             updateFilterParams={setZonesAction}
           />
-          <Radio
+          <Checkbox
             className="fz-toggle-transcription-mode-button"
-            toggle
             checked={ diplomaticMode }
-            label={ diplomaticMode ? 'Diplomatic Transcription' : 'Genetic Transcription' }
+            label="Diplomatic Transcription"
             onChange={this.handleToggleTranscriptionMode}
           />
         </div>

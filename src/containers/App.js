@@ -13,9 +13,6 @@ import * as AppActionCreators from '../actions/actions';
 // Containers
 import FZContainer from './FZContainer';
 
-// CSS
-import 'semantic-ui-css/semantic.css';
-
 class App extends Component {
   render() {
     return (

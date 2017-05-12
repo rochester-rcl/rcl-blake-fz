@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // CSS
+import 'semantic-ui-css/semantic.css';
 import './css/index.css';
 
 // Store

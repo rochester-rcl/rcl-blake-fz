@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux';
 import * as AppActionCreators from '../actions/actions';
 
 // XML
-import xml from '../../fz-pages/BB209.1.xml'
+import xml from '../../public/BB209.1.xml';
 
 // Components
 import LoaderModal from '../components/LoaderModal';
@@ -50,7 +50,7 @@ class FZContainer extends Component {
       zoomToZones,
       diplomaticMode,
       } = this.props;
-    
+  
     if (pageObjects) {
       let tileSources = {
         type: 'image',
