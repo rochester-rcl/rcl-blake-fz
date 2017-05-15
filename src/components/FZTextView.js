@@ -6,26 +6,23 @@ import React, { Component } from 'react';
 // Semantic UI
 import { Segment } from 'semantic-ui-react';
 
+const ZONE_MAP = {
+  left: 0,
+  body: 1,
+  head: 2,
+  foot: 3,
+  right: 4,
+}
+
 export default class FZTextView extends Component {
-  state = { expanded: false };
-  constructor(props: Object) {
-    super(props);
-    (this :any).expandStages = this.expandStages.bind(this);
-  }
-  expandStages(): void {
-    if (this.state.expanded) {
-      this.setState({ expanded: false });
-    } else {
-      this.setState({ expanded: true });
-    }
-  }
   render(){
     const { zones, diplomaticMode } = this.props;
-    const { expanded } = this.state;
-    let sortedZones = zones.sort((zone) => {
-      let zoneType = zone.type;
-      if (zoneType === 'left') return -1;
-      if (zoneType === 'right') return 1;
+    console.log(zones);
+    let sortedZones = zones.sort((zoneA, zoneB) => {
+      let zoneTypeA = zoneA.type;
+      let zoneTypeB = zoneB.type;
+      if (ZONE_MAP[zoneTypeA] < ZONE_MAP[zoneTypeB]) return -1;
+      if (ZONE_MAP[zoneTypeA] > ZONE_MAP[zoneTypeB]) return 1;
       return 0;
     });
 
@@ -36,8 +33,6 @@ export default class FZTextView extends Component {
             <FZZoneView
               key={zone.id}
               diplomaticMode={diplomaticMode}
-              expanded={expanded}
-              expandStages={this.expandStages}
               zone={zone}/>
           )}
         </div>
@@ -101,7 +96,7 @@ const FZZoneView = (props: Object) => {
     const { diplomatic } = props;
     return(
       <div key={diplomatic.id} className='fz-text-display-line diplomatic'>
-        {diplomatic['#text']}
+        {formatDiplomaticText(diplomatic)}
       </div>
     );
   }
@@ -113,4 +108,19 @@ const FZZoneView = (props: Object) => {
       )}
     </div>
   );
+}
+
+const formatDiplomaticText = (diplomatic: Object) => {
+  let formattedText;
+  let space = '';
+  if (diplomatic['#text']) {
+    if (diplomatic['#text'].constructor === Array) {
+      if (diplomatic.space) space = ' ';
+      formattedText = diplomatic['#text'].reduce((text1, text2) => text1 + space + text2)
+    } else {
+      formattedText = diplomatic['#text'];
+    }
+    console.log(formattedText);
+  }
+  return formattedText;
 }
