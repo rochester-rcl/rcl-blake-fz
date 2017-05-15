@@ -1,5 +1,6 @@
 @import url('fz-viewer.css');
 @import url('osdviewer.css');
+@import url('fz-proto.css');
 body {
   position: absolute;
   width: 100%;

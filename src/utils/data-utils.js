@@ -6,6 +6,13 @@ import { DEFAULT_PPI, DEFAULT_FORMAT } from '../constants/image-utils';
 // shortid
 import shortid from 'shortid';
 
+const CLASSES = {
+  gap: 'tei-gap',
+  cancellation_wash: 'tei-gap-cancellation',
+  erasure: 'tei-gap',
+  default: ''
+}
+
 export const formatImageURL = (imageID: string): string => {
   return imageID.toUpperCase() + '.' + DEFAULT_PPI + '.' + DEFAULT_FORMAT;
 }
@@ -103,4 +110,28 @@ export const getBounds = (bounds: Array<Number>): Object => {
     return 0;
   })[0].y;
   return { x: minX, y: minY, w: maxX, h: maxY };
+}
+
+// Pure function for processing stages
+export const formatStage = (stage: Object): Object => {
+  const handleKey = (stage, stageKey: string) => {
+    switch(stageKey) {
+      case 'gap':
+        let reason;
+        if (stage[stageKey].constructor === Array) {
+          reason = stage[stageKey][0].attributes.reason
+        } else {
+          reason = stage[stageKey].attributes.reason;
+        }
+        return CLASSES[reason];
+
+      default:
+        return CLASSES.default;
+    };
+  }
+  let className;
+  Object.keys(stage).forEach((stageKey) => {
+    className = handleKey(stage, stageKey);
+  });
+  return className;
 }

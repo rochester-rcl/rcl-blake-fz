@@ -6,6 +6,9 @@ import React, { Component } from 'react';
 // Semantic UI
 import { Segment } from 'semantic-ui-react';
 
+// utils
+import { formatStage } from '../utils/data-utils';
+
 const ZONE_MAP = {
   left: 0,
   body: 1,
@@ -17,7 +20,6 @@ const ZONE_MAP = {
 export default class FZTextView extends Component {
   render(){
     const { zones, diplomaticMode } = this.props;
-    console.log(zones);
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
       let zoneTypeB = zoneB.type;
@@ -54,13 +56,14 @@ class FZStageView extends Component {
       this.setState({ expanded: true });
     }
   }
+
   render(){
     const { stages } = this.props;
     const { expanded } = this.state;
     return(
       <div className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
         {stages.map((stage, index) =>
-          <FZStage key={index} expanded={expanded} text={stage['#text']} stageType={stage.type} />
+          <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.type} />
         )}
       </div>
     );
@@ -68,12 +71,15 @@ class FZStageView extends Component {
 }
 
 const FZStage = (props: Object) => {
-  const { expanded, stageType, text } = props;
+  const { expanded, stageType, stage } = props;
   let expandedState = expanded ? 'expanded' : 'collapsed';
+  let className = ['fz-text-display-stage', stageType, expandedState, formatStage(stage)].reduce((classA, classB) => {
+    return classA + ' ' + classB;
+  });
   return(
-    <div className={'fz-text-display-stage ' + stageType + ' ' + expandedState}>
-      {text}
-    </div>
+    <span className={className}>
+      {stage['#text'] ? stage['#text'] : '\xa0'}
+    </span>
   );
 }
 
@@ -120,7 +126,6 @@ const formatDiplomaticText = (diplomatic: Object) => {
     } else {
       formattedText = diplomatic['#text'];
     }
-    console.log(formattedText);
   }
   return formattedText;
 }

@@ -1,0 +1,179 @@
+.tei-sic {
+    color: #eee;
+    text-decoration: line-through;
+}
+
+.tei-rep-overwrite {
+    color: #eee;
+    background-color: #168bc1;
+}
+
+.tei-rep {
+    color: #168bc1;
+}
+
+.tei-del-overwrite { /* <del type="overwrite"> */
+    color: red;
+    text-decoration:line-through;
+}
+
+.tei-del-erasure { /* <del type="erasure"> */
+    color: red;
+    text-decoration:line-through;
+    background-color:lightgray;
+}
+
+.tei-del-obscured {
+    text-decoration:line-through;
+    background-color:lightgray;
+}
+
+.tei-del-overstrike { /* <del type="overstrike" */
+    color: #eee;
+    text-decoration:line-through;
+}
+
+.tei-del {
+    color: #eee;
+    text-decoration: line-through;
+}
+
+.tei-instr-pencil { /* <handShift medium="pencil"> */
+    color: #626262;
+}
+
+.tei-hr {
+    border:1px solid #eee;
+    color:#eee;
+    background-color:#eee;
+    height:1px;
+    position:relative;
+}
+
+.tei-unclear-hi {
+    color: #e085c2;
+}
+
+.tei-subst { /* <subst>; no attributes, contains child elements of <del> and <add> (see below) */
+    background-color: #e9bb01;
+}
+
+.tei-del-overstrike-subst { /* <subst><del type="overstrike> ... </subst> */
+    color:#303030;
+    text-decoration:line-through;
+    background-color: #e9bb01;
+}
+
+.tei-del-overstrike-substspan { /* <substSpan><del type="overstrike"> ... </substSpan>; uncommon, used for substitutions that span more than one line */
+    color:#303030;
+    text-decoration:line-through;
+    background-color: #e9bb01;
+}
+
+.tei-addspan-substspan { /* <substSpan><addSpan> ... <substSpan> */
+    color: #168bc1;
+    background-color:#e9bb01;
+}
+
+.tei-add-substspan { /* <substSpan><add> ... </substSpan> */
+    color: #168bc1;
+    background-color:#e9bb01;
+}
+
+.tei-add { /* all <add>'s get this text color; @type="overwrite" or "insertion"  @place="inline", "supralinear" (2 most common), also "infralinear" and "interlinear", and "margintop" bottom, left, right */
+    color: #168bc1;
+}
+
+.tei-gap-cancellation { /* <gap reason="cancellation"> also reason="cancellation_wash" & reason="cancellation_pencil" */
+    color:red;
+    background-color: rgba(204,204,204,0.7);
+    text-decoration:line-through;
+    display: inline-block;
+    width: 80%;
+}
+
+.tei-gap { /* any other <gap reason="illegible"> */
+    background-color: rgba(204,204,204,0.7);
+    display: block;
+    width: 80%;
+}
+
+.tei-hspace {
+    background-color:#e9bb01;
+}
+
+.tei-columns-table-data {
+    vertical-align: top;
+}
+
+.tei-vspace {
+    font-size: 12pt;
+    height: 1em;
+}
+
+.tei-table-extra-small {
+    width: 266px;
+}
+
+.tei-table-small {
+    width: 360px;
+}
+
+.tei-table {
+    border-collapse: separate;
+    text-align: left;
+    min-width: 400px;
+    padding: 10px;
+}
+
+.tei-preceding-delspan-substspan { /* all these "precedings" are for the second half of span tags */
+    color:#303030;
+    background-color:#e9bb01;
+    text-decoration:line-through;
+}
+
+.tei-preceding-delspan {
+    color:#303030;
+    background-color: #e9bb01;
+    text-decoration:line-through;
+}
+
+.tei-preceding-addspan-substspan {
+    color: #168bc1;
+    background-color:#e9bb01;
+}
+
+.tei-preceding-addspan {
+     color: #168bc1;
+}
+
+.tei-line-number {
+    width: 5%;
+    color:gray;
+}
+
+.tei-line-note {
+    width: 5%;
+}
+
+.tei-line-text {
+    width: 90%;
+    color: #eee;
+}
+#showme .tei-line-text{
+    color: #eee;
+}
+.tei-line-text span{
+    white-space: nowrap;
+}
+#colorKeyTable, #colorKeyTable tbody tr, #colorKeyTable tbody tr td{
+    border: none;
+    color: #eee;
+}
+#colorKeyTable tbody tr th{
+    margin-top: 10px;
+    color: #eee;
+}
+.tei-hi-italic{
+    font-style:italic;
+}
