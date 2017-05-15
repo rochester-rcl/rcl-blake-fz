@@ -111,11 +111,11 @@ export const getBounds = (bounds: Array<Number>): Object => {
   })[0];
 
   const getWidth = (min: Object, max: Object): Number => {
-    return min.width === max.width ? max.width : max.x;
+    return min.width === max.width ? max.width : (max.x + max.width) - min.x;
   }
 
   const getHeight = (min: Object, max: Object): Number => {
-    return min.height === max.height ? max.height : max.y;
+    return min.height === max.height ? max.height : (max.y + max.height) - min.y;
   }
 
   return { x: minX.x, y: minY.y, w: getWidth(minX, maxX), h: getHeight(minY, maxY) };
