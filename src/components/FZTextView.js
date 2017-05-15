@@ -60,25 +60,49 @@ class FZStageView extends Component {
   render(){
     const { stages } = this.props;
     const { expanded } = this.state;
-    return(
-      <div className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
-        {stages.map((stage, index) =>
-          <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.type} />
-        )}
-      </div>
-    );
+    if (stages) {
+      return(
+        <div className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
+          {stages.map((stage, index) =>
+            <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.type} />
+          )}
+        </div>
+      );
+    } else {
+      return(
+        <div className="fz-text-display-line stages">
+        </div>
+      );
+    }
   }
 }
 
 const FZStage = (props: Object) => {
   const { expanded, stageType, stage } = props;
+  const formatGap = (stage: Object) => {
+    if (stage.gap) {
+      let gap;
+      // todo find a beter way to handle polymorphic properties i.e. Object vs Array<Object>
+      if (stage.gap.constructor === Array) {
+        gap = stage.gap[0];
+      } else {
+        gap = stage.gap;
+      }
+      if (gap.attributes.unit === 'line') {
+        return 100;
+      } else {
+        return Number(gap.attributes.extent);
+      }
+    }
+    return 0;
+  };
   let expandedState = expanded ? 'expanded' : 'collapsed';
   let className = ['fz-text-display-stage', stageType, expandedState, formatStage(stage)].reduce((classA, classB) => {
     return classA + ' ' + classB;
   });
   return(
     <span className={className}>
-      {stage['#text'] ? stage['#text'] : '\xa0'}
+      {stage['#text'] ? stage['#text'] : '\xa0'.repeat(formatGap(stage))}
     </span>
   );
 }
@@ -106,14 +130,20 @@ const FZZoneView = (props: Object) => {
       </div>
     );
   }
-
-  return(
-    <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
-      {zone.lineGroups.map((lineGroup) =>
-        <FZLineGroupView key={lineGroup.id} lineGroup={lineGroup} />
-      )}
-    </div>
-  );
+  if (zone.lineGroups) {
+    return(
+      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
+        {zone.lineGroups.map((lineGroup) =>
+          <FZLineGroupView key={lineGroup.id} lineGroup={lineGroup} />
+        )}
+      </div>
+    );
+  } else {
+    return(
+      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
+      </div>
+    );
+  }
 }
 
 const formatDiplomaticText = (diplomatic: Object) => {

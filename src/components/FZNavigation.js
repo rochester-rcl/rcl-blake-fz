@@ -41,6 +41,7 @@ export default class FZNavigation extends Component {
 
     handleGoToPage(pageNo: Number): void {
       this.refs.zoneFilterDropdown.clearSelection();
+      this.props.setZonesAction({ currentZones: [] });
       this.props.goToPageAction(pageNo);
     }
 

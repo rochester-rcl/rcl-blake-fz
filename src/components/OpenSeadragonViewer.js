@@ -30,7 +30,7 @@ export default class OpenSeadragonViewer extends Component {
       showNavigationControl: true,
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
-      bounds: null,
+      homeButton: 'home-button',
     }
   }
 
@@ -42,6 +42,8 @@ export default class OpenSeadragonViewer extends Component {
     this.setTileSources = this.setTileSources.bind(this);
     this.drawOverlays = this.drawOverlays.bind(this);
     this.zoomToOverlays = this.zoomToOverlays.bind(this);
+    this.rotateLeft = this.rotateLeft.bind(this);
+    this.rotateRight = this.rotateRight.bind(this);
     this.bounds = [];
   }
 
@@ -91,6 +93,33 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer.open(tileSources);
   }
 
+  rotateLeft(): void {
+    let src = this.viewport.getRotation();
+    let dst = (src - 45) >= -360 ? (src - 45) : 0;
+    const animateLeft = (src, dst) => {
+      let newSrc = src - 1;
+
+      if (newSrc >= dst) {
+        this.viewport.setRotation(newSrc);
+        window.requestAnimationFrame(() => animateLeft(newSrc, dst));
+      }
+    }
+    animateLeft(src, dst);
+  }
+
+  rotateRight(): void {
+    let src = this.viewport.getRotation();
+    let dst = (src + 45) <= 360 ? (src + 45) : 0;
+    const animateRight = (src, dst) => {
+      let newSrc = src + 1;
+      if (newSrc <= dst) {
+        this.viewport.setRotation(newSrc);
+        window.requestAnimationFrame(() => animateRight(newSrc, dst));
+      }
+    }
+    animateRight(src, dst);
+  }
+
   renderControls() {
     return(
       <div className="osd-viewer-toolbar" id="osd-viewer-controls">
@@ -99,6 +128,15 @@ export default class OpenSeadragonViewer extends Component {
          </div>
         <div id="zoom-out-button" className="osd-controls-button">
              <Icon name="minus" size="large"/>
+        </div>
+        <div id="home-button" className="osd-controls-button">
+             <Icon name="home" size="large"/>
+        </div>
+        <div id="rotate-left-button" onClick={this.rotateLeft} className="osd-controls-button">
+             <Icon name="reply" size="large"/>
+        </div>
+        <div id="rotate-right-button" onClick={this.rotateRight} className="osd-controls-button">
+             <Icon name="mail forward" size="large"/>
         </div>
       </div>);
   }
@@ -121,7 +159,8 @@ export default class OpenSeadragonViewer extends Component {
 
   zoomToOverlays(): void {
     let { x, y, w, h } = getBounds(this.bounds);
-    this.viewport.fitBoundsWithConstraints(new OpenSeadragon.Rect(x,y,w,h));
+    console.log(x, y, w, h);
+    this.viewport.fitBounds(new OpenSeadragon.Rect(x,y,w,h));
   }
 
   drawOverlays(): void {
@@ -134,6 +173,7 @@ export default class OpenSeadragonViewer extends Component {
       this.openSeaDragonViewer.addOverlay({
         element: overlay,
         location: rect,
+        rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
       });
     });
   }

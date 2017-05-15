@@ -97,19 +97,28 @@ export const pointsToNumbers = (points: string): Array<Number> => {
 }
 
 export const getBounds = (bounds: Array<Number>): Object => {
-  let minX = bounds.sort((bound1, bound2) => bound1.x - bound2.x)[0].x;
-  let minY = bounds.sort((bound1, bound2) => bound1.y - bound2.y)[0].y;
+  let minX = bounds.sort((bound1, bound2) => bound1.x - bound2.x)[0];
+  let minY = bounds.sort((bound1, bound2) => bound1.y - bound2.y)[0];
   let maxX = bounds.sort((bound1, bound2) => {
     if (bound1.x < bound2.x) return 1;
     if (bound1.x > bound2.x) return -1;
     return 0;
-  })[0].x;
+  })[0];
   let maxY = bounds.sort((bound1, bound2) => {
     if (bound1.y < bound2.y) return 1;
     if (bound1.y > bound2.y) return -1;
     return 0;
-  })[0].y;
-  return { x: minX, y: minY, w: maxX, h: maxY };
+  })[0];
+
+  const getWidth = (min: Object, max: Object): Number => {
+    return min.width === max.width ? max.width : max.x;
+  }
+
+  const getHeight = (min: Object, max: Object): Number => {
+    return min.height === max.height ? max.height : max.y;
+  }
+
+  return { x: minX.x, y: minY.y, w: getWidth(minX, maxX), h: getHeight(minY, maxY) };
 }
 
 // Pure function for processing stages
