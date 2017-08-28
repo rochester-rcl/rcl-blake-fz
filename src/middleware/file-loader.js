@@ -17,13 +17,32 @@ function xmlToJson(xml) {
 	} else if (xml.nodeType === 3) { // text
 		obj = xml.nodeValue;
 	}
-
+	/* TODO change stage and diplomatic from { elementName: Array } to Array<Object(element)> */
 	// do children
 	if (xml.hasChildNodes()) {
+		let stages = [];
 		for(var i = 0; i < xml.childNodes.length; i++) {
 			var item = xml.childNodes.item(i);
 			var nodeName = item.nodeName;
-			if (typeof(obj[nodeName]) === "undefined") {
+			if (nodeName === 'diplomatic') {
+				let elements = [];
+				if (item.hasChildNodes()) {
+					item.childNodes.forEach((child) =>{
+						elements.push(xmlToJson(child));
+					});
+				}
+				obj[nodeName] = elements;
+			} else if (nodeName === 'stage') {
+				let elements = [];
+				if (item.hasChildNodes()) {
+					item.childNodes.forEach((child) => {
+						elements.push(xmlToJson(child));
+					});
+				}
+				stages.push(elements);
+				obj[nodeName] = stages;
+			}
+			else if (typeof(obj[nodeName]) === "undefined") {
 				obj[nodeName] = xmlToJson(item);
 			} else {
 				if (typeof(obj[nodeName].push) === "undefined") {

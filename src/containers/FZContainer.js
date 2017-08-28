@@ -50,7 +50,7 @@ class FZContainer extends Component {
       zoomToZones,
       diplomaticMode,
       } = this.props;
-  
+    console.log(pageObjects);
     if (pageObjects) {
       let tileSources = {
         type: 'image',

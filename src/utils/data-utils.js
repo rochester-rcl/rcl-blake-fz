@@ -42,15 +42,16 @@ export const normalizeZone = (zone: Object): Object => {
           stage: {
             id: shortid.generate(),
             zoneId: zone.id,
-            content: forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
+            content: line.stage/*forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
               let { attributes, text, ...rest } = stage;
+              console.log(stage);
               return {
                 id: shortid.generate(),
                 zoneId: zone.id,
                 type: stage.attributes ? stage.attributes.type : null,
                 ...rest,
               }
-            }) : null,
+            }) : null*/,
           }
         }
       }) : null,
