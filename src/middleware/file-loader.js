@@ -7,11 +7,25 @@ function xmlToJson(xml) {
 
 	if (xml.nodeType == 1) { // element
 		// do attributes
-		if (xml.attributes.length > 0) {
-		obj["attributes"] = {};
-			for (var j = 0; j < xml.attributes.length; j++) {
-				var attribute = xml.attributes.item(j);
-				obj["attributes"][attribute.nodeName] = attribute.nodeValue;
+		if (xml.hasChildNodes()) {
+			if (xml.attributes.length > 0) {
+			obj["attributes"] = {};
+				for (var j = 0; j < xml.attributes.length; j++) {
+					var attribute = xml.attributes.item(j);
+					obj["attributes"][attribute.nodeName] = attribute.nodeValue;
+				}
+			}
+		} else {
+			let nodeName = xml.nodeName;
+			if (nodeName !== '#text') {
+				let attributes = {};
+				if (xml.attributes) {
+					for (var j = 0; j < xml.attributes.length; j++) {
+						var attribute = xml.attributes.item(j);
+						attributes[attribute.nodeName] = attribute.nodeValue;
+					}
+				}
+				obj[nodeName] = attributes;
 			}
 		}
 	} else if (xml.nodeType === 3) { // text

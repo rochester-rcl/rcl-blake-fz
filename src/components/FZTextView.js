@@ -109,7 +109,6 @@ const FZStage = (props: Object) => {
 
 const FZZoneView = (props: Object) => {
   const { zone, expanded, expandStages, diplomaticMode } = props;
-
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
     return(
@@ -146,16 +145,24 @@ const FZZoneView = (props: Object) => {
   }
 }
 
-const formatDiplomaticText = (diplomatic: Object) => {
-  let formattedText;
-  let space = '';
-  if (diplomatic['#text']) {
-    if (diplomatic['#text'].constructor === Array) {
-      if (diplomatic.space) space = ' ';
-      formattedText = diplomatic['#text'].reduce((text1, text2) => text1 + space + text2)
-    } else {
-      formattedText = diplomatic['#text'];
+const makeSpaces = (nSpaces: Number) => {
+  let spaceArray = new Array(nSpaces);
+  spaceArray.fill(' ');
+  return spaceArray.join('');
+}
+
+const formatDiplomaticText = (diplomatic: Array) => {
+  let formattedText = '';
+  diplomatic.forEach((element) => {
+    if ( element instanceof Object) {
+      let keys = Object.keys(element);
+      if (keys.includes('space')) {
+        formattedText += makeSpaces(element.space.extent);
+      }
     }
-  }
+    if (typeof element === 'string') {
+      formattedText += element;
+    }
+  });
   return formattedText;
 }
