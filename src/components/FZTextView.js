@@ -152,17 +152,46 @@ const makeSpaces = (nSpaces: Number) => {
 }
 
 const formatDiplomaticText = (diplomatic: Array) => {
-  let formattedText = '';
+  let formatted = [];
+  const getDelType = (del) => {
+    switch(del.attributes.type) {
+      case 'overstrike':
+        return 'tei-del-overstrike';
+
+      case 'overwrite':
+        return 'tei-del-overwrite';
+
+      default:
+        return 'some-class';
+    }
+  }
+
   diplomatic.forEach((element) => {
+    console.log(element);
     if ( element instanceof Object) {
       let keys = Object.keys(element);
       if (keys.includes('space')) {
-        formattedText += makeSpaces(element.space.extent);
+        formatted.push(<span>{makeSpaces(element.space.extent)}</span>);
+      }
+      if (keys.includes('add')) {
+        let add = element.add;
+        formatted.push(<span className="tei-add">{add["#text"]}</span>);
+      }
+      if (keys.includes('del')) {
+        let deletion = element.del;
+        if (deletion.constructor !== Array) {
+          deletion = [deletion];
+        }
+
+        deletion.forEach((delElement) => {
+          let delClass = getDelType(delElement);
+          formatted.push(<span className={delClass}>{delElement["#text"]}</span>);
+        });
       }
     }
     if (typeof element === 'string') {
-      formattedText += element;
+      formatted.push(<span>{element}</span>);
     }
   });
-  return formattedText;
+  return formatted;
 }
