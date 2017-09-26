@@ -166,27 +166,46 @@ const formatDiplomaticText = (diplomatic: Array) => {
     }
   }
 
-  diplomatic.forEach((element) => {
-    console.log(element);
-    if ( element instanceof Object) {
-      let keys = Object.keys(element);
-      if (keys.includes('space')) {
-        formatted.push(<span>{makeSpaces(element.space.extent)}</span>);
-      }
-      if (keys.includes('add')) {
-        let add = element.add;
-        formatted.push(<span className="tei-add">{add["#text"]}</span>);
-      }
-      if (keys.includes('del')) {
-        let deletion = element.del;
-        if (deletion.constructor !== Array) {
-          deletion = [deletion];
-        }
+  const doDeletion = (element, dstArray) => {
+    let deletion = element;
+    if (deletion.constructor !== Array) {
+      deletion = [deletion];
+    }
+    deletion.forEach((delElement) => {
+      let delClass = getDelType(delElement);
+      dstArray.push(<span className={delClass}>{delElement["#text"]}</span>);
+    });
+  }
 
-        deletion.forEach((delElement) => {
-          let delClass = getDelType(delElement);
-          formatted.push(<span className={delClass}>{delElement["#text"]}</span>);
-        });
+  diplomatic.forEach((element) => {
+    if ( element instanceof Object) {
+      switch(element.nodeType) {
+        case 'space':
+          formatted.push(<span>{makeSpaces(element.space.extent)}</span>);
+          break;
+
+        case 'add':
+          formatted.push(<span className="tei-add">{element["#text"]}</span>);
+          break;
+
+        case 'del':
+          doDeletion(element, formatted);
+          break;
+
+        case 'subst':
+          let subst = [];
+          if (element.del) {
+            doDeletion(element.del, subst);
+          }
+
+          if (element.add) {
+            subst.push(<span className="tei-add">{element.add["#text"]}</span>);
+          }
+          formatted.push(<span className="tei-subst">{subst}</span>);
+          break;
+
+        default:
+          break;
       }
     }
     if (typeof element === 'string') {

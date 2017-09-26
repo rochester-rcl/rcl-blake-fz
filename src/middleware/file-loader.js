@@ -4,9 +4,10 @@ function xmlToJson(xml) {
 
 	// Create the return object
 	var obj = {};
-
 	if (xml.nodeType == 1) { // element
 		// do attributes
+		let nodeName = xml.nodeName;
+		obj.nodeType = nodeName;
 		if (xml.hasChildNodes()) {
 			if (xml.attributes.length > 0) {
 			obj["attributes"] = {};

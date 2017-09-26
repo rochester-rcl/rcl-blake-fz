@@ -177,3 +177,8 @@
 .tei-hi-italic{
     font-style:italic;
 }
+
+/********* Josh's css ***********/
+.tei-subst .tei-del-overstrike {
+  color:#303030;
+}
