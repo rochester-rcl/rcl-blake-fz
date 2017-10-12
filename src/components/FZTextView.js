@@ -114,17 +114,27 @@ const FZZoneView = (props: Object) => {
     return(
       <div key={lineGroup.id} className="fz-text-display-line-group">
         {lineGroup.lines.map((line) =>
-          diplomaticMode ? <FZDiplomaticView key={line.id} diplomatic={line.diplomatic} /> :
-          <FZStageView key={line.id} stages={line.stage.content} />
+          renderLine(diplomaticMode, line)
         )}
       </div>
     );
   }
 
+  const renderLine = (mode: bool, line: Object) => {
+    let indent = line.attributes.indent ? '\xa0'.repeat(Number(line.attributes.indent)) : '';
+    return (
+      <span className="fz-text-line-container">
+        {mode ? <FZDiplomaticView key={line.id} diplomatic={line.diplomatic} indent={indent} /> :
+        <FZStageView key={line.id} stages={line.stage.content} />}
+      </span>
+    );
+  }
+
   const FZDiplomaticView = (props: Object) => {
-    const { diplomatic } = props;
+    const { diplomatic, indent } = props;
     return(
       <div key={diplomatic.id} className='fz-text-display-line diplomatic'>
+        {indent}
         {formatDiplomaticText(diplomatic)}
       </div>
     );

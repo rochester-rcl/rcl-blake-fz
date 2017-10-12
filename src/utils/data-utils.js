@@ -34,10 +34,12 @@ export const normalizeZone = (zone: Object): Object => {
     lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
       id: shortid.generate(),
       zoneId: zone.id,
+      attributes: lg.attributes,
       lines: forceArray(lg.l) ? forceArray(lg.l).map((line) => {
         return {
           id: shortid.generate(),
           zoneId: zone.id,
+          attributes: line.attributes,
           diplomatic: line.diplomatic ? line.diplomatic : null,
           stage: {
             id: shortid.generate(),

@@ -111,6 +111,14 @@
   display: block;
 }
 
+.fz-text-line-container {
+  display: inline;
+}
+
+.fz-text-line-indent {
+  display: inline;
+}
+
 .fz-text-display-line.stages {
   position: relative;
   padding-bottom: 2px;
