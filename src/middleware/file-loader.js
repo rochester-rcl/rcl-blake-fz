@@ -1,7 +1,8 @@
 /* @flow */
 
 function xmlToJson(xml) {
-
+	// Handshift and unclear as objects with #text instead of arrays of text
+	
 	// Create the return object
 	var obj = {};
 	if (xml.nodeType == 1) { // element
@@ -47,6 +48,14 @@ function xmlToJson(xml) {
 					});
 				}
 				obj[nodeName] = elements;
+				if (item.attributes) {
+					let attributes = {};
+					for (var j = 0; j < item.attributes.length; j++) {
+						var attribute = item.attributes.item(j);
+						attributes[attribute.nodeName] = attribute.nodeValue;
+					}
+					obj[nodeName].attributes = attributes;
+				}
 			} else if (nodeName === 'stage') {
 				let elements = [];
 				if (item.hasChildNodes()) {

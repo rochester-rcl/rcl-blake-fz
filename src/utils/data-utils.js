@@ -28,6 +28,7 @@ export const normalizeZone = (zone: Object): Object => {
   }
 
   return {
+    // Need to somehow put vspace into linegroups array 
     id: shortid.generate(),
     points: zone.attributes.points,
     type: zone.attributes.type,

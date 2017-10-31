@@ -9,6 +9,9 @@ import { Segment } from 'semantic-ui-react';
 // utils
 import { formatStage } from '../utils/data-utils';
 
+// shortid
+import shortid from 'shortid';
+
 const ZONE_MAP = {
   left: 0,
   body: 1,
@@ -31,9 +34,9 @@ export default class FZTextView extends Component {
     return(
       <div className="fz-text-view">
         <div className="fz-text-display">
-          {sortedZones.map((zone) =>
+          {sortedZones.map((zone, index) =>
             <FZZoneView
-              key={zone.id}
+              key={index}
               diplomaticMode={diplomaticMode}
               zone={zone}/>
           )}
@@ -121,10 +124,24 @@ const FZZoneView = (props: Object) => {
   }
 
   const renderLine = (mode: bool, line: Object) => {
-    let indent = line.attributes.indent ? '\xa0'.repeat(Number(line.attributes.indent)) : '';
+    let indent = (line) => {
+      if (line.attributes) {
+
+        if (line.attributes.indent) {
+          return '\xa0'.repeat(Number(line.attributes.indent));
+        }
+
+        if (line.diplomatic.attributes) {
+          return '\xa0'.repeat(Number(line.diplomatic.attributes.indent));
+        }
+
+        return '';
+      }
+    }
+
     return (
-      <span className="fz-text-line-container">
-        {mode ? <FZDiplomaticView key={line.id} diplomatic={line.diplomatic} indent={indent} /> :
+      <span key={line.id} className="fz-text-line-container">
+        {mode ? <FZDiplomaticView key={line.id} keyVal={line.id} diplomatic={line.diplomatic} indent={indent(line)} /> :
         <FZStageView key={line.id} stages={line.stage.content} />}
       </span>
     );
@@ -133,7 +150,7 @@ const FZZoneView = (props: Object) => {
   const FZDiplomaticView = (props: Object) => {
     const { diplomatic, indent } = props;
     return(
-      <div key={diplomatic.id} className='fz-text-display-line diplomatic'>
+      <div key={shortid.generate()} className='fz-text-display-line diplomatic'>
         {indent}
         {formatDiplomaticText(diplomatic)}
       </div>
@@ -181,21 +198,22 @@ const formatDiplomaticText = (diplomatic: Array) => {
     if (deletion.constructor !== Array) {
       deletion = [deletion];
     }
-    deletion.forEach((delElement) => {
+    deletion.forEach((delElement, index) => {
       let delClass = getDelType(delElement);
-      dstArray.push(<span className={delClass}>{delElement["#text"]}</span>);
+      dstArray.push(<span key={index} className={delClass}>{delElement["#text"]}</span>);
     });
   }
 
-  diplomatic.forEach((element) => {
+  diplomatic.forEach((element, index) => {
+    let key = shortid.generate();
     if ( element instanceof Object) {
       switch(element.nodeType) {
         case 'space':
-          formatted.push(<span>{makeSpaces(element.space.extent)}</span>);
+          formatted.push(<span key={key}>{makeSpaces(element.space.extent)}</span>);
           break;
 
         case 'add':
-          formatted.push(<span className="tei-add">{element["#text"]}</span>);
+          formatted.push(<span key={key} className="tei-add">{element["#text"]}</span>);
           break;
 
         case 'del':
@@ -209,17 +227,21 @@ const formatDiplomaticText = (diplomatic: Array) => {
           }
 
           if (element.add) {
-            subst.push(<span className="tei-add">{element.add["#text"]}</span>);
+            subst.push(<span key={key} className="tei-add">{element.add["#text"]}</span>);
           }
-          formatted.push(<span className="tei-subst">{subst}</span>);
+          formatted.push(<span key={key} className="tei-subst">{subst}</span>);
           break;
+
+        case 'handShift':
+            formatted.push(<span key={key} className="tei-instr-pencil">{element["text"]}</span>);
+            break;
 
         default:
           break;
       }
     }
     if (typeof element === 'string') {
-      formatted.push(<span>{element}</span>);
+      formatted.push(<span key={key}>{element}</span>);
     }
   });
   return formatted;
