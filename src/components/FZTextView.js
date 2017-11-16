@@ -204,6 +204,25 @@ const formatDiplomaticText = (diplomatic: Array) => {
     });
   }
 
+  const formatHandShift = (element) => {
+    return(
+      <span className="tei-instr-pencil">
+        {element.map((node, index) => {
+          if (typeof node === 'string') return <span key={index}>{node}</span>
+          if (typeof node === 'object') {
+            if (node.nodeType === 'unclear') {
+              return <span key={index} className="tei-unclear-hi">{node["#text"]}</span>
+            }
+            if (node.nodeType === 'del') {
+              let delClass = getDelType(node);
+              return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
+            }
+          }
+        })}
+      </span>
+    );
+  }
+
   diplomatic.forEach((element, index) => {
     let key = shortid.generate();
     if ( element instanceof Object) {
@@ -220,6 +239,10 @@ const formatDiplomaticText = (diplomatic: Array) => {
           doDeletion(element, formatted);
           break;
 
+        case 'handShift':
+          formatted.push(formatHandShift(element));
+          break;
+
         case 'subst':
           let subst = [];
           if (element.del) {
@@ -232,9 +255,9 @@ const formatDiplomaticText = (diplomatic: Array) => {
           formatted.push(<span key={key} className="tei-subst">{subst}</span>);
           break;
 
-        case 'handShift':
+        /*case 'handShift':
             formatted.push(<span key={key} className="tei-instr-pencil">{element["text"]}</span>);
-            break;
+            break;*/
 
         default:
           break;
