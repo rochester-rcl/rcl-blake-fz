@@ -35,6 +35,8 @@ export const normalizeZone = (zone: Object): Object => {
       id: shortid.generate(),
       zoneId: zone.id,
       attributes: lg.attributes,
+      nodeType: lg.nodeType,
+      vspaceExtent: lg.vspaceExtent,
       lines: forceArray(lg.l) ? forceArray(lg.l).map((line) => {
         return {
           id: shortid.generate(),

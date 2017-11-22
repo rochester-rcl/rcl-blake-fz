@@ -9,6 +9,7 @@ function xmlToJson(xml) {
 		// do attributes
 		let nodeName = xml.nodeName;
 		obj.nodeType = nodeName;
+
 		if (xml.hasChildNodes()) {
 			if (nodeName === 'handShift') {
 				let elements = [];
@@ -16,6 +17,40 @@ function xmlToJson(xml) {
 					elements.push(xmlToJson(child));
 				});
 				obj[nodeName] = elements;
+			}
+			if (nodeName === 'zone') {
+				let elements = [];
+				let lg = [];
+				if (xml.hasChildNodes()) {
+					let children = Array.from(xml.childNodes);
+					children.forEach((child, index) => {
+						if (child.nodeName === 'lg') {
+							let group = xmlToJson(child);
+							if (index > 0) {
+								let vspace = children.slice(0, index).reverse().find((child) => {
+									return child.nodeName === 'vspace';
+								});
+								if (vspace) {
+									group.vspaceExtent = Number(xmlToJson(vspace).vspace.extent);
+								} else {
+									group.vspaceExtent = 0;
+								}
+							}
+
+							lg.push(group);
+						}
+					});
+				}
+				obj[nodeName] = {};
+				obj[nodeName].lg = lg;
+				if (xml.attributes) {
+					let attributes = {};
+					for (var j = 0; j < xml.attributes.length; j++) {
+						var attribute = xml.attributes.item(j);
+						attributes[attribute.nodeName] = attribute.nodeValue;
+					}
+					obj[nodeName].attributes = attributes;
+				}
 			}
 			else if (xml.attributes.length > 0) {
 				obj["attributes"] = {};
@@ -87,6 +122,11 @@ function xmlToJson(xml) {
 	if (obj.nodeType === 'handShift') {
 		obj = obj.handShift;
 		obj.nodeType = 'handShift';
+	}
+
+	if (obj.nodeType === 'zone') {
+		obj = obj.zone;
+		obj.nodeType = 'zone';
 	}
 	return obj;
 };

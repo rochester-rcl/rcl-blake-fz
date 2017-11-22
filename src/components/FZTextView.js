@@ -112,10 +112,19 @@ const FZStage = (props: Object) => {
 
 const FZZoneView = (props: Object) => {
   const { zone, expanded, expandStages, diplomaticMode } = props;
+  const renderVSpace = (vSpaceExtent: Number) => {
+    let vSpaceArray = new Array(vSpaceExtent);
+    vSpaceArray.fill(' ');
+    return vSpaceArray;
+  }
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
+    console.log(lineGroup);
     return(
       <div key={lineGroup.id} className="fz-text-display-line-group">
+        {renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
+          <br key={index} />
+        )}
         {lineGroup.lines.map((line) =>
           renderLine(diplomaticMode, line)
         )}
