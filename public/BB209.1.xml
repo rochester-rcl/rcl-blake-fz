@@ -607,7 +607,7 @@
                         </lg>
                     </zone>
                     <zone type="right" points="2204,2112 2204,793 1869,789 793,2112">
-                        <lg justify="left" rend="writing-mode: vertical-rl; text-orientation: sideways-right"><!--this is just from TEI-->
+                        <lg justify="left" style="writing-mode: vertical-rl; text-orientation: sideways-right"><!--this is just from TEI-->
                             <l>
                                 <stage type="one>">They stood above the heavens forsaken desolate suspended in blood</stage>
                                 <diplomatic>They stood above the heavens forsaken desolate suspended in blood</diplomatic>
@@ -1041,7 +1041,7 @@
                         </l>
                     </lg>
                     <vspace extent="15"/><!-- above vertical text, possible marginal text in deleted pencil; but is it part of the erased body text? see Justin's note and historical readings for transcription, but how to encode? -->
-                    <lg justify="left" rend="writing-mode: vertical-lr; text-orientation: sideways-left">
+                    <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
                         <l>
                             <stage type="one">The joy of woman is the Death of her most best beloved</stage>
                             <diplomatic>The joy of woman is the Death of her most best beloved</diplomatic>
@@ -1067,7 +1067,7 @@
                     <zone type="foot" points="2164,3244 2164,2201 145,2201 145,3244">
                     <columns>
                     <column>
-                    <lg justify="left">
+                        <lg justify="left">
                        <l>
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                            <stage type="two">And Los said . Lo the Lilly pale &#38; the rose reddning fierce</stage>
@@ -1183,7 +1183,7 @@
                    </lg>
                    </column>
                    <column>
-                   <lg justify="left">
+                       <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
                        <l indent="3">
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                            <stage type="two">Now taking on Ahanias form &#38; now the form of Enion</stage>
