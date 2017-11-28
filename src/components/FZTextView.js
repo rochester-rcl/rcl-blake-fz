@@ -117,11 +117,31 @@ const FZZoneView = (props: Object) => {
     vSpaceArray.fill(' ');
     return vSpaceArray;
   }
+
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
-    console.log(lineGroup);
+    const getRotation = (attributes) => {
+      console.log(attributes);
+      let lineGroupClass = "fz-text-display-line-group";
+      if (!attributes) return lineGroupClass;
+      if (attributes.style) {
+        let orientation = attributes.style.split(' ').pop();
+
+        switch(orientation) {
+          case('sideways-right'):
+            return lineGroupClass += ' sideways-right';
+
+          case('sideways-left'):
+            return lineGroupClass += ' sideways-left';
+
+          default:
+            return lineGroupClass;
+
+        }
+      }
+    }
     return(
-      <div key={lineGroup.id} className="fz-text-display-line-group">
+      <div key={lineGroup.id} className={getRotation(lineGroup.attributes)}>
         {renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
           <br key={index} />
         )}

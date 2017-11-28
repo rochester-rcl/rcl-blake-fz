@@ -182,3 +182,11 @@
 .tei-subst .tei-del-overstrike {
   color:#303030;
 }
+
+.sideways-right {
+  transform: rotate(90deg);
+}
+
+.sideways-left {
+  transform: rotate(-90deg);
+}
