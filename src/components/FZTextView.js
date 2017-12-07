@@ -80,25 +80,36 @@ class FZStageView extends Component {
   }
 }
 
+const gapClass = (gap: Object) => {
+  if (gap.reason) {
+    if (gap.reason.includes('cancellation') || gap.reason === 'overwrite' || gap.reason === 'erasure') {
+      return 'tei-gap-cancellation';
+    }
+    return 'tei-gap';
+  }
+  return 'tei-gap';
+}
+
+const formatGap = (stage: Object) => {
+  if (stage.gap) {
+    let gap;
+    // todo find a beter way to handle polymorphic properties i.e. Object vs Array<Object>
+    if (stage.gap.constructor === Array) {
+      gap = stage.gap[0];
+    } else {
+      gap = stage.gap;
+    }
+    if (gap.unit === 'line') {
+      return 100;
+    } else {
+      return Number(gap.extent);
+    }
+  }
+  return 0;
+};
+
 const FZStage = (props: Object) => {
   const { expanded, stageType, stage } = props;
-  const formatGap = (stage: Object) => {
-    if (stage.gap) {
-      let gap;
-      // todo find a beter way to handle polymorphic properties i.e. Object vs Array<Object>
-      if (stage.gap.constructor === Array) {
-        gap = stage.gap[0];
-      } else {
-        gap = stage.gap;
-      }
-      if (gap.attributes.unit === 'line') {
-        return 100;
-      } else {
-        return Number(gap.attributes.extent);
-      }
-    }
-    return 0;
-  };
   let expandedState = expanded ? 'expanded' : 'collapsed';
   let className = ['fz-text-display-stage', stageType, expandedState, formatStage(stage)].reduce((classA, classB) => {
     return classA + ' ' + classB;
@@ -121,7 +132,6 @@ const FZZoneView = (props: Object) => {
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
     const getRotation = (attributes) => {
-      console.log(attributes);
       let lineGroupClass = "fz-text-display-line-group";
       if (!attributes) return lineGroupClass;
       if (attributes.style) {
@@ -281,7 +291,15 @@ const formatDiplomaticText = (diplomatic: Array) => {
           if (element.add) {
             subst.push(<span key={key} className="tei-add">{element.add["#text"]}</span>);
           }
+          if (element.gap) {
+            subst.push(<span key={key + '$'} className={gapClass(element.gap.gap)}>{'\xa0'.repeat(formatGap(element.gap))}</span>);
+          }
+
           formatted.push(<span key={key} className="tei-subst">{subst}</span>);
+          break;
+
+        case 'gap':
+          formatted.push(<span key={key} className={gapClass(element.gap)}>{'\xa0'.repeat(formatGap(element))}</span>);
           break;
 
         /*case 'handShift':

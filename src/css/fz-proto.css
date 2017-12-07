@@ -86,16 +86,14 @@
 
 .tei-gap-cancellation { /* <gap reason="cancellation"> also reason="cancellation_wash" & reason="cancellation_pencil" */
     color:red;
-    background-color: rgba(204,204,204,0.7);
+    background-color: rgb(204,204,204);
     text-decoration:line-through;
     display: inline-block;
-    width: 80%;
 }
-
+/* hid width: 80% */
 .tei-gap { /* any other <gap reason="illegible"> */
-    background-color: rgba(204,204,204,0.7);
-    display: block;
-    width: 80%;
+    background-color: rgb(204,204,204);
+    display: inline-block;
 }
 
 .tei-hspace {
