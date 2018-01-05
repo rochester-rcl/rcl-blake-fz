@@ -179,7 +179,7 @@
                        <l n="bb209.1.ms.03.15">
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
                            <stage type="two"><handShift medium="pencil">Knoweth <add place="supralinear" type="insertion" symbol="caret"><hi rend="subscript">^</hi></add> Individual <del type="overstrike">Man</del> Knoweth <del type="overstrike"><unclear resp="jsvk">not</unclear></del> nor Can Knoweth in all Eternity</handShift></stage><!-- same as (our) line 13; we could just tag the whole thing as unclear, too. It's really hard to read. -->
-                           <diplomatic><handShift medium="pencil">Knoweth <add place="supralinear" type="insertion" symbol="caret">^</add> Individual <del type="overstrike">Man</del> Knoweth <del type="overstrike"><unclear resp="jsvk">not</unclear></del> nor Can Knoweth in all Eternity</handShift></diplomatic><!--JVK <note>"not" (cancelled) is a conjectural reading; "not" B1963f, B1978, E1988 (text); "(not)" K1979.</note> -->
+                           <diplomatic><handShift medium="pencil">Knoweth <add place="supralinear" type="insertion" symbol="caret"><hi rend="subscript">^</hi></add> Individual <del type="overstrike">Man</del> Knoweth <del type="overstrike"><unclear resp="jsvk">not</unclear></del> nor Can Knoweth in all Eternity</handShift></diplomatic><!--JVK <note>"not" (cancelled) is a conjectural reading; "not" B1963f, B1978, E1988 (text); "(not)" K1979.</note> -->
                        </l>
                        <l n="bb209.1.ms.03.16">
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
