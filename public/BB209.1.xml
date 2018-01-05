@@ -7,7 +7,7 @@
                 <principal>
                     <resp>Editors:</resp>
                     <name>Morris Eaves</name>, University of Rochester;
-                    <name>Robert Essick</name>, University of California, Riverside; and 
+                    <name>Robert Essick</name>, University of California, Riverside; and
                     <name>Joseph Viscomi</name>, University of North Carolina at Chapel Hill
                 </principal>
                 <respstmt> </respstmt>
@@ -26,7 +26,7 @@
                 <objtitle>
                     <title><hi rend="i">VALA/The Four Zoas</hi></title>
                 </objtitle>
-                <origination>William Blake <role>author, </role><role>inventor, </role><role>delineator, </role><role>colorist</role></origination>  
+                <origination>William Blake <role>author, </role><role>inventor, </role><role>delineator, </role><role>colorist</role></origination>
                 <compdate value="1796">c. 1796-1807</compdate>
             </objdescid>
             <objinfo>
@@ -130,7 +130,7 @@
                         <l n="bb209.1.ms.03.06">
                             <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
                             <stage type="two">The heavens<del type="overstrike">shall</del> quake the earth<subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</stage>
-                            <diplomatic>The heavens<del type="overstrike">shall</del> quake the earth<subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</diplomatic>                        
+                            <diplomatic>The heavens<del type="overstrike">shall</del> quake the earth<subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</diplomatic>
                         </l>
                         <l n="bb209.1.ms.03.07">
                             <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
@@ -171,7 +171,7 @@
                            <stage type="two" indent="3"><handShift medium="pencil">What are the Natures of <unclear resp="jsvk">those</unclear> Living Creatures the Heavenly Father only</handShift></stage><!-- At first glance, looks like a deletion/legible wash, but old readings see it as a pencil add that has simply faded; transcription of actual words taken from Justin/Rachel xml's -->
                            <diplomatic><handShift medium="pencil">What are the Natures of <unclear resp="jsvk">those</unclear> Living Creatures the Heavenly Father only</handShift></diplomatic><!-- JVK <note>Lines 21-23 (excluding the marginal note in line 21) are interlined between a stanza break.  Blake interlined "NO" (line 22) possibly at a later point.<p>"those" is a conjectural reading; "those" B1963f, B1978, K1979, E1988 (text).</note> -->
                        </l>
-                       <l n="bb209.1.ms.03.14" indent="8">
+                       <l n="bb209.1.ms.03.14" indent="15">
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
                            <stage type="two"><handShift medium="pencil"><add place="supralinear">NO</add></handShift></stage><!-- see Tiriel bb203.1.ms.10.21-22 for example -->
                            <diplomatic><handShift medium="pencil"><add place="supralinear">NO</add></handShift></diplomatic>
@@ -191,13 +191,13 @@
                            <stage type="two">Of a bright Universe. Empery attended day &#38; night</stage>
                            <diplomatic>Of a bright Universe. Empery attended day &#38; night</diplomatic>
                        </l>
-                       <l n="bb209.1.ms.03.18"> 
+                       <l n="bb209.1.ms.03.18">
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
                            <stage type="two">Days &#38; nights of revolving joy, Urthona was his name</stage>
                            <diplomatic>Days &#38; nights of revolving joy, Urthona was his name</diplomatic><!-- JVK <note>There is a pen mark over the comma following "joy" that may indicate a semicolon, colon, or even a Blakean exclamation point, or it may be a remnant of erased text.</note> -->
                        </l>
                    </lg>
-                   </zone>               
+                   </zone>
                    <zone type="head" points="2296,500 2296,61 449,61 449,500">
                    <lg justify="left">
                        <l indent="3"><stage type="one">ὅτι οὐκ ἔστιν ἡμῖν ἡ πάλη πρὸς αἷμα καὶ σάρκα, ἀλλὰ πρὸς τὰς ἀρχάς,</stage><!-- added Greek from Gabi's mockup; we probably need unicodes, though? --><!-- jvk<note>In lines 1-3, Blake gives the Greek text of Ephesians 6:12 (first mistakenly cited as chapter "5" (line 5) and then corrected [possibly not by Blake according to E1988] by the "VI" interlined above [line 4]): "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places" (King James Bible). In line 2 only, Blake uses the Greek ligature for the diphthong *ou*.</note> -->
@@ -282,7 +282,7 @@
                                <diplomatic>εν: ημιν</diplomatic>
                            </l>
                        </lg>
-                   </zone>               
+                   </zone>
                    <zone type="foot" points="2266,2336 2266,2205 2061,2205 2061,2336">
                     <lg justify="left">
                         <l indent="50"><stage type="one"><catchword>In</catchword></stage>
@@ -292,8 +292,8 @@
                    </zone>
                 </surface>
             </phystext>
-        </desc>        
-        
+        </desc>
+
         <desc id="bb209.1.ms.11" dbi="bb209.1.11.MS">
             <objtitle>
                 <title type="transcribed"/>, <objid>
@@ -323,7 +323,7 @@
                             </l>
                             <l n="209.1.ms.11.04">
                                 <stage type="one"><subst><del type="overstrike_pencil">Los</del><add place="marginleft"><handShift medium="pencil"/>He</add></subst>, darkning <add type="insertion" place="supralinear">more</add> with <del type="overstrike_pencil">foul</del> indignation hid in smiles</stage>
-                                <diplomatic><subst><add place="marginleft"><handShift medium="pencil"/>He</add><del type="overstrike_pencil">Los</del></subst>, darkning <add type="insertion" place="supralinear">more</add> with <del type="overstrike_pencil">foul</del> indignation hid in smiles</diplomatic><!-- JVK <note>Both "Los" and "foul" are struck through with a pencil.</note> --> 
+                                <diplomatic><subst><add place="marginleft"><handShift medium="pencil"/>He</add><del type="overstrike_pencil">Los</del></subst>, darkning <add type="insertion" place="supralinear">more</add> with <del type="overstrike_pencil">foul</del> indignation hid in smiles</diplomatic><!-- JVK <note>Both "Los" and "foul" are struck through with a pencil.</note> -->
                             </l>
                         </lg>
                         <vspace extent="1"/>
@@ -336,11 +336,11 @@
                             <l n="bb209.1.ms.11.06">
                                 <stage type="one"><gap reason="erasure" extent="1" unit="line"/></stage>
                                 <stage type="two">Nor shall thou me torment For I behold the <subst><gap reason="erasure" extent="6" unit="character"/><add type="overwrite" place="inline">Fallen</add></subst> Man</stage>
-                                <diplomatic>Nor shall thou me torment For I behold the <subst><gap reason="erasure" extent="6" unit="character"/><add type="overwrite" place="inline">Fallen</add></subst> Man</diplomatic><!-- JVK <note>"shall" possibly may be "shalt," if the "t" is uncrossed-but note that Blake crossed the other "t"s in this line.<p>"Fallen" is written over an erasure, beginning with "E" ("Eternal" B1963f, B1978, E1988).</note></l> -->    
+                                <diplomatic>Nor shall thou me torment For I behold the <subst><gap reason="erasure" extent="6" unit="character"/><add type="overwrite" place="inline">Fallen</add></subst> Man</diplomatic><!-- JVK <note>"shall" possibly may be "shalt," if the "t" is uncrossed-but note that Blake crossed the other "t"s in this line.<p>"Fallen" is written over an erasure, beginning with "E" ("Eternal" B1963f, B1978, E1988).</note></l> -->
                             </l>
                             <l n="bb209.1.ms.11.07">
                                 <stage type="one">Seeking to comfort Vala,<gap reason="erasure" extent="4" unit="character"/>she will not be comforted</stage>
-                                <diplomatic>Seeking to comfort Vala,<gap reason="erasure" extent="4" unit="character"/>she will not be comforted</diplomatic>                            
+                                <diplomatic>Seeking to comfort Vala,<gap reason="erasure" extent="4" unit="character"/>she will not be comforted</diplomatic>
                             </l>
                             <l n="bb209.1.ms.11.08">
                                 <stage type="one">She rises from his throne and seeks the shadows of her garden</stage>
@@ -419,7 +419,7 @@
                             <l n="bb209.1.ms.11.24">
                                 <stage type="one">The Human Nature shall no more remain nor Human acts</stage>
                                 <diplomatic>The Human Nature shall no more remain nor Human acts</diplomatic>
-                            </l> 
+                            </l>
                             <l n="bb209.1.ms.11.25">
                                 <stage type="one" indent="4">Form the <subst><del type="overstrike">free</del><add type="insertion" place="supralinear">rebellious</add></subst> Spirits of Heaven. but War &#38; Princedom</stage>
                                 <diplomatic indent="4">Form the <subst><del type="overstrike">free</del><add type="insertion" place="supralinear">rebellious</add></subst> Spirits of Heaven. but War &#38; Princedom</diplomatic>
@@ -467,11 +467,11 @@
                             <l>
                                 <stage type="one">He may be devoted to Destruction from his mothers womb</stage>
                                 <diplomatic>He may be devoted to Destruction from his mothers womb</diplomatic>
-                            </l>                        
+                            </l>
                         </lg>
                     </zone>
                     <zone type="head" points="2352,508 2352,121 1849,121 1849,508">
-                        <lg>  
+                        <lg>
                             <l indent="50">
                                 <stage type="one"><handShift medium="pencil">6</handShift></stage><!-- unsure if that pencil 6 is Blake -->
                                 <diplomatic><handShift medium="pencil">6</handShift></diplomatic>
@@ -483,12 +483,12 @@
                                 <stage type="one">9</stage>
                                 <diplomatic>9</diplomatic>
                             </l>
-                        </lg>  
-                    </zone>                     
+                        </lg>
+                    </zone>
                 </surface>
             </phystext>
         </desc>
-        
+
         <desc id="bb209.1.ms.013" dbi="BB209.1.13.MS"><!-- I have added Justin's notes to this object, just as they are, however they sometimes conflict with my reading, e.g. line 18 where JVK thinks that the exclamation mark is added. I don't know if I can see that. In any case, this is a reminder that we need to decide whether JVK's BAD is going to be a standard ref or the basis of our transcription  and alter notes/readings accordingly. Also our line references will be different.(LW) -->
             <objtitle>,
                 <objid>
@@ -496,13 +496,13 @@
                     <objcode code="B13">(Bentley 13)</objcode>
                 </objid>
             </objtitle>
-            <physdesc> 
+            <physdesc>
                 <objsize></objsize>
             </physdesc>
             <phystext>
                 <surface points="2551,3260 2551,0 0,0 0,3260">
                     <zone type="head" points="3212,492 2312,157 1753,157 1753,492">
-                        <lg justify="left">    
+                        <lg justify="left">
                             <l indent="40">
                                 <stage type="one"><handShift medium="pencil">7</handShift></stage>
                                 <diplomatic><handShift medium="pencil">7</handShift></diplomatic>
@@ -513,7 +513,7 @@
                                 <l indent="30">
                                     <stage type="one">11</stage>
                                     <diplomatic>11</diplomatic>
-                                </l>    
+                                </l>
                             </lg>
                     </zone>
                     <zone type="body" points="1896,2176 1896,421 481,421 481,2176">
@@ -536,7 +536,7 @@
                                 <stage type="two" indent="8">But Luvah &#38; Vala standing in the bloody sky</stage>
                                 <diplomatic indent="8">But Luvah &#38; Vala standing in the bloody sky</diplomatic>
                                 <note>Lines 6-7 and 13-24, comprising the middle section of the central text (excluding the marginal addition as transcribed here) appears to have been circled in pencil at one point, but then the circle was erased; lines 22-24 may have been circled separately.  In addition, there are remnants of thick pencil lines under each of the lines of text that are likely erased guiding lines, though they appear to be much blunter and thicker in comparison to other guiding lines in the manuscript-or even the remnant of the vertical line beside "They" and "With" in lines 4 and 5 respectively; thus, the lines of text may have been struck through in pencil, all of which were also later erased. "But" is written over erasures, a portion of which ("The shades(?) of(?)" B1963f, B1978; "The ?shades of" E1988) is still visible to the left.</note></l>
-                            
+
                             <l n="bb209.1.ms.13.05">
                                 <stage type="one"><space extent="3"/>On high remaind alone forsaken in fierce jealousy</stage>
                                 <diplomatic>On high remaind alone forsaken in fierce jealousy</diplomatic>
@@ -550,7 +550,7 @@
                                 <stage type="one"><subst><gap reason="overwrite" extent="5" unit="character"/><add type="overwrite" place="inline">Thro'the clean changing atmosphere display'd green fields among</add></subst></stage>
                                 <diplomatic><subst><gap reason="overwrite" extent="5" unit="character"/><add type="overwrite" place="inline"><choice><orig>Thro'</orig><reg>Through</reg></choice></add></subst> the clean changing atmosphere <choice><orig>display'd</orig><reg>displayed</reg></choice> green fields among</diplomatic>
                             </l>
-                            
+
                             <l n="bb209.1.ms.13.08">
                                 <stage type="one">The varying clouds, like paradises stretch'd in the expanse</stage>
                                 <diplomatic>The varying clouds, like paradises <choice><orig>stretch'd</orig><reg>stretched</reg></choice> in the expanse</diplomatic>
@@ -585,7 +585,7 @@
                                 <stage type="two">And Los &#38; Enitharmon sat in discontent &#38; scorn</stage>
                                 <diplomatic>And Los &#38; Enitharmon sat in discontent &#38; scorn</diplomatic>
                                 <note>Remnants of an erased pencil line are still fairly visible above line 23. E1988 records this text as "In beauty love &#38; scorn the earthbound bride &#38; bridegroom sulk". There appear to be more erased pencil lines just below and extending far into the right margin, beneath and right of the marginal addition. E1988 records this text as "orbits high" and then "demons by the thousands out of a golden cloud xxxx xxx".</note></l>
-                            
+
                             <l n="bb209.1.ms.13.15">
                                 <stage type="one"><gap reason="erasure" extent="1" unit="line"/></stage>
                                 <stage type="two">The Nuptial Song arose from all the thousand thousand spirits</stage>
@@ -609,7 +609,7 @@
                                 <diplomatic>Bright Souls of vegetative life, budding and blossoming</diplomatic>
                                <note type="JVK">Above "Bright Souls" are the barely discernible remnants of erased pencil text (B1963f, B1978, and E1988 conjecture "Elements").</note>
                             </l>
-                        </lg>                        
+                        </lg>
                     </zone>
                     <zone type="right" points="2204,2112 2204,793 1869,789 793,2112">
                         <lg justify="left" rend="writing-mode: vertical-rl; text-orientation: sideways-right"><!--this is just from TEI-->
@@ -617,7 +617,7 @@
                                 <stage type="one>">They stood above the heavens forsaken desolate suspended in blood</stage>
                                 <diplomatic>They stood above the heavens forsaken desolate suspended in blood</diplomatic>
                                 <note>Lines 8-12 (as transcribed and inserted here) are written vertically, text rotated clockwise, in the right margin opposite most of the central text below.  A line drawn from above line 9 to the end of line 7 indicates their placement.</note></l><!-- I wonder if this should be an object note?-->
-                            
+
                             <l>
                                 <stage type="one">Descend they could not. nor from Each other avert their eyes</stage>
                                 <diplomatic>Descend they could not. nor from Each other avert their eyes</diplomatic>
@@ -635,7 +635,7 @@
                                 <stage type="one">As the sun Shines down on the mighty earth such was the Vision</stage>
                                 <diplomatic>As the sun Shines down on the mighty earth such was the Vision</diplomatic>
                             </l>
-                        </lg>    
+                        </lg>
                     </zone>
                     <zone type="foot" points="1936,2234 1936,2109 1733,2109 1733,2234">
                         <lg justify="left">
@@ -645,10 +645,10 @@
                             </l>
                         </lg>
                     </zone>
-                </surface> 
+                </surface>
             </phystext>
         </desc>
-                
+
         <desc id="bb209.1.ms.32" dbi="bb209.1.32.MS">
             <objtitle>
                 <title type="transcribed"/>, <objid>
@@ -667,17 +667,17 @@
                     <zone type="body" points="2496,2149 2496,436 641,436 641,2149">
                         <lg justify="left">
                             <l n="bb209.1.ms.32.01">
-                                <stage type="one">Still she despisd him, calling on his name &#38; knowing him not</stage> 
+                                <stage type="one">Still she despisd him, calling on his name &#38; knowing him not</stage>
                                 <diplomatic>Still she <choice> <orig>despisd</orig><corr>despised</corr></choice> him, calling on his name &#38; knowing him not</diplomatic></l><!-- JVK <note>There is a box, curved on the left side, around "25 / Ellis" in lines 3-4, a marginal inscription not by Blake.</note> -->
                             <l n="bb209.1.ms.32.02">
                                 <stage type="one">Still hating still professing love, still labouring in the smoke</stage>
-                                <diplomatic>Still hating still professing love, still labouring in the smoke</diplomatic></l>  
-                        </lg> 
+                                <diplomatic>Still hating still professing love, still labouring in the smoke</diplomatic></l>
+                        </lg>
                         <vspace extent="1"/>
                         <lg justify="left">
                             <l n="bb209.1.ms.32.03">
-                                <stage type="one"><del type="overstrike">And Los &#38; Enitharmon joyd, they drank in tenfold</del> joy</stage>                               
-                                <diplomatic><del type="overstrike">And Los &#38; Enitharmon <choice><orig>joyd</orig><corr>joyed</corr></choice>, they drank in tenfold</del> joy</diplomatic></l> 
+                                <stage type="one"><del type="overstrike">And Los &#38; Enitharmon joyd, they drank in tenfold</del> joy</stage>
+                                <diplomatic><del type="overstrike">And Los &#38; Enitharmon <choice><orig>joyd</orig><corr>joyed</corr></choice>, they drank in tenfold</del> joy</diplomatic></l>
                             <l n="bb209.1.ms.32.04">
                                 <stage type="one"><del type="overstrike">From all the sorrow of Luvah &#38; the labour of Urizen</del></stage>
                                 <diplomatic><del type="overstrike">From all the sorrow of Luvah &#38; the labour of Urizen</del></diplomatic></l>
@@ -686,7 +686,7 @@
                                 <diplomatic>And Enitharmon <choice><orig>joyd</orig><corr>joyed</corr></choice> Plotting to rend the secret cloud</diplomatic></l>
                             <l n="bb209.1.ms.32.06">
                                 <stage type="one">To plant divisions in the Soul of Urizen &#38; Ahania</stage>
-                                <diplomatic>To plant divisions in the Soul of Urizen &#38; Ahania</diplomatic></l> 
+                                <diplomatic>To plant divisions in the Soul of Urizen &#38; Ahania</diplomatic></l>
                         </lg>
                         <vspace extent="1"/>
                         <lg justify="left">
@@ -703,7 +703,7 @@
                                 <diplomatic>And <choice><orig>pillard</orig><corr>pillared</corr></choice>halls &#38; rooms <choice><orig>receivd</orig><corr>received</corr></choice>the eternal wandering stars</diplomatic></l>
                             <l n="bb209.1.ms.32.10">
                                 <stage type="one">A wondrous golden Building; many a window many a door</stage>
-                                <diplomatic>A wondrous golden Building; many a window many a door</diplomatic> 
+                                <diplomatic>A wondrous golden Building; many a window many a door</diplomatic>
                             </l>
                             <l n="bb209.1.ms.32.11">
                                 <stage type="one">And many a division let in &#38; out into the vast unknown</stage>
@@ -712,25 +712,25 @@
                             <l n="bb209.1.ms.32.12">
                                 <stage type="one"><space extent="6"/><del type="erasure" extent="12" unit="character">window square</del><space extent="21"/>walls and cielings</stage>
                                 <diplomatic><space extent="6"/><del type="erasure" extent="12" unit="character">window square</del><space extent="21"/>walls and <choice><orig>cielings</orig><corr>ceilings</corr></choice></diplomatic><!-- JVK <note>Above "infinite orb" in line 18 are the remnants of two erased words, probably "window square"; the cancellation of "infinite orb" below was not erased as well.</note> -->
-                            </l>                          
-                            <l n="bb209.1.ms.32.13"> 
+                            </l>
+                            <l n="bb209.1.ms.32.13">
                                 <stage type="one"><del type="erasure" place="marginleft"><unclear resp="jsvk">Cubed</unclear></del><del type="overstrike">Circled</del> in <del type="overstrike">infinite</del> <del type="overstrike">orb</del> immoveable, within its <del type="overstrike">arches all</del></stage><!-- anchor to walls and ceilings in the previous line --><!-- JVK <note>"Circled" is struck through with three lines. To the left is an erased word, probably "Cubed" ("Cubed(<hi rend="i">?</hi>)" B1963f, B1978; "Cubed" E1988 [in text, with a note on the uncertainty of Blake's final choice]); the cancellation of "Circled" was not erased as well.</note> -->
-                                <diplomatic><del type="erasure" place="marginleft"><unclear resp="jsvk">Cubed</unclear></del>Circled in <del type="overstrike">infinite</del><del type="overstrike"> orb</del> immoveable, within its <del type="overstrike">arches all</del></diplomatic>  
+                                <diplomatic><del type="erasure" place="marginleft"><unclear resp="jsvk">Cubed</unclear></del>Circled in <del type="overstrike">infinite</del><del type="overstrike"> orb</del> immoveable, within its <del type="overstrike">arches all</del></diplomatic>
                             </l>
                             <l n="bb209.1.ms.32.14">
                                 <stage type="one" indent="35"><del type="erasure" extent="35" unit="character" >mournd their bondage night &#38; day</del></stage>
                                 <diplomatic indent="35"><del type="erasure" extent="35" unit="character"><choice>mourned<orig></orig><corr>mourned</corr></choice> their bondage night &#38; day</del></diplomatic></l><!-- JVK <note>The ampersand in this line is scrawled over with a pencil.</note> -->
-                            
+
                             <l n="bb209.1.ms.32.15">
                                 <stage type="three">The heavens were closd <subst><del type="overstrike">&#38;</del><add place="supralinear" type="insertion">and</add></subst>spirits mournd their bondage night &#38; day</stage>
-                                <diplomatic>The heavens were <choice><orig>closd</orig><corr>closed</corr></choice><subst><del type="overstrike"> &#38;</del><add place="supralinear" type="insertion">and</add></subst>spirits <choice>mourned<orig></orig><corr>mourned</corr></choice> their bondage night &#38; day</diplomatic>                            
+                                <diplomatic>The heavens were <choice><orig>closd</orig><corr>closed</corr></choice><subst><del type="overstrike"> &#38;</del><add place="supralinear" type="insertion">and</add></subst>spirits <choice>mourned<orig></orig><corr>mourned</corr></choice> their bondage night &#38; day</diplomatic>
                             </l>
                             <l n="bb209.1.ms.32.16">
                                 <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
                                 <stage type="two">And the Divine Vision appeard in Luvahs robes of blood <del type="erasure" extent="6" unit="character">within</del></stage>
                                 <diplomatic>And the Divine Vision <choice><orig>appeard</orig><corr>appeared</corr></choice> in Luvahs robes of blood <del type="erasure" extent="6" unit="character">within</del></diplomatic><!-- JVK note>At the end of line 21, "within" is still visible despite erasure because the new line is shorter than the earlier one that it was written over.</note> -->
                             </l>
-                            <l n="bb209.1.ms.32.17">  
+                            <l n="bb209.1.ms.32.17">
                                 <stage type="one"><handShift medium="pencil">Thus was the Mundane shell builded by Urizens stray Power</handShift></stage>
                                 <diplomatic><handShift medium="pencil">Thus was the Mundane shell builded by Urizens stray Power</handShift></diplomatic>
                             </l>
@@ -764,13 +764,13 @@
                             <l indent="6">
                                 <stage type="one">150</stage>
                                 <diplomatic>150</diplomatic>
-                            </l>      
-                        </lg>       
-                    </zone>      
+                            </l>
+                        </lg>
+                    </zone>
                 </surface>
             </phystext>
         </desc>
-                
+
          <desc id="bb209.1.ms.34" dbi="bb209.1.34.MS">
             <objtitle>
                 <title type="transcribed"/>, <objid>
@@ -829,7 +829,7 @@
                             <l n="bb209.1.ms.34.08">
                                 <stage type="one">That his dread fancy formd before him in the unformd void</stage>
                                 <diplomatic>That his dread fancy <choice><orig>formd</orig><reg>formed</reg></choice> before him in the <choice><orig>unformd</orig><reg>unformed</reg></choice> void</diplomatic><!-- add choice tags (throughout object) -->
-                            </l>                            
+                            </l>
                         </lg>
                         <vspace extent="1"/>
                         <lg justify="left">
@@ -852,7 +852,7 @@
                                 <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                                 <stage type="two">At will to stretch across the heavens &#38; step from star to star</stage>
                                 <diplomatic>At will to stretch across the heavens &#38; step from star to star</diplomatic>
-                            </l>    
+                            </l>
                             <l n="bb209.1.ms.34.13">
                                 <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                                 <stage type="two">Or standing on the Earth erect, or on the stormy waves</stage>
@@ -867,7 +867,7 @@
                                 <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                                 <stage type="two">While round their heads the <subst><del type="overwrite">e</del><add type="overwrite" place="inline">E</add></subst>lemental Gods kept harmony</stage>
                                 <diplomatic>While round their heads the <subst><del type="overwrite">e</del><add type="overwrite" place="inline">E</add></subst>lemental Gods kept harmony</diplomatic><!-- JVK <note>The "E" of "Elemental" is written over "e".</note> -->
-                            </l>                                
+                            </l>
                             <l n="bb209.1.ms.34.16">
                                 <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                                 <diplomatic><gap reason="cancellation_wash" extent="1" unit="line"/></diplomatic><!-- JVK <note>There are remnants, almost indistinguishable, of a pencil line above line 19 and then continuing as two or three more lines in the right margin opposite lines 21-22 ("?From ?Ahanias woe all xxxx xxxx only wrath & Envy follows in xxxx their fxxxds / Urizen saw and axxxxx" E1988); all of these lines were also struck through before erasure.</note></l> -->
@@ -896,7 +896,7 @@
                                 <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                                 <stage type="two" indent="3"><handShift medium="pencil">Thus Enion</handShift></stage>
                                 <diplomatic indent="3"><handShift medium="pencil">Thus Enion</handShift></diplomatic>
-                            </l>                                
+                            </l>
                         </lg>
                     </zone>
                     <zone type="left" points="660,2105 660,88 41,88 41,2105">
@@ -1022,10 +1022,10 @@
                                     <l>
                                         <stage type="one">Upon the immense like a bright rainbow weeping &#38; smiling &#38; fading <add type="insertion" place="marginright">71</add></stage>
                                         <diplomatic>Upon the immense like a bright rainbow weeping &#38; smiling &#38; fading <add type="insertion" place="marginright">71</add></diplomatic>
-                                    </l>                                    
-                                </lg>    
+                                    </l>
+                                </lg>
                             </column>
-                        </columns>    
+                        </columns>
                     </zone>
                     <zone type="right" points="2568,3252 2568,445 2507,445 2057,3252">
                         <lg justify="left">
@@ -1071,7 +1071,7 @@
                     </zone>
                     <zone type="foot" points="2164,3244 2164,2201 145,2201 145,3244">
                     <columns>
-                    <column>    
+                    <column>
                     <lg justify="left">
                        <l>
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
@@ -1232,7 +1232,7 @@
                        <l>
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
                            <stage type="two" indent="3">Created for my will<space extent="5"/>my<space extent="3"/>slave tho strong tho I am weak</stage>
-                           <diplomatic indent="3">Created for my will<space extent="5"/>my<space extent="3"/>slave <choice><orig>tho</orig><reg>though</reg></choice> strong <choice><orig>tho</orig><reg>though</reg></choice> I am weak</diplomatic>    
+                           <diplomatic indent="3">Created for my will<space extent="5"/>my<space extent="3"/>slave <choice><orig>tho</orig><reg>though</reg></choice> strong <choice><orig>tho</orig><reg>though</reg></choice> I am weak</diplomatic>
                        </l>
                        <l>
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"/></stage>
@@ -1324,13 +1324,13 @@
                            <diplomatic>And nine bright spheres of harmony rise round the fiery king</diplomatic>
                        </l>
                    </lg>
-                   </column>     
+                   </column>
                    </columns>
                    </zone>
                 </surface>
             </phystext>
-        </desc>       
-        
+        </desc>
+
         <desc id="bb209.1.ms.042" dbi="BB209.1.42.MS">
             <objtitle>,
                 <objid>
@@ -1342,13 +1342,13 @@
                 <objnote></objnote>
                 <objsize>H x W</objsize>
                 <windowsize width="500" height="615"/>
-            </physdesc> 
+            </physdesc>
             <phystext>
                 <surface points="2598,3393 2598,0 0,0 0,3393">
                     <zone type="body" points="2208,2496 2208,501 617,501 617,2496">
                         <lg justify="left">
                             <l n="bb209.1.ms.042.01">
-                                <stage type="one"><gap reason="erasure" extent="1" unit="line"/></stage> 
+                                <stage type="one"><gap reason="erasure" extent="1" unit="line"/></stage>
                                 <stage type="two">Saying, Go &#38; die the Death of Man for Vala the sweet wanderer</stage>
                                 <diplomatic>Saying, Go &#38; die the Death of Man for Vala the sweet wanderer</diplomatic>
                                 <note>According to E1988, lines 1-10 (as transcribed here) are written over erased text.  However, only specific portions appear to have been written over erasures; the handwriting appears to be somewhat different than that of "Luvah &#38; Vala" in line 10 and following, though "I saw that" just before is clearly an overwrite.</note>
@@ -1459,7 +1459,7 @@
                             <l n="bb209.1.ms.042.22">
                                 <stage type="one"><gap reason="erasure" extent="1" unit="line"/></stage>
                                 <stage type="two">He spoke mustering his heavy clouds around him black opake</stage>
-                                <diplomatic>He spoke mustering his heavy clouds around him black <choice><orig>opake</orig><reg>opaque</reg></choice></diplomatic>                        
+                                <diplomatic>He spoke mustering his heavy clouds around him black <choice><orig>opake</orig><reg>opaque</reg></choice></diplomatic>
                             </l>
                         </lg>
                     </zone>
@@ -1507,6 +1507,6 @@
                     </zone>
                 </surface>
             </phystext>
-        </desc>          
+        </desc>
     </objdesc>
 </bad>

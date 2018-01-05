@@ -188,6 +188,7 @@ const FZZoneView = (props: Object) => {
 
   const FZDiplomaticView = (props: Object) => {
     const { diplomatic, indent } = props;
+    console.log(diplomatic);
     return(
       <div key={shortid.generate()} className='fz-text-display-line diplomatic'>
         {indent}
@@ -243,6 +244,35 @@ const formatDiplomaticText = (diplomatic: Array) => {
     });
   }
 
+  const formatHi = (hi) => {
+    if (hi.attributes) {
+      if (hi.attributes.rend) {
+        switch(hi.attributes.rend) {
+          case 'subscript':
+            return <sub>{hi['#text']}</sub>;
+
+          case 'superscript':
+            return <sup>{hi['#text']}</sup>;
+
+          default:
+            return <span>{hi['#text']}</span>;
+        }
+      } else {
+        console.log("HI has no rend attribute");
+      }
+    } else {
+      console.log("HI has no attributes");
+    }
+  }
+
+  const formatAdd = (element, key) => {
+    let innerElement;
+    if (element.hi) {
+      innerElement = formatHi(element.hi);
+    }
+    return <span key={key} className="tei-add">{element["#text"]}{innerElement}</span>
+  }
+
   const formatHandShift = (element) => {
     return(
       <span className="tei-instr-pencil">
@@ -255,6 +285,9 @@ const formatDiplomaticText = (diplomatic: Array) => {
             if (node.nodeType === 'del') {
               let delClass = getDelType(node);
               return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
+            }
+            if (node.nodeType === 'add') {
+              return formatAdd(node, index);
             }
           }
         })}

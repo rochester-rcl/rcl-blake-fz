@@ -39,7 +39,8 @@
 }
 
 .tei-instr-pencil { /* <handShift medium="pencil"> */
-    color: #626262;
+    /*color: #626262; old */
+    color: #94a2add1;
 }
 
 .tei-hr {
@@ -52,6 +53,20 @@
 
 .tei-unclear-hi {
     color: #e085c2;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
 }
 
 .tei-subst { /* <subst>; no attributes, contains child elements of <del> and <add> (see below) */
