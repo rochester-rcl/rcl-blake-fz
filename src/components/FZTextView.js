@@ -188,7 +188,6 @@ const FZZoneView = (props: Object) => {
 
   const FZDiplomaticView = (props: Object) => {
     const { diplomatic, indent } = props;
-    console.log(diplomatic);
     return(
       <div key={shortid.generate()} className='fz-text-display-line diplomatic'>
         {indent}
@@ -240,7 +239,15 @@ const formatDiplomaticText = (diplomatic: Array) => {
     }
     deletion.forEach((delElement, index) => {
       let delClass = getDelType(delElement);
-      dstArray.push(<span key={index} className={delClass}>{delElement["#text"]}</span>);
+      let hi;
+      let choice;
+      if (delElement.hi) {
+        hi = formatHi(delElement.hi);
+      }
+      if (delElement.choice) {
+        choice = formatChoice(delElement.choice);
+      }
+      dstArray.push(<span key={shortid.generate()} className={delClass}>{choice}{hi}{delElement["#text"]}</span>);
     });
   }
 
@@ -265,6 +272,10 @@ const formatDiplomaticText = (diplomatic: Array) => {
     }
   }
 
+  const formatChoice = (element) => {
+    return element.orig["#text"];
+  }
+
   const formatAdd = (element, key) => {
     let innerElement;
     if (element.hi) {
@@ -279,15 +290,19 @@ const formatDiplomaticText = (diplomatic: Array) => {
         {element.map((node, index) => {
           if (typeof node === 'string') return <span key={index}>{node}</span>
           if (typeof node === 'object') {
-            if (node.nodeType === 'unclear') {
-              return <span key={index} className="tei-unclear-hi">{node["#text"]}</span>
-            }
-            if (node.nodeType === 'del') {
-              let delClass = getDelType(node);
-              return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
-            }
-            if (node.nodeType === 'add') {
-              return formatAdd(node, index);
+            switch(node.nodeType) {
+              case 'unclear':
+                return <span key={index} className="tei-unclear-hi">{node["#text"]}</span>
+
+              case 'del':
+                let delClass = getDelType(node);
+                return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
+
+              case 'add':
+                return formatAdd(node, index);
+
+              default:
+                break;
             }
           }
         })}
@@ -304,7 +319,7 @@ const formatDiplomaticText = (diplomatic: Array) => {
           break;
 
         case 'add':
-          formatted.push(<span key={key} className="tei-add">{element["#text"]}</span>);
+          formatted.push(formatAdd(element));
           break;
 
         case 'del':
@@ -335,6 +350,9 @@ const formatDiplomaticText = (diplomatic: Array) => {
           formatted.push(<span key={key} className={gapClass(element.gap)}>{'\xa0'.repeat(formatGap(element))}</span>);
           break;
 
+        case 'anchor':
+          console.log(element);
+          break;
         /*case 'handShift':
             formatted.push(<span key={key} className="tei-instr-pencil">{element["text"]}</span>);
             break;*/

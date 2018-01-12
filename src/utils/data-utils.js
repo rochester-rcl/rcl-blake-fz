@@ -17,6 +17,21 @@ export const formatImageURL = (imageID: string): string => {
   return imageID.toUpperCase() + '.' + DEFAULT_PPI + '.' + DEFAULT_FORMAT;
 }
 
+const anchorSubst = (element: Object): Object => {
+  let subst = {};
+  if (element.nodeType === 'del') {
+    subst.del = element;
+  }
+  if (element.nodeType === 'add') {
+    subst.add = element;
+  }
+  if (element.nodeType === 'gap') {
+    subst.gap = element;
+  }
+  subst.nodeType = 'subst';
+  return subst;
+}
+
 export const normalizeZone = (zone: Object): Object => {
   const forceArray = (arrayOrObj): Array<Object> => {
     if (arrayOrObj) {
@@ -37,12 +52,27 @@ export const normalizeZone = (zone: Object): Object => {
       attributes: lg.attributes,
       nodeType: lg.nodeType,
       vspaceExtent: lg.vspaceExtent,
-      lines: forceArray(lg.l) ? forceArray(lg.l).map((line) => {
+      lines: forceArray(lg.l) ? forceArray(lg.l).map((line, index, lg) => {
         return {
           id: shortid.generate(),
           zoneId: zone.id,
           attributes: line.attributes,
-          diplomatic: line.diplomatic ? line.diplomatic : null,
+          diplomatic: line.diplomatic ? (() => {
+            return line.diplomatic.map((element, index, diplomatic) => {
+              // handle anchored substspans
+              if (diplomatic[index+1]) {
+                if (diplomatic[index+1].nodeType === 'anchor') {
+                  return anchorSubst(element);
+                }
+              }
+              if (diplomatic[index-1]) {
+                if (diplomatic[index-1].nodeType === 'substSpan') {
+                  return anchorSubst(element);
+                }
+              }
+              return element;
+            });
+          })() : null,
           stage: {
             id: shortid.generate(),
             zoneId: zone.id,
