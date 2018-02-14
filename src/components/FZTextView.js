@@ -12,6 +12,8 @@ import { formatStage } from '../utils/data-utils';
 // shortid
 import shortid from 'shortid';
 
+const GAP_SIZE = '\xa0\xa0';
+
 const ZONE_MAP = {
   left: 0,
   body: 1,
@@ -116,7 +118,7 @@ const FZStage = (props: Object) => {
   });
   return(
     <span className={className}>
-      {stage['#text'] ? stage['#text'] : '\xa0'.repeat(formatGap(stage))}
+      {stage['#text'] ? stage['#text'] : GAP_SIZE.repeat(formatGap(stage))}
     </span>
   );
 }
@@ -167,20 +169,28 @@ const FZZoneView = (props: Object) => {
       if (line.attributes) {
 
         if (line.attributes.indent) {
-          return '\xa0'.repeat(Number(line.attributes.indent));
+          return GAP_SIZE.repeat(Number(line.attributes.indent));
         }
 
         if (line.diplomatic.attributes) {
-          return '\xa0'.repeat(Number(line.diplomatic.attributes.indent));
+          return GAP_SIZE.repeat(Number(line.diplomatic.attributes.indent));
         }
 
         return '';
       }
     }
-
+    let _indent;
+    let diplomaticIndent = line.diplomatic.find((element) => {
+      return element.hasOwnProperty('indent') === true;
+    });
+    if (diplomaticIndent) {
+      _indent = GAP_SIZE.repeat(Number(diplomaticIndent.indent));
+    } else {
+      _indent = indent(line);
+    }
     return (
       <span key={line.id} className="fz-text-line-container">
-        {mode ? <FZDiplomaticView key={line.id} keyVal={line.id} diplomatic={line.diplomatic} indent={indent(line)} /> :
+        {mode ? <FZDiplomaticView key={line.id} keyVal={line.id} diplomatic={line.diplomatic} indent={_indent} /> :
         <FZStageView key={line.id} stages={line.stage.content} />}
       </span>
     );
@@ -212,8 +222,9 @@ const FZZoneView = (props: Object) => {
 }
 
 const makeSpaces = (nSpaces: Number) => {
+  nSpaces *= 2;
   let spaceArray = new Array(nSpaces);
-  spaceArray.fill(' ');
+  spaceArray.fill(GAP_SIZE);
   return spaceArray.join('');
 }
 
@@ -239,15 +250,18 @@ const formatDiplomaticText = (diplomatic: Array) => {
     }
     deletion.forEach((delElement, index) => {
       let delClass = getDelType(delElement);
-      let hi;
-      let choice;
+      let formatted = [];
       if (delElement.hi) {
-        hi = formatHi(delElement.hi);
+        formatted.push(formatHi(delElement.hi));
       }
       if (delElement.choice) {
-        choice = formatChoice(delElement.choice);
+        formatted.push(formatChoice(delElement.choice));
       }
-      dstArray.push(<span key={shortid.generate()} className={delClass}>{choice}{hi}{delElement["#text"]}</span>);
+      if (delElement.space) {
+        formatted.push(makeSpaces(delElement.space.space.extent));
+      }
+      formatted.push(delElement["#text"]);
+      dstArray.push(<span key={shortid.generate()} className={delClass}>{[...formatted]}</span>);
     });
   }
 
@@ -280,6 +294,9 @@ const formatDiplomaticText = (diplomatic: Array) => {
     let innerElement;
     if (element.hi) {
       innerElement = formatHi(element.hi);
+    }
+    if (element.handShift) {
+      innerElement = formatHandShift(element.handShift);
     }
     return <span key={key} className="tei-add">{element["#text"]}{innerElement}</span>
   }
@@ -336,28 +353,34 @@ const formatDiplomaticText = (diplomatic: Array) => {
             doDeletion(element.del, subst);
           }
 
+          if (element.gap) {
+            subst.push(<span key={key + '$'} className={gapClass(element.gap.gap)}>{GAP_SIZE.repeat(formatGap(element.gap))}</span>);
+          }
+
           if (element.add) {
             subst.push(<span key={key} className="tei-add">{element.add["#text"]}</span>);
           }
-          if (element.gap) {
-            subst.push(<span key={key + '$'} className={gapClass(element.gap.gap)}>{'\xa0'.repeat(formatGap(element.gap))}</span>);
-          }
+
 
           formatted.push(<span key={key} className="tei-subst">{subst}</span>);
           break;
 
         case 'gap':
-          formatted.push(<span key={key} className={gapClass(element.gap)}>{'\xa0'.repeat(formatGap(element))}</span>);
+          formatted.push(<span key={key} className={gapClass(element.gap)}>{GAP_SIZE.repeat(formatGap(element))}</span>);
           break;
 
         case 'anchor':
-          console.log(element);
+          break;
+
+        case 'choice':
+          formatted.push(formatChoice(element));
           break;
         /*case 'handShift':
             formatted.push(<span key={key} className="tei-instr-pencil">{element["text"]}</span>);
             break;*/
 
         default:
+          formatted.push(<span key={key}>{element['#text']}</span>);
           break;
       }
     }

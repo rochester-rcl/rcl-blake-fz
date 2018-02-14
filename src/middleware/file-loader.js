@@ -87,6 +87,13 @@ function xmlToJson(xml) {
 					item.childNodes.forEach((child) =>{
 						elements.push(xmlToJson(child));
 					});
+					if (item.attributes) {
+						if (item.attributes.indent) {
+							elements.unshift(
+								{indent: item.attributes.indent.value}
+							);
+						}
+					}
 				}
 				obj[nodeName] = elements;
 				if (item.attributes) {
