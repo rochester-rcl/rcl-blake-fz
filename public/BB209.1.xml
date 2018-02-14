@@ -127,10 +127,13 @@
                             <stage type="three">Marshalld in order for the day of Intellectual Battle</stage>
                             <diplomatic><choice><orig>Marshalld</orig><corr>Marshalled</corr></choice> in order for the day of Intellectual Battle</diplomatic>
                         </l>
+                        
+                        <!-- move addition to own line -->
+                        
                         <l n="bb209.1.ms.03.06">
                             <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
-                            <stage type="two">The heavens<del type="overstrike">shall</del> quake the earth<subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</stage>
-                            <diplomatic>The heavens<del type="overstrike">shall</del> quake the earth<subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</diplomatic>                        
+                            <stage type="two">The heavens <del type="overstrike">shall</del> quake the earth <subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</stage>
+                            <diplomatic>The heavens <del type="overstrike">shall</del> quake the earth <subst><del type="overstrike">shall</del><add place="supralinear" type="insertion">was</add></subst> move<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; shudder<subst><del type="overwrite">s</del><add type="overwrite" place="inline">d</add></subst> &#38; the mountains</diplomatic>                        
                         </l>
                         <l n="bb209.1.ms.03.07">
                             <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
@@ -171,6 +174,9 @@
                            <stage type="two" indent="3"><handShift medium="pencil">What are the Natures of <unclear resp="jsvk">those</unclear> Living Creatures the Heavenly Father only</handShift></stage><!-- At first glance, looks like a deletion/legible wash, but old readings see it as a pencil add that has simply faded; transcription of actual words taken from Justin/Rachel xml's -->
                            <diplomatic><handShift medium="pencil">What are the Natures of <unclear resp="jsvk">those</unclear> Living Creatures the Heavenly Father only</handShift></diplomatic><!-- JVK <note>Lines 21-23 (excluding the marginal note in line 21) are interlined between a stanza break.  Blake interlined "NO" (line 22) possibly at a later point.<p>"those" is a conjectural reading; "those" B1963f, B1978, K1979, E1988 (text).</note> -->
                        </l>
+                       
+                       <!-- move addition to own line -->
+                       
                        <l n="bb209.1.ms.03.14">
                            <stage type="one"><gap reason="cancellation_wash" extent="1" unit="line"></gap></stage>
                            <stage type="two"><handShift medium="pencil">Knoweth <add place="supralinear" type="insertion" symbol="caret">NO</add> Individual <del type="overstrike">Man</del> Knoweth <del type="overstrike"><unclear resp="jsvk">not</unclear></del> nor Can Knoweth in all Eternity</handShift></stage><!-- same as (our) line 13; we could just tag the whole thing as unclear, too. It's really hard to read. -->
@@ -203,10 +209,13 @@
                        </l>
                        <l><stage type="one"> τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.</stage>
                           <stage type="two" indent="40"><handShift medium="pencil">2</handShift></stage>
-                           <diplomatic>τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.<space extent="10"></space></diplomatic>
+                           <diplomatic>τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.<space extent="15"></space><handShift medium="pencil">2</handShift></diplomatic>
                        </l>
+                       
+                       <!-- move supra addition to own line -->
+                       
                        <l indent="25"><stage type="one">Εφες:<subst><del type="overstrike">5</del><add place="supralinear">VI</add></subst>κεφ. 12<add place="inline"><handShift medium="pencil">ver</handShift></add></stage>
-                           <diplomatic>Εφες:<subst><del type="overstrike">5</del><add place="supralinear">VI</add></subst>κεφ. 12<add place="inline"><handShift medium="pencil">ver</handShift></add></diplomatic>
+                           <diplomatic>Εφες:<subst><del type="overstrike">5</del><add place="supralinear">VI</add></subst>κεφ. 12 <add place="inline"> <handShift medium="pencil">ver</handShift></add></diplomatic>
                        </l><!--is there some kind of smudgy deletion through the middle of this line?--><!-- looks like it to me! -->
                    </lg>
                    <vspace extent="1"/>
@@ -418,8 +427,7 @@
                             <l n="bb209.1.ms.11.25">
                                 <stage type="one">The Human Nature shall no more remain nor Human acts</stage>
                                 <diplomatic>The Human Nature shall no more remain nor Human acts</diplomatic>
-                            </l> 
-                            
+                            </l>
                             <l n="bb209.1.ms.11.26" indent="10">
                                 <stage type="one"><substSpan spanto="A1"/><add place="supralinear">rebellious</add></stage>
                                 <diplomatic><substSpan spanto="A1"/><add place="supralinear">rebellious</add></diplomatic>
@@ -532,7 +540,7 @@
                             </l>
                             <l n="bb209.1.ms.13.03">
                                 <stage type="one">With winged radiance scattering joys thro the <subst><gap reason="erasure" extent="4" unit="character"/><add type="overwrite" place="inline">ever</add></subst> changing light</stage>
-                                <diplomatic>With winged radiance scattering joys thro the ever changing light</diplomatic>
+                                <diplomatic>With winged radiance scattering joys thro the <subst><gap reason="erasure" extent="4" unit="character"/><add type="overwrite" place="inline">ever</add></subst> changing light</diplomatic>
                             </l>
                             <!--Justin puts a vspace here-->
                             <l n="bb209.1.ms.13.04">
@@ -540,7 +548,6 @@
                                 <stage type="two" indent="8">But Luvah &#38; Vala standing in the bloody sky</stage>
                                 <diplomatic indent="8">But Luvah &#38; Vala standing in the bloody sky</diplomatic>
                                 <note>Lines 6-7 and 13-24, comprising the middle section of the central text (excluding the marginal addition as transcribed here) appears to have been circled in pencil at one point, but then the circle was erased; lines 22-24 may have been circled separately.  In addition, there are remnants of thick pencil lines under each of the lines of text that are likely erased guiding lines, though they appear to be much blunter and thicker in comparison to other guiding lines in the manuscript-or even the remnant of the vertical line beside "They" and "With" in lines 4 and 5 respectively; thus, the lines of text may have been struck through in pencil, all of which were also later erased. "But" is written over erasures, a portion of which ("The shades(?) of(?)" B1963f, B1978; "The ?shades of" E1988) is still visible to the left.</note></l>
-                            
                             <l n="bb209.1.ms.13.05">
                                 <stage type="one"><space extent="3"/>On high remaind alone forsaken in fierce jealousy</stage>
                                 <diplomatic>On high remaind alone forsaken in fierce jealousy</diplomatic>
@@ -552,7 +559,7 @@
                             </l>
                             <l n="bb209.1.ms.13.07">
                                 <stage type="one"><subst><gap reason="overwrite" extent="5" unit="character"/><add type="overwrite" place="inline">Thro'the clean changing atmosphere display'd green fields among</add></subst></stage>
-                                <diplomatic><subst><gap reason="overwrite" extent="5" unit="character"/><add type="overwrite" place="inline"><choice><orig>Thro'</orig><reg>Through</reg></choice></add></subst> the clean changing atmosphere <choice><orig>display'd</orig><reg>displayed</reg></choice> green fields among</diplomatic>
+                                <diplomatic><subst><gap reason="overwrite" extent="5" unit="character"/><add type="overwrite" place="inline">Thro'</add></subst> the clean changing atmosphere <choice><orig>display'd</orig><reg>displayed</reg></choice> green fields among</diplomatic>
                             </l>
                             
                             <l n="bb209.1.ms.13.08">
@@ -616,7 +623,7 @@
                         </lg>                        
                     </zone>
                     <zone type="right" points="2204,2112 2204,793 1869,789 793,2112">
-                        <lg justify="left" rend="writing-mode: vertical-rl; text-orientation: sideways-right"><!--this is just from TEI-->
+                        <lg style="writing-mode: vertical-rl; text-orientation: sideways-right"><!--this is just from TEI-->
                             <l>
                                 <stage type="one>">They stood above the heavens forsaken desolate suspended in blood</stage>
                                 <diplomatic>They stood above the heavens forsaken desolate suspended in blood</diplomatic>
