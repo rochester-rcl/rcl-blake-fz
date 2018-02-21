@@ -235,8 +235,8 @@ const formatDiplomaticText = (diplomatic: Array) => {
       case 'overstrike':
         return 'tei-del-overstrike';
 
-      case 'overwrite':
-        return 'tei-del-overwrite';
+      case 'erasure':
+        return 'tei-del-erasure';
 
       default:
         return 'some-class';
@@ -259,6 +259,9 @@ const formatDiplomaticText = (diplomatic: Array) => {
       }
       if (delElement.space) {
         formatted.push(makeSpaces(delElement.space.space.extent));
+      }
+      if (delElement.unclear) {
+        formatted.push(<span key={shortid.generate()} className="tei-unclear-hi">{element.unclear['#text']}</span>);
       }
       formatted.push(delElement["#text"]);
       dstArray.push(<span key={shortid.generate()} className={delClass}>{[...formatted]}</span>);
@@ -314,6 +317,7 @@ const formatDiplomaticText = (diplomatic: Array) => {
               case 'del':
                 let delClass = getDelType(node);
                 return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
+
 
               case 'add':
                 return formatAdd(node, index);
