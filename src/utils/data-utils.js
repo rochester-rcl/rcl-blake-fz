@@ -32,63 +32,83 @@ const anchorSubst = (element: Object): Object => {
   return subst;
 }
 
-export const normalizeZone = (zone: Object): Object => {
-  const forceArray = (arrayOrObj): Array<Object> => {
-    if (arrayOrObj) {
-      if (arrayOrObj.constructor === Array) return arrayOrObj;
-      return [arrayOrObj];
-    } else {
-      return undefined;
-    }
+const forceArray = (arrayOrObj): Array<Object> => {
+  if (arrayOrObj) {
+    if (arrayOrObj.constructor === Array) return arrayOrObj;
+    return [arrayOrObj];
+  } else {
+    return undefined;
   }
+}
+
+const formatLineGroup = (lg: Object, zone: Object) => {
+  return forceArray(lg.l) ? forceArray(lg.l).map((line, index, lg) => {
+    return {
+      id: shortid.generate(),
+      zoneId: zone.id,
+      attributes: line.attributes,
+      diplomatic: line.diplomatic ? (() => {
+        return line.diplomatic.map((element, index, diplomatic) => {
+          // handle anchored substspans
+          if (diplomatic[index+1]) {
+            if (diplomatic[index+1].nodeType === 'anchor') {
+              return anchorSubst(element);
+            }
+          }
+          if (diplomatic[index-1]) {
+            if (diplomatic[index-1].nodeType === 'substSpan') {
+              return anchorSubst(element);
+            }
+          }
+          return element;
+        });
+      })() : null,
+      stage: {
+        id: shortid.generate(),
+        zoneId: zone.id,
+        content: line.stage/*forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
+          let { attributes, text, ...rest } = stage;
+          console.log(stage);
+          return {
+            id: shortid.generate(),
+            zoneId: zone.id,
+            type: stage.attributes ? stage.attributes.type : null,
+            ...rest,
+          }
+        }) : null*/,
+      }
+    }
+  }) : null;
+}
+
+export const normalizeZone = (zone: Object): Object => {
   return {
     // Need to somehow put vspace into linegroups array
     id: shortid.generate(),
     points: zone.attributes.points,
     type: zone.attributes.type,
+    columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
+      console.log(column);
+      return {
+        column: {
+          lineGroups: column.lineGroups.map((lg) => { return {
+            id: shortid.generate(),
+            zoneId: zone.id,
+            attributes: lg.attributes,
+            nodeType: lg.nodeType,
+            vspaceExtent: lg.vspaceExtent,
+            lines: formatLineGroup(lg, zone),
+          }}),
+        }
+      }
+    }) : null,
     lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
       id: shortid.generate(),
       zoneId: zone.id,
       attributes: lg.attributes,
       nodeType: lg.nodeType,
       vspaceExtent: lg.vspaceExtent,
-      lines: forceArray(lg.l) ? forceArray(lg.l).map((line, index, lg) => {
-        return {
-          id: shortid.generate(),
-          zoneId: zone.id,
-          attributes: line.attributes,
-          diplomatic: line.diplomatic ? (() => {
-            return line.diplomatic.map((element, index, diplomatic) => {
-              // handle anchored substspans
-              if (diplomatic[index+1]) {
-                if (diplomatic[index+1].nodeType === 'anchor') {
-                  return anchorSubst(element);
-                }
-              }
-              if (diplomatic[index-1]) {
-                if (diplomatic[index-1].nodeType === 'substSpan') {
-                  return anchorSubst(element);
-                }
-              }
-              return element;
-            });
-          })() : null,
-          stage: {
-            id: shortid.generate(),
-            zoneId: zone.id,
-            content: line.stage/*forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
-              let { attributes, text, ...rest } = stage;
-              console.log(stage);
-              return {
-                id: shortid.generate(),
-                zoneId: zone.id,
-                type: stage.attributes ? stage.attributes.type : null,
-                ...rest,
-              }
-            }) : null*/,
-          }
-        }
-      }) : null,
+      lines: formatLineGroup(lg, zone),
     }}) : null,
   }
 }

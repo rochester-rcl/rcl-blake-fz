@@ -102,7 +102,7 @@ const formatGap = (stage: Object) => {
       gap = stage.gap;
     }
     if (gap.unit === 'line') {
-      return 100;
+      return 50;
     } else {
       return Number(gap.extent);
     }
@@ -125,6 +125,7 @@ const FZStage = (props: Object) => {
 
 const FZZoneView = (props: Object) => {
   const { zone, expanded, expandStages, diplomaticMode } = props;
+  console.log(zone);
   const renderVSpace = (vSpaceExtent: Number) => {
     let vSpaceArray = new Array(vSpaceExtent);
     vSpaceArray.fill(' ');
@@ -362,9 +363,16 @@ const formatDiplomaticText = (diplomatic: Array) => {
           }
 
           if (element.add) {
-            subst.push(<span key={key} className="tei-add">{element.add["#text"]}</span>);
+            let text;
+            if (element.add.choice) {
+              text = formatChoice(element.add.choice);
+            } else if (element.add.handShift) {
+              text = formatHandShift(element.add.handShift);
+            } else {
+              text = element.add["#text"];
+            }
+            subst.push(<span key={key} className="tei-add">{text}</span>);
           }
-
 
           formatted.push(<span key={key} className="tei-subst">{subst}</span>);
           break;

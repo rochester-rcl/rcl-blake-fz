@@ -21,28 +21,30 @@ function xmlToJson(xml) {
 			if (nodeName === 'zone') {
 				let elements = [];
 				let lg = [];
+				let columns;
 				if (xml.hasChildNodes()) {
 					let children = Array.from(xml.childNodes);
 					children.forEach((child, index) => {
 						if (child.nodeName === 'lg') {
-							let group = xmlToJson(child);
-							if (index > 0) {
-								let vspace = children.slice(0, index).reverse().find((child) => {
-									return child.nodeName === 'vspace';
-								});
-								if (vspace) {
-									group.vspaceExtent = Number(xmlToJson(vspace).vspace.extent);
-								} else {
-									group.vspaceExtent = 0;
-								}
-							}
+							lg.push(formatLineGroup(child, children, index));
+						}
 
-							lg.push(group);
+						if (child.nodeName === 'columns') {
+							let children = Array.from(child.childNodes);
+							let cols = children.filter((col) => col.nodeName === 'column');
+							columns = cols.map((col) => {
+								return {
+									lineGroups: Array.from(col.children).filter((child) => child.nodeName === 'lg').map((lg) => {
+										return formatLineGroup(lg);
+									}),
+								}
+							});
 						}
 					});
 				}
 				obj[nodeName] = {};
 				obj[nodeName].lg = lg;
+				obj[nodeName].columns = columns;
 				if (xml.attributes) {
 					let attributes = {};
 					for (var j = 0; j < xml.attributes.length; j++) {
@@ -138,6 +140,20 @@ function xmlToJson(xml) {
 	return obj;
 };
 
+function formatLineGroup(lg, parent, index) {
+	let group = xmlToJson(lg);
+	if (index > 0) {
+		let vspace = parent.slice(0, index).reverse().find((child) => {
+			return child.nodeName === 'vspace';
+		});
+		if (vspace) {
+			group.vspaceExtent = Number(xmlToJson(vspace).vspace.extent);
+		} else {
+			group.vspaceExtent = 0;
+		}
+	}
+	return group;
+}
 
 export function fetchXML(xmlPath) {
   return fetch(xmlPath).then((xml) => {
