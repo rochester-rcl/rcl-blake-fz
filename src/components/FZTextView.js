@@ -125,8 +125,7 @@ const FZStage = (props: Object) => {
 
 const FZZoneView = (props: Object) => {
   const { zone, expanded, expandStages, diplomaticMode } = props;
-  console.log(zone);
-  const renderVSpace = (vSpaceExtent: Number) => {
+  const renderVSpace = (vSpaceExtent: number) => {
     let vSpaceArray = new Array(vSpaceExtent);
     vSpaceArray.fill(' ');
     return vSpaceArray;
@@ -306,30 +305,36 @@ const formatDiplomaticText = (diplomatic: Array) => {
   }
 
   const formatHandShift = (element) => {
-    return(
-      <span className="tei-instr-pencil">
-        {element.map((node, index) => {
-          if (typeof node === 'string') return <span key={index}>{node}</span>
-          if (typeof node === 'object') {
-            switch(node.nodeType) {
-              case 'unclear':
-                return <span key={index} className="tei-unclear-hi">{node["#text"]}</span>
+    if (element.constructor === Object) {
+      return(
+        <span className="tei-instr-pencil"></span>
+      )
+    } else {
+      return(
+        <span className="tei-instr-pencil">
+          {element.map((node, index) => {
+            if (typeof node === 'string') return <span key={index}>{node}</span>
+            if (typeof node === 'object') {
+              switch(node.nodeType) {
+                case 'unclear':
+                  return <span key={index} className="tei-unclear-hi">{node["#text"]}</span>
 
-              case 'del':
-                let delClass = getDelType(node);
-                return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
+                case 'del':
+                  let delClass = getDelType(node);
+                  return <span key={index} className={delClass + ' tei-instr-pencil'}>{node["#text"]}</span>
 
 
-              case 'add':
-                return formatAdd(node, index);
+                case 'add':
+                  return formatAdd(node, index);
 
-              default:
-                break;
+                default:
+                  break;
+              }
             }
-          }
-        })}
-      </span>
-    );
+          })}
+        </span>
+      );
+    }
   }
 
   diplomatic.forEach((element, index) => {
