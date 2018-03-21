@@ -243,29 +243,54 @@ const formatDiplomaticText = (diplomatic: Array) => {
     }
   }
 
-  const doDeletion = (element, dstArray) => {
-    let deletion = element;
-    if (deletion.constructor !== Array) {
-      deletion = [deletion];
-    }
-    deletion.forEach((delElement, index) => {
-      let delClass = getDelType(delElement);
-      let formatted = [];
-      if (delElement.hi) {
-        formatted.push(formatHi(delElement.hi));
+  const formatChildren = (children: Array<Object>): Array<Object> => {
+    let formatted = [];
+    children.forEach((child, index) => {
+      if (child.hi || child.nodeType === 'hi') {
+        formatted.push(formatHi(child.hi));
       }
-      if (delElement.choice) {
-        formatted.push(formatChoice(delElement.choice));
+      if (child.choice || child.nodeType === 'choice') {
+        formatted.push(formatChoice(child));
       }
-      if (delElement.space) {
-        formatted.push(makeSpaces(delElement.space.space.extent));
+      if (child.space || child.nodeType === 'space') {
+        formatted.push(makeSpaces(child.space.extent));
       }
-      if (delElement.unclear) {
-        formatted.push(<span key={shortid.generate()} className="tei-unclear-hi">{element.unclear['#text']}</span>);
+      if (child.unclear || child.nodeType === 'unclear') {
+        let unclear = (child.unclear !== undefined) ? child.unclear['#text'] : child["#text"];
+        formatted.push(<span key={shortid.generate()} className="tei-unclear-hi">{unclear}</span>);
       }
-      formatted.push(delElement["#text"]);
-      dstArray.push(<span key={shortid.generate()} className={delClass}>{[...formatted]}</span>);
+      if (child.constructor === String) {
+        formatted.push(child);
+      }
+      if (child.del || child.nodeType === 'del') {
+        formatted.push(doDeletion(child));
+      }
+      if (child.add || child.nodeType === 'add') {
+        formatted.push(formatAdd(child));
+      }
     });
+    return formatted;
+  }
+
+  const formatSubst = (element: Object) => {
+    let formatted;
+    if (element.children) {
+        formatted = formatChildren(element.children);
+    } else {
+      formatted = [];
+    }
+    return <span key={shortid.generate()} className="tei-subst">{[...formatted]}</span>
+  }
+
+  const reduceChildren = (children: Array<Array<Object>>): Array<Object> => {
+    return children.reduce((a, b) => a.concat(b), []);
+  }
+
+  const doDeletion = (element) => {
+    let deletion = element;
+    let delClass = getDelType(deletion);
+    let formatted = formatChildren(element.children);
+    return <span key={shortid.generate()} className={delClass}>{[...formatted]}</span>;
   }
 
   const formatHi = (hi) => {
@@ -290,18 +315,19 @@ const formatDiplomaticText = (diplomatic: Array) => {
   }
 
   const formatChoice = (element) => {
-    return element.orig["#text"];
+    let choice = (element.choice !== undefined) ? element.choice.orig["#text"] : element.orig["#text"];
+    return choice;
   }
 
-  const formatAdd = (element, key) => {
-    let innerElement;
-    if (element.hi) {
-      innerElement = formatHi(element.hi);
+  const formatAdd = (element) => {
+    let formatted = [];
+    let inner;
+    if (element.children) {
+      inner = formatChildren(element.children);
+    } else {
+      inner = (element["#text"] !== undefined) ? element["#text"] : ''
     }
-    if (element.handShift) {
-      innerElement = formatHandShift(element.handShift);
-    }
-    return <span key={key} className="tei-add">{element["#text"]}{innerElement}</span>
+    return <span key={shortid.generate()} className="tei-add">{inner}</span>
   }
 
   const formatHandShift = (element) => {
@@ -350,7 +376,7 @@ const formatDiplomaticText = (diplomatic: Array) => {
           break;
 
         case 'del':
-          doDeletion(element, formatted);
+          formatted.push(doDeletion(element));
           break;
 
         case 'handShift':
@@ -358,28 +384,7 @@ const formatDiplomaticText = (diplomatic: Array) => {
           break;
 
         case 'subst':
-          let subst = [];
-          if (element.del) {
-            doDeletion(element.del, subst);
-          }
-
-          if (element.gap) {
-            subst.push(<span key={key + '$'} className={gapClass(element.gap.gap)}>{GAP_SIZE.repeat(formatGap(element.gap))}</span>);
-          }
-
-          if (element.add) {
-            let text;
-            if (element.add.choice) {
-              text = formatChoice(element.add.choice);
-            } else if (element.add.handShift) {
-              text = formatHandShift(element.add.handShift);
-            } else {
-              text = element.add["#text"];
-            }
-            subst.push(<span key={key} className="tei-add">{text}</span>);
-          }
-
-          formatted.push(<span key={key} className="tei-subst">{subst}</span>);
+          formatted.push(formatSubst(element));
           break;
 
         case 'gap':

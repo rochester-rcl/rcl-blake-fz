@@ -18,6 +18,28 @@ function xmlToJson(xml) {
 				});
 				obj[nodeName] = elements;
 			}
+			if (nodeName === 'del') {
+				let elements = [];
+				xml.childNodes.forEach((child) => {
+					elements.push(xmlToJson(child))
+				});
+				obj['children'] = elements;
+			}
+			if (nodeName === 'add') {
+				let elements = [];
+				xml.childNodes.forEach((child) => {
+					elements.push(xmlToJson(child))
+				});
+				obj['children'] = elements;
+			}
+			if (nodeName === 'subst') {
+				let elements = [];
+				xml.childNodes.forEach((child) => {
+					elements.push(xmlToJson(child))
+				});
+				obj['children'] = elements;
+				console.log(obj['children']);
+			}
 			if (nodeName === 'zone') {
 				let elements = [];
 				let lg = [];
