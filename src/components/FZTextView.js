@@ -92,22 +92,23 @@ const gapClass = (gap: Object) => {
   return 'tei-gap';
 }
 
-const formatGap = (stage: Object) => {
-  if (stage.gap) {
+const formatGap = (element: Object) => {
+  if (element.gap) {
     let gap;
+    let units;
     // todo find a beter way to handle polymorphic properties i.e. Object vs Array<Object>
-    if (stage.gap.constructor === Array) {
-      gap = stage.gap[0];
+    if (element.gap.constructor === Array) {
+      gap = element.gap[0];
     } else {
-      gap = stage.gap;
+      gap = element.gap;
     }
     if (gap.unit === 'line') {
-      return 50;
+      units = 50;
     } else {
-      return Number(gap.extent);
+      units = Number(gap.extent);
     }
+    return <span key={shortid.generate()} className={gapClass(element.gap)}>{GAP_SIZE.repeat(units)}</span>;
   }
-  return 0;
 };
 
 const FZStage = (props: Object) => {
@@ -118,7 +119,7 @@ const FZStage = (props: Object) => {
   });
   return(
     <span className={className}>
-      {stage['#text'] ? stage['#text'] : GAP_SIZE.repeat(formatGap(stage))}
+      {stage['#text'] ? stage['#text'] : formatGap(stage)}
     </span>
   );
 }
@@ -268,6 +269,12 @@ const formatDiplomaticText = (diplomatic: Array) => {
       if (child.add || child.nodeType === 'add') {
         formatted.push(formatAdd(child));
       }
+      if (child.handShift || child.nodeType === 'handShift') {
+        formatted.push(formatHandShift(child));
+      }
+      if (child.gap || child.nodeType === 'gap') {
+        formatted.push(formatGap(child));
+      }
     });
     return formatted;
   }
@@ -275,6 +282,7 @@ const formatDiplomaticText = (diplomatic: Array) => {
   const formatSubst = (element: Object) => {
     let formatted;
     if (element.children) {
+        console.log(element.children);
         formatted = formatChildren(element.children);
     } else {
       formatted = [];
@@ -388,7 +396,7 @@ const formatDiplomaticText = (diplomatic: Array) => {
           break;
 
         case 'gap':
-          formatted.push(<span key={key} className={gapClass(element.gap)}>{GAP_SIZE.repeat(formatGap(element))}</span>);
+          formatted.push(formatGap(element));
           break;
 
         case 'anchor':

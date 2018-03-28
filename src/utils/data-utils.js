@@ -19,15 +19,8 @@ export const formatImageURL = (imageID: string): string => {
 
 const anchorSubst = (element: Object): Object => {
   let subst = {};
-  if (element.nodeType === 'del') {
-    subst.del = element;
-  }
-  if (element.nodeType === 'add') {
-    subst.add = element;
-  }
-  if (element.nodeType === 'gap') {
-    subst.gap = element;
-  }
+  subst.children = [];
+  subst.children.push(element);
   subst.nodeType = 'subst';
   return subst;
 }
@@ -88,7 +81,6 @@ export const normalizeZone = (zone: Object): Object => {
     points: zone.attributes.points,
     type: zone.attributes.type,
     columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
-      console.log(column);
       return {
         column: {
           lineGroups: column.lineGroups.map((lg) => { return {

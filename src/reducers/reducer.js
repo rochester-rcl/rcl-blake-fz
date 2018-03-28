@@ -21,6 +21,7 @@ export default function appReducer(state: Object = defaultState, action: Object)
   switch (action.type) {
     case 'XML_LOADED':
     let root = action.xml2json.bad.objdesc.desc;
+    console.log(root);
     let pageObjects = root.map((pageObj, index) => {
       return({
         id: pageObj.attributes.dbi,

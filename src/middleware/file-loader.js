@@ -38,7 +38,6 @@ function xmlToJson(xml) {
 					elements.push(xmlToJson(child))
 				});
 				obj['children'] = elements;
-				console.log(obj['children']);
 			}
 			if (nodeName === 'zone') {
 				let elements = [];
