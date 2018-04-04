@@ -911,9 +911,9 @@
                         </lg>
                     </zone>
                     <zone type="left" points="660,2105 660,88 41,88 41,2105">
-                        <columns><!-- do we need to do orientation at the column level for display to work? -->
+                        <columns style="writing-mode: vertical-lr; text-orientation: sideways-left"><!-- do we need to do orientation at the columns level for display to work? Josh says yes. -->
                             <column>
-                                <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
+                                <lg justify="left">
                                     <l>
                                         <stage type="one">They sing unceasing to the notes of my immortal hand</stage>
                                         <diplomatic>They sing unceasing to the notes of my immortal hand</diplomatic>
@@ -977,7 +977,7 @@
                                 </lg>
                             </column>
                             <column>
-                                <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
+                                <lg justify="left">
                                     <l>
                                         <stage type="one">Now my left hand I stretch to earth beneath</stage>
                                         <diplomatic>Now my left hand I stretch to earth beneath</diplomatic>
