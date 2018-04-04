@@ -720,17 +720,17 @@
                                 <stage type="one">And many a division let in &#38; out into the vast unknown</stage>
                                 <diplomatic>And many a division let in &#38; out into the vast unknown</diplomatic>
                             </l>
-                            <l n="bb209.1.ms.32.12">
-                                <stage type="one"><space extent="6"/><del type="erasure" extent="12" unit="character">window square</del><space extent="21"/>walls and cielings</stage>
-                                <diplomatic><space extent="6"/><del type="erasure" extent="12" unit="character">window square</del><space extent="21"/>walls and <choice><orig>cielings</orig><corr>ceilings</corr></choice></diplomatic><!-- JVK <note>Above "infinite orb" in line 18 are the remnants of two erased words, probably "window square"; the cancellation of "infinite orb" below was not erased as well.</note> -->
+                            <l n="bb209.1.ms.32.12" indent="6">
+                                <stage type="one"><del type="erasure">window square</del><space extent="12"/>walls and cielings</stage>
+                                <diplomatic><del type="erasure">window square</del><space extent="12"/>walls and <choice><orig>cielings</orig><corr>ceilings</corr></choice></diplomatic><!-- JVK <note>Above "infinite orb" in line 18 are the remnants of two erased words, probably "window square"; the cancellation of "infinite orb" below was not erased as well.</note> -->
                             </l>                          
                             <l n="bb209.1.ms.32.13"> 
-                                <stage type="one"><del type="erasure" place="marginleft"><unclear resp="jsvk">Cubed</unclear></del><del type="overstrike">Circled</del> in <del type="overstrike">infinite</del> <del type="overstrike">orb</del> immoveable, within its <del type="overstrike">arches all</del></stage><!-- anchor to walls and ceilings in the previous line --><!-- JVK <note>"Circled" is struck through with three lines. To the left is an erased word, probably "Cubed" ("Cubed(<hi rend="i">?</hi>)" B1963f, B1978; "Cubed" E1988 [in text, with a note on the uncertainty of Blake's final choice]); the cancellation of "Circled" was not erased as well.</note> -->
-                                <diplomatic><del type="erasure" place="marginleft"><unclear resp="jsvk">Cubed</unclear></del>Circled in <del type="overstrike">infinite</del><del type="overstrike"> orb</del> immoveable, within its <del type="overstrike">arches all</del></diplomatic>  
+                                <stage type="one"><del type="erasure"><unclear resp="jsvk">Cubed</unclear></del><del type="overstrike">Circled</del> in <del type="overstrike">infinite</del> <del type="overstrike">orb</del> immoveable, within its <del type="overstrike">arches all</del></stage><!-- anchor to walls and ceilings in the previous line --><!-- JVK <note>"Circled" is struck through with three lines. To the left is an erased word, probably "Cubed" ("Cubed(<hi rend="i">?</hi>)" B1963f, B1978; "Cubed" E1988 [in text, with a note on the uncertainty of Blake's final choice]); the cancellation of "Circled" was not erased as well.</note> -->
+                                <diplomatic><del type="erasure"><unclear resp="jsvk">Cubed</unclear></del>Circled in <del type="overstrike">infinite</del><del type="overstrike"> orb</del> immoveable, within its <del type="overstrike">arches all</del></diplomatic>  
                             </l>
                             <l n="bb209.1.ms.32.14">
-                                <stage type="one" indent="35"><del type="erasure" extent="35" unit="character" >mournd their bondage night &#38; day</del></stage>
-                                <diplomatic indent="35"><del type="erasure" extent="35" unit="character"><choice>mourned<orig></orig><corr>mourned</corr></choice> their bondage night &#38; day</del></diplomatic></l><!-- JVK <note>The ampersand in this line is scrawled over with a pencil.</note> -->
+                                <stage type="one" indent="35"><del type="erasure">mournd their bondage night &#38; day</del></stage>
+                                <diplomatic indent="35"><del type="erasure"><choice><orig>mournd</orig><corr>mourned</corr></choice> their bondage night &#38; day</del></diplomatic></l><!-- JVK <note>The ampersand in this line is scrawled over with a pencil.</note> -->
                             
                             <l n="bb209.1.ms.32.15">
                                 <stage type="three">The heavens were closd <subst><del type="overstrike">&#38;</del><add place="supralinear" type="insertion">and</add></subst>spirits mournd their bondage night &#38; day</stage>
