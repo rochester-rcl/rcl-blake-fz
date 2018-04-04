@@ -913,7 +913,7 @@
                     <zone type="left" points="660,2105 660,88 41,88 41,2105">
                         <columns><!-- do we need to do orientation at the column level for display to work? -->
                             <column>
-                                <lg justify="left" rend="writing-mode: vertical-lr; text-orientation: sideways-left">
+                                <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
                                     <l>
                                         <stage type="one">They sing unceasing to the notes of my immortal hand</stage>
                                         <diplomatic>They sing unceasing to the notes of my immortal hand</diplomatic>
@@ -977,7 +977,7 @@
                                 </lg>
                             </column>
                             <column>
-                                <lg justify="left" rend="writing-mode: vertical-lr; text-orientation: sideways-left">
+                                <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
                                     <l>
                                         <stage type="one">Now my left hand I stretch to earth beneath</stage>
                                         <diplomatic>Now my left hand I stretch to earth beneath</diplomatic>
@@ -1057,7 +1057,7 @@
                         </l>
                     </lg>
                     <vspace extent="15"/><!-- above vertical text, possible marginal text in deleted pencil; but is it part of the erased body text? see Justin's note and historical readings for transcription, but how to encode? -->
-                    <lg justify="left" rend="writing-mode: vertical-lr; text-orientation: sideways-left">
+                    <lg justify="left" style="writing-mode: vertical-lr; text-orientation: sideways-left">
                         <l>
                             <stage type="one">The joy of woman is the Death of her most best beloved</stage>
                             <diplomatic>The joy of woman is the Death of her most best beloved</diplomatic>
