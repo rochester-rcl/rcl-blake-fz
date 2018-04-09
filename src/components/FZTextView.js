@@ -36,12 +36,12 @@ export default class FZTextView extends Component {
     return(
       <div className="fz-text-view">
         <div className="fz-text-display">
-          {sortedZones.map((zone, index) =>
+          {/*sortedZones.map((zone, index) =>
             <FZZoneView
               key={index}
               diplomaticMode={diplomaticMode}
               zone={zone}/>
-          )}
+          )*/}
         </div>
       </div>
     );

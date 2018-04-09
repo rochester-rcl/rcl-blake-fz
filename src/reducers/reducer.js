@@ -21,15 +21,16 @@ export default function appReducer(state: Object = defaultState, action: Object)
   switch (action.type) {
     case 'XML_LOADED':
     let root = action.xml2json.bad.objdesc.desc;
-    console.log(root);
+    root = [root];
     let pageObjects = root.map((pageObj, index) => {
+      let attr = pageObj.phystext.zone.attributes;
       return({
         id: pageObj.attributes.dbi,
         imageURL: formatImageURL(pageObj.attributes.dbi),
         pageNo: index,
         pageDisplayNo: index + 1,
-        surface: { zone: pageObj.phystext.surface.zone.map((zone) => normalizeZone(zone)),
-          points: pageObj.phystext.surface.attributes.points
+        surface: { zone: pageObj.phystext.zone.map((zone) => normalizeZone(zone)),
+          points: (attr !== undefined && attr.points !== undefined) ? attr.points : null,
         }
       });
     });

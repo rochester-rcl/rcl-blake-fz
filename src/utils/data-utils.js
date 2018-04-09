@@ -88,7 +88,6 @@ export const normalizeZone = (zone: Object): Object => {
     points: zone.attributes.points,
     type: zone.attributes.type,
     columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
-      console.log(column);
       return {
         column: {
           lineGroups: column.lineGroups.map((lg) => { return {
