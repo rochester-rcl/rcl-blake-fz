@@ -147,6 +147,8 @@ export const pointsToNumbers = (points: string): Array<Number> => {
   let y = usefulPoints[1];
   let w = usefulPoints[2] - x;
   let h = usefulPoints[3] - y;
+  w = (w < 0) ? -w : w;
+  h = (h < 0) ? -h : h;
   return [x, y, w, h];
 }
 
