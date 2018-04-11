@@ -63,13 +63,14 @@ class FZStageView extends Component {
   }
 
   render(){
-    const { stages } = this.props;
+    const { stages, indent } = this.props;
     const { expanded } = this.state;
     if (stages) {
       return(
         <div className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
+          {indent}
           {stages.map((stage, index) =>
-            <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.type} />
+            <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.attributes.type} />
           )}
         </div>
       );
@@ -117,9 +118,10 @@ const FZStage = (props: Object) => {
   let className = ['fz-text-display-stage', stageType, expandedState, formatStage(stage)].reduce((classA, classB) => {
     return classA + ' ' + classB;
   });
+
   return(
     <span className={className}>
-      {stage['#text'] ? stage['#text'] : formatGap(stage)}
+      {formatDiplomaticText(stage)}
     </span>
   );
 }
@@ -170,6 +172,7 @@ const FZZoneView = (props: Object) => {
       if (line.attributes) {
 
         if (line.attributes.indent) {
+          console.log('here')
           return GAP_SIZE.repeat(Number(line.attributes.indent));
         }
 
@@ -184,15 +187,18 @@ const FZZoneView = (props: Object) => {
     let diplomaticIndent = line.diplomatic.find((element) => {
       return element.hasOwnProperty('indent') === true;
     });
+    let stageIndent = line.stage.indent !== undefined;
     if (diplomaticIndent) {
       _indent = GAP_SIZE.repeat(Number(diplomaticIndent.indent));
+    } else if (stageIndent) {
+      _indent = GAP_SIZE.repeat(Number(line.stage.indent));
     } else {
       _indent = indent(line);
     }
     return (
       <span key={line.id} className="fz-text-line-container">
         {mode ? <FZDiplomaticView key={line.id} keyVal={line.id} diplomatic={line.diplomatic} indent={_indent} /> :
-        <FZStageView key={line.id} stages={line.stage.content} />}
+        <FZStageView key={line.id} stages={line.stage.content} indent={_indent} />}
       </span>
     );
   }

@@ -131,8 +131,17 @@ function xmlToJson(xml) {
 				let elements = [];
 				if (item.hasChildNodes()) {
 					item.childNodes.forEach((child) => {
+						let toJson = xmlToJson(child)
 						elements.push(xmlToJson(child));
 					});
+				}
+				if (item.attributes) {
+					let attributes = {};
+					for (var j = 0; j < item.attributes.length; j++) {
+						var attribute = item.attributes.item(j);
+						attributes[attribute.nodeName] = attribute.nodeValue;
+					}
+					elements.attributes = attributes;
 				}
 				stages.push(elements);
 				obj[nodeName] = stages;
