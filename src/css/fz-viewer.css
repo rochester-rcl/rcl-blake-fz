@@ -141,23 +141,27 @@
 .fz-text-display-stage.two.collapsed {
   position: absolute;
   transform: translateY(-100%);
-  transition: transform 200ms ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .fz-text-display-stage.three.collapsed {
   position: absolute;
   transform: translateY(-100%);
-  transition: transform 200ms ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .fz-text-display-stage.two.expanded {
   position: relative;
   transform: translateY(0%);
-  transition: transform 200ms ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .fz-text-display-stage.three.expanded {
   position: relative;
   transform: translateY(0%);
-  transition: transform 200ms ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.fz-text-display-line-stages-container {
+  display: flex;
 }

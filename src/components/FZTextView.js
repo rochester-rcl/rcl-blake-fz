@@ -67,12 +67,14 @@ class FZStageView extends Component {
     const { expanded } = this.state;
     if (stages) {
       return(
-        <div className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
+        <span className="fz-text-display-line-stages-container">
           {indent}
-          {stages.map((stage, index) =>
-            <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.attributes.type} />
-          )}
-        </div>
+          <span className="fz-text-display-line stages" onClick={ () => this.expandStages() }>
+            {stages.map((stage, index) =>
+              <FZStage key={index} expanded={expanded} stage={stage} stageType={stage.attributes.type} />
+            )}
+          </span>
+        </span>
       );
     } else {
       return(
@@ -97,18 +99,21 @@ const formatGap = (element: Object) => {
   if (element.gap) {
     let gap;
     let units;
+
     // todo find a beter way to handle polymorphic properties i.e. Object vs Array<Object>
     if (element.gap.constructor === Array) {
       gap = element.gap[0];
     } else {
       gap = element.gap;
     }
+    let _gapClass = gapClass(element.gap);
     if (gap.unit === 'line') {
-      units = 50;
+      units = 60;
+      _gapClass += ' gap-line';
     } else {
       units = Number(gap.extent);
     }
-    return <span key={shortid.generate()} className={gapClass(element.gap)}>{GAP_SIZE.repeat(units)}</span>;
+    return <span key={shortid.generate()} className={_gapClass}>{GAP_SIZE.repeat(units)}</span>;
   }
 };
 
@@ -172,7 +177,6 @@ const FZZoneView = (props: Object) => {
       if (line.attributes) {
 
         if (line.attributes.indent) {
-          console.log('here')
           return GAP_SIZE.repeat(Number(line.attributes.indent));
         }
 
