@@ -80,20 +80,24 @@ export const normalizeZone = (zone: Object): Object => {
     id: shortid.generate(),
     points: zone.attributes.points,
     type: zone.attributes.type,
-    columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
-      return {
-        column: {
-          lineGroups: column.lineGroups.map((lg) => { return {
-            id: shortid.generate(),
-            zoneId: zone.id,
-            attributes: lg.attributes,
-            nodeType: lg.nodeType,
-            vspaceExtent: lg.vspaceExtent,
-            lines: formatLineGroup(lg, zone),
-          }}),
+    columns: {
+      cols:  (zone.columns !== undefined) ? zone.columns.map((column) => {
+        return {
+          column: {
+            orient: column.orient,
+            lineGroups: column.lineGroups.map((lg) => { return {
+              id: shortid.generate(),
+              zoneId: zone.id,
+              attributes: lg.attributes,
+              nodeType: lg.nodeType,
+              vspaceExtent: lg.vspaceExtent,
+              lines: formatLineGroup(lg, zone),
+            }}),
+          }
         }
-      }
-    }) : null,
+        }) : null,
+      orient: (zone.columns !== undefined) ? zone.columns.orient : undefined,
+    },
     lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
       id: shortid.generate(),
       zoneId: zone.id,

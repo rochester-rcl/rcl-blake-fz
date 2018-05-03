@@ -74,6 +74,16 @@
   flex-direction: row;
   font-size: 20px;
   overflow: auto;
+  transform-origin: center;
+  transition: transform 1s ease-in-out;
+}
+
+.fz-text-display.fortyfive {
+  transform: rotate(45deg);
+}
+
+.fz-text-display.ninety {
+  transform: rotate(90deg);
 }
 
 .fz-text-display-zone {
@@ -184,4 +194,14 @@
 
 .fz-text-display-line {
   font-size: 0.9vw;
+}
+
+/*** Columns ***/
+.fz-text-display-zone-columns {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.fz-text-display-zone-columns.vertical {
+  flex-direction: column;
 }

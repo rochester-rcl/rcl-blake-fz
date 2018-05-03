@@ -60,6 +60,9 @@ function xmlToJson(xml) {
 									}),
 								}
 							});
+							if (child.attributes.orient !== undefined) {
+								columns.orient = child.attributes.orient.value;
+							}
 						}
 					});
 				}

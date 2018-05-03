@@ -22,9 +22,26 @@ const ZONE_MAP = {
   right: 4,
 }
 
+const ROTATION = {
+  fortyfive: 45,
+  ninety: 90,
+  onethirtyfive: 135,
+  oneeighty: 180,
+  twotwentyfive: 225,
+  twoseventy: 270,
+  threefifteen: 315,
+  threesixty: 360,
+}
+
+const getRotation = (angle) => {
+  console.log(angle);
+  return Object.keys(ROTATION).find((key) => ROTATION[key] === angle);
+}
+
 export default class FZTextView extends Component {
   render(){
-    const { zones, diplomaticMode } = this.props;
+    const { zones, diplomaticMode, displayAngle } = this.props;
+    console.log(getRotation(displayAngle));
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
       let zoneTypeB = zoneB.type;
@@ -32,10 +49,10 @@ export default class FZTextView extends Component {
       if (ZONE_MAP[zoneTypeA] > ZONE_MAP[zoneTypeB]) return 1;
       return 0;
     });
-
+    let baseClass = "fz-text-display ";
     return(
       <div className="fz-text-view">
-        <div className="fz-text-display">
+        <div className={baseClass += getRotation(displayAngle)}>
           {sortedZones.map((zone, index) =>
             <FZZoneView
               key={index}
@@ -216,12 +233,28 @@ const FZZoneView = (props: Object) => {
       </div>
     );
   }
-  if (zone.lineGroups) {
+  if (zone.lineGroups.length > 0) {
     return(
       <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
         {zone.lineGroups.map((lineGroup) =>
           <FZLineGroupView key={lineGroup.id} lineGroup={lineGroup} />
         )}
+      </div>
+    );
+  } else if(zone.columns) {
+    let colClass = "fz-text-display-zone-columns ";
+    if (zone.columns.orient !== undefined) colClass += zone.columns.orient;
+    return(
+      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
+        <div className={colClass}>
+          {zone.columns.cols.map((column) =>
+            <div className="fz-text-display-zone-column">
+              {column.column.lineGroups.map((lg) =>
+                <FZLineGroupView key={lg.id} lineGroup={lg}/>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     );
   } else {

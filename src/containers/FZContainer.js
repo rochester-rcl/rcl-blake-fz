@@ -26,9 +26,21 @@ import { Divider } from 'semantic-ui-react';
 import { pointsToNumbers } from '../utils/data-utils';
 
 class FZContainer extends Component {
+  state = {
+    textDisplayAngle: 0,
+  }
+  constructor(props: Object) {
+    super(props);
+    (this: any).updateTextDisplayAngle = this.updateTextDisplayAngle.bind(this);
+  }
   componentDidMount() {
     // Call this here to load initial data
     this.props.loadXMLAction(xml);
+  }
+  updateTextDisplayAngle(angle: number): void {
+    this.setState({
+      textDisplayAngle: angle,
+    });
   }
   render() {
     const {
@@ -50,7 +62,7 @@ class FZContainer extends Component {
       zoomToZones,
       diplomaticMode,
       } = this.props;
-    
+    const { textDisplayAngle } = this.state;
     if (pageObjects) {
       let tileSources = {
         type: 'image',
@@ -83,10 +95,12 @@ class FZContainer extends Component {
               overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
+              rotateCallback={this.updateTextDisplayAngle}
             />
             <FZTextView
               zones={currentZones}
               diplomaticMode={diplomaticMode}
+              displayAngle={textDisplayAngle}
             />
           </div>
         </div>

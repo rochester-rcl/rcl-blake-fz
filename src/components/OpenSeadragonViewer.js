@@ -92,13 +92,13 @@ export default class OpenSeadragonViewer extends Component {
   setTileSources(tileSources) {
     this.openSeaDragonViewer.open(tileSources);
   }
-
-  rotateLeft(): void {
+  // add flow annotations
+  rotateLeft(callback): void {
     let src = this.viewport.getRotation();
     let dst = (src - 45) >= -360 ? (src - 45) : 0;
+    callback(dst);
     const animateLeft = (src, dst) => {
       let newSrc = src - 1;
-
       if (newSrc >= dst) {
         this.viewport.setRotation(newSrc);
         window.requestAnimationFrame(() => animateLeft(newSrc, dst));
@@ -107,9 +107,10 @@ export default class OpenSeadragonViewer extends Component {
     animateLeft(src, dst);
   }
 
-  rotateRight(): void {
+  rotateRight(callback): void {
     let src = this.viewport.getRotation();
     let dst = (src + 45) <= 360 ? (src + 45) : 0;
+    callback(dst);
     const animateRight = (src, dst) => {
       let newSrc = src + 1;
       if (newSrc <= dst) {
@@ -132,10 +133,10 @@ export default class OpenSeadragonViewer extends Component {
         <div id="home-button" className="osd-controls-button">
              <Icon name="home" size="large"/>
         </div>
-        <div id="rotate-left-button" onClick={this.rotateLeft} className="osd-controls-button">
+        <div id="rotate-left-button" onClick={() => this.rotateLeft((angle) => this.props.rotateCallback(angle))} className="osd-controls-button">
              <Icon name="reply" size="large"/>
         </div>
-        <div id="rotate-right-button" onClick={this.rotateRight} className="osd-controls-button">
+        <div id="rotate-right-button" onClick={() => this.rotateRight((angle) => this.props.rotateCallback(angle))} className="osd-controls-button">
              <Icon name="mail forward" size="large"/>
         </div>
       </div>);
@@ -159,7 +160,6 @@ export default class OpenSeadragonViewer extends Component {
 
   zoomToOverlays(): void {
     let { x, y, w, h } = getBounds(this.bounds);
-    console.log(x, y, w, h);
     this.viewport.fitBounds(new OpenSeadragon.Rect(x,y,w,h));
   }
 
@@ -183,7 +183,7 @@ export default class OpenSeadragonViewer extends Component {
   }
 
   render() {
-    const { viewerId, showZoneROI, zoomToZones } = this.props;
+    const { viewerId, showZoneROI, zoomToZones, rotateCallback } = this.props;
     return (
       <div className="osd-viewer-container">
         {this.renderControls()}
