@@ -78,12 +78,40 @@
   transition: transform 1s ease-in-out;
 }
 
+.fz-text-display.zero {
+  transform: rotate(0deg);
+}
+
 .fz-text-display.fortyfive {
   transform: rotate(45deg);
 }
 
 .fz-text-display.ninety {
   transform: rotate(90deg);
+}
+
+.fz-text-display.onethirtyfive {
+  transform: rotate(135deg);
+}
+
+.fz-text-display.oneeighty {
+  transform: rotate(180deg);
+}
+
+.fz-text-display.twotwentyfive {
+  transform: rotate(225deg);
+}
+
+.fz-text-display.twoseventy {
+  transform: rotate(270deg);
+}
+
+.fz-text-display.threefifteen {
+  transform: rotate(315deg);
+}
+
+.fz-text-display.threesixty {
+  transform: rotate(0deg);
 }
 
 .fz-text-display-zone {

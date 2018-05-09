@@ -22,26 +22,9 @@ const ZONE_MAP = {
   right: 4,
 }
 
-const ROTATION = {
-  fortyfive: 45,
-  ninety: 90,
-  onethirtyfive: 135,
-  oneeighty: 180,
-  twotwentyfive: 225,
-  twoseventy: 270,
-  threefifteen: 315,
-  threesixty: 360,
-}
-
-const getRotation = (angle) => {
-  console.log(angle);
-  return Object.keys(ROTATION).find((key) => ROTATION[key] === angle);
-}
-
 export default class FZTextView extends Component {
   render(){
     const { zones, diplomaticMode, displayAngle } = this.props;
-    console.log(getRotation(displayAngle));
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
       let zoneTypeB = zoneB.type;
@@ -49,10 +32,11 @@ export default class FZTextView extends Component {
       if (ZONE_MAP[zoneTypeA] > ZONE_MAP[zoneTypeB]) return 1;
       return 0;
     });
+
     let baseClass = "fz-text-display ";
     return(
       <div className="fz-text-view">
-        <div className={baseClass += getRotation(displayAngle)}>
+        <div className={baseClass} style={{transform: 'rotate(' + displayAngle + 'deg)'}}>
           {sortedZones.map((zone, index) =>
             <FZZoneView
               key={index}

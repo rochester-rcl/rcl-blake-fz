@@ -95,7 +95,8 @@ export default class OpenSeadragonViewer extends Component {
   // add flow annotations
   rotateLeft(callback): void {
     let src = this.viewport.getRotation();
-    let dst = (src - 45) >= -360 ? (src - 45) : 0;
+    src = (src === 0 || src === 360) ? 360 : src;
+    let dst = (src - 45) <= 360 ? (src - 45) : 0;
     callback(dst);
     const animateLeft = (src, dst) => {
       let newSrc = src - 1;
@@ -109,7 +110,8 @@ export default class OpenSeadragonViewer extends Component {
 
   rotateRight(callback): void {
     let src = this.viewport.getRotation();
-    let dst = (src + 45) <= 360 ? (src + 45) : 0;
+    console.log(src);
+    let dst = (src + 45) <= 360 ? (src + 45) : 360;
     callback(dst);
     const animateRight = (src, dst) => {
       let newSrc = src + 1;
