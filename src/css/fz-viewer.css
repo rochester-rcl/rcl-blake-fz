@@ -131,7 +131,7 @@
 .fz-text-display-zone.head {
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: -5%;
   font-size: 0.8vw;
 }
 
@@ -156,7 +156,7 @@
 .fz-text-display-zone.foot {
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  bottom: 20%;
 }
 
 /** Stages **/

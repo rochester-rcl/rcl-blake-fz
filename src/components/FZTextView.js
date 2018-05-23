@@ -33,6 +33,7 @@ export default class FZTextView extends Component {
       return 0;
     });
     let rotate = (lockRotation === true) ? { transform: 'rotate(' + displayAngle + 'deg)' } : {};
+    console.log(displayAngle);
     let baseClass = "fz-text-display ";
     return(
       <div className="fz-text-view">
