@@ -24,7 +24,7 @@ const ZONE_MAP = {
 
 export default class FZTextView extends Component {
   render(){
-    const { zones, diplomaticMode, displayAngle } = this.props;
+    const { zones, diplomaticMode, displayAngle, lockRotation } = this.props;
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
       let zoneTypeB = zoneB.type;
@@ -32,14 +32,15 @@ export default class FZTextView extends Component {
       if (ZONE_MAP[zoneTypeA] > ZONE_MAP[zoneTypeB]) return 1;
       return 0;
     });
-
+    let rotate = (lockRotation === true) ? { transform: 'rotate(' + displayAngle + 'deg)' } : {};
     let baseClass = "fz-text-display ";
     return(
       <div className="fz-text-view">
-        <div className={baseClass} style={{transform: 'rotate(' + displayAngle + 'deg)'}}>
+        <div className={baseClass} style={rotate}>
           {sortedZones.map((zone, index) =>
             <FZZoneView
               key={index}
+              lockRotation={lockRotation}
               diplomaticMode={diplomaticMode}
               zone={zone}/>
           )}
@@ -133,7 +134,7 @@ const FZStage = (props: Object) => {
 }
 
 const FZZoneView = (props: Object) => {
-  const { zone, expanded, expandStages, diplomaticMode } = props;
+  const { zone, expanded, expandStages, diplomaticMode, lockRotation } = props;
   const renderVSpace = (vSpaceExtent: number) => {
     let vSpaceArray = new Array(vSpaceExtent);
     vSpaceArray.fill(' ');
@@ -143,21 +144,24 @@ const FZZoneView = (props: Object) => {
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
     const getRotation = (attributes) => {
-      let lineGroupClass = "fz-text-display-line-group";
-      if (!attributes) return lineGroupClass;
-      if (attributes.style) {
-        let orientation = attributes.style.split(' ').pop();
+      console.log(lockRotation);
+      if (lockRotation === true) {
+        let lineGroupClass = "fz-text-display-line-group";
+        if (!attributes) return lineGroupClass;
+        if (attributes.style) {
+          let orientation = attributes.style.split(' ').pop();
 
-        switch(orientation) {
-          case('sideways-right'):
-            return lineGroupClass += ' sideways-right';
+          switch(orientation) {
+            case('sideways-right'):
+              return lineGroupClass += ' sideways-right';
 
-          case('sideways-left'):
-            return lineGroupClass += ' sideways-left';
+            case('sideways-left'):
+              return lineGroupClass += ' sideways-left';
 
-          default:
-            return lineGroupClass;
+            default:
+              return lineGroupClass;
 
+          }
         }
       }
     }

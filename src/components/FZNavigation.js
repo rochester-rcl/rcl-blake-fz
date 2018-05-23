@@ -13,10 +13,11 @@ import FilterDropdown from './FilterDropdown';
 export default class FZNavigation extends Component {
     constructor(props: Object) {
       super(props);
-      (this :any).handleToggleZoneROI = this.handleToggleZoneROI.bind(this);
-      (this :any).handleToggleZoomToZones = this.handleToggleZoomToZones.bind(this);
-      (this :any).handleGoToPage = this.handleGoToPage.bind(this);
-      (this :any).handleToggleTranscriptionMode = this.handleToggleTranscriptionMode.bind(this);
+      (this: any).handleToggleZoneROI = this.handleToggleZoneROI.bind(this);
+      (this: any).handleToggleZoomToZones = this.handleToggleZoomToZones.bind(this);
+      (this: any).handleGoToPage = this.handleGoToPage.bind(this);
+      (this: any).handleLockRotation = this.handleLockRotation.bind(this);
+      (this: any).handleToggleTranscriptionMode = this.handleToggleTranscriptionMode.bind(this);
     }
 
     handleToggleZoneROI(): void {
@@ -49,6 +50,11 @@ export default class FZNavigation extends Component {
       this.props.toggleTranscriptionModeAction(data.checked);
     }
 
+    handleLockRotation(event: typeof SyntheticEvent): void {
+      console.log(this.props.lockRotation);
+      this.props.toggleLockRotationAction(!this.props.lockRotation);
+    }
+
     render() {
       const {
         currentPage,
@@ -58,9 +64,11 @@ export default class FZNavigation extends Component {
         setZonesAction,
         toggleZoneROIAction,
         toggleZoomToZoneAction,
+        toggleLockRotationAction,
         zoneOptions,
         showZoneROI,
         zoomToZones,
+        lockRotation,
         diplomaticMode,
       } = this.props;
 
@@ -95,6 +103,14 @@ export default class FZNavigation extends Component {
           displayName: 'Zoom to Zone',
           id: 'fz-zoom-to-zone',
           onClick: () => this.handleToggleZoomToZones(),
+          disabled: false,
+        },
+        {
+          className: lockRotation ? 'fz-main-menu-button active' : 'fz-main-menu-button',
+          displayIcon: 'refresh',
+          displayName: 'Lock Rotation',
+          id: 'fz-lock-rotation',
+          onClick: () => this.handleLockRotation(),
           disabled: false,
         },
       ];

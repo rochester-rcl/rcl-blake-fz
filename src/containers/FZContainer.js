@@ -51,6 +51,7 @@ class FZContainer extends Component {
       toggleZoneROIAction,
       toggleZoomToZoneAction,
       toggleTranscriptionModeAction,
+      toggleLockRotationAction,
       zones,
       lineGroups,
       lines,
@@ -60,6 +61,7 @@ class FZContainer extends Component {
       setZonesAction,
       showZoneROI,
       zoomToZones,
+      lockRotation,
       diplomaticMode,
       } = this.props;
     const { textDisplayAngle } = this.state;
@@ -70,7 +72,6 @@ class FZContainer extends Component {
         crossOriginPolicy: 'Anonymous',
         ajaxWithCredentials: false
       }
-
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -81,9 +82,11 @@ class FZContainer extends Component {
             toggleZoneROIAction={toggleZoneROIAction}
             toggleZoomToZoneAction={toggleZoomToZoneAction}
             toggleTranscriptionModeAction={toggleTranscriptionModeAction}
+            toggleLockRotationAction={toggleLockRotationAction}
             zoneOptions={zoneOptions}
             setZonesAction={setZonesAction}
             zoomToZones={zoomToZones}
+            lockRotation={lockRotation}
             showZoneROI={showZoneROI}
             diplomaticMode={diplomaticMode}
           />
@@ -101,6 +104,7 @@ class FZContainer extends Component {
               zones={currentZones}
               diplomaticMode={diplomaticMode}
               displayAngle={textDisplayAngle}
+              lockRotation={lockRotation}
             />
           </div>
         </div>
@@ -128,6 +132,7 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
+    lockRotation: state.lockRotation,
   }
 }
 
