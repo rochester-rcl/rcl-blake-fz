@@ -98,10 +98,13 @@
                <surface points="2531,3283 2531,0 0,0 0,3283">
                    <zone type="body" points="2267,2246 2267,373 487,373 487,2246">
                     <lg justify="left">
-                        <l n="bb209.1.ms.03.01" indent="15"><!--should we indent the line or the stage?--><!-- the line, if indentation is applicable to all stages; I went ahead and changed a few to follow this formatting (EL) -->
+                        <l n="bb209.1.ms.03.01" indent="13"><!--should we indent the line or the stage?--><!-- the line, if indentation is applicable to all stages; I went ahead and changed a few to follow this formatting (EL) -->
                             <stage type="one">V<space extent="1"/>A<space extent="1"/>L<space extent="1"/>A</stage>
                             <diplomatic>V<space extent="1"/>A<space extent="1"/>L<space extent="1"/>A</diplomatic>
                         </l>
+                    </lg>
+                    <vspace extent="1"/>   
+                    <lg>
                         <l n="bb209.1.ms.03.02" indent="13">
                             <stage type="one">Night the First</stage>
                             <diplomatic>Night the First</diplomatic>
@@ -201,75 +204,80 @@
                    </zone>
                    <zone type="head" points="2296,500 2296,61 449,61 449,500">
                    <lg justify="left">
-                       <l indent="3"><stage type="one">ὅτι οὐκ ἔστιν ἡμῖν ἡ πάλη πρὸς αἷμα καὶ σάρκα, ἀλλὰ πρὸς τὰς ἀρχάς,</stage><!-- added Greek from Gabi's mockup; we probably need unicodes, though? --><!-- jvk<note>In lines 1-3, Blake gives the Greek text of Ephesians 6:12 (first mistakenly cited as chapter "5" (line 5) and then corrected [possibly not by Blake according to E1988] by the "VI" interlined above [line 4]): "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places" (King James Bible). In line 2 only, Blake uses the Greek ligature for the diphthong *ou*.</note> -->
+                       <l indent="3">
+                           <stage type="one">ὅτι οὐκ ἔστιν ἡμῖν ἡ πάλη πρὸς αἷμα καὶ σάρκα, ἀλλὰ πρὸς τὰς ἀρχάς,</stage><!-- added Greek from Gabi's mockup; we probably need unicodes, though? --><!-- jvk<note>In lines 1-3, Blake gives the Greek text of Ephesians 6:12 (first mistakenly cited as chapter "5" (line 5) and then corrected [possibly not by Blake according to E1988] by the "VI" interlined above [line 4]): "For we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places" (King James Bible). In line 2 only, Blake uses the Greek ligature for the diphthong *ou*.</note> -->
                            <diplomatic>ὅτι οὐκ ἔστιν ἡμῖν ἡ πάλη πρὸς αἷμα καὶ σάρκα, ἀλλὰ πρὸς τὰς ἀρχάς,</diplomatic>
                        </l>
-                       <l><stage type="one">πρὸς τὰς ἐξουσίας, πρὸς τοὺς κοσμοκράτορας τοῦ σκότους τοῦ αἰῶνος τούτου, πρὸς</stage>
+                       <l>
+                           <stage type="one">πρὸς τὰς ἐξουσίας, πρὸς τοὺς κοσμοκράτορας τοῦ σκότους τοῦ αἰῶνος τούτου, πρὸς</stage>
                            <diplomatic>πρὸς τὰς ἐξουσίας, πρὸς τοὺς κοσμοκράτορας τοῦ σκότους τοῦ αἰῶνος τούτου, πρὸς</diplomatic>
                        </l>
-                       <l><stage type="one"> τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.</stage>
-                          <stage type="two" indent="40"><handShift medium="pencil">2</handShift></stage>
-                           <diplomatic>τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.<space extent="15"></space><handShift medium="pencil">2</handShift></diplomatic>
+                       <l>
+                           <stage type="one"> τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.</stage>
+                          <stage type="two" indent="45"><handShift medium="pencil">2</handShift></stage>
+                           <diplomatic>τὰ πνευματικὰ τῆς πονηρίας ἐν τοῖς ἐπουρανίοις.<space extent="20"></space><handShift medium="pencil">2</handShift></diplomatic>
                        </l>
 
                        <!-- move supra addition to own line -->
 
-                       <l indent="25"><stage type="one">Εφες:<subst><del type="overstrike">5</del><add place="supralinear">VI</add></subst>κεφ. 12<add place="inline"><handShift medium="pencil">ver</handShift></add></stage>
+                       <l indent="45">
+                           <stage type="one">Εφες:<subst><del type="overstrike">5</del><add place="supralinear">VI</add></subst>κεφ. 12<add place="inline"><handShift medium="pencil">ver</handShift></add></stage>
                            <diplomatic>Εφες:<subst><del type="overstrike">5</del><add place="supralinear">VI</add></subst>κεφ. 12 <add place="inline"> <handShift medium="pencil">ver</handShift></add></diplomatic>
                        </l><!--is there some kind of smudgy deletion through the middle of this line?--><!-- looks like it to me! -->
                    </lg>
                    <vspace extent="1"/>
                    <lg justify="left">
-                       <l><stage type="one" indent="35"><del type="overstrike">1</del></stage><!-- is there a way to encode a pencil overstrike? (but the "1" is still ink) -->
-                           <diplomatic indent="35"><del type="overstrike">1</del></diplomatic>
+                       <l>
+                           <stage type="one" indent="59"><del type="overstrike">1</del></stage><!-- is there a way to encode a pencil overstrike? (but the "1" is still ink) -->
+                           <diplomatic indent="59"><del type="overstrike">1</del></diplomatic>
                        </l>
 		   </lg>
                    </zone>
                    <zone type="left" points="540,1794 540,1049 361,1049 361,1794">
-		   <vspace extent="10"/>   
+		   <vspace extent="9"/>   
                        <lg justify="left">
-                       <l corresp="bb209.1.ms.03.03">
+                       <l indent="21">
                            <stage type="one" indent="4">1</stage>
                            <stage type="two"><handShift medium="pencil">1</handShift></stage>
-                           <diplomatic><handShift medium="pencil">1</handShift><space extent="4"/>1</diplomatic>
+                           <diplomatic><handShift medium="pencil">1</handShift><space extent="2"/>1</diplomatic>
                        </l>
-                       <l corresp="bb209.1.ms.03.04" indent="4">
+                       <l indent="26">
                            <stage type="one">2</stage>
                            <diplomatic>2</diplomatic>
                        </l>
-                       <l corresp="bb209.1.ms.03.05" indent="4">
+                       <l indent="26">
                            <stage type="one">3</stage>
                            <diplomatic>3</diplomatic>
                        </l>
-                       <l corresp="bb209.1.ms.03.06" indent="4">
+                       <l indent="26">
                            <stage type="one">6</stage>
                            <diplomatic>6</diplomatic>
                        </l>
-                       <l corresp="bb209.1.ms.03.07" indent="4">
+                       <l indent="26">
                            <stage type="one">7</stage>
                            <diplomatic>7</diplomatic>
                        </l>
-                       <l corresp="bb209.1.ms.03.08">
-                           <stage type="one" indent="4">4</stage>
+                       <l indent="21">
+                           <stage type="one">4</stage>
                            <stage type="two"><handShift medium="pencil">2</handShift></stage>
-                           <diplomatic><handShift medium="pencil">2</handShift><space extent="4"/>4</diplomatic>
+                           <diplomatic><handShift medium="pencil">2</handShift><space extent="2"/>4</diplomatic>
                        </l>
-                       <l corresp="bb209.1.ms.03.09">
-                           <stage type="one" indent="4">5</stage>
+                       <l indent="21">
+                           <stage type="one">5</stage>
                            <stage type="two"><handShift medium="pencil">3</handShift></stage>
-                           <diplomatic><handShift medium="pencil">3</handShift><space extent="4"/>5</diplomatic>
+                           <diplomatic><handShift medium="pencil">3</handShift><space extent="2"/>5</diplomatic>
                        </l>
                        </lg>
                        <vspace extent="1"/>
                        <lg justify="left">
-                           <l corresp="bb209.1.ms.03.10">
+                           <l indent="21">
                                <stage type="one"><handShift medium="pencil">4</handShift></stage>
                                <diplomatic><handShift medium="pencil">4</handShift></diplomatic>
                            </l>
                        </lg>
                    </zone>
                    <zone type="right" points="2504,1966 2504,1619 2103,1619 2103,1966">
-		   <vspace extent="10"/>
+		   <vspace extent="17"/>
                        <lg>
                            <l><!-- any @corresp for these lines? or vspace for formatting?-->
                                <stage type="one">John XVIIc. 21&#38;22 &#38;23v</stage><!-- Justin & Gabi differ on transcription here; this is my own compromise between the two--><!-- According to Justin's note: John 17:21-23 reads: "That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me. And the glory which thou gavest me I have given them; that they may be one, even as we are one; I in them, and thou in me; that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me." -->
