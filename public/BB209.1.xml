@@ -226,6 +226,7 @@
 		   </lg>
                    </zone>
                    <zone type="left" points="540,1794 540,1049 361,1049 361,1794">
+		   <vspace extent="10"/>   
                        <lg justify="left">
                        <l corresp="bb209.1.ms.03.03">
                            <stage type="one" indent="4">1</stage>
@@ -268,6 +269,7 @@
                        </lg>
                    </zone>
                    <zone type="right" points="2504,1966 2504,1619 2103,1619 2103,1966">
+		   <vspace extent="10"/>
                        <lg>
                            <l><!-- any @corresp for these lines? or vspace for formatting?-->
                                <stage type="one">John XVIIc. 21&#38;22 &#38;23v</stage><!-- Justin & Gabi differ on transcription here; this is my own compromise between the two--><!-- According to Justin's note: John 17:21-23 reads: "That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me. And the glory which thou gavest me I have given them; that they may be one, even as we are one; I in them, and thou in me; that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me." -->
