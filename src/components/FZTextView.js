@@ -33,7 +33,6 @@ export default class FZTextView extends Component {
       return 0;
     });
     let rotate = (lockRotation === true) ? { transform: 'rotate(' + displayAngle + 'deg)' } : {};
-    console.log(displayAngle);
     let baseClass = "fz-text-display ";
     return(
       <div className="fz-text-view">
@@ -145,25 +144,22 @@ const FZZoneView = (props: Object) => {
   const FZLineGroupView = (props: Object) => {
     const { lineGroup } = props;
     const getRotation = (attributes) => {
-      console.log(lockRotation);
-      if (lockRotation === true) {
         let lineGroupClass = "fz-text-display-line-group";
         if (!attributes) return lineGroupClass;
-        if (attributes.style) {
-          let orientation = attributes.style.split(' ').pop();
+      if (attributes.style) {
+        let orientation = attributes.style.split(' ').pop();
 
-          switch(orientation) {
-            case('sideways-right'):
-              return lineGroupClass += ' sideways-right';
+        switch(orientation) {
+          case('sideways-right'):
+            return lineGroupClass += ' sideways-right';
 
-            case('sideways-left'):
-              return lineGroupClass += ' sideways-left';
+          case('sideways-left'):
+            return lineGroupClass += ' sideways-left';
 
-            default:
-              return lineGroupClass;
+          default:
+            return lineGroupClass;
 
           }
-        }
       }
     }
     return(
