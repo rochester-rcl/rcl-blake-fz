@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="../Google%20Drive/BLAKE%20marginaliaLavater.1.118+119.cropped%20copy.jpeg"/>
+         <zone xml:id="header" points="92,363 2292,360 2285,726 95,739"/>
+         <zone xml:id="body" points="2056,3137 2032,710 446,705 437,3156"/>
+         <zone xml:id="left" points="112,1062 469,1124 494,1393 1025,1374 1013,1668 100,1731"/>
+         <zone xml:id="right top" points="2290,1304 1971,1380 2009,690 2304,704"/>
+         <zone xml:id="right bottom" points="2290,2528 2281,2190 2042,2195 2052,2528"/>
+         <zone xml:id="right middle" points="2290,1361 2295,1595 1290,1609 1381,1357"/>
+         <zone xml:id="right right top" points="4046,780 4416,790 4416,1072 4044,1087"/>
+      </surface>
+   </facsimile>
+</TEI>
