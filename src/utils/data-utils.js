@@ -32,7 +32,7 @@ const anchorSubst = (element: Object): Object => {
   return subst;
 }
 
-const forceArray = (arrayOrObj): Array<Object> => {
+const forceArray = (arrayOrObj): Array<Object>  => {
   if (arrayOrObj) {
     if (arrayOrObj.constructor === Array) return arrayOrObj;
     return [arrayOrObj];
@@ -81,34 +81,50 @@ const formatLineGroup = (lg: Object, zone: Object) => {
   }) : null;
 }
 
+export const currentZoneIds = (zones: Array<Object>) => {
+  return zones.map((zone) => {
+    if (zone.zones !== undefined) {
+      return currentZoneIds(zone.zones);
+    } else {
+      return zone.zone.id;
+    }
+  });
+}
+
 export const normalizeZone = (zone: Object): Object => {
-  return {
-    // Need to somehow put vspace into linegroups array
-    id: shortid.generate(),
-    points: zone.attributes.points,
-    type: zone.attributes.type,
-    columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
-      return {
-        column: {
-          lineGroups: column.lineGroups.map((lg) => { return {
-            id: shortid.generate(),
-            zoneId: zone.id,
-            attributes: lg.attributes,
-            nodeType: lg.nodeType,
-            vspaceExtent: lg.vspaceExtent,
-            lines: formatLineGroup(lg, zone),
-          }}),
-        }
-      }
-    }) : null,
-    lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
+  if (zone.constructor === Array) {
+    return {
+      zones: zone.map((_zone) => normalizeZone(_zone)),
+    }
+  } else {
+    return {
+      // Need to somehow put vspace into linegroups array
       id: shortid.generate(),
-      zoneId: zone.id,
-      attributes: lg.attributes,
-      nodeType: lg.nodeType,
-      vspaceExtent: lg.vspaceExtent,
-      lines: formatLineGroup(lg, zone),
-    }}) : null,
+      points: zone.attributes.points,
+      type: zone.attributes.type,
+      columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
+        return {
+          column: {
+            lineGroups: column.lineGroups.map((lg) => { return {
+              id: shortid.generate(),
+              zoneId: zone.id,
+              attributes: lg.attributes,
+              nodeType: lg.nodeType,
+              vspaceExtent: lg.vspaceExtent,
+              lines: formatLineGroup(lg, zone),
+            }}),
+          }
+        }
+      }) : null,
+      lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
+        id: shortid.generate(),
+        zoneId: zone.id,
+        attributes: lg.attributes,
+        nodeType: lg.nodeType,
+        vspaceExtent: lg.vspaceExtent,
+        lines: formatLineGroup(lg, zone),
+      }}) : null,
+    }
   }
 }
 

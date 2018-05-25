@@ -11,7 +11,7 @@ import { bindActionCreators } from 'redux';
 import * as AppActionCreators from '../actions/actions';
 
 // XML
-import xml from '../../public/BB735.1.170.new.xml';
+import xml from '../../public/lavater118_119.xml';
 
 // Components
 import LoaderModal from '../components/LoaderModal';

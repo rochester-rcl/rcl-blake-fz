@@ -15,45 +15,13 @@ function xmlToJson(xml) {
 				let elements = [];
 				xml.childNodes.forEach((child) => {
 					elements.push(xmlToJson(child));
+					if (child.nodeName === 'zone') {
+						formatZone(child, obj);
+					}
 				});
 				obj[nodeName] = elements;
 			}
-			if (nodeName === 'zone') {
-				let elements = [];
-				let lg = [];
-				let columns;
-				if (xml.hasChildNodes()) {
-					let children = Array.from(xml.childNodes);
-					children.forEach((child, index) => {
-						if (child.nodeName === 'lg') {
-							lg.push(formatLineGroup(child, children, index));
-						}
 
-						if (child.nodeName === 'columns') {
-							let children = Array.from(child.childNodes);
-							let cols = children.filter((col) => col.nodeName === 'column');
-							columns = cols.map((col) => {
-								return {
-									lineGroups: Array.from(col.children).filter((child) => child.nodeName === 'lg').map((lg) => {
-										return formatLineGroup(lg);
-									}),
-								}
-							});
-						}
-					});
-				}
-				obj[nodeName] = {};
-				obj[nodeName].lg = lg;
-				obj[nodeName].columns = columns;
-				if (xml.attributes) {
-					let attributes = {};
-					for (var j = 0; j < xml.attributes.length; j++) {
-						var attribute = xml.attributes.item(j);
-						attributes[attribute.nodeName] = attribute.nodeValue;
-					}
-					obj[nodeName].attributes = attributes;
-				}
-			}
 			else if (xml.attributes.length > 0) {
 				obj["attributes"] = {};
 				for (var j = 0; j < xml.attributes.length; j++) {
@@ -134,7 +102,6 @@ function xmlToJson(xml) {
 	}
 
 	if (obj.nodeType === 'zone') {
-		obj = obj.zone;
 		obj.nodeType = 'zone';
 	}
 	return obj;
@@ -153,6 +120,46 @@ function formatLineGroup(lg, parent, index) {
 		}
 	}
 	return group;
+}
+
+function formatZone(xml, obj) {
+	let elements = [];
+	let lg = [];
+	let columns = [];
+	let zones = [];
+	let nodeName = 'zone';
+	if (xml.hasChildNodes()) {
+		let children = Array.from(xml.childNodes);
+		children.forEach((child, index) => {
+			if (child.nodeName === 'lg') {
+				lg.push(formatLineGroup(child, children, index));
+			}
+
+			if (child.nodeName === 'columns') {
+				let children = Array.from(child.childNodes);
+				let cols = children.filter((col) => col.nodeName === 'column');
+				columns = cols.map((col) => {
+					return {
+						lineGroups: Array.from(col.children).filter((child) => child.nodeName === 'lg').map((lg) => {
+							return formatLineGroup(lg);
+						}),
+					}
+				});
+			}
+		});
+
+	}
+	obj.zone = {};
+	obj.zone.lg = lg;
+	obj.zone.columns = columns;
+	if (xml.attributes) {
+		let attributes = {};
+		for (var j = 0; j < xml.attributes.length; j++) {
+			var attribute = xml.attributes.item(j);
+			attributes[attribute.nodeName] = attribute.nodeValue;
+		}
+		obj.attributes = attributes;
+	}
 }
 
 export function fetchXML(xmlPath) {

@@ -1,6 +1,6 @@
 /* @flow */
 // Utils
-import { formatImageURL, normalizeZone, flattenZones, setZones } from '../utils/data-utils';
+import { formatImageURL, normalizeZone, currentZoneIds, flattenZones, setZones } from '../utils/data-utils';
 
 const defaultState = {
   bad: null, // the raw bad object
@@ -23,19 +23,29 @@ export default function appReducer(state: Object = defaultState, action: Object)
     let root = action.xml2json.bad.objdesc.desc;
     root = [root];
     let pageObjects = root.map((pageObj, index) => {
-      let attr = pageObj.phystext.zone.attributes;
       return({
         id: pageObj.attributes.dbi,
         imageURL: formatImageURL(pageObj.attributes.dbi),
         pageNo: index,
         pageDisplayNo: index + 1,
-        surface: { zone: pageObj.phystext.zone.map((zone) => normalizeZone(zone)),
-          points: (attr !== undefined && attr.points !== undefined) ? attr.points : null,
-        }
+        layers: pageObj.phystext.layer.map((layer) => {
+          return {
+            type: layer.attributes.type,
+            zones: layer.zone.map((zone) => {
+              let attr = zone.attributes;
+              let points = (attr !== undefined && attr.points !== undefined) ? attr.points : [];
+              return {
+                zone: normalizeZone(zone),
+                points: points,
+              }
+            }),
+          }
+        }),
       });
     });
     let currentPage = pageObjects[0];
-    let currentZoneIds = currentPage.surface.zone.map((zone) => zone.id );
+    let ids = currentPage.layers.map((layer) => currentZoneIds(layer.zones));
+
     let zones = flattenZones(pageObjects);
     return {
         ...state,
