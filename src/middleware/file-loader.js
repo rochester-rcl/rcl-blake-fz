@@ -100,10 +100,6 @@ function xmlToJson(xml) {
 		obj = obj.handShift;
 		obj.nodeType = 'handShift';
 	}
-
-	if (obj.nodeType === 'zone') {
-		obj.nodeType = 'zone';
-	}
 	return obj;
 };
 

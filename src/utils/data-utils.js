@@ -91,58 +91,100 @@ export const currentZoneIds = (zones: Array<Object>) => {
   });
 }
 
-export const normalizeZone = (zone: Object): Object => {
-  if (zone.constructor === Array) {
-    return {
-      zones: zone.map((_zone) => normalizeZone(_zone)),
+export const normalizeZone = (zone: Object, name: string | typeof undefined): Object => {
+  let zoneName;
+  if (name !== undefined) {
+    zoneName = name + '--';
+  } else {
+    zoneName = (zone.attributes !== undefined) ? zone.attributes.type + '--' : null;
+  }
+  if (zone.zone !== undefined) {
+    if (zone.zone.constructor === Array) {
+      zoneName += (zone.attributes !== undefined) ? zone.attributes.type : null;
+      return {
+        zones: zone.zone.map((_zone) => normalizeZone(_zone, zoneName)),
+      }
+    } else {
+      zoneName += (zone.attributes !== undefined) ? zone.attributes.type + '--' : null;
+      return normalizeZone(zone.zone, zoneName);
     }
   } else {
-    return {
-      // Need to somehow put vspace into linegroups array
-      id: shortid.generate(),
-      points: zone.attributes.points,
-      type: zone.attributes.type,
-      columns: (zone.columns !== undefined) ? zone.columns.map((column) => {
-        return {
-          column: {
-            lineGroups: column.lineGroups.map((lg) => { return {
-              id: shortid.generate(),
-              zoneId: zone.id,
-              attributes: lg.attributes,
-              nodeType: lg.nodeType,
-              vspaceExtent: lg.vspaceExtent,
-              lines: formatLineGroup(lg, zone),
-            }}),
-          }
-        }
-      }) : null,
-      lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
-        id: shortid.generate(),
-        zoneId: zone.id,
-        attributes: lg.attributes,
-        nodeType: lg.nodeType,
-        vspaceExtent: lg.vspaceExtent,
-        lines: formatLineGroup(lg, zone),
-      }}) : null,
-    }
+    return formatZone(zone, zoneName);
   }
 }
+
+const formatZone = (zone: Object, parent: string | null): Object => {
+  return {
+    // Need to somehow put vspace into linegroups array
+    id: shortid.generate(),
+    points: zone.attributes.points,
+    type: zone.attributes.type,
+    parent: (parent !== undefined && parent !== zone.attributes.type) ? parent : null,
+    columns: (zone.columns !== undefined) ? zone.columns.column.map((column) => {
+      return {
+        column: {
+          lineGroups: forceArray(column.lg) ? forceArray(column.lg).map((lg) => { return {
+            id: shortid.generate(),
+            zoneId: zone.id,
+            attributes: lg.attributes,
+            nodeType: lg.nodeType,
+            vspaceExtent: lg.vspaceExtent,
+            lines: formatLineGroup(lg, zone),
+          }}) : null,
+        }
+      }
+    }) : null,
+    lineGroups: forceArray(zone.lg) ? forceArray(zone.lg).map((lg) => { return {
+      id: shortid.generate(),
+      zoneId: zone.id,
+      attributes: lg.attributes,
+      nodeType: lg.nodeType,
+      vspaceExtent: lg.vspaceExtent,
+      lines: formatLineGroup(lg, zone),
+    }}) : null,
+  }
+}
+
+const flattenZone = (zone: Object): Array<Object> => {
+  const _zone = (zone.zone !== undefined) ? zone.zone : zone;
+  if (_zone.zones !== undefined) {
+    return _zone.zones.map(flattenZone);
+  }
+  return [_zone];
+}
+
+
 
 export const flattenZones = (pageObjects: Array<Object>): Object => {
   let zones = [];
   pageObjects.forEach((page) => {
-    page.surface.zone.forEach((zone) => {
-      zones.push(zone);
+    page.layers.forEach((layer) => {
+      zones.push(layer.zones.map(flattenZone));
     });
   });
   return flatten(zones);
 }
 
+export const objToArray = (obj: Object): Array<Object> => {
+  return Object.keys(obj).map((key) => obj[key]);
+}
+
 const flatten = (dataArray: Array<Object>): Object => {
   let flattened = {};
-  dataArray.forEach((data) => {
-    let { id, ...rest } = data;
-    flattened[id] = rest;
+  const _flatten = (arr: Array<Object> | Object): Array<Object> => {
+    let flat = [];
+    arr.forEach((element) => {
+      if (element.constructor === Array) {
+        flat = flat.concat(_flatten(element));
+      } else {
+        flat.push(element);
+      }
+    });
+    return flat;
+  }
+
+  _flatten(dataArray).forEach((data) => {
+    flattened[data.id] = data;
   });
   return flattened;
 }
