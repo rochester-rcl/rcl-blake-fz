@@ -165,7 +165,7 @@ const FZZoneView = (props: Object) => {
     return(
       <div key={lineGroup.id} className={getRotation(lineGroup.attributes)}>
         {renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
-          <br key={index} />
+          <div className="vspace-line" key={index} />
         )}
         {lineGroup.lines.map((line) =>
           renderLine(diplomaticMode, line)

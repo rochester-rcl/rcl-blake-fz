@@ -97,14 +97,14 @@
             <phystext>
                <surface points="2531,3283 2531,0 0,0 0,3283">
                    <zone type="body" points="2267,2246 2267,373 487,373 487,2246">
-                    <vspace extent="2"/>   
+                    <vspace extent="2"/>
                     <lg justify="left">
                         <l n="bb209.1.ms.03.01" indent="13"><!--should we indent the line or the stage?--><!-- the line, if indentation is applicable to all stages; I went ahead and changed a few to follow this formatting (EL) -->
                             <stage type="one">V<space extent="1"/>A<space extent="1"/>L<space extent="1"/>A</stage>
                             <diplomatic>V<space extent="1"/>A<space extent="1"/>L<space extent="1"/>A</diplomatic>
                         </l>
                     </lg>
-                    <vspace extent="1"/>   
+                    <vspace extent="1"/>
                     <lg>
                         <l n="bb209.1.ms.03.02" indent="13">
                             <stage type="one">Night the First</stage>
@@ -235,7 +235,7 @@
 		   </lg>
                    </zone>
                    <zone type="left" points="540,1794 540,1049 361,1049 361,1794">
-		           <vspace extent="10"/>   
+		           <vspace extent="16"/>
                        <lg justify="left">
                        <l indent="19">
                            <stage type="one" indent="4">1</stage>
@@ -278,7 +278,7 @@
                        </lg>
                    </zone>
                    <zone type="right" points="2504,1966 2504,1619 2103,1619 2103,1966">
-		           <vspace extent="18"/>
+		           <vspace extent="30"/>
                        <lg>
                            <l><!-- any @corresp for these lines? or vspace for formatting?-->
                                <stage type="one">John XVIIc. 21&#38;22 &#38;23v</stage><!-- Justin & Gabi differ on transcription here; this is my own compromise between the two--><!-- According to Justin's note: John 17:21-23 reads: "That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me. And the glory which thou gavest me I have given them; that they may be one, even as we are one; I in them, and thou in me; that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me." -->
@@ -299,7 +299,7 @@
                        </lg>
                    </zone>
                    <zone type="foot" points="2266,2336 2266,2205 2061,2205 2061,2336">
-                   <vspace extent="10"/>    
+                   <vspace extent="0"/>
                     <lg justify="left">
                         <l indent="55"><stage type="one"><catchword>In</catchword></stage>
                             <diplomatic><catchword>In</catchword></diplomatic>
@@ -455,41 +455,41 @@
                         </lg>
                     </zone>
                     <zone type="right" points="2512,1380 2512,197 1937,197 1937,1380">
-                        <vspace extent="1"/>
+
                         <lg style="writing-mode: vertical-rl; text-orientation: sideways-right">
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">Refusing to behold the Divine image which all behold</del></stage>
                                 <diplomatic><del type="overstrike">Refusing to behold the Divine image which all behold</del></diplomatic><!-- JVK <note>Lines 17-25 (as transcribed and inserted here) are written vertically, text rotated clockwise, in the upper-right corner of the page; they are marked for placement at this point by an "X" (line 2) above the first line of the addition and by another "X" right of line 17.  Blake later struck them out with a diagonal slash.</note> -->
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">And live thereby. he is sunk down into a deadly sleep</del></stage>
                                 <diplomatic><del type="overstrike">And live thereby. he is sunk down into a deadly sleep</del></diplomatic>
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">But we immortal in our own strength survive by stern debate</del></stage>
                                 <diplomatic><del type="overstrike">But we immortal in our own strength survive by stern debate</del></diplomatic>
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">Till we have drawn the Lamb of God into a mortal form</del></stage>
                                 <diplomatic><del type="overstrike">Till we have drawn the Lamb of God into a mortal form</del></diplomatic>
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">And that he must be born is certain for One must be All</del></stage>
                                 <diplomatic><del type="overstrike">And that he must be born is certain for One must be All</del></diplomatic>
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">And comprehend within himself all things both small &#38; great</del></stage>
                                 <diplomatic><del type="overstrike">And comprehend within himself all things both small &#38; great</del></diplomatic>
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">We therefore for whose sake all things aspire to be &#38; live</del></stage>
                                 <diplomatic><del type="overstrike">We therefore for whose sake all things aspire to be &#38; live</del></diplomatic>
                             </l>
-                            <l indent="18">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">Will so recieve the Divine Image that amongst the Reprobate</del></stage><!-- ms. definitely reads "recieve"; not a typo. -->
                                 <diplomatic><del type="overstrike">Will so recieve the Divine Image that amongst the Reprobate</del></diplomatic>
                             </l>
-                            <l indent="21">
+                            <l indent="40">
                                 <stage type="one"><del type="overstrike">He may be devoted to Destruction from his mothers womb</del></stage>
                                 <diplomatic><del type="overstrike">He may be devoted to Destruction from his mothers womb</del></diplomatic>
                             </l>

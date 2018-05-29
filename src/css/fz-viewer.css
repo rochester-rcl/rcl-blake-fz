@@ -156,7 +156,7 @@
 .fz-text-display-zone.foot {
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  bottom: 10vh;
 }
 
 /** Stages **/
@@ -232,4 +232,9 @@
 }
 .fz-text-display-zone-columns.vertical {
   flex-direction: column;
+}
+
+/*** VSPACE ***/
+.vspace-line {
+  height: 1.25vh;
 }
