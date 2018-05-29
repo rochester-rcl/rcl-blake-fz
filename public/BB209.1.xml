@@ -235,7 +235,7 @@
 		   </lg>
                    </zone>
                    <zone type="left" points="540,1794 540,1049 361,1049 361,1794">
-		           <vspace extent="16"/>
+		           <vspace extent="17"/>
                        <lg justify="left">
                        <l indent="19">
                            <stage type="one" indent="4">1</stage>
@@ -278,7 +278,7 @@
                        </lg>
                    </zone>
                    <zone type="right" points="2504,1966 2504,1619 2103,1619 2103,1966">
-		           <vspace extent="30"/>
+		           <vspace extent="32"/>
                        <lg>
                            <l><!-- any @corresp for these lines? or vspace for formatting?-->
                                <stage type="one">John XVIIc. 21&#38;22 &#38;23v</stage><!-- Justin & Gabi differ on transcription here; this is my own compromise between the two--><!-- According to Justin's note: John 17:21-23 reads: "That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me. And the glory which thou gavest me I have given them; that they may be one, even as we are one; I in them, and thou in me; that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me." -->
@@ -299,7 +299,7 @@
                        </lg>
                    </zone>
                    <zone type="foot" points="2266,2336 2266,2205 2061,2205 2061,2336">
-                   <vspace extent="0"/>
+                       <vspace extent="3"/>
                     <lg justify="left">
                         <l indent="55"><stage type="one"><catchword>In</catchword></stage>
                             <diplomatic><catchword>In</catchword></diplomatic>
@@ -497,14 +497,14 @@
                     </zone>
                     <zone type="head" points="2352,508 2352,121 1849,121 1849,508">
                         <lg>
-                            <l indent="50">
+                            <l indent="105">
                                 <stage type="one"><handShift medium="pencil">6</handShift></stage><!-- unsure if that pencil 6 is Blake -->
                                 <diplomatic><handShift medium="pencil">6</handShift></diplomatic>
                             </l>
                         </lg>
                         <vspace extent="4"/>
                         <lg>
-                            <l indent="40">
+                            <l indent="80">
                                 <stage type="one">9</stage>
                                 <diplomatic>9</diplomatic>
                             </l>
@@ -528,14 +528,14 @@
                 <surface points="2551,3260 2551,0 0,0 0,3260">
                     <zone type="head" points="3212,492 2312,157 1753,157 1753,492">
                         <lg justify="left">
-                            <l indent="40">
+                            <l indent="80">
                                 <stage type="one"><handShift medium="pencil">7</handShift></stage>
                                 <diplomatic><handShift medium="pencil">7</handShift></diplomatic>
                             </l>
                         </lg>
-                        <vspace extent="1"/>
+                        <vspace extent="4"/>
                             <lg justify="left">
-                                <l indent="30">
+                                <l indent="61">
                                     <stage type="one">11</stage>
                                     <diplomatic>11</diplomatic>
                                 </l>
