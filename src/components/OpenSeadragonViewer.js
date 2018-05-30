@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 // OpenSeadragon
 import OpenSeadragon from 'openseadragon';
 
+import loadSVGOverlay from '../utils/svg-overlay';
+
 // Semantic UI
 import { Icon } from 'semantic-ui-react';
 
@@ -13,7 +15,11 @@ import lodash from 'lodash';
 import shortid from 'shortid';
 
 // utils
-import { getBounds } from '../utils/data-utils';
+import { getBounds, getROI } from '../utils/data-utils';
+
+import Point from '../utils/Point';
+
+import * as d3 from 'd3';
 
 export default class OpenSeadragonViewer extends Component {
   state = {
@@ -45,6 +51,8 @@ export default class OpenSeadragonViewer extends Component {
     this.rotateLeft = this.rotateLeft.bind(this);
     this.rotateRight = this.rotateRight.bind(this);
     this.bounds = [];
+    this._svg = null;
+    this._viewerSize = null;
   }
 
   componentDidMount() {
@@ -56,11 +64,13 @@ export default class OpenSeadragonViewer extends Component {
     options.id = viewerId;
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
+    loadSVGOverlay(OpenSeadragon);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
+    this._svg = this.openSeaDragonViewer.svgOverlay();
     this.viewport = this.openSeaDragonViewer.viewport;
     if (this.props.overlays) {
       this.openSeaDragonViewer.addHandler('open', () => {
-        this.bounds = this.props.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
+        this.bounds = this.props.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay.roi));
         if (this.showZoneROI) this.drawOverlays(this.bounds);
         if (this.zoomToZones) this.zoomToBounds(this.bounds);
       });
@@ -146,7 +156,7 @@ export default class OpenSeadragonViewer extends Component {
       this.setTileSources(nextProps.tileSources);
     }
     if (nextProps.overlays.length > 0) {
-      this.bounds = nextProps.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
+      this.bounds = nextProps.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay.roi));
       if (nextProps.showZoneROI) this.drawOverlays();
       if (nextProps.zoomToZones) this.zoomToOverlays();
     } else {
@@ -161,6 +171,10 @@ export default class OpenSeadragonViewer extends Component {
     let { x, y, w, h } = getBounds(this.bounds);
     console.log(x, y, w, h);
     this.viewport.fitBounds(new OpenSeadragon.Rect(x,y,w,h));
+  }
+
+  removeOverlays(): void {
+
   }
 
   drawOverlays(): void {

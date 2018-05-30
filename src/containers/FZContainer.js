@@ -23,7 +23,7 @@ import FZTextView from '../components/FZTextView';
 import { Divider } from 'semantic-ui-react';
 
 // utils
-import { pointsToNumbers } from '../utils/data-utils';
+import { pointsToNumbers, pointsToPolys } from '../utils/data-utils';
 
 class FZContainer extends Component {
   componentDidMount() {
@@ -80,7 +80,7 @@ class FZContainer extends Component {
               tileSources={tileSources}
               options={{}}
               viewerId='fz-osd-image-viewer'
-              overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
+              overlays={currentZones.map((zone) => pointsToPolys(zone.points))}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
             />

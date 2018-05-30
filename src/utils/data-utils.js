@@ -3,6 +3,9 @@
 // constants
 import { DEFAULT_PPI, DEFAULT_FORMAT } from '../constants/image-utils';
 
+// points
+import Point from './Point';
+
 // shortid
 import shortid from 'shortid';
 
@@ -195,6 +198,34 @@ export const setZones = (zoneIds: Array<string>, zones: Object): Array<Object> =
     currentZones.push(zones[id]);
   });
   return currentZones;
+}
+
+export const getROI = (points: string): Array<number> => {
+  let pairs = points.split(' ').map((pair) => pair.split(',').map((val) => Number(val)));
+  let x = [];
+  let y = [];
+  for (let i = 0; i < pairs.length; i++) {
+    x.push(pairs[i][0]);
+    y.push(pairs[i][1]);
+  }
+  let xMin = Math.min(...x);
+  let xMax = Math.max(...x);
+  let yMin = Math.min(...y);
+  let yMax = Math.max(...y);
+  let w = xMax - xMin;
+  let h = yMax - yMin;
+  return [xMin, yMin, w, h];
+}
+
+export const pointsToPolys = (points: string): Object => {
+  let pointArray = points.split(' ').map((point) => {
+    let [x, y] = point.split(',');
+    return new Point(Number(x), Number(y));
+  });
+  return {
+    points: pointArray,
+    roi: getROI(points),
+  }
 }
 
 export const pointsToNumbers = (points: string): Array<Number> => {
