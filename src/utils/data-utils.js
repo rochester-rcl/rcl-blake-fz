@@ -50,36 +50,7 @@ const formatLineGroup = (lg: Object, zone: Object) => {
       id: shortid.generate(),
       zoneId: zone.id,
       attributes: line.attributes,
-      diplomatic: line.diplomatic ? (() => {
-        return line.diplomatic.map((element, index, diplomatic) => {
-          // handle anchored substspans
-          if (diplomatic[index+1]) {
-            if (diplomatic[index+1].nodeType === 'anchor') {
-              return anchorSubst(element);
-            }
-          }
-          if (diplomatic[index-1]) {
-            if (diplomatic[index-1].nodeType === 'substSpan') {
-              return anchorSubst(element);
-            }
-          }
-          return element;
-        });
-      })() : null,
-      stage: {
-        id: shortid.generate(),
-        zoneId: zone.id,
-        content: line.stage/*forceArray(line.stage) ? forceArray(line.stage).map((stage) => {
-          let { attributes, text, ...rest } = stage;
-          console.log(stage);
-          return {
-            id: shortid.generate(),
-            zoneId: zone.id,
-            type: stage.attributes ? stage.attributes.type : null,
-            ...rest,
-          }
-        }) : null*/,
-      }
+      text: line['#text'],
     }
   }) : null;
 }

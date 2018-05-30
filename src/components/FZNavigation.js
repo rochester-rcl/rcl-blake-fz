@@ -126,12 +126,6 @@ export default class FZNavigation extends Component {
             ref='zoneFilterDropdown'
             updateFilterParams={setZonesAction}
           />
-          <Checkbox
-            className="fz-toggle-transcription-mode-button"
-            checked={ diplomaticMode }
-            label="Diplomatic Transcription"
-            onChange={this.handleToggleTranscriptionMode}
-          />
         </div>
       );
     }

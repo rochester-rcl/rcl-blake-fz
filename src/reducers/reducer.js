@@ -51,7 +51,7 @@ export default function appReducer(state: Object = defaultState, action: Object)
     let ids = currentPage.layers.map((layer) => currentZoneIds(layer.zones));
     let zones = flattenZones(pageObjects);
     let currentPageZones = objToArray(flattenZones([currentPage]));
-
+    console.log(zones);
     return {
         ...state,
         bad: action.xml2json,

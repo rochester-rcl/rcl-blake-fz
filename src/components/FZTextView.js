@@ -32,16 +32,15 @@ export default class FZTextView extends Component {
       if (ZONE_MAP[zoneTypeA] > ZONE_MAP[zoneTypeB]) return 1;
       return 0;
     });
-
+    console.log(zones);
     return(
       <div className="fz-text-view">
         <div className="fz-text-display">
-          {/*sortedZones.map((zone, index) =>
+          {sortedZones.map((zone, index) =>
             <FZZoneView
               key={index}
-              diplomaticMode={diplomaticMode}
               zone={zone}/>
-          )*/}
+          )}
         </div>
       </div>
     );
@@ -124,8 +123,7 @@ const FZStage = (props: Object) => {
 }
 
 const FZZoneView = (props: Object) => {
-  const { zone, expanded, expandStages, diplomaticMode } = props;
-  console.log(zone);
+  const { zone } = props;
   const renderVSpace = (vSpaceExtent: Number) => {
     let vSpaceArray = new Array(vSpaceExtent);
     vSpaceArray.fill(' ');
@@ -159,7 +157,7 @@ const FZZoneView = (props: Object) => {
           <br key={index} />
         )}
         {lineGroup.lines.map((line) =>
-          renderLine(diplomaticMode, line)
+          renderLine(true, line)
         )}
       </div>
     );
@@ -172,27 +170,13 @@ const FZZoneView = (props: Object) => {
         if (line.attributes.indent) {
           return GAP_SIZE.repeat(Number(line.attributes.indent));
         }
-
-        if (line.diplomatic.attributes) {
-          return GAP_SIZE.repeat(Number(line.diplomatic.attributes.indent));
-        }
-
         return '';
       }
     }
-    let _indent;
-    let diplomaticIndent = line.diplomatic.find((element) => {
-      return element.hasOwnProperty('indent') === true;
-    });
-    if (diplomaticIndent) {
-      _indent = GAP_SIZE.repeat(Number(diplomaticIndent.indent));
-    } else {
-      _indent = indent(line);
-    }
+    let _indent = indent(line);
     return (
       <span key={line.id} className="fz-text-line-container">
-        {mode ? <FZDiplomaticView key={line.id} keyVal={line.id} diplomatic={line.diplomatic} indent={_indent} /> :
-        <FZStageView key={line.id} stages={line.stage.content} />}
+        <div className="marginalia-line">{(line.text !== undefined) ? line.text : ''}</div>
       </span>
     );
   }
