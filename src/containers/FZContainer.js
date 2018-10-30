@@ -17,6 +17,7 @@ import xml from '../../public/BB209.1.xml';
 import LoaderModal from '../components/LoaderModal';
 import FZNavigation from '../components/FZNavigation';
 import OpenSeadragonViewer from '../components/OpenSeadragonViewer';
+import OpenSeadragonViewerOverlay from '../components/OpenSeadragonViewerOverlay';
 import FZTextView from '../components/FZTextView';
 
 // Semantic UI
@@ -24,6 +25,13 @@ import { Divider } from 'semantic-ui-react';
 
 // utils
 import { pointsToNumbers } from '../utils/data-utils';
+
+const background = {
+  type: 'image',
+  url: '/background.jpg',
+  crossOriginPolicy: 'Anonymous',
+  ajaxWithCredentials: false
+}
 
 class FZContainer extends Component {
   state = {
@@ -72,6 +80,13 @@ class FZContainer extends Component {
         crossOriginPolicy: 'Anonymous',
         ajaxWithCredentials: false
       }
+      const fztext = <FZTextView
+        zones={currentZones}
+        diplomaticMode={diplomaticMode}
+        displayAngle={textDisplayAngle}
+        lockRotation={lockRotation}
+      />;
+
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -100,11 +115,15 @@ class FZContainer extends Component {
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
             />
-            <FZTextView
-              zones={currentZones}
-              diplomaticMode={diplomaticMode}
-              displayAngle={textDisplayAngle}
-              lockRotation={lockRotation}
+            <OpenSeadragonViewerOverlay
+              tileSources={background}
+              options={{}}
+              viewerId='fz-osd-image-overlay-viewer'
+              overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
+              zoomToZones={zoomToZones}
+              showZoneROI={showZoneROI}
+              rotateCallback={this.updateTextDisplayAngle}
+              overlay={fztext}
             />
           </div>
         </div>
