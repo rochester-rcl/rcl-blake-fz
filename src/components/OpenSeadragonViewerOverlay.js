@@ -188,10 +188,9 @@ export default class OpenSeadragonViewer extends Component {
 
   render() {
     const { viewerId, showZoneROI, zoomToZones, rotateCallback, overlay } = this.props;
-    console.log(this.props);
     return (
       <div className="osd-viewer-container">
-        {this.renderControls()}
+        {/*this.renderControls()*/}
         <div ref="selectionROI" id="osd-selection-roi"></div>
         <div
           ref="openSeadragonDiv"
