@@ -10,9 +10,6 @@ import { bindActionCreators } from 'redux';
 // Actions
 import * as AppActionCreators from '../actions/actions';
 
-// XML
-import xml from '../../public/BB209.1.xml';
-
 // Components
 import LoaderModal from '../components/LoaderModal';
 import FZNavigation from '../components/FZNavigation';
@@ -25,10 +22,13 @@ import { Divider } from 'semantic-ui-react';
 
 // utils
 import { pointsToNumbers } from '../utils/data-utils';
+import createBackground from '../utils/image';
+
+const xml =  '/BB209.1.xml';
 
 const background = {
   type: 'image',
-  url: '/background.jpg',
+  url: createBackground('#1e1e1e', [2575, 3283]),
   crossOriginPolicy: 'Anonymous',
   ajaxWithCredentials: false
 }

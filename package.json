@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "flow-bin": "^0.39.0",
-    "react-scripts": "0.9.0"
+    "react-scripts": "^2.1.1"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -24,5 +24,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -57,6 +57,7 @@ export default class OpenSeadragonViewer extends Component {
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
+    this.openSeaDragonViewer.gestureSettingsMouse.clickToZoom = false;
     this.viewport = this.openSeaDragonViewer.viewport;
     if (this.props.overlays) {
       this.openSeaDragonViewer.addHandler('open', () => {
@@ -143,18 +144,25 @@ export default class OpenSeadragonViewer extends Component {
       </div>);
   }
 
-  componentWillReceiveProps(nextProps: Object, nextState: Object) {
-    if (this.props.tileSources.url !== nextProps.tileSources.url) {
-      this.setTileSources(nextProps.tileSources);
-    }
+  componentDidUpdate(prevProps: Object, prevState: Object) {
+
   }
 
   drawTextOverlay(): void {
+    let rect;
+    /*if (this.bounds.length > 0) {
+      const { x, y, w, h } = getBounds(this.bounds);
+      rect = this.bounds[0];
+    } else {
+      rect = new OpenSeadragon.Rect(0, 0, 1, 1);
+    }*/
+    rect = new OpenSeadragon.Rect(0, 0, 1, 1);
     this.viewerOverlay.id = shortid.generate();
     this.openSeaDragonViewer.addOverlay({
       element: this.viewerOverlay,
-      location: new OpenSeadragon.Rect(0, 0, 1, 1),
+      location: rect,
       rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
+      checkResize: true,
     });
   }
 
@@ -166,13 +174,21 @@ export default class OpenSeadragonViewer extends Component {
     return true;
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps: Object, prevState: Object): void {
     // this.removeTextOverlay();
+    const { tileSources, overlays } = this.props;
+    if (tileSources.url !== prevProps.tileSources.url) {
+      this.setTileSources(tileSources);
+    }
+    if (overlays.length !== prevProps.overlays.length) {
+      this.bounds = this.props.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
+    }
     this.drawTextOverlay();
   }
 
   render() {
     const { viewerId, showZoneROI, zoomToZones, rotateCallback, overlay } = this.props;
+    console.log(this.props);
     return (
       <div className="osd-viewer-container">
         {this.renderControls()}
