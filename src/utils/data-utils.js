@@ -6,6 +6,9 @@ import { DEFAULT_PPI, DEFAULT_FORMAT } from '../constants/image-utils';
 // shortid
 import shortid from 'shortid';
 
+// OpenSeadragon
+import OpenSeadragon from 'openseadragon';
+
 const CLASSES = {
   gap: 'tei-gap',
   cancellation_wash: 'tei-gap-cancellation',
@@ -170,6 +173,19 @@ export const getBounds = (bounds: Array<Number>): Object => {
   }
 
   return { x: minX.x, y: minY.y, w: getWidth(minX, maxX), h: getHeight(minY, maxY) };
+}
+
+export function pointsToViewportPercent(resolution: Array<Number>): (points: Array<String>) => Array<Number> {
+  const [_x, _y] = resolution;
+  return (points) => {
+    let [x, y, w, h] = pointsToNumbers(points)
+    console.log(x, y, w, h);
+    x /= _x;
+    w /= _x;
+    y /= _y;
+    h /= _y;
+    return [x, y, w, h].map((val) => Math.floor(val * 100));
+  }
 }
 
 // Pure function for processing stages

@@ -51,19 +51,19 @@
 }
 
 .fz-text-view {
-  position: relative;
+  /*position: relative;
   width: 90%;
   height: 80%;
   flex: 1;
   background: none;
   /*background-color: #1D1D1D;*/
   /*border-left: 2px solid #333;*/
-  top: 5%;
+  /*top: 5%;*/
 }
 
 .fz-text-display {
   color: #fff;
-  width: 90%;
+  /*width: 90%;
   height: 90%;
   position: relative;
   margin: 0 auto;
@@ -73,7 +73,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
-  font-size: 20px;
+  /*font-size: 20px;*/
   /*overflow: auto;*/
   transform-origin: center;
   transition: transform 1s ease-in-out;
@@ -116,48 +116,27 @@
 }
 
 .fz-text-display-zone {
-  flex: 0.6;
+
 }
 
 .fz-text-display-zone.left {
-  position: absolute;
-  left: 0;
+
 }
 
 .fz-text-display-zone.right {
-  position: absolute;
-  right: 0;
+
 }
 
 .fz-text-display-zone.head {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  font-size: 0.8vw;
+
 }
 
 .fz-text-display-zone.body {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    /* align-self: center; */
-    /* -webkit-box-flex: 1; */
-    -ms-flex: 1;
-    /* flex: 1; */
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 50%;
-    top: 0;
-    bottom: 0;
-    top: 40%;
-    transform: translateY(-40%);
-    margin: auto;
+  /*transform: translateY(-40%);*/
 }
 
 .fz-text-display-zone.foot {
-  display: inline-block;
-  position: absolute;
-  bottom: 10vh;
+
 }
 
 /** Stages **/
@@ -222,7 +201,7 @@
 }
 
 .fz-text-display-line {
-  font-size: 0.9vw;
+  /*font-size: 0.9vw;*/
 }
 
 /*** Columns ***/

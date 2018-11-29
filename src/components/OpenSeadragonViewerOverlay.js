@@ -13,7 +13,18 @@ import lodash from 'lodash';
 import shortid from 'shortid';
 
 // utils
-import { getBounds } from '../utils/data-utils';
+import { getBounds, pointsToNumbers } from '../utils/data-utils';
+
+// Components
+import { FZZoneView } from './FZTextView';
+
+const ZONE_MAP = {
+  left: 0,
+  body: 1,
+  head: 2,
+  foot: 3,
+  right: 4,
+}
 
 export default class OpenSeadragonViewer extends Component {
   state = {
@@ -31,7 +42,8 @@ export default class OpenSeadragonViewer extends Component {
       zoomInButton: 'zoom-in-button',
       zoomOutButton: 'zoom-out-button',
       homeButton: 'home-button',
-    }
+    },
+    zoom: 0,
   }
 
   constructor(props) {
@@ -44,7 +56,11 @@ export default class OpenSeadragonViewer extends Component {
     this.drawTextOverlay = this.drawTextOverlay.bind(this);
     this.rotateLeft = this.rotateLeft.bind(this);
     this.rotateRight = this.rotateRight.bind(this);
+    this.handleZoom = this.handleZoom.bind(this);
+    this.setZoneRefs = this.setZoneRefs.bind(this);
+    this.renderZone = this.renderZone.bind(this);
     this.bounds = [];
+    this.zoneRefs = {};
   }
 
   componentDidMount() {
@@ -53,10 +69,13 @@ export default class OpenSeadragonViewer extends Component {
 
   initOpenSeadragon() {
     const { tileSources, viewerId, options } = this.props;
+    this.fontBase = 20;
+    this.lineHeightBase = this.viewerOverlay.style.lineHeight = 0.8;
     options.id = viewerId;
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
+    this.openSeaDragonViewer.addHandler('zoom', this.handleZoom);
     this.openSeaDragonViewer.gestureSettingsMouse.clickToZoom = false;
     this.viewport = this.openSeaDragonViewer.viewport;
     if (this.props.overlays) {
@@ -66,6 +85,9 @@ export default class OpenSeadragonViewer extends Component {
         if (this.zoomToZones) this.zoomToBounds(this.bounds);
       });
     }
+    this.setState({
+      zoom: this.viewport.getZoom(true)
+    });
   }
 
   setOptions(options) {
@@ -93,6 +115,7 @@ export default class OpenSeadragonViewer extends Component {
   setTileSources(tileSources) {
     this.openSeaDragonViewer.open(tileSources);
   }
+
   // add flow annotations
   rotateLeft(callback): void {
     let src = this.viewport.getRotation();
@@ -144,26 +167,35 @@ export default class OpenSeadragonViewer extends Component {
       </div>);
   }
 
-  componentDidUpdate(prevProps: Object, prevState: Object) {
-
+  drawTextOverlay(): void {
+    for (let key in this.zoneRefs) {
+      let zone = this.zoneRefs[key];
+      let elem = zone.zoneRef;
+      let { points } = zone.props.zone;
+      let roi = pointsToNumbers(points);
+      let rect;
+      if (roi.length > 0) {
+        rect = this.viewport.imageToViewportRectangle(...roi);
+      } else {
+        rect = new OpenSeadragon.Rect(0, 0, 1, 1);
+      }
+      elem.id = shortid.generate();
+      this.openSeaDragonViewer.addOverlay({
+        element: elem,
+        location: rect,
+        rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
+        checkResize: false,
+      });
+    }
   }
 
-  drawTextOverlay(): void {
-    let rect;
-    /*if (this.bounds.length > 0) {
-      const { x, y, w, h } = getBounds(this.bounds);
-      rect = this.bounds[0];
-    } else {
-      rect = new OpenSeadragon.Rect(0, 0, 1, 1);
-    }*/
-    rect = new OpenSeadragon.Rect(0, 0, 1, 1);
-    this.viewerOverlay.id = shortid.generate();
-    this.openSeaDragonViewer.addOverlay({
-      element: this.viewerOverlay,
-      location: rect,
-      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
-      checkResize: true,
-    });
+  setZoneRefs(ref, key) {
+    this.zoneRefs[key] = ref;
+  }
+
+  handleZoom(zoomInfo: Object): void {
+    this.viewerOverlay.style.fontSize = Math.ceil(this.fontBase * zoomInfo.zoom).toString() + 'px';
+    this.viewerOverlay.style.lineHeight = Math.ceil(this.lineHeightBase * (zoomInfo.zoom * 0.1));
   }
 
   removeTextOverlay(): void {
@@ -171,7 +203,9 @@ export default class OpenSeadragonViewer extends Component {
   }
 
   shouldComponentUpdate(nextProps: Object, nextState: Object): boolean {
-    return true;
+    const { zones } = this.props;
+    if (!lodash.isEqual(zones, nextProps.zones)) return true;
+    return false;
   }
 
   componentDidUpdate(prevProps: Object, prevState: Object): void {
@@ -183,14 +217,36 @@ export default class OpenSeadragonViewer extends Component {
     if (overlays.length !== prevProps.overlays.length) {
       this.bounds = this.props.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
     }
+    this.openSeaDragonViewer.clearOverlays();
     this.drawTextOverlay();
   }
 
+  renderZone(zone: Object, index: Number): FZZoneView {
+    const { lockRotation, diplomaticMode } = this.props;
+    return (
+      <FZZoneView
+        key={index}
+        ref={(ref) => this.setZoneRefs(ref, zone.type)}
+        lockRotation={lockRotation}
+        diplomaticMode={diplomaticMode}
+        zone={zone}
+      />
+    );
+  }
+
   render() {
-    const { viewerId, showZoneROI, zoomToZones, rotateCallback, overlay } = this.props;
+    const { viewerId, showZoneROI, zoomToZones, rotateCallback, zones, diplomaticMode, displayAngle, lockRotation, } = this.props;
+    let sortedZones = zones.sort((zoneA, zoneB) => {
+      let zoneTypeA = zoneA.type;
+      let zoneTypeB = zoneB.type;
+      if (ZONE_MAP[zoneTypeA] < ZONE_MAP[zoneTypeB]) return -1;
+      if (ZONE_MAP[zoneTypeA] > ZONE_MAP[zoneTypeB]) return 1;
+      return 0;
+    });
+    let rotate = (lockRotation === true) ? { transform: 'rotate(' + displayAngle + 'deg)' } : {};
+    let baseClass = "fz-text-display ";
     return (
       <div className="osd-viewer-container">
-        {/*this.renderControls()*/}
         <div ref="selectionROI" id="osd-selection-roi"></div>
         <div
           ref="openSeadragonDiv"
@@ -201,10 +257,13 @@ export default class OpenSeadragonViewer extends Component {
         <div
         ref={(ref) => this.viewerOverlay = ref }
         className="osd-viewer-overlay">
-          {overlay}
+          <div className="fz-text-view">
+            <div className={baseClass} style={rotate}>
+              {sortedZones.map(this.renderZone)}
+            </div>
+          </div>
         </div>
       </div>
     );
   }
-
 }

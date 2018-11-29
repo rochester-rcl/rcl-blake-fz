@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import { Segment } from 'semantic-ui-react';
 
 // utils
-import { formatStage } from '../utils/data-utils';
+import { formatStage, pointsToNumbers } from '../utils/data-utils';
 
 // shortid
 import shortid from 'shortid';
@@ -23,7 +23,9 @@ const ZONE_MAP = {
 }
 
 export default class FZTextView extends Component {
+  zoneRefs = [];
   render(){
+    console.log(this.zoneRefs);
     const { zones, diplomaticMode, displayAngle, lockRotation } = this.props;
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
@@ -39,10 +41,12 @@ export default class FZTextView extends Component {
         <div className={baseClass} style={rotate}>
           {sortedZones.map((zone, index) =>
             <FZZoneView
+              ref={(ref) => this.zoneRefs.push(ref)}
               key={index}
               lockRotation={lockRotation}
               diplomaticMode={diplomaticMode}
-              zone={zone}/>
+              zone={zone}
+            />
           )}
         </div>
       </div>
@@ -133,15 +137,23 @@ const FZStage = (props: Object) => {
   );
 }
 
-const FZZoneView = (props: Object) => {
-  const { zone, expanded, expandStages, diplomaticMode, lockRotation } = props;
-  const renderVSpace = (vSpaceExtent: number) => {
+export class FZZoneView extends Component {
+  constructor(props: Object) {
+    super(props);
+    this.renderVSpace = this.renderVSpace.bind(this);
+    this.FZLineGroupView = this.FZLineGroupView.bind(this);
+    this.FZDiplomaticView = this.FZDiplomaticView.bind(this);
+    this.renderLine = this.renderLine.bind(this);
+  }
+
+  renderVSpace(vSpaceExtent: number) {
     let vSpaceArray = new Array(vSpaceExtent);
     vSpaceArray.fill(' ');
     return vSpaceArray;
   }
 
-  const FZLineGroupView = (props: Object) => {
+  FZLineGroupView(props: Object) {
+    const { diplomaticMode } = this.props;
     const { lineGroup } = props;
     const getRotation = (attributes) => {
         let lineGroupClass = "fz-text-display-line-group";
@@ -164,17 +176,17 @@ const FZZoneView = (props: Object) => {
     }
     return(
       <div key={lineGroup.id} className={getRotation(lineGroup.attributes)}>
-        {renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
+        {/*renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
           <div className="vspace-line" key={index} />
-        )}
+        )*/}
         {lineGroup.lines.map((line) =>
-          renderLine(diplomaticMode, line)
+          this.renderLine(diplomaticMode, line)
         )}
       </div>
     );
   }
 
-  const renderLine = (mode: bool, line: Object) => {
+  renderLine(mode: bool, line: Object) {
     let indent = (line) => {
       if (line.attributes) {
 
@@ -201,15 +213,21 @@ const FZZoneView = (props: Object) => {
     } else {
       _indent = indent(line);
     }
+    const diplomaticProps = {
+      key: line.id,
+      keyVal: line.id,
+      diplomatic: line.diplomatic,
+      indent: indent
+    }
     return (
       <span key={line.id} className="fz-text-line-container">
-        {mode ? <FZDiplomaticView key={line.id} keyVal={line.id} diplomatic={line.diplomatic} indent={_indent} /> :
+        {mode ? this.FZDiplomaticView(diplomaticProps) :
         <FZStageView key={line.id} stages={line.stage.content} indent={_indent} />}
       </span>
     );
   }
 
-  const FZDiplomaticView = (props: Object) => {
+  FZDiplomaticView(props: Object) {
     const { diplomatic, indent } = props;
     return(
       <div key={shortid.generate()} className='fz-text-display-line diplomatic'>
@@ -218,35 +236,46 @@ const FZZoneView = (props: Object) => {
       </div>
     );
   }
-  if (zone.lineGroups.length > 0) {
-    return(
-      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
-        {zone.lineGroups.map((lineGroup) =>
-          <FZLineGroupView key={lineGroup.id} lineGroup={lineGroup} />
-        )}
-      </div>
-    );
-  } else if(zone.columns) {
-    let colClass = "fz-text-display-zone-columns ";
-    if (zone.columns.orient !== undefined) colClass += zone.columns.orient;
-    return(
-      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
-        <div className={colClass}>
-          {zone.columns.cols.map((column) =>
-            <div className="fz-text-display-zone-column">
-              {column.column.lineGroups.map((lg) =>
-                <FZLineGroupView key={lg.id} lineGroup={lg}/>
-              )}
-            </div>
+
+  render() {
+    const { zone, expanded, expandStages, diplomaticMode, lockRotation } = this.props;
+
+    if (zone.lineGroups.length > 0) {
+      return(
+        <div ref={(ref) => this.zoneRef = ref} key={zone.id} className={"fz-text-display-zone " + zone.type}>
+          {zone.lineGroups.map((lineGroup) =>
+            this.FZLineGroupView({
+              key: lineGroup.id,
+              lineGroup: lineGroup,
+            })
           )}
         </div>
-      </div>
-    );
-  } else {
-    return(
-      <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
-      </div>
-    );
+      );
+    } else if(zone.columns) {
+      let colClass = "fz-text-display-zone-columns ";
+      if (zone.columns.orient !== undefined) colClass += zone.columns.orient;
+      return(
+        <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
+          <div className={colClass}>
+            {zone.columns.cols.map((column) =>
+              <div className="fz-text-display-zone-column">
+                {column.column.lineGroups.map((lg) =>
+                  this.FZLineGroupView({
+                    key: lg.id,
+                    lineGroup: lg
+                  })
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    } else {
+      return(
+        <div key={zone.id} className={"fz-text-display-zone " + zone.type}>
+        </div>
+      );
+    }
   }
 }
 
@@ -310,7 +339,6 @@ const formatDiplomaticText = (diplomatic: Array) => {
   const formatSubst = (element: Object) => {
     let formatted;
     if (element.children) {
-        console.log(element.children);
         formatted = formatChildren(element.children);
     } else {
       formatted = [];

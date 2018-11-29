@@ -21,17 +21,19 @@ import FZTextView from '../components/FZTextView';
 import { Divider } from 'semantic-ui-react';
 
 // utils
-import { pointsToNumbers } from '../utils/data-utils';
+import { pointsToNumbers, pointsToViewportPercent } from '../utils/data-utils';
 import createBackground from '../utils/image';
 
 const xml =  '/BB209.1.xml';
 
 const background = {
   type: 'image',
-  url: createBackground('#1e1e1e', [2575, 3283]),
+  url: createBackground(/*'#1e1e1e'*/'#ccc', [2575, 3283]),
   crossOriginPolicy: 'Anonymous',
   ajaxWithCredentials: false
 }
+
+const toPercent = pointsToViewportPercent([2575, 3283]);
 
 class FZContainer extends Component {
   state = {
@@ -50,6 +52,7 @@ class FZContainer extends Component {
       textDisplayAngle: angle,
     });
   }
+
   render() {
     const {
       pageObjects,
@@ -80,12 +83,6 @@ class FZContainer extends Component {
         crossOriginPolicy: 'Anonymous',
         ajaxWithCredentials: false
       }
-      const fztext = <FZTextView
-        zones={currentZones}
-        diplomaticMode={diplomaticMode}
-        displayAngle={textDisplayAngle}
-        lockRotation={lockRotation}
-      />;
 
       return (
         <div className="fz-app-container">
@@ -123,7 +120,10 @@ class FZContainer extends Component {
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
-              overlay={fztext}
+              zones={currentZones}
+              diplomaticMode={diplomaticMode}
+              displayAngle={textDisplayAngle}
+              lockRotation={lockRotation}
             />
           </div>
         </div>
