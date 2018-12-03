@@ -28,7 +28,7 @@ const xml =  '/BB209.1.xml';
 
 const background = {
   type: 'image',
-  url: createBackground(/*'#1e1e1e'*/'#ccc', [2575, 3283]),
+  url: createBackground('#1e1e1e'/*'#ccc'*/, [2575, 3283]),
   crossOriginPolicy: 'Anonymous',
   ajaxWithCredentials: false
 }

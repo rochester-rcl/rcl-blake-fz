@@ -204,6 +204,10 @@
   /*font-size: 0.9vw;*/
 }
 
+.fz-text-display-line span {
+
+}
+
 /*** Columns ***/
 .fz-text-display-zone-columns {
   display: flex;

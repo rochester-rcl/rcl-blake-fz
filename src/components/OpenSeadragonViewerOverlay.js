@@ -15,6 +15,7 @@ import shortid from 'shortid';
 // utils
 import { getBounds, pointsToNumbers } from '../utils/data-utils';
 
+
 // Components
 import { FZZoneView } from './FZTextView';
 
@@ -31,11 +32,6 @@ export default class OpenSeadragonViewer extends Component {
     defaultOptions: {
       defaultZoomLevel: 0.8,
       maxZoomPixelRatio: 2,
-      animationTime: 2,
-      blendTime: 0.5,
-      constrainDuringPan: true,
-      springStiffness: 1,
-      visibilityRatio: 0.2,
       showReferenceStrip: false,
       showNavigator:  false,
       showNavigationControl: true,
@@ -57,8 +53,11 @@ export default class OpenSeadragonViewer extends Component {
     this.rotateLeft = this.rotateLeft.bind(this);
     this.rotateRight = this.rotateRight.bind(this);
     this.handleZoom = this.handleZoom.bind(this);
+    this.updateDynamicFontInfo = this.updateDynamicFontInfo.bind(this);
+    this.fitFont = this.fitFont.bind(this);
     this.setZoneRefs = this.setZoneRefs.bind(this);
     this.renderZone = this.renderZone.bind(this);
+    this.updateZoneRefs = this.updateZoneRefs.bind(this);
     this.bounds = [];
     this.zoneRefs = {};
   }
@@ -75,7 +74,8 @@ export default class OpenSeadragonViewer extends Component {
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
     this.openSeaDragonViewer = OpenSeadragon(combinedOptions);
-    this.openSeaDragonViewer.addHandler('zoom', this.handleZoom);
+    this.openSeaDragonViewer.zoomPerScroll = 1;
+    // this.openSeaDragonViewer.addHandler('zoom', this.handleZoom);
     this.openSeaDragonViewer.gestureSettingsMouse.clickToZoom = false;
     this.viewport = this.openSeaDragonViewer.viewport;
     if (this.props.overlays) {
@@ -168,34 +168,74 @@ export default class OpenSeadragonViewer extends Component {
   }
 
   drawTextOverlay(): void {
-    for (let key in this.zoneRefs) {
-      let zone = this.zoneRefs[key];
-      let elem = zone.zoneRef;
-      let { points } = zone.props.zone;
-      let roi = pointsToNumbers(points);
-      let rect;
-      if (roi.length > 0) {
-        rect = this.viewport.imageToViewportRectangle(...roi);
-      } else {
-        rect = new OpenSeadragon.Rect(0, 0, 1, 1);
-      }
-      elem.id = shortid.generate();
-      this.openSeaDragonViewer.addOverlay({
-        element: elem,
-        location: rect,
-        rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
-        checkResize: false,
-      });
-    }
+    this.openSeaDragonViewer.addOverlay({
+      element: this.viewerOverlay,
+      location: new OpenSeadragon.Rect(0, 0, 1, 1),
+      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
+    });
+    this.fitFont();
   }
 
   setZoneRefs(ref, key) {
     this.zoneRefs[key] = ref;
   }
 
+  updateZoneRefs() {
+    for (let key in this.zoneRefs) {
+      let val = this.zoneRefs[key];
+      if (val === null) {
+        delete this.zoneRefs[key];
+      }
+    }
+  }
+
+  updateDynamicFontInfo() {
+
+  }
+
+  fitFont(zoom: Number) {
+    const { offsetWidth } = this.viewerOverlay;
+    const viewportWidth = document.body.offsetWidth;
+    this.viewerOverlay.style.fontSize = (offsetWidth / viewportWidth) + 'vw';
+    /*for (let key in this.zoneRefs) {
+      const elem = this.zoneRefs[key].zoneRef;
+      const { offsetWidth } = elem;
+      const lines = elem.getElementsByClassName('fz-text-display-line');
+      let widest;
+      let widestElement;
+      // find the longest line
+      for (let line of lines) {
+        let width = line.firstChild.offsetWidth;
+        if (widest === undefined) {
+          widest = width;
+          widestElement = line.firstChild;
+        } else {
+          if (width > widest) {
+            widest = width;
+            widestElement = line.firstChild;
+          }
+        }
+      }
+      // get initial font size
+      console.log(offsetWidth, widest);
+      let fontSize = parseInt(elem.style.fontSize.split('px')[0], 10);
+      if (widest > offsetWidth) {
+        while(widestElement.offsetWidth > offsetWidth) {
+          fontSize--
+          elem.style.fontSize = fontSize + 'px';
+        }
+      } else {
+        while(widestElement.offsetWidth < offsetWidth) {
+          fontSize++
+          elem.style.fontSize = fontSize + 'px';
+        }
+      }
+    }*/
+  }
+
   handleZoom(zoomInfo: Object): void {
-    this.viewerOverlay.style.fontSize = Math.ceil(this.fontBase * zoomInfo.zoom).toString() + 'px';
-    this.viewerOverlay.style.lineHeight = Math.ceil(this.lineHeightBase * (zoomInfo.zoom * 0.1));
+    const { zoom } = zoomInfo;
+    this.fitFont(zoom);
   }
 
   removeTextOverlay(): void {
@@ -204,7 +244,9 @@ export default class OpenSeadragonViewer extends Component {
 
   shouldComponentUpdate(nextProps: Object, nextState: Object): boolean {
     const { zones } = this.props;
+    const { zoom } = this.state;
     if (!lodash.isEqual(zones, nextProps.zones)) return true;
+    if (zoom !== nextState.zoom) return true;
     return false;
   }
 
@@ -217,14 +259,28 @@ export default class OpenSeadragonViewer extends Component {
     if (overlays.length !== prevProps.overlays.length) {
       this.bounds = this.props.overlays.map((overlay) => this.viewport.imageToViewportRectangle(...overlay));
     }
-    this.openSeaDragonViewer.clearOverlays();
+    this.updateZoneRefs();
+    // this.openSeaDragonViewer.clearOverlays();
     this.drawTextOverlay();
   }
 
   renderZone(zone: Object, index: Number): FZZoneView {
     const { lockRotation, diplomaticMode } = this.props;
+    const { points } = zone;
+    const roi = pointsToNumbers(points);
+    const [ x, y ] = roi;
+    const rect = this.viewport.imageToViewportRectangle(...roi);
+    const zoneStyle = {
+      position: 'absolute',
+      left: Math.floor(rect.x * 100).toString() + "%",
+      top: Math.floor(rect.y * 100).toString() + "%",
+      width: Math.floor(rect.width * 100).toString() + "%",
+      height: Math.floor(rect.height * 100).toString() + "%",
+      fontSize: '12px',
+    }
     return (
       <FZZoneView
+        style={zoneStyle}
         key={index}
         ref={(ref) => this.setZoneRefs(ref, zone.type)}
         lockRotation={lockRotation}

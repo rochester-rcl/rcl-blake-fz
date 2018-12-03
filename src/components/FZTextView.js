@@ -25,7 +25,6 @@ const ZONE_MAP = {
 export default class FZTextView extends Component {
   zoneRefs = [];
   render(){
-    console.log(this.zoneRefs);
     const { zones, diplomaticMode, displayAngle, lockRotation } = this.props;
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
@@ -176,7 +175,7 @@ export class FZZoneView extends Component {
     }
     return(
       <div key={lineGroup.id} className={getRotation(lineGroup.attributes)}>
-        {/*renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
+        {/*this.renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
           <div className="vspace-line" key={index} />
         )*/}
         {lineGroup.lines.map((line) =>
@@ -238,11 +237,11 @@ export class FZZoneView extends Component {
   }
 
   render() {
-    const { zone, expanded, expandStages, diplomaticMode, lockRotation } = this.props;
+    const { zone, expanded, expandStages, diplomaticMode, lockRotation, style } = this.props;
 
     if (zone.lineGroups.length > 0) {
       return(
-        <div ref={(ref) => this.zoneRef = ref} key={zone.id} className={"fz-text-display-zone " + zone.type}>
+        <div style={style} ref={(ref) => this.zoneRef = ref} key={zone.id} className={"fz-text-display-zone " + zone.type}>
           {zone.lineGroups.map((lineGroup) =>
             this.FZLineGroupView({
               key: lineGroup.id,

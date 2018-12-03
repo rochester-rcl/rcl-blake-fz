@@ -20,11 +20,6 @@ export default class OpenSeadragonViewer extends Component {
     defaultOptions: {
       defaultZoomLevel: 0.8,
       maxZoomPixelRatio: 2,
-      animationTime: 2,
-      blendTime: 0.5,
-      constrainDuringPan: true,
-      springStiffness: 1,
-      visibilityRatio: 0.2,
       showReferenceStrip: false,
       showNavigator:  false,
       showNavigationControl: true,
@@ -110,7 +105,6 @@ export default class OpenSeadragonViewer extends Component {
 
   rotateRight(callback): void {
     let src = this.viewport.getRotation();
-    console.log(src);
     let dst = (src + 45) <= 360 ? (src + 45) : 360;
     callback(dst);
     const animateRight = (src, dst) => {
@@ -171,7 +165,7 @@ export default class OpenSeadragonViewer extends Component {
       let overlay = document.createElement('div');
       overlay.id = shortid.generate();
       overlay.className = 'fz-osd-overlay';
-      overlay.style.border = '2px solid #E9BC47';
+      overlay.style.outline = '2px solid #E9BC47';
       this.openSeaDragonViewer.addOverlay({
         element: overlay,
         location: rect,
