@@ -61,3 +61,7 @@
 .border-3, {
   background: rgb(0,0,0) !important;
 }
+
+.osd-viewer-overlay {
+  font-size: 12px !important;
+}

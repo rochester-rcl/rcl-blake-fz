@@ -1,47 +1,48 @@
 /* @flow */
 
 // React
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Redux
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 // Actions
-import * as AppActionCreators from '../actions/actions';
+import * as AppActionCreators from "../actions/actions";
 
 // Components
-import LoaderModal from '../components/LoaderModal';
-import FZNavigation from '../components/FZNavigation';
-import OpenSeadragonViewer from '../components/OpenSeadragonViewer';
-import OpenSeadragonViewerOverlay from '../components/OpenSeadragonViewerOverlay';
-import FZTextView from '../components/FZTextView';
+import LoaderModal from "../components/LoaderModal";
+import FZNavigation from "../components/FZNavigation";
+import OpenSeadragonViewer from "../components/OpenSeadragonViewer";
+import OpenSeadragonViewerOverlay from "../components/OpenSeadragonViewerOverlay";
+import FZTextView from "../components/FZTextView";
 
 // Semantic UI
-import { Divider } from 'semantic-ui-react';
+import { Divider } from "semantic-ui-react";
 
 // utils
-import { pointsToNumbers, pointsToViewportPercent } from '../utils/data-utils';
-import createBackground from '../utils/image';
+import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
+import createBackground from "../utils/image";
 
-const xml =  '/BB209.1.xml';
+const xml = "/BB209.1.xml";
 
 const background = {
-  type: 'image',
-  url: createBackground('#1e1e1e'/*'#ccc'*/, [2575, 3283]),
-  crossOriginPolicy: 'Anonymous',
+  type: "image",
+  url: createBackground("#1e1e1e" /*'#ccc'*/, [2575, 3283]),
+  crossOriginPolicy: "Anonymous",
   ajaxWithCredentials: false
-}
+};
 
 const toPercent = pointsToViewportPercent([2575, 3283]);
 
 class FZContainer extends Component {
   state = {
-    textDisplayAngle: 0,
-  }
+    textDisplayAngle: 0
+  };
   constructor(props: Object) {
     super(props);
-    (this: any).updateTextDisplayAngle = this.updateTextDisplayAngle.bind(this);
+    this.updateTextDisplayAngle = this.updateTextDisplayAngle.bind(this);
+    this.openseadragonViewerRef = null;
   }
   componentDidMount() {
     // Call this here to load initial data
@@ -49,7 +50,7 @@ class FZContainer extends Component {
   }
   updateTextDisplayAngle(angle: number): void {
     this.setState({
-      textDisplayAngle: angle,
+      textDisplayAngle: angle
     });
   }
 
@@ -73,16 +74,16 @@ class FZContainer extends Component {
       showZoneROI,
       zoomToZones,
       lockRotation,
-      diplomaticMode,
-      } = this.props;
+      diplomaticMode
+    } = this.props;
     const { textDisplayAngle } = this.state;
     if (pageObjects) {
       let tileSources = {
-        type: 'image',
-        url: window.location.href + '/' + currentPage.imageURL,
-        crossOriginPolicy: 'Anonymous',
+        type: "image",
+        url: window.location.href + "/" + currentPage.imageURL,
+        crossOriginPolicy: "Anonymous",
         ajaxWithCredentials: false
-      }
+      };
 
       return (
         <div className="fz-app-container">
@@ -104,10 +105,11 @@ class FZContainer extends Component {
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
+              ref={(ref) => this.openseadragonViewerRef = ref}
               tileSources={tileSources}
               options={{}}
-              viewerId='fz-osd-image-viewer'
-              overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
+              viewerId="fz-osd-image-viewer"
+              overlays={currentZones.map(zone => pointsToNumbers(zone.points))}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
@@ -115,10 +117,11 @@ class FZContainer extends Component {
             <OpenSeadragonViewerOverlay
               tileSources={background}
               options={{}}
-              viewerId='fz-osd-image-overlay-viewer'
-              overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
+              viewerId="fz-osd-image-overlay-viewer"
+              overlays={currentZones.map(zone => pointsToNumbers(zone.points))}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
+              parentRef={this.openseadragonViewerRef}
               rotateCallback={this.updateTextDisplayAngle}
               zones={currentZones}
               diplomaticMode={diplomaticMode}
@@ -132,10 +135,10 @@ class FZContainer extends Component {
       return (
         <LoaderModal
           active={true}
-          text='Loading XML'
-          className='fz-loading-screen'
+          text="Loading XML"
+          className="fz-loading-screen"
         />
-      )
+      );
     }
   }
 }
@@ -151,12 +154,15 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
-    lockRotation: state.lockRotation,
-  }
+    lockRotation: state.lockRotation
+  };
 }
 
 function mapActionCreatorsToProps(dispatch: Object) {
   return bindActionCreators(AppActionCreators, dispatch);
 }
 
-export default connect(mapStateToProps, mapActionCreatorsToProps)(FZContainer);
+export default connect(
+  mapStateToProps,
+  mapActionCreatorsToProps
+)(FZContainer);
