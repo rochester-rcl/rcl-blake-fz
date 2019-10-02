@@ -185,7 +185,7 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer.addOverlay({
       element: this.viewerOverlay,
       location: new OpenSeadragon.Rect(0, 0, 1, 1),
-      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
+      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT
     });
     this.fitFont(1.0);
   }
@@ -207,11 +207,11 @@ export default class OpenSeadragonViewer extends Component {
 
   fitFont(zoom: Number) {
     const { parentRef } = this.props;
-    const { offsetWidth } = this.viewerOverlay
+    const { offsetWidth } = this.viewerOverlay;
     const viewportWidth = document.body.offsetWidth;
     for (let key in this.zoneRefs) {
       const elem = this.zoneRefs[key].zoneRef;
-      elem.style.fontSize = (offsetWidth / viewportWidth) * 1.5 + 'vw';
+      elem.style.fontSize = (offsetWidth / viewportWidth) * 1.5 + "vw";
     }
 
     // this.viewerOverlay.style.fontSize = (offsetWidth / viewportWidth) + 'vw';
@@ -299,8 +299,8 @@ export default class OpenSeadragonViewer extends Component {
     const { lockRotation, diplomaticMode } = this.props;
     const { points } = zone;
     const roi = pointsToNumbers(points);
-    const [x, y] = roi;
     const rect = this.viewport.imageToViewportRectangle(...roi);
+    const pixels = this.viewport.viewportToViewerElementRectangle(rect);
     const zoneStyle = {
       position: "absolute",
       left: Math.floor(rect.x * 100).toString() + "%",
@@ -309,7 +309,7 @@ export default class OpenSeadragonViewer extends Component {
       height: Math.floor(rect.height * 100).toString() + "%",
       fontSize: "12px"
     };
-    return (
+    /*return (
       <FZZoneView
         style={zoneStyle}
         key={index}
@@ -318,6 +318,35 @@ export default class OpenSeadragonViewer extends Component {
         diplomaticMode={diplomaticMode}
         zone={zone}
       />
+    );*/
+    return (
+      <g
+        x={zoneStyle.left}
+        y={zoneStyle.top}
+        width={zoneStyle.width}
+        height={zoneStyle.height}
+      >
+        <rect
+          className="zone-rect"
+          x={zoneStyle.left}
+          y={zoneStyle.top}
+          width={zoneStyle.width}
+          height={zoneStyle.height}
+        />
+        <text
+          x={zoneStyle.left}
+          y={zoneStyle.top}
+          width={zoneStyle.width}
+          height={zoneStyle.height}
+        >
+          <tspan className="svg-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
+          </tspan>
+          <tspan className="svg-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
+          </tspan>
+        </text>
+      </g>
     );
   }
 
@@ -359,9 +388,9 @@ export default class OpenSeadragonViewer extends Component {
           className="osd-viewer-overlay"
         >
           <div className="fz-text-view">
-            <div className={baseClass} style={rotate}>
+            <svg viewBox="0 0 100 100" className={baseClass} style={rotate}>
               {sortedZones.map(this.renderZone)}
-            </div>
+            </svg>
           </div>
         </div>
       </div>
