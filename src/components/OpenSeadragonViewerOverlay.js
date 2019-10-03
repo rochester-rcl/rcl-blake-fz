@@ -339,11 +339,17 @@ export default class OpenSeadragonViewer extends Component {
           width={zoneStyle.width}
           height={zoneStyle.height}
         >
-          <tspan className="svg-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
+          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
+            Hi
           </tspan>
-          <tspan className="svg-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
+          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
+            Hello
+          </tspan>
+          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
+            Hi
+          </tspan>
+          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
+            Hello
           </tspan>
         </text>
       </g>
