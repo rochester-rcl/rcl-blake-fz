@@ -1,0 +1,10 @@
+.zone-rect {
+    stroke:#E9BC47;
+    stroke-width: 0.5px;
+    fill: none;
+}
+
+.svg-text {
+    font-size: 4px;
+    fill: #fff;
+}
