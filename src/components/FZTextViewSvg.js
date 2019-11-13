@@ -254,9 +254,9 @@ export class FZZoneView extends Component {
       expandStages,
       diplomaticMode,
       lockRotation,
+      svgRef,
       style
     } = this.props;
-
     if (zone.lineGroups.length > 0) {
       return (
         <g

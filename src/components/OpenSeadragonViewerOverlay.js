@@ -59,6 +59,7 @@ export default class OpenSeadragonViewer extends Component {
     this.updateZoneRefs = this.updateZoneRefs.bind(this);
     this.bounds = [];
     this.zoneRefs = {};
+    this.svgRef = null;
   }
 
   componentDidMount() {
@@ -314,6 +315,7 @@ export default class OpenSeadragonViewer extends Component {
         style={zoneStyle}
         key={index}
         ref={ref => this.setZoneRefs(ref, zone.type)}
+        svgRef={this.svgRef}
         lockRotation={lockRotation}
         diplomaticMode={diplomaticMode}
         zone={zone}
@@ -359,7 +361,7 @@ export default class OpenSeadragonViewer extends Component {
           className="osd-viewer-overlay"
         >
           <div className="fz-text-view">
-            <svg viewBox="0 0 100 100" className={baseClass} style={rotate}>
+            <svg ref={(r) => this.svgRef = r} viewBox="0 0 100 100" className={baseClass} style={rotate}>
               {sortedZones.map(this.renderZone)}
             </svg>
           </div>
