@@ -154,12 +154,49 @@ const FZStage = (props: Object) => {
 };
 
 export class FZZoneView extends Component {
+  state = { fontSize: 10 };
   constructor(props: Object) {
     super(props);
     this.renderVSpace = this.renderVSpace.bind(this);
     this.FZLineGroupView = this.FZLineGroupView.bind(this);
     this.FZDiplomaticView = this.FZDiplomaticView.bind(this);
     this.renderLine = this.renderLine.bind(this);
+    this.fontSize = 10;
+  }
+
+  componentDidMount() {
+    if (this.rectRef) {
+        console.log(this.rectRef);
+        console.log(window.getComputedStyle(this.rectRef).getPropertyValue("font-size"));
+      this.calculateFontSize(this.rectRef.getBoundingClientRect());
+    }
+  }
+
+  calculateFontSize(rect) {
+    const { zone } = this.props;
+    let defaultFontSize = window.getComputedStyle(this.rectRef).getPropertyValue("font-size").split("px")[0];
+    let longestLine = 0;
+    zone.lineGroups.forEach(lg => {
+      let lineCount = this.calculateLongestLine(lg);
+      if (lineCount > longestLine) longestLine = lineCount;
+    });
+    let longestLinePixels = longestLine * defaultFontSize;
+    this.setState({
+      fontSize: Math.ceil(longestLinePixels / rect.width)
+    });
+  }
+
+  calculateLongestLine(lg) {
+    let longestLine = 0;
+    lg.lines.forEach(line => {
+      let lineCount = line.diplomatic.reduce((a, b) => {
+        if (typeof b === "string") {
+          return a + b.length;
+        }
+      }, 0);
+      if (lineCount > longestLine) longestLine = lineCount;
+    });
+    return longestLine;
   }
 
   renderVSpace(vSpaceExtent: number) {
@@ -238,7 +275,6 @@ export class FZZoneView extends Component {
 
   FZDiplomaticView(props: Object) {
     const { diplomatic, indent, style } = props;
-    console.log(diplomatic);
     return diplomatic.map(val => (
       <tspan x={style.left} dy="1em" className="svg-text">
         {typeof val === "string" ? val : null}
@@ -254,7 +290,6 @@ export class FZZoneView extends Component {
       expandStages,
       diplomaticMode,
       lockRotation,
-      svgRef,
       style
     } = this.props;
     if (zone.lineGroups.length > 0) {
@@ -266,6 +301,7 @@ export class FZZoneView extends Component {
           height={style.height}
         >
           <rect
+            ref={ref => (this.rectRef = ref)}
             className="zone-rect"
             x={style.left}
             y={style.top}
@@ -277,6 +313,7 @@ export class FZZoneView extends Component {
             y={style.top}
             width={style.width}
             height={style.height}
+            fontSize={this.state.fontSize}
           >
             {zone.lineGroups.map(lineGroup =>
               this.FZLineGroupView({
