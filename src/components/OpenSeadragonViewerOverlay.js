@@ -16,7 +16,7 @@ import shortid from "shortid";
 import { getBounds, pointsToNumbers } from "../utils/data-utils";
 
 // Components
-import { FZZoneView } from "./FZTextView";
+import { FZZoneView } from "./FZTextViewSvg";
 
 const ZONE_MAP = {
   left: 0,
@@ -206,13 +206,13 @@ export default class OpenSeadragonViewer extends Component {
   updateDynamicFontInfo() {}
 
   fitFont(zoom: Number) {
-    const { parentRef } = this.props;
+    /*const { parentRef } = this.props;
     const { offsetWidth } = this.viewerOverlay;
     const viewportWidth = document.body.offsetWidth;
     for (let key in this.zoneRefs) {
       const elem = this.zoneRefs[key].zoneRef;
       elem.style.fontSize = (offsetWidth / viewportWidth) * 1.5 + "vw";
-    }
+    }*/
 
     // this.viewerOverlay.style.fontSize = (offsetWidth / viewportWidth) + 'vw';
     /*for (let key in this.zoneRefs) {
@@ -309,7 +309,7 @@ export default class OpenSeadragonViewer extends Component {
       height: Math.floor(rect.height * 100).toString() + "%",
       fontSize: "12px"
     };
-    /*return (
+    return (
       <FZZoneView
         style={zoneStyle}
         key={index}
@@ -318,41 +318,6 @@ export default class OpenSeadragonViewer extends Component {
         diplomaticMode={diplomaticMode}
         zone={zone}
       />
-    );*/
-    return (
-      <g
-        x={zoneStyle.left}
-        y={zoneStyle.top}
-        width={zoneStyle.width}
-        height={zoneStyle.height}
-      >
-        <rect
-          className="zone-rect"
-          x={zoneStyle.left}
-          y={zoneStyle.top}
-          width={zoneStyle.width}
-          height={zoneStyle.height}
-        />
-        <text
-          x={zoneStyle.left}
-          y={zoneStyle.top}
-          width={zoneStyle.width}
-          height={zoneStyle.height}
-        >
-          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
-            Hi
-          </tspan>
-          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
-            Hello
-          </tspan>
-          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
-            Hi
-          </tspan>
-          <tspan x={zoneStyle.left} dy="1em" className="svg-text">
-            Hello
-          </tspan>
-        </text>
-      </g>
     );
   }
 
