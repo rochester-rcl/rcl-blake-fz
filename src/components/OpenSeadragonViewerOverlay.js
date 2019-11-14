@@ -313,7 +313,7 @@ export default class OpenSeadragonViewer extends Component {
     return (
       <FZZoneView
         style={zoneStyle}
-        key={index}
+        key={zone.type}
         ref={ref => this.setZoneRefs(ref, zone.type)}
         lockRotation={lockRotation}
         diplomaticMode={diplomaticMode}

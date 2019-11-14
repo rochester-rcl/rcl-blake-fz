@@ -154,7 +154,7 @@ const FZStage = (props: Object) => {
 };
 
 export class FZZoneView extends Component {
-  state = { fontSize: 10 };
+  state = { fontSize: null };
   constructor(props: Object) {
     super(props);
     this.renderVSpace = this.renderVSpace.bind(this);
@@ -166,15 +166,13 @@ export class FZZoneView extends Component {
 
   componentDidMount() {
     if (this.rectRef) {
-        console.log(this.rectRef);
-        console.log(window.getComputedStyle(this.rectRef).getPropertyValue("font-size"));
       this.calculateFontSize(this.rectRef.getBoundingClientRect());
     }
   }
 
   calculateFontSize(rect) {
     const { zone } = this.props;
-    let defaultFontSize = window.getComputedStyle(this.rectRef).getPropertyValue("font-size").split("px")[0];
+    let defaultFontSize = parseInt(window.getComputedStyle(this.rectRef).getPropertyValue("font-size").split("px")[0], 10);
     let longestLine = 0;
     let lineId = null;
     zone.lineGroups.forEach(lg => {
@@ -186,10 +184,10 @@ export class FZZoneView extends Component {
     });
     const clientLineWidth = document.getElementById(lineId).getBoundingClientRect().width;
     const clientLineFontSize = clientLineWidth / longestLine;
-    const longestLinePixels = longestLine * defaultFontSize;
+    const targetFontSize = rect.width / longestLine;
     const sf = defaultFontSize / clientLineFontSize;
     this.setState({
-      fontSize: Math.floor(defaultFontSize * sf)
+      fontSize: (targetFontSize / defaultFontSize) * sf
     });
   }
 
@@ -303,6 +301,8 @@ export class FZZoneView extends Component {
       lockRotation,
       style
     } = this.props;
+    const { fontSize } = this.state;
+    console.log(fontSize);
     if (zone.lineGroups.length > 0) {
       return (
         <g
@@ -324,7 +324,7 @@ export class FZZoneView extends Component {
             y={style.top}
             width={style.width}
             height={style.height}
-            fontSize={this.state.fontSize}
+            fontSize={fontSize ? `${fontSize}em` : 'inherit'}
           >
             {zone.lineGroups.map(lineGroup =>
               this.FZLineGroupView({
