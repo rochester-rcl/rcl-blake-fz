@@ -176,27 +176,38 @@ export class FZZoneView extends Component {
     const { zone } = this.props;
     let defaultFontSize = window.getComputedStyle(this.rectRef).getPropertyValue("font-size").split("px")[0];
     let longestLine = 0;
+    let lineId = null;
     zone.lineGroups.forEach(lg => {
-      let lineCount = this.calculateLongestLine(lg);
-      if (lineCount > longestLine) longestLine = lineCount;
+      let lineInfo = this.calculateLongestLine(lg);
+      if (lineInfo.count > longestLine) {
+        longestLine = lineInfo.count;
+        lineId = lineInfo.id;
+      }
     });
-    let longestLinePixels = longestLine * defaultFontSize;
+    const clientLineWidth = document.getElementById(lineId).getBoundingClientRect().width;
+    const clientLineFontSize = clientLineWidth / longestLine;
+    const longestLinePixels = longestLine * defaultFontSize;
+    const sf = defaultFontSize / clientLineFontSize;
     this.setState({
-      fontSize: Math.ceil(longestLinePixels / rect.width)
+      fontSize: Math.floor(defaultFontSize * sf)
     });
   }
 
   calculateLongestLine(lg) {
     let longestLine = 0;
+    let lineId = null;
     lg.lines.forEach(line => {
       let lineCount = line.diplomatic.reduce((a, b) => {
         if (typeof b === "string") {
           return a + b.length;
         }
       }, 0);
-      if (lineCount > longestLine) longestLine = lineCount;
+      if (lineCount > longestLine) {
+        longestLine = lineCount;
+        lineId = line.id;
+      }
     });
-    return longestLine;
+    return { id: lineId, count: longestLine };
   }
 
   renderVSpace(vSpaceExtent: number) {
@@ -274,9 +285,9 @@ export class FZZoneView extends Component {
   }
 
   FZDiplomaticView(props: Object) {
-    const { diplomatic, indent, style } = props;
-    return diplomatic.map(val => (
-      <tspan x={style.left} dy="1em" className="svg-text">
+    const { diplomatic, indent, style, key } = props;
+    return diplomatic.map((val, index) => (
+      <tspan id={key} x={style.left} key={key + index} dy="1em" className="svg-text">
         {typeof val === "string" ? val : null}
       </tspan>
     ));
