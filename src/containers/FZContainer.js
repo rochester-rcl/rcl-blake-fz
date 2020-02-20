@@ -24,7 +24,7 @@ import { Divider } from "semantic-ui-react";
 import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
 import createBackground from "../utils/image";
 
-const xml = "/BB209.1.xml";
+const xml = "/BB749.1.ms.xml";
 
 const background = {
   type: "image",

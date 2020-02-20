@@ -172,7 +172,13 @@ export class FZZoneView extends Component {
 
   calculateFontSize(rect) {
     const { zone } = this.props;
-    let defaultFontSize = parseInt(window.getComputedStyle(this.rectRef).getPropertyValue("font-size").split("px")[0], 10);
+    let defaultFontSize = parseInt(
+      window
+        .getComputedStyle(this.rectRef)
+        .getPropertyValue("font-size")
+        .split("px")[0],
+      10
+    );
     let longestLine = 0;
     let lineId = null;
     zone.lineGroups.forEach(lg => {
@@ -182,7 +188,9 @@ export class FZZoneView extends Component {
         lineId = lineInfo.id;
       }
     });
-    const clientLineWidth = document.getElementById(lineId).getBoundingClientRect().width;
+    const clientLineWidth = document
+      .getElementById(lineId)
+      .getBoundingClientRect().width;
     const clientLineFontSize = clientLineWidth / longestLine;
     const targetFontSize = rect.width / longestLine;
     const sf = defaultFontSize / clientLineFontSize;
@@ -249,7 +257,7 @@ export class FZZoneView extends Component {
           return GAP_SIZE.repeat(Number(line.attributes.indent));
         }
 
-        if (line.diplomatic.attributes) {
+        if (line.diplomatic && line.diplomatic.attributes) {
           return GAP_SIZE.repeat(Number(line.diplomatic.attributes.indent));
         }
 
@@ -257,17 +265,33 @@ export class FZZoneView extends Component {
       }
     };
     let _indent;
-    let diplomaticIndent = line.diplomatic.find(element => {
-      return element.hasOwnProperty("indent") === true;
-    });
-    let stageIndent = line.stage.indent !== undefined;
-    if (diplomaticIndent) {
-      _indent = GAP_SIZE.repeat(Number(diplomaticIndent.indent));
+    let rawIndent;
+    if (line.diplomatic) {
+      const i = line.diplomatic.find(element => {
+        return element.hasOwnProperty("indent") === true;
+      });
+      if (i) {
+        rawIndent = i.indent;
+      }
+    } else {
+      rawIndent = line.attributes.indent;
+    }
+
+    let stageIndent =
+      line.stage !== undefined && line.stage.indent !== undefined;
+    if (rawIndent) {
+      _indent = GAP_SIZE.repeat(Number(rawIndent));
     } else if (stageIndent) {
       _indent = GAP_SIZE.repeat(Number(line.stage.indent));
     } else {
       _indent = indent(line);
     }
+    const lineProps = {
+      key: line.id,
+      keyVal: line.id,
+      indent: indent,
+      style: style
+    };
     const diplomaticProps = {
       key: line.id,
       keyVal: line.id,
@@ -275,17 +299,42 @@ export class FZZoneView extends Component {
       indent: indent,
       style: style
     };
-    return mode ? (
-      this.FZDiplomaticView(diplomaticProps)
-    ) : (
-      <FZStageView key={line.id} stages={line.stage.content} indent={_indent} />
+    if (line.diplomatic) {
+      lineProps.diplomatic = line.diplomatic;
+      return mode ? (
+        this.FZDiplomaticView(lineProps)
+      ) : (
+        <FZStageView
+          key={line.id}
+          stages={line.stage.content}
+          indent={_indent}
+        />
+      );
+    } else {
+      lineProps.content = line.content;
+      return this.FZLineView(lineProps);
+    }
+  }
+
+  FZLineView(props) {
+    const { key, style, indent, content } = props;
+    return (
+      <tspan id={key} x={style.left} key={key} dy="1em" className="svg-text">
+        {typeof content === "string" ? content : null}
+      </tspan>
     );
   }
 
   FZDiplomaticView(props: Object) {
     const { diplomatic, indent, style, key } = props;
     return diplomatic.map((val, index) => (
-      <tspan id={key} x={style.left} key={key + index} dy="1em" className="svg-text">
+      <tspan
+        id={key}
+        x={style.left}
+        key={key + index}
+        dy="1em"
+        className="svg-text"
+      >
         {typeof val === "string" ? val : null}
       </tspan>
     ));
@@ -324,7 +373,7 @@ export class FZZoneView extends Component {
             y={style.top}
             width={style.width}
             height={style.height}
-            fontSize={fontSize ? `${fontSize}em` : 'inherit'}
+            fontSize={fontSize ? `${fontSize}em` : "inherit"}
           >
             {zone.lineGroups.map(lineGroup =>
               this.FZLineGroupView({
