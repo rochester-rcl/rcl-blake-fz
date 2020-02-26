@@ -92,12 +92,33 @@ const formatLineGroup = (lg: Object, zone: Object) => {
     : null;
 };
 
-export const normalizeZone = (zone: Object): Object => {
+export const normalizeZone = (zone): Object => {
+  if (zone) {
+    let zoneName;
+    if (zone.constructor === Array) {
+      return {
+        ...zone.reduce((a, b) => {
+          const key = b.attributes ? b.attributes.type : null;
+          if (key) {
+            a[key] = normalizeZone(b);
+          }
+          return a;
+        }, {})
+      };
+    } else {
+      zoneName = zone.attributes.type;
+      return formatZone(zone, zoneName);
+    }
+  }
+};
+
+const formatZone = zone => {
   return {
     // Need to somehow put vspace into linegroups array
     id: shortid.generate(),
     points: zone.attributes ? zone.attributes.points : "",
     type: zone.attributes ? zone.attributes.type : null,
+    zones: zone.zones ? zone.zones : [],
     columns: {
       cols:
         zone.columns !== undefined
@@ -140,10 +161,32 @@ export const flattenZones = (pageObjects: Array<Object>): Object => {
   let zones = [];
   pageObjects.forEach(page => {
     page.surface.zone.forEach(zone => {
+      if (zone.zones) {
+        zones.concat(reduceNestedZones(zone));
+      }
       zones.push(zone);
     });
   });
+  console.log(zones);
   return flatten(zones);
+};
+
+const reduceNestedZones = zone => {
+  const processZones = zones => {
+    return zones.reduce((a, b) => {
+      if (b.zone && b.zone.zones) {
+        a.concat(reduceNestedZones(b.zone.zones));
+      } else {
+        a.concat(b.zone);
+      }
+      return a;
+    }, []);
+  };
+  if (zone && zone.zones) {
+    return processZones(zone.zones);
+  } else {
+    return [zone];
+  }
 };
 
 const flatten = (dataArray: Array<Object>): Object => {
