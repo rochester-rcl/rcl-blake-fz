@@ -41,7 +41,10 @@ function xmlToJson(xml) {
         obj["children"] = elements;
       }
       if (nodeName === "zone") {
-        formatZone(xml, obj);
+        // child zones get processed recursively in formatZone
+        if (xml.parentNode.nodeName !== "zone") {
+          formatZone(xml, obj);
+        }
       } else if (xml.attributes.length > 0) {
         obj["attributes"] = {};
         for (var j = 0; j < xml.attributes.length; j++) {
@@ -128,7 +131,7 @@ function xmlToJson(xml) {
     obj.nodeType = "handShift";
   }
 
-  if (obj.nodeType === "zone") {
+  if (obj.nodeType === "zone" && obj.zone) {
     obj = obj.zone;
     obj.nodeType = "zone";
   }
@@ -167,6 +170,7 @@ export function fetchXML(xmlPath) {
 function formatZone(xml, obj) {
   let elements = [];
   const nodeName = "zone";
+  obj[nodeName] = {};
   let lg = [];
   const zones = [];
   let columns;
@@ -194,16 +198,16 @@ function formatZone(xml, obj) {
         }
       }
       if (child.nodeName === "zone") {
-        const zone = {};
-        formatZone(child, zone);
+        const z = {};
+        formatZone(child, z);
+        const { zone } = z;
         zones.push(zone);
       }
+      obj[nodeName].zones = zones;
     });
   }
-  obj[nodeName] = {};
   obj[nodeName].lg = lg;
   obj[nodeName].columns = columns;
-  obj[nodeName].zones = zones;
   if (xml.attributes) {
     let attributes = {};
     for (var j = 0; j < xml.attributes.length; j++) {

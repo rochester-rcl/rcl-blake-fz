@@ -47,15 +47,19 @@ export default function appReducer(
           pageNo: index,
           pageDisplayNo: index + 1,
           surface: {
-            zone: pageObj.phystext.surface.zone.map(zone =>
-              normalizeZone(zone)
-            ),
+            zone: pageObj.phystext.surface.zone
+              .filter(zone => {
+                if (zone.constructor === Array) {
+                  return zone.some((z) => z.attributes !== undefined);
+                }
+                return zone.attributes !== undefined;
+              })
+              .map(zone => normalizeZone(zone)),
             points: pageObj.phystext.surface.attributes.points
           }
         };
       });
       let currentPage = pageObjects[0];
-      let currentZoneIds = currentPage.surface.zone.map(zone => zone.id);
       let zones = flattenZones(pageObjects);
       return {
         ...state,

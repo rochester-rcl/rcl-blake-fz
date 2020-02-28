@@ -94,20 +94,10 @@ const formatLineGroup = (lg: Object, zone: Object) => {
 
 export const normalizeZone = (zone): Object => {
   if (zone) {
-    let zoneName;
     if (zone.constructor === Array) {
-      return {
-        ...zone.reduce((a, b) => {
-          const key = b.attributes ? b.attributes.type : null;
-          if (key) {
-            a[key] = normalizeZone(b);
-          }
-          return a;
-        }, {})
-      };
+      return zone.map(formatZone);
     } else {
-      zoneName = zone.attributes.type;
-      return formatZone(zone, zoneName);
+      return formatZone(zone);
     }
   }
 };
@@ -119,6 +109,7 @@ const formatZone = zone => {
     points: zone.attributes ? zone.attributes.points : "",
     type: zone.attributes ? zone.attributes.type : null,
     zones: zone.zones ? zone.zones : [],
+    attributes: zone.attributes,
     columns: {
       cols:
         zone.columns !== undefined
@@ -160,30 +151,60 @@ const formatZone = zone => {
 export const flattenZones = (pageObjects: Array<Object>): Object => {
   let zones = [];
   pageObjects.forEach(page => {
+    walkZones(page.surface.zone);
     page.surface.zone.forEach(zone => {
+      if (zone.constructor === Array) {
+        zones.concat(zones.map(z => reduceNestedZones(zone)));
+      }
       if (zone.zones) {
-        zones.concat(reduceNestedZones(zone));
+        zones.concat(zone.zones.map(z => reduceNestedZones(z)));
       }
       zones.push(zone);
     });
   });
-  console.log(zones);
   return flatten(zones);
 };
 
+const walkZones = zone => {
+  const z = [];
+  const walk = (_zone, parent) => {
+    if (_zone.constructor === Array) {
+      _zone.map(_z => walk(_z));
+    } else {
+      const { zones, ...rest } = _zone;
+      if (zones) {
+        const cloned = [...zones];
+        cloned.map(_z => {
+          const at = _zone.attributes ? _zone.attributes.type : "";
+          walk(_z, at);
+        });
+      }
+      if (rest.attributes) {
+        if (parent) {
+          rest.attributes.type = `${parent}--${rest.attributes.type}`;
+        }
+        z.push(rest);
+      }
+    }
+  };
+  walk(zone);
+  console.log(z);
+};
+
 const reduceNestedZones = zone => {
-  const processZones = zones => {
+  const processZones = (zones, parent) => {
     return zones.reduce((a, b) => {
       if (b.zone && b.zone.zones) {
         a.concat(reduceNestedZones(b.zone.zones));
       } else {
+        b.zone.attributes.type = parent + b.zone.attributes.type;
         a.concat(b.zone);
       }
       return a;
     }, []);
   };
   if (zone && zone.zones) {
-    return processZones(zone.zones);
+    return processZones(zone.zones, zone.type);
   } else {
     return [zone];
   }
