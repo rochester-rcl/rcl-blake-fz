@@ -188,7 +188,6 @@ const walkZones = zone => {
     }
   };
   walk(zone);
-  console.log(z);
 };
 
 const reduceNestedZones = zone => {
