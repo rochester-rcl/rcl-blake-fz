@@ -84,7 +84,7 @@ class FZContainer extends Component {
         crossOriginPolicy: "Anonymous",
         ajaxWithCredentials: false
       };
-
+      
       return (
         <div className="fz-app-container">
           <FZNavigation

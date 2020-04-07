@@ -98,7 +98,7 @@ export default function appReducer(
     case "CURRENT_ZONES_SET":
       return {
         ...state,
-        currentZones: setZones(action.zoneIds, state.zones),
+        currentZones: setZones(action.zoneIds, state.zones, state.currentPage.pageNo),
       };
     // These aren't handled via a saga because they're so simple
     case "TOGGLE_ZOOM_TO_ZONE":

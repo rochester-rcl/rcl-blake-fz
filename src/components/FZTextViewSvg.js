@@ -351,7 +351,6 @@ export class FZZoneView extends Component {
       style
     } = this.props;
     const { fontSize } = this.state;
-    console.log(fontSize);
     if (zone.lineGroups.length > 0) {
       return (
         <g

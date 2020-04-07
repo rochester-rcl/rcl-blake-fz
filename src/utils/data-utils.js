@@ -151,18 +151,20 @@ const formatZone = (zone) => {
 export const flattenZones = (pageObjects: Array<Object>): Object => {
   let zones = [];
   pageObjects.forEach((page, index) => {
-    const _z = [];
+    zones[index] = [];
     walkZones(page.surface.zone);
     page.surface.zone.forEach((zone) => {
       if (zone.constructor === Array) {
-        zones[index] = _z.concat(zone.map((z) => reduceNestedZones(z)));
+        zones[index].concat(zone.map((z) => reduceNestedZones(z)));
       }
       if (zone.zones) {
-        zones[index] = _z.concat(zone.zones.map((z) => reduceNestedZones(z)));
+        zones[index].push(reduceNestedZones(zone.zones));        
+      } else {
+        zones[index].push(zone);
       }
-      zones[index].push(zone);
     });
   });
+  console.log(zones[6]);
   return flatten(zones);
 };
 
@@ -226,8 +228,13 @@ const flatten = (dataArray: Array<Object>): Object => {
           let { id, zones, ...rest } = data;
           if (!id) {
             id = shortid.generate();
-            if (!rest.type && rest.attributes) {
-              rest.type = rest.attributes.type;
+            if (rest.attributes) {
+              if (rest.attributes.type) {
+                rest.type = rest.attributes.type;
+              }
+              if (rest.attributes.points) {
+                rest.points = rest.attributes.points;
+              }
             }
           }
           rest.id = id;
@@ -244,12 +251,13 @@ const flatten = (dataArray: Array<Object>): Object => {
 
 export const setZones = (
   zoneIds: Array<string>,
-  zones: Object
+  zones: Object,
+  index
 ): Array<Object> => {
   let currentZones = [];
   zoneIds.forEach((id) => {
-    if (zones[id]) {
-      currentZones.push(zones[id]);
+    if (zones[index][id]) {
+      currentZones.push(zones[index][id]);
     }
   });
   return currentZones;
@@ -258,6 +266,7 @@ export const setZones = (
 // TODO figure out how to work with polygons
 
 export const pointsToNumbers = (points: string): Array<Number> => {
+  console.log(points);
   let coords = points.split(" ");
   let usefulPoints = [coords[2], coords[0]]
     .map((pixel) => {
