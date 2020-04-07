@@ -51,7 +51,6 @@ export default class FZNavigation extends Component {
     }
 
     handleLockRotation(event: typeof SyntheticEvent): void {
-      console.log(this.props.lockRotation);
       this.props.toggleLockRotationAction(!this.props.lockRotation);
     }
 
@@ -71,7 +70,6 @@ export default class FZNavigation extends Component {
         lockRotation,
         diplomaticMode,
       } = this.props;
-
       let controls = [
         {
           className: 'fz-main-menu-button',
@@ -114,7 +112,6 @@ export default class FZNavigation extends Component {
           disabled: false,
         },
       ];
-
       return(
         <div className='fz-main-menu'>
           {controls.map((menuItem, index) =>

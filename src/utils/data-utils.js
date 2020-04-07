@@ -13,7 +13,7 @@ const CLASSES = {
   gap: "tei-gap",
   cancellation_wash: "tei-gap-cancellation",
   erasure: "tei-gap",
-  default: ""
+  default: "",
 };
 
 export const formatImageURL = (imageID: string): string => {
@@ -43,7 +43,7 @@ const formatLineGroup = (lg: Object, zone: Object) => {
         const lineInfo = {
           id: shortid.generate(),
           zoneId: zone.id,
-          attributes: line.attributes
+          attributes: line.attributes,
         };
         if (line.diplomatic) {
           return {
@@ -79,13 +79,13 @@ const formatLineGroup = (lg: Object, zone: Object) => {
               type: stage.attributes ? stage.attributes.type : null,
               ...rest,
             }
-          }) : null*/
-            }
+          }) : null*/,
+            },
           };
         } else {
           return {
             ...lineInfo,
-            content: line["#text"]
+            content: line["#text"],
           };
         }
       })
@@ -102,7 +102,7 @@ export const normalizeZone = (zone): Object => {
   }
 };
 
-const formatZone = zone => {
+const formatZone = (zone) => {
   return {
     // Need to somehow put vspace into linegroups array
     id: shortid.generate(),
@@ -113,113 +113,133 @@ const formatZone = zone => {
     columns: {
       cols:
         zone.columns !== undefined
-          ? zone.columns.map(column => {
+          ? zone.columns.map((column) => {
               return {
                 column: {
                   orient: column.orient,
-                  lineGroups: column.lineGroups.map(lg => {
+                  lineGroups: column.lineGroups.map((lg) => {
                     return {
                       id: shortid.generate(),
                       zoneId: zone.id,
                       attributes: lg.attributes,
                       nodeType: lg.nodeType,
                       vspaceExtent: lg.vspaceExtent,
-                      lines: formatLineGroup(lg, zone)
+                      lines: formatLineGroup(lg, zone),
                     };
-                  })
-                }
+                  }),
+                },
               };
             })
           : null,
-      orient: zone.columns !== undefined ? zone.columns.orient : undefined
+      orient: zone.columns !== undefined ? zone.columns.orient : undefined,
     },
     lineGroups: forceArray(zone.lg)
-      ? forceArray(zone.lg).map(lg => {
+      ? forceArray(zone.lg).map((lg) => {
           return {
             id: shortid.generate(),
             zoneId: zone.id,
             attributes: lg.attributes,
             nodeType: lg.nodeType,
             vspaceExtent: lg.vspaceExtent,
-            lines: formatLineGroup(lg, zone)
+            lines: formatLineGroup(lg, zone),
           };
         })
-      : null
+      : null,
   };
 };
 
 export const flattenZones = (pageObjects: Array<Object>): Object => {
   let zones = [];
-  pageObjects.forEach(page => {
+  pageObjects.forEach((page, index) => {
+    const _z = [];
     walkZones(page.surface.zone);
-    page.surface.zone.forEach(zone => {
+    page.surface.zone.forEach((zone) => {
       if (zone.constructor === Array) {
-        zones.concat(zones.map(z => reduceNestedZones(zone)));
+        zones[index] = _z.concat(zone.map((z) => reduceNestedZones(z)));
       }
       if (zone.zones) {
-        zones.concat(zone.zones.map(z => reduceNestedZones(z)));
+        zones[index] = _z.concat(zone.zones.map((z) => reduceNestedZones(z)));
       }
-      zones.push(zone);
+      zones[index].push(zone);
     });
   });
   return flatten(zones);
 };
 
-const walkZones = zone => {
+const walkZones = (zone) => {
   const z = [];
   const walk = (_zone, parent) => {
     if (_zone.constructor === Array) {
-      _zone.map(_z => walk(_z));
+      _zone.map((_z) => walk(_z));
     } else {
       const { zones, ...rest } = _zone;
-      if (zones) {
-        const cloned = [...zones];
-        cloned.map(_z => {
-          const at = _zone.attributes ? _zone.attributes.type : "";
-          walk(_z, at);
-        });
-      }
       if (rest.attributes) {
         if (parent) {
           rest.attributes.type = `${parent}--${rest.attributes.type}`;
         }
         z.push(rest);
       }
+      if (zones) {
+        zones.map((_z) => {
+          const at = _zone.attributes ? _zone.attributes.type : "";
+          walk(_z, at);
+        });
+      }
     }
   };
   walk(zone);
 };
 
-const reduceNestedZones = zone => {
-  const processZones = (zones, parent) => {
+const reduceNestedZones = (zone) => {
+  const processZones = (zones) => {
     return zones.reduce((a, b) => {
       if (b.zone && b.zone.zones) {
         a.concat(reduceNestedZones(b.zone.zones));
       } else {
-        b.zone.attributes.type = parent + b.zone.attributes.type;
-        a.concat(b.zone);
+        if (b.zone) {
+          // b.zone.attributes.type = parent + b.zone.attributes.type;
+          a.concat(b.zone);
+        }
       }
       return a;
     }, []);
   };
   if (zone && zone.zones) {
-    return processZones(zone.zones, zone.type);
+    return processZones(zone.zones);
   } else {
     return [zone];
   }
 };
 
 const flatten = (dataArray: Array<Object>): Object => {
-  let flattened = {};
-  const arr = dataArray.filter(
-    zone => zone.points !== undefined && zone.points !== ""
-  );
-  arr.forEach(data => {
-    let { id, ...rest } = data;
-    flattened[id] = rest;
+  const zones = [];
+  dataArray.forEach((page, index) => {
+    let flattened = {};
+    const _flatten = (a) => {
+      a.forEach((data) => {
+        if (data.zones && data.zones.length > 0) {
+          _flatten(data.zones);
+        }
+        if (data.constructor === Array) {
+          _flatten(data);
+        } else {
+          let { id, zones, ...rest } = data;
+          if (!id) {
+            id = shortid.generate();
+            if (!rest.type && rest.attributes) {
+              rest.type = rest.attributes.type;
+            }
+          }
+          rest.id = id;
+          flattened[id] = rest;
+        }
+      });
+    };
+    _flatten(page);
+    // for now filter zones with points to avoid errors
+    zones[index] = flattened;
   });
-  // for now filter zones with points to avoid errors
-  return flattened;
+  return zones;
 };
 
 export const setZones = (
@@ -227,7 +247,7 @@ export const setZones = (
   zones: Object
 ): Array<Object> => {
   let currentZones = [];
-  zoneIds.forEach(id => {
+  zoneIds.forEach((id) => {
     if (zones[id]) {
       currentZones.push(zones[id]);
     }
@@ -240,8 +260,8 @@ export const setZones = (
 export const pointsToNumbers = (points: string): Array<Number> => {
   let coords = points.split(" ");
   let usefulPoints = [coords[2], coords[0]]
-    .map(pixel => {
-      return pixel.split(",").map(pixel => Number(pixel));
+    .map((pixel) => {
+      return pixel.split(",").map((pixel) => Number(pixel));
     })
     .reduce((x, y) => x.concat(y));
   let x = usefulPoints[0];
@@ -277,7 +297,7 @@ export const getBounds = (bounds: Array<Number>): Object => {
     x: minX.x,
     y: minY.y,
     w: getWidth(minX, maxX),
-    h: getHeight(minY, maxY)
+    h: getHeight(minY, maxY),
   };
 };
 
@@ -285,14 +305,14 @@ export function pointsToViewportPercent(
   resolution: Array<Number>
 ): (points: Array<String>) => Array<Number> {
   const [_x, _y] = resolution;
-  return points => {
+  return (points) => {
     let [x, y, w, h] = pointsToNumbers(points);
     console.log(x, y, w, h);
     x /= _x;
     w /= _x;
     y /= _y;
     h /= _y;
-    return [x, y, w, h].map(val => Math.floor(val * 100));
+    return [x, y, w, h].map((val) => Math.floor(val * 100));
   };
 }
 
@@ -314,7 +334,7 @@ export const formatStage = (stage: Object): Object => {
     }
   };
   let className;
-  Object.keys(stage).forEach(stageKey => {
+  Object.keys(stage).forEach((stageKey) => {
     className = handleKey(stage, stageKey);
   });
   return className;
