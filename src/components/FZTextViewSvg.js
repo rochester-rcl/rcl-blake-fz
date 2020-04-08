@@ -166,7 +166,7 @@ export class FZZoneView extends Component {
 
   componentDidMount() {
     if (this.rectRef) {
-      this.calculateFontSize(this.rectRef.getBoundingClientRect());
+      // this.calculateFontSize(this.rectRef.getBoundingClientRect());
     }
   }
 
@@ -181,7 +181,7 @@ export class FZZoneView extends Component {
     );
     let longestLine = 0;
     let lineId = null;
-    zone.lineGroups.forEach(lg => {
+    zone.lg.forEach(lg => {
       let lineInfo = this.calculateLongestLine(lg);
       if (lineInfo.count > longestLine) {
         longestLine = lineInfo.count;
@@ -202,8 +202,10 @@ export class FZZoneView extends Component {
   calculateLongestLine(lg) {
     let longestLine = 0;
     let lineId = null;
-    lg.lines.forEach(line => {
-      let lineCount = line.diplomatic.reduce((a, b) => {
+    lg.l.forEach(line => {
+      const l = line.diplomatic ? line.diplomatic : line;
+      console.log(l);
+      let lineCount = l.reduce((a, b) => {
         if (typeof b === "string") {
           return a + b.length;
         }
@@ -245,7 +247,7 @@ export class FZZoneView extends Component {
     };
     return (
       // TODO deal with rotation here
-      lineGroup.lines.map(line => this.renderLine(diplomaticMode, line))
+      lineGroup.l.map(line => this.renderLine(diplomaticMode, line))
     );
   }
 
@@ -351,7 +353,7 @@ export class FZZoneView extends Component {
       style
     } = this.props;
     const { fontSize } = this.state;
-    if (zone.lineGroups.length > 0) {
+    if (zone.lg.length > 0) {
       return (
         <g
           x={style.left}
@@ -374,7 +376,7 @@ export class FZZoneView extends Component {
             height={style.height}
             fontSize={fontSize ? `${fontSize}em` : "inherit"}
           >
-            {zone.lineGroups.map(lineGroup =>
+            {zone.lg.map(lineGroup =>
               this.FZLineGroupView({
                 key: lineGroup.id,
                 style: style,
@@ -385,7 +387,7 @@ export class FZZoneView extends Component {
           </text>
         </g>
       );
-    } else if (zone.columns) {
+    } else if (zone.columns && zone.columns.cols) {
       let colClass = "fz-text-display-zone-columns ";
       if (zone.columns.orient !== undefined) colClass += zone.columns.orient;
       return (
@@ -393,7 +395,7 @@ export class FZZoneView extends Component {
           <div className={colClass}>
             {zone.columns.cols.map(column => (
               <div className="fz-text-display-zone-column">
-                {column.column.lineGroups.map(lg =>
+                {column.column.lg.map(lg =>
                   this.FZLineGroupView({
                     key: lg.id,
                     lineGroup: lg

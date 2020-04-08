@@ -158,13 +158,12 @@ export const flattenZones = (pageObjects: Array<Object>): Object => {
         zones[index].concat(zone.map((z) => reduceNestedZones(z)));
       }
       if (zone.zones) {
-        zones[index].push(reduceNestedZones(zone.zones));        
+        zones[index].push(reduceNestedZones(zone.zones));
       } else {
         zones[index].push(zone);
       }
     });
   });
-  console.log(zones[6]);
   return flatten(zones);
 };
 
@@ -264,11 +263,11 @@ export const setZones = (
 };
 
 // TODO figure out how to work with polygons
-
+// TODO also return the bounding box as rect coordinates
 export const pointsToNumbers = (points: string): Array<Number> => {
-  console.log(points);
-  let coords = points.split(" ");
-  let usefulPoints = [coords[2], coords[0]]
+  if (points === undefined) return [];
+  const coords = points.split(" ");
+  /*let usefulPoints = [coords[2], coords[0]]
     .map((pixel) => {
       return pixel.split(",").map((pixel) => Number(pixel));
     })
@@ -277,7 +276,10 @@ export const pointsToNumbers = (points: string): Array<Number> => {
   let y = usefulPoints[1];
   let w = usefulPoints[2] - x;
   let h = usefulPoints[3] - y;
-  return [x, y, w, h];
+  return [x, y, w, h];*/
+  return coords
+    .map((coord) => coord.split(",").map(val => parseInt(val, 10)));
+    // .reduce((a, b) => a.concat(parseInt(b, 10)), []);
 };
 
 export const getBounds = (bounds: Array<Number>): Object => {

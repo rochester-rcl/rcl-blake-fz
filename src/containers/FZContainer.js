@@ -109,7 +109,7 @@ class FZContainer extends Component {
               tileSources={tileSources}
               options={{}}
               viewerId="fz-osd-image-viewer"
-              overlays={currentZones.map(zone => pointsToNumbers(zone.points))}
+              overlays={currentZones.map(zone => zone.points)}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
