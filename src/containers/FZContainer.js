@@ -26,18 +26,27 @@ import createBackground from "../utils/image";
 
 const xml = "/BB749.1.ms.xml";
 
-const background = {
-  type: "image",
-  url: createBackground("#1e1e1e" /*'#ccc'*/, [2575, 3283]),
-  crossOriginPolicy: "Anonymous",
-  ajaxWithCredentials: false
+const getImageDimensions = (url) => {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.src = url;
+    image.addEventListener("load", () => {
+      resolve([image.width, image.height]);
+    });
+  });
 };
 
-const toPercent = pointsToViewportPercent([2575, 3283]);
+const background = {
+  type: "image",
+  url: createBackground("#1e1e1e" /*'#ccc'*/, [100, 100]),
+  crossOriginPolicy: "Anonymous",
+  ajaxWithCredentials: false,
+};
 
 class FZContainer extends Component {
   state = {
-    textDisplayAngle: 0
+    textDisplayAngle: 0,
+    background: background,
   };
   constructor(props: Object) {
     super(props);
@@ -50,8 +59,28 @@ class FZContainer extends Component {
   }
   updateTextDisplayAngle(angle: number): void {
     this.setState({
-      textDisplayAngle: angle
+      textDisplayAngle: angle,
     });
+  }
+
+  componentDidUpdate(prevProps) {
+    const { currentPage } = this.props;
+    if (currentPage && prevProps.currentPage) {
+      if (currentPage.id !== prevProps.currentPage.id) {
+        if (currentPage.imageURL) {
+          getImageDimensions(
+            window.location.href + "/" + currentPage.imageURL
+          ).then((dim) => {
+            this.setState({
+              background: {
+                ...this.state.background,
+                url: createBackground("#1e1e1e", dim),
+              },
+            });
+          });
+        }
+      }
+    }
   }
 
   render() {
@@ -74,7 +103,7 @@ class FZContainer extends Component {
       showZoneROI,
       zoomToZones,
       lockRotation,
-      diplomaticMode
+      diplomaticMode,
     } = this.props;
     const { textDisplayAngle } = this.state;
     if (pageObjects) {
@@ -82,9 +111,8 @@ class FZContainer extends Component {
         type: "image",
         url: window.location.href + "/" + currentPage.imageURL,
         crossOriginPolicy: "Anonymous",
-        ajaxWithCredentials: false
+        ajaxWithCredentials: false,
       };
-      
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -105,20 +133,20 @@ class FZContainer extends Component {
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
-              ref={(ref) => this.openseadragonViewerRef = ref}
+              ref={(ref) => (this.openseadragonViewerRef = ref)}
               tileSources={tileSources}
               options={{}}
               viewerId="fz-osd-image-viewer"
-              overlays={currentZones.map(zone => zone.points)}
+              overlays={currentZones.map((zone) => zone.points)}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
             />
             <OpenSeadragonViewerOverlay
-              tileSources={background}
+              tileSources={this.state.background}
               options={{}}
               viewerId="fz-osd-image-overlay-viewer"
-              overlays={currentZones.map(zone => pointsToNumbers(zone.points))}
+              overlays={currentZones.map((zone) => zone.points)}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               parentRef={this.openseadragonViewerRef}
@@ -154,7 +182,7 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
-    lockRotation: state.lockRotation
+    lockRotation: state.lockRotation,
   };
 }
 
@@ -162,7 +190,4 @@ function mapActionCreatorsToProps(dispatch: Object) {
   return bindActionCreators(AppActionCreators, dispatch);
 }
 
-export default connect(
-  mapStateToProps,
-  mapActionCreatorsToProps
-)(FZContainer);
+export default connect(mapStateToProps, mapActionCreatorsToProps)(FZContainer);

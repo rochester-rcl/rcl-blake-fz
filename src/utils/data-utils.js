@@ -176,7 +176,7 @@ const walkZones = (zone) => {
       const { zones, ...rest } = _zone;
       if (rest.attributes) {
         if (parent) {
-          rest.attributes.type = `${parent}--${rest.attributes.type}`;
+          rest.attributes.type = `${parent} / ${rest.attributes.type}`;
         }
         z.push(rest);
       }

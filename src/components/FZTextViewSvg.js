@@ -354,6 +354,7 @@ export class FZZoneView extends Component {
     } = this.props;
     const { fontSize } = this.state;
     if (zone.lg.length > 0) {
+      console.log(zone.points);
       return (
         <g
           x={style.left}

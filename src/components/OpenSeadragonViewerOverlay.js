@@ -1,8 +1,10 @@
 // React
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
 // OpenSeadragon
 import OpenSeadragon from "openseadragon";
+import initSvgOverlay from "../utils/osd-svg-overlay";
 
 // Semantic UI
 import { Icon } from "semantic-ui-react";
@@ -23,7 +25,7 @@ const ZONE_MAP = {
   body: 1,
   head: 2,
   foot: 3,
-  right: 4
+  right: 4,
 };
 
 export default class OpenSeadragonViewer extends Component {
@@ -36,9 +38,10 @@ export default class OpenSeadragonViewer extends Component {
       showNavigationControl: true,
       zoomInButton: "zoom-in-button",
       zoomOutButton: "zoom-out-button",
-      homeButton: "home-button"
+      homeButton: "home-button",
     },
-    zoom: 0
+    overlayPoints: {},
+    zoom: 0,
   };
 
   constructor(props) {
@@ -53,6 +56,10 @@ export default class OpenSeadragonViewer extends Component {
     this.rotateRight = this.rotateRight.bind(this);
     this.handleZoom = this.handleZoom.bind(this);
     this.updateDynamicFontInfo = this.updateDynamicFontInfo.bind(this);
+    this.updateOverlays = this.updateOverlays.bind(this);
+    this.convertImageToViewportPoints = this.convertImageToViewportPoints.bind(
+      this
+    );
     this.fitFont = this.fitFont.bind(this);
     this.setZoneRefs = this.setZoneRefs.bind(this);
     this.renderZone = this.renderZone.bind(this);
@@ -67,9 +74,10 @@ export default class OpenSeadragonViewer extends Component {
   }
 
   initOpenSeadragon() {
+    initSvgOverlay(OpenSeadragon);
     const { tileSources, viewerId, options } = this.props;
     this.fontBase = 20;
-    this.lineHeightBase = this.viewerOverlay.style.lineHeight = 0.8;
+    // this.lineHeightBase = this.viewerOverlay.style.lineHeight = 0.8;
     options.id = viewerId;
     options.tileSources = tileSources;
     const combinedOptions = this.setOptions(options);
@@ -78,9 +86,12 @@ export default class OpenSeadragonViewer extends Component {
     // this.openSeaDragonViewer.addHandler('zoom', this.handleZoom);
     this.openSeaDragonViewer.gestureSettingsMouse.clickToZoom = false;
     this.viewport = this.openSeaDragonViewer.viewport;
+    this.openSeaDragonViewer.addHandler("tile-loaded", () => {
+      this.overlay = this.openSeaDragonViewer.svgOverlay();
+    });
     if (this.props.overlays) {
       this.openSeaDragonViewer.addHandler("open", () => {
-        this.bounds = this.props.overlays.map(overlay =>
+        this.bounds = this.props.overlays.map((overlay) =>
           this.viewport.imageToViewportRectangle(...overlay)
         );
         if (this.showZoneROI) this.drawOverlays(this.bounds);
@@ -88,24 +99,50 @@ export default class OpenSeadragonViewer extends Component {
       });
     }
     this.setState({
-      zoom: this.viewport.getZoom(true)
+      zoom: this.viewport.getZoom(true),
+    });
+  }
+
+  convertImageToViewportPoints(overlay) {
+    const points = pointsToNumbers(overlay);
+    // TODO memoize this
+    const viewportPoints = points
+      .map((point) => {
+        const vp = this.viewport.imageToViewportCoordinates(...point);
+        return `${vp.x},${vp.y}`;
+      })
+      .join(" ");
+    return viewportPoints;
+  }
+
+  updateOverlays() {
+    const { overlays } = this.props;
+    const { overlayPoints } = this.state;
+    overlays.forEach((overlay) => {
+      if (!overlayPoints[overlay]) {
+        const points = {};
+        points[overlay] = this.convertImageToViewportPoints(overlay);
+        this.setState({
+          overlayPoints: { ...overlayPoints, ...points },
+        });
+      }
     });
   }
 
   setOptions(options) {
     let defaultOptionsCopy = { ...this.state.defaultOptions };
-    Object.keys(options).forEach(optionKey => {
+    Object.keys(options).forEach((optionKey) => {
       defaultOptionsCopy[optionKey] = options[optionKey];
     });
     return defaultOptionsCopy;
   }
 
   findCustomButton(buttonOptionKey) {
-    this.props.customButtons.find(button => button);
+    this.props.customButtons.find((button) => button);
   }
 
   bindCustomControlActions() {
-    this.props.customControlActions.map(control => {
+    this.props.customControlActions.map((control) => {
       this.openSeaDragonViewer.addControl(control);
     });
   }
@@ -163,7 +200,7 @@ export default class OpenSeadragonViewer extends Component {
         <div
           id="rotate-left-button"
           onClick={() =>
-            this.rotateLeft(angle => this.props.rotateCallback(angle))
+            this.rotateLeft((angle) => this.props.rotateCallback(angle))
           }
           className="osd-controls-button"
         >
@@ -172,7 +209,7 @@ export default class OpenSeadragonViewer extends Component {
         <div
           id="rotate-right-button"
           onClick={() =>
-            this.rotateRight(angle => this.props.rotateCallback(angle))
+            this.rotateRight((angle) => this.props.rotateCallback(angle))
           }
           className="osd-controls-button"
         >
@@ -186,7 +223,7 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer.addOverlay({
       element: this.viewerOverlay,
       location: new OpenSeadragon.Rect(0, 0, 1, 1),
-      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT
+      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
     });
     this.fitFont(1.0);
   }
@@ -214,7 +251,6 @@ export default class OpenSeadragonViewer extends Component {
       const elem = this.zoneRefs[key].zoneRef;
       elem.style.fontSize = (offsetWidth / viewportWidth) * 1.5 + "vw";
     }*/
-
     // this.viewerOverlay.style.fontSize = (offsetWidth / viewportWidth) + 'vw';
     /*for (let key in this.zoneRefs) {
       const elem = this.zoneRefs[key].zoneRef;
@@ -260,29 +296,24 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer.removeOverlay(this.viewerOverlay.id);
   }
 
-  shouldComponentUpdate(nextProps: Object, nextState: Object): boolean {
-    const { zones } = this.props;
-    const { zoom } = this.state;
-    if (!lodash.isEqual(zones, nextProps.zones)) return true;
-    if (zoom !== nextState.zoom) return true;
-    return false;
-  }
-
   componentDidUpdate(prevProps: Object, prevState: Object): void {
     // this.removeTextOverlay();
-    const { tileSources, overlays, parentRef } = this.props;
-    if (tileSources.url !== prevProps.tileSources.url) {
-      this.setTileSources(tileSources);
+    if (this.props.tileSources.url !== prevProps.tileSources.url) {
+      this.setTileSources(this.props.tileSources);
     }
-    if (overlays.length !== prevProps.overlays.length) {
-      this.bounds = this.props.overlays.map(overlay =>
+    if (this.props.overlays.length > 0) {
+      /*this.bounds = this.props.overlays.map((overlay) =>
         this.viewport.imageToViewportRectangle(...overlay)
-      );
+      );*/
+      if (this.props.zoomToZones) this.zoomToOverlays();
+      this.updateOverlays();
+    } else {
+      if (this.props.zoomToZones) this.viewport.goHome();
+      if (this.props.showZoneROI) this.openSeaDragonViewer.clearOverlays();
     }
-    this.updateZoneRefs();
-    // this.openSeaDragonViewer.clearOverlays();
-    this.drawTextOverlay();
-    // add listeners to parent
+    if (prevProps.showZoneROI && !this.props.showZoneROI)
+      this.openSeaDragonViewer.clearOverlays();
+    const { parentRef } = this.props;
     if (parentRef !== null && prevProps.parentRef == null) {
       this.addListenersToParent();
     }
@@ -298,16 +329,8 @@ export default class OpenSeadragonViewer extends Component {
 
   renderZone(zone: Object, index: Number): FZZoneView {
     const { lockRotation, diplomaticMode } = this.props;
-    const { points } = zone;
-    const roi = pointsToNumbers(points);
-    const rect = this.viewport.imageToViewportRectangle(...roi);
-    const pixels = this.viewport.viewportToViewerElementRectangle(rect);
-    const zoneStyle = {
+    /*const zoneStyle = {
       position: "absolute",
-      left: Math.floor(rect.x * 100).toString() + "%",
-      top: Math.floor(rect.y * 100).toString() + "%",
-      width: Math.floor(rect.width * 100).toString() + "%",
-      height: Math.floor(rect.height * 100).toString() + "%",
       fontSize: "12px"
     };
     return (
@@ -319,7 +342,30 @@ export default class OpenSeadragonViewer extends Component {
         diplomaticMode={diplomaticMode}
         zone={zone}
       />
-    );
+    );*/
+  }
+
+  renderOverlays() {
+    const { overlays } = this.props;
+    const { overlayPoints } = this.state;
+    if (overlays.length > 0) {
+      return ReactDOM.createPortal(
+        overlays.map((overlay) => {
+          const points = overlayPoints[overlay];
+          if (points) {
+            return (
+              <polygon
+                points={points}
+                style={{ fill: "none", stroke: "black", strokeWidth: 0.005 }}
+              />
+            );
+          } else {
+            return null;
+          }
+        }),
+        this.overlay.node()
+      );
+    }
   }
 
   render() {
@@ -331,7 +377,7 @@ export default class OpenSeadragonViewer extends Component {
       zones,
       diplomaticMode,
       displayAngle,
-      lockRotation
+      lockRotation,
     } = this.props;
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
@@ -354,16 +400,7 @@ export default class OpenSeadragonViewer extends Component {
           id={viewerId}
         >
           {this.props.children}
-        </div>
-        <div
-          ref={ref => (this.viewerOverlay = ref)}
-          className="osd-viewer-overlay"
-        >
-          <div className="fz-text-view">
-            <svg viewBox="0 0 100 100" className={baseClass} style={rotate}>
-              {sortedZones.map(this.renderZone)}
-            </svg>
-          </div>
+          {this.renderOverlays()}
         </div>
       </div>
     );
