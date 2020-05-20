@@ -16,6 +16,7 @@ import shortid from "shortid";
 
 // utils
 import { getBounds, pointsToNumbers } from "../utils/data-utils";
+import { computeScanlineFill } from "../utils/geometry";
 
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
@@ -345,18 +346,25 @@ export default class OpenSeadragonViewer extends Component {
     );*/
   }
 
+  getTextPath(points, zone) {
+    const lines = zone.lg.reduce((a, b) => a + b.l.length, 0);
+    computeScanlineFill(points, lines);
+  }
+
   renderOverlays() {
-    const { overlays } = this.props;
+    const { overlays } = this.props
     const { overlayPoints } = this.state;
     if (overlays.length > 0) {
       return ReactDOM.createPortal(
-        overlays.map((overlay) => {
+        overlays.map((overlay, index) => {
           const points = overlayPoints[overlay];
           if (points) {
+            this.getTextPath(overlay, this.props.zones[index]);
+            // render zone in overlay
             return (
               <polygon
                 points={points}
-                style={{ fill: "none", stroke: "black", strokeWidth: 0.005 }}
+                style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.005 }}
               />
             );
           } else {
