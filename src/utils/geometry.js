@@ -1,12 +1,25 @@
 // Polygon scanline filling algorithm based on https://www.geeksforgeeks.org/scan-line-polygon-filling-using-opengl-c/
 export function computeScanlineFill(points, nLines) {
   const [minHeight, maxHeight, p] = minMax(points, 1);
+  const lineHeight = Math.ceil(maxHeight / nLines);
   const edgeTable = [];
-  const activeEdgeTuple = { edgeBucketCount: 0 };
-  // TODO need to put points in [[x1, y1], [x2, y2]] format
+  const activeEdgeTuple = {
+    edgeBucketCount: 0,
+    buckets: [{}],
+  };
+  /* TODO need to put points in [[x1, y1], [x2, y2]] format
+    Then ... 
+    storeInEdgeTable(p1, p2)
+    initEdgeTable()
+    scanlineFill()
+  */
+  const lines = [];
   function initEdgeTable() {
     for (let i = 0; i < maxHeight; i++) {
-      edgeTable[i] = { edgeBucketCount: 0 };
+      edgeTable[i] = {
+        edgeBucketCount: 0,
+        buckets: [{}],
+      };
     }
   }
 
@@ -20,9 +33,9 @@ export function computeScanlineFill(points, nLines) {
       j = i - 1;
 
       while (temp.yMinX < et.buckets[j].yMinX && j >= 0) {
-        et.buckets[j + 1].yMax = temp.yMax;
-        et.buckets[j + 1].yMinX = temp.yMinX;
-        et.buckets[j + 1].slopeInverse = temp.slopeInverse;
+        et.buckets[j + 1].yMax = et.buckets[j].yMax;
+        et.buckets[j + 1].yMinX = et.buckets[j].yMinX;
+        et.buckets[j + 1].slopeInverse = et.buckets[j].slopeInverse;
         j = j - 1;
       }
       et.buckets[j + 1].yMax = temp.yMax;
@@ -56,7 +69,7 @@ export function computeScanlineFill(points, nLines) {
       } else {
         scanline = y1;
         yMax = y2;
-        yMinX = x2;
+        yMinX = x1;
       }
     }
     storeEdgeInTuple(edgeTable[scanline], yMax, yMinX, slopeInverse);
@@ -83,57 +96,84 @@ export function computeScanlineFill(points, nLines) {
   }
 
   function scanlineFill() {
+    let lineCount = 0;
+    let j, coordCount, x1, x2, yMax1, yMax2, fillFlag;
     for (let i = 0; i < maxHeight; i++) {
       for (let j = 0; j < edgeTable[i].edgeBucketCount; j++) {
-        const { yMax, yMinX, slopeInverse } = edgeTable.buckets[i];
+        const { yMax, yMinX, slopeInverse } = edgeTable[i].buckets[j];
         storeEdgeInTuple(activeEdgeTuple, yMax, yMinX, slopeInverse);
       }
-      removeEdgeByYMax(activeEdgeTuple);
+      removeEdgeByYMax(activeEdgeTuple, i);
       sortEdges(activeEdgeTuple);
-    }
-    // TODO initialize above
-    let j = 0;
-    let coordCount = 0;
-    let x1 = 0;
-    let x2 = 0;
-    let yMax1 = 0;
-    let yMax2 = 0;
-    // fill flag in this case will add a path to an array of paths
-    while (j < activeEdgeTuple.edgeBucketCount) {
-      if (coordCount % 2 === 0) {
-        x1 = activeEdgeTuple.buckets[j].yMinX;
-        yMax1 = activeEdgeTuple.buckets[j].yMax;
-        if (x1 === x2) {
-          if (
-            (x1 === yMax1 && x2 !== yMax2) ||
-            (x1 !== yMax1 && x2 === yMax2)
-          ) {
-            x2 = x1;
-            yMax2 = yMax1;
+      // TODO initialize above
+
+      // fill flag in this case will add a path to an array of paths
+      j = 0;
+      x1 = 0;
+      x2 = 0;
+      yMax1 = 0;
+      yMax2 = 0;
+      coordCount = 0;
+
+      while (j < activeEdgeTuple.edgeBucketCount) {
+        console.log(x1, yMax1, x2, yMax2);
+        if (coordCount % 2 === 0) {
+          x1 = activeEdgeTuple.buckets[j].yMinX;
+          yMax1 = activeEdgeTuple.buckets[j].yMax;
+          if (x1 === x2) {
+            if (
+              (x1 === yMax1 && x2 !== yMax2) ||
+              (x1 !== yMax1 && x2 === yMax2)
+            ) {
+              x2 = x1;
+              yMax2 = yMax1;
+            } else {
+              coordCount++;
+            }
           } else {
             coordCount++;
           }
-        }
-      } else {
-        coordCount++;
-      }
-      x2 = activeEdgeTuple.buckets[j].yMinX;
-      yMax2 = activeEdgeTuple.buckets[j].yMax;
-
-      if (x1 === x2) {
-        if ((x1 === yMax1 && x2 !== yMax2) || (x1 !== yMax1 && x2 === yMax2)) {
-          x1 = x2;
-          yMax1 = yMax2;
         } else {
+          x2 = activeEdgeTuple.buckets[j].yMinX;
+          yMax2 = activeEdgeTuple.buckets[j].yMax;
+          fillFlag = false;
+          if (x1 === x2) {
+            if (
+              (x1 === yMax1 && x2 !== yMax2) ||
+              (x1 !== yMax1 && x2 === yMax2)
+            ) {
+              x1 = x2;
+              yMax1 = yMax2;
+            } else {
+              coordCount++;
+              fillFlag = true;
+            }
+          } else {
             coordCount++;
+            fillFlag = true;
+          }
         }
-      } else {
-          coordCount++;
+        if (fillFlag) {
+          lines.push(`${x1},${i} ${x2},${i}`);
+        }
+        j++;
       }
-      j++;
     }
     updateXBySlopeInverse(activeEdgeTuple);
   }
+  initEdgeTable();
+  const pairwise = p.reduce((a, b, idx, arr) => {
+    if (idx % 2 === 0) {
+      a.push(arr.slice(idx, idx + 2));
+    }
+    return a;
+  }, []);
+  pairwise.forEach((pair) => {
+    storeEdgeInTable(...pair);
+  });
+  scanlineFill();
+  console.log(lines);
+  return lines;
 }
 
 function minMax(points, axis) {

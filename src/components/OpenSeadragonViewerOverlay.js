@@ -104,15 +104,25 @@ export default class OpenSeadragonViewer extends Component {
     });
   }
 
-  convertImageToViewportPoints(overlay) {
+  convertImageToViewportPoints(overlay, stringVal = true) {
     const points = pointsToNumbers(overlay);
     // TODO memoize this
-    const viewportPoints = points
-      .map((point) => {
-        const vp = this.viewport.imageToViewportCoordinates(...point);
-        return `${vp.x},${vp.y}`;
-      })
-      .join(" ");
+    let viewportPoints;
+    if (stringVal) {
+      viewportPoints = points
+        .map((point) => {
+          const vp = this.viewport.imageToViewportCoordinates(...point);
+          return `${vp.x},${vp.y}`;
+        })
+        .join(" ");
+    } else {
+      viewportPoints = points
+        .map((point) => {
+          const vp = this.viewport.imageToViewportCoordinates(...point);
+          return vp;
+        })
+        .reduce((a, b) => a.concat(b), []);
+    }
     return viewportPoints;
   }
 
@@ -345,27 +355,41 @@ export default class OpenSeadragonViewer extends Component {
       />
     );*/
   }
-
+  // TODO need to cache fill lines
   getTextPath(points, zone) {
-    const lines = zone.lg.reduce((a, b) => a + b.l.length, 0);
-    computeScanlineFill(points, lines);
+    const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
+    const fill = computeScanlineFill(points, nLines);
+    /*const viewportPoints = fill.map((l) =>
+      this.convertImageToViewportPoints(l, false)
+    );
+    return viewportPoints.map((points, idx) => (
+      <line
+        key={idx}
+        x1={points[0].x}
+        y1={points[0].y}
+        x2={points[1].x}
+        y2={points[1].y}
+        style={{ stroke: "#000", strokeWidth: "2px" }}
+      />
+    ));*/
+    return null;
   }
 
   renderOverlays() {
-    const { overlays } = this.props
+    const { overlays } = this.props;
     const { overlayPoints } = this.state;
     if (overlays.length > 0) {
       return ReactDOM.createPortal(
         overlays.map((overlay, index) => {
           const points = overlayPoints[overlay];
           if (points) {
-            this.getTextPath(overlay, this.props.zones[index]);
             // render zone in overlay
             return (
               <polygon
                 points={points}
                 style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.005 }}
-              />
+              >{this.getTextPath(overlay, this.props.zones[index])}
+              </polygon>
             );
           } else {
             return null;
