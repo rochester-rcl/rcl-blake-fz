@@ -5,7 +5,7 @@ export function computeScanlineFill(points, nLines) {
   const edgeTable = [];
   const activeEdgeTuple = {
     edgeBucketCount: 0,
-    buckets: [{}],
+    buckets: [],
   };
   /* TODO need to put points in [[x1, y1], [x2, y2]] format
     Then ... 
@@ -18,7 +18,7 @@ export function computeScanlineFill(points, nLines) {
     for (let i = 0; i < maxHeight; i++) {
       edgeTable[i] = {
         edgeBucketCount: 0,
-        buckets: [{}],
+        buckets: [],
       };
     }
   }
@@ -45,6 +45,9 @@ export function computeScanlineFill(points, nLines) {
   }
 
   function storeEdgeInTuple(et, yMax, yMinX, slopeInverse) {
+    if (et.buckets[et.edgeBucketCount] === undefined) {
+        et.buckets[et.edgeBucketCount] = {};
+    }  
     et.buckets[et.edgeBucketCount].yMax = yMax;
     et.buckets[et.edgeBucketCount].yMinX = yMinX;
     et.buckets[et.edgeBucketCount].slopeInverse = slopeInverse;
@@ -88,7 +91,7 @@ export function computeScanlineFill(points, nLines) {
       }
     }
   }
-  // TODO slopeInverse will have to be supplemented by lineheight
+  
   function updateXBySlopeInverse(et) {
     for (let i = 0; i < et.edgeBucketCount; i++) {
       et.buckets[i].yMinX = et.buckets[i].yMinX + et.buckets[i].slopeInverse;
@@ -114,20 +117,19 @@ export function computeScanlineFill(points, nLines) {
       yMax1 = 0;
       yMax2 = 0;
       coordCount = 0;
-
-      while (j < activeEdgeTuple.edgeBucketCount) {
-        console.log(x1, yMax1, x2, yMax2);
+      fillFlag = false;
+      while (j < activeEdgeTuple.edgeBucketCount) {  
         if (coordCount % 2 === 0) {
           x1 = activeEdgeTuple.buckets[j].yMinX;
           yMax1 = activeEdgeTuple.buckets[j].yMax;
-          if (x1 === x2) {
+          if (x1 === x2) { 
             if (
               (x1 === yMax1 && x2 !== yMax2) ||
               (x1 !== yMax1 && x2 === yMax2)
             ) {
               x2 = x1;
               yMax2 = yMax1;
-            } else {
+            } else { 
               coordCount++;
             }
           } else {
