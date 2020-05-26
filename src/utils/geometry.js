@@ -207,3 +207,8 @@ function minMax(points, axis) {
   }
   return [min, max, p];
 }
+
+export function getLineHeight(points, nLines) {
+  const [minHeight, maxHeight] = minMax(points, 1);
+  return Math.ceil((maxHeight - minHeight) / nLines);
+}
