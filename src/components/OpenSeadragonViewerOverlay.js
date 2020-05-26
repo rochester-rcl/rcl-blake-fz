@@ -368,15 +368,13 @@ export default class OpenSeadragonViewer extends Component {
     return viewportPoints.map((p, idx) => {
       return (
         <g x={p[0].x} y={p[0].y}>
-            <path
-              key={idx}
-              id={`text-path-line-${idx}`}
-              d={`M${p[0].x} ${p[0].y} L${p[1].x} ${p[1].y}`}
-              style={ { stroke: "red", strokeWidth: "0.0001em", fill: "none" }}
-            />
-          <text style={{ fontSize: "0.0001em" }}>
-            <textPath href={`#text-path-line-${idx}`}>Hello</textPath>
-          </text>
+          <text
+            x={p[0].x}
+            y={p[0].y}
+            w={p[1].x - p[0].x}
+            h={lineHeight}
+            style={{ fontSize: "0.001em" }}
+          >Hello</text>
         </g>
       );
     });
