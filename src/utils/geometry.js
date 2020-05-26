@@ -1,7 +1,7 @@
 // Polygon scanline filling algorithm based on https://www.geeksforgeeks.org/scan-line-polygon-filling-using-opengl-c/
 export function computeScanlineFill(points, nLines) {
   const [minHeight, maxHeight, p] = minMax(points, 1);
-  const lineHeight = Math.ceil(maxHeight / nLines);
+  const lineHeight = Math.ceil((maxHeight - minHeight) / nLines);
   const edgeTable = [];
   const activeEdgeTuple = {
     edgeBucketCount: 0,
@@ -23,6 +23,18 @@ export function computeScanlineFill(points, nLines) {
     }
   }
 
+  function addPointsToEdgeTable(points) {
+    let p1, p2, i;
+    for (i = 0; i < points.length; i++) {
+      p1 = points[i];
+      p2 = points[i + 1];
+      if (i === points.length - 1) {
+        p2 = points[0];
+      }
+      storeEdgeInTable(p1, p2);
+    }
+  }
+
   function sortEdges(et) {
     const temp = {};
     let j;
@@ -31,8 +43,10 @@ export function computeScanlineFill(points, nLines) {
       temp.yMinX = et.buckets[i].yMinX;
       temp.slopeInverse = et.buckets[i].slopeInverse;
       j = i - 1;
-
-      while (temp.yMinX < et.buckets[j].yMinX && j >= 0) {
+      while (j >= 0 && temp.yMinX < et.buckets[j].yMinX) {
+        if (et.buckets[j + 1] === undefined) {
+          et.buckets[j + 1] = {};
+        }
         et.buckets[j + 1].yMax = et.buckets[j].yMax;
         et.buckets[j + 1].yMinX = et.buckets[j].yMinX;
         et.buckets[j + 1].slopeInverse = et.buckets[j].slopeInverse;
@@ -46,8 +60,8 @@ export function computeScanlineFill(points, nLines) {
 
   function storeEdgeInTuple(et, yMax, yMinX, slopeInverse) {
     if (et.buckets[et.edgeBucketCount] === undefined) {
-        et.buckets[et.edgeBucketCount] = {};
-    }  
+      et.buckets[et.edgeBucketCount] = {};
+    }
     et.buckets[et.edgeBucketCount].yMax = yMax;
     et.buckets[et.edgeBucketCount].yMinX = yMinX;
     et.buckets[et.edgeBucketCount].slopeInverse = slopeInverse;
@@ -78,6 +92,10 @@ export function computeScanlineFill(points, nLines) {
     storeEdgeInTuple(edgeTable[scanline], yMax, yMinX, slopeInverse);
   }
 
+  function subsampleByLineHeight() {
+    return lines.filter((line, idx) => idx % lineHeight === 0);
+  }
+
   function removeEdgeByYMax(et, y) {
     for (let i = 0; i < et.edgeBucketCount; i++) {
       if (et.buckets[i].yMax === y) {
@@ -91,7 +109,7 @@ export function computeScanlineFill(points, nLines) {
       }
     }
   }
-  
+
   function updateXBySlopeInverse(et) {
     for (let i = 0; i < et.edgeBucketCount; i++) {
       et.buckets[i].yMinX = et.buckets[i].yMinX + et.buckets[i].slopeInverse;
@@ -118,18 +136,18 @@ export function computeScanlineFill(points, nLines) {
       yMax2 = 0;
       coordCount = 0;
       fillFlag = false;
-      while (j < activeEdgeTuple.edgeBucketCount) {  
+      while (j < activeEdgeTuple.edgeBucketCount) {
         if (coordCount % 2 === 0) {
           x1 = activeEdgeTuple.buckets[j].yMinX;
           yMax1 = activeEdgeTuple.buckets[j].yMax;
-          if (x1 === x2) { 
+          if (x1 === x2) {
             if (
               (x1 === yMax1 && x2 !== yMax2) ||
               (x1 !== yMax1 && x2 === yMax2)
             ) {
               x2 = x1;
               yMax2 = yMax1;
-            } else { 
+            } else {
               coordCount++;
             }
           } else {
@@ -156,36 +174,36 @@ export function computeScanlineFill(points, nLines) {
           }
         }
         if (fillFlag) {
-          lines.push(`${x1},${i} ${x2},${i}`);
+            lines.push(`${x1},${i} ${x2},${i}`);
         }
         j++;
+        lineCount++;
       }
     }
     updateXBySlopeInverse(activeEdgeTuple);
   }
   initEdgeTable();
-  const pairwise = p.reduce((a, b, idx, arr) => {
-    if (idx % 2 === 0) {
-      a.push(arr.slice(idx, idx + 2));
-    }
-    return a;
-  }, []);
-  pairwise.forEach((pair) => {
-    storeEdgeInTable(...pair);
-  });
+  addPointsToEdgeTable(p);
   scanlineFill();
-  console.log(lines);
-  return lines;
+  const output = subsampleByLineHeight();
+  console.log(output.length, nLines);
+  return output;
 }
 
 function minMax(points, axis) {
-  const sorted = points
-    .split(" ")
-    .map((point) => point.split(",").map((p) => parseInt(p, 10)))
-    .sort((a, b) => {
-      if (a[axis] < b[axis]) return -1;
-      if (a[axis] > b[axis]) return 1;
-      return 0;
-    });
-  return [sorted[0][axis], sorted[sorted.length - 1][axis], sorted];
+  let min = Infinity;
+  let max = 0;
+  const p = points
+  .split(" ")
+  .map((point) => point.split(",").map((p) => parseInt(p, 10)));
+  for (let i = 0; i < p.length; i++) {
+    const val = p[i][axis];
+    if (val < min) {
+      min = val;
+    }
+    if (val > max) {
+      max = val;
+    }
+  }
+  return [min, max, p];
 }

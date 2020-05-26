@@ -359,20 +359,24 @@ export default class OpenSeadragonViewer extends Component {
   getTextPath(points, zone) {
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
     const fill = computeScanlineFill(points, nLines);
-    /*const viewportPoints = fill.map((l) =>
+    const viewportPoints = fill.map((l) =>
       this.convertImageToViewportPoints(l, false)
     );
-    return viewportPoints.map((points, idx) => (
-      <line
-        key={idx}
-        x1={points[0].x}
-        y1={points[0].y}
-        x2={points[1].x}
-        y2={points[1].y}
-        style={{ stroke: "#000", strokeWidth: "2px" }}
-      />
-    ));*/
-    return null;
+    return viewportPoints.map((p, idx) => {
+      return (
+        <g>
+          <path
+            key={idx}
+            id={`text-path-line-${idx}`}
+            d={`M${p[0].x},${p[0].y} L${p[1].x},${p[1].y}`}
+            style={{ stroke: "red", strokeWidth: 0.001 }}
+          />
+          <text>
+            <textPath style={{ fontSize: '12px', stroke: "red" }} href={`#text-path-line-${idx}`}> Some Text </textPath>
+          </text>
+        </g>
+      );
+    });
   }
 
   renderOverlays() {
@@ -385,11 +389,17 @@ export default class OpenSeadragonViewer extends Component {
           if (points) {
             // render zone in overlay
             return (
-              <polygon
-                points={points}
-                style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.005 }}
-              >{this.getTextPath(overlay, this.props.zones[index])}
-              </polygon>
+              <g>
+                <polygon
+                  points={points}
+                  style={{
+                    fill: "none",
+                    stroke: "#E9BC47",
+                    strokeWidth: 0.005,
+                  }}
+                />
+                {this.getTextPath(overlay, this.props.zones[index])}
+              </g>
             );
           } else {
             return null;
