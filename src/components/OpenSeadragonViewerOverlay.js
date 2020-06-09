@@ -17,7 +17,6 @@ import shortid from "shortid";
 // utils
 import { getBounds, pointsToNumbers } from "../utils/data-utils";
 import { computeScanlineFill, getLineHeight } from "../utils/geometry";
-
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
 
@@ -356,6 +355,7 @@ export default class OpenSeadragonViewer extends Component {
     );*/
   }
   // TODO need to cache fill lines
+  // TODO also need to figure out if zone.lg.length is ever > 1
   getTextPath(points, zone) {
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
     let lineHeight = getLineHeight(points, nLines);
@@ -364,7 +364,11 @@ export default class OpenSeadragonViewer extends Component {
     const viewportPoints = fill.map((l) =>
       this.convertImageToViewportPoints(l, false)
     );
+    const { l } = zone.lg[0];
     return viewportPoints.map((p, idx) => {
+      const id = shortid.generate();
+      const line = l[idx];
+      const text = line ? line["#text"] : "";
       return (
         <g x={p[0].x} y={p[0].y}>
           {/*<text
@@ -375,13 +379,12 @@ export default class OpenSeadragonViewer extends Component {
             style={{ fontSize: "0.0008em" }}
           >Here is where the text will go</text>*/}
           <path
-            key={idx}
-            id={`text-path-line-${idx}`}
+            key={id}
+            id={`text-path-line-${id}`}
             d={`M${p[0].x} ${p[0].y} L${p[1].x} ${p[1].y}`}
-            style={{ stroke: "#ccc", strokeWidth: "0.0001em", fill: "none" }}
           />
-          <text style={{ fontSize: "0.001em" }}>
-            <textPath href={`#text-path-line-${idx}`}>This is Where the Text Would Go</textPath>
+          <text style={{ fontSize: "0.001em", fill: "#ccc"}}>
+            <textPath href={`#text-path-line-${id}`}>{text}</textPath>
           </text>
         </g>
       );
@@ -399,14 +402,6 @@ export default class OpenSeadragonViewer extends Component {
             // render zone in overlay
             return (
               <g>
-                <polygon
-                  points={points}
-                  style={{
-                    fill: "none",
-                    stroke: "#E9BC47",
-                    strokeWidth: 0.005,
-                  }}
-                />
                 {this.getTextPath(overlay, this.props.zones[index])}
               </g>
             );

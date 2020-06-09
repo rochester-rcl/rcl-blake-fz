@@ -224,7 +224,7 @@ export default class OpenSeadragonViewer extends Component {
             return (
               <polygon
                 points={points}
-                style={{ fill: "none", stroke: "black", strokeWidth: 0.005 }}
+                style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.005 }}
               />
             );
           } else {
