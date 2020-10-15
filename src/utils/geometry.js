@@ -7,12 +7,7 @@ export function computeScanlineFill(points, nLines) {
     edgeBucketCount: 0,
     buckets: [],
   };
-  /* TODO need to put points in [[x1, y1], [x2, y2]] format
-    Then ... 
-    storeInEdgeTable(p1, p2)
-    initEdgeTable()
-    scanlineFill()
-  */
+
   const lines = [];
   function initEdgeTable() {
     for (let i = 0; i < maxHeight; i++) {
@@ -117,7 +112,7 @@ export function computeScanlineFill(points, nLines) {
   }
 
   function scanlineFill() {
-    let lineCount = 0;
+    let lineCount;
     let j, coordCount, x1, x2, yMax1, yMax2, fillFlag;
     for (let i = 0; i < maxHeight; i++) {
       for (let j = 0; j < edgeTable[i].edgeBucketCount; j++) {
@@ -174,7 +169,8 @@ export function computeScanlineFill(points, nLines) {
           }
         }
         if (fillFlag) {
-            lines.push(`${x1},${i} ${x2},${i}`);
+          // there's a bug somewhere up there ^ causing x1 === x2 
+          if (x1 !== x2) lines.push(`${x1},${i} ${x2},${i}`);
         }
         j++;
         lineCount++;
@@ -186,7 +182,6 @@ export function computeScanlineFill(points, nLines) {
   addPointsToEdgeTable(p);
   scanlineFill();
   const output = subsampleByLineHeight();
-  console.log(output.length, nLines);
   return output;
 }
 
@@ -194,8 +189,8 @@ function minMax(points, axis) {
   let min = Infinity;
   let max = 0;
   const p = points
-  .split(" ")
-  .map((point) => point.split(",").map((p) => parseInt(p, 10)));
+    .split(" ")
+    .map((point) => point.split(",").map((p) => parseInt(p, 10)));
   for (let i = 0; i < p.length; i++) {
     const val = p[i][axis];
     if (val < min) {

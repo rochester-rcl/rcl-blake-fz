@@ -365,25 +365,19 @@ export default class OpenSeadragonViewer extends Component {
       this.convertImageToViewportPoints(l, false)
     );
     const { l } = zone.lg[0];
+    console.log(nLines, viewportPoints.length);
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];
       const text = line ? line["#text"] : "";
       return (
-        <g x={p[0].x} y={p[0].y}>
-          {/*<text
-            x={p[0].x}
-            y={p[0].y}
-            w={p[1].x - p[0].x}
-            h={lineHeight}
-            style={{ fontSize: "0.0008em" }}
-          >Here is where the text will go</text>*/}
+        <g>
           <path
             key={id}
             id={`text-path-line-${id}`}
             d={`M${p[0].x} ${p[0].y} L${p[1].x} ${p[1].y}`}
           />
-          <text style={{ fontSize: "0.001em", fill: "#ccc"}}>
+          <text style={{ fontSize: "0.001em", fill: "#ccc" }}>
             <textPath href={`#text-path-line-${id}`}>{text}</textPath>
           </text>
         </g>
