@@ -302,6 +302,11 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer.viewport.zoomTo(zoom, refPoint);
   }
 
+  handlePan = (panInfo) => {
+    const { center } = panInfo;
+    this.openSeaDragonViewer.viewport.panTo(center);
+  }
+
   removeTextOverlay(): void {
     this.openSeaDragonViewer.removeOverlay(this.viewerOverlay.id);
   }
@@ -334,6 +339,7 @@ export default class OpenSeadragonViewer extends Component {
     if (parentRef !== null) {
       const parent = parentRef.openSeaDragonViewer;
       parent.addHandler("zoom", this.handleZoom);
+      parent.addHandler("pan", this.handlePan);
     }
   }
 
@@ -365,7 +371,6 @@ export default class OpenSeadragonViewer extends Component {
       this.convertImageToViewportPoints(l, false)
     );
     const { l } = zone.lg[0];
-    console.log(nLines, viewportPoints.length);
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];

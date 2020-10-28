@@ -24,8 +24,8 @@ import { Divider } from "semantic-ui-react";
 import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
 import createBackground from "../utils/image";
 
-const xml = "/BB749.1.ms.xml";
-
+// const xml = "/BB749.1.ms.xml";
+const xml = "Final_BB749.1.ms.xml"
 const getImageDimensions = (url) => {
   return new Promise((resolve, reject) => {
     const image = new Image();

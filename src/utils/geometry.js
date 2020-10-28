@@ -1,5 +1,6 @@
 // Polygon scanline filling algorithm based on https://www.geeksforgeeks.org/scan-line-polygon-filling-using-opengl-c/
 export function computeScanlineFill(points, nLines) {
+  console.log(points);
   const [minHeight, maxHeight, p] = minMax(points, 1);
   const lineHeight = Math.ceil((maxHeight - minHeight) / nLines);
   const edgeTable = [];
@@ -69,12 +70,14 @@ export function computeScanlineFill(points, nLines) {
     const [x2, y2] = p2;
     let yMax, yMinX, scanline, slope, slopeInverse;
     if (x2 === x1) {
+      console.log("HERE");
       slopeInverse = 0;
     } else {
       slope = (y2 - y1) / (x2 - x1);
       if (y2 === y1) return;
       slopeInverse = 1 / slope;
-      if (y1 > y2) {
+    }
+    if (y1 > y2) {
         scanline = y2;
         yMax = y1;
         yMinX = x2;
@@ -83,7 +86,9 @@ export function computeScanlineFill(points, nLines) {
         yMax = y2;
         yMinX = x1;
       }
-    }
+    /*console.log(
+      `slope: ${slope} | x1: ${x1} | x2: ${x2} | y1: ${y1} | y2: ${y2} | yMax: ${yMax} | yMinX: ${yMinX} | slopeInverse: ${slopeInverse} | scanline: ${scanline}`
+    );*/
     storeEdgeInTuple(edgeTable[scanline], yMax, yMinX, slopeInverse);
   }
 
@@ -169,7 +174,7 @@ export function computeScanlineFill(points, nLines) {
           }
         }
         if (fillFlag) {
-          // there's a bug somewhere up there ^ causing x1 === x2 
+          // there's a bug somewhere up there ^ causing p1 === p2
           if (x1 !== x2) lines.push(`${x1},${i} ${x2},${i}`);
         }
         j++;
