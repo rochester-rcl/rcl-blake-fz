@@ -325,7 +325,6 @@ export default class OpenSeadragonViewer extends Component {
       /*this.bounds = this.props.overlays.map((overlay) =>
         this.viewport.imageToViewportRectangle(...overlay)
       );*/
-      if (this.props.zoomToZones) this.zoomToOverlays();
       this.updateOverlays();
     } else {
       if (this.props.zoomToZones) this.viewport.goHome();

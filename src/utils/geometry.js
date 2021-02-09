@@ -69,7 +69,6 @@ export function computeScanlineFill(points, nLines) {
     const [x2, y2] = p2;
     let yMax, yMinX, scanline, slope, slopeInverse;
     if (x2 === x1) {
-      console.log("HERE");
       slopeInverse = 0;
     } else {
       slope = (y2 - y1) / (x2 - x1);
