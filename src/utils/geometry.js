@@ -1,12 +1,11 @@
 // Polygon scanline filling algorithm based on https://www.geeksforgeeks.org/scan-line-polygon-filling-using-opengl-c/
 export function computeScanlineFill(points, nLines) {
-  console.log(points);
   const [minHeight, maxHeight, p] = minMax(points, 1);
   const lineHeight = Math.ceil((maxHeight - minHeight) / nLines);
   const edgeTable = [];
   const activeEdgeTuple = {
     edgeBucketCount: 0,
-    buckets: [],
+    buckets: []
   };
 
   const lines = [];
@@ -14,7 +13,7 @@ export function computeScanlineFill(points, nLines) {
     for (let i = 0; i < maxHeight; i++) {
       edgeTable[i] = {
         edgeBucketCount: 0,
-        buckets: [],
+        buckets: []
       };
     }
   }
@@ -78,14 +77,14 @@ export function computeScanlineFill(points, nLines) {
       slopeInverse = 1 / slope;
     }
     if (y1 > y2) {
-        scanline = y2;
-        yMax = y1;
-        yMinX = x2;
-      } else {
-        scanline = y1;
-        yMax = y2;
-        yMinX = x1;
-      }
+      scanline = y2;
+      yMax = y1;
+      yMinX = x2;
+    } else {
+      scanline = y1;
+      yMax = y2;
+      yMinX = x1;
+    }
     /*console.log(
       `slope: ${slope} | x1: ${x1} | x2: ${x2} | y1: ${y1} | y2: ${y2} | yMax: ${yMax} | yMinX: ${yMinX} | slopeInverse: ${slopeInverse} | scanline: ${scanline}`
     );*/
@@ -195,7 +194,7 @@ function minMax(points, axis) {
   let max = 0;
   const p = points
     .split(" ")
-    .map((point) => point.split(",").map((p) => parseInt(p, 10)));
+    .map(point => point.split(",").map(p => parseInt(p, 10)));
   for (let i = 0; i < p.length; i++) {
     const val = p[i][axis];
     if (val < min) {

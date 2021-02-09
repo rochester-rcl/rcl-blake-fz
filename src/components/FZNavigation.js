@@ -105,8 +105,8 @@ export default class FZNavigation extends Component {
         },
         {
           className: lockRotation ? 'fz-main-menu-button active' : 'fz-main-menu-button',
-          displayIcon: 'refresh',
-          displayName: 'Lock Rotation',
+          displayIcon: 'lock',
+          displayName: 'Lock',
           id: 'fz-lock-rotation',
           onClick: () => this.handleLockRotation(),
           disabled: false,
