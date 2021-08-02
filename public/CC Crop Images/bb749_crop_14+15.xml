@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface>
+         <graphic url="../../CC%20Crop%20Images/BB749.1.14+15.MS.300.jpg"/>
+         <figure>
+            <graphic url="BB749.1.14+15.MS.300.jpg"/>
+         </figure>
+         <zone xml:id="left-top-note-if-christ" points="2556,517 2591,4 43,30 60,565"/>
+         <zone xml:id="left_long_prophets"
+            points="56,4465 2525,4511 2537,3909 610,3842 556,1242 71,1142"/>
+         <zone xml:id="right_top_nothing"
+            points="5247,1 5254,761 4652,705 4407,383 2684,392 2676,10"/>
+         <zone xml:id="right_margin_of_what" points="4831,3612 5246,3636 5264,800 4762,743"/>
+         <zone xml:id="right_bottom_impossible"
+            points="5228,4372 5246,3627 4818,3625 4725,3918 2793,3937 2731,4400"/>
+         <zone xml:id="right_u_frompub" points="4747,3365 4741,3238 4462,3242 4464,3367"/>
+         <zone xml:id="right_u2-inthem " points="4605,3562 4608,3687 3866,3692 3868,3564"/>
+         <zone xml:id="rightpage" points="5243,24 5241,4563 2682,4564 2682,24"/>
+         <zone xml:id="leftpage" points="2611,50 2609,4589 50,4590 50,50"/>
+      </surface>
+   </facsimile>
+</TEI>

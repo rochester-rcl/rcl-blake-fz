@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface/>
+      <surface>
+         <graphic url="BB749.1.120.MS.300.jpg"/>
+         <zone xml:id="m1" points="382,144 2748,158 2751,544 389,527"/>
+         <zone xml:id="page-left" points="644,317 2683,326 2683,3682 641,3679"/>
+         <zone xml:id="m3" points="283,3943 2818,3982 2844,4504 292,4430"/>
+      </surface>
+   </facsimile>
+</TEI>

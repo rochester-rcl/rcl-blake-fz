@@ -384,6 +384,20 @@ export default class OpenSeadragonViewer extends Component {
     const viewportPoints = fill.map(l =>
       this.convertImageToViewportPoints(l, false)
     );
+    if (nLines === 0) {
+      return viewportPoints.map((p, idx) => {
+        const id = shortid.generate();
+        return (
+          <g>
+            <path
+              key={id}
+              id={`text-path-line-${id}`}
+              d={`M${p[0].x} ${p[0].y} L${p[1].x} ${p[1].y}`}
+            />
+          </g>
+        );
+      });
+    }
     const { l } = zone.lg[0];
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();

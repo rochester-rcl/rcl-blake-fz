@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <facsimile>
+      <surface/>
+      <surface>
+         <graphic url="BB749.1.108+109.MS.300.jpg"/>
+         <zone xml:id="m1" points="39,3935 512,3955 515,2081 49,2088"/>
+         <zone xml:id="m2" points="3016,2406 3246,2946 2770,2986 2766,2400"/>
+         <zone xml:id="m3" points="5343,1750 5350,2196 4910,2200 4893,1740"/>
+         <zone xml:id="m4" points="5328,2277 5334,2883 4939,2883 4909,2278"/>
+         <zone xml:id="page-right" points="4914,4088 4925,322 2964,316 2958,4088"/>
+         <zone xml:id="page-left" points="2467,4072 2488,332 527,326 528,4050"/>
+         <zone xml:id="underline" points="4918,2304 4922,2569 2952,2578 2952,2304"/>
+      </surface>
+   </facsimile>
+</TEI>

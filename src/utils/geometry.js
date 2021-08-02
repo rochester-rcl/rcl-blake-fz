@@ -54,6 +54,7 @@ export function computeScanlineFill(points, nLines) {
   }
 
   function storeEdgeInTuple(et, yMax, yMinX, slopeInverse) {
+    if (!et) return;
     if (et.buckets[et.edgeBucketCount] === undefined) {
       et.buckets[et.edgeBucketCount] = {};
     }
