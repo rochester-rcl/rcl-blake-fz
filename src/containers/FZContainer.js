@@ -25,7 +25,7 @@ import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
 import createBackground from "../utils/image";
 
 // const xml = "/BB749.1.ms.xml";
-const xml = "Final_BB749.1.ms.20210127.xml"
+const xml = "BB749.1.ms.xml"
 const getImageDimensions = (url) => {
   return new Promise((resolve, reject) => {
     const image = new Image();
