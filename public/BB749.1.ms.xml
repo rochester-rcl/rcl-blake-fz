@@ -176,7 +176,7 @@
         </source>
         
         
-        <desc id="bb749.1.ms.01" dbi="BB749.1.1.MS">
+        <desc id="bb749.1.ms.01" dbi="BB749.1.publeaf+1.MS">
             <objtitle>
                 <title type="transcribed">Books Owned, Watson </title>, <objid>
                     <objnumber code="A1">Object 1</objnumber>
@@ -280,7 +280,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.02" dbi="BB749.1.2.MS">
+        <desc id="bb749.1.ms.02" dbi="BB749.1.2+3.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A2">Object 2</objnumber>
@@ -566,7 +566,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.03" dbi="BB749.1.3.MS">
+        <desc id="bb749.1.ms.03" dbi="BB749.1.4+5.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A3">Object 3 </objnumber>
@@ -875,7 +875,7 @@
         
         
         
-        <desc id="bb749.1.ms.04" dbi="bb749.1.4.MS">
+        <desc id="bb749.1.ms.04" dbi="BB749.1.6+7.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A4">Object 4 </objnumber>
