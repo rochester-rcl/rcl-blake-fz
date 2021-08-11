@@ -2259,7 +2259,7 @@
                             
                             </zone>
                             
-                    <zone type="marginalia" "5265,4347 2771,4417 2771,3952 4677,3935 4727,2737 5227,2746">
+                    <zone type="marginalia" points="5265,4347 2771,4417 2771,3952 4677,3935 4727,2737 5227,2746">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.09.01" justify="left">Public</l>
                                     <l n="bb749.1.ms.09.02" justify="left">Records</l>
@@ -2276,7 +2276,9 @@
                                     <l n="bb749.1.ms.09.13" justify="left">poetry inspired</l>
                                     
                                 </lg>
-                            </zone>
+                   
+                    
+                </zone>
                         
                         </zone>
                     
@@ -4192,6 +4194,7 @@
                         </lg>
                         
                         <textfoot indent="10"><catchword>subject</catchword></textfoot>
+                       </zone>
                     </zone>
                     
                     <zone type="page-right" points="4835,295 4830,4115 2875,4105 2875,295">
