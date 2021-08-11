@@ -56,6 +56,7 @@ export default function appReducer(
             },
           };
         }
+        console.log(root);
         return {
           id: pageObj.attributes.dbi,
           imageURL: formatImageURL(pageObj.attributes.dbi),

@@ -25,8 +25,8 @@ import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
 import createBackground from "../utils/image";
 
 // const xml = "/BB749.1.ms.xml";
-const xml = "BB749.1.ms.xml"
-const getImageDimensions = (url) => {
+const xml = "BB749.1.ms.xml";
+const getImageDimensions = url => {
   return new Promise((resolve, reject) => {
     const image = new Image();
     image.src = url;
@@ -40,13 +40,13 @@ const background = {
   type: "image",
   url: createBackground("#1e1e1e" /*'#ccc'*/, [100, 100]),
   crossOriginPolicy: "Anonymous",
-  ajaxWithCredentials: false,
+  ajaxWithCredentials: false
 };
 
 class FZContainer extends Component {
   state = {
     textDisplayAngle: 0,
-    background: background,
+    background: background
   };
   constructor(props: Object) {
     super(props);
@@ -59,7 +59,7 @@ class FZContainer extends Component {
   }
   updateTextDisplayAngle(angle: number): void {
     this.setState({
-      textDisplayAngle: angle,
+      textDisplayAngle: angle
     });
   }
 
@@ -70,12 +70,12 @@ class FZContainer extends Component {
         if (currentPage.imageURL) {
           getImageDimensions(
             window.location.href + "/" + currentPage.imageURL
-          ).then((dim) => {
+          ).then(dim => {
             this.setState({
               background: {
                 ...this.state.background,
-                url: createBackground("#1e1e1e", dim),
-              },
+                url: createBackground("#1e1e1e", dim)
+              }
             });
           });
         }
@@ -103,15 +103,16 @@ class FZContainer extends Component {
       showZoneROI,
       zoomToZones,
       lockRotation,
-      diplomaticMode,
+      diplomaticMode
     } = this.props;
     const { textDisplayAngle } = this.state;
+    console.log(currentPage);
     if (pageObjects) {
       let tileSources = {
         type: "image",
         url: window.location.href + "/" + currentPage.imageURL,
         crossOriginPolicy: "Anonymous",
-        ajaxWithCredentials: false,
+        ajaxWithCredentials: false
       };
       return (
         <div className="fz-app-container">
@@ -133,11 +134,11 @@ class FZContainer extends Component {
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
-              ref={(ref) => (this.openseadragonViewerRef = ref)}
+              ref={ref => (this.openseadragonViewerRef = ref)}
               tileSources={tileSources}
               options={{}}
               viewerId="fz-osd-image-viewer"
-              overlays={currentZones.map((zone) => zone.points)}
+              overlays={currentZones.map(zone => zone.points)}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
@@ -146,7 +147,7 @@ class FZContainer extends Component {
               tileSources={this.state.background}
               options={{}}
               viewerId="fz-osd-image-overlay-viewer"
-              overlays={currentZones.map((zone) => zone.points)}
+              overlays={currentZones.map(zone => zone.points)}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               parentRef={this.openseadragonViewerRef}
@@ -182,7 +183,7 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
-    lockRotation: state.lockRotation,
+    lockRotation: state.lockRotation
   };
 }
 
