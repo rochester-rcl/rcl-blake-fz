@@ -176,7 +176,7 @@
         </source>
         
         
-        <desc id="bb749.1.ms.01" dbi="BB749.1.publeaf+1.MS">
+        <desc id="bb749.1.ms.01" dbi="BB749.1.titlepg-v+preface.MS">
             <objtitle>
                 <title type="transcribed">Books Owned, Watson </title>, <objid>
                     <objnumber code="A1">Object 1</objnumber>
@@ -280,7 +280,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.02" dbi="BB749.1.2+3.MS">
+        <desc id="bb749.1.ms.02" dbi="BB749.1.publeaf+1.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A2">Object 2</objnumber>
@@ -566,7 +566,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.03" dbi="BB749.1.4+5.MS">
+        <desc id="bb749.1.ms.03" dbi="BB749.1.2+3.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A3">Object 3 </objnumber>
@@ -875,7 +875,7 @@
         
         
         
-        <desc id="bb749.1.ms.04" dbi="BB749.1.6+7.MS">
+        <desc id="bb749.1.ms.04" dbi="BB749.1.4+5.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A4">Object 4 </objnumber>
@@ -1091,7 +1091,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.05" dbi="BB749.1.5.MS">
+        <desc id="bb749.1.ms.05" dbi="BB749.1.6+7.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A5">Object 5 </objnumber>
@@ -1346,7 +1346,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.06" dbi="BB749.1.6.MS">
+        <desc id="bb749.1.ms.06" dbi="BB749.1.8+9.MS">
             <objtitle>
                <objid>
                     <objnumber code="A6">Object 6 </objnumber>
@@ -1802,7 +1802,7 @@
         </desc>
         
         
-        <desc id="bb735.1.ms.08" dbi="BB735.1.8.MS">
+        <desc id="bb735.1.ms.08" dbi="BB735.1.12+13.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A8">Object 8 </objnumber>
@@ -2027,7 +2027,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.09" dbi="BB749.1.9.MS">
+        <desc id="bb749.1.ms.09" dbi="BB749.1.14+15.MS">
             <objtitle>
                <objid>
                     <objnumber code="A9">Object 9 </objnumber>
@@ -2286,7 +2286,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.10" dbi="BB749.1.10.MS">
+        <desc id="bb749.1.ms.10" dbi="BB749.1.16+17.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A10">Object 10 </objnumber>
@@ -2439,7 +2439,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.11" dbi="BB749.1.11.MS">
+        <desc id="bb749.1.ms.11" dbi="BB749.1.22+23.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A11">Object 11 </objnumber>
@@ -2618,7 +2618,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.12" dbi="BB749.1.12.MS">
+        <desc id="bb749.1.ms.12" dbi="BB749.1.24+25.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A12">Object 12 </objnumber>
@@ -2769,7 +2769,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.13" dbi="BB749.1.13.MS">
+        <desc id="bb749.1.ms.13" dbi="BB749.1.26+27.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A13">Object 13 </objnumber>
@@ -2898,7 +2898,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.14" dbi="BB749.1.14.MS">
+        <desc id="bb749.1.ms.14" dbi="BB749.1.28+29.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A14">Object 14 </objnumber>
@@ -3051,7 +3051,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.15" dbi="BB749.1.15.MS"><!-- coordinates added nov 2020 -->
+        <desc id="bb749.1.ms.15" dbi="BB749.1.30+31.MS"><!-- coordinates added nov 2020 -->
             <objtitle>
                 <objid>
                     <objnumber code="A15">Object 15 </objnumber>
@@ -3203,7 +3203,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.16" dbi="BB749.1.16.MS">
+        <desc id="bb749.1.ms.16" dbi="BB749.1.34+35.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A16">Object 16 </objnumber>
@@ -3359,7 +3359,7 @@
                 </zone>
             </phystext>
         </desc>
-        <desc id="bb749.1.ms.17" dbi="BB749.1.17.MS">
+        <desc id="bb749.1.ms.17" dbi="BB749.1.36+37.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A17">Object 17 </objnumber>
@@ -3491,7 +3491,7 @@
             </phystext>
         </desc>
         <!-- object 17 should be pages 36-37; the object below this should be 18 (48+49)-->
-        <desc id="bb749.1.ms.18" dbi="BB749.1.18.MS">
+        <desc id="bb749.1.ms.18" dbi="BB749.1.48+49.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A18">Object 18 </objnumber>
@@ -3643,7 +3643,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.19" dbi="BB749.1.19.MS">
+        <desc id="bb749.1.ms.19" dbi="BB749.1.94+95.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A19">Object 19 </objnumber>
@@ -3787,7 +3787,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.20" dbi="BB749.1.20.MS">
+        <desc id="bb749.1.ms.20" dbi="BB749.1.108+109.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A20">Object 20 </objnumber>
@@ -3974,7 +3974,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.21" dbi="BB749.1.21.MS">
+        <desc id="bb749.1.ms.21" dbi="BB749.1.116+117.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A21">Object 21 </objnumber>
@@ -4126,7 +4126,7 @@
         </desc>
         
         
-        <desc id="bb735.1.ms.22" dbi="BB735.1.22.MS">
+        <desc id="bb735.1.ms.22" dbi="BB735.1.118+119.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A22">Object 22 </objnumber>
@@ -4297,7 +4297,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.23" dbi="BB749.1.23.MS">
+        <desc id="bb749.1.ms.23" dbi="BB749.1.120+121.MS">
             <objtitle>
                 <objid>
                     <objnumber code="A23">Object 23 </objnumber>
