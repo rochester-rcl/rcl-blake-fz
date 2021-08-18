@@ -4,7 +4,7 @@ import {
   formatImageURL,
   normalizeZone,
   flattenZones,
-  setZones,
+  setZones
 } from "../utils/data-utils";
 
 const defaultState = {
@@ -12,7 +12,7 @@ const defaultState = {
   pageObjects: null,
   currentPage: {
     id: null,
-    pageNo: 1,
+    pageNo: 1
   },
   currentZones: [],
   zones: [],
@@ -20,15 +20,15 @@ const defaultState = {
   zoomToZones: false,
   lockRotation: false,
   showZoneROI: false,
-  diplomaticMode: true,
+  diplomaticMode: true
 };
 
 function setZoneOptions(zones) {
   return zones
-    .map((zone) => {
+    .map(zone => {
       return { text: zone.type, value: zone.id };
     })
-    .filter((opt) => opt.text !== null)
+    .filter(opt => opt.text !== null)
     .sort((a, b) => {
       const levelsA = a.text.split("--").length;
       const levelsB = b.text.split("--").length;
@@ -52,11 +52,11 @@ export default function appReducer(
             attributes: {
               points: pageObj.phystext.zone.attributes
                 ? pageObj.phystext.zone.attributes.points
-                : "",
-            },
+                : ""
+            }
           };
         }
-        console.log(root);
+
         return {
           id: pageObj.attributes.dbi,
           imageURL: formatImageURL(pageObj.attributes.dbi),
@@ -64,15 +64,15 @@ export default function appReducer(
           pageDisplayNo: index + 1,
           surface: {
             zone: pageObj.phystext.surface.zone
-              .filter((zone) => {
+              .filter(zone => {
                 if (zone.constructor === Array) {
-                  return zone.some((z) => z.attributes !== undefined);
+                  return zone.some(z => z.attributes !== undefined);
                 }
                 return zone.attributes !== undefined;
               })
-              .map((zone) => normalizeZone(zone)),
-            points: pageObj.phystext.surface.attributes.points,
-          },
+              .map(zone => normalizeZone(zone)),
+            points: pageObj.phystext.surface.attributes.points
+          }
         };
       });
       let currentPage = pageObjects[0];
@@ -83,7 +83,7 @@ export default function appReducer(
         pageObjects: pageObjects,
         currentPage: currentPage,
         zones: zones,
-        zoneOptions: setZoneOptions(Object.values(zones[0])),
+        zoneOptions: setZoneOptions(Object.values(zones[0]))
       };
 
     case "CURRENT_PAGE_SET":
@@ -93,37 +93,41 @@ export default function appReducer(
         currentPage: pageInfo,
         zoneOptions: setZoneOptions(
           Object.values(state.zones[action.pageIndex])
-        ),
+        )
       };
 
     case "CURRENT_ZONES_SET":
       return {
         ...state,
-        currentZones: setZones(action.zoneIds, state.zones, state.currentPage.pageNo),
+        currentZones: setZones(
+          action.zoneIds,
+          state.zones,
+          state.currentPage.pageNo
+        )
       };
     // These aren't handled via a saga because they're so simple
     case "TOGGLE_ZOOM_TO_ZONE":
       return {
         ...state,
-        zoomToZones: action.status,
+        zoomToZones: action.status
       };
 
     case "TOGGLE_ZONE_ROI":
       return {
         ...state,
-        showZoneROI: action.status,
+        showZoneROI: action.status
       };
 
     case "TOGGLE_LOCK_ROTATION":
       return {
         ...state,
-        lockRotation: action.status,
+        lockRotation: action.status
       };
 
     case "TOGGLE_TRANSCRIPTION_MODE":
       return {
         ...state,
-        diplomaticMode: action.status,
+        diplomaticMode: action.status
       };
     default:
       return state;

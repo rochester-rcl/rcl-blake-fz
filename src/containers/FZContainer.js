@@ -106,7 +106,6 @@ class FZContainer extends Component {
       diplomaticMode
     } = this.props;
     const { textDisplayAngle } = this.state;
-    console.log(currentPage);
     if (pageObjects) {
       let tileSources = {
         type: "image",

@@ -17,7 +17,7 @@ const CLASSES = {
 };
 
 export const formatImageURL = (imageID: string): string => {
-  return imageID.toUpperCase() + "." + DEFAULT_PPI + "." + DEFAULT_FORMAT;
+  return imageID + "." + DEFAULT_PPI + "." + DEFAULT_FORMAT;
 };
 
 const anchorSubst = (element: Object): Object => {
