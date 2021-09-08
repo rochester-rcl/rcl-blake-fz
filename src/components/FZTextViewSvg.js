@@ -204,7 +204,6 @@ export class FZZoneView extends Component {
     let lineId = null;
     lg.l.forEach(line => {
       const l = line.diplomatic ? line.diplomatic : line;
-      console.log(l);
       let lineCount = l.reduce((a, b) => {
         if (typeof b === "string") {
           return a + b.length;
@@ -354,7 +353,6 @@ export class FZZoneView extends Component {
     } = this.props;
     const { fontSize } = this.state;
     if (zone.lg.length > 0) {
-      console.log(zone.points);
       return (
         <g
           x={style.left}

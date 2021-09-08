@@ -90,7 +90,7 @@ export default class FZNavigation extends Component {
         {
           className: showZoneROI ? 'fz-main-menu-button active' : 'fz-main-menu-button',
           displayIcon: 'eye',
-          displayName: 'Toggle Zone ROI',
+          displayName: 'Show Zones',
           id: 'fz-toggle-zone-roi',
           onClick: () => this.handleToggleZoneROI(),
           disabled: false,

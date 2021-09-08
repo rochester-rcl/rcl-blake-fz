@@ -19,13 +19,14 @@ import { getBounds, pointsToNumbers } from "../utils/data-utils";
 import { computeScanlineFill, getLineHeight } from "../utils/geometry";
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
+import { FormatLine } from "./SvgTextFormat";
 
 const ZONE_MAP = {
   left: 0,
   body: 1,
   head: 2,
   foot: 3,
-  right: 4
+  right: 4,
 };
 
 export default class OpenSeadragonViewer extends Component {
@@ -38,10 +39,10 @@ export default class OpenSeadragonViewer extends Component {
       showNavigationControl: true,
       zoomInButton: "zoom-in-button",
       zoomOutButton: "zoom-out-button",
-      homeButton: "home-button"
+      homeButton: "home-button",
     },
     overlayPoints: {},
-    zoom: 0
+    zoom: 0,
   };
 
   constructor(props) {
@@ -58,9 +59,8 @@ export default class OpenSeadragonViewer extends Component {
     this.handleRotate = this.handleRotate.bind(this);
     this.updateDynamicFontInfo = this.updateDynamicFontInfo.bind(this);
     this.updateOverlays = this.updateOverlays.bind(this);
-    this.convertImageToViewportPoints = this.convertImageToViewportPoints.bind(
-      this
-    );
+    this.convertImageToViewportPoints =
+      this.convertImageToViewportPoints.bind(this);
     this.fitFont = this.fitFont.bind(this);
     this.setZoneRefs = this.setZoneRefs.bind(this);
     this.renderZone = this.renderZone.bind(this);
@@ -92,7 +92,7 @@ export default class OpenSeadragonViewer extends Component {
     });
     if (this.props.overlays) {
       this.openSeaDragonViewer.addHandler("open", () => {
-        this.bounds = this.props.overlays.map(overlay =>
+        this.bounds = this.props.overlays.map((overlay) =>
           this.viewport.imageToViewportRectangle(...overlay)
         );
         if (this.showZoneROI) this.drawOverlays(this.bounds);
@@ -100,7 +100,7 @@ export default class OpenSeadragonViewer extends Component {
       });
     }
     this.setState({
-      zoom: this.viewport.getZoom(true)
+      zoom: this.viewport.getZoom(true),
     });
   }
 
@@ -110,14 +110,14 @@ export default class OpenSeadragonViewer extends Component {
     let viewportPoints;
     if (stringVal) {
       viewportPoints = points
-        .map(point => {
+        .map((point) => {
           const vp = this.viewport.imageToViewportCoordinates(...point);
           return `${vp.x},${vp.y}`;
         })
         .join(" ");
     } else {
       viewportPoints = points
-        .map(point => {
+        .map((point) => {
           const vp = this.viewport.imageToViewportCoordinates(...point);
           return vp;
         })
@@ -129,12 +129,12 @@ export default class OpenSeadragonViewer extends Component {
   updateOverlays() {
     const { overlays } = this.props;
     const { overlayPoints } = this.state;
-    overlays.forEach(overlay => {
+    overlays.forEach((overlay) => {
       if (!overlayPoints[overlay]) {
         const points = {};
         points[overlay] = this.convertImageToViewportPoints(overlay);
         this.setState({
-          overlayPoints: { ...overlayPoints, ...points }
+          overlayPoints: { ...overlayPoints, ...points },
         });
       }
     });
@@ -142,18 +142,18 @@ export default class OpenSeadragonViewer extends Component {
 
   setOptions(options) {
     let defaultOptionsCopy = { ...this.state.defaultOptions };
-    Object.keys(options).forEach(optionKey => {
+    Object.keys(options).forEach((optionKey) => {
       defaultOptionsCopy[optionKey] = options[optionKey];
     });
     return defaultOptionsCopy;
   }
 
   findCustomButton(buttonOptionKey) {
-    this.props.customButtons.find(button => button);
+    this.props.customButtons.find((button) => button);
   }
 
   bindCustomControlActions() {
-    this.props.customControlActions.map(control => {
+    this.props.customControlActions.map((control) => {
       this.openSeaDragonViewer.addControl(control);
     });
   }
@@ -211,7 +211,7 @@ export default class OpenSeadragonViewer extends Component {
         <div
           id="rotate-left-button"
           onClick={() =>
-            this.rotateLeft(angle => this.props.rotateCallback(angle))
+            this.rotateLeft((angle) => this.props.rotateCallback(angle))
           }
           className="osd-controls-button"
         >
@@ -220,7 +220,7 @@ export default class OpenSeadragonViewer extends Component {
         <div
           id="rotate-right-button"
           onClick={() =>
-            this.rotateRight(angle => this.props.rotateCallback(angle))
+            this.rotateRight((angle) => this.props.rotateCallback(angle))
           }
           className="osd-controls-button"
         >
@@ -234,7 +234,7 @@ export default class OpenSeadragonViewer extends Component {
     this.openSeaDragonViewer.addOverlay({
       element: this.viewerOverlay,
       location: new OpenSeadragon.Rect(0, 0, 1, 1),
-      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT
+      rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
     });
     this.fitFont(1.0);
   }
@@ -307,7 +307,7 @@ export default class OpenSeadragonViewer extends Component {
     this.viewport.setRotation(degrees);
   }
 
-  handlePan = panInfo => {
+  handlePan = (panInfo) => {
     const { center } = panInfo;
     this.openSeaDragonViewer.viewport.panTo(center);
   };
@@ -374,14 +374,12 @@ export default class OpenSeadragonViewer extends Component {
       />
     );*/
   }
-  // TODO need to cache fill lines
-  // TODO also need to figure out if zone.lg.length is ever > 1
   getTextPath(points, zone) {
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
     let lineHeight = getLineHeight(points, nLines);
     lineHeight = this.viewport.imageToViewportCoordinates(0, lineHeight).y;
     const fill = computeScanlineFill(points, nLines);
-    const viewportPoints = fill.map(l =>
+    const viewportPoints = fill.map((l) =>
       this.convertImageToViewportPoints(l, false)
     );
     if (nLines === 0) {
@@ -399,10 +397,10 @@ export default class OpenSeadragonViewer extends Component {
       });
     }
     const { l } = zone.lg[0];
+    // TODO need to reduce zone text
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];
-      const text = line ? line["#text"] : "";
       return (
         <g>
           <path
@@ -411,7 +409,9 @@ export default class OpenSeadragonViewer extends Component {
             d={`M${p[0].x} ${p[0].y} L${p[1].x} ${p[1].y}`}
           />
           <text style={{ fontSize: "0.001em", fill: "#ccc" }}>
-            <textPath href={`#text-path-line-${id}`}>{text}</textPath>
+            <textPath href={`#text-path-line-${id}`}>
+              <FormatLine line={line} />
+            </textPath>
           </text>
         </g>
       );
@@ -446,7 +446,7 @@ export default class OpenSeadragonViewer extends Component {
       zones,
       diplomaticMode,
       displayAngle,
-      lockRotation
+      lockRotation,
     } = this.props;
     let sortedZones = zones.sort((zoneA, zoneB) => {
       let zoneTypeA = zoneA.type;
