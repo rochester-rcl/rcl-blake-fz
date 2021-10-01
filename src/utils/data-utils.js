@@ -277,9 +277,10 @@ export const pointsToNumbers = (points: string): Array<Number> => {
   let w = usefulPoints[2] - x;
   let h = usefulPoints[3] - y;
   return [x, y, w, h];*/
-  return coords
-    .map((coord) => coord.split(",").map(val => parseInt(val, 10)));
-    // .reduce((a, b) => a.concat(parseInt(b, 10)), []);
+  return coords.map((coord) =>
+    coord.split(",").map((val) => parseInt(val, 10))
+  );
+  // .reduce((a, b) => a.concat(parseInt(b, 10)), []);
 };
 
 export const getBounds = (bounds: Array<Number>): Object => {
@@ -318,7 +319,6 @@ export function pointsToViewportPercent(
   const [_x, _y] = resolution;
   return (points) => {
     let [x, y, w, h] = pointsToNumbers(points);
-    console.log(x, y, w, h);
     x /= _x;
     w /= _x;
     y /= _y;

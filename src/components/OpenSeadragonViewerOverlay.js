@@ -1,5 +1,5 @@
 // React
-import React, { Component } from "react";
+import React, { Component, createRef } from "react";
 import ReactDOM from "react-dom";
 
 // OpenSeadragon
@@ -19,8 +19,9 @@ import { getBounds, pointsToNumbers } from "../utils/data-utils";
 import { computeScanlineFill, getLineHeight } from "../utils/geometry";
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
-import { FormatLine } from "./SvgTextFormat";
-
+import { FormatLine, Background } from "./SvgTextFormat";
+import SvgFilters from "./SvgFilters";
+import sleep from "../utils/sleep";
 const ZONE_MAP = {
   left: 0,
   body: 1,
@@ -40,6 +41,7 @@ export default class OpenSeadragonViewer extends Component {
       zoomInButton: "zoom-in-button",
       zoomOutButton: "zoom-out-button",
       homeButton: "home-button",
+      drawBackgrounds: false,
     },
     overlayPoints: {},
     zoom: 0,
@@ -57,16 +59,13 @@ export default class OpenSeadragonViewer extends Component {
     this.rotateRight = this.rotateRight.bind(this);
     this.handleZoom = this.handleZoom.bind(this);
     this.handleRotate = this.handleRotate.bind(this);
-    this.updateDynamicFontInfo = this.updateDynamicFontInfo.bind(this);
     this.updateOverlays = this.updateOverlays.bind(this);
     this.convertImageToViewportPoints =
       this.convertImageToViewportPoints.bind(this);
-    this.fitFont = this.fitFont.bind(this);
-    this.setZoneRefs = this.setZoneRefs.bind(this);
+    this.setTextRefs = this.setTextRefs.bind(this);
     this.renderZone = this.renderZone.bind(this);
-    this.updateZoneRefs = this.updateZoneRefs.bind(this);
     this.bounds = [];
-    this.zoneRefs = {};
+    this.textRefs = {};
     this.svgRef = null;
   }
 
@@ -236,70 +235,14 @@ export default class OpenSeadragonViewer extends Component {
       location: new OpenSeadragon.Rect(0, 0, 1, 1),
       rotationMode: OpenSeadragon.OverlayRotationMode.EXACT,
     });
-    this.fitFont(1.0);
   }
 
-  setZoneRefs(ref, key) {
-    this.zoneRefs[key] = ref;
-  }
-
-  updateZoneRefs() {
-    for (let key in this.zoneRefs) {
-      let val = this.zoneRefs[key];
-      if (val === null) {
-        delete this.zoneRefs[key];
-      }
-    }
-  }
-
-  updateDynamicFontInfo() {}
-
-  fitFont(zoom: Number) {
-    /*const { parentRef } = this.props;
-    const { offsetWidth } = this.viewerOverlay;
-    const viewportWidth = document.body.offsetWidth;
-    for (let key in this.zoneRefs) {
-      const elem = this.zoneRefs[key].zoneRef;
-      elem.style.fontSize = (offsetWidth / viewportWidth) * 1.5 + "vw";
-    }*/
-    // this.viewerOverlay.style.fontSize = (offsetWidth / viewportWidth) + 'vw';
-    /*for (let key in this.zoneRefs) {
-      const elem = this.zoneRefs[key].zoneRef;
-      const { offsetWidth } = elem;
-      const lines = elem.getElementsByClassName('fz-text-display-line');
-      let widest;
-      let widestElement;
-      // find the longest line
-      for (let line of lines) {
-        let width = line.firstChild.offsetWidth;
-        if (widest === undefined) {
-          widest = width;
-          widestElement = line.firstChild;
-        } else {
-          if (width > widest) {
-            widest = width;
-            widestElement = line.firstChild;
-          }
-        }
-      }
-      let fontSize = parseInt(elem.style.fontSize.split('px')[0], 10);
-      if (widest > offsetWidth) {
-        while(widestElement.offsetWidth > offsetWidth) {
-          fontSize--
-          elem.style.fontSize = (fontSize * zoom) + 'px';
-        }
-      } else {
-        while(widestElement.offsetWidth < offsetWidth) {
-          fontSize++
-          elem.style.fontSize = (fontSize * zoom) + 'px';
-        }
-      }
-    }*/
+  setTextRefs(ref, key) {
+    this.textRefs[key] = ref;
   }
 
   handleZoom(zoomInfo: Object): void {
     const { zoom, refPoint } = zoomInfo;
-    this.fitFont(zoom);
     this.openSeaDragonViewer.viewport.zoomTo(zoom, refPoint);
   }
 
@@ -318,6 +261,12 @@ export default class OpenSeadragonViewer extends Component {
 
   componentDidUpdate(prevProps: Object, prevState: Object): void {
     // this.removeTextOverlay();
+    if (this.props.zones.length !== prevProps.zones.length) {
+      // hack to make sure text is rendered before the background so we can get the correct position / size
+      this.setState({ drawBackgrounds: false }, () => {
+        sleep(100).then(this.setState({ drawBackgrounds: true }));
+      });
+    }
     if (this.props.tileSources.url !== prevProps.tileSources.url) {
       this.setTileSources(this.props.tileSources);
     }
@@ -374,7 +323,9 @@ export default class OpenSeadragonViewer extends Component {
       />
     );*/
   }
+
   getTextPath(points, zone) {
+    const { drawBackgrounds } = this.state;
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
     let lineHeight = getLineHeight(points, nLines);
     lineHeight = this.viewport.imageToViewportCoordinates(0, lineHeight).y;
@@ -397,10 +348,19 @@ export default class OpenSeadragonViewer extends Component {
       });
     }
     const { l } = zone.lg[0];
+    let lh = 0;
     // TODO need to reduce zone text
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];
+      // TODO draw gap / erasure background rectangles before lines
+      const [p1, p2] = p;
+      const w = p2.x - p1.x;
+      if (!lh) {
+        lh = viewportPoints[idx + 1][0].y - p1.y;
+      }
+      const textRefId = `${zone.id}-${idx}`;
+      const textRef = this.textRefs[textRefId];
       return (
         <g>
           <path
@@ -408,7 +368,13 @@ export default class OpenSeadragonViewer extends Component {
             id={`text-path-line-${id}`}
             d={`M${p[0].x} ${p[0].y} L${p[1].x} ${p[1].y}`}
           />
-          <text style={{ fontSize: "0.001em", fill: "#ccc" }}>
+          {drawBackgrounds && textRef ? (
+            <Background textRef={textRef} line={line} />
+          ) : null}
+          <text
+            ref={(ref) => this.setTextRefs(ref, textRefId)}
+            style={{ fontSize: "0.001em", fill: "#ccc" }}
+          >
             <textPath href={`#text-path-line-${id}`}>
               <FormatLine line={line} />
             </textPath>
@@ -421,19 +387,26 @@ export default class OpenSeadragonViewer extends Component {
   renderOverlays() {
     const { overlays } = this.props;
     const { overlayPoints } = this.state;
+    const child = (
+      <g>
+        <SvgFilters />
+        <g>
+          {overlays.map((overlay, index) => {
+            const points = overlayPoints[overlay];
+            if (points) {
+              // render zone in overlay
+              return (
+                <g>{this.getTextPath(overlay, this.props.zones[index])}</g>
+              );
+            } else {
+              return null;
+            }
+          })}
+        </g>
+      </g>
+    );
     if (overlays.length > 0) {
-      return ReactDOM.createPortal(
-        overlays.map((overlay, index) => {
-          const points = overlayPoints[overlay];
-          if (points) {
-            // render zone in overlay
-            return <g>{this.getTextPath(overlay, this.props.zones[index])}</g>;
-          } else {
-            return null;
-          }
-        }),
-        this.overlay.node()
-      );
+      return ReactDOM.createPortal(child, this.overlay.node());
     }
   }
 
