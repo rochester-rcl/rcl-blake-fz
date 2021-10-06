@@ -361,6 +361,7 @@ export default class OpenSeadragonViewer extends Component {
       }
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
+      // grab glyph size from the first character for now
       return (
         <g>
           <path
@@ -376,7 +377,7 @@ export default class OpenSeadragonViewer extends Component {
             style={{ fontSize: "0.001em", fill: "#ccc" }}
           >
             <textPath href={`#text-path-line-${id}`}>
-              <FormatLine line={line} />
+              <FormatLine line={line} textRef={textRef} />
             </textPath>
           </text>
         </g>
