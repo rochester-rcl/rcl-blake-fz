@@ -16,42 +16,150 @@ const BackgroundColors = {
   delspan: "#d3d3d3",
 };
 
+const TextColors = {
+  add: "#168bc1",
+};
+
 const Backgrounds = {
   del: DelBackground,
   gap: GapBackground,
+  subst: SubstBackground,
 };
 
 export function Space(props) {
   const { n, size, direction } = props;
-  const space = n || 0;
-  const spaceChar = `\xa0`;
+  const space = parseInt(n, 10);
+  const s = !isNaN(space) ? space : 1;
+  const spaceChar = `\xa0\xa0`;
+  const x = size * space;
+  const spaces = new Array(s).fill(spaceChar).join("");
   if (direction === "horizontal") {
-    return <tspan dx={size}>{spaceChar}</tspan>;
+    return <tspan>{spaces}</tspan>;
   } else {
-    return <tspan dy={size}>{spaceChar}</tspan>;
+    return <tspan>{spaces}</tspan>;
   }
 }
 
 export function Gap(props) {
-  const { gap, textRef } = props.line;
-  const extent = gap.extent || "1";
+  const { textRef, line } = props;
+  const { gap } = line;
+  const extent = parseInt(gap.extent, 10) || "1";
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
   return (
     <tspan textDecoration="line-through">
-      <Space extent={extent} direction="horizontal" size={size} />
+      <Space n={extent} direction="horizontal" size={size} />
     </tspan>
   );
 }
 
+export function Subst(props) {
+  const { textRef, line } = props;
+  const { subst } = line;
+  if (line["#text"].constructor === Array) {
+    if (subst.children) {
+      // collect all del / add combinations as tuples
+      let { children } = subst;
+      let substChildren = children.reduce((substChildren, child, idx) => {
+        if (child.nodeType === "del") {
+          substChildren.push([child, children[idx + 1] || null]);
+        }
+        return substChildren;
+      }, []);
+
+      const renderSubst = (substTup, previousText) => {
+        const l = { ...subst, del: substTup[0], add: substTup[1] };
+
+        return (
+          <tspan>
+            <Del line={l} textRef={textRef} />
+            <Add line={l} textRef={textRef} />
+          </tspan>
+        );
+      };
+      return line["#text"].map((text, idx) => (
+        <tspan>
+          <tspan>{text}</tspan>
+          {substChildren[idx] ? renderSubst(substChildren[idx], text) : null}
+        </tspan>
+      ));
+    }
+  }
+  // not sure if there's ever a scenario where a subst isnt' formatted like the above ^ - not implementing for now.
+  return null;
+}
+
+export function Hi(props) {
+  const { line } = props;
+  const { hi } = line;
+  let rendType =
+    hi.attributes && hi.attributes.rend ? hi.attributes.rend : null;
+
+  function renderHi(text) {
+    if (!text) {
+      return null;
+    }
+    if (rendType === "u") {
+      return <tspan textDecoration="underline">{text}</tspan>;
+    }
+    if (rendType === "i") {
+      return <tspan fontStyle="italic">{text}</tspan>;
+    }
+    return <tspan>{text}</tspan>;
+  }
+
+  if (line["#text"].constructor === Array) {
+    return line["#text"].map((t, idx) => {
+      if (idx % 2 !== 0) {
+        if (hi.children) {
+          // TODO - will this ever happen?
+          return null;
+        }
+        return (
+          <tspan>
+            {renderHi(hi["#text"])}
+            <tspan>{t}</tspan>
+          </tspan>
+        );
+      }
+      return <tspan>{t}</tspan>;
+    });
+  }
+  if (line["#text"]) {
+    return (
+      <tspan>
+        {renderHi(hi["#text"])}
+        <tspan>{line["#text"]}</tspan>
+      </tspan>
+    );
+  }
+  return null;
+}
+
+export function Add(props) {
+  const { line } = props;
+  const { add } = line;
+  if (add.attributes.place === "supralinear") {
+    return (
+      <tspan baselineShift="super" fill={TextColors.add}>
+        {add["#text"]}
+      </tspan>
+    );
+  }
+  return <tspan fill={TextColors.add}>{add["#text"]}</tspan>;
+}
+
 export function Del(props) {
-  const { del } = props.line;
+  const { textRef, line } = props;
+  const { del } = line;
   const delType = del.attributes ? del.attributes.type : DelTypes.overwrite;
   const text = del && del["#text"];
   if (!text) {
     return null;
   }
   if (del.children) {
-    const children = del.children.map((child) => <FormatLine line={child} />);
+    const children = del.children.map((child) => (
+      <FormatLine line={child} textRef={textRef} />
+    ));
     return (
       <tspan fill="red" textDecoration="line-through">
         {children}
@@ -77,6 +185,13 @@ function DelBackground(props) {
   return null;
 }
 
+function SubstBackground(props) {
+  const { x, y, w, h, node } = props;
+  return (
+    <rect x={x} y={y} width={w} height={h} fill={BackgroundColors.subst} />
+  );
+}
+
 function FormattedAttribute(props) {
   const { attribute, value, textRef } = props;
   switch (attribute) {
@@ -96,10 +211,16 @@ function FormattedLine(props) {
   const text = line["#text"] || "";
   for (const key in line) {
     if (key === "del") {
-      return <Del line={line} />;
+      return <Del line={line} textRef={textRef} />;
     }
     if (key === "gap") {
       return <Gap line={line} textRef={textRef} />;
+    }
+    if (key === "subst") {
+      return <Subst line={line} textRef={textRef} />;
+    }
+    if (key === "hi") {
+      return <Hi line={line} textRef={textRef} />;
     }
   }
   return <tspan>{text}</tspan>;
@@ -150,8 +271,7 @@ export function Background(props) {
           if (typeof prop === "object" && prop.hasOwnProperty("nodeType")) {
             // prop is a node - check if it needs a background
             if (prop.children) {
-              // TODO process child backgrounds recursively - increase offset x y
-              return prop.children.map((child, idx) => {
+              const backgrounds = prop.children.map((child, idx) => {
                 const prevNode = idx > 0 ? prop.children[idx - 1] : null;
                 return (
                   <Background
@@ -161,6 +281,17 @@ export function Background(props) {
                   />
                 );
               });
+              // node also has a background (i.e. subst)
+              if (Backgrounds[prop.nodeType]) {
+                backgrounds.push(
+                  <Background
+                    previousNode={null}
+                    textRef={textRef}
+                    line={prop}
+                  />
+                );
+              }
+              return backgrounds;
             }
             // TODO check attributes
             if (Backgrounds[prop.nodeType]) {
@@ -175,8 +306,16 @@ export function Background(props) {
       } else {
         if (Backgrounds[node.nodeType]) {
           const Component = Backgrounds[node.nodeType];
-          const text = node["#text"] || "";
-          const pos = computeTextPosition(text, textRef);
+          let text = node["#text"];
+          if (!text && node.children) {
+            // try to grab all children text
+            text = node.children.reduce((t, child) => {
+              t += child["#text"] || "";
+              return t;
+            }, "");
+          }
+
+          let pos = computeTextPosition(text, textRef);
           if (pos) {
             return <Component {...pos} node={node} textRef={textRef} />;
           } else {
