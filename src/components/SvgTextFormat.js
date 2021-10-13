@@ -88,6 +88,38 @@ export function Subst(props) {
   return null;
 }
 
+export function Choice(props) {
+  const { line } = props;
+  const { choice } = line;
+  console.log(choice);
+  if (line["#text"].constructor === Array) {
+    return line["#text"].map((t, idx) => {
+      if (idx % 2 !== 0) {
+        if (choice.children) {
+          // TODO get this working
+          return null;
+        }
+        return (
+          <tspan>
+            <tspan>{choice.orig["#text"]}</tspan>
+            <tspan>{t}</tspan>
+          </tspan>
+        );
+      }
+      return <tspan>{t}</tspan>;
+    });
+  }
+  if (line["#text"]) {
+    return (
+      <tspan>
+        {(choice.orig && choice.orig["#text"]) || null}
+        <tspan>{line["#text"]}</tspan>
+      </tspan>
+    );
+  }
+  return null;
+}
+
 export function Hi(props) {
   const { line } = props;
   const { hi } = line;
@@ -221,6 +253,9 @@ function FormattedLine(props) {
     }
     if (key === "hi") {
       return <Hi line={line} textRef={textRef} />;
+    }
+    if (key === "choice") {
+      return <Choice line={line} textRef={textRef} />;
     }
   }
   return <tspan>{text}</tspan>;
