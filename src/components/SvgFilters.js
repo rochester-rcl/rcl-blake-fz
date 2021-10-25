@@ -8,7 +8,7 @@ export default function SvgFilters() {
   return (
     <defs>
       <filter x="0" y="0" width="1" height="1" id={Filters.grayBackground}>
-        <feFlood flood-color="lightgray" result="bg" />
+        <feFlood floodColor="lightgray" result="bg" />
         <feMerge>
           <feMergeNode in="bg" />
           <feMergeNode in="SourceGraphic" />

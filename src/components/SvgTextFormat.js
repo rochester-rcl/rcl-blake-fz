@@ -1,4 +1,5 @@
 import React from "react";
+import shortid from "shortid";
 
 const DelTypes = {
   erasure: "erasure",
@@ -70,15 +71,15 @@ export function Subst(props) {
         const l = { ...subst, del: substTup[0], add: substTup[1] };
 
         return (
-          <tspan>
-            <Del line={l} textRef={textRef} />
-            <Add line={l} textRef={textRef} />
+          <tspan key="subst-children">
+            <Del key="subst-del" line={l} textRef={textRef} />
+            <Add key="subst-add" line={l} textRef={textRef} />
           </tspan>
         );
       };
       return line["#text"].map((text, idx) => (
-        <tspan>
-          <tspan>{text}</tspan>
+        <tspan key={`subst-${idx}`}>
+          <tspan key="subst-text">{text}</tspan>
           {substChildren[idx] ? renderSubst(substChildren[idx], text) : null}
         </tspan>
       ));
@@ -91,27 +92,27 @@ export function Subst(props) {
 export function Choice(props) {
   const { line } = props;
   const { choice } = line;
-  console.log(choice);
   if (line["#text"].constructor === Array) {
     return line["#text"].map((t, idx) => {
       if (idx % 2 !== 0) {
         if (choice.children) {
           // TODO get this working
+          console.log(choice);
           return null;
         }
         return (
-          <tspan>
+          <tspan key={`choice-${idx}`}>
             <tspan>{choice.orig["#text"]}</tspan>
             <tspan>{t}</tspan>
           </tspan>
         );
       }
-      return <tspan>{t}</tspan>;
+      return <tspan key={`choice-${idx}`}>{t}</tspan>;
     });
   }
   if (line["#text"]) {
     return (
-      <tspan>
+      <tspan key="key2">
         {(choice.orig && choice.orig["#text"]) || null}
         <tspan>{line["#text"]}</tspan>
       </tspan>
@@ -147,13 +148,13 @@ export function Hi(props) {
           return null;
         }
         return (
-          <tspan>
+          <tspan key={`hi-${idx}`}>
             {renderHi(hi["#text"])}
             <tspan>{t}</tspan>
           </tspan>
         );
       }
-      return <tspan>{t}</tspan>;
+      return <tspan key={`hi-${idx}`}>{t}</tspan>;
     });
   }
   if (line["#text"]) {
@@ -190,7 +191,7 @@ export function Del(props) {
   }
   if (del.children) {
     const children = del.children.map((child) => (
-      <FormatLine line={child} textRef={textRef} />
+      <FormatLine key={shortid.generate()} line={child} textRef={textRef} />
     ));
     return (
       <tspan fill="red" textDecoration="line-through">
@@ -243,7 +244,7 @@ function FormattedLine(props) {
   const text = line["#text"] || "";
   for (const key in line) {
     if (key === "del") {
-      return <Del line={line} textRef={textRef} />;
+      return <Del key={shortid.generate()} line={line} textRef={textRef} />;
     }
     if (key === "gap") {
       return <Gap line={line} textRef={textRef} />;
@@ -310,6 +311,7 @@ export function Background(props) {
                 const prevNode = idx > 0 ? prop.children[idx - 1] : null;
                 return (
                   <Background
+                    key={`background-${idx}`}
                     previousNode={prevNode}
                     textRef={textRef}
                     line={child}
@@ -320,6 +322,7 @@ export function Background(props) {
               if (Backgrounds[prop.nodeType]) {
                 backgrounds.push(
                   <Background
+                    key={prop.nodeType}
                     previousNode={null}
                     textRef={textRef}
                     line={prop}
@@ -333,7 +336,13 @@ export function Background(props) {
               const Component = Backgrounds[prop.nodeType];
               const text = prop["#text"] || "";
               const pos = computeTextPosition(text, textRef);
-              return <Component {...pos} node={prop} />;
+              return (
+                <Component
+                  key={`text-${pos.x}-${pos.y}`}
+                  {...pos}
+                  node={prop}
+                />
+              );
             }
           }
           return null;
@@ -396,6 +405,7 @@ export function FormatLine(props) {
     <tspan>
       {attributes.map((attribute) => (
         <FormattedAttribute
+          key={attribute[0]}
           attribute={attribute[0]}
           value={attribute[1]}
           textRef={textRef}

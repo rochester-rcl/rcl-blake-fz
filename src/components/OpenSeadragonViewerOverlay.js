@@ -337,7 +337,7 @@ export default class OpenSeadragonViewer extends Component {
       return viewportPoints.map((p, idx) => {
         const id = shortid.generate();
         return (
-          <g>
+          <g key={`viewport-points-${idx}`}>
             <path
               key={id}
               id={`text-path-line-${id}`}
@@ -363,7 +363,7 @@ export default class OpenSeadragonViewer extends Component {
       const textRef = this.textRefs[textRefId];
       // grab glyph size from the first character for now
       return (
-        <g>
+        <g key={`group-${idx}`}>
           <path
             key={id}
             id={`text-path-line-${id}`}
@@ -397,7 +397,7 @@ export default class OpenSeadragonViewer extends Component {
             if (points) {
               // render zone in overlay
               return (
-                <g>{this.getTextPath(overlay, this.props.zones[index])}</g>
+                <g key={`overlay-${index}`}>{this.getTextPath(overlay, this.props.zones[index])}</g>
               );
             } else {
               return null;
