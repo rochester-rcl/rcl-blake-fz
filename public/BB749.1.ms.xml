@@ -228,6 +228,8 @@
                             <l n="bb749.1.ms.01" justify="left"><hi rend="i">May</hi> 10, 1796.</l>
                           </lg>
                     </zone>
+               
+               </zone>
                     <zone type="Blake">
                      
                         <zone type="marginalia" points="2650,20 2610,4630 50,4610 90,10">
@@ -275,7 +277,7 @@
                             </zone>
                     </zone>           
                       
-                </zone>
+       
             </phystext>
         </desc>
         
