@@ -429,21 +429,21 @@
                     
                  
                         
-                    <zone type="marginala" points="110,35 2565,55 2560,405 120,410">
+                    <zone type="marginalia-1" points="110,35 2565,55 2560,405 120,410">
                             <lg justify="left">
                                 <l n="bb749.1.ms.02.01" justify="left">Read the XXIII <choice><orig>Chap</orig><reg>Chapter</reg></choice> of Matthew &#38; then condemn</l>
                                 <l n="bb749.1.ms.02.02" justify="left">Paines hatred of Priests if you dare</l>
                             </lg>
                         </zone>
                         
-                    <zone type="marginalia" points="1450,3230 1460,3360 760,3370 755,3240">
+                    <zone type="marginalia-2" points="1450,3230 1460,3360 760,3370 755,3240">
                             <lg justify="left">
                                 <l n="bb749.1.ms.02.01" justify="left"><hi rend="u"><gap extent="13" unit="character"/></hi></l>  
                             </lg>
                         </zone>
                         
                      
-                    <zone type="marginalia" points="115,2985 725,2995 760,3945 1905,3955 1895,4360 130,4330">
+                    <zone type="marginalia-3" points="115,2985 725,2995 760,3945 1905,3955 1895,4360 130,4330">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.02.04" justify="left">God made</l>
                                     <l n="bb749.1.ms.02.05" justify="left">Man happy</l>
@@ -458,7 +458,7 @@
                                 </lg>
                             </zone>
                         
-                    <zone type="marginalia" points="5345,35 5400,750 4805,760 4690,510 2725,470 2725,45">
+                    <zone type="marginalia-4" points="5345,35 5400,750 4805,760 4690,510 2725,470 2725,45">
                             <lg justify="left">
                                 <l n="bb749.1.ms.02.13" justify="left">If this first Letter is written without Railing &#38; Illiberality</l>
                                 <l n="bb749.1.ms.02.14" justify="left">I have never read one that is. To me it is all Daggers &#38;</l>
@@ -468,7 +468,7 @@
                             </lg>
                         </zone>
                     
-                    <zone type="marginalia" points="4744,599 4755,1093 2732,1110 2744,610">    
+                    <zone type="marginalia-5" points="4744,599 4755,1093 2732,1110 2744,610">    
                             <lg justify="left">
                                 <l n="bb749.1.ms.02.18" justify="left">achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
                                 <l n="bb749.1.ms.02.19" justify="left">Such is the Bishops<space extent="5"/>If such is the</l>
@@ -477,7 +477,7 @@
                             </lg>
                         </zone>
                     
-                    <zone type="marginalia" points="5417,705 5395,1411 4745,1411 4750,705">
+                    <zone type="marginalia-6" points="5417,705 5395,1411 4745,1411 4750,705">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.29" justify="left">I have not the Charity</l>
                             <l n="bb749.1.ms.02.30" justify="left">for the Bishop that</l>
@@ -488,48 +488,48 @@
                         </lg>
                     </zone>
                         
-                    <zone type="marginalia" points="4506,1661 4522,1861 3050,1866 3028,1661"> 
+                    <zone type="marginalia-7" points="4506,1661 4522,1861 3050,1866 3028,1661"> 
                             <lg justify="left">
                                 <l n="bb749.1.ms.02.22" justify="left" indent="10"><hi rend="u"><gap extent="20" unit="character"/></hi></l>  
                                 <l n="bb749.1.ms.02.23" justify="left" indent="4"><hi rend="u"><gap extent="20" unit="character"/></hi></l>
                             </lg>
                     </zone>
                             
-                    <zone type="marginalia" points="4814,2047 4838,2242 3226,2243 3204,2038"> 
+                    <zone type="marginalia-8" points="4814,2047 4838,2242 3226,2243 3204,2038"> 
                              <lg justify="left">
                                 <l n="bb749.1.ms.02.24" justify="left" indent="6"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
                              </lg>
                                 </zone>
                            
-                    <zone type="marginalia" points="4738,2509 4738,2704 2879,2696 2857,2491"> 
+                    <zone type="marginalia-9" points="4738,2509 4738,2704 2879,2696 2857,2491"> 
                                     <lg justify="left">
                                 <l n="bb749.1.ms.02.25" justify="left" indent="5"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
                                 <l n="bb749.1.ms.02.26" justify="left"><hi rend="u"><gap extent="30" unit="character"/></hi></l>
                                     </lg>
                                 </zone>
                              
-                    <zone type="marginalia" points="4739,3100 4739,3295 2880,3287 2858,3082"> 
+                    <zone type="marginalia-10" points="4739,3100 4739,3295 2880,3287 2858,3082"> 
                                <lg justify="left">
                                 <l n="bb749.1.ms.02.27" justify="left" indent="4"><hi rend="u"><gap extent="28" unit="character"/></hi></l>
                                 <l n="bb749.1.ms.02.28" justify="left"><hi rend="u"><gap extent="13" unit="character"/></hi></l>
                             </lg>
                         
                   </zone>
-                    <zone type="marginalia" points="5361,1519 5376,1885 4719,1885 4709,1509">
+                    <zone type="marginalia-11" points="5361,1519 5376,1885 4719,1885 4709,1509">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.02.35" justify="left">Dishonest</l>
                                     <l n="bb749.1.ms.02.36" justify="left">Misrepresentation</l>
                                 </lg>
                             </zone>
                     
-                    <zone type="marginalia" points="5309,1919 5319,2247 4747,2247 4733,1923">       
+                    <zone type="marginalia-12" points="5309,1919 5319,2247 4747,2247 4733,1923">       
                         <lg>
                                     <l n="bb749.1.ms.02.37" justify="left" indent="1">Priestly</l>
                                     <l n="bb749.1.ms.02.38" justify="left">Impudence</l>
                         </lg>
                     </zone>
                     
-                    <zone type="marginalia" points="5395,2952 5395,3790 4709,3780 4714,2948"> 
+                    <zone type="marginalia-13" points="5395,2952 5395,3790 4709,3780 4714,2948"> 
                         <lg>
                                     <l n="bb749.1.ms.02.39" justify="left">Contemptible</l>
                                     <l n="bb749.1.ms.02.40" justify="left">Falsehood &#38;</l>
@@ -537,7 +537,7 @@
                                 </lg>
                             
                     </zone>   
-                    <zone type="marginalia" points="5367,2419 5376,2857 4748,2852 4738,2410">
+                    <zone type="marginalia-14" points="5367,2419 5376,2857 4748,2852 4738,2410">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.02.42" justify="left">Presumptuous</l>
                                     <l n="bb749.1.ms.02.43" justify="left">Murderer</l>
@@ -550,7 +550,7 @@
                             
                         
                         
-                    <zone type="marginalia" points="5345,4016 5356,4655 2772,4611 2790,4000">
+                    <zone type="marginalia-15" points="5345,4016 5356,4655 2772,4611 2790,4000">
                             <lg justify="left">
                                 <l n="bb749.1.ms.02.48" justify="left" indent="1"><choice><orig>M<hi rend="superscript">r</hi></orig><reg>Mr</reg></choice> Paine has not extinguishd &#38; cannot Extinguish Moral</l>
                                 <l n="bb749.1.ms.02.49" justify="left">rectitude. he has Extinguishd Superstition which took the</l>
