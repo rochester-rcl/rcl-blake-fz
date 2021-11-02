@@ -232,7 +232,7 @@
                </zone>
                     <zone type="Blake">
                      
-                        <zone type="marginalia" points="2650,20 2610,4630 50,4610 90,10">
+                        <zone type="marginalia-1" points="2650,20 2610,4630 50,4610 90,10">
                             <lg justify="left">
                                 <l n="bb749.1.ms.01.01" justify="left" indent="3">Notes on the B of L's Apology for the Bible</l>
                                 <l n="bb749.1.ms.01.02" justify="left" indent="6">by William Blake</l>
@@ -263,14 +263,14 @@
                             </zone>
                         
                         
-                        <zone type="marginalia" points="2745,90 5122,109 5131,609 2740,618">
+                        <zone type="marginalia-2" points="2745,90 5122,109 5131,609 2740,618">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.01.23" justify="left">Paine has not Attacked Christianity</l>
                                     <l n="bb749.1.ms.01.24" justify="left">Watson has Defended Antichrist</l>
                                 </lg> 
                             </zone>
                     
-                        <zone type="marginalia" points="4422,2069 4413,2226 3652,2226 3652,2082">
+                        <zone type="underline-1" points="4422,2069 4413,2226 3652,2226 3652,2082">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.01.25" justify="left"><hi rend="u"><space extent="13" unit="character"/></hi></l>
                                 </lg>
