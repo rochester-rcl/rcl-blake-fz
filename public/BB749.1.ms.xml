@@ -3914,10 +3914,10 @@
                 <zone type="Blake">
                     
                    
-                    <zone type="marginalia" points="39,3935 512,3955 515,2081 49,2088">
+                    <zone type="marginalia-1" points="39,3935 512,3955 515,2081 49,2088">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.20.01" justify="left">The Gospel</l>
-                                    <l n="bb749.1.ms.20.02" justify="left">is Forgiveness</l>
+                                    <l n="bb749.1.ms.20.02" justify="left">is Forgiv<unclear resp="OS">ene</unclear>ss</l>
                                     <l n="bb749.1.ms.20.03" justify="left">of Sins &#38;</l>
                                     <l n="bb749.1.ms.20.04" justify="left">has No</l>
                                     <l n="bb749.1.ms.20.05" justify="left">Moral</l>
@@ -3932,7 +3932,7 @@
                             
                     
                    
-                    <zone type="marginalia" points="4918,2304 4922,2569 2952,2578 2952,2304"><!-- underline 3 lines -->
+                    <zone type="underline-1" points="4918,2304 4922,2569 2952,2578 2952,2304"><!-- underline 3 lines -->
                             <lg justify="left">
                                 <l n="bb749.1.ms.20.01" justify="left" indent="2"><hi rend="u"><space extent="26" unit="character"/></hi></l>
                                 <vspace extent="1"/>
@@ -3941,25 +3941,25 @@
                         </zone>
                         
                         
-                    <zone type="marginalia" points="3016,2406 3246,2946 2770,2986 2766,2400">
+                    <zone type="marginalia-2" points="3016,2406 3246,2946 2770,2986 2766,2400">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.20.01" justify="left">O Fool</l>
                                     <l n="bb749.1.ms.20.02" justify="left">Slight</l>
-                                    <l n="bb749.1.ms.20.03" justify="left">Hypocrite</l>
+                                    <l n="bb749.1.ms.20.03" justify="left">Hypo<unclear resp="OS">cri</unclear>te</l>
                                     <l n="bb749.1.ms.20.04" justify="left">&#38; Villain</l>
                                 </lg> 
                             </zone>
                         
                         
                         
-                    <zone type="marginalia" points="5343,1750 5350,2196 4910,2200 4893,1740">
+                    <zone type="marginalia-3" points="5343,1750 5350,2196 4910,2200 4893,1740">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.20.01" justify="left">Well Done</l> 
                                     <l n="bb749.1.ms.20.02" justify="left">Paine</l>
                                 </lg>
                             </zone>
                                   
-                    <zone type="marginalia" points="5328,2277 5334,2883 4939,2883 4909,2278">
+                    <zone type="marginalia-4" points="5328,2277 5334,2883 4939,2883 4909,2278">
                                    <lg justify="left">
                                     <l n="bb749.1.ms.20.01" justify="left">Yes I</l> 
                                     <l n="bb749.1.ms.20.02" justify="left">have no</l>
@@ -3967,8 +3967,7 @@
                                     <l n="bb749.1.ms.20.04" justify="left">Did</l>
                                 </lg> 
                             </zone>
-                        
-                        
+
                 </zone>
             </phystext>
         </desc>
@@ -4100,7 +4099,7 @@
                 
                 <zone type="Blake">
                    
-                    <zone type="marginalia" points="4986,2257 3088,2269 3097,2468 4292,2450 4281,2376 4994,2376">
+                    <zone type="underline-1" points="4986,2257 3088,2269 3097,2468 4292,2450 4281,2376 4994,2376">
                             <lg justify="left">
                                 <l n="bb749.1.ms.21.01" indent="17"><hi rend="u"><space extent="4" unit="character"/></hi></l>
                                 <l n="bb749.1.ms.21.02"><hi rend="u"><space extent="14" unit="character"/></hi></l>
@@ -4108,7 +4107,7 @@
                         </zone>
                         
                    
-                    <zone type="marginalia" points="5015,2194 5013,3013 5436,3015 5413,2189">
+                    <zone type="marginalia-1" points="5015,2194 5013,3013 5436,3015 5413,2189">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.21.01">O how</l>
                                     <l n="bb749.1.ms.21.02">Virtuous</l>
