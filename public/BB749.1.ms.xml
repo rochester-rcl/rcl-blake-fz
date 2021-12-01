@@ -4126,7 +4126,7 @@
         </desc>
         
         
-        <desc id="bb735.1.ms.22" dbi="BB735.1.118+119.MS">
+        <desc id="bb735.1.ms.22" dbi="BB735.1.118+119.MS"><!-- pen markings on the left could be an object note -->
             <objtitle>
                 <objid>
                     <objnumber code="A22">Object 22 </objnumber>
@@ -4251,10 +4251,10 @@
                 
                 
                 
-                <zone type="blake">
+                <zone type="Blake">
                          
                       
-                            <zone type="marginalia" points="45,1820 460,1805 465,2770 35,2750">
+                            <zone type="marginalia-1" points="45,1820 460,1805 465,2770 35,2750">
                                 
                                 <lg justify="left">
                                     <l n="bb749.1.ms.22.01" justify="left">Do or Act</l>
@@ -4268,19 +4268,19 @@
                             </zone>
                             
                             
-                        <zone type="marginalia" points="45,4420 2550,4450 2545,4085 470,4120 465,2915 55,2940">
+                        <zone type="marginalia-2" points="45,4420 2550,4450 2545,4085 470,4120 465,2915 55,2940">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.22.01" justify="left">Who does</l>
-                                    <l n="bb749.1.ms.22.02" justify="left">the Bishop</l>
+                                    <l n="bb749.1.ms.22.02" justify="left">the Bis<unclear resp="OS">h</unclear>op</l>
                                     <l n="bb749.1.ms.22.03" justify="left">call Bad</l>
                                     <l n="bb749.1.ms.22.04" justify="left">Men</l>
                                     <l n="bb749.1.ms.22.05" justify="left">Are they</l>
-                                    <l n="bb749.1.ms.22.06" justify="left">the Publicans</l>
+                                    <l n="bb749.1.ms.22.06" justify="left">the Publica<unclear resp="OS">ns</unclear></l>
                                     <l n="bb749.1.ms.22.07" justify="left">&#38; Sinners</l>
                                     <l n="bb749.1.ms.22.08" justify="left">that Christ</l>
                                     <l n="bb749.1.ms.22.09" justify="left">loved to</l>
-                                    <l n="bb749.1.ms.22.10" justify="left">associate with Does God Love the Righteous according</l>
-                                    <l n="bb749.1.ms.22.11" justify="left">to the Gospel or does he cast them off</l>
+                                    <l n="bb749.1.ms.22.10" justify="left">associate with Does God Love the Rig<unclear resp="OS">h</unclear>teous according</l>
+                                    <l n="bb749.1.ms.22.11" justify="left">to the Gospel or does he <unclear resp="OS">c</unclear>ast them off</l>
                                 </lg>
                             </zone>
                         
@@ -4365,14 +4365,14 @@
                 <zone type="Blake">
                 
                         
-                    <zone type="marginalia" points="382,144 2748,158 2751,544 389,527">
+                    <zone type="marginalia-1" points="382,144 2748,158 2751,544 389,527">
                             <lg justify="left">
                                 <l n="bb749.1.ms.23.01" justify="left">It appears to me Now that Tom Paine is a</l>
                                 <l n="bb749.1.ms.23.02" justify="left">better Christian than the Bishop</l>
                             </lg>
                         </zone>
                         
-                    <zone type="marginalia" points="283,3943 2818,3982 2844,4504 292,4430">
+                    <zone type="marginalia-2" points="283,3943 2818,3982 2844,4504 292,4430">
                             <lg justify="left">
                                 <l n="bb749.1.ms.23.01" justify="left">I have read this Book with attention &#38; find that the Bishop</l>
                                 <l n="bb749.1.ms.23.02" justify="left">has only hurt Paines heel while Paine has broken his head</l>
