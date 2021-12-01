@@ -3643,7 +3643,7 @@
         </desc>
         
         
-        <desc id="bb749.1.ms.19" dbi="BB749.1.94+95.MS">
+        <desc id="bb749.1.ms.19" dbi="BB749.1.94+95.MS"><!-- add underline zones and discuss handshift issue -->
             <objtitle>
                 <objid>
                     <objnumber code="A19">Object 19 </objnumber>
@@ -3764,14 +3764,14 @@
                 
                 <zone type="Blake">
                     
-                    <zone type="marginalia" points="5063,2617 5428,2612 5427,2786 5062,2790">
+                    <zone type="marginalia-1" points="5063,2617 5428,2612 5427,2786 5062,2790">
                         
                         <lg justify="left" >
                                     <l n="bb749.1.ms.19.01" justify="left">A:D:150</l>
                                </lg>
                             </zone>
                     
-                    <zone type="marginalia" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
+                    <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.19.01" justify="left">This is No</l>
                                     <l n="bb749.1.ms.19.02" justify="left">Certain</l>
