@@ -994,7 +994,7 @@
 
                 
                 <zone type="Blake">
-                    <zone type="marginalia">
+                    <zone type="marginalia-1">
                        
                             <lg justify="left">
                                 <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
@@ -1019,7 +1019,7 @@
                             </lg>
                     </zone>
                         
-                        <zone type="marginalia">
+                        <zone type="marginalia-2">
                            
                                 <lg justify="left">
                                     <l n="bb749.1.ms.04.01" justify="left">He who stands</l>
@@ -1040,7 +1040,7 @@
                         
                         
           
-                    <zone type="marginalia">
+                    <zone type="marginalia-3">
                     
                             <lg justify="left">
                                 <l n="bb749.1.ms.04.01" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
@@ -1210,14 +1210,14 @@
                 
                 <zone type="Blake">
                    
-                    <zone type="marginalia" points="2640,53 2646,267 1920,253 1926,380 193,367 193,53">
+                    <zone type="marginalia-1" points="2640,53 2646,267 1920,253 1926,380 193,367 193,53">
                             <lg justify="left">
                                 <l n="bb749.1.ms.05.01" justify="left">the Holy Ghost who in Paine strives with Christendom</l>
                                 <l n="bb749.1.ms.05.02" justify="left">as in Christ he strove with the Jews</l>                
                             </lg>
                         </zone>
                         
-                    <zone type="marginalia" points="806,2640 2473,2613 2460,2827 813,2853">
+                    <zone type="underline-1" points="806,2640 2473,2613 2460,2827 813,2853">
                             <lg justify="left">
                                 <l n="bb749.1.ms.05.01" justify="left" indent="5"><hi rend="u"><gap extent="24"/></hi></l>
                                 <l n="bb749.1.ms.05.02" justify="left" indent="5"><hi rend="u"><gap extent="12"/></hi></l>
@@ -1225,7 +1225,7 @@
                         </zone>
                         
                       
-                    <zone type="marginalia" points="693,433 706,1913 140,1960 133,400">
+                    <zone type="marginalia-2" points="693,433 706,1913 140,1960 133,400">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.05.01" justify="left">The Bible says</l>
                                     <l n="bb749.1.ms.05.02" justify="left">that God formed</l>
@@ -1243,7 +1243,7 @@
                                     <l n="bb749.1.ms.05.14" justify="left">air</l>
                                 </lg>
                             </zone>
-                    <zone type="marginalia" points="153,1953 693,1913 706,2560 153,2587">
+                    <zone type="marginalia-3" points="153,1953 693,1913 706,2560 153,2587">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.05.01" justify="left">Natural Religion</l>
                                     <l n="bb749.1.ms.05.02" justify="left">is the voice of</l>
@@ -1255,7 +1255,7 @@
                                 </lg>
                             </zone>
                             
-                    <zone type="marginalia" points="706,2567 680,3547 146,3600 126,2600">
+                    <zone type="marginalia-4" points="706,2567 680,3547 146,3600 126,2600">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.05.01" justify="left">Horrible</l>
                                     <l n="bb749.1.ms.05.02" justify="left">the Bishop</l>
@@ -1274,7 +1274,7 @@
                     
                 
                         
-                    <zone type="marginalia" points="5359,3101 4780,3100 4740,533 2846,527 2739,47 5339,61">
+                    <zone type="marginalia-5" points="5359,3101 4780,3100 4740,533 2846,527 2739,47 5339,61">
                             <lg justify="left">
                                 <l n="bb749.1.ms.05.01" justify="left">There is vast difference between an accident brought on by a mans own</l>
                                 <l n="bb749.1.ms.05.02" justify="left">carelessness &#38; a destruction from the designs of another. The Earthquakes</l>
@@ -1307,7 +1307,7 @@
                             </lg>
                         </zone>
                         
-                    <zone type="marginalia" points="4633,2327 4620,2507 2933,2507 2940,2327">
+                    <zone type="underline-2" points="4633,2327 4620,2507 2933,2507 2940,2327">
                             <lg justify="left">
                                 <l n="bb749.1.ms.05.01" justify="left"><hi rend="u"><gap extent="30"/></hi></l>
                             </lg>
@@ -1315,7 +1315,7 @@
                         
                    
                             
-                            <zone type="marginalia" points="5391,4046 5336,3100 4772,3128 4781,4000">
+                            <zone type="marginalia-6" points="5391,4046 5336,3100 4772,3128 4781,4000">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.05.01" justify="left">That mankind</l>
                                     <l n="bb749.1.ms.05.02" justify="left">are in a less</l>
@@ -1329,7 +1329,7 @@
                             </zone>
                             
                         
-                    <zone type="marginalia" points="5354,3991 5336,4482 2781,4491 2745,3991">
+                    <zone type="marginalia-7" points="5354,3991 5336,4482 2781,4491 2745,3991">
                             <lg justify="left">
                                 <l n="bb749.1.ms.05.01" justify="left">Phidias, Glycon. Aristotle &#38;<hi rend="superscript">c</hi> let all their works witness</l>
                                 <l n="bb749.1.ms.05.02" justify="left">ine <del type="overstrike">the Deists</del> says that Christianity put a stop to improvement<note>Bentley assumes "ine" is part of Blake writing "Paine."</note></l>
