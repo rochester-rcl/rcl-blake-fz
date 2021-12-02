@@ -2157,7 +2157,7 @@
                 
                 
                 <zone type="Blake">
-                    <zone type="marginalia" points="65,35 2559,41 2559,571 65,553" >
+                    <zone type="marginalia-1" points="65,35 2559,41 2559,571 65,553" >
                         
                             <lg justify="left">
                                 <l n="bb749.1.ms.09.01" justify="left">If Christ could not do miracles because of Unbelief the reason alledged</l>
@@ -2168,7 +2168,7 @@
                         
                     </zone>
                     
-                    <zone type="marginalia" points="71,1141 559,1152 583,3893 2595,3893 2571,4364 89,4364">
+                    <zone type="marginalia-2" points="71,1141 559,1152 583,3893 2595,3893 2571,4364 89,4364">
                         
                                 <lg justify="left"> 
                                     <l n="bb749.1.ms.09.01" justify="left">Prophets in</l>
@@ -2206,7 +2206,7 @@
                         
                       
                     
-                    <zone type="marginalia" points="2704,22 5247,23 5247,729 4830,729 4330,352 2700,405">
+                    <zone type="marginalia-3" points="2704,22 5247,23 5247,729 4830,729 4330,352 2700,405">
                     
                             <lg justify="left">
                                 <l n="bb749.1.ms.09.01" justify="left">Nothing can be more contemptible than to suppose </l>
@@ -2217,22 +2217,20 @@
                             </lg>
                         </zone>
                     
-                    <zone>
-                        <lg justify="left" points="4430,3258 4846,3245 4846,3368 4428,3380">
+                    <zone type="underline-1" points="4430,3258 4846,3245 4846,3368 4428,3380">
+                        <lg justify="left">
                                 <l n="bb749.1.ms.09.01" justify="left" indent="32"><hi rend='u'><gap extent="6"/></hi></l>
                         </lg>
                     </zone>
                     
-                    <zone>
-                        <lg justify="left" points="3835,3577 4677,3582 4689,3699 3841,3700">
+                    <zone type="underline-2" points="3835,3577 4677,3582 4689,3699 3841,3700">
+                        <lg justify="left">
                             <l n="bb749.1.ms.09.01" justify="left" indent="20"><hi rend='u'><gap extent="6"/></hi></l>
                         </lg>
                     </zone>
                     
   
-                        
-                        
-                    <zone type="marginalia" points="4782,764 5273,773 5282,2737 4809,2718">
+                    <zone type="marginalia-4" points="4782,764 5273,773 5282,2737 4809,2718">
                            
                                 <lg justify="left">
                                     <l n="bb749.1.ms.09.01" justify="left">Of what</l>
@@ -2257,7 +2255,7 @@
                             
                             </zone>
                             
-                    <zone type="marginalia" points="5265,4347 2771,4417 2771,3952 4677,3935 4727,2737 5227,2746">
+                    <zone type="marginalia-5" points="5265,4347 2771,4417 2771,3952 4677,3935 4727,2737 5227,2746">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.09.01" justify="left">Public</l>
                                     <l n="bb749.1.ms.09.02" justify="left">Records</l>
@@ -2274,8 +2272,7 @@
                                     <l n="bb749.1.ms.09.13" justify="left">poetry inspired</l>
                                     
                                 </lg>
-                   
-                    
+                     
                 </zone>
                         
                         </zone>
