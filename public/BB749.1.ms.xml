@@ -2407,7 +2407,7 @@
                 
                 <zone type="Blake">
                    
-                    <zone type="marginalia" points="2629,29 2631,462 537,487 534,1440 88,1441 111,47">
+                    <zone type="marginalia-1" points="2629,29 2631,462 537,487 534,1440 88,1441 111,47">
                             <lg justify="left">
                                 <l n="bb749.1.ms.10.01" justify="left">If historical facts can be written by inspiration <choice><orig>Miltons</orig><reg>Milton's</reg></choice> Paradise</l>
                                 <l n="bb749.1.ms.10.02" justify="left">Lost is as true as Genesis or Exodus. but the Evidence is</l>
@@ -2423,7 +2423,7 @@
                         </zone>
                     
                     
-                    <zone type="marginalia" points="5290,2515 5265,3171 4825,3181 4843,2518">
+                    <zone type="marginalia-2" points="5290,2515 5265,3171 4825,3181 4843,2518">
                        
                                 <lg justify="left">
                                     <l n="bb749.1.ms.10.01" justify="left">Paine says</l>
@@ -2565,7 +2565,7 @@
                 
                 <zone type="Blake">
                     
-                    <zone type="marginalia" points="470,64 2912,47 2906,712 994,735 912,3947 2859,3947 2865,4617 447,4623">
+                    <zone type="marginalia-1" points="470,64 2912,47 2906,712 994,735 912,3947 2859,3947 2865,4617 447,4623">
                        
                             <lg justify="left">
                                 <l n="bb749.1.ms.11.01" justify="left"><add type="insertion" place="supralinear">books in the</add></l>
