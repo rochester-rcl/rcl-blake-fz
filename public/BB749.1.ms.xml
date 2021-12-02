@@ -1726,11 +1726,8 @@
                 
                 
                 
-                <zone type="blake">
-                    
-                    
-                        
-                    <zone type="marginalia" points= "2490,839 580,839 650,3889 2490,3889 2540,4469 60,4509 88,114 2523,79"><!-- marginalia 1 -->
+                <zone type="Blake">
+                 <zone type="marginalia-1" points= "2490,839 580,839 650,3889 2490,3889 2540,4469 60,4509 88,114 2523,79"><!-- marginalia 1 -->
                             
                             <lg justify="left">
                                 <l n="bb749.1.ms.07.01" justify="left" indent="1">The trifles which the Bishop has combated in the following</l>
@@ -1771,7 +1768,7 @@
                         </zone>
                         
                     
-                    <zone type="marginalia" points="4673,3900 2719,3954 2700,4509 5227,4463 5227,2518 4564,2527"><!-- marginalia 2 -->
+                    <zone type="marginalia-2" points="4673,3900 2719,3954 2700,4509 5227,4463 5227,2518 4564,2527"><!-- marginalia 2 -->
                                 
                                 <lg justify="left">
                                     <l n="bb749.1.ms.07.01" justify="left">He who writes</l>
