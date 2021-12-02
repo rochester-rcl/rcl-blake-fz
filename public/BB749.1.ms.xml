@@ -1917,7 +1917,7 @@
                 </zone>
                 
                 <zone type="Blake">  
-                    <zone type="marginalia" points="2672,50 2645,478 678,500 678,2083 67,2083 72,33">
+                    <zone type="marginalia-1" points="2672,50 2645,478 678,500 678,2083 67,2083 72,33">
                       
                             <lg justify="left">
                                 <l n="bb749.1.ms.08.01" indent="1">If Paine means that a history <choice><orig>tho</orig><reg>though</reg></choice> True in itself is False When it</l>
@@ -1941,7 +1941,7 @@
                                 <l n="bb749.1.ms.08.19"><hr width="7" align="left"/></l>
                             </lg>
                         
-                        <zone type="marginalia"  points="55,2118 673,2091 673,3382 64,3391">
+                        <zone type="marginalia-2"  points="55,2118 673,2091 673,3382 64,3391">
                             
                                 <lg justify="left">
                                     <l n="bb749.1.ms.08.01" indent="1">Jesus could</l>
@@ -1958,7 +1958,7 @@
                                     <l n="bb749.1.ms.08.12">witness one</l>
                                 </lg>
                             </zone>
-                        <zone type="marginalia" points="109,3400 664,3409 678,3972 2606,4000 2583,4555 117,4517">
+                        <zone type="marginalia-3" points="109,3400 664,3409 678,3972 2606,4000 2583,4555 117,4517">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.08.01" indent="1">The manner</l>
                                     <l n="bb749.1.ms.08.02">of a miracle</l>
@@ -1975,7 +1975,7 @@
                     </zone>
                     
                     
-                <zone type="marginalia" points="4767,3989 2767,3983 2778,4511 5283,4439 5266,34 2733,39 2733,450 4711,450">
+                <zone type="marginalia-4" points="4767,3989 2767,3983 2778,4511 5283,4439 5266,34 2733,39 2733,450 4711,450">
                       
                             <lg justify="left">
                                 <l n="bb749.1.ms.08.01">the armies of Europe with a small panphlet look over the</l>
