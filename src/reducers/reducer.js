@@ -19,7 +19,7 @@ const defaultState = {
   zoneOptions: [],
   zoomToZones: false,
   lockRotation: false,
-  showZoneROI: false,
+  showZoneROI: true,
   diplomaticMode: true
 };
 

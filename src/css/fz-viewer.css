@@ -29,16 +29,63 @@
   background-color: #454545;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   padding: 5px 0px 5px 0px;
+  position: relative;
 }
 
 .fz-filter-dropdown {
-  background-color: #8A8B8B !important;
+  background-color: #000 !important;
   border-radius: 0px !important;
+  border-bottom: 1px solid #454545;
+}
+
+
+
+.fz-filter-dropdown-toggle-container {
+  display: flex;
+  color: #fff;
+}
+
+.fz-filter-dropdown.active {
+  border-color: #E9BC47 !important;
+  border-bottom: 1px solid #454545 !important;
+}
+
+.fz-filter-dropdown:focus {
+  border: 1px solid #454545;
+  outline: 1px solid #454545;
+}
+
+.fz-filter-dropdown .dropdown.icon {
+  color: #fff !important;
+}
+
+.fz-filter-dropdown input {
+  color:#fff;
+}
+
+.fz-filter-dropdown .ui.label {
+  color: #fff;
+  background: none;
+}
+
+.fz-filter-dropdown .menu {
+  background: #454545 !important;
+  border-color: #E9BC47 !important;
+}
+
+.fz-filter-dropdown .menu .item {
+  color: #fff !important;
 }
 
 .fz-filter-dropdown-container {
-  width: 30%;
+  width: 40%;
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 100%;
+  z-index: 2;
 }
 
 .fz-toggle-transcription-mode-button {

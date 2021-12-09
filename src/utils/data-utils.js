@@ -255,7 +255,7 @@ export const setZones = (
 ): Array<Object> => {
   let currentZones = [];
   zoneIds.forEach((id) => {
-    if (zones[index][id]) {
+    if (zones[index][id] && zones[index][id].points) {
       currentZones.push(zones[index][id]);
     }
   });

@@ -96,8 +96,8 @@ export function Choice(props) {
     return line["#text"].map((t, idx) => {
       if (idx % 2 !== 0) {
         if (choice.children) {
-          // TODO get this working
           console.log(choice);
+          // TODO get this working
           return null;
         }
         return (
@@ -138,6 +138,11 @@ export function Hi(props) {
       return <tspan fontStyle="italic">{text}</tspan>;
     }
     return <tspan>{text}</tspan>;
+  }
+
+  if (!line["#text"]) {
+    console.log(line);
+    return null;
   }
 
   if (line["#text"].constructor === Array) {
@@ -336,6 +341,7 @@ export function Background(props) {
               const Component = Backgrounds[prop.nodeType];
               const text = prop["#text"] || "";
               const pos = computeTextPosition(text, textRef);
+              console.log(pos);
               return (
                 <Component
                   key={`text-${pos.x}-${pos.y}`}

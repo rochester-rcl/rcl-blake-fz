@@ -133,16 +133,19 @@ class FZContainer extends Component {
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
+              key="osd-viewer"
               ref={ref => (this.openseadragonViewerRef = ref)}
               tileSources={tileSources}
               options={{}}
               viewerId="fz-osd-image-viewer"
               overlays={currentZones.map(zone => zone.points)}
+              zones={currentZones}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
               rotateCallback={this.updateTextDisplayAngle}
             />
             <OpenSeadragonViewerOverlay
+              key="osd-viewer-overlay"
               tileSources={this.state.background}
               options={{}}
               viewerId="fz-osd-image-overlay-viewer"
