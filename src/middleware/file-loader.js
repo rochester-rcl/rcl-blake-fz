@@ -14,31 +14,54 @@ function xmlToJson(xml) {
     if (xml.hasChildNodes()) {
       if (nodeName === "handShift") {
         let elements = [];
-        xml.childNodes.forEach(child => {
+        xml.childNodes.forEach((child) => {
           elements.push(xmlToJson(child));
         });
         obj[nodeName] = elements;
       }
       if (nodeName === "del") {
         let elements = [];
-        xml.childNodes.forEach(child => {
+        xml.childNodes.forEach((child) => {
           elements.push(xmlToJson(child));
         });
         obj["children"] = elements;
       }
       if (nodeName === "add") {
         let elements = [];
-        xml.childNodes.forEach(child => {
+        xml.childNodes.forEach((child) => {
           elements.push(xmlToJson(child));
         });
         obj["children"] = elements;
       }
       if (nodeName === "subst") {
         let elements = [];
-        xml.childNodes.forEach(child => {
+        xml.childNodes.forEach((child) => {
           elements.push(xmlToJson(child));
         });
         obj["children"] = elements;
+      }
+      if (nodeName === "choice") {
+        // find index of choice in line text
+        let parent = xml.parentNode;
+        let nodes = Array.from(parent.childNodes);
+        let text = "";
+        for (let node of nodes) {
+          if (node === xml) {
+            obj.textPosition = text.length;
+          } else {
+            if (node.nodeName === "choice") {
+              let orig = Array.from(node.childNodes).find(
+                (c) => c.nodeName === "orig"
+              );
+              if (orig) {
+                text += orig.textContent;
+              }
+            } else {
+              text += node.textContent;
+            }
+          }
+          // get text index based on all previous nodes
+        }
       }
       if (nodeName === "zone") {
         // child zones get processed recursively in formatZone
@@ -78,7 +101,7 @@ function xmlToJson(xml) {
       if (nodeName === "diplomatic") {
         let elements = [];
         if (item.hasChildNodes()) {
-          item.childNodes.forEach(child => {
+          item.childNodes.forEach((child) => {
             elements.push(xmlToJson(child));
           });
           if (item.attributes) {
@@ -99,7 +122,7 @@ function xmlToJson(xml) {
       } else if (nodeName === "stage") {
         let elements = [];
         if (item.hasChildNodes()) {
-          item.childNodes.forEach(child => {
+          item.childNodes.forEach((child) => {
             let toJson = xmlToJson(child);
             elements.push(xmlToJson(child));
           });
@@ -144,7 +167,7 @@ function formatLineGroup(lg, parent, index) {
     let vspace = parent
       .slice(0, index)
       .reverse()
-      .find(child => {
+      .find((child) => {
         return child.nodeName === "vspace";
       });
     if (vspace) {
@@ -157,8 +180,8 @@ function formatLineGroup(lg, parent, index) {
 }
 
 export function fetchXML(xmlPath) {
-  return fetch(xmlPath).then(xml => {
-    return xml.text().then(xmlText => {
+  return fetch(xmlPath).then((xml) => {
+    return xml.text().then((xmlText) => {
       let parser = new DOMParser();
       let result = parser.parseFromString(xmlText, "text/xml");
       let toJson = xmlToJson(result);
@@ -183,14 +206,14 @@ function formatZone(xml, obj) {
 
       if (child.nodeName === "columns") {
         let children = Array.from(child.childNodes);
-        let cols = children.filter(col => col.nodeName === "column");
-        columns = cols.map(col => {
+        let cols = children.filter((col) => col.nodeName === "column");
+        columns = cols.map((col) => {
           return {
             lineGroups: Array.from(col.children)
-              .filter(child => child.nodeName === "lg")
-              .map(lg => {
+              .filter((child) => child.nodeName === "lg")
+              .map((lg) => {
                 return formatLineGroup(lg);
-              })
+              }),
           };
         });
         if (child.attributes.orient !== undefined) {

@@ -92,11 +92,34 @@ export function Subst(props) {
 export function Choice(props) {
   const { line } = props;
   const { choice } = line;
+
+  function formatTextWithChoice(text, choice) {
+    let finalText = text;
+    function formatChoiceText(ch, t) {
+      return ch.textPosition !== undefined
+        ? [
+            t.slice(0, ch.textPosition),
+            (ch.orig && ch.orig["#text"]) || "",
+            t.slice(ch.textPosition, t.length),
+          ].join("")
+        : "";
+    }
+    if (choice.length) {
+      finalText = choice.reduce((a, b) => formatChoiceText(b, a), finalText);
+    } else {
+      finalText = formatChoiceText(choice, finalText);
+    }
+    return (
+      <tspan key="key2">
+        <tspan>{finalText}</tspan>
+      </tspan>
+    );
+  }
   if (line["#text"].constructor === Array) {
+    console.log("TODO - solve how to render this");
     return line["#text"].map((t, idx) => {
       if (idx % 2 !== 0) {
         if (choice.children) {
-          console.log(choice);
           // TODO get this working
           return null;
         }
@@ -111,12 +134,7 @@ export function Choice(props) {
     });
   }
   if (line["#text"]) {
-    return (
-      <tspan key="key2">
-        {(choice.orig && choice.orig["#text"]) || null}
-        <tspan>{line["#text"]}</tspan>
-      </tspan>
-    );
+    return formatTextWithChoice(line["#text"], choice);
   }
   return null;
 }
@@ -341,7 +359,6 @@ export function Background(props) {
               const Component = Backgrounds[prop.nodeType];
               const text = prop["#text"] || "";
               const pos = computeTextPosition(text, textRef);
-              console.log(pos);
               return (
                 <Component
                   key={`text-${pos.x}-${pos.y}`}
