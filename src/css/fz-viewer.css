@@ -21,6 +21,32 @@
   border-radius: 0px !important;
 }
 
+#fz-main-menu-page-selector {
+  display: flex;
+  border-radius: 0px !important;
+  align-items: center;
+  background: #767676;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Lato", "Helvetica Neue", "Arial", "sans-serif";
+  justify-content: flex-start;
+}
+
+.fz-main-menu-page-selector-input {
+  display: flex;
+  background: #767676;
+  padding: 3px;
+}
+
+.fz-main-menu-page-selector-input input {
+  font-family: "Lato", "Helvetica Neue", "Arial", "sans-serif";
+  font-size: 14px;
+  font-weight: 600 !important;
+  color: #fff !important;
+  background: #1e1e1e !important;
+  max-width: 75px !important;
+}
+
 .fz-main-menu-button.active {
   color: #E9BC47 !important;
 }

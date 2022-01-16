@@ -115,26 +115,10 @@ export function Choice(props) {
       </tspan>
     );
   }
-  if (line["#text"].constructor === Array) {
-    console.log("TODO - solve how to render this");
-    return line["#text"].map((t, idx) => {
-      if (idx % 2 !== 0) {
-        if (choice.children) {
-          // TODO get this working
-          return null;
-        }
-        return (
-          <tspan key={`choice-${idx}`}>
-            <tspan>{choice.orig["#text"]}</tspan>
-            <tspan>{t}</tspan>
-          </tspan>
-        );
-      }
-      return <tspan key={`choice-${idx}`}>{t}</tspan>;
-    });
-  }
   if (line["#text"]) {
-    return formatTextWithChoice(line["#text"], choice);
+    return line["#text"].constructor === Array
+      ? formatTextWithChoice(line["#text"].join(""), choice)
+      : formatTextWithChoice(line["#text"], choice);
   }
   return null;
 }

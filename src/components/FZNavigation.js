@@ -4,7 +4,7 @@
 import React, { Component } from "react";
 
 // semantic ui
-import { Button, Checkbox } from "semantic-ui-react";
+import { Button, Checkbox, Input, Label } from "semantic-ui-react";
 
 // Dropdown
 import FilterDropdown from "./FilterDropdown";
@@ -12,6 +12,7 @@ import FilterDropdown from "./FilterDropdown";
 export default class FZNavigation extends Component {
   state = {
     showDropdown: false,
+    pageNo: null,
   };
   constructor(props) {
     super(props);
@@ -21,6 +22,21 @@ export default class FZNavigation extends Component {
     this.handleLockRotation = this.handleLockRotation.bind(this);
     this.handleToggleTranscriptionMode =
       this.handleToggleTranscriptionMode.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ pageNo: this.props.currentPageDisplay });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.pageNo !== null && prevState.pageNo !== this.state.pageNo) {
+      let pageInt = parseInt(this.state.pageNo, 10);
+      if (!isNaN(pageInt) && pageInt > 1 && pageInt < this.props.maxPages) {
+        this.handleGoToPage(pageInt - 1);
+      }
+    } else if (this.props.currentPageDisplay !== this.state.pageNo) {
+      this.setState({ pageNo: this.props.currentPageDisplay });
+    }
   }
 
   handleToggleZoneROI() {
@@ -45,6 +61,10 @@ export default class FZNavigation extends Component {
 
   handleDropdownToggle = () => {
     this.setState({ showDropdown: !this.state.showDropdown });
+  };
+
+  handleSetPageNo = (_, { value }) => {
+    this.setState({ pageNo: value });
   };
 
   handleGoToPage(pageNo) {
@@ -148,12 +168,17 @@ export default class FZNavigation extends Component {
             disabled={menuItem.disabled}
           />
         ))}
-        <Button
-          className="fz-main-menu-button"
-          key={"current_page"}
-          content={"Page " + currentPageDisplay + " of " + maxPages}
-          disabled={true}
-        />
+        <Input
+          type="text"
+          labelPosition="right"
+          className="fz-main-menu-page-selector-input"
+          value={this.state.pageNo}
+          onChange={this.handleSetPageNo}
+        >
+          <Label id="fz-main-menu-page-selector">Page</Label>
+          <input />
+          <Label id="fz-main-menu-page-selector">{`of ${maxPages}`}</Label>
+        </Input>
         <FilterDropdown
           className="fz-zone-select-dropdown"
           placeholderText="Zones"
