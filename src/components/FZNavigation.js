@@ -9,10 +9,12 @@ import { Button, Checkbox, Input, Label } from "semantic-ui-react";
 // Dropdown
 import FilterDropdown from "./FilterDropdown";
 
+import sleep from "../utils/sleep";
+
 export default class FZNavigation extends Component {
   state = {
     showDropdown: false,
-    pageNo: null,
+    pageNo: null
   };
   constructor(props) {
     super(props);
@@ -22,6 +24,7 @@ export default class FZNavigation extends Component {
     this.handleLockRotation = this.handleLockRotation.bind(this);
     this.handleToggleTranscriptionMode =
       this.handleToggleTranscriptionMode.bind(this);
+    this.filterRef = React.createRef(null);
   }
 
   componentDidMount() {
@@ -66,11 +69,14 @@ export default class FZNavigation extends Component {
   handleSetPageNo = (_, { value }) => {
     this.setState({ pageNo: value });
   };
-
+  // TODO fix resetFilter infinite loop
   handleGoToPage(pageNo) {
-    this.refs.zoneFilterDropdown.clearSelection();
     this.props.setZonesAction({ currentZones: [] });
     this.props.goToPageAction(pageNo);
+    if (this.filterRef.current) {
+      this.filterRef.current.resetFilter();
+    }
+
   }
 
   handleToggleTranscriptionMode(event, data) {
@@ -98,6 +104,7 @@ export default class FZNavigation extends Component {
       diplomaticMode,
     } = this.props;
     const { showDropdown } = this.state;
+    
     let controls = [
       {
         className: "fz-main-menu-button",
@@ -184,9 +191,9 @@ export default class FZNavigation extends Component {
           placeholderText="Zones"
           options={zoneOptions}
           filterKey="currentZones"
-          ref="zoneFilterDropdown"
           updateFilterParams={setZonesAction}
           show={showDropdown}
+          ref={this.filterRef}
         />
         <Checkbox
           className="fz-toggle-transcription-mode-button"

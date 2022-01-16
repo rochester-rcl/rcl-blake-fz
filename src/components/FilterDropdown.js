@@ -8,7 +8,7 @@ import { Dropdown, Icon, Transition } from "semantic-ui-react";
 
 export default class FilterDropdown extends Component {
   state = { filterOptions: [] };
-  
+
   constructor(props) {
     super(props);
     this.handleFilterChange = this.handleFilterChange.bind(this);
@@ -16,10 +16,14 @@ export default class FilterDropdown extends Component {
   }
 
   componentDidMount() {
+    this.resetFilter();
+  }
+
+  resetFilter = () => {
     const { options, filterKey, updateFilterParams } = this.props;
     // all zones by default
     let updatedState = {};
-    let allZones = options.map(opt => opt.value);
+    let allZones = options.map((opt) => opt.value);
     updatedState[filterKey] = allZones;
     this.setState({ filterOptions: allZones });
     updateFilterParams(updatedState);
@@ -42,7 +46,8 @@ export default class FilterDropdown extends Component {
   };
 
   render() {
-    const { options, placeholderText, label, populatedValues, show } = this.props;
+    const { options, placeholderText, label, populatedValues, show } =
+      this.props;
     let placeholderValues;
     if (!populatedValues) {
       placeholderValues = [];

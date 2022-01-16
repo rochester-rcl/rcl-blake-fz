@@ -143,7 +143,6 @@ export function Hi(props) {
   }
 
   if (!line["#text"]) {
-    console.log(line);
     return null;
   }
 
