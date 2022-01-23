@@ -276,6 +276,9 @@ function getAttributes(attributes) {
 
 function GapBackground(props) {
   const { x, y, h, textRef, node } = props;
+  if (!textRef) {
+    return null;
+  }
   const s = textRef.getExtentOfChar(`\xa0`).width;
   const { gap } = node;
   const extent = parseInt(gap.extent, 10);
@@ -344,7 +347,7 @@ export function Background(props) {
               const pos = computeTextPosition(text, textRef);
               return (
                 <Component
-                  key={`text-${pos.x}-${pos.y}`}
+                  key={`text-${pos ? pos.x : shortid.generate()}-${pos ? pos.y : shortid.generate()}`}
                   {...pos}
                   node={prop}
                 />

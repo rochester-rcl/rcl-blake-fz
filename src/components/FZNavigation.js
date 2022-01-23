@@ -34,7 +34,7 @@ export default class FZNavigation extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.pageNo !== null && prevState.pageNo !== this.state.pageNo) {
       let pageInt = parseInt(this.state.pageNo, 10);
-      if (!isNaN(pageInt) && pageInt > 1 && pageInt < this.props.maxPages) {
+      if (!isNaN(pageInt) && pageInt > 1 && pageInt < this.props.maxPages + 1) {
         this.handleGoToPage(pageInt - 1);
       }
     } else if (this.props.currentPageDisplay !== this.state.pageNo) {

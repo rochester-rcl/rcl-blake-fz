@@ -233,7 +233,7 @@ export default class OpenSeadragonViewer extends Component {
               <polygon
                 key={`overylay-${idx}`}
                 points={points}
-                style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.005 }}
+                style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.0025 }}
               />
             );
           } else {
