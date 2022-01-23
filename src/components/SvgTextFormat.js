@@ -92,7 +92,6 @@ export function Subst(props) {
 export function Choice(props) {
   const { line } = props;
   const { choice } = line;
-
   function formatTextWithChoice(text, choice) {
     let finalText = text;
     function formatChoiceText(ch, t) {
@@ -119,8 +118,9 @@ export function Choice(props) {
     return line["#text"].constructor === Array
       ? formatTextWithChoice(line["#text"].join(""), choice)
       : formatTextWithChoice(line["#text"], choice);
+  } else {
+    return formatTextWithChoice("", choice);
   }
-  return null;
 }
 
 export function Hi(props) {
@@ -177,7 +177,7 @@ export function Hi(props) {
 export function Add(props) {
   const { line } = props;
   const { add } = line;
-  if (add.attributes.place === "supralinear") {
+  if (add.attributes && add.attributes.place === "supralinear") {
     return (
       <tspan baselineShift="super" fill={TextColors.add}>
         {add["#text"]}
