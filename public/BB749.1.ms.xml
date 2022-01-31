@@ -3061,7 +3061,7 @@
                 
                 <zone type="original">
                     
-                    <zone type="page-left" points="2898,3882 938,3877 937,240 2898,247">
+                    <zone type="page-left" points="860,3920 830,200 3010,200 2990,3890">
                         
                         <texthead justify="left">
                             <l n="bb749.1.ms.15" justify="left"><physnumber>(30)</physnumber></l>
@@ -3116,7 +3116,7 @@
                         </textfoot> 
                     </zone>
                     
-                    <zone type="page-right" points="5060,3865 3100,3860 3099,223 5060,230">
+                    <zone type="page-right" points="3100,3910 3070,190 5250,190 5230,3880">
                         
                         <texthead justify="left">
                             <l n="bb749.1.ms.15" justify="left"><physnumber>(31)</physnumber></l>
@@ -3177,20 +3177,15 @@
                 
                 
                 <zone type="Blake">
-                    
-                    
-                   
-                        
+                      
                     <zone type="marginalia-1" points="2942,3847 2947,4509 5557,4509 5538,3838">
                             <lg justify="left">
                                 <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
                                 <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
                                 <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
-                                
                             </lg>
                         </zone>
-                    
-                </zone>
+                    </zone>
                 
 
             </phystext>
