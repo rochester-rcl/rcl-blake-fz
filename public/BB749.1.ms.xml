@@ -3362,7 +3362,7 @@
             <phystext> 
                 
                 <zone type="original">
-                    <zone type="page-left" points="918,344 2874,344 2937,4112 899,4112">
+                    <zone type="page-left" points="3020,280 3010,4120 860,4100 870,270">
                         
                         <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(36)</physnumber></l></texthead>   
                         <lg justify="left">
@@ -3415,7 +3415,7 @@
                         
                     </zone>
                     
-                    <zone type="page-right" points="3228,310 5184,310 5247,4078 3209,4078">
+                    <zone type="page-right" points="5280,300 5270,4140 3120,4120 3130,290">
                         
                         <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(37)</physnumber></l></texthead>   
                         <lg justify="left">
@@ -3463,7 +3463,7 @@
                 </zone>
             
             <zone type="Blake">
-                <zone type="marginalia-1" points="387,1587 1006,1587 1087,2625 406,2681">
+                <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
                     <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l>
                     <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                     <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
