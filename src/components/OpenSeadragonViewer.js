@@ -8,13 +8,10 @@ import OpenSeadragon from "openseadragon";
 // Semantic UI
 import { Icon } from "semantic-ui-react";
 
-import lodash from "lodash";
-
-// shortid
-import shortid from "shortid";
-
 // utils
 import { getBounds, pointsToNumbers } from "../utils/data-utils";
+
+import { minMax } from "../utils/geometry";
 
 import initSvgOverlay from "../utils/osd-svg-overlay";
 
@@ -131,11 +128,19 @@ export default class OpenSeadragonViewer extends Component {
 
   renderControls() {
     return (
-      <div key="toolbar" className="osd-viewer-toolbar" id="osd-viewer-controls">
+      <div
+        key="toolbar"
+        className="osd-viewer-toolbar"
+        id="osd-viewer-controls"
+      >
         <div key="zoom-in" d="zoom-in-button" className="osd-controls-button">
           <Icon name="plus" size="large" />
         </div>
-        <div key="zoom-out" id="zoom-out-button" className="osd-controls-button">
+        <div
+          key="zoom-out"
+          id="zoom-out-button"
+          className="osd-controls-button"
+        >
           <Icon name="minus" size="large" />
         </div>
         <div key="home" id="home-button" className="osd-controls-button">
@@ -228,13 +233,37 @@ export default class OpenSeadragonViewer extends Component {
           const points = overlay
             ? this.convertImageToViewportPoints(overlay)
             : null;
+          const zone = this.props.zones[idx];
+          const zoneName =
+            (zone && zone.attributes && zone.attributes.type) || null;
           if (points) {
+            const [minX] = minMax(overlay, 0);
+            const [minY] = minMax(overlay, 1);
+            const [x, y] = this.convertImageToViewportPoints(
+              `${minX},${minY}`
+            ).split(",");
             return (
-              <polygon
-                key={`overylay-${idx}`}
-                points={points}
-                style={{ fill: "none", stroke: "#E9BC47", strokeWidth: 0.0025 }}
-              />
+              <g key={`overlay-${idx}`}>
+                <polygon
+                  key={`overylay-${idx}`}
+                  points={points}
+                  style={{
+                    fill: "none",
+                    stroke: "#E9BC47",
+                    strokeWidth: 0.0025,
+                  }}
+                />
+                {zoneName ? (
+                  <text
+                    fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
+                    x={x}
+                    y={y}
+                    style={{ fontSize: "0.001em", fill: "#E9BC47", textShadow: "3px 3px 4px #454545" }}
+                  >
+                    {zoneName}
+                  </text>
+                ) : null}
+              </g>
             );
           } else {
             return null;

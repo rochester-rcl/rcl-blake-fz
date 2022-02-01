@@ -173,10 +173,11 @@ export function Hi(props) {
   }
   return null;
 }
-
+// TODO fix this - look at "But" on line 1
 export function Add(props) {
   const { line } = props;
   const { add } = line;
+  console.log(line);
   if (add.attributes && add.attributes.place === "supralinear") {
     return (
       <tspan baselineShift="super" fill={TextColors.add}>
@@ -184,6 +185,7 @@ export function Add(props) {
       </tspan>
     );
   }
+  
   return <tspan fill={TextColors.add}>{add["#text"]}</tspan>;
 }
 
@@ -251,6 +253,10 @@ function FormattedLine(props) {
   for (const key in line) {
     if (key === "del") {
       return <Del key={shortid.generate()} line={line} textRef={textRef} />;
+    }
+    // TODO fix inline add
+    if (key === "add") {
+      return <Add line={line} textRef={textRef} />;
     }
     if (key === "gap") {
       return <Gap line={line} textRef={textRef} />;

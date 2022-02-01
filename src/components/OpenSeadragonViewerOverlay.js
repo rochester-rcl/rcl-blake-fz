@@ -347,6 +347,7 @@ export default class OpenSeadragonViewer extends Component {
             <Background textRef={textRef} line={line} />
           ) : null}
           <text
+            fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
             ref={(ref) => this.setTextRefs(ref, textRefId)}
             style={{ fontSize: "0.001em", fill: "#ccc" }}
           >
