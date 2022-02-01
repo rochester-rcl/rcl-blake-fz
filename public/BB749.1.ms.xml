@@ -3061,7 +3061,7 @@
                 
                 <zone type="original">
                     
-                    <zone type="page-left" points="2898,3882 938,3877 937,240 2898,247">
+                    <zone type="page-left" points="860,3920 830,200 3010,200 2990,3890">
                         
                         <texthead justify="left">
                             <l n="bb749.1.ms.15" justify="left"><physnumber>(30)</physnumber></l>
@@ -3116,7 +3116,7 @@
                         </textfoot> 
                     </zone>
                     
-                    <zone type="page-right" points="5060,3865 3100,3860 3099,223 5060,230">
+                    <zone type="page-right" points="3100,3910 3070,190 5250,190 5230,3880">
                         
                         <texthead justify="left">
                             <l n="bb749.1.ms.15" justify="left"><physnumber>(31)</physnumber></l>
@@ -3177,20 +3177,15 @@
                 
                 
                 <zone type="Blake">
-                    
-                    
-                   
-                        
-                    <zone type="marginalia-1" points="2963,3850 5571,3857 5586,4534 2950,4489">
+                      
+                    <zone type="marginalia-1" points="2942,3847 2947,4509 5557,4509 5538,3838">
                             <lg justify="left">
                                 <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
                                 <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
                                 <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
-                                
                             </lg>
                         </zone>
-                    
-                </zone>
+                    </zone>
                 
 
             </phystext>
@@ -3367,7 +3362,7 @@
             <phystext> 
                 
                 <zone type="original">
-                    <zone type="page-left" points="918,344 2874,344 2937,4112 899,4112">
+                    <zone type="page-left" points="3020,280 3010,4120 860,4100 870,270">
                         
                         <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(36)</physnumber></l></texthead>   
                         <lg justify="left">
@@ -3419,8 +3414,8 @@
                         <textfoot><l n="bb749.1.ms.18" justify="left" indent="24"><catchword>she</catchword></l></textfoot>
                         
                     </zone>
-                    
-                    <zone type="page-right" points="3228,310 5184,310 5247,4078 3209,4078">
+          
+                    <zone type="page-right" points="5280,300 5270,4140 3120,4120 3130,290">
                         
                         <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(37)</physnumber></l></texthead>   
                         <lg justify="left">
@@ -3468,7 +3463,7 @@
                 </zone>
             
             <zone type="Blake">
-                <zone type="marginalia-1" points="387,1587 1006,1587 1087,2625 406,2681">
+                <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
                     <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l>
                     <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                     <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
