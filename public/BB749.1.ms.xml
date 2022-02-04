@@ -3464,13 +3464,14 @@
             
             <zone type="Blake">
                 <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
+                    <lg justify="left">
                     <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l>
                     <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                     <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
                     <l n="bb749.1.ms.17.04" justify="left">then Judgement</l>
                     <l n="bb749.1.ms.17.05" justify="left">was a Fool</l>
                     <l n="bb749.1.ms.17.06" justify="left">what Nonsense</l>
-           
+                </lg>    
                     
                 </zone>
                 

@@ -46,6 +46,28 @@ export function Gap(props) {
   const { gap } = line;
   const extent = parseInt(gap.extent, 10) || "1";
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
+  const text = line["#text"];
+  if (text) {
+    if (text.constructor === Array && text.length === 2) {
+      return (
+        <tspan>
+          <tspan>{text[0]}</tspan>
+          <tspan textDecoration="line-through">
+            <Space n={extent} direction="horizontal" size={size} />
+          </tspan>
+          <tspan>{text[1]}</tspan>
+        </tspan>
+      );
+    }
+    return (
+      <tspan>
+        <tspan>{text}</tspan>
+        <tspan textDecoration="line-through">
+          <Space n={extent} direction="horizontal" size={size} />
+        </tspan>
+      </tspan>
+    );
+  }
   return (
     <tspan textDecoration="line-through">
       <Space n={extent} direction="horizontal" size={size} />
@@ -370,6 +392,7 @@ export function Background(props) {
               });
               // node also has a background (i.e. subst)
               if (Backgrounds[prop.nodeType]) {
+                console.log(line);
                 backgrounds.push(
                   <Background
                     key={prop.nodeType}
@@ -381,8 +404,9 @@ export function Background(props) {
               }
               return backgrounds;
             }
-            // TODO check attributes
             if (Backgrounds[prop.nodeType]) {
+              // TODO figure out how to fix Gap background when appearing in an array of text
+              // see p. 17 zone marginalia-1
               const Component = Backgrounds[prop.nodeType];
               const text = prop["#text"] || "";
               const pos = computeTextPosition(text, textRef);
