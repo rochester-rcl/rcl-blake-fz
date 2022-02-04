@@ -185,8 +185,20 @@ export function Add(props) {
       </tspan>
     );
   }
-  
-  return <tspan fill={TextColors.add}>{add["#text"]}</tspan>;
+
+  let text = line["#text"];
+  if (text && text.constructor === Array && text.length === 2) {
+    return <tspan>
+      <tspan>{text[0]}</tspan>
+      <tspan fill={TextColors.add}>{add["#text"]}</tspan>
+      <tspan>{[text[1]]}</tspan>
+    </tspan>
+  }
+  return (
+    <tspan>
+      <tspan fill={TextColors.add}>{add["#text"]}</tspan>
+    </tspan>
+  );
 }
 
 export function Del(props) {
@@ -353,7 +365,9 @@ export function Background(props) {
               const pos = computeTextPosition(text, textRef);
               return (
                 <Component
-                  key={`text-${pos ? pos.x : shortid.generate()}-${pos ? pos.y : shortid.generate()}`}
+                  key={`text-${pos ? pos.x : shortid.generate()}-${
+                    pos ? pos.y : shortid.generate()
+                  }`}
                   {...pos}
                   node={prop}
                 />
