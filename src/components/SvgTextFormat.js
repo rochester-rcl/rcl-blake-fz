@@ -173,11 +173,9 @@ export function Hi(props) {
   }
   return null;
 }
-// TODO fix this - look at "But" on line 1
 export function Add(props) {
   const { line } = props;
   const { add } = line;
-  console.log(line);
   if (add.attributes && add.attributes.place === "supralinear") {
     return (
       <tspan baselineShift="super" fill={TextColors.add}>
@@ -188,11 +186,13 @@ export function Add(props) {
 
   let text = line["#text"];
   if (text && text.constructor === Array && text.length === 2) {
-    return <tspan>
-      <tspan>{text[0]}</tspan>
-      <tspan fill={TextColors.add}>{add["#text"]}</tspan>
-      <tspan>{[text[1]]}</tspan>
-    </tspan>
+    return (
+      <tspan>
+        <tspan>{text[0]}</tspan>
+        <tspan fill={TextColors.add}>{add["#text"]}</tspan>
+        <tspan>{[text[1]]}</tspan>
+      </tspan>
+    );
   }
   return (
     <tspan>
@@ -205,26 +205,49 @@ export function Del(props) {
   const { textRef, line } = props;
   const { del } = line;
   const delType = del.attributes ? del.attributes.type : DelTypes.overwrite;
-  const text = del && del["#text"];
-  if (!text) {
-    return null;
+
+  let lineText = line["#text"];
+
+  function formatDel() {
+    const text = del && del["#text"];
+    if (!text) {
+      return null;
+    }
+    if (del.children) {
+      const children = del.children.map((child) => (
+        <FormatLine key={shortid.generate()} line={child} textRef={textRef} />
+      ));
+      return (
+        <tspan fill="red" textDecoration="line-through">
+          {children}
+        </tspan>
+      );
+    } else {
+      return (
+        <tspan fill="red" textDecoration="line-through">
+          {text}
+        </tspan>
+      );
+    }
   }
-  if (del.children) {
-    const children = del.children.map((child) => (
-      <FormatLine key={shortid.generate()} line={child} textRef={textRef} />
-    ));
+  if (lineText) {
+    if (lineText.constructor === Array && lineText.length === 2) {
+      return (
+        <tspan>
+          <tspan>{lineText[0]}</tspan>
+          {formatDel()}
+          <tspan>{lineText[1]}</tspan>
+        </tspan>
+      );
+    }
     return (
-      <tspan fill="red" textDecoration="line-through">
-        {children}
+      <tspan>
+        <tspan>{lineText}</tspan>
+        {formatDel()}
       </tspan>
     );
-  } else {
-    return (
-      <tspan fill="red" textDecoration="line-through">
-        {text}
-      </tspan>
-    );
   }
+  return formatDel();
 }
 
 function DelBackground(props) {
