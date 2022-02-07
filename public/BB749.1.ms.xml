@@ -297,7 +297,7 @@
                         
                         <lg justify="left">
                             
-                            <l n="bb749.1.ms.02" justify="left" indent="3">Lately Published, Price Two Shillings,</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="3"><hi rend="i">Lately Published, Price Two Shillings,</hi></l>
                             
                             <vspace extent="1"/>
                             
@@ -318,8 +318,8 @@
                             
                             <vspace extent="1"/>
                             
-                            <l n="bb749.1.ms.02" justify="left">1. An APOLOGY for CHRISTIANITY, in a Series of <choice><orig>let-</orig><reg type="split_word">letters</reg></choice></l>
-                            <l n="bb749.1.ms.02" justify="left"><choice><orig>ters</orig><reg>letters</reg></choice>, addressed to Edward Gibbon, <choice><orig>Esq.</orig><reg>Esquire</reg></choice> Author of the History</l>
+                            <l n="bb749.1.ms.02" justify="left">1. An APOLOGY for CHRISTIANITY, in a Series of <choice><orig>Let-</orig><reg type="split_word">Letters</reg></choice></l>
+                            <l n="bb749.1.ms.02" justify="left"><choice><orig>ters</orig><reg>Letters</reg></choice>, addressed to Edward Gibbon, <choice><orig>Esq.</orig><reg>Esquire</reg></choice> Author of the History</l>
                             <l n="bb749.1.ms.02" justify="left">of the Decline and Fall of the Roman Empire, Fifth Edition,</l>
                             <l n="bb749.1.ms.02" justify="left">Price 3s. sewed.</l>
                             
@@ -355,7 +355,7 @@
                             <vspace extent="1"/>
                             
                             <l n="bb749.1.ms.02" justify="left">7. The WISDOM and GOODNES of GOD, in having made</l>
-                            <l n="bb749.1.ms.02" justify="left">both RICH and POOR: a SERMON, preached before the</l>
+                            <l n="bb749.1.ms.02" justify="left">both <hi rend="u">RICH and POOR:</hi> a SERMON, preached before the</l>
                             <l n="bb749.1.ms.02" justify="left">Stewards of the WESTMINSTER DISPENSARY, at the</l>
                             <l n="bb749.1.ms.02" justify="left">Anniversay Meeting in Charlotte-street Chapel; with an</l>
                             <l n="bb749.1.ms.02" justify="left">Appendix, containing REFLECTIONS on the present State</l>
@@ -378,7 +378,8 @@
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left"><hr width="22" align="left" indent="1"/></l>
-                            <l n="bb749.1.ms.02" justify="left" indent="5">LETTER I</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="5">LETTER I.</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="2">SIR,</l>
                             <l n="bb749.1.ms.02" justify="left">I HAVE lately met with a book of your's, entitled&#8212;</l>
                             <l n="bb749.1.ms.02" justify="left">THE AGE OF REASON, part the second, being an</l>
                             <l n="bb749.1.ms.02" justify="left">investigation of true and of fabulous theology;&#8212; and I</l>
