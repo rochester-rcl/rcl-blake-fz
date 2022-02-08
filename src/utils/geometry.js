@@ -189,7 +189,7 @@ export function computeScanlineFill(points, nLines) {
   return output;
 }
 
-function minMax(points, axis) {
+export function minMax(points, axis) {
   let min = Infinity;
   let max = 0;
   const p = points

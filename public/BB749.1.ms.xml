@@ -205,7 +205,7 @@
                             <l n="bb749.1.ms.01" justify="left">might, if generally distributed, be efficacious in</l>
                             <l n="bb749.1.ms.01" justify="left">stopping that torrent of infidelity which endangers</l>
                             <l n="bb749.1.ms.01" justify="left">alike the future happiness of individuals, and the</l>
-                            <l n="bb749.1.ms.01" justify="left">present safety of <hi rend="u">all christian states. </hi>Whatever</l>
+                            <l n="bb749.1.ms.01" justify="left">present safety of all christian states. Whatever</l>
                             <l n="bb749.1.ms.01" justify="left">weight there may be in this their opinion of the</l>
                             <l n="bb749.1.ms.01" justify="left">utility of publishing a cheap edition of this work,</l>
                             <l n="bb749.1.ms.01" justify="left">I have great pleasure in complying with their</l>
@@ -254,7 +254,7 @@
                                 <l n="bb749.1.ms.01.16" justify="left">Read patiently take not up this Book in an idle</l>
                                 <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is <del type="cancellation">most</del></l>
                                 <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
-                                <l n="bb749.1.ms.01.19" justify="left" indent="24"><add type="insertion" place="supralinear">But</add></l>
+                                <l n="bb749.1.ms.01.19" justify="left" indent="29"><add type="insertion" place="supralinear">But</add></l>
                                 <l n="bb749.1.ms.01.20" justify="left">death trifles sports of Time <add place="inline">^</add> these considerations</l>
                                 <l n="bb749.1.ms.01.21" justify="left">business of Eternity</l>
                                 <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
@@ -297,7 +297,7 @@
                         
                         <lg justify="left">
                             
-                            <l n="bb749.1.ms.02" justify="left" indent="3">Lately Published, Price Two Shillings,</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="3"><hi rend="i">Lately Published, Price Two Shillings,</hi></l>
                             
                             <vspace extent="1"/>
                             
@@ -318,8 +318,8 @@
                             
                             <vspace extent="1"/>
                             
-                            <l n="bb749.1.ms.02" justify="left">1. An APOLOGY for CHRISTIANITY, in a Series of <choice><orig>let-</orig><reg type="split_word">letters</reg></choice></l>
-                            <l n="bb749.1.ms.02" justify="left"><choice><orig>ters</orig><reg>letters</reg></choice>, addressed to Edward Gibbon, <choice><orig>Esq.</orig><reg>Esquire</reg></choice> Author of the History</l>
+                            <l n="bb749.1.ms.02" justify="left">1. An APOLOGY for CHRISTIANITY, in a Series of <choice><orig>Let-</orig><reg type="split_word">Letters</reg></choice></l>
+                            <l n="bb749.1.ms.02" justify="left"><choice><orig>ters</orig><reg>Letters</reg></choice>, addressed to Edward Gibbon, <choice><orig>Esq.</orig><reg>Esquire</reg></choice> Author of the History</l>
                             <l n="bb749.1.ms.02" justify="left">of the Decline and Fall of the Roman Empire, Fifth Edition,</l>
                             <l n="bb749.1.ms.02" justify="left">Price 3s. sewed.</l>
                             
@@ -378,7 +378,8 @@
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left"><hr width="22" align="left" indent="1"/></l>
-                            <l n="bb749.1.ms.02" justify="left" indent="5">LETTER I</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="5">LETTER I.</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="2">SIR,</l>
                             <l n="bb749.1.ms.02" justify="left">I HAVE lately met with a book of your's, entitled&#8212;</l>
                             <l n="bb749.1.ms.02" justify="left">THE AGE OF REASON, part the second, being an</l>
                             <l n="bb749.1.ms.02" justify="left">investigation of true and of fabulous theology;&#8212; and I</l>
@@ -3466,13 +3467,14 @@
             
             <zone type="Blake">
                 <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
+                    <lg justify="left">
                     <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l>
                     <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                     <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
                     <l n="bb749.1.ms.17.04" justify="left">then Judgement</l>
                     <l n="bb749.1.ms.17.05" justify="left">was a Fool</l>
                     <l n="bb749.1.ms.17.06" justify="left">what Nonsense</l>
-           
+                </lg>    
                     
                 </zone>
                 

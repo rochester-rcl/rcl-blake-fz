@@ -46,6 +46,28 @@ export function Gap(props) {
   const { gap } = line;
   const extent = parseInt(gap.extent, 10) || "1";
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
+  const text = line["#text"];
+  if (text) {
+    if (text.constructor === Array && text.length === 2) {
+      return (
+        <tspan>
+          <tspan>{text[0]}</tspan>
+          <tspan textDecoration="line-through">
+            <Space n={extent} direction="horizontal" size={size} />
+          </tspan>
+          <tspan>{text[1]}</tspan>
+        </tspan>
+      );
+    }
+    return (
+      <tspan>
+        <tspan>{text}</tspan>
+        <tspan textDecoration="line-through">
+          <Space n={extent} direction="horizontal" size={size} />
+        </tspan>
+      </tspan>
+    );
+  }
   return (
     <tspan textDecoration="line-through">
       <Space n={extent} direction="horizontal" size={size} />
@@ -173,7 +195,6 @@ export function Hi(props) {
   }
   return null;
 }
-
 export function Add(props) {
   const { line } = props;
   const { add } = line;
@@ -184,33 +205,71 @@ export function Add(props) {
       </tspan>
     );
   }
-  return <tspan fill={TextColors.add}>{add["#text"]}</tspan>;
+
+  let text = line["#text"];
+  if (text && text.constructor === Array && text.length === 2) {
+    return (
+      <tspan>
+        <tspan>{text[0]}</tspan>
+        <tspan fill={TextColors.add}>{add["#text"]}</tspan>
+        <tspan>{[text[1]]}</tspan>
+      </tspan>
+    );
+  }
+  return (
+    <tspan>
+      <tspan fill={TextColors.add}>{add["#text"]}</tspan>
+    </tspan>
+  );
 }
 
 export function Del(props) {
   const { textRef, line } = props;
   const { del } = line;
   const delType = del.attributes ? del.attributes.type : DelTypes.overwrite;
-  const text = del && del["#text"];
-  if (!text) {
-    return null;
+
+  let lineText = line["#text"];
+
+  function formatDel() {
+    const text = del && del["#text"];
+    if (!text) {
+      return null;
+    }
+    if (del.children) {
+      const children = del.children.map((child) => (
+        <FormatLine key={shortid.generate()} line={child} textRef={textRef} />
+      ));
+      return (
+        <tspan fill="red" textDecoration="line-through">
+          {children}
+        </tspan>
+      );
+    } else {
+      return (
+        <tspan fill="red" textDecoration="line-through">
+          {text}
+        </tspan>
+      );
+    }
   }
-  if (del.children) {
-    const children = del.children.map((child) => (
-      <FormatLine key={shortid.generate()} line={child} textRef={textRef} />
-    ));
+  if (lineText) {
+    if (lineText.constructor === Array && lineText.length === 2) {
+      return (
+        <tspan>
+          <tspan>{lineText[0]}</tspan>
+          {formatDel()}
+          <tspan>{lineText[1]}</tspan>
+        </tspan>
+      );
+    }
     return (
-      <tspan fill="red" textDecoration="line-through">
-        {children}
+      <tspan>
+        <tspan>{lineText}</tspan>
+        {formatDel()}
       </tspan>
     );
-  } else {
-    return (
-      <tspan fill="red" textDecoration="line-through">
-        {text}
-      </tspan>
-    );
   }
+  return formatDel();
 }
 
 function DelBackground(props) {
@@ -251,6 +310,10 @@ function FormattedLine(props) {
   for (const key in line) {
     if (key === "del") {
       return <Del key={shortid.generate()} line={line} textRef={textRef} />;
+    }
+    // TODO fix inline add
+    if (key === "add") {
+      return <Add line={line} textRef={textRef} />;
     }
     if (key === "gap") {
       return <Gap line={line} textRef={textRef} />;
@@ -329,6 +392,7 @@ export function Background(props) {
               });
               // node also has a background (i.e. subst)
               if (Backgrounds[prop.nodeType]) {
+                console.log(line);
                 backgrounds.push(
                   <Background
                     key={prop.nodeType}
@@ -340,14 +404,17 @@ export function Background(props) {
               }
               return backgrounds;
             }
-            // TODO check attributes
             if (Backgrounds[prop.nodeType]) {
+              // TODO figure out how to fix Gap background when appearing in an array of text
+              // see p. 17 zone marginalia-1
               const Component = Backgrounds[prop.nodeType];
               const text = prop["#text"] || "";
               const pos = computeTextPosition(text, textRef);
               return (
                 <Component
-                  key={`text-${pos ? pos.x : shortid.generate()}-${pos ? pos.y : shortid.generate()}`}
+                  key={`text-${pos ? pos.x : shortid.generate()}-${
+                    pos ? pos.y : shortid.generate()
+                  }`}
                   {...pos}
                   node={prop}
                 />
