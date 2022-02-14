@@ -378,7 +378,7 @@
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left"><hr width="22" align="left" indent="1"/></l>
-                            <l n="bb749.1.ms.02" justify="left" indent="15">LETTER I.</l>
+                            <l n="bb749.1.ms.02" justify="left" indent="20">LETTER I.</l>
                             <l n="bb749.1.ms.02" justify="left" indent="5">SIR,</l>
                             <l n="bb749.1.ms.02" justify="left">I HAVE lately met with a book of your's, entitled&#8212;</l>
                             <l n="bb749.1.ms.02" justify="left">THE AGE OF REASON, part the second, being an</l>
@@ -417,7 +417,7 @@
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>nying</orig><reg>accompanying</reg></choice> a state of corrupted morals.</l>
                         </lg>
                         <textfoot>
-                            <lg justify="left">
+                            <lg>
                             <l n="bb749.1.ms.02" justify="left" indent="5">B<space extent="10" unit="character"/><catchword>No</catchword></l>
                             </lg>
                         </textfoot>
@@ -632,7 +632,9 @@
                         <l n="bb749.1.ms.03" justify="left">to act in opposition to his conscience: but it will not</l>
                     </lg>
                     <textfoot justify="left">
+                        <lg justify="left">
                         <l n="bb749.1.ms.03" justify="left" indent="9"><catchword>from</catchword></l>
+                        </lg>
                     </textfoot>
                         
                     </zone>
@@ -687,7 +689,9 @@
                         <l n="bb749.1.ms.03" justify="left">"that the preaching of the cross is to them that perish</l>
                     </lg>
                     <textfoot justify="left">
+                        <lg justify="left">
                         <l n="bb749.1.ms.03" justify="left" indent="5">B <physnumber>2</physnumber><space extent="14" unit="character"/><catchword>foolish-</catchword></l>
+                        </lg>
                     </textfoot>
                     </zone>
                 </zone>
