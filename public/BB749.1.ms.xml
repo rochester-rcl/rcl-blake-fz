@@ -2936,7 +2936,7 @@
                             
                             <l n="bb749.1.ms.14" justify="left"><hr width="23" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.14" justify="left" indent="16">LETTER IV.</l>
-                            <l n="bb749.1.ms.14" justify="left">HAVING finished your objections to the genuineness</l>
+                            <l n="bb749.1.ms.14" justify="left">HAVING finished your objections to th<gap reason="illegible_inkblot" extent="1" unit="character"/> genuineness</l>
                             <l n="bb749.1.ms.14" justify="left">of the books of Moses, you proceed to your <choice><orig>re-</orig><reg type="split_word">remarks</reg></choice></l>
                             <l n="bb749.1.ms.14" justify="left"><choice><orig>marks</orig><reg>remarks</reg></choice> on the book of Joshua; and from it's internal <choice><orig>evi-</orig><reg type="split_word">evidence</reg></choice></l>
                             <l n="bb749.1.ms.14" justify="left"><choice><orig>dence</orig><reg>evidence</reg></choice> you endeavour to prove, that this book was not</l>
@@ -3224,8 +3224,8 @@
                             <l n="bb749.1.ms.16" justify="left">the occasion, time, and nature of the subject; and in all</l>
                             <l n="bb749.1.ms.16" justify="left">other cases left them wholly to themselves: in like <choice><orig>man-</orig><reg type="split_word">manner</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>ner</orig><reg>manner</reg></choice>, he has interposed his more immediate assistance, (and</l>
-                            <l n="bb749.1.ms.16" justify="left">notified it to them, as they did to the world,) in the <choice><orig><hi rend="i">re-</hi></orig><reg type="split_word">recording</reg></choice></l>
-                            <l n="bb749.1.ms.16" justify="left"><choice><orig><hi rend="i">cording</hi></orig><reg>recording</reg></choice> of these revelations; so far as that was necessary,</l>
+                            <l n="bb749.1.ms.16" justify="left">notified it to them, as they did to the world,) in the <choice><orig><hi rend="i">re-</hi></orig><reg type="split_word"><hi rend="i">recording<hi/></reg></choice></l>
+                            <l n="bb749.1.ms.16" justify="left"><choice><orig><hi rend="i">cording</hi></orig><reg><hi rend="i">recording<hi/></reg></choice> of these revelations; so far as that was necessary,</l>
                             <l n="bb749.1.ms.16" justify="left">amidst the common (but from hence termed <hi rend="i">sacred)</hi> <choice><orig>his-</orig><reg type="split_word">history</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>tory</orig><reg>history</reg></choice> of those times; and mixed with various other <choice><orig>occur-</orig><reg type="split_word">occurrences</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>rences</orig><reg>occurrences</reg></choice>; in which the historian's own natural <choice><orig>qualifica-</orig><reg type="split_word">qualifications</reg></choice></l>
@@ -3316,7 +3316,7 @@
                     </zone>
                 </zone>
                 
-                <zone type="Blake"><!-- pencil -->
+                <zone type="Blake"><!---hanShift medium "pencil"--->
                     
                     
                         
@@ -3355,7 +3355,7 @@
             <objtitle>
                 <objid>
                     <objnumber code="A17">Object 17 </objnumber>
-                    <objcode code="B17">(Bentley 749.17)</objcode><!-- check -->
+                    <objcode code="B17">(Bentley 749.17)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
@@ -3376,9 +3376,9 @@
                             <l n="bb749.1.ms.17" justify="left"><choice><orig>mitted</orig><reg type="split_word">admitted</reg></choice>, that Samuel did not write any part of the second</l>
                             <l n="bb749.1.ms.17" justify="left">book which bears his name, and only a part of the first.</l>
                             <l n="bb749.1.ms.17" justify="left">It would, indeed, have been an inquiry not <choice><orig>undeserv-</orig><reg type="split_word">undeserving</reg></choice></l>
-                            <l n="bb749.1.ms.17" justify="left"><choice><orig>ing</orig><reg type="split_word">undeserving</reg></choice>your notice, in many parts of your work, to have</l>
+                            <l n="bb749.1.ms.17" justify="left"><choice><orig>ing</orig><reg type="split_word">undeserving</reg></choice> your notice, in many parts of your work, to have</l>
                             <l n="bb749.1.ms.17" justify="left">examined what was the opinion of learned men <choice><orig>respect-</orig><reg type="split_word">respecting</reg></choice></l>
-                            <l n="bb749.1.ms.17" justify="left"><choice><orig>ing</orig><reg type="split_word">respecting</reg></choice>the authors of the several books of the Bible; you</l>
+                            <l n="bb749.1.ms.17" justify="left"><choice><orig>ing</orig><reg type="split_word">respecting</reg></choice> the authors of the several books of the Bible; you</l>
                             <l n="bb749.1.ms.17" justify="left">would have found, that you were in many places <choice><orig>fight-</orig><reg type="split_word">fighting</reg></choice></l>
                             <l n="bb749.1.ms.17" justify="left"><choice><orig>ing</orig><reg type="split_word">fighting</reg></choice> a phantom of your own raising, and proving what</l>
                             <l n="bb749.1.ms.17" justify="left">was generally admitted. Very little certainty, I think,</l>
