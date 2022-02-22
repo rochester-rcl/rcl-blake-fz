@@ -386,12 +386,12 @@
                         </subst> what delights the Sense is False &amp; Weak<note>Bentley reads "is" as "if" (*Writings* volume 2, page 1322).</note></l>
                     <l n="bb208.1.ms.01.20" justify="left" indent="18">Beyond the Visible World she soars to Seek</l>
                     <l n="bb208.1.ms.01.21" justify="left" indent="18">Ideal Form, The Universal Mold</l>
-                    <l n="bb208.1.ms.01.22" justify="left" indent="40">
-<<<<<<< HEAD
-                        <choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>. Sonnet as Translated by M<hi rend="superscript">r</hi> Wordsworth</l>
-=======
-                        <choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>. Sonnet as Translated by M<hi rend="superscript">r</hi> Wordsworth<note>According to Bentley</note></l>
->>>>>>> 5cf472d5eb582ea6e57fc644baac4b23ea362e7e
+                    <l n="bb208.1.ms.01.22" justify="left" indent="40"><choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>. Sonnet as Translated by M<hi rend="superscript">r</hi> Wordsworth</l>
+
+                    
+
+
+
                 </lg>
             </phystext>
         </desc>
