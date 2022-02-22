@@ -1,5 +1,30 @@
 /* @flow */
 
+function getTextPosition(xml, nodeKey, textKey) {
+  let parent = xml.parentNode;
+  let nodes = Array.from(parent.childNodes);
+  let text = "";
+  let textPosition = 0;
+  for (let node of nodes) {
+    if (node === xml) {
+      textPosition = text.length;
+    } else {
+      if (node.nodeName === nodeKey) {
+        let t = Array.from(node.childNodes).find(
+          (c) => c.nodeName === textKey
+        );
+        if (t) {
+          text += t.textContent;
+        }
+      } else {
+        text += node.textContent;
+      }
+    }
+    // get text index based on all previous nodes
+  }
+  return textPosition;
+}
+
 function xmlToJson(xml) {
   // Handshift and unclear as objects with #text instead of arrays of text
 
@@ -39,6 +64,9 @@ function xmlToJson(xml) {
           elements.push(xmlToJson(child));
         });
         obj["children"] = elements;
+      }
+      if (nodeName === "hi") {
+        obj.textPosition = getTextPosition(xml, "hi", "#text");
       }
       if (nodeName === "choice") {
         // find index of choice in line text
@@ -202,6 +230,14 @@ function formatZone(xml, obj) {
     children.forEach((child, index) => {
       if (child.nodeName === "lg") {
         lg.push(formatLineGroup(child, children, index));
+      }
+
+      if (child.nodeName === "textfoot" && lg.length) {
+        let textFoot = xmlToJson(child);
+        let { l } = textFoot;
+        if (l) {
+          lg[lg.length - 1].l.push(textFoot.l);
+        }
       }
 
       if (child.nodeName === "columns") {

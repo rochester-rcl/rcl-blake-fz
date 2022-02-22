@@ -19,7 +19,7 @@ import { getBounds, pointsToNumbers } from "../utils/data-utils";
 import { computeScanlineFill, getLineHeight } from "../utils/geometry";
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
-import { FormatLine, Background } from "./SvgTextFormat";
+import { FormatLine, Background, FormatTextFoot } from "./SvgTextFormat";
 import SvgFilters from "./SvgFilters";
 import sleep from "../utils/sleep";
 const ZONE_MAP = {
@@ -324,6 +324,7 @@ export default class OpenSeadragonViewer extends Component {
         );
       });
     }
+
     const { l } = zone.lg[0];
     let lh = 0;
     return viewportPoints.map((p, idx) => {

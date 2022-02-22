@@ -145,6 +145,12 @@ export function Choice(props) {
   }
 }
 
+export function Catchword(props) {
+  const { line, textRef } = props;
+  console.log(textRef);
+  return <tspan>{line.catchword ? line.catchword["#text"] : ""}</tspan>;
+}
+
 export function Hi(props) {
   const { line } = props;
   const { hi } = line;
@@ -168,32 +174,20 @@ export function Hi(props) {
     return null;
   }
 
-  if (line["#text"].constructor === Array) {
-    return line["#text"].map((t, idx) => {
-      if (idx % 2 !== 0) {
-        if (hi.children) {
-          // TODO - will this ever happen?
-          return null;
-        }
-        return (
-          <tspan key={`hi-${idx}`}>
-            {renderHi(hi["#text"])}
-            <tspan>{t}</tspan>
-          </tspan>
-        );
-      }
-      return <tspan key={`hi-${idx}`}>{t}</tspan>;
-    });
-  }
-  if (line["#text"]) {
-    return (
-      <tspan>
-        {renderHi(hi["#text"])}
-        <tspan>{line["#text"]}</tspan>
-      </tspan>
-    );
-  }
-  return null;
+  let rawText =
+    line["#text"].constructor === Array
+      ? line["#text"].join("")
+      : line["#text"];
+  let { textPosition } = line.hi;
+  let pre = rawText.slice(0, textPosition);
+  let post = rawText.slice(textPosition);
+  return (
+    <tspan>
+      <tspan key={pre}>{pre}</tspan>
+      {renderHi(line.hi["#text"])}
+      <tspan key={post}>{post}</tspan>
+    </tspan>
+  );
 }
 export function Add(props) {
   const { line } = props;
@@ -307,28 +301,33 @@ function FormattedLine(props) {
     return null;
   }
   const text = line["#text"] || "";
+  const l = [];
   for (const key in line) {
     if (key === "del") {
-      return <Del key={shortid.generate()} line={line} textRef={textRef} />;
+      l.push(<Del key={shortid.generate()} line={line} textRef={textRef} />);
     }
     // TODO fix inline add
     if (key === "add") {
-      return <Add line={line} textRef={textRef} />;
+      l.push(<Add line={line} textRef={textRef} />);
     }
     if (key === "gap") {
-      return <Gap line={line} textRef={textRef} />;
+      l.push(<Gap line={line} textRef={textRef} />);
     }
     if (key === "subst") {
-      return <Subst line={line} textRef={textRef} />;
+      l.push(<Subst line={line} textRef={textRef} />);
     }
     if (key === "hi") {
-      return <Hi line={line} textRef={textRef} />;
+      l.push(<Hi line={line} textRef={textRef} />);
     }
     if (key === "choice") {
-      return <Choice line={line} textRef={textRef} />;
+      l.push(<Choice line={line} textRef={textRef} />);
+    }
+    if (key === "catchword") {
+      l.push(<Catchword line={line} textRef={textRef} />);
     }
   }
-  return <tspan>{text}</tspan>;
+
+  return l.length ? <>{l}</> : <tspan>{text}</tspan>;
 }
 
 function getAttributes(attributes) {
@@ -392,7 +391,6 @@ export function Background(props) {
               });
               // node also has a background (i.e. subst)
               if (Backgrounds[prop.nodeType]) {
-                console.log(line);
                 backgrounds.push(
                   <Background
                     key={prop.nodeType}
@@ -469,6 +467,11 @@ export function Background(props) {
     return null;
   };
   return formatBackground(line);
+}
+
+export function FormatTextFoot(props) {
+  let { textFoot } = props;
+  return <FormatLine line={textFoot.l} />;
 }
 
 export function FormatLine(props) {
