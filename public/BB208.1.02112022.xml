@@ -307,9 +307,9 @@
                         <orig>Calld</orig>
                         <reg>called</reg>
                     </choice> by<note>Erdman reads "does" as "Does" (698).</note></l>
-                    <l n="bb208.1.ms.01.18" justify="left">the Same Name.</l>
-                    <l n="bb208.1.ms.01.19" justify="left" indent="9">I consider the Autograph of M<hi rend="superscript">r</hi> Cruikshank which very justly Stands first in the Book<note>Bentley (*Writings* volume 2, page 1321) and Erdman (698) read "Stands" as "stands".</note></l>
-                    <l n="bb208.1.ms.01.20" justify="left">&amp; that Beautiful Specimen of Writing by M<hi rend="superscript">r</hi> Comfield &amp; my own; as Standing the sam<subst>
+                    <l n="bb208.1.ms.01.15" justify="left">the Same Name.</l>
+                    <l n="bb208.1.ms.01.16" justify="left" indent="9">I consider the Autograph of M<hi rend="superscript">r</hi> Cruikshank which very justly Stands first in the Book<note>Bentley (*Writings* volume 2, page 1321) and Erdman (698) read "Stands" as "stands".</note></l>
+                    <l n="bb208.1.ms.01.17" justify="left">&amp; that Beautiful Specimen of Writing by M<hi rend="superscript">r</hi> Comfield &amp; my own; as Standing the sam<subst>
                         <gap reason="overwrite" extent="1" unit="character"/>
                         <add type="overwrite" place="inline">e</add>
                     </subst>
@@ -318,21 +318,21 @@
                             <reg>predicament</reg>
                         </choice><note>Bentley (*Writings* volume 2, page 1321) and Erdman (698) read "Standing" as "standing".</note><note>Bentley (*Writings* volume 2, page 1321) suggests the potential hyphen after "Predi" is a semi-colon. We have transcribed the mark as a hyphen.</note>
                     </l>
-                    <l n="bb208.1.ms.01.21" justify="left">c<subst>
+                    <l n="bb208.1.ms.01.18" justify="left">c<subst>
                         <del type="overwrite">e</del>
                         <add type="overwrite" place="inline">a</add>
                     </subst>ment they are in some measure Works of Art &amp; not of Nature or Chance<note>The "c" appearing at the beginning of this line is partially obscured by the verso of the album's previous leaf.  This is as a result of the album's tight binding, in which the bottom left margin of this object and part of the letter "c" are bound into the spine.</note></l>
-                    <l n="bb208.1.ms.01.22" justify="left" indent="22">Heaven born the Soul a Heavenward Course must hold</l>
-                    <l n="bb208.1.ms.01.23" justify="left" indent="17">
+                    <l n="bb208.1.ms.01.19" justify="left" indent="22">Heaven born the Soul a Heavenward Course must hold</l>
+                    <l n="bb208.1.ms.01.20" justify="left" indent="17">
                         <subst>
                             <gap reason="erasure" extent="3" unit="character"/>
                             <del type="erasure">
                             </del>
                             <add type="overwrite" place="inline">For</add>
                         </subst> what delights the Sense is False &amp; Weak<note>Bentley reads "is" as "if" (*Writings* volume 2, page 1322).</note></l>
-                    <l n="bb208.1.ms.01.24" justify="left" indent="18">Beyond the Visible World she soars to Seek</l>
-                    <l n="bb208.1.ms.01.25" justify="left" indent="18">Ideal Form, The Universal Mold</l>
-                    <l n="bb208.1.ms.01.26" justify="left" indent="40">
+                    <l n="bb208.1.ms.01.21" justify="left" indent="18">Beyond the Visible World she soars to Seek</l>
+                    <l n="bb208.1.ms.01.22" justify="left" indent="18">Ideal Form, The Universal Mold</l>
+                    <l n="bb208.1.ms.01.23" justify="left" indent="40">
                         <choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>. Sonnet as Translated by M<hi rend="superscript">r</hi> Wordsworth</l>
                 </lg>
             </phystext>
