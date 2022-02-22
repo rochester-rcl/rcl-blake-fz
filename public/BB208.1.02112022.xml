@@ -259,32 +259,29 @@
             <physdesc desclevel="brief">
                 <objsize>27.0 cm. x 21.0 cm.</objsize>
                 <windowsize width="500" height="615"/>
-                <objnote><!-- combine top half of n1 with n3, and bottom half of note 1 with n2 -->
+                <objnote>
                     <p>The number 19, indicating that this object is the nineteenth leaf of the second volume of this particular collection, is written in ink and in a hand other than Blake's at the top right corner of the object.</p>
-                    <p>The top third of the object contains the autographs of various individuals who signed Upcott's original album.  These are not transcribed in the diplomatic transcription.  Blake's signature appears immediately below that of B. R. Haydon.</p>
-                    
-                    <p>The lines that surround Blake's drawing of a male figure were first sketched out in pencil before being inked over in order to plot out their position relative to the drawing.  These faint pencil lines, still visible in some areas (and traced in red in the sample below), were either imperfectly erased after the lines were rewritten in ink or have simply faded over time.</p>
-                    <p>Bentley speculates that the Mr. Leigh Blake refers to (line 7) may have been James Matthews Leigh, a painter and son of a bookseller. He further suggests that
-                    as Blake provided the autograph by Leigh's desire, "the circumstances rather indicate Blake was not an acquaintence of Upcott's but could be trusted to respond to Leigh" 
-                    ("Reliques of the Contemporaries of William Upcott, 'Emperor of Autographs,'" *Bulletin of the New York Public Library* 64 [1960]: 581-87).</p>
-               </objnote> 
-               <objnote>
-                   <illus filename=""></illus>
-                   <illus filename=""></illus>
-                   <p>See lines 5 though 8. Blake seems to have written out these lines and designed the accompanying drawing in pencil before tracing over the pencil marks with ink. His tracings are not exact and some pencil marks are still visible.</p>
-                   <p>Blake also appears to have written text in the space slightly below the inked lines and beneath the figure's head that is now erased. They are not legible.</p> 
-                   <p>The images in this note have been color-enhanced to better reveal the pencil strokes and erased lines.</p>
-               </objnote>
-               <objnote>
-                   <p>Blake's autograph appears below three others recorded on the page. As these are in hands other than Blake's, we have not included them in the diplomatic transcription and have instead transcribed them here.</p>
+                     <p>Blake's autograph appears below three others recorded on the page. As these are in hands other than Blake's, we have not included them in the diplomatic transcription and have instead transcribed them here.</p>
                    <p>LeS amis architecte du gouvernement Francais le 27 aoust 1824.</p>
                    <p>T. Croften Croker &#45; Author of Researches in the South of Ireland.</p>
                    <p>B. R. Haydon.</p>
+                </objnote>
+                <objnote>    
+                    <p>The lines that surround Blake's drawing of a male figure were first sketched out in pencil before being inked over in order to plot out their position relative to the drawing.  These faint pencil lines, still visible in some areas, were either imperfectly erased after the lines were rewritten in ink or have simply faded over time.</p>
+                   <p>Blake also appears to have written, and then erased, text in the space slightly below the inked lines and beneath the figure's head. They are not legible.</p>
+                   <p>The images in this note have been color-enhanced to better reveal the pencil strokes and erased lines.</p>
+                   <illus filename=""></illus>
+                   <illus filename=""></illus>
+                </objnote>     
+                <objnote>    
+                    <p>Bentley speculates that the Mr. Leigh Blake refers to (line 7) may have been James Matthews Leigh, a painter and son of a bookseller. He further suggests that
+                    as Blake provided the autograph by Leigh's desire, "the circumstances rather indicate Blake was not an acquaintence of Upcott's but could be trusted to respond to Leigh" 
+                    ("Reliques of the Contemporaries of William Upcott, 'Emperor of Autographs,'" *Bulletin of the New York Public Library* 64 [1960]: 581-87).</p>
                </objnote>
                 <objnote>    
                     <illus filename="bb208.1a.note.jpg"/>
                     <illus filename="bb208.1b.note.jpg"/>
-                    <p>A number of letters appearing in words from lines 15 to 17 contain strokes that appear with a double line.  See, for example, the "h" in "Autograph" (line 15) and the "d" in "Comfield" (line 16).  Blake's pen seems to have run low on ink and may have needed mending.</p>
+                    <p>A number of letters appearing in words from lines 15 to 17 contain strokes that appear with a double line. See, for example, the "h" in "Autograph" (line 15) and the "d" in "Comfield" (line 16).  Blake's pen seems to have run low on ink and may have needed mending.</p>
                 </objnote>
                 <objnote>
                 <p>Lines 18-21 are taken from Wordsworth's *Poems* (1815), which was loaned to Blake by Crabb Robinson in December of 1825 (Bentley, *Writings* volume 2, page 1322n).  They appear in one of a series of sonnets that were originally published by Wordsworth in 1807.  The first is entitled "From the Italian of <choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>," while all subsequent sonnets in the series (including that cited by Blake) are entitled "From the Same."  In Wordsworth's *Poems* (1815), the lines, which Blake either copied or remembered imperfectly, are as follows: "Heaven-born, the Soul a heaven-ward course must hold; / Beyond the visible world She soars to seek, / (For what delights the sense is false and weak) / Ideal Form, the universal mould" (volume 2, page 179).  Blake also refers to this particular sonnet in his annotations to Wordsworth's *Poems* (1815) (*Writings* volume 1, page 44).</p>
@@ -390,7 +387,11 @@
                     <l n="bb208.1.ms.01.20" justify="left" indent="18">Beyond the Visible World she soars to Seek</l>
                     <l n="bb208.1.ms.01.21" justify="left" indent="18">Ideal Form, The Universal Mold</l>
                     <l n="bb208.1.ms.01.22" justify="left" indent="40">
+<<<<<<< HEAD
                         <choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>. Sonnet as Translated by M<hi rend="superscript">r</hi> Wordsworth</l>
+=======
+                        <choice><orig>Michael Angelo</orig><reg>Michelangelo</reg></choice>. Sonnet as Translated by M<hi rend="superscript">r</hi> Wordsworth<note>According to Bentley</note></l>
+>>>>>>> 5cf472d5eb582ea6e57fc644baac4b23ea362e7e
                 </lg>
             </phystext>
         </desc>
