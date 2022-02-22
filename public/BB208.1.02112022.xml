@@ -23,8 +23,8 @@
             </titlestmt>
             <editionstmt>Blake Archive Description DTD Version 2006</editionstmt>
             <extent>1 XML file approx. ???KB; 2 JPEG (ISO/IEC 10918) files approx. 1.0MB and 1.7MB</extent>
-            <publicationstmt>Chapel Hill: Eaves, Essick, Viscomi; Carolina Digital Library and
-               Archives<date>February 2022</date>
+            <publicationstmt>Chapel Hill: Eaves, Essick, Viscomi; UNC Libraries
+                <date>February 2022</date>
             </publicationstmt>
             <seriesstmt>The William Blake Archive</seriesstmt>
             <updatestmt>
@@ -37,7 +37,8 @@
          Fair Use provisions of U.S. copyright law. Redistribution or republication on other terms,
          in any medium, requires express written consent from the editors and advance notification
          of the publisher. Permission to reproduce the graphic images in this archive has been
-         granted by the owners of the originals for this publication only.<lb/>
+         granted by the owners of the originals for this publication only.
+            <lb/>
             <lb/>This image copyright © 2022 New York Public Library.<lb/>
             <lb/>
         </userestrict>
@@ -69,14 +70,15 @@
                     <resp>Bibliographer: </resp>
                     <name>Chuck Ripley</name>
                     <resp>Project Assistants: </resp>
+                    <name>Esther Ben Ami, </name>
                     <name>Katherine Calvin, </name>
-                    <name>Kendall DeBoer, </name>
                     <name>Ani Govjian, </name>
                     <name>Meaghan Green, </name>
                     <name>Rachael Isom, </name>
                     <name>Mary Learner, </name>
+                    <name>Ania Michas, </name>
+                    <name>Angie (Quynh-Anh) Pham, </name>
                     <name>Rob Rich, </name>
-                    <name>Madeline Rose, </name>
                     <name>Anneke Schwob, </name>
                     <name>Elizabeth Shand, </name>
                     <name>Kate Soules, </name>
@@ -233,11 +235,12 @@
             <physdesc desclevel="brief">
                 <objsize>27.0 cm. x 21.0 cm.</objsize>
                 <windowsize width="500" height="615"/>
-                <objnote>
+                <objnote><!-- combine top half of n1 with n3, and bottom half of note 1 with n2 -->
                     <p>The number 19, indicating that this object is the nineteenth leaf of the second volume of this particular collection, is written in ink and in a hand other than Blake's at the top right corner of the object.</p>
                     <p>The top third of the object contains the autographs of various individuals who signed Upcott's original album.  These are not transcribed in the diplomatic transcription.  Blake's signature appears immediately below that of B. R. Haydon.</p>
-                    <p>Lines 1-4, which surround Blake's drawing of a male figure, were first sketched out in pencil before being inked over in order to plot out their position relative to the drawing.  These faint pencil lines, still visible in some areas (and traced in red in the sample below), were either imperfectly erased after the lines were rewritten in ink or have simply faded over time.</p>
-                    <p>Bentley speculates that the Mr. Leigh Blake refers to (line 11) may have been James Matthews Leigh, a painter and son of a bookseller. He further suggests that
+                    
+                    <p>The lines that surround Blake's drawing of a male figure were first sketched out in pencil before being inked over in order to plot out their position relative to the drawing.  These faint pencil lines, still visible in some areas (and traced in red in the sample below), were either imperfectly erased after the lines were rewritten in ink or have simply faded over time.</p>
+                    <p>Bentley speculates that the Mr. Leigh Blake refers to (line 7) may have been James Matthews Leigh, a painter and son of a bookseller. He further suggests that
                     as Blake provided the autograph by Leigh's desire, "the circumstances rather indicate Blake was not an acquaintence of Upcott's but could be trusted to respond to Leigh" 
                     ("Reliques of the Contemporaries of William Upcott, 'Emperor of Autographs,'" *Bulletin of the New York Public Library* 64 [1960]: 581-87).</p>
                </objnote> 
@@ -298,11 +301,7 @@
                 </illustration>
             </illusdesc>          
             <phystext>
-                <lg justify="left">
-                    <l n="bb208.1.ms.01.01" justify="left" indent="87"><hi rend="handshift">19</hi></l>
-                </lg>
-                <vspace extent="1"/>
-                
+               
                 <lg justify="left">
                     <l n="bb208.1.ms.01.02" justify="left" indent="4">William Blake<space extent="2"/>one who is very much delighted with</l>
                     <l n="bb208.1.ms.01.03" justify="left" indent="1.5">being in good Company</l>
