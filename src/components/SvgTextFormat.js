@@ -189,6 +189,7 @@ export function Hi(props) {
   return render(line.hi);
   // TODO figure out how to render whwen hi is actually an array
 }
+
 export function Add(props) {
   const { line } = props;
   const { add } = line;
