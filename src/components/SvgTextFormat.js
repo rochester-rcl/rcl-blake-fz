@@ -147,7 +147,6 @@ export function Choice(props) {
 
 export function Catchword(props) {
   const { line, textRef } = props;
-  console.log(textRef);
   return <tspan>{line.catchword ? line.catchword["#text"] : ""}</tspan>;
 }
 
@@ -156,7 +155,6 @@ export function Hi(props) {
   const { hi } = line;
   let rendType =
     hi.attributes && hi.attributes.rend ? hi.attributes.rend : null;
-
   function renderHi(text) {
     if (!text) {
       return null;
@@ -173,21 +171,21 @@ export function Hi(props) {
   if (!line["#text"]) {
     return null;
   }
-
-  let rawText =
-    line["#text"].constructor === Array
-      ? line["#text"].join("")
-      : line["#text"];
-  let { textPosition } = line.hi;
-  let pre = rawText.slice(0, textPosition);
-  let post = rawText.slice(textPosition);
-  return (
-    <tspan>
-      <tspan key={pre}>{pre}</tspan>
-      {renderHi(line.hi["#text"])}
-      <tspan key={post}>{post}</tspan>
-    </tspan>
-  );
+  const render = (hiNode) => {
+    let { rawText } = line;
+    let { textPosition } = hiNode;
+    let pre = rawText.slice(0, textPosition);
+    let post = rawText.slice(textPosition + hiNode["#text"].length);
+    return (
+      <tspan>
+        <tspan key={pre}>{pre}</tspan>
+        {renderHi(hiNode["#text"])}
+        <tspan key={post}>{post}</tspan>
+      </tspan>
+    );
+  };
+  return render(line.hi);
+  // TODO figure out how to render whwen hi is actually an array
 }
 export function Add(props) {
   const { line } = props;

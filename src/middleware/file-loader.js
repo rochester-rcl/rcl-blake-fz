@@ -1,5 +1,31 @@
 /* @flow */
 
+function getRawText(xml) {
+  const getText = (node) => {
+    let text = "";
+    if (node.childNodes.length) {
+      for (let n of node.childNodes) {
+        if (n.nodeName === "#text") {
+          text += n.textContent;
+        } else {
+          if (n.nodeName === "choice") {
+            let orig = Array.from(n.childNodes).find(c => c.nodeName === "orig");
+            if (orig) {
+              text += orig.textContent;
+            }
+          } else {
+            text += getText(n);
+          }
+        }
+      }
+    } else {
+      text += node.textContent;
+    }
+    return text;
+  }
+  return getText(xml);
+}
+
 function getTextPosition(xml, nodeKey, textKey) {
   let parent = xml.parentNode;
   let nodes = Array.from(parent.childNodes);
@@ -190,6 +216,12 @@ function xmlToJson(xml) {
 }
 
 function formatLineGroup(lg, parent, index) {
+  let lineText = [];
+  for (let child of lg.childNodes) {
+    if (child.nodeName === "l") {
+      lineText.push(getRawText(child));
+    }
+  }
   let group = xmlToJson(lg);
   if (index > 0) {
     let vspace = parent
@@ -204,6 +236,7 @@ function formatLineGroup(lg, parent, index) {
       group.vspaceExtent = 0;
     }
   }
+  group.l = Array.from(group.l).map((line, idx) => ({...line, rawText: lineText[idx]}));
   return group;
 }
 
