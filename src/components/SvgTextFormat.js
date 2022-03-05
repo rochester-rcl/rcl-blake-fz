@@ -175,7 +175,9 @@ export function Hi(props) {
     let { rawText } = line;
     let { textPosition } = hiNode;
     let pre = rawText.slice(0, textPosition);
-    let post = rawText.slice(textPosition + hiNode["#text"].length);
+    let hiText = hiNode["#text"];
+    let hiTextEnd = hiText ? hiText.length : 0;
+    let post = rawText.slice(textPosition + hiTextEnd);
     return (
       <tspan>
         <tspan key={pre}>{pre}</tspan>
