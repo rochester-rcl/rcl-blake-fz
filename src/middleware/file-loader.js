@@ -92,30 +92,10 @@ function xmlToJson(xml) {
         obj["children"] = elements;
       }
       if (nodeName === "hi") {
-        obj.textPosition = getTextPosition(xml, "hi", "#text");
+        obj.textPosition = getTextPosition(xml, nodeName, "#text");
       }
       if (nodeName === "choice") {
-        // find index of choice in line text
-        let parent = xml.parentNode;
-        let nodes = Array.from(parent.childNodes);
-        let text = "";
-        for (let node of nodes) {
-          if (node === xml) {
-            obj.textPosition = text.length;
-          } else {
-            if (node.nodeName === "choice") {
-              let orig = Array.from(node.childNodes).find(
-                (c) => c.nodeName === "orig"
-              );
-              if (orig) {
-                text += orig.textContent;
-              }
-            } else {
-              text += node.textContent;
-            }
-          }
-          // get text index based on all previous nodes
-        }
+        obj.textPosition = getTextPosition(xml, nodeName, "orig");
       }
       if (nodeName === "zone") {
         // child zones get processed recursively in formatZone
@@ -128,6 +108,9 @@ function xmlToJson(xml) {
           var attribute = xml.attributes.item(j);
           obj["attributes"][attribute.nodeName] = attribute.nodeValue;
         }
+      }
+      if (nodeName !== "l") {
+        obj.textPosition = getTextPosition(xml, nodeName, "#text");
       }
     } else {
       let nodeName = xml.nodeName;

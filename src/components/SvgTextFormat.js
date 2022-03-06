@@ -114,6 +114,7 @@ export function Subst(props) {
 export function Choice(props) {
   const { line } = props;
   const { choice } = line;
+  console.log(line);
   function formatTextWithChoice(text, choice) {
     let finalText = text;
     function formatChoiceText(ch, t) {
@@ -130,6 +131,7 @@ export function Choice(props) {
     } else {
       finalText = formatChoiceText(choice, finalText);
     }
+
     return (
       <tspan key="key2">
         <tspan>{finalText}</tspan>
@@ -155,6 +157,7 @@ export function Hi(props) {
   const { hi } = line;
   let rendType =
     hi.attributes && hi.attributes.rend ? hi.attributes.rend : null;
+
   function renderHi(text) {
     if (!text) {
       return null;
@@ -171,23 +174,40 @@ export function Hi(props) {
   if (!line["#text"]) {
     return null;
   }
-  const render = (hiNode) => {
+
+  const render = (hiNode, startIdx = 0, endIdx = undefined) => {
     let { rawText } = line;
     let { textPosition } = hiNode;
-    let pre = rawText.slice(0, textPosition);
+    let pre = rawText.slice(startIdx, textPosition);
     let hiText = hiNode["#text"];
-    let hiTextEnd = hiText ? hiText.length : 0;
-    let post = rawText.slice(textPosition + hiTextEnd);
+    let hiTextEnd = hiText ? hiText.length : undefined;
+    let post = rawText.slice(textPosition + hiTextEnd, endIdx);
     return (
-      <tspan>
-        <tspan key={pre}>{pre}</tspan>
+      <tspan key={shortid.generate()}>
+        <tspan key="pre">{pre}</tspan>
         {renderHi(hiNode["#text"])}
-        <tspan key={post}>{post}</tspan>
+        <tspan key="post">{post}</tspan>
       </tspan>
     );
   };
+
+  if (line.hi.constructor.name === "Array") {
+    let cursor = 0;
+    return (
+      <tspan>
+        {line.hi.map((hiNode, idx) => {
+          let next = line.hi[idx + 1];
+          let endIdx = next && next.textPosition;
+          let rendered = render(hiNode, cursor, endIdx);
+          cursor += endIdx || 0;
+          return rendered;
+        })}
+      </tspan>
+    );
+  }
+
   return render(line.hi);
-  // TODO figure out how to render whwen hi is actually an array
+  // TODO figure out how to render whwen hi is actually an array -- see page 10, Aaron and Miriam
 }
 
 export function Add(props) {
@@ -295,6 +315,14 @@ function FormattedAttribute(props) {
       return null;
   }
 }
+
+// TODO need to completely rewrite this to account for multiple tags in a single line - see Hi for an idea of how to implement using text position
+// and a cursor
+
+// possible algorithm
+// 1. Sort all properties by text position
+// 2. Insert <tspan> elements in the line array between all components
+// 2. Get cursor position for each component - pass to the component as a prop
 
 function FormattedLine(props) {
   const { line, textRef } = props;
