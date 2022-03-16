@@ -3710,8 +3710,8 @@
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                    
-                    <zone type="page-right">
+                    <zone type="original">
+                     <zone type="page-right" points="4020","5080","430","3130"/>
                         
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
                         
