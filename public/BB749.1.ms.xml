@@ -3711,8 +3711,8 @@
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
                     <zone type="original">
-                     <zone type="page-right" points="4020","5080","430","3130"/>
-                        
+                     <zone type="right" lry="4020" lrx="5080" uly="430" ulx="3130"/>
+                  
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
                         
                         <lg justify="left" points="3131,4021 5066,3952 5036,282 3131,304">
@@ -3802,7 +3802,7 @@
             </physdesc>
             <phystext> 
                 
-                <zone type="original">
+                <zone type="original"/>
                     <zone type="page-left" points="2467,4072 2488,332 527,326 528,4050">
                         
                         <texthead justify="left"><l n="bb749.1.ms.20" justify="left" indent="5"><physnumber>(108)</physnumber></l></texthead>
