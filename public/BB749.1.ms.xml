@@ -3027,7 +3027,7 @@
                                     <l n="bb749.1.ms.14.04" justify="left">O very fine</l>
                                     <l n="bb749.1.ms.14.05" justify="left">Records</l>
                                     <l n="bb749.1.ms.14.06" justify="left">as if he</l>
-                                    <l n="bb749.1.ms.14.07" justify="left">Knew</l>
+                                    <l n="bb749.1.ms.14.07" justify="left">K<unclear>ne<unclear>w</l>
                                     <l n="bb749.1.ms.14.08" justify="left">that there</l>
                                     <l n="bb749.1.ms.14.09" justify="left">were Records</l>
                                     <l n="bb749.1.ms.14.10" justify="left">the Ancients</l>
@@ -3185,7 +3185,7 @@
                 <zone type="Blake">
                       
                     <zone type="marginalia-1" points="2942,3847 2947,4509 5569,4509 5550,3838">
-                            <lg justify="left">
+                            <lg justify="left"><handShift medium=“pencil”/>
                                 <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
                                 <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
                                 <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
@@ -3213,7 +3213,7 @@
                 
                 <zone type="original">
                     
-                    <zone type="page-left" points="2569,4084 561,4069 536,269 2524,273">
+                    <zone type="page-left" points="573,437 2573,455 2573,4055 573,4046">>
                         
                         <texthead justify="left"><l n="bb749.1.ms.16" justify="left" indent="5"><physnumber>(34)</physnumber></l></texthead>
                         
@@ -3323,7 +3323,7 @@
                     
                     
                         
-                    <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716"><!-- m1 -->
+                   <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716"><handShift medium=“pencil”/>
                             <lg justify="left">
                                 <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that there is a God of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
@@ -3477,7 +3477,7 @@
             <zone type="Blake">
                 <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
                     <lg justify="left">
-                    <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l>
+                    <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l><!--the a in "hartley" isn't unclear to me-->
                     <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                     <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
                     <l n="bb749.1.ms.17.04" justify="left">then Judgement</l>
@@ -3710,8 +3710,7 @@
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                    <zone type="original">
-                     <zone type="right" lry="4020" lrx="5080" uly="430" ulx="3130"/>
+                     <zone type="right" lry="4020" lrx="5080" uly="430" ulx="3130">
                   
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
                         
@@ -3802,7 +3801,7 @@
             </physdesc>
             <phystext> 
                 
-                <zone type="original"/>
+                <zone type="original">
                     <zone type="page-left" points="2467,4072 2488,332 527,326 528,4050">
                         
                         <texthead justify="left"><l n="bb749.1.ms.20" justify="left" indent="5"><physnumber>(108)</physnumber></l></texthead>
