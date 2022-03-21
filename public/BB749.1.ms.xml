@@ -1,4 +1,3 @@
-
 <bad id="bb749.1.ms.03" justify="left" type="ms" work="Books Owned, Watson" copy="1" copyid="1" institution="huntington"
     catalog="bentley" catid="749.1.ms.3" hidden="false">
     <header>
@@ -3319,7 +3318,7 @@
                     </zone>
                 </zone>
                 
-                <zone type="Blake"><!---hanShift medium "pencil" -->
+                <zone type="Blake"><hanShift medium "pencil/>
                     
                     
                         
@@ -3349,6 +3348,7 @@
                                     <l n="bb749.1.ms.16.06" justify="left">is not of</l>
                                     <l n="bb749.1.ms.16.07" justify="left">Consequence</l>
                                 </lg>
+                                <hanShift medium "pencil/>
                             </zone>
                     
                 </zone>
