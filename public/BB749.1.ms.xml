@@ -190,7 +190,7 @@
       <phystext> 
                 
            <zone type="original">
-               <zone type="page-right" points="4875,675 2995,650 2970,4155 4845,4165">            
+               <zone type="page-right" points="4880,4150 4870,635 2954,630 2967,4153">            
                         <lg justify="left">
                             <l n="bb749.1.ms.01" justify="left"><hr width="20" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.01" justify="left" indent="8">THIS edition of the Apology for</l>
@@ -232,7 +232,7 @@
                </zone>
                     <zone type="Blake">
                      
-                        <zone type="marginalia-1" points="2650,20 2610,4630 50,4610 90,10">
+                        <zone type="marginalia-1" points="2690,4650 2660,20 20,-20 10,4670">
                             <lg justify="left">
                                 <l n="bb749.1.ms.01.01" justify="left" indent="3">Notes on the B of L's Apology for the Bible</l>
                                 <l n="bb749.1.ms.01.02" justify="left" indent="6">by William Blake</l>
@@ -263,12 +263,19 @@
                             </zone>
                         
                         
-                        <zone type="marginalia-2" points="2745,90 5122,109 5131,609 2740,618">
+                        <zone type="marginalia-2" points="5100,535 2780,540 2805,25 5105,5">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.01.23" justify="left">Paine has not Attacked Christianity</l>
                                     <l n="bb749.1.ms.01.24" justify="left">Watson has Defended Antichrist</l>
                                 </lg> 
                             </zone>
+                        
+                        <zone type="underline-1" points="4390,2075 4395,2225 3795,2220 3785,2080">
+                            <lg justify = "left">
+                                <l n="bb749.1.ms.01.25" justify="left" indent="30"><hi rend='u'><gap extent="13"/></hi>
+                                </l>
+                            </lg>
+                        </zone>
                     
                       
                     </zone>           
