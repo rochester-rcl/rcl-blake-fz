@@ -19,7 +19,7 @@
    <facsimile>
       <surface>
          <graphic url="BB749.1.118+119.MS.300.jpg"/>
-         <zone xml:id="original / page-right" lry="4118" lrx="4855" uly="281" ulx="2900"/>
+         <zone xml:id="original-page-right" lry="4118" lrx="4855" uly="281" ulx="2900"/>
       </surface>
    </facsimile>
 </TEI>
