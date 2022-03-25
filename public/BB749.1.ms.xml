@@ -1458,7 +1458,7 @@
                             <l n="bb749.1.ms.06" justify="left">if you had given the priests no provocation; as if you</l>
                             <l n="bb749.1.ms.06" justify="left">were a man of the most unblemished character, subject</l>
                             <l n="bb749.1.ms.06" justify="left">to no prejudices, actuated by no bad designs, not</l>
-                            <l n="bb749.1.ms.06" justify="left">liable to have abuse retorted upon you with success.</l></l>
+                            <l n="bb749.1.ms.06" justify="left">liable to have abuse retorted upon you with success.</l>
                         </lg>
                         
                         <textfoot><l n="bb749.1.ms.06" justify="left" indent="5">B5<catchword>LET-</catchword></l></textfoot>
@@ -3026,7 +3026,7 @@
                                     <l n="bb749.1.ms.14.04" justify="left">O very fine</l>
                                     <l n="bb749.1.ms.14.05" justify="left">Records</l>
                                     <l n="bb749.1.ms.14.06" justify="left">as if he</l>
-                                    <l n="bb749.1.ms.14.07" justify="left">K<unclear>ne<unclear>w</l>
+                                    <l n="bb749.1.ms.14.07" justify="left">K<unclear>ne</unclear>w</l>
                                     <l n="bb749.1.ms.14.08" justify="left">that there</l>
                                     <l n="bb749.1.ms.14.09" justify="left">were Records</l>
                                     <l n="bb749.1.ms.14.10" justify="left">the Ancients</l>
@@ -3184,11 +3184,12 @@
                 <zone type="Blake">
                       
                     <zone type="marginalia-1" points="2942,3847 2947,4509 5569,4509 5550,3838">
-                            <lg justify="left"><handShift medium=“pencil”/>
+                        <lg justify="left"><!--<handShift medium="pencil"/>-->
                                 <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
                                 <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
                                 <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
                             </lg>
+                        <!--<handShift medium="pencil"/>-->
                         </zone>
                     </zone>
                 
@@ -3318,12 +3319,12 @@
                     </zone>
                 </zone>
                 
-                <zone type="Blake"><hanShift medium "pencil/>
+                <zone type="Blake">
                     
                     
                         
-                   <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716"><handShift medium=“pencil”/>
-                            <lg justify="left">
+                    <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716">
+                        <lg justify="left"><!--<handShift medium="pencil"/>-->
                                 <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that there is a God of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
                                 <l n="bb749.1.ms.16.03" justify="left">World</l>
@@ -3333,6 +3334,7 @@
                                 <l n="bb749.1.ms.16.07" justify="left">all that</l>
                                 <l n="bb749.1.ms.16.08" justify="left">is <choice><orig>calld</orig><reg>called</reg></choice></l>
                                 <l n="bb749.1.ms.16.09" justify="left">God</l>
+                            <!--<handShift medium="pencil"/>-->
                             </lg>
                         </zone>
                         
@@ -3348,7 +3350,7 @@
                                     <l n="bb749.1.ms.16.06" justify="left">is not of</l>
                                     <l n="bb749.1.ms.16.07" justify="left">Consequence</l>
                                 </lg>
-                                <hanShift medium "pencil/>
+                               
                             </zone>
                     
                 </zone>
@@ -3906,7 +3908,7 @@
                             <l n="bb749.1.ms.20" justify="left">a tooth.---<hi rend="i">Aristotle,</hi> in his treatise of morals, says, that</l>
                             <l n="bb749.1.ms.20" justify="left">some thought retaliation of personal wrongs an <choice><orig>equi-</orig><reg type="split_word">equitable</reg></choice></l>
                         </lg>
-                        <textfoot><l n="bb749.1.ms.20" justify="left" indent="20"><catchword><choice><orig>table</orig><regtype="split_word">equitable</reg></choice></catchword></l></textfoot>
+                        <textfoot><l n="bb749.1.ms.20" justify="left" indent="20"><catchword><choice><orig>table</orig><reg type="split_word">equitable</reg></choice></catchword></l></textfoot>
                         
                     </zone>
                     
@@ -4048,7 +4050,7 @@
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.21" justify="left">the history of philosophy, and of idolatry, and <choice><orig>super-</orig><reg type="split_word">superstition</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>stition</orig><reg type"split_word">superstition</reg></choice>, in all ages and countries, determine. A <choice><orig>vo-</orig><reg type="split_word">volume</reg></choice></l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>stition</orig><reg type="split_word">superstition</reg></choice>, in all ages and countries, determine. A <choice><orig>vo-</orig><reg type="split_word">volume</reg></choice></l>
                             <l n="bb749.1.ms.21" justify="left"><choice><orig>lume</orig><reg type="split_word">volume</reg></choice> might be filled with an account of the mistakes</l>
                             <l n="bb749.1.ms.21" justify="left">into which the greatest reasoners have fallen, and of</l>
                             <l n="bb749.1.ms.21" justify="left">the uncertainty in which they lived, with respect to</l>
