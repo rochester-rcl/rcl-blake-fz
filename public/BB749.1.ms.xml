@@ -3712,7 +3712,7 @@
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                     <zone type="page-right" lry="4020" lrx="5080" uly="430" ulx="3130">
+                    <zone type="page-right" lry="3880" lrx="5040" uly="290" ulx="3090"/>
                   
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
                         
@@ -3759,13 +3759,15 @@
                             <l n="bb749.1.ms.19" justify="left">fact, that all the books, of which it is composed, were</l>
                             <l n="bb749.1.ms.19" justify="left">written, and most of them received by all christians,</l>
                             <l n="bb749.1.ms.19" justify="left">within a few years after his death.</l>
+                          
                         </lg>
                         
                         <textfoot><l n="bb749.1.ms.19" justify="left" indent="5"><catchword>You</catchword></l></textfoot>
                     </zone>
-                </zone>
+               <!--</zone>-->
                 
                 <zone type="Blake">
+                   
                     
                     <zone type="marginalia-1" points="5063,2617 5428,2612 5427,2786 5062,2790">
                         
@@ -3774,6 +3776,14 @@
                                </lg>
                             </zone>
                     
+                    <zone type="underline-1" lry="3150" lrx="5090" uly="3000" ulx="4290"/>
+                    <lg justify="left">
+                        <l n="bb749.1.ms.19.01" justify="left" indent="35"><hi rend="u"><space extent="8" unit="character"/></hi></l>
+                        <vspace extent="1"/>
+                        <l n="bb749.1.ms.19.02" justify="left" indent="43"><hi rend="u"><space extent="7" unit="character"/></hi></l>
+                    </lg>
+                </zone>
+                    
                     <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.19.01" justify="left">This is No</l>
@@ -3781,11 +3791,8 @@
                                     <l n="bb749.1.ms.19.03" justify="left">Fact</l>
                                     <l n="bb749.1.ms.19.04" justify="left">Presumption is no Proof</l>
                                 </lg>
-                            </zone>
-                        </zone>
-                    
-                    
-              
+                    </zone>
+              <!--</zone>-->  
             </phystext>
         </desc>
         
