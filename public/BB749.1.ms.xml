@@ -3712,7 +3712,7 @@
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                    <zone type="page-right" lry="3880" lrx="5040" uly="290" ulx="3090"/>
+                    <zone type="page-right" lry="4010" lrx="5080" uly="290" ulx="3090"/>
                   
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
                         
@@ -3782,7 +3782,16 @@
                         <vspace extent="1"/>
                         <l n="bb749.1.ms.19.02" justify="left" indent="43"><hi rend="u"><space extent="7" unit="character"/></hi></l>
                     </lg>
-                </zone>
+                    <!--</zone>--> 
+                
+                <zone type="underline-2" lry="3820" lrx="5060" uly="3600" ulx="3440"/>
+                <lg justify="left">
+                    <l n="bb749.1.ms.19.01" justify="left" indent="26"><hi rend="u"><space extent="29" unit="character"/></hi></l>
+                    <vspace extent="1"/>
+                    <l n="bb749.1.ms.19.02" justify="left" indent="11"><hi rend="u"><space extent="14" unit="character"/></hi></l>
+                </lg>
+            </zone>
+                
                     
                     <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
                                 <lg justify="left">
