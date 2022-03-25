@@ -3712,7 +3712,7 @@
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                     <zone type="right" lry="4020" lrx="5080" uly="430" ulx="3130">
+                     <zone type="page-right" lry="4020" lrx="5080" uly="430" ulx="3130">
                   
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
                         
@@ -4195,9 +4195,9 @@
                         
                         <textfoot indent="10"><catchword>subject</catchword></textfoot>
                        </zone>
-                    </zone>
                     
-                    <zone type="page-right" points="4835,295 4830,4115 2875,4105 2875,295">
+                    
+                <zone type="page-right" lry="4118" lrx="4855" uly="281" ulx="2900"/>>
                         
                         <texthead justify="left"><l n="bb749.1.ms.22" justify="left" indent="5"><physnumber>(119)</physnumber></l></texthead>
                         <lg justify="left">
@@ -4247,12 +4247,11 @@
                         </lg>
                         
                         <textfoot indent="10"><catchword>class</catchword></textfoot>
-                        
-                    </zone>
-            
-                
-                
-                
+                </zone>
+         
+       
+       
+              
                 <zone type="Blake">
                          
                       
