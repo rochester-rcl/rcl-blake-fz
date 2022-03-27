@@ -250,7 +250,10 @@ function FormattedLine(props) {
     if (key === "space") {
       return <Space n={val.space.extent} />
     }
-    if (key === "text") {
+    if (key === "physnumber") {
+      return <tspan>{val["#text"]}</tspan>;
+    }
+    if (key === "text" || key === "physnumber") {
       return <tspan>{val.textContent}</tspan>;
     }
     return null;
