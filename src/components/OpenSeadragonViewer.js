@@ -227,6 +227,7 @@ export default class OpenSeadragonViewer extends Component {
     if (!showZoneROI) {
       return null;
     }
+    // TODO display on hover only
     if (overlays.length > 0 && this.state.overlay) {
       return ReactDOM.createPortal(
         overlays.map((overlay, idx) => {
