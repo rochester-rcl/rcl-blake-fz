@@ -301,7 +301,7 @@ export default class OpenSeadragonViewer extends Component {
     }
   }
 
-  getTextPath(points, zone) {
+  getTextPath(points, zone, roi) {
     const { drawBackgrounds } = this.state;
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
     let lineHeight = getLineHeight(points, nLines);
@@ -337,6 +337,7 @@ export default class OpenSeadragonViewer extends Component {
       }
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
+      
       return (
         <g key={`group-${idx}`}>
           <path
@@ -348,12 +349,13 @@ export default class OpenSeadragonViewer extends Component {
             <Background textRef={textRef} line={line} />
           ) : null}
           <text
+            textAnchor={"start"}
             fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
             ref={(ref) => this.setTextRefs(ref, textRefId)}
             style={{ fontSize: "0.001em", fill: "#ccc" }}
           >
             <textPath href={`#text-path-line-${id}`}>
-              <FormatLine line={line} textRef={textRef} />
+              <FormatLine line={line} textRef={textRef} zoneRoi={roi} />
             </textPath>
           </text>
         </g>
@@ -371,9 +373,16 @@ export default class OpenSeadragonViewer extends Component {
             const points = this.convertImageToViewportPoints(overlay);
             if (points && this.arePointsNormalized(points)) {
               // render zone in overlay
+              let pointsNum = points
+                .split(" ")
+                .map((coord) => coord.split(",").map((n) => parseFloat(n)));
               return (
                 <g key={`overlay-${index}`}>
-                  {this.getTextPath(overlay, this.props.zones[index])}
+                  {this.getTextPath(
+                    overlay,
+                    this.props.zones[index],
+                    pointsNum
+                  )}
                 </g>
               );
             } else {

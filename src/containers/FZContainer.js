@@ -48,15 +48,18 @@ class FZContainer extends Component {
     textDisplayAngle: 0,
     background: background
   };
+
   constructor(props: Object) {
     super(props);
     this.updateTextDisplayAngle = this.updateTextDisplayAngle.bind(this);
     this.openseadragonViewerRef = null;
   }
+
   componentDidMount() {
     // Call this here to load initial data
     this.props.loadXMLAction(xml);
   }
+
   updateTextDisplayAngle(angle: number): void {
     this.setState({
       textDisplayAngle: angle
