@@ -3229,7 +3229,7 @@
                             <l n="bb749.1.ms.16" justify="left">notified it to them, as they did to the world,) in the <choice><orig><hi rend="i">re-</hi></orig><reg type="split_word"><hi rend="i">recording</hi></reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig><hi rend="i">cording</hi></orig><reg><hi rend="i">recording</hi></reg></choice> of these revelations; so far as that was necessary,</l>
                             <l n="bb749.1.ms.16" justify="left">amidst the common (but from hence termed <hi rend="i">sacred)</hi> <choice><orig>his-</orig><reg type="split_word">history</reg></choice></l>
-                            <l n="bb749.1.ms.16" justify="left"><choice><orig>tory</orig><reg>history</reg></choice> of those times; and mixed with various other <choice><orig>occur-</orig><reg type="split_word">occurrences</reg></choice></l>
+                            <l n="bb749.1.ms.16" justify="left"><choice><orig>tory</orig><reg type="split_word">history</reg></choice> of those times; and mixed with various other <choice><orig>occur-</orig><reg type="split_word">occurrences</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>rences</orig><reg>occurrences</reg></choice>; in which the historian's own natural <choice><orig>qualifica-</orig><reg type="split_word">qualifications</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>tions</orig><reg>qualifications</reg></choice> were sufficient to enable him to relate things, with</l>
                             <l n="bb749.1.ms.16" justify="left">all the accuracy they required."&#8212;The passage from <choice><orig>St</orig><reg>Saint</reg></choice>.</l>
@@ -3318,11 +3318,19 @@
                     </zone>
                 </zone>
                 
+<<<<<<< Updated upstream
                 <zone type="Blake"><hanShift medium "pencil/>
                     
                     
                         
                    <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716"><handShift medium=“pencil”/>
+=======
+                <zone type="Blake"><!---hanShift medium "pencil">
+                    
+                    
+                        
+                    <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716"><!m1 -->
+>>>>>>> Stashed changes
                             <lg justify="left">
                                 <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that there is a God of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
@@ -3351,7 +3359,8 @@
                                 <hanShift medium "pencil/>
                             </zone>
                     
-                </zone>
+        
+                
             </phystext>
         </desc>
         <desc id="bb749.1.ms.17" dbi="BB749.1.36+37.MS">
