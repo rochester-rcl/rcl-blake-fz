@@ -18,8 +18,7 @@
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="BB749.1.34+35.MS.300.jpg"/>
-         <zone xml:id="left" points="573,437 2573,455 2573,4055 573,4046"/>
+            <graphic url="BB749.1.34+35.MS.300.jpg"/>
       </surface>
    </facsimile>
 </TEI>

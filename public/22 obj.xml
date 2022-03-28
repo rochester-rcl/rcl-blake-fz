@@ -18,12 +18,8 @@
    </teiHeader>
    <facsimile>
       <surface>
-         <graphic url="BB749.1.94+95.MS.300.jpg"/>
-         <zone xml:id="right" lry="4020" lrx="5080" uly="430" ulx="3130"/>
-         <zone xml:id="underline-1" points="4320,3110 4680,3110 4310,3110"/>
-         <zone xml:id="underline-2" points="4820,3100 5060,3100 4800,3110"/>
-         <zone xml:id="underline-3" points="4160,3700 5010,3670 4180,3700"/>
-         <zone xml:id="underline-4" points="3550,3800 4080,3780 3520,3800"/>
+         <graphic url="BB749.1.118+119.MS.300.jpg"/>
+         <zone xml:id="original-page-right" lry="4118" lrx="4855" uly="281" ulx="2900"/>
       </surface>
    </facsimile>
 </TEI>

@@ -218,7 +218,8 @@ function sortLinePropsByTextPosition(line) {
 }
 
 function FormattedLine(props) {
-  const { line, textRef } = props;
+  const { line, textRef, zoneRoi } = props;
+
   if (!line) {
     return null;
   }
@@ -244,7 +245,7 @@ function FormattedLine(props) {
       return <Choice choice={val} textRef={textRef} />;
     }
     if (key === "catchword") {
-      return <Catchword catchword={val} textRef={textRef} />;
+      return <Catchword catchword={val} textRef={textRef} zoneRoi={zoneRoi} />;
     }
     if (key === "text") {
       return <tspan>{val.textContent}</tspan>;
@@ -399,7 +400,7 @@ export function FormatTextFoot(props) {
 }
 
 export function FormatLine(props) {
-  const { line, textRef } = props;
+  const { line, textRef, zoneRoi } = props;
   const attributes = getAttributes(line && line.attributes);
   if (typeof line === "string") {
     return <tspan>{line}</tspan>;
@@ -414,7 +415,7 @@ export function FormatLine(props) {
           textRef={textRef}
         />
       ))}
-      <FormattedLine line={line} textRef={textRef} />
+      <FormattedLine line={line} textRef={textRef} zoneRoi={zoneRoi} />
     </tspan>
   );
 }
