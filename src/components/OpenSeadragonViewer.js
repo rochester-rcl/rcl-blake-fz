@@ -244,8 +244,9 @@ export default class OpenSeadragonViewer extends Component {
               `${minX},${minY}`
             ).split(",");
             return (
-              <g key={`overlay-${idx}`}>
+              <g key={`overlay-${idx}`} className="zone-roi">
                 <polygon
+                  className="zone-roi-polygon"
                   key={`overylay-${idx}`}
                   points={points}
                   style={{
@@ -256,10 +257,11 @@ export default class OpenSeadragonViewer extends Component {
                 />
                 {zoneName ? (
                   <text
+                    className="zone-name-label"
                     fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
                     x={x}
                     y={y}
-                    style={{ fontSize: "0.001em", fill: "#E9BC47", textShadow: "3px 3px 4px #454545" }}
+                    style={{ fontSize: "0.0015em", fill: "#E9BC47", textShadow: "3px 3px 4px #454545" }}
                   >
                     {zoneName}
                   </text>
