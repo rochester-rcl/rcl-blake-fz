@@ -3663,7 +3663,7 @@
                     <zone type="page-left" points="784,4050 2706,4055 2689,311 784,333">
                         
                         <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(94)</physnumber></l></texthead>
-                        
+                        <vspace extent="1"/>
                         <lg justify="left">
                             <l n="bb749.1.ms.19" justify="left">the New Testament, consists of twenty-seven different</l>
                             <l n="bb749.1.ms.19" justify="left">parts; concerning seven of these, viz. the Epistle <unclear>t</unclear>o</l>
@@ -3711,11 +3711,11 @@
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                     <zone type="right" lry="4020" lrx="5080" uly="430" ulx="3130">
+                    <zone type="page-right" points="3131,4021 5066,3952 5036,282 3131,304">
                   
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
-                        
-                        <lg justify="left" points="3131,4021 5066,3952 5036,282 3131,304">
+                         <vspace extent="1"/>                      
+                        <lg justify="left">
                             <l n="bb749.1.ms.19" justify="left">not suppose, that the other books of the New <choice><orig>Testa-</orig><reg type="split_word">Testament</reg></choice></l>
                             <l n="bb749.1.ms.19" justify="left"><choice><orig>ment</orig><reg type="split_word">Testament</reg></choice> were gathered together at the same time? What</l>
                             <l n="bb749.1.ms.19" justify="left">renders this highly probable is, that the most urgent</l>
