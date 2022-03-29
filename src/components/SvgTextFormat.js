@@ -42,32 +42,9 @@ export function Space(props) {
 }
 
 export function Gap(props) {
-  const { textRef, line } = props;
-  const { gap } = line;
+  const { textRef, gap } = props;
   const extent = parseInt(gap.extent, 10) || "1";
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
-  const text = line["#text"];
-  if (text) {
-    if (text.constructor === Array && text.length === 2) {
-      return (
-        <tspan>
-          <tspan>{text[0]}</tspan>
-          <tspan textDecoration="line-through">
-            <Space n={extent} direction="horizontal" size={size} />
-          </tspan>
-          <tspan>{text[1]}</tspan>
-        </tspan>
-      );
-    }
-    return (
-      <tspan>
-        <tspan>{text}</tspan>
-        <tspan textDecoration="line-through">
-          <Space n={extent} direction="horizontal" size={size} />
-        </tspan>
-      </tspan>
-    );
-  }
   return (
     <tspan textDecoration="line-through">
       <Space n={extent} direction="horizontal" size={size} />
@@ -76,78 +53,31 @@ export function Gap(props) {
 }
 
 export function Subst(props) {
-  const { textRef, line } = props;
-  const { subst } = line;
-  if (line["#text"].constructor === Array) {
-    if (subst.children) {
-      // collect all del / add combinations as tuples
-      let { children } = subst;
-      let substChildren = children.reduce((substChildren, child, idx) => {
-        if (child.nodeType === "del") {
-          substChildren.push([child, children[idx + 1] || null]);
-        }
-        return substChildren;
-      }, []);
-
-      const renderSubst = (substTup, previousText) => {
-        const l = { ...subst, del: substTup[0], add: substTup[1] };
-
-        return (
-          <tspan key="subst-children">
-            <Del key="subst-del" line={l} textRef={textRef} />
-            <Add key="subst-add" line={l} textRef={textRef} />
-          </tspan>
-        );
-      };
-      return line["#text"].map((text, idx) => (
-        <tspan key={`subst-${idx}`}>
-          <tspan key="subst-text">{text}</tspan>
-          {substChildren[idx] ? renderSubst(substChildren[idx], text) : null}
-        </tspan>
-      ));
-    }
+  const { textRef, subst } = props;
+  const { del, add } = subst;
+  if (!del || !add) {
+    return null;
   }
-  // not sure if there's ever a scenario where a subst isnt' formatted like the above ^ - not implementing for now.
-  return null;
+  return (
+    <tspan>
+      <Del del={del} textRef={textRef} />
+      <Add add={add} textRef={textRef} />
+    </tspan>
+  );
 }
 
 export function Choice(props) {
-  const { line } = props;
-  const { choice } = line;
-  function formatTextWithChoice(text, choice) {
-    let finalText = text;
-    function formatChoiceText(ch, t) {
-      return ch.textPosition !== undefined
-        ? [
-            t.slice(0, ch.textPosition),
-            (ch.orig && ch.orig["#text"]) || "",
-            t.slice(ch.textPosition, t.length),
-          ].join("")
-        : "";
-    }
-    if (choice.length) {
-      finalText = choice.reduce((a, b) => formatChoiceText(b, a), finalText);
-    } else {
-      finalText = formatChoiceText(choice, finalText);
-    }
-    return (
-      <tspan key="key2">
-        <tspan>{finalText}</tspan>
-      </tspan>
-    );
-  }
-  if (line["#text"]) {
-    return line["#text"].constructor === Array
-      ? formatTextWithChoice(line["#text"].join(""), choice)
-      : formatTextWithChoice(line["#text"], choice);
-  } else {
-    return formatTextWithChoice("", choice);
-  }
+  const { choice } = props;
+  return <tspan>{choice.orig["#text"]}</tspan>;
+}
+
+export function Catchword(props) {
+  const { catchword } = props;
+  return <tspan>{catchword ? catchword["#text"] : ""}</tspan>;
 }
 
 export function Hi(props) {
-  const { line } = props;
-  const { hi } = line;
+  const { hi } = props;
   let rendType =
     hi.attributes && hi.attributes.rend ? hi.attributes.rend : null;
 
@@ -164,55 +94,16 @@ export function Hi(props) {
     return <tspan>{text}</tspan>;
   }
 
-  if (!line["#text"]) {
-    return null;
-  }
-
-  if (line["#text"].constructor === Array) {
-    return line["#text"].map((t, idx) => {
-      if (idx % 2 !== 0) {
-        if (hi.children) {
-          // TODO - will this ever happen?
-          return null;
-        }
-        return (
-          <tspan key={`hi-${idx}`}>
-            {renderHi(hi["#text"])}
-            <tspan>{t}</tspan>
-          </tspan>
-        );
-      }
-      return <tspan key={`hi-${idx}`}>{t}</tspan>;
-    });
-  }
-  if (line["#text"]) {
-    return (
-      <tspan>
-        {renderHi(hi["#text"])}
-        <tspan>{line["#text"]}</tspan>
-      </tspan>
-    );
-  }
-  return null;
+  return <tspan>{renderHi(hi["#text"])}</tspan>;
+  // TODO figure out how to render whwen hi is actually an array -- see page 10, Aaron and Miriam
 }
+
 export function Add(props) {
-  const { line } = props;
-  const { add } = line;
+  const { add } = props;
   if (add.attributes && add.attributes.place === "supralinear") {
     return (
       <tspan baselineShift="super" fill={TextColors.add}>
         {add["#text"]}
-      </tspan>
-    );
-  }
-
-  let text = line["#text"];
-  if (text && text.constructor === Array && text.length === 2) {
-    return (
-      <tspan>
-        <tspan>{text[0]}</tspan>
-        <tspan fill={TextColors.add}>{add["#text"]}</tspan>
-        <tspan>{[text[1]]}</tspan>
       </tspan>
     );
   }
@@ -224,11 +115,8 @@ export function Add(props) {
 }
 
 export function Del(props) {
-  const { textRef, line } = props;
-  const { del } = line;
+  const { textRef, del } = props;
   const delType = del.attributes ? del.attributes.type : DelTypes.overwrite;
-
-  let lineText = line["#text"];
 
   function formatDel() {
     const text = del && del["#text"];
@@ -251,23 +139,6 @@ export function Del(props) {
         </tspan>
       );
     }
-  }
-  if (lineText) {
-    if (lineText.constructor === Array && lineText.length === 2) {
-      return (
-        <tspan>
-          <tspan>{lineText[0]}</tspan>
-          {formatDel()}
-          <tspan>{lineText[1]}</tspan>
-        </tspan>
-      );
-    }
-    return (
-      <tspan>
-        <tspan>{lineText}</tspan>
-        {formatDel()}
-      </tspan>
-    );
   }
   return formatDel();
 }
@@ -301,34 +172,93 @@ function FormattedAttribute(props) {
   }
 }
 
+// TODO need to completely rewrite this to account for multiple tags in a single line - see Hi for an idea of how to implement using text position
+// and a cursor
+
+// possible algorithm
+// 1. Sort all properties by text position
+// 2. Insert <tspan> elements in the line array between all components
+// 2. Get cursor position for each component - pass to the component as a prop
+
+function sortLinePropsByTextPosition(line) {
+  let l = [];
+  for (const key in line) {
+    let { rawText } = line;
+    if (line[key].constructor.name === "Array") {
+      for (let val of line[key]) {
+        if (typeof val === "string") {
+          l.push([
+            "text",
+            {
+              textContent: val,
+              nodeType: "text",
+              textPosition: (rawText && rawText.indexOf(val)) || 0,
+            },
+          ]);
+        } else {
+          l.push([val.nodeType, val]);
+        }
+      }
+    } else {
+      if (key === "#text") {
+        l.push([
+          "text",
+          {
+            textContent: line[key],
+            nodeType: "text",
+            textPosition: rawText && rawText.indexOf(line[key]),
+          },
+        ]);
+      } else {
+        l.push([key, line[key]]);
+      }
+    }
+  }
+  return l.sort((a, b) => a[1].textPosition - b[1].textPosition);
+}
+
 function FormattedLine(props) {
-  const { line, textRef } = props;
+  const { line, textRef, zoneRoi } = props;
+
   if (!line) {
     return null;
   }
-  const text = line["#text"] || "";
-  for (const key in line) {
+
+  const l = sortLinePropsByTextPosition(line);
+  const components = l.map(([key, val]) => {
     if (key === "del") {
-      return <Del key={shortid.generate()} line={line} textRef={textRef} />;
+      return <Del key={shortid.generate()} del={val} textRef={textRef} />;
     }
-    // TODO fix inline add
     if (key === "add") {
-      return <Add line={line} textRef={textRef} />;
+      return <Add add={val} textRef={textRef} />;
     }
     if (key === "gap") {
-      return <Gap line={line} textRef={textRef} />;
+      return <Gap gap={val} textRef={textRef} />;
     }
     if (key === "subst") {
-      return <Subst line={line} textRef={textRef} />;
+      return <Subst subst={val} textRef={textRef} />;
     }
     if (key === "hi") {
-      return <Hi line={line} textRef={textRef} />;
+      return <Hi hi={val} textRef={textRef} />;
     }
     if (key === "choice") {
-      return <Choice line={line} textRef={textRef} />;
+      return <Choice choice={val} textRef={textRef} />;
     }
-  }
-  return <tspan>{text}</tspan>;
+    if (key === "catchword") {
+      return <Catchword catchword={val} textRef={textRef} zoneRoi={zoneRoi} />;
+    }
+    if (key === "space") {
+      return <Space n={val.space.extent} />
+    }
+    if (key === "physnumber") {
+      return <tspan>{val["#text"]}</tspan>;
+    }
+    if (key === "text" || key === "physnumber") {
+      return <tspan>{val.textContent}</tspan>;
+    }
+    return null;
+  });
+  return <>{components}</>;
 }
 
 function getAttributes(attributes) {
@@ -392,7 +322,6 @@ export function Background(props) {
               });
               // node also has a background (i.e. subst)
               if (Backgrounds[prop.nodeType]) {
-                console.log(line);
                 backgrounds.push(
                   <Background
                     key={prop.nodeType}
@@ -471,8 +400,13 @@ export function Background(props) {
   return formatBackground(line);
 }
 
+export function FormatTextFoot(props) {
+  let { textFoot } = props;
+  return <FormatLine line={textFoot.l} />;
+}
+
 export function FormatLine(props) {
-  const { line, textRef } = props;
+  const { line, textRef, zoneRoi } = props;
   const attributes = getAttributes(line && line.attributes);
   if (typeof line === "string") {
     return <tspan>{line}</tspan>;
@@ -487,7 +421,7 @@ export function FormatLine(props) {
           textRef={textRef}
         />
       ))}
-      <FormattedLine line={line} textRef={textRef} />
+      <FormattedLine line={line} textRef={textRef} zoneRoi={zoneRoi} />
     </tspan>
   );
 }

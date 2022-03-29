@@ -1,4 +1,3 @@
-
 <bad id="bb749.1.ms.03" justify="left" type="ms" work="Books Owned, Watson" copy="1" copyid="1" institution="huntington"
     catalog="bentley" catid="749.1.ms.3" hidden="false">
     <header>
@@ -205,7 +204,7 @@
                             <l n="bb749.1.ms.01" justify="left">might, if generally distributed, be efficacious in</l>
                             <l n="bb749.1.ms.01" justify="left">stopping that torrent of infidelity which endangers</l>
                             <l n="bb749.1.ms.01" justify="left">alike the future happiness of individuals, and the</l>
-                            <l n="bb749.1.ms.01" justify="left">present safety of all christian states. Whatever</l>
+                            <l n="bb749.1.ms.01" justify="left">present safety of <hi rend="u">all christian states.</hi> Whatever</l>
                             <l n="bb749.1.ms.01" justify="left">weight there may be in this their opinion of the</l>
                             <l n="bb749.1.ms.01" justify="left">utility of publishing a cheap edition of this work,</l>
                             <l n="bb749.1.ms.01" justify="left">I have great pleasure in complying with their</l>
@@ -696,7 +695,7 @@
                         <l n="bb749.1.ms.03" justify="left">"that the preaching of the cross is to them that perish</l>
                     </lg>
                     <textfoot justify="left">
-                        <l n="bb749.1.ms.03" justify="left" indent="5">B <physnumber>2</physnumber><space extent="14" unit="character"/><catchword>foolish-</catchword></l>
+                        <l n="bb749.1.ms.03" justify="left" indent="25">B <physnumber>2</physnumber><space extent="20" unit="character"/><catchword>foolish-</catchword></l>
                     </textfoot>
                     </zone>
                 </zone>
@@ -2063,7 +2062,7 @@
                             <l n="bb749.1.ms.09" justify="left">When his judgment was matured by age, he was ashamed</l>
                             <l n="bb749.1.ms.09" justify="left">of what he had written on the subject in his younger</l>
                             <l n="bb749.1.ms.09" justify="left">years; he made a public recantation of his error, by <choice><orig>an-</orig><reg type="split_word">annexing</reg></choice></l>
-                            <l n="bb749.1.ms.09" justify="left"><choice><orig>nexing</orig><reg>annexing</reg></choice> to his commentary on Genius, a Latin <choice><orig>disserta-</orig><reg type="split_word">dissertation</reg></choice></l>
+                            <l n="bb749.1.ms.09" justify="left"><choice><orig>nexing</orig><reg>annexing</reg></choice> to his commentary on Genesis, a Latin <choice><orig>disserta-</orig><reg type="split_word">dissertation</reg></choice></l>
                             <l n="bb749.1.ms.09" justify="left"><choice><orig>tion</orig><reg>dissertation</reg></choice>&#8212;concerning Moses, the author of the Pentateuch,</l>
                             <l n="bb749.1.ms.09" justify="left">and his design in composing it. If in your future life you</l>
                             <l n="bb749.1.ms.09" justify="left">should chance to change your opinion on the subject, it</l>
@@ -2122,7 +2121,8 @@
                             <l n="bb749.1.ms.09" justify="left">mention <hi rend="i">Juvenal</hi> speaking of the volume which Moses</l>
                             <l n="bb749.1.ms.09" justify="left">had written? Why enumerate a long list of profane <choice><orig>au-</orig><reg type="split_word">authors</reg></choice></l>
                             <l n="bb749.1.ms.09" justify="left"><choice><orig>thors</orig><reg>authors</reg></choice>, all bearing testimony to the fact of <hi rend="i">Moses</hi> being the</l>
-                            <l n="bb749.1.ms.09" justify="left">leader and the law-giver, surely a writer of the laws. But what</l>
+                            <l n="bb749.1.ms.09" justify="left">leader and the law-giver of the jewish nation? and if </l>
+                            <l n="bb749.1.ms.09" justify="left">a law-giver, surely a writer of the laws. But what</l>
                             <l n="bb749.1.ms.09" justify="left">says the Bible? In Exodus it says&#8212;"Moses wrote all</l>
                             <l n="bb749.1.ms.09" justify="left">the words of the Lord, and took the book of the <choice><orig>co-</orig><reg type="split_word">covenant</reg></choice></l>
                             <l n="bb749.1.ms.09" justify="left"><choice><orig>venant</orig><reg>covenant</reg></choice>, and read it in the audience of the people."&#8212;In</l>
@@ -2365,7 +2365,7 @@
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.10" justify="left">any of the other books of which he is usually reputed the</l>
-                            <l n="bb749.1.ms.10" justify="left">author? And if he did write this for himself, he was <choice><orig>jus-</orig><reg type="split_word">justified</reg></choice></l>
+                            <l n="bb749.1.ms.10" justify="left">author? And if he did write this of himself, he was <choice><orig>jus-</orig><reg type="split_word">justified</reg></choice></l>
                             <l n="bb749.1.ms.10" justify="left"><choice><orig>tified</orig><reg>justified</reg></choice> by the occasion which extorted from him this <choice><orig>com-</orig><reg type="split_word">commendation</reg></choice></l>
                             <l n="bb749.1.ms.10" justify="left"><choice><orig>mendation</orig><reg>commendation</reg></choice>. Had this expression been written in a <choice><orig>mo-</orig><reg type="split_word">modern</reg></choice></l>
                             <l n="bb749.1.ms.10" justify="left"><choice><orig>dern</orig><reg>modern</reg></choice> style and manner, it would probably have given</l>
@@ -2658,7 +2658,7 @@
                             <l n="bb749.1.ms.12" justify="left">and the destruction of the world.&#8212;Read the tenth <choice><orig>chap-</orig><reg type="split_word">chapter</reg></choice></l>
                             <l n="bb749.1.ms.12" justify="left"><choice><orig>ter</orig><reg>chapter</reg></choice> of Genesis.&#8212;It may appear to you to contain nothing</l>
                             <l n="bb749.1.ms.12" justify="left">but an uninteresting narration of the descendants of <hi rend="i">Shem,</hi></l>
-                            <l n="bb749.1.ms.12" justify="left"><hi rend="i">Ham,</hi> and <hi rend="i">Japeth;</hi> a mere fable, and invented <choice><orig>absur-</orig><reg type="split_word">absurdity</reg></choice></l>
+                            <l n="bb749.1.ms.12" justify="left"><hi rend="i">Ham,</hi> and <hi rend="i">Japheth;</hi> a mere fable, and invented <choice><orig>absur-</orig><reg type="split_word">absurdity</reg></choice></l>
                             <l n="bb749.1.ms.12" justify="left"><choice><orig>dity</orig><reg>absurdity</reg></choice>, a downright lie. No, sir, it is one of the most</l>
                             <l n="bb749.1.ms.12" justify="left">valuable, and the most venerable records of antiquity.</l>
                             <l n="bb749.1.ms.12" justify="left">It explains what all profane historians were ignorant of</l>
@@ -3033,7 +3033,7 @@
                                     <l n="bb749.1.ms.14.04" justify="left">O very fine</l>
                                     <l n="bb749.1.ms.14.05" justify="left">Records</l>
                                     <l n="bb749.1.ms.14.06" justify="left">as if he</l>
-                                    <l n="bb749.1.ms.14.07" justify="left">Knew</l>
+                                    <l n="bb749.1.ms.14.07" justify="left">K<unclear>ne</unclear>w</l>
                                     <l n="bb749.1.ms.14.08" justify="left">that there</l>
                                     <l n="bb749.1.ms.14.09" justify="left">were Records</l>
                                     <l n="bb749.1.ms.14.10" justify="left">the Ancients</l>
@@ -3195,6 +3195,7 @@
                                 <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
                                 <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
                                 <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
+                            
                             </lg>
                         </zone>
                     </zone>
@@ -3219,7 +3220,7 @@
                 
                 <zone type="original">
                     
-                    <zone type="page-left" points="2569,4084 561,4069 536,269 2524,273">
+                    <zone type="page-left" points="573,437 2573,455 2573,4055 573,4046">>
                         
                         <texthead justify="left"><l n="bb749.1.ms.16" justify="left" indent="5"><physnumber>(34)</physnumber></l></texthead>
                         
@@ -3329,7 +3330,7 @@
                     
                     
                         
-                    <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716"><!-- m1 -->
+                   <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716">
                             <lg justify="left">
                                 <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that there is a God of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
@@ -3355,6 +3356,7 @@
                                     <l n="bb749.1.ms.16.06" justify="left">is not of</l>
                                     <l n="bb749.1.ms.16.07" justify="left">Consequence</l>
                                 </lg>
+                              
                             </zone>
                     
                 </zone>
@@ -3437,11 +3439,11 @@
                             <l n="bb749.1.ms.17" justify="left">of your work, you are attacking what no person is <choice><orig>in-</orig><reg type="split_word">interested</reg></choice></l>
                             <l n="bb749.1.ms.17" justify="left"><choice><orig>terested</orig><reg type="split_word">interested</reg></choice> in defending; but to convince you, that a wife</l><!-- that a wife spacing -->
                             <l n="bb749.1.ms.17" justify="left">and good man, and a firm believer in revealed religion,</l>
-                            <l n="bb749.1.ms.17" justify="left">and such was Dr. Jartley, and no priest, did not reject</l>
+                            <l n="bb749.1.ms.17" justify="left">for such was Dr. Hartley, and no priest, did not reject</l>
                             <l n="bb749.1.ms.17" justify="left">the anonymous books of the Old Testament as books</l>
                             <l n="bb749.1.ms.17" justify="left">without authority. I shall not trouble either you or <choice><orig>my-</orig><reg type="split_word">myself</reg></choice></l>
-                            <l n="bb749.1.ms.17" justify="left">self with any more observations on that head; you may</l>
-                            <l n="bb749.1.ms.17" justify="left">acribe the two book of Kings, and the two books of</l>
+                            <l n="bb749.1.ms.17" justify="left"><choice><orig>self</orig><reg type="split_word">myself</reg></choice> with any more observations on that head; you may</l>
+                            <l n="bb749.1.ms.17" justify="left">ascribe the two book of Kings, and the two books of</l>
                             <l n="bb749.1.ms.17" justify="left">Chronicles, to what authors you please; I am satisfied</l>
                             <l n="bb749.1.ms.17" justify="left">with knowing that the annals of the jewish nation were</l>
                             <l n="bb749.1.ms.17" justify="left">written in the time of Samuel, and, probably, in all</l>
@@ -3452,10 +3454,16 @@
                             <l n="bb749.1.ms.17" justify="left">Talmuds, but from the Old Testament itself. I will</l>
                             <l n="bb749.1.ms.17" justify="left">content myself with citing a few places&#8212;"Now the acts</l>
                             <l n="bb749.1.ms.17" justify="left">of David the king, first and last, behold they are <choice><orig>writ-</orig><reg type="split_word">written</reg></choice></l>
-                            <l n="bb749.1.ms.17" justify="left">in the book of Samuel the seer, and in the book of</l>
+                            <l n="bb749.1.ms.17" justify="left"><choice><orig>ten</orig><reg type="split_word">written</reg></choice> in the book of Samuel the seer, and in the book of</l>
+                            <l n="bb749.1.ms.17" justify="left">Nathan the prophet, and in the book of Gad the seer"</l>
+                            <l n="bb749.1.ms.17" justify="left"> I Chron. xxix. 29.&#8212; "Now the rest of the acts of <choice><orig>Solo-</orig><reg type="split_word">Solomon</reg></choice></l>
+                            <l n="bb749.1.ms.17" justify="left"><choice><orig>mon,</orig><reg type="split_word">Solomon</reg></choice> first and last, are they not written in the book of</l>
                             <l n="bb749.1.ms.17" justify="left">Nathan the prophet, and in the prophecy of Abijah the</l>
                             <l n="bb749.1.ms.17" justify="left">Shilonite, and in the visions of Iddo the seer?" 2 Chron.</l>
-                            <l n="bb749.1.ms.17" justify="left">ix.29.&#8212;"Now the rest of the acts of Jehoshaphat,</l>
+                            <l n="bb749.1.ms.17" justify="left">ix.29.&#8212;"Now the rest of the acts of Rehoboam, first and last, are</l>
+                            <l n="bb749.1.ms.17" justify="left">they not written in the book of Shemaiah the prophet,</l>
+                            <l n="bb749.1.ms.17" justify="left">and of iddo the seer, concerning genealogies?" 2 Chron.</l>
+                             <l n="bb749.1.ms.17" justify="left">xii. 15&#8212;"Now the rest of the acts of Jehoshaphat,</l>
                             <l n="bb749.1.ms.17" justify="left">first and last, behold they are written in the book of</l>
                             <l n="bb749.1.ms.17" justify="left">Jehu the son of Hanani." 2 Chron.xx.34. Is it <choice><orig>pos-</orig><reg type="split_word">possible</reg></choice></l>
                             <l n="bb749.1.ms.17" justify="left"><choice><orig>sible</orig><reg type="split_word">possible</reg></choice> for writers to give a stronger evidence of their <choice><orig>ve-</orig><reg type="split_word">veracity</reg></choice></l>
@@ -3464,7 +3472,7 @@
                             <l n="bb749.1.ms.17" justify="left">history?</l>
                             <l n="bb749.1.ms.17" justify="left" indent="3">"The two books of Kings," you say, "are litte</l>
                             <l n="bb749.1.ms.17" justify="left">more than an history of assassinations, treachery, and</l>
-                            <l n="bb749.1.ms.17" justify="left">war." That the kings of Isreal and Judah were many</l>
+                            <l n="bb749.1.ms.17" justify="left">war." That the kings of Israel and Judah were many</l>
                             <l n="bb749.1.ms.17" justify="left">of them very wicked persons, is evident from the history</l>
                             <l n="bb749.1.ms.17" justify="left">which is given of them in the Bible; but it ought to</l>
                         </lg>
@@ -3477,7 +3485,7 @@
             <zone type="Blake">
                 <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
                     <lg justify="left">
-                    <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l>
+                    <l n="bb749.1.ms.17.01" justify="left">H<gap type="unclear">a</gap>rtley</l><!--the a in "hartley" isn't unclear to me-->
                     <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                     <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
                     <l n="bb749.1.ms.17.04" justify="left">then Judgement</l>
@@ -3511,9 +3519,9 @@
                         
                         <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(48)</physnumber></l></texthead>   
                         <lg justify="left">
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>terity</orig><reg>posterity</reg></choice> of Abraham to be his peculiar people&#8212;who</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>terity</orig><reg type="split_word">posterity</reg></choice> of Abraham to be his peculiar people&#8212;who</l>
                             <l n="bb749.1.ms.18" justify="left">redeemed that people from Egyptian bondage by a <choice><orig>mira-</orig><reg type="split_word">miraculous</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>culous</orig><reg>miraculous</reg></choice> interposition of his power&#8212;who gave the law to</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>culous</orig><reg type="split_word">miraculous</reg></choice> interposition of his power&#8212;who gave the law to</l>
                             <l n="bb749.1.ms.18" justify="left">Moses&#8212;who commanded the Israelites to exterminate the</l>
                             <l n="bb749.1.ms.18" justify="left">nations of Canaan.&#8212;Now this Lord you will not fear;</l>
                             <l n="bb749.1.ms.18" justify="left">the jest says, you despise wisdom and instruction.---Let us</l>
@@ -3522,7 +3530,7 @@
                             <l n="bb749.1.ms.18" justify="left">has been ever touched by parental feelings, you will see</l>
                             <l n="bb749.1.ms.18" justify="left">no jest in this.---Once more---"My son, if sinners entice</l>
                             <l n="bb749.1.ms.18" justify="left">thee, consent thou not."---These are the three first <choice><orig>pro-</orig><reg type="split_word">proverbs</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>verbs</orig><reg>proverbs</reg></choice> in Solomon's "jest-book!" if you read it through,</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>verbs</orig><reg type="split_word">proverbs</reg></choice> in Solomon's "jest-book!" if you read it through,</l>
                             <l n="bb749.1.ms.18" justify="left">it may not make you merry; I hope it will make you</l>
                             <l n="bb749.1.ms.18" justify="left">wise; that it will teach you, at least, the beginning of</l>
                             <l n="bb749.1.ms.18" justify="left">wisdom---the fear of that Lord whom Solomon feared.</l>
@@ -3530,10 +3538,10 @@
                             <l n="bb749.1.ms.18" justify="left">witty; but though all the world, from the time of the</l>
                             <l n="bb749.1.ms.18" justify="left">queen of Sheba, has heard of the wisdom of Solomon,</l>
                             <l n="bb749.1.ms.18" justify="left">his wit was never heard of before. There is a great <choice><orig>dif-</orig><reg type="split_word">difference</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>ference</orig><reg>difference</reg></choice>, Mr. Locke teaches us, between wit and <choice><orig>judg-</orig><reg type="split_word">judgment</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>ment</orig><reg>judgment</reg></choice>, and there is a greater between wit and wisdom.</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>ference</orig><reg type="split_word">difference</reg></choice>, Mr. Locke teaches us, between wit and <choice><orig>judg-</orig><reg type="split_word">judgment</reg></choice></l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>ment</orig><reg type="split_word">judgment</reg></choice>, and there is a greater between wit and wisdom.</l>
                             <l n="bb749.1.ms.18" justify="left">Solomon "was wiser than Ethan the Ezahite, and <choice><orig>He-</orig><reg type="split_word">Heman</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>man</orig><reg>Heman</reg></choice>, and Chalcol, and Darda, the sons of Mahol."---</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>man</orig><reg type="split_word">Heman</reg></choice>, and Chalcol, and Darda, the sons of Mahol."---</l>
                             <l n="bb749.1.ms.18" justify="left">These men you may think were jesters; and so you may</l>
                             <l n="bb749.1.ms.18" justify="left">call the seven wise men of Greece: but you will never</l>
                             <l n="bb749.1.ms.18" justify="left">convince the world that Solomon, who was wiser than</l>
@@ -3541,17 +3549,17 @@
                             <l n="bb749.1.ms.18" justify="left">and debaucheries of Solomon, we have nothing to do with</l>
                             <l n="bb749.1.ms.18" justify="left">them but to avoid them; and to give full credit to his</l>
                             <l n="bb749.1.ms.18" justify="left">experience, when he preaches to us his admirable <choice><orig>ser-</orig><reg type="split_word">sermon</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>mon</orig><reg>sermon</reg></choice> on the vanity of <choice><orig>every thing</orig><reg>everything</reg></choice> but piety and virtue.</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>mon</orig><reg type="split_word">sermon</reg></choice> on the vanity of <choice><orig>every thing</orig><reg>everything</reg></choice> but piety and virtue.</l>
                             <l n="bb749.1.ms.18" justify="left" indent="1">Isaiah has a greater share of your abuse than any other</l>
                             <l n="bb749.1.ms.18" justify="left">writer in the Old Testament, and the reason of it is <choice><orig>ob-</orig><reg type="split_word">obvious</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>vious</orig><reg>obvious</reg></choice>---the prophecies of Isaiah have received such a full</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>vious</orig><reg type="split_word">obvious</reg></choice>---the prophecies of Isaiah have received such a full</l>
                             <l n="bb749.1.ms.18" justify="left">and circumstantial completion, that, unless you can <choice><orig>per-</orig><reg type="split_word">persuade</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>suade</orig><reg>persuade</reg></choice> yourself to consider the whole book (a few <choice><orig>histo-</orig><reg type="split_word">historical</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>rical</orig><reg>historical</reg></choice> sketches excepted) "as one continued bombastical</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>suade</orig><reg type="split_word">persuade</reg></choice> yourself to consider the whole book (a few <choice><orig>histo-</orig><reg type="split_word">historical</reg></choice></l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>rical</orig><reg type="split_word">historical</reg></choice> sketches excepted) "as one continued bombastical</l>
                             <l n="bb749.1.ms.18" justify="left">rant, full of extravagant metaphor, without application,</l>
                             <l n="bb749.1.ms.18" justify="left">and destitute of meaning," you must of necessity allow</l>
                             <l n="bb749.1.ms.18" justify="left">it's divine authority. You compare the burden of <choice><orig>Baby-</orig><reg type="split_word">Babylon</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>lon</orig><reg>Babylon</reg></choice>, the burden of Moab, the burden of Damascus, and</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>lon</orig><reg type="split_word">Babylon</reg></choice>, the burden of Moab, the burden of Damascus, and</l>
                             <l n="bb749.1.ms.18" justify="left">the other denunciations of the prophet against cities and</l>
                         </lg>
                         
@@ -3563,20 +3571,20 @@
                         
                         <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(49)</physnumber></l></texthead>   
                         <lg justify="left">
-                            <l n="bb749.1.ms.18" justify="left">kingdoms, to "the story of the kinght of the burning</l>
+                            <l n="bb749.1.ms.18" justify="left">kingdoms, to "the story of the knight<choice><orig>knight<orig><reg>night</reg></orig></orig>reg></choice>of the burning</l>
                             <l n="bb749.1.ms.18" justify="left">mountain, the story of Cinderilla, &#38;c." I may have</l>
                             <l n="bb749.1.ms.18" justify="left">read these stories, but I remember nothing of the subjects</l>
                             <l n="bb749.1.ms.18" justify="left">of them; I have read also Isaiah's burden of Babylon,</l>
                             <l n="bb749.1.ms.18" justify="left">and I have compared it with the past and present state of</l>
                             <l n="bb749.1.ms.18" justify="left">Babylon, and the comparison has made such an impression</l>
                             <l n="bb749.1.ms.18" justify="left">on my mind, that it will never be effaced from my <choice><orig>me-</orig><reg type="split_word">memory</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>mory</orig><reg>memory</reg></choice>. I shall never cease to believe that the Eternal</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>mory</orig><reg type="split_word">memory</reg></choice>. I shall never cease to believe that the Eternal</l>
                             <l n="bb749.1.ms.18" justify="left">alone, by whom things future are more distinctly known</l>
                             <l n="bb749.1.ms.18" justify="left">than past or present things are by man, that the eternal</l>
                             <l n="bb749.1.ms.18" justify="left">God alone could have dictated to the prophet Isaiah the</l>
                             <l n="bb749.1.ms.18" justify="left">subject of the burden of Babylon.</l>
                             <l n="bb749.1.ms.18" justify="left" indent="1">The latter part of the forty-fourth, and the <choice><orig>begin-</orig><reg type="split_word">beginning</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>ning</orig><reg>beginning</reg></choice> of the forty-fifth chapter of Isaiah, are in your</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>ning</orig><reg type="split_word">beginning</reg></choice> of the forty-fifth chapter of Isaiah, are, in your</l>
                             <l n="bb749.1.ms.18" justify="left">opinion, so far from being written by Isaiah, that they</l>
                             <l n="bb749.1.ms.18" justify="left">could only have been written by some person who lived</l>
                             <l n="bb749.1.ms.18" justify="left">at least an hundred and fifty years after Isaiah was dead:</l>
@@ -3591,17 +3599,17 @@
                             <l n="bb749.1.ms.18" justify="left">of the most clear and important prophecies in the Bible,</l>
                             <l n="bb749.1.ms.18" justify="left">as an historical compliment, written above an hundred and</l>
                             <l n="bb749.1.ms.18" justify="left">fifty years after the death of the prophet?&#8212;We contend,</l>
-                            <l n="bb749.1.ms.18" justify="left">sir, that this is a prophecy and not an history; that God</l>
+                            <l n="bb749.1.ms.18" justify="left">sir, that this is a prophecy and not an <reg>a</reg>history; that God</l>
                             <l n="bb749.1.ms.18" justify="left">called <hi rend="i">Cyrus</hi> by his name; declared that he should <choice><orig>con-</orig><reg type="split_word">conquer</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>quer</orig><reg>conquer</reg></choice> Bayblon; and described the means by which he</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>quer</orig><reg type="split_word">conquer</reg></choice> Bayblon; and described the means by which he</l>
                             <l n="bb749.1.ms.18" justify="left">should do it, above an hundred years before Cyrus was</l>
                             <l n="bb749.1.ms.18" justify="left">born, and when there was no probability of such an event.</l>
                             <l n="bb749.1.ms.18" justify="left"><hi rend="i">Porphyry</hi> could not resist the evidence of <hi rend="i">Daniel's</hi> <choice><orig>pro-</orig><reg type="split_word">prophecies</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>phecies</orig><reg>prophecies</reg></choice>, but by saying, that they were forged after the</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>phecies</orig><reg type="split_word">prophecies</reg></choice>, but by saying, that they were forged after the</l>
                             <l n="bb749.1.ms.18" justify="left">events predicted had taken place; <hi rend="i">Voltaire</hi> could not <choice><orig>re-</orig><reg type="split_word">resist</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>sist</orig><reg>resist</reg></choice> the evidence of the prediction of <hi rend="i">Jesus</hi>, concerning</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>sist</orig><reg type="split_word">resist</reg></choice> the evidence of the prediction of <hi rend="i">Jesus</hi>, concerning</l>
                             <l n="bb749.1.ms.18" justify="left">the destruction of Jersalem, but by saying, that the <choice><orig>ac-</orig><reg type="split_word">account</reg></choice></l>
-                            <l n="bb749.1.ms.18" justify="left"><choice><orig>count</orig><reg>account</reg></choice> was written after Jerusalem had been destroyed;</l>
+                            <l n="bb749.1.ms.18" justify="left"><choice><orig>count</orig><reg type="split_word">account</reg></choice> was written after Jerusalem <choice><orig><gap reason="cancellation_wash" extent="2" unit="character"/>d</orig><reg>had</reg></choice> been destroyed;</l>
                             <l n="bb749.1.ms.18" justify="left">and you, at length, (though, for aught I know, you may</l>
                             <l n="bb749.1.ms.18" justify="left">have had predecessors in this presumption,) unable to</l>
                             <l n="bb749.1.ms.18" justify="left">resist the evidence of <hi rend="i">Isaiah's</hi> prophecies, contend that</l>
@@ -3662,34 +3670,34 @@
                     <zone type="page-left" points="784,4050 2706,4055 2689,311 784,333">
                         
                         <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(94)</physnumber></l></texthead>
-                        
+                        <vspace extent="1"/>
                         <lg justify="left">
                             <l n="bb749.1.ms.19" justify="left">the New Testament, consists of twenty-seven different</l>
-                            <l n="bb749.1.ms.19" justify="left">parts; concerning seven of these, viz. the Epistle to</l>
-                            <l n="bb749.1.ms.19" justify="left">the Hebrews, that of James, the second of Peter, the</l>
+                            <l n="bb749.1.ms.19" justify="left">parts; concerning seven of these, viz. the Epistle <unclear>t</unclear>o</l>
+                            <l n="bb749.1.ms.19" justify="left">the Hebrews, that of James, the second of Pet<unclear>e</unclear>r, the</l>
                             <l n="bb749.1.ms.19" justify="left">second of John, the third of John, that of Jude, and</l>
                             <l n="bb749.1.ms.19" justify="left">the Revelation, there were at first some doubts; and</l>
                             <l n="bb749.1.ms.19" justify="left">the question, whether they should be received into</l>
                             <l n="bb749.1.ms.19" justify="left">the canon, might be decided, as all questions <choice><orig>con-</orig><reg type="split_word">concerning</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>cerning</orig></choice> opinions must be, by vote. With respect to</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>cerning</orig><reg type="split_word">concerning</reg></choice> opinions must be, by vote. With respect to</l>
                             <l n="bb749.1.ms.19" justify="left">the other twenty parts, those who are most acquainted</l>
                             <l n="bb749.1.ms.19" justify="left">with ecclesiastical history will tell you, as Du Pin does</l>
                             <l n="bb749.1.ms.19" justify="left">after Eusebius, that they were owned as canonical, at</l>
                             <l n="bb749.1.ms.19" justify="left">all times, and by all christians. Whether the <choice><orig>coun-</orig><reg type="split_word">council</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>cil</orig><reg>council</reg></choice> of Laodicea was held before or after that of Nice,</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>cil</orig><reg type="split_word">council</reg></choice> of Laodicea was held before or after that of Nice,</l>
                             <l n="bb749.1.ms.19" justify="left">is not a settled point; all the books of the New <choice><orig>Testa-</orig><reg type="split_word">Testament</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ment</orig><reg>Testament</reg></choice>, except the Revelation, are enumerated as <choice><orig>cano-</orig><reg type="split_word">canonical</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>nical</orig><reg>canonical</reg></choice> in the Constitutions of that council; but it is a</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ment</orig><reg type="split_word">Testament</reg></choice>, except the Revelation, are enumerated as <choice><orig>cano-</orig><reg type="split_word">canonical</reg></choice></l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>nical</orig><reg type="split_word">canonical</reg></choice> in the Constitutions of that council; but it is a</l>
                             <l n="bb749.1.ms.19" justify="left">great mistake to suppose, that the greatest part of the</l> 
                             <l n="bb749.1.ms.19" justify="left">books of the New Testament were not in <hi rend="i">general use</hi></l>
                             <l n="bb749.1.ms.19" justify="left">amongst christians, long before the council of <choice><orig>Laodi-</orig><reg type="split_word">Laodicea</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>cea</orig><reg>Laodicea</reg></choice> was held. This is not merely my opinion on the</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>cea</orig><reg type="split_word">Laodicea</reg></choice> was <choice><orig><gap reason="cancellation_wash" extent="1" unit="character"/>eld</orig><reg>held</reg></choice>. This is not merely my opinion on the</l>
                             <l n="bb749.1.ms.19" justify="left">subject; it is the opinion of one much better acquainted</l>
                             <l n="bb749.1.ms.19" justify="left">with ecclesiastical history than I am, and, probably,</l>
                             <l n="bb749.1.ms.19" justify="left">than you are,&#8212;<hi rend="i">Mosheim</hi>. "The opinions," says this</l>
                             <l n="bb749.1.ms.19" justify="left">author, "or rather the conjectures, of the learned</l>
                             <l n="bb749.1.ms.19" justify="left">concerning the time when the books of the New <choice><orig>Tes-</orig><reg type="split_word">Testament</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>tament</orig><reg>Testament</reg></choice> were collected into one volume, as also about</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>tament</orig><reg type="split_word">Testament</reg></choice> were collected into one volume, as also about</l>
                             <l n="bb749.1.ms.19" justify="left">the authors of that collection, are extremely different.</l>
                             <l n="bb749.1.ms.19" justify="left">This important question is attended with great and</l>
                             <l n="bb749.1.ms.19" justify="left">almost insuperable difficulties to us in these latter times.</l>
@@ -3698,57 +3706,56 @@
                             <l n="bb749.1.ms.19" justify="left">the books of the New Testament were read in every</l>
                             <l n="bb749.1.ms.19" justify="left">christian society throughout the world, and received</l>
                             <l n="bb749.1.ms.19" justify="left">as a divine rule of faith and manners. Hence it <choice><orig>ap-</orig><reg type="split_word">appears</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>pears</orig><reg>appears</reg></choice>, that these sacred writings were carefully <choice><orig>sepa-</orig><reg type="split_word">separated</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>rated</orig><reg>separated</reg></choice> from several human compositions upon the same</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>pears</orig><reg type="split_word">appears</reg></choice>, that these sacred writings were carefully <choice><orig>sepa-</orig><reg type="split_word">separated</reg></choice></l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>rated</orig><reg type="split_word">separated</reg></choice> from several human compositions upon the same</l>
                             <l n="bb749.1.ms.19" justify="left">subject, either by some of the apostles themselves, who</l>
                             <l n="bb749.1.ms.19" justify="left">lived so long, or by their disciples and successors, who</l>
                             <l n="bb749.1.ms.19" justify="left">were spread abroad through all nations. We are well</l>
                             <l n="bb749.1.ms.19" justify="left">assured, that the <hi rend="i">four gospels</hi> were collected during the</l>
-                            <l n="bb749.1.ms.19" justify="left">life of st. John, and that the three first received the</l>
+                            <l n="bb749.1.ms.19" justify="left">life of <choice><orig>St.</orig><reg>Saint</reg></choice> John, and that the three first received the</l>
                             <l n="bb749.1.ms.19" justify="left">approbation of this divine apostle. And why may we</l>
                         </lg>
                         
                         <textfoot><l n="bb749.1.ms.19" indent="25"><catchword>not</catchword></l></textfoot>
                     </zone>
-                    
-                    <zone type="page-right">
-                        
+                    <zone type="page-right" points="3131,4021 5066,3952 5036,282 3131,304">
+                  
                         <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
-                        
-                        <lg justify="left" points="3131,4021 5066,3952 5036,282 3131,304">
+                         <vspace extent="1"/>                      
+                        <lg justify="left">
                             <l n="bb749.1.ms.19" justify="left">not suppose, that the other books of the New <choice><orig>Testa-</orig><reg type="split_word">Testament</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ment</orig><reg>Testament</reg></choice> were gathered together at the same time? What</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ment</orig><reg type="split_word">Testament</reg></choice> were gathered together at the same time? What</l>
                             <l n="bb749.1.ms.19" justify="left">renders this highly probable is, that the most urgent</l>
                             <l n="bb749.1.ms.19" justify="left">necessity required it's being done. For, not long after</l>
                             <l n="bb749.1.ms.19" justify="left">Christ's ascension into heaven, several histories of his</l>
                             <l n="bb749.1.ms.19" justify="left">life and doctrines, full of pious frauds, and fabulous</l>
                             <l n="bb749.1.ms.19" justify="left">wonders, were composed by persons, whose <choice><orig>inten-</orig><reg type="split_word">intentions</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>tions</orig><reg>intentions</reg></choice>, perhaps, were not bad, but whose writings <choice><orig>dis-</orig><reg type="split_word">discovered</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>covered</orig><reg>discovered</reg></choice> the greatest superstition and ignorance. Nor</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>tions</orig><reg type="split_word">intentions</reg></choice>, perhaps, were not bad, but whose writings <choice><orig>dis-</orig><reg type="split_word">discovered</reg></choice></l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>covered</orig><reg type="split_word">discovered</reg></choice> the greatest superstition and ignorance. Nor</l>
                             <l n="bb749.1.ms.19" justify="left">was this all: productions appeared, which were <choice><orig>im-</orig><reg type="split_word">imposed</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>posed</orig><reg>imposed</reg></choice> on the world by fraudulent men as the writings</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>posed</orig><reg type="split_word">imposed</reg></choice> on the world by fraudulent men as the writings</l>
                             <l n="bb749.1.ms.19" justify="left">of the holy apostles. These apocryphal and spurious</l>
                             <l n="bb749.1.ms.19" justify="left">writings must have produced a sad confusion, and <choice><orig>ren-</orig><reg type="split_word">rendered</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>dered</orig><reg>rendered</reg></choice> both the history and the doctrine of Christ <choice><orig>un-</orig><reg type="split_word">uncertain</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>certain</orig><reg>uncertain</reg></choice>, had not the rulers of the church used all <choice><orig>pos-</orig><reg type="split_word">possible</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>sible</orig><reg>possible</reg></choice> care and diligence in separating the books that</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>dered</orig><reg type="split_word">rendered</reg></choice> both the history and the doctrine of Christ <choice><orig>un-</orig><reg type="split_word">uncertain</reg></choice></l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>certain</orig><reg type="split_word">uncertain</reg></choice>, had not the rulers of the church used all <choice><orig>pos-</orig><reg type="split_word">possible</reg></choice></l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>sible</orig><reg type="split_word">possible</reg></choice> care and diligence in separating the books that</l>
                             <l n="bb749.1.ms.19" justify="left">were truly apostolical and divine, from all that <choice><orig>spuri-</orig><reg type="split_word">spurious</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ous</orig><reg>spurious</reg></choice> trash, and conveying them down to posterity in</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ous</orig><reg type="split_word">spurious</reg></choice> trash, and conveying them down to posterity in</l>
                             <l n="bb749.1.ms.19" justify="left">one volume."</l>
                             <l n="bb749.1.ms.19" justify="left" indent="1">Did you ever read the apology for the christians,</l>
                             <l n="bb749.1.ms.19" justify="left">which Justin Martyr presented to the emperor <choice><orig>Anto-</orig><reg type="split_word">Antoninus</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ninus</orig><reg>Antoninus</reg></choice> Pius, to the senate, and people of Rome? I</l>
-                            <l n="bb749.1.ms.19" justify="left">should sooner expect a falsity in a petition, which any</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>ninus</orig><reg type="split_word">Antoninus</reg></choice> Pius, to the senate, and people of Rome? I</l>
+                            <l n="bb749.1.ms.19" justify="left">should sooner expect <unclear>a</unclear> falsity in a petition, which any</l>
                             <l n="bb749.1.ms.19" justify="left">body of persecuted men, imploring justice, should <choice><orig>pre-</orig><reg type="split_word">present</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>sent</orig><reg>present</reg></choice> to the king and parliament of Great Britain, than</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>sent</orig><reg type="split_word">present</reg></choice> to the king and parliament of Great Britain, than</l>
                             <l n="bb749.1.ms.19" justify="left">in this apology.&#8212;Yet in this apology, which was <choice><orig>pre-</orig><reg type="split_word">presented</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>sented</orig><reg>presented</reg></choice> not fifty years after the death of <choice><orig>St</orig><reg>Saint</reg></choice>. John, not</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>sented</orig><reg type="split_word">presented</reg></choice> not fifty years after the death of <choice><orig>St.</orig><reg>Saint</reg></choice> John, not</l>
                             <l n="bb749.1.ms.19" justify="left">only parts of <hi rend="i">all the four gospels are quoted</hi>, but it is</l>
                             <l n="bb749.1.ms.19" justify="left">expressly said, that on the day called Sunday, a <choice><orig>por-</orig><reg type="split_word">portion</reg></choice></l>
-                            <l n="bb749.1.ms.19" justify="left"><choice><orig>tion</orig><reg>portion</reg></choice> of them was read in the public assemblies of the</l>
+                            <l n="bb749.1.ms.19" justify="left"><choice><orig>tion</orig><reg type="split_word">portion</reg></choice> of them was read in the public assemblies of the</l>
                             <l n="bb749.1.ms.19" justify="left">christians. I forbear pursuing this matter farther;</l>
                             <l n="bb749.1.ms.19" justify="left">else it might easily be <choice><orig>shewn</orig><reg>shown</reg></choice>, that probably the gospels,</l>
-                            <l n="bb749.1.ms.19" justify="left">and certainly some of St. Paul's epistles, were known</l>
+                            <l n="bb749.1.ms.19" justify="left">and certainly some of <choice><orig>St.</orig><reg>Saint</reg></choice> Paul's epistles, were known</l>
                             <l n="bb749.1.ms.19" justify="left">to <hi rend="i">Clement, Ignatius,</hi> and <hi rend="i">Polycarp,</hi> contemporaries</l>
                             <l n="bb749.1.ms.19" justify="left">with the apostles, These men could not quote or refer</l>
                             <l n="bb749.1.ms.19" justify="left">to books which did not exist: and therefore, though</l>
@@ -3811,20 +3818,20 @@
                             <l n="bb749.1.ms.20" justify="left" indent="1">What is it, you ask, the Bible teaches?&#8212;The <choice><orig>pro-</orig><reg type="split_word">prophet</reg></choice></l>
                             <l n="bb749.1.ms.20" justify="left"><choice><orig>phet</orig><reg>prophet</reg></choice> Micah shall answer you: it teaches us&#8212;"to do</l>
                             <l n="bb749.1.ms.20" justify="left">justly, to love mercy, and to walk humbly with our</l>
-                            <l n="bb749.1.ms.20" justify="left">God;"&#8212;justice, mercy, and piety, instead of what you</l>
+                            <l n="bb749.1.ms.20" justify="left">God;--justice, mercy, and piety, instead of what you</l>
                             <l n="bb749.1.ms.20" justify="left">contend for&#8212;rapine, cruelty, and murder. What is</l>
                             <l n="bb749.1.ms.20" justify="left">it, you demand, the Testament teaches us? You <choice><orig>an-</orig><reg type="split_word">answer</reg></choice></l>
-                            <l n="bb749.1.ms.20" justify="left"><choice><orig>swer</orig><reg>answer</reg></choice> your question&#8212;to believe that the Almighty</l>
-                            <l n="bb749.1.ms.20" justify="left">committed debauchery with a woman.&#8212;Absurd and</l>
+                            <l n="bb749.1.ms.20" justify="left"><choice><orig>swer</orig><reg>answer</reg></choice> your question---to believe that the Almighty</l>
+                            <l n="bb749.1.ms.20" justify="left">committed debauchery with a woman.---Absurd and</l>
                             <l n="bb749.1.ms.20" justify="left">impious assertion! No, sir, no; this profane doctrine,</l>
                             <l n="bb749.1.ms.20" justify="left">this miserable stuff, this blasphemous perversion of <choice><orig>scrip-</orig><reg type="split_word">scripture</reg></choice></l>
                             <l n="bb749.1.ms.20" justify="left"><choice><orig>ture</orig><reg>scripture</reg></choice>, is your doctrine, not that of the New Testament.</l>
                             <l n="bb749.1.ms.20" justify="left">I will tell you the lesson which it teaches to infidels as</l>
                             <l n="bb749.1.ms.20" justify="left">well as to believers; it is a lesson which philosophy</l>
                             <l n="bb749.1.ms.20" justify="left">never taught, which wit cannot ridicule, nor <choice><orig>sophis-</orig><reg type="split_word">sophistry</reg></choice></l>
-                            <l n="bb749.1.ms.20" justify="left"><choice><orig>try</orig><reg>sophistry</reg></choice> disprove; the lesson is this&#8212;"The dead shall hear</l>
+                            <l n="bb749.1.ms.20" justify="left"><choice><orig>try</orig><reg>sophistry</reg></choice> disprove; the lesson is this--"The dead shall hear</l>
                             <l n="bb749.1.ms.20" justify="left">the voice of the Son of God, and they that hear shall</l>
-                            <l n="bb749.1.ms.20" justify="left">live:&#8212;all that are in their graves shall come forth;</l>
+                            <l n="bb749.1.ms.20" justify="left">live:---;all that are in their graves shall come forth;</l>
                             <l n="bb749.1.ms.20" justify="left">they that have done good, unto the resurrection of life;</l>
                             <l n="bb749.1.ms.20" justify="left">and they that have done evil, unto the resurrection of</l>
                             <l n="bb749.1.ms.20" justify="left">damnation."</l>
@@ -3880,11 +3887,11 @@
                             <l n="bb749.1.ms.20" justify="left"><choice><orig>ing</orig><reg>being</reg></choice> his disciples.</l>
                             
                             <l n="bb749.1.ms.20" justify="left" indent="1">Two precepts you particularize as inconsistent with</l>
-                            <l n="bb749.1.ms.20" justify="left">the dignity and the nature of man&#8212;that of not <choice><orig>resent-</orig><reg type="split_word">resenting</reg></choice></l>
-                            <l n="bb749.1.ms.20" justify="left"><choice><orig>ing</orig><reg>resenting</reg></choice> injuries, and that of loving enemies.&#8212;Who but</l>
+                            <l n="bb749.1.ms.20" justify="left">the dignity and the nature of man---that of not <choice><orig>resent-</orig><reg type="split_word">resenting</reg></choice></l>
+                            <l n="bb749.1.ms.20" justify="left"><choice><orig>ing</orig><reg>resenting</reg></choice> injuries, and that of loving enemies.---Who but</l>
                             <l n="bb749.1.ms.20" justify="left">yourself ever interpreted literally the proverbial phrase</l>
                             <l n="bb749.1.ms.20" justify="left">&#8212;"If a man smite thee on thy right cheek, turn to</l>
-                            <l n="bb749.1.ms.20" justify="left">him the other also?"&#8212;Did Jesus himself turn the</l>
+                            <l n="bb749.1.ms.20" justify="left">him the other also?"---Did Jesus himself turn the</l>
                             <l n="bb749.1.ms.20" justify="left">other cheek when the officer of the high priest smote</l>
                             <l n="bb749.1.ms.20" justify="left">him? It is evident, that a patient acquiescence under</l>
                             <l n="bb749.1.ms.20" justify="left">slight personal injuries is here enjoined; and that a</l>
@@ -3897,17 +3904,17 @@
                             <l n="bb749.1.ms.20" justify="left">likely to preserve peace, and to promote kind <choice><orig>affec-</orig><reg type="split_word">affections</reg></choice></l>
                             <l n="bb749.1.ms.20" justify="left"><choice><orig>tions</orig><reg>affections</reg></choice> amongst men, than the returning good for evil?</l>
                             <l n="bb749.1.ms.20" justify="left">Christianity does not order us to love in proportion to</l>
-                            <l n="bb749.1.ms.20" justify="left">the injury&#8212;"it does not offer a premium for a crime,"</l>
-                            <l n="bb749.1.ms.20" justify="left">&#8212;it orders us to let our benevolence extend alike to all,</l>
+                            <l n="bb749.1.ms.20" justify="left">the injury--"it does not offer a premium for a crime,"</l>
+                            <l n="bb749.1.ms.20" justify="left">---it orders us to let our benevolence extend alike to all,</l>
                             <l n="bb749.1.ms.20" justify="left">that we may emulate the benignity of God himself, who</l>
                             <l n="bb749.1.ms.20" justify="left">maketh "his fun to rise on the evil and on the good."</l>
                             
                             <l n="bb749.1.ms.20" justify="left" indent="1">In the law of Moses, retaliation for deliberate <choice><orig>inju-</orig><reg type="split_word">injuries</reg></choice></l>
-                            <l n="bb749.1.ms.20" justify="left"><choice><orig>ries</orig><reg>injuries</reg></choice> had been ordained&#8212;an eye for an eye, a tooth for</l>
-                            <l n="bb749.1.ms.20" justify="left">a tooth.&#8212;<hi rend="i">Aristotle,</hi> in his treatise of morals, says, that</l>
+                            <l n="bb749.1.ms.20" justify="left"><choice><orig>ries</orig><reg>injuries</reg></choice> had been ordained---an eye for an eye, a tooth for</l>
+                            <l n="bb749.1.ms.20" justify="left">a tooth.---<hi rend="i">Aristotle,</hi> in his treatise of morals, says, that</l>
                             <l n="bb749.1.ms.20" justify="left">some thought retaliation of personal wrongs an <choice><orig>equi-</orig><reg type="split_word">equitable</reg></choice></l>
                         </lg>
-                        <textfoot><l n="bb749.1.ms.20" justify="left" indent="20"><catchword><choice><orig>table</orig><reg>equitable</reg></choice></catchword></l></textfoot>
+                        <textfoot><l n="bb749.1.ms.20" justify="left" indent="20"><catchword><choice><orig>table</orig><reg type="split_word">equitable</reg></choice></catchword></l></textfoot>
                         
                     </zone>
                     
@@ -4040,7 +4047,7 @@
                             
                         </lg>
                         
-                        <textfoot><l n="bb749.1.ms.21" indent="20"><catchword>the</catchword></l></textfoot>
+                        <textfoot><l n="bb749.1.ms.21" justify="left" indent="20"><catchword>the</catchword></l></textfoot>
                     </zone>
                     
                     <zone type="page-right" points="3026,4218 5044,4194 5038,275 3030,290">
@@ -4049,15 +4056,15 @@
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.21" justify="left">the history of philosophy, and of idolatry, and <choice><orig>super-</orig><reg type="split_word">superstition</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>stition</orig><reg>superstition</reg></choice>, in all ages and countries, determine. A <choice><orig>vo-</orig><reg type="split_word">volume</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>lume</orig><reg>volume</reg></choice> might be filled with an account of the mistakes</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>stition</orig><reg type="split_word">superstition</reg></choice>, in all ages and countries, determine. A <choice><orig>vo-</orig><reg type="split_word">volume</reg></choice></l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>lume</orig><reg type="split_word">volume</reg></choice> might be filled with an account of the mistakes</l>
                             <l n="bb749.1.ms.21" justify="left">into which the greatest reasoners have fallen, and of</l>
                             <l n="bb749.1.ms.21" justify="left">the uncertainty in which they lived, with respect to</l>
                             <l n="bb749.1.ms.21" justify="left">every one of these points. I will advert, briefly, only</l>
                             <l n="bb749.1.ms.21" justify="left">to the last of them. Notwithstanding the illustrious</l>
                             <l n="bb749.1.ms.21" justify="left"><choice><orig>labours</orig><reg>labors</reg></choice> of <hi rend="i">Gaffendi, Cudworth, Clarke, Baxter,</hi>and of</l>
                             <l n="bb749.1.ms.21" justify="left">above two hundred other modern writers on the <choice><orig>sub-</orig><reg type="split_word">subject</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>ject</orig><reg>subject</reg></choice>, the <hi rend="i">natural</hi>mortality or immortality of the human</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>ject</orig><reg type="split_word">subject</reg></choice>, the <hi rend="i">natural</hi>mortality or immortality of the human</l>
                             <l n="bb749.1.ms.21" justify="left">soul is as little understood by us, as it was by the <choice><orig>phi-</orig><reg type="split_word">philosophers</reg></choice></l>
                             <l n="bb749.1.ms.21" justify="left"><choice><orig>losophers</orig><reg>philosophers</reg></choice> of Greece or Rome. The opposite opinions</l>
                             <l n="bb749.1.ms.21" justify="left">of <hi rend="i">Plato</hi> and of <hi rend="i">Epicurus,</hi> on this subject, have their</l>
@@ -4071,30 +4078,30 @@
                             <l n="bb749.1.ms.21" justify="left">The importance of revelation is by nothing rendered</l>
                             <l n="bb749.1.ms.21" justify="left">more apparent, than by the discordant sentiments of</l>
                             <l n="bb749.1.ms.21" justify="left">learned and good men (for I speak not of the <choice><orig>igno-</orig><reg type="split_word">ignorant</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>rant</orig><reg>ignorant</reg></choice> and immoral) on this point.  They <choice><orig>shew</orig><reg>show</reg></choice> the <choice><orig>in-</orig><reg type="split_word">insufficiency</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>sufficiency</orig><reg>insufficiency</reg></choice> of human reason, in a course of above two</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>rant</orig><reg type="split_word">ignorant</reg></choice> and immoral) on this point.  They <choice><orig>shew</orig><reg>show</reg></choice> the <choice><orig>in-</orig><reg type="split_word">insufficiency</reg></choice></l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>sufficiency</orig><reg type="split_word">insufficiency</reg></choice> of human reason, in a course of above two</l>
                             <l n="bb749.1.ms.21" justify="left">thousand years, to unfold the mysteries of human <choice><orig>na-</orig><reg type="split_word">nature</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>ture</orig><reg>nature</reg></choice>, and to furnish, from the contemplation of it,</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>ture</orig><reg type="split_word">nature</reg></choice>, and to furnish, from the contemplation of it,</l>
                             <l n="bb749.1.ms.21" justify="left">any assurance of the quality of our future condition.</l>
                             <l n="bb749.1.ms.21" justify="left">If you should ever become persuaded of this <choice><orig>insuffici-</orig><reg>insufficiency</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>ency</orig><reg>insufficiency</reg></choice>, (and you can scarce fail of becoming so, if you</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>ency</orig><reg type="split_word">insufficiency</reg></choice>, (and you can scarce fail of becoming so, if you</l>
                             <l n="bb749.1.ms.21" justify="left">examine the matter deeply,) you will, if you act <choice><orig>rati-</orig><reg type="split_word">rationally</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>onally</orig><reg>rationally</reg></choice>, be disposed to investigate, with seriousness and</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>onally</orig><reg type="split_word">rationally</reg></choice>, be disposed to investigate, with seriousness and</l>
                             <l n="bb749.1.ms.21" justify="left">impartiality, the truth of christianity. You will say</l>
                             <l n="bb749.1.ms.21" justify="left">of the gospel, as the <hi rend="i">Northumbrian</hi> heathens said of</l>
                             <l n="bb749.1.ms.21" justify="left"><hi rend="i">Paulinus</hi>, by whom they were converted to the <choice><orig>chris-</orig><reg type="split_word">christian</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>tian</orig><reg>christian</reg></choice> religion&#8212;"The more we reflect on the nature of</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>tian</orig><reg type="split_word">christian</reg></choice> religion---"The more we reflect on the nature of</l>
                             <l n="bb749.1.ms.21" justify="left">our soul, the less we know of it. Whilst it animates</l>
                             <l n="bb749.1.ms.21" justify="left">our body, we may know some of it's properties; but</l>
                             <l n="bb749.1.ms.21" justify="left">when once separated, we know not whither it goes,</l>
                             <l n="bb749.1.ms.21" justify="left">or from whence it came. Since, then, the <hi rend="i">gospel</hi> <choice><orig>pre-</orig><reg type="split_word">pretends</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>tends</orig><reg>pretends</reg></choice> to give us clearer notions of these matters, we</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>tends</orig><reg type="split_word">pretends</reg></choice> to give us clearer notions of these matters, we</l>
                             <l n="bb749.1.ms.21" justify="left">ought to hear it, and laying aside all passion and <choice><orig>pre-</orig><reg type="split_word">prejudice</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>judice</orig><reg>prejudice</reg></choice>, follow that which shall appear most <choice><orig>conform-</orig><reg type="split_word">conformable</reg></choice></l>
-                            <l n="bb749.1.ms.21" justify="left"><choice><orig>able</orig><reg>conformable</reg></choice> to right reason."</l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>judice</orig><reg type="split_word">prejudice</reg></choice>, follow that which shall appear most <choice><orig>conform-</orig><reg type="split_word">conformable</reg></choice></l>
+                            <l n="bb749.1.ms.21" justify="left"><choice><orig>able</orig><reg type="split_word">conformable</reg></choice> to right reason."</l>
                         </lg>
                         
-                        <textfoot><l n="bb749.1.ms.21" indent="20"><catchword>What</catchword></l></textfoot>
+                        <textfoot><l n="bb749.1.ms.21" justify="left" indent="20"><catchword>What</catchword></l></textfoot>
                     </zone>
                     
                 </zone>

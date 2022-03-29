@@ -55,10 +55,24 @@
 }
 
 
+.zone-roi {
+  cursor: pointer;
+  fill: transparent;
+  pointer-events: visible;
+}
+
+.zone-roi:hover .zone-name-label {
+  visibility: visible;
+}
+
+.zone-roi .zone-name-label {
+  visibility: hidden;
+}
+
 .border-0,
 .border-1,
 .border-2,
-.border-3, {
+.border-3 {
   background: rgb(0,0,0) !important;
 }
 

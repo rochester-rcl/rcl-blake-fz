@@ -1,5 +1,56 @@
 /* @flow */
 
+function getRawText(xml) {
+  const getText = (node) => {
+    let text = "";
+    if (node.childNodes.length) {
+      for (let n of node.childNodes) {
+        if (n.nodeName === "#text") {
+          text += n.textContent;
+        } else {
+          if (n.nodeName === "choice") {
+            let orig = Array.from(n.childNodes).find(c => c.nodeName === "orig");
+            if (orig) {
+              text += orig.textContent;
+            }
+          } else {
+            text += getText(n);
+          }
+        }
+      }
+    } else {
+      text += node.textContent;
+    }
+    return text;
+  }
+  return getText(xml);
+}
+
+function getTextPosition(xml, nodeKey, textKey) {
+  let parent = xml.parentNode;
+  let nodes = Array.from(parent.childNodes);
+  let text = "";
+  let textPosition = 0;
+  for (let node of nodes) {
+    if (node === xml) {
+      textPosition = text.length;
+    } else {
+      if (node.nodeName === nodeKey) {
+        let t = Array.from(node.childNodes).find(
+          (c) => c.nodeName === textKey
+        );
+        if (t) {
+          text += t.textContent;
+        }
+      } else {
+        text += node.textContent;
+      }
+    }
+    // get text index based on all previous nodes
+  }
+  return textPosition;
+}
+
 function xmlToJson(xml) {
   // Handshift and unclear as objects with #text instead of arrays of text
 
@@ -40,28 +91,11 @@ function xmlToJson(xml) {
         });
         obj["children"] = elements;
       }
+      if (nodeName === "hi") {
+        obj.textPosition = getTextPosition(xml, nodeName, "#text");
+      }
       if (nodeName === "choice") {
-        // find index of choice in line text
-        let parent = xml.parentNode;
-        let nodes = Array.from(parent.childNodes);
-        let text = "";
-        for (let node of nodes) {
-          if (node === xml) {
-            obj.textPosition = text.length;
-          } else {
-            if (node.nodeName === "choice") {
-              let orig = Array.from(node.childNodes).find(
-                (c) => c.nodeName === "orig"
-              );
-              if (orig) {
-                text += orig.textContent;
-              }
-            } else {
-              text += node.textContent;
-            }
-          }
-          // get text index based on all previous nodes
-        }
+        obj.textPosition = getTextPosition(xml, nodeName, "orig");
       }
       if (nodeName === "zone") {
         // child zones get processed recursively in formatZone
@@ -74,6 +108,9 @@ function xmlToJson(xml) {
           var attribute = xml.attributes.item(j);
           obj["attributes"][attribute.nodeName] = attribute.nodeValue;
         }
+      }
+      if (nodeName !== "l") {
+        obj.textPosition = getTextPosition(xml, nodeName, "#text");
       }
     } else {
       let nodeName = xml.nodeName;
@@ -162,6 +199,13 @@ function xmlToJson(xml) {
 }
 
 function formatLineGroup(lg, parent, index) {
+  let lineText = [];
+  for (let child of lg.childNodes) {
+    if (child.nodeName === "l") {
+      lineText.push(getRawText(child));
+    }
+  }
+
   let group = xmlToJson(lg);
   if (index > 0) {
     let vspace = parent
@@ -176,6 +220,8 @@ function formatLineGroup(lg, parent, index) {
       group.vspaceExtent = 0;
     }
   }
+  console.log(group.l);
+  group.l = Array.from(group.l).map((line, idx) => ({...line, rawText: lineText[idx]}));
   return group;
 }
 
@@ -202,6 +248,14 @@ function formatZone(xml, obj) {
     children.forEach((child, index) => {
       if (child.nodeName === "lg") {
         lg.push(formatLineGroup(child, children, index));
+      }
+
+      if (child.nodeName === "textfoot" && lg.length) {
+        let textFoot = xmlToJson(child);
+        let { l } = textFoot;
+        if (l) {
+          lg[lg.length - 1].l.push(textFoot.l);
+        }
       }
 
       if (child.nodeName === "columns") {
