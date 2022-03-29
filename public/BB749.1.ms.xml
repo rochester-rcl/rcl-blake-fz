@@ -231,7 +231,7 @@
                </zone>
                     <zone type="Blake">
                      
-                        <zone type="marginalia-1" points="2690,4650 2660,20 20,-20 10,4670">
+                        <zone type="marginalia-1" points="2620,40 2690,4535 20,4540 110,10">
                             <lg justify="left">
                                 <l n="bb749.1.ms.01.01" justify="left" indent="3">Notes on the B of L's Apology for the Bible</l>
                                 <l n="bb749.1.ms.01.02" justify="left" indent="6">by William Blake</l>
