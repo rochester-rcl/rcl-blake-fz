@@ -34,7 +34,7 @@ export default class FZNavigation extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.pageNo !== null && prevState.pageNo !== this.state.pageNo) {
       let pageInt = parseInt(this.state.pageNo, 10);
-      if (!isNaN(pageInt) && pageInt > 1 && pageInt < this.props.maxPages + 1) {
+      if (!isNaN(pageInt) && pageInt > 0 && pageInt < this.props.maxPages + 1) {
         this.handleGoToPage(pageInt - 1);
       }
     } else if (this.props.currentPageDisplay !== this.state.pageNo) {
@@ -69,6 +69,7 @@ export default class FZNavigation extends Component {
   handleSetPageNo = (_, { value }) => {
     this.setState({ pageNo: value });
   };
+  
   // TODO fix resetFilter infinite loop
   handleGoToPage(pageNo) {
     this.props.setZonesAction({ currentZones: [] });
