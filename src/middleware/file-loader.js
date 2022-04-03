@@ -9,7 +9,9 @@ function getRawText(xml) {
           text += n.textContent;
         } else {
           if (n.nodeName === "choice") {
-            let orig = Array.from(n.childNodes).find(c => c.nodeName === "orig");
+            let orig = Array.from(n.childNodes).find(
+              (c) => c.nodeName === "orig"
+            );
             if (orig) {
               text += orig.textContent;
             }
@@ -22,7 +24,7 @@ function getRawText(xml) {
       text += node.textContent;
     }
     return text;
-  }
+  };
   return getText(xml);
 }
 
@@ -36,9 +38,7 @@ function getTextPosition(xml, nodeKey, textKey) {
       textPosition = text.length;
     } else {
       if (node.nodeName === nodeKey) {
-        let t = Array.from(node.childNodes).find(
-          (c) => c.nodeName === textKey
-        );
+        let t = Array.from(node.childNodes).find((c) => c.nodeName === textKey);
         if (t) {
           text += t.textContent;
         }
@@ -187,7 +187,8 @@ function xmlToJson(xml) {
     }
   }
   if (obj.nodeType === "handShift") {
-    obj = obj.handShift;
+    let { handShift, ...handShiftProps } = obj;
+    obj = handShiftProps;
     obj.nodeType = "handShift";
   }
 
@@ -203,6 +204,13 @@ function formatLineGroup(lg, parent, index) {
   for (let child of lg.childNodes) {
     if (child.nodeName === "l") {
       lineText.push(getRawText(child));
+    }
+    if (child.nodeName === "handShift") {
+      for (let c of child.childNodes) {
+        if (c.nodeName === "l") {
+          lineText.push(getRawText(c));
+        }
+      }
     }
   }
 
@@ -220,8 +228,22 @@ function formatLineGroup(lg, parent, index) {
       group.vspaceExtent = 0;
     }
   }
-  console.log(group.l);
-  group.l = Array.from(group.l).map((line, idx) => ({...line, rawText: lineText[idx]}));
+  if (group.handShift) {
+    let { handShift } = group;
+    let medium =
+      (handShift.attributes && handShift.attributes.medium) || "pencil";
+    group.l = Array.from(handShift.l).map((line, idx) => ({
+      ...line,
+      rawText: lineText[idx],
+      medium,
+    }));
+  } else {
+    group.l = Array.from(group.l).map((line, idx) => ({
+      ...line,
+      rawText: lineText[idx],
+    }));
+  }
+
   return group;
 }
 
