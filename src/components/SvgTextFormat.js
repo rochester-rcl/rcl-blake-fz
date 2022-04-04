@@ -72,7 +72,7 @@ export function Choice(props) {
 }
 
 export function Catchword(props) {
-  const { catchword, textRef } = props;
+  const { catchword } = props;
   return <tspan>{catchword ? catchword["#text"] : ""}</tspan>;
 }
 
@@ -247,7 +247,13 @@ function FormattedLine(props) {
     if (key === "catchword") {
       return <Catchword catchword={val} textRef={textRef} zoneRoi={zoneRoi} />;
     }
-    if (key === "text") {
+    if (key === "space") {
+      return <Space n={val.space.extent} />
+    }
+    if (key === "physnumber") {
+      return <tspan>{val["#text"]}</tspan>;
+    }
+    if (key === "text" || key === "physnumber") {
       return <tspan>{val.textContent}</tspan>;
     }
     return null;

@@ -205,6 +205,7 @@ function formatLineGroup(lg, parent, index) {
       lineText.push(getRawText(child));
     }
   }
+
   let group = xmlToJson(lg);
   if (index > 0) {
     let vspace = parent
@@ -219,6 +220,7 @@ function formatLineGroup(lg, parent, index) {
       group.vspaceExtent = 0;
     }
   }
+  console.log(group.l);
   group.l = Array.from(group.l).map((line, idx) => ({...line, rawText: lineText[idx]}));
   return group;
 }
