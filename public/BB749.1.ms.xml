@@ -958,7 +958,7 @@
                             <l n="bb749.1.ms.04" justify="left">sufferance&#8212;not in the author of it&#8212;for my philosophy,</l>
                         </lg>
                         <textfoot justify="left">
-                            <l n="bb749.1.ms.04" justify="left" indent="12">B3<space extent="11" unit="character"/><catchword>at</catchword></l>
+                            <l n="bb749.1.ms.04" justify="left" indent="12">B<physnumber>3</physnumber><space extent="11" unit="character"/><catchword>at</catchword></l>
                         </textfoot>
                     </zone>
                 </zone>
@@ -1063,25 +1063,19 @@
                 </zone>
             </phystext>
         </desc>
-        
-        <desc id="bb749.1.ms.05" dbi="BB749.1.6+7.MS">
+        <desc id="bb749.1.ms.05" dbit="BB749.1.6+7">
             <objtitle>
-                <objid>
-                    <objnumber code="A5">Object 5 </objnumber>
-                    <objcode code="B5">(Bentley 749.5)</objcode>
-                </objid>
+                <objnumber code="A5">Object 5</objnumber>
+                <objcode code="B5">(Bentley 749.5)</objcode>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.66 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
-            <phystext> 
-                
+            <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="138,4406 2632,4406 2632,92 112,86"><!-- also for Josh -->
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.05" justify="left" indent="5"><physnumber>(6)</physnumber></l></texthead>
-                        
+                    <zone type="page-left" points="2547,364 2606,4076 677,4070 700,364">
+                        <texthead justify="left"><l n="bb749.1.ms.05" justify="left" indent="5">(<physnumber>6</physnumber>)</l></texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.05" justify="left">at least, instructs me to believe, that God not only <choice><orig>pri-</orig><reg type="split_word">primarily</reg></choice></l>
                             <l n="bb749.1.ms.05" justify="left"><choice><orig>marily</orig><reg>primarily</reg></choice> formed, but that he hath through all ages <choice><orig>execu-</orig><reg type="split_word">executed</reg></choice></l>
@@ -1126,14 +1120,10 @@
                             <l n="bb749.1.ms.05" justify="left">stomach disgorges a deadly poison.</l>
                             <l n="bb749.1.ms.05" justify="left" indent="1">I have often wondered what could be the reason that</l>
                         </lg>
-                        
                         <textfoot><l n="bb749.1.ms.05" indent="25"><catchword>men,</catchword></l></textfoot>
                     </zone>
-                    
-                    <zone type="page-right" points="2759,4388 5253,4388 5253,74 2733,68">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.05" justify="left" indent="5"><physnumber>(7)</physnumber></l></texthead>
-                        
+                    <zone type="page-right" points="3683,364 3983,364 4000,505 4747,517 4835,4076 2941,4076 2883,523 3688,482">
+                        <texthead justify="left"><l n="bb749.1.ms.05" justify="left" indent="5">(<physnumber>7</physnumber>)</l></texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.05" justify="left">men, not destitute of talents, should be desirous of <choice><orig>un-</orig><reg type="split_word">undermining</reg></choice></l>
                             <l n="bb749.1.ms.05" justify="left"><choice><orig>dermining</orig><reg>undermining</reg></choice> the authority of revealed religion, and <choice><orig>stu-</orig><reg type="split_word">studious</reg></choice></l>
@@ -1178,147 +1168,136 @@
                             <l n="bb749.1.ms.05" justify="left">which we cannot clearly apprehend.</l>
                             <l n="bb749.1.ms.05" justify="left" indent="1">It appears incredible to many, that God Almighty</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.05" justify="left" indent="5">B4</l><catchword>should</catchword></textfoot>
+                        <textfoot><l n="bb749.1.ms.05" justify="left" indent="5">B<physnumber>4</physnumber><catchword>should</catchword></l></textfoot>
                     </zone>
                 </zone>
-                
                 <zone type="Blake">
-                   
-                    <zone type="marginalia-1" points="2640,53 2646,267 1920,253 1926,380 193,367 193,53">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.05.01" justify="left">the Holy Ghost who in Paine strives with Christendom</l>
-                                <l n="bb749.1.ms.05.02" justify="left">as in Christ he strove with the Jews</l>                
-                            </lg>
-                        </zone>
-                        
-                    <zone type="underline-1" points="806,2640 2473,2613 2460,2827 813,2853">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.05.01" justify="left" indent="5"><hi rend="u"><gap extent="24"/></hi></l>
-                                <l n="bb749.1.ms.05.02" justify="left" indent="5"><hi rend="u"><gap extent="12"/></hi></l>
-                            </lg>
-                        </zone>
-                        
-                      
-                    <zone type="marginalia-2" points="693,433 706,1913 140,1960 133,400">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.05.01" justify="left">The Bible says</l>
-                                    <l n="bb749.1.ms.05.02" justify="left">that God formed</l>
-                                    <l n="bb749.1.ms.05.03" justify="left">Nature perfect</l>
-                                    <l n="bb749.1.ms.05.04" justify="left">but that Man</l>
-                                    <l n="bb749.1.ms.05.05" justify="left">perverted the</l>
-                                    <l n="bb749.1.ms.05.06" justify="left">order of Nature</l>
-                                    <l n="bb749.1.ms.05.07" justify="left">since which</l>
-                                    <l n="bb749.1.ms.05.08" justify="left">time the</l>
-                                    <l n="bb749.1.ms.05.09" justify="left">Elements are</l>
-                                    <l n="bb749.1.ms.05.10" justify="left"><choice><orig>filld</orig><reg>filled</reg></choice> with the</l>
-                                    <l n="bb749.1.ms.05.11" justify="left">Prince of Evil</l>
-                                    <l n="bb749.1.ms.05.12" justify="left">who has the</l>
-                                    <l n="bb749.1.ms.05.13" justify="left">power of the</l>
-                                    <l n="bb749.1.ms.05.14" justify="left">air</l>
-                                </lg>
-                            </zone>
-                    <zone type="marginalia-3" points="153,1953 693,1913 706,2560 153,2587">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.05.01" justify="left">Natural Religion</l>
-                                    <l n="bb749.1.ms.05.02" justify="left">is the voice of</l>
-                                    <l n="bb749.1.ms.05.03" justify="left">God &#38; not</l>
-                                    <l n="bb749.1.ms.05.04" justify="left">the result of</l>
-                                    <l n="bb749.1.ms.05.05" justify="left">reasoning on the</l>
-                                    <l n="bb749.1.ms.05.06" justify="left">Powers of Satan</l>
-                                    <l n="bb749.1.ms.05.07" justify="left"><hr width="7" align="left"/></l>
-                                </lg>
-                            </zone>
-                            
-                    <zone type="marginalia-4" points="706,2567 680,3547 146,3600 126,2600">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.05.01" justify="left">Horrible</l>
-                                    <l n="bb749.1.ms.05.02" justify="left">the Bishop</l>
-                                    <l n="bb749.1.ms.05.03" justify="left">is an Inquisitor</l>
-                                    <l n="bb749.1.ms.05.04" justify="left">God never</l>
-                                    <l n="bb749.1.ms.05.05" justify="left">makes one</l>
-                                    <l n="bb749.1.ms.05.06" justify="left">man murder</l>
-                                    <l n="bb749.1.ms.05.07" justify="left">another nor</l>
-                                    <l n="bb749.1.ms.05.08" justify="left">one nation</l>                      
-                                </lg>
-                            </zone>
-                            
-                        
-                        
-                    
-                    
-                
-                        
-                    <zone type="marginalia-5" points="5359,3101 4780,3100 4740,533 2846,527 2739,47 5339,61">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.05.01" justify="left">There is vast difference between an accident brought on by a mans own</l>
-                                <l n="bb749.1.ms.05.02" justify="left">carelessness &#38; a destruction from the designs of another. The Earthquakes</l>
-                                <l n="bb749.1.ms.05.03" justify="left">at Lisbon &#38;<hi rend="superscript">c</hi> were the Natural result of Sin but the distruction of the</l>
-                                <l n="bb749.1.ms.05.04" justify="left">Canaanites by Joshua<space extent="5"/>was the Unnatural design of</l>
-                                <l n="bb749.1.ms.05.05" justify="left">wicked men/</l>
-                                <l n="bb749.1.ms.05.06" justify="left" indent="5">To</l>
-                                <l n="bb749.1.ms.05.07" justify="left">Extirpate a</l>
-                                <l n="bb749.1.ms.05.08" justify="left">nation by means</l>
-                                <l n="bb749.1.ms.05.09" justify="left">of another</l>
-                                <l n="bb749.1.ms.05.10" justify="left">nation is as</l>
-                                <l n="bb749.1.ms.05.11" justify="left">wicked as to</l>
-                                <l n="bb749.1.ms.05.12" justify="left">destroy an</l>
-                                <l n="bb749.1.ms.05.13" justify="left">individual by</l>
-                                <l n="bb749.1.ms.05.14" justify="left">means of another</l>
-                                <l n="bb749.1.ms.05.15" justify="left">individual</l>
-                                <l n="bb749.1.ms.05.16" justify="left">which God</l>
-                                <l n="bb749.1.ms.05.17" justify="left">considers (in</l>
-                                <l n="bb749.1.ms.05.18" justify="left">the Bible) as</l>
-                                <l n="bb749.1.ms.05.19" justify="left">Murder &#38;</l>
-                                <l n="bb749.1.ms.05.20" justify="left">commands that</l>
-                                <l n="bb749.1.ms.05.21" justify="left">it shall not</l>
-                                <l n="bb749.1.ms.05.22" justify="left">be done</l>
-                                <l n="bb749.1.ms.05.23" justify="left">Therefore</l>
-                                <l n="bb749.1.ms.05.24" justify="left">the Bishop</l>
-                                <l n="bb749.1.ms.05.25" justify="left">has not</l>
-                                <l n="bb749.1.ms.05.26" justify="left"><choice><orig>answerd</orig><reg>answered</reg></choice></l>
-                                <l n="bb749.1.ms.05.27" justify="left" indent="2">Paine</l>
-                                <l n="bb749.1.ms.05.28" justify="left"><hr width="5" align="left"/></l>
-                            </lg>
-                        </zone>
-                        
-                    <zone type="underline-2" points="4633,2327 4620,2507 2933,2507 2940,2327">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.05.01" justify="left"><hi rend="u"><gap extent="30"/></hi></l>
-                            </lg>
-                        </zone>
-                        
-                   
-                            
-                            <zone type="marginalia-6" points="5391,4046 5336,3100 4772,3128 4781,4000">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.05.01" justify="left">That mankind</l>
-                                    <l n="bb749.1.ms.05.02" justify="left">are in a less</l>
-                                    <l n="bb749.1.ms.05.03" justify="left">distinguished</l>
-                                    <l n="bb749.1.ms.05.04" justify="left">Situation with</l>
-                                    <l n="bb749.1.ms.05.05" justify="left">regard to mind</l>
-                                    <l n="bb749.1.ms.05.06" justify="left">than they were</l>
-                                    <l n="bb749.1.ms.05.07" justify="left">in the time of</l>
-                                    <l n="bb749.1.ms.05.08" justify="left">Homer Socrates</l>
-                                </lg>
-                            </zone>
-                            
-                        
-                    <zone type="marginalia-7" points="5354,3991 5336,4482 2781,4491 2745,3991">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.05.01" justify="left">Phidias, Glycon. Aristotle &#38;<hi rend="superscript">c</hi> let all their works witness</l>
-                                <l n="bb749.1.ms.05.02" justify="left">ine <del type="overstrike">the Deists</del> says that Christianity put a stop to improvement<note>Bentley assumes "ine" is part of Blake writing "Paine."</note></l>
-                                <l n="bb749.1.ms.05.03" justify="left">&#38; the Bishop has not <choice><orig>shewn</orig><reg>shown</reg></choice> the contrary</l>
-                            </lg>
-                        </zone>
-                        
-                    
-                    
+                    <zone type="marginalia-1" points="2659,47 2683,358 200,358 200,35">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.01" justify="left">the Holy Ghost who in Paine strives with Christendom</l>
+                            <l n="bb749.1.ms.05.02" justify="left">as in the Christ he strove with the Jews</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-2" points="182,427 688,429 689,1915 153,1942">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.03" justify="left">The Bible says</l>
+                            <l n="bb749.1.ms.05.04" justify="left">that God formed</l>
+                            <l n="bb749.1.ms.05.05" justify="left">Nature perfect</l>
+                            <l n="bb749.1.ms.05.06" justify="left">but that Man</l>
+                            <l n="bb749.1.ms.05.07" justify="left">perverted the</l>
+                            <l n="bb749.1.ms.05.08" justify="left">order of Nature</l>
+                            <l n="bb749.1.ms.05.09" justify="left">since which</l>
+                            <l n="bb749.1.ms.05.10" justify="left">time the</l>
+                            <l n="bb749.1.ms.05.11" justify="left">Elements are</l>
+                            <l n="bb749.1.ms.05.12" justify="left">
+                                <choice>
+                                    <orig>filld</orig>
+                                    <reg>filled</reg>
+                                </choice>
+                                with the</l>
+                            <l n="bb749.1.ms.05.13" justify="left">Prince of Evil</l>
+                            <l n="bb749.1.ms.05.14" justify="left">who has the</l>
+                            <l n="bb749.1.ms.05.15" justify="left">power of the</l>
+                            <l n="bb749.1.ms.05.16" justify="left">air</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-3" points="168,1931 695,1921 679,2526 168,2536">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.17" justify="left">Natural Religion</l>
+                            <l n="bb749.1.ms.05.18" justify="left">is the voice of</l>
+                            <l n="bb749.1.ms.05.19" justify="left">God &#38; not</l>
+                            <l n="bb749.1.ms.05.20" justify="left">the result of</l>
+                            <l n="bb749.1.ms.05.21" justify="left">reasoning on the</l>
+                            <l n="bb749.1.ms.05.22" justify="left">Powers of Satan</l>
+                            <l n="bb749.1.ms.05.23" justify="left"><hr width="7" align="left"/></l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-4" points="677,3517 694,2535 153,2529 159,3529">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.24" justify="left">Horrible</l>
+                            <l n="bb749.1.ms.05.25" justify="left">the Bishop</l>
+                            <l n="bb749.1.ms.05.26" justify="left">is an Inquisitor</l>
+                            <l n="bb749.1.ms.05.27" justify="left">God never</l>
+                            <l n="bb749.1.ms.05.28" justify="left">makes one</l>
+                            <l n="bb749.1.ms.05.29" justify="left">man murder</l>
+                            <l n="bb749.1.ms.05.30" justify="left">another nor</l>
+                            <l n="bb749.1.ms.05.31" justify="left">one nation</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-5" points="4824,3088 4741,523 4006,505 3971,364 3694,364 3647,482 2771,547 2747,11 5312,52 5335,3082">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.32" justify="left">There is vast difference between an accident brought on by a mans own</l>
+                            <l n="bb749.1.ms.05.33" justify="left">carlessness &#38; a destruction from the designs of another. The Earthquakes</l>
+                            <l n="bb749.1.ms.05.34" justify="left">at Lisbon &#38; <hi rend="superscript">c</hi> 
+                                were the Natural result of Sin but the distruction of the</l>
+                            <l n="bb749.1.ms.05.35" justify="left">Canaanites by Joshua<space extent="5"/>was the Unnatural design of</l>
+                            <l n="bb749.1.ms.05.36" justify="left">wicked men/</l>
+                            <l n="bb749.1.ms.05.37" justify="left" indent="5">To</l>
+                            <l n="bb749.1.ms.05.38" justify="left">Extirpate a</l>
+                            <l n="bb749.1.ms.05.39" justify="left">nation by means</l>
+                            <l n="bb749.1.ms.05.40" justify="left">of another</l>
+                            <l n="bb749.1.ms.05.41" justify="left">ation is as</l>
+                            <l n="bb749.1.ms.05.42" justify="left">wicked as to</l>
+                            <l n="bb749.1.ms.05.43" justify="left">destroy an</l>
+                            <l n="bb749.1.ms.05.44" justify="left">individual by</l>
+                            <l n="bb749.1.ms.05.45" justify="left">means of another</l>
+                            <l n="bb749.1.ms.05.46" justify="left">individual</l>
+                            <l n="bb749.1.ms.05.47" justify="left">which God</l>
+                            <l n="bb749.1.ms.05.48" justify="left">considers (in</l>
+                            <l n="bb749.1.ms.05.49" justify="left">the Bible) as</l>
+                            <l n="bb749.1.ms.05.50" justify="left">Murder &#38;</l>
+                            <l n="bb749.1.ms.05.51" justify="left">commands that</l>
+                            <l n="bb749.1.ms.05.52" justify="left">it shall not</l>
+                            <l n="bb749.1.ms.05.53" justify="left">be done</l>
+                            <l n="bb749.1.ms.05.54" justify="left">Therefore</l>
+                            <l n="bb749.1.ms.05.55" justify="left">the Bishop</l>
+                            <l n="bb749.1.ms.05.56" justify="left">has not</l>
+                            <l n="bb749.1.ms.05.57" justify="left">
+                                <choice>
+                                    <orig>answerd</orig>
+                                    <reg>answered</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.05.58" justify="left" indent="2">Paine</l>
+                            <l n="bb749.1.ms.05.59" justify="left"><hr width="5" align="left"/></l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-6" points="4834,4061 4822,3094 5395,3094 5378,4472 2678,4455 2678,4000">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.60" justify="left">That mankind</l>
+                            <l n="bb749.1.ms.05.61" justify="left">are in a less</l>
+                            <l n="bb749.1.ms.05.62" justify="left">distinguished</l>
+                            <l n="bb749.1.ms.05.63" justify="left">Situation with</l>
+                            <l n="bb749.1.ms.05.64" justify="left">regard to mind</l>
+                            <l n="bb749.1.ms.05.65" justify="left">than they were</l>
+                            <l n="bb749.1.ms.05.66" justify="left">in the time of</l>
+                            <l n="bb749.1.ms.05.67" justify="left">Homer Socrates</l>
+                            <l n="bb749.1.ms.05.68" justify="left">Phidias, Glycon. Aristotle &#38;<hi rend="superscript">c</hi> 
+                                let all their works witness</l>
+                            <l n="bb749.1.ms.05.69" justify="left">ine <del type="overstrike">the Deists</del>
+                                says that Christianity put a stop to improvement
+                                <note>Bentley assumes "ine" belongs to the word "Paine," obscured by the fold (*Writings* volume 2, page 1412).</note></l>
+                            <l n="bb749.1.ms.05.70" justify="left">&#38; the Bishop has not 
+                                <choice>
+                                    <orig>shewn</orig>
+                                    <reg>shown</reg>
+                                </choice>
+                                the contrary</l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-1" points="683,2605 2553,2629 2571,2829 694,2829">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.71" justify="left" indent="5"><hi rend="u"><gap extent="24"/></hi></l>
+                            <l n="bb749.1.ms.05.72" justify="left" indent="5"><hi rend="u"><gap extent ="12"/></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-2" points="2918,2311 4771,2329 4777,2441 2930,2435">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.05.73" justify="left"><hi rend="u"><gap extent="30"/></hi></l>
+                        </lg>
+                    </zone>
                 </zone>
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.06" dbi="BB749.1.8+9.MS">
             <objtitle>
                <objid>
