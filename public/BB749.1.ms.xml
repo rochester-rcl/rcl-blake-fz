@@ -858,7 +858,7 @@
             </objtitle>
             <physdesc>
                 <objsize>29.6 x 22.2cm</objsize>
-                <windowsize width="500" height="615"></windowsize>
+                <windowsize width="500" height="615"/>
             </physdesc>
             <phystext>
                 <zone type="original">
@@ -880,8 +880,8 @@
                             <l n="bb749.1.ms.04" justify="left">really learned are in no danger of being infected by the</l>
                             <l n="bb749.1.ms.04" justify="left">poison of infidelity: they will excuse me, therefore, for</l>
                             <l n="bb749.1.ms.04" justify="left">having entered, as little as possible, into deep <choice><orig>disquisi-</orig><reg type="split_word">disquisitions</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>tions</orig><reg>disquisitions</reg></choice> concerning the authenticity of the Bible. The <choice><orig>sub-</orig><reg type="split_word">subject</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>ject</orig><reg>subject</reg></choice> has been so learnedly, and so frequently, handled by</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>tions</orig><reg type="split_word">disquisitions</reg></choice> concerning the authenticity of the Bible. The <choice><orig>sub-</orig><reg type="split_word">subject</reg></choice></l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>ject</orig><reg type="split_word">subject</reg></choice> has been so learnedly, and so frequently, handled by</l>
                             <l n="bb749.1.ms.04" justify="left">other writers, that it does not want (I had almost said,</l>
                             <l n="bb749.1.ms.04" justify="left">it does not admit) any farther proof. And it is the</l>
                             <l n="bb749.1.ms.04" justify="left">more necessary to adopt this mode of answering your</l>
@@ -895,17 +895,17 @@
                             <l n="bb749.1.ms.04" justify="left">authors are in your <choice><orig>favour</orig><reg>favor</reg></choice>; I will venture to affirm, that</l>
                             <l n="bb749.1.ms.04" justify="left">had you made a learned appeal to all the ancient books</l>
                             <l n="bb749.1.ms.04" justify="left">in the world, sacred or profane, christian, jewish, or <choice><orig>pa-</orig><reg type="split_word">pagan</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>gan</orig><reg>pagan</reg></choice>, instead of lessening, they would have established,</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>gan</orig><reg type="split_word">pagan</reg></choice>, instead of lessening, they would have established,</l>
                             <l n="bb749.1.ms.04" justify="left">the credit and authority of the Bible as the Word of God.</l>
                             <l n="bb749.1.ms.04" justify="left" indent="1">Quitting your preface, let us proceed to the work <choice><orig>it-</orig><reg type="split_word">itself</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>self</orig><reg>itself</reg></choice>; in which there is much repetition, and a defect of</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>self</orig><reg type="split_word">itself</reg></choice>; in which there is much repetition, and a defect of</l>
                             <l n="bb749.1.ms.04" justify="left">proper arrangement. I will follow your tract, however,</l>
                             <l n="bb749.1.ms.04" justify="left">as nearly as I can. The first question you propose for</l>
                             <l n="bb749.1.ms.04" justify="left">consideration is&#8212;"Whether there is sufficient authority</l>
                             <l n="bb749.1.ms.04" justify="left">for believing the Bible to be the Word of God, or <choice><orig>whe-</orig><reg type="split_word">whether</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>ther</orig><reg>whether</reg></choice> there is not?"&#8212;You determine this question in the</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>ther</orig><reg type="split_word">whether</reg></choice> there is not?"&#8212;You determine this question in the</l>
                             <l n="bb749.1.ms.04" justify="left">negative, upon what you are pleased to call moral <choice><orig>evi-</orig><reg type="split_word">evidence</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>dence</orig><reg>evidence</reg></choice>.   You hold it impossible that the Bible can be the</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>dence</orig><reg type="split_word">evidence</reg></choice>.   You hold it impossible that the Bible can be the</l>
                             <l n="bb749.1.ms.04" justify="left">Word of God, because it is therein said, that the <choice><orig>Israel-</orig><reg type="split_word">Israelites</reg></choice></l>
                         </lg>
                         <textfoot justify="left">
@@ -958,7 +958,7 @@
                             <l n="bb749.1.ms.04" justify="left">sufferance&#8212;not in the author of it&#8212;for my philosophy,</l>
                         </lg>
                         <textfoot justify="left">
-                            <l n="bb749.1.ms.04" justify="left" indent="12">B3<space extent="11"/><catchword>at</catchword></l>
+                            <l n="bb749.1.ms.04" justify="left" indent="12">B3<space extent="11" unit="character"/><catchword>at</catchword></l>
                         </textfoot>
                     </zone>
                 </zone>
