@@ -286,100 +286,70 @@
             <objtitle>
                 <objid>
                     <objnumber code="A2">Object 2</objnumber>
-                    <objcode code="B2">(Bentley 749.2) </objcode>
+                    <objcode code="B2">(Bentley 749.2)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
-                <windowsize width="500" height="615"/>
+                <objsize>29.6 x 22.2cm</objsize>
+                <windowsize width="500" height="615"></windowsize>
             </physdesc>
-            <phystext> 
-                
+            <phystext>   
                 <zone type="original">
-                    
-                    <zone type="page-left" points="465,425 2500,420 2503,4162 465,4160">
-                        
+                    <zone type="page-left" points="2447,429 2447,4051 592,4068 608,418">
                         <lg justify="left">
-                            
                             <l n="bb749.1.ms.02" justify="left" indent="3"><hi rend="i">Lately Published, Price Two Shillings,</hi></l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">A <choice><orig>DEFENCE</orig><reg>defense</reg></choice> of REVEALED RELIGION, in TWO</l>
+                            <l n="bb749.1.ms.02" justify="left">SERMONS, preached in the CATHEDRAL CHURCH</l>
                             <l n="bb749.1.ms.02" justify="left">SERMONS, preached in the CATHEDRAL CHURCH</l>
                             <l n="bb749.1.ms.02" justify="left">of LANDAFF; and a CHARGE delivered to the CLERGY of</l>
                             <l n="bb749.1.ms.02" justify="left">that Diocese in June, 1795. By R. WATSON, D. D. F. R. S.</l>
                             <l n="bb749.1.ms.02" justify="left">Lord Bishop of Landaff, and Regius Professor of Divinity in</l>
                             <l n="bb749.1.ms.02" justify="left">the University of Cambridge.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left" indent="3">Printed for T. EVANS, in Paternoster-Row:</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left" indent="2">Of whom may be had, written by the same Author,</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">1. An APOLOGY for CHRISTIANITY, in a Series of <choice><orig>Let-</orig><reg type="split_word">Letters</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>ters</orig><reg>Letters</reg></choice>, addressed to Edward Gibbon, <choice><orig>Esq.</orig><reg>Esquire</reg></choice> Author of the History</l>
                             <l n="bb749.1.ms.02" justify="left">of the Decline and Fall of the Roman Empire, Fifth Edition,</l>
                             <l n="bb749.1.ms.02" justify="left">Price 3s. sewed.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">2. CHEMICAL ESSAYS, in Five Volumes, the Sixth Edition,</l>
                             <l n="bb749.1.ms.02" justify="left">Price 20s. sewed. Volumes Three, Four, and Five, may</l>
                             <l n="bb749.1.ms.02" justify="left">be had separate, to complete Sets.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">3. A Collection of THEOLOGICAL TRACTS, in Six large</l>
                             <l n="bb749.1.ms.02" justify="left">Volumes, 8vo. the Second Edition, Price 1l. 16s. in</l>
                             <l n="bb749.1.ms.02" justify="left">Boards.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">4. A few Copies of the above Book printed on Royal Paper,</l>
                             <l n="bb749.1.ms.02" justify="left">Price 2l. 14s. in Boards.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">5. An ADDRESS to YOUNG PERSONS after <choice><orig>CONFIRMA-</orig><reg type="split_word">CONFIRMATION</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>TION</orig><reg>CONFIRMATION</reg></choice>, the Fourth Edition, 18mo. stitched, Price 6d. or 2l.</l>
                             <l n="bb749.1.ms.02" justify="left">per Hundred.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">6. Another Edition of the above Book printed on a fine Paper,</l>
                             <l n="bb749.1.ms.02" justify="left">and large Letter, stitched in purple Paper. Price 1s. or</l>
                             <l n="bb749.1.ms.02" justify="left">4l. per Hundred.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">7. The WISDOM and GOODNES of GOD, in having made</l>
                             <l n="bb749.1.ms.02" justify="left">both RICH and POOR: a SERMON, preached before the</l>
                             <l n="bb749.1.ms.02" justify="left">Stewards of the WESTMINSTER DISPENSARY, at the</l>
                             <l n="bb749.1.ms.02" justify="left">Anniversay Meeting in Charlotte-street Chapel; with an</l>
                             <l n="bb749.1.ms.02" justify="left">Appendix, containing REFLECTIONS on the present State</l>
                             <l n="bb749.1.ms.02" justify="left">of ENGLAND and FRANCE: the Third Edition, Price 1s.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">8. SERMONS on Public Occasions, and TRACTS on <choice><orig>Reli-</orig><reg type="split_word">Religious</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>gious</orig><reg>Religious</reg></choice> Subjects, Price 6s. in Boards.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.02" justify="left">9. A CHARGE delivered to the Clergy of the Diocese of Landaff</l>
                             <l n="bb749.1.ms.02" justify="left">in June, 1791. Price 1s.</l>
                         </lg>
-                        
                     </zone>
-                    
-                    <zone type="page-right" points="2790,475 4825,470 4828,4212 2790,4210">
-                        
+                    <zone type="page-right" points="4741,738 4741,4105 2885,4111 2885,755">
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left"><hr width="22" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.02" justify="left" indent="20">LETTER I.</l>
@@ -420,157 +390,151 @@
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>vate</orig><reg>private</reg></choice> unhappiness usually and almost necessarily <choice><orig>accompa-</orig><reg type="split_word">accompanying</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>nying</orig><reg>accompanying</reg></choice> a state of corrupted morals.</l>
                         </lg>
-                        <textfoot>
-                            <lg>
-                            <l n="bb749.1.ms.02" justify="left" indent="5">B<space extent="10" unit="character"/><catchword>No</catchword></l>
-                            </lg>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.03" justify="left" indent="25">B <space extent="20" unit="character"/><catchword>No</catchword></l>
                         </textfoot>
-                        
                     </zone>
-                    
                 </zone>
-                
                 <zone type="Blake">
-                    
-                 
-                        
-                    <zone type="marginalia-1" points="110,35 2565,55 2560,405 120,410">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.02.01" justify="left">Read the XXIII <choice><orig>Chap</orig><reg>Chapter</reg></choice> of Matthew &#38; then condemn</l>
-                                <l n="bb749.1.ms.02.02" justify="left">Paines hatred of Priests if you dare</l>
-                            </lg>
-                        </zone>
-                        
-                    <zone type="marginalia-2" points="1450,3230 1460,3360 760,3370 755,3240">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.02.01" justify="left"><hi rend="u"><gap extent="13" unit="character"/></hi></l>  
-                            </lg>
-                        </zone>
-                        
-                     
-                    <zone type="marginalia-3" points="115,2985 725,2995 760,3945 1905,3955 1895,4360 130,4330">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.02.04" justify="left">God made</l>
-                                    <l n="bb749.1.ms.02.05" justify="left">Man happy</l>
-                                    <l n="bb749.1.ms.02.06" justify="left">&#38; Rich but</l>
-                                    <l n="bb749.1.ms.02.07" justify="left">the <choice><orig>Subtil</orig><reg>Subtle</reg></choice></l>
-                                    <l n="bb749.1.ms.02.08" justify="left">made the</l>
-                                    <l n="bb749.1.ms.02.09" justify="left">innocent</l>
-                                    <l n="bbres749.1.ms.02.10" justify="left">Poor</l>
-                                    
-                                    <l n="bb749.1.ms.02.11" justify="left">this must</l>
-                                    <l n="bb749.1.ms.02.12" justify="left">be a most wicked &#38; blasphemous book</l>
-                                </lg>
-                            </zone>
-                        
-                    <zone type="marginalia-4" points="5345,35 5400,750 4805,760 4690,510 2725,470 2725,45">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.02.13" justify="left">If this first Letter is written without Railing &#38; Illiberality</l>
-                                <l n="bb749.1.ms.02.14" justify="left">I have never read one that is. To me it is all Daggers &#38;</l>
-                                <l n="bb749.1.ms.02.15" justify="left">Poison. the sting of the serpent is in every Sentence as well as</l>
-                                <l n="bb749.1.ms.02.16" justify="left" indent="17">the glittering</l>
-                                <l n="bb749.1.ms.02.17" justify="left" indent="19">Dissimulation</l>
-                            </lg>
-                        </zone>
-                    
-                    <zone type="marginalia-5" points="4744,599 4755,1093 2732,1110 2744,610">    
-                            <lg justify="left">
-                                <l n="bb749.1.ms.02.18" justify="left">achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
-                                <l n="bb749.1.ms.02.19" justify="left">Such is the Bishops<space extent="5"/>If such is the</l>
-                                <l n="bb749.1.ms.02.20" justify="left">characteristic of a modern polite gentleman we may</l>
-                                <l n="bb749.1.ms.02.21" justify="left" indent="5">hope to see Christs discourses <choice><orig>Expung'd</orig><reg type="split_word">Expunged</reg></choice></l>
-                            </lg>
-                        </zone>
-                    
-                    <zone type="marginalia-6" points="5417,705 5395,1411 4745,1411 4750,705">
+                    <zone type="marginalia-1" points="2503,32 2503,374 246,385 249,32">
                         <lg justify="left">
-                            <l n="bb749.1.ms.02.29" justify="left">I have not the Charity</l>
-                            <l n="bb749.1.ms.02.30" justify="left">for the Bishop that</l>
-                            <l n="bb749.1.ms.02.31" justify="left">he pretends to have</l>
-                            <l n="bb749.1.ms.02.32" justify="left">for Paine I believe</l>
-                            <l n="bb749.1.ms.02.33" justify="left">him to be a State</l>
-                            <l n="bb749.1.ms.02.34" justify="left">trickster</l>
+                            <l n="bb749.1.ms.02.01" justify="left">Read the XXIII
+                                <choice>
+                                    <orig>Chap</orig>
+                                    <reg>Chapter</reg>
+                                </choice>
+                                of Matthew &#38; then condemn</l>
+                            <l n="bb749.1.ms.02.02" justify="left">Paines hatred of Priests if you dare</l>
                         </lg>
                     </zone>
-                        
-                    <zone type="marginalia-7" points="4506,1661 4522,1861 3050,1866 3028,1661"> 
-                            <lg justify="left">
-                                <l n="bb749.1.ms.02.22" justify="left" indent="10"><hi rend="u"><gap extent="20" unit="character"/></hi></l>  
-                                <l n="bb749.1.ms.02.23" justify="left" indent="4"><hi rend="u"><gap extent="20" unit="character"/></hi></l>
-                            </lg>
-                    </zone>
-                            
-                    <zone type="marginalia-8" points="4814,2047 4838,2242 3226,2243 3204,2038"> 
-                             <lg justify="left">
-                                <l n="bb749.1.ms.02.24" justify="left" indent="6"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
-                             </lg>
-                                </zone>
-                           
-                    <zone type="marginalia-9" points="4738,2509 4738,2704 2879,2696 2857,2491"> 
-                                    <lg justify="left">
-                                <l n="bb749.1.ms.02.25" justify="left" indent="5"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
-                                <l n="bb749.1.ms.02.26" justify="left"><hi rend="u"><gap extent="30" unit="character"/></hi></l>
-                                    </lg>
-                                </zone>
-                             
-                    <zone type="marginalia-10" points="4739,3100 4739,3295 2880,3287 2858,3082"> 
-                               <lg justify="left">
-                                <l n="bb749.1.ms.02.27" justify="left" indent="4"><hi rend="u"><gap extent="28" unit="character"/></hi></l>
-                                <l n="bb749.1.ms.02.28" justify="left"><hi rend="u"><gap extent="13" unit="character"/></hi></l>
-                            </lg>
-                        
-                  </zone>
-                    <zone type="marginalia-11" points="5361,1519 5376,1885 4719,1885 4709,1509">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.02.35" justify="left">Dishonest</l>
-                                    <l n="bb749.1.ms.02.36" justify="left">Misrepresentation</l>
-                                </lg>
-                            </zone>
-                    
-                    <zone type="marginalia-12" points="5309,1919 5319,2247 4747,2247 4733,1923">       
-                        <lg>
-                                    <l n="bb749.1.ms.02.37" justify="left" indent="1">Priestly</l>
-                                    <l n="bb749.1.ms.02.38" justify="left">Impudence</l>
+                    <zone type="marginalia-2" points="621,3074 621,4071 1874,4057 1889,4203 132,4207 121,3078">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.03" justify="left">God made</l>
+                            <l n="bb749.1.ms.02.04" justify="left">Man happy</l>
+                            <l n="bb749.1.ms.02.05" justify="left">&#38; Rich but</l>
+                            <l n="bb749.1.ms.02.06" justify="left">the
+                                <choice>
+                                    <orig>Subtil</orig>
+                                    <reg>Subtle</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.02.07" justify="left">made the</l>
+                            <l n="bb749.1.ms.02.08" justify="left">innocent</l>
+                            <l n="bb749.1.ms.02.09" justify="left">Poor</l>
+                            <l n="bb749.1.ms.02.10" justify="left">This must</l>
+                            <l n="bb749.1.ms.02.11" justify="left">be a most wicked &#38; blasphemous book</l>
+                            <note>Bentley alerts us that the 'Charlotte-street Chapel' referenced in the original text near this marginalia
+                                "was the chapel of Blake's early patron A.S. Mathew" (*Writings* volume 2, page 1405).</note>
                         </lg>
                     </zone>
-                    
-                    <zone type="marginalia-13" points="5395,2952 5395,3790 4709,3780 4714,2948"> 
-                        <lg>
-                                    <l n="bb749.1.ms.02.39" justify="left">Contemptible</l>
-                                    <l n="bb749.1.ms.02.40" justify="left">Falsehood &#38;</l>
-                                    <l n="bb749.1.ms.02.41" justify="left">Detraction</l>
-                                </lg>
-                            
-                    </zone>   
-                    <zone type="marginalia-14" points="5367,2419 5376,2857 4748,2852 4738,2410">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.02.42" justify="left">Presumptuous</l>
-                                    <l n="bb749.1.ms.02.43" justify="left">Murderer</l>
-                                    <l n="bb749.1.ms.02.44" justify="left">dost thou O Priest</l>
-                                    <l n="bb749.1.ms.02.45" justify="left">wish thy brothers</l>
-                                    <l n="bb749.1.ms.02.46" justify="left">death when God</l>
-                                    <l n="bb749.1.ms.02.47" justify="left">has preserved him</l>
-                                </lg>
+                    <zone type="marginalia-3" points="5335,10 5374,749 4771,692 4685,482 2771,492 2771,10">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.12" justify="left">If this first Letter is written without Railing &#38; Illiberality</l>
+                            <l n="bb749.1.ms.02.13" justify="left">I have never read one that is. To me it is all Daggers &#38;</l>
+                            <l n="bb749.1.ms.02.14" justify="left">Poison. the sting of the serpent is in every Sentence as well as</l>
+                            <l n="bb749.1.ms.02.15" justify="left">the glittering</l>
+                            <l n="bb749.1.ms.02.16" justify="left">Dissimulation</l>
+                        </lg>
                     </zone>
-                            
-                        
-                        
-                    <zone type="marginalia-15" points="5345,4016 5356,4655 2772,4611 2790,4000">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.02.48" justify="left" indent="1"><choice><orig>M<hi rend="superscript">r</hi></orig><reg>Mr</reg></choice> Paine has not extinguishd &#38; cannot Extinguish Moral</l>
-                                <l n="bb749.1.ms.02.49" justify="left">rectitude. he has Extinguishd Superstition which took the</l>
-                                <l n="bb749.1.ms.02.50" justify="left">Place of Moral Rectitude what has Moral Rectitude to do</l>
-                                <l n="bb749.1.ms.02.51" justify="left">with Opinions concerning historical fact</l>
-                            </lg>
-                        </zone>
-   
+                    <zone type="marginalia-4" points="4714,585 4724,1064 3389,1060 3382,960 2781,967 2774,549">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.17" justify="left">Achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
+                            <l n="bb749.1.ms.02.18" justify="left">Such is the Bishops <space extent="5"/>If such is the</l>
+                            <l n="bb749.1.ms.02.19" justify="left">characteristic of a modern polite gentleman we may</l>
+                            <l n="bb749.1.ms.02.20" justify="left" indent="5">hope to see Christs discourses
+                                <choice>
+                                    <orig>Expung'd</orig>
+                                    <reg>Expunged</reg>
+                                </choice></l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-5" points="5403,746 5360,1364 4742,1385 4750,692">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.21" justify="left">I have not the Charity</l>
+                            <l n="bb749.1.ms.02.22" justify="left">for the Bishop that</l>
+                            <l n="bb749.1.ms.02.23" justify="left">he pretends to have</l>
+                            <l n="bb749.1.ms.02.24" justify="left">for Paine I believe</l>
+                            <l n="bb749.1.ms.02.25" justify="left">him to be a State</l>
+                            <l n="bb749.1.ms.02.26" justify="left">trickster</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-6" points="5353,1503 5364,1828 4725,1821 4750,1492">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.27" justify="left">Dishonest</l>
+                            <l n="bb749.1.ms.02.28" justify="left">Misrepresentation</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-7" points="5257,1932 5246,2260 4767,2239 4778,1914">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.29" justify="left" indent="1">Priestly</l>
+                            <l n="bb749.1.ms.02.30" justify="left">Impudence</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-8" points="5353,2421 5346,2832 4767,2824 4764,2424">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.37" justify="left">Contemptible</l>
+                            <l n="bb749.1.ms.02.38" justify="left">Falsehood &#38;</l>
+                            <l n="bb749.1.ms.02.39" justify="left">Detraction</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-9" points="5392,2978 5392,3760 4732,3749 4721,2989">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.31" justify="left">Presumptuous</l>
+                            <l n="bb749.1.ms.02.32" justify="left">Murderer
+                                <note>Bentley reads Murderer as "Murder" (*Writings* volume 2, page 1406).</note></l>
+                            <l n="bb749.1.ms.02.33" justify="left">dost thou O Priest</l>
+                            <l n="bb749.1.ms.02.34" justify="left">wish thy brothers</l>
+                            <l n="bb749.1.ms.02.35" justify="left">death when God</l>
+                            <l n="bb749.1.ms.02.36" justify="left">has preserved him</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-10" points="3846,4078 4482,4067 4949,4114 4935,4014 5292,4017 5285,4610 2785,4603 2792,3996">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.40" justify="left" indent="1">
+                                <choice>
+                                    <orig>M<hi rend="superscript">r</hi></orig>
+                                    <reg>Mr</reg>
+                                </choice>
+                                Paine has not extinguished &#38; cannot Extinguish Moral</l>
+                            <l n="bb749.1.ms.02.41" justify="left">rectitude. he has Extinguished Superstition which took the</l>
+                            <l n="bb749.1.ms.02.42" justify="left">Place of Moral Rectitude what has Moral Rectitude to do</l>
+                            <l n="bb749.1.ms.02.43" justify="left">with Opinions concerning historical fact</l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-1" points="1421,3324 1410,3239 853,3239 857,3342">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.44" justify="left"><hi rend="u"><gap extent="13" unit="character"></gap></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-2" points="3392,1657 4428,1667 4425,1764 3392,1764">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.45" justify="left" indent="10"><hi rend="u"><gap extent="20" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-3" points="3085,1742 4146,1753 4128,1846 3074,1849">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.46" justify="left" indent="4"><hi rend="u"><gap extent="20" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-4" points="3164,2071 4714,2082 4721,2203 3174,2192">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.47" justify="left" indent="6"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-5" points="4721,2499 4725,2707 2889,2689 2903,2571 3049,2578 3046,2471">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.48" justify="left" indent="5"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
+                            <l n="bb749.1.ms.02.49" justify="left"><hi rend="u"><gap extent="30" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-6" points="4703,3092 4700,3185 3639,3189 3649,3282 2892,3264 2878,3157 3014,3146 3024,3053">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.02.50" justify="left" indent="4"><hi rend="u"><gap extent="28" unit="character"/></hi></l>
+                            <l n="bb749.1.ms.02.51" justify="left"><hi rend="u"><gap extent="13" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
                 </zone>
-                
-                
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.03" dbi="BB749.1.2+3.MS">
             <objtitle>
                 <objid>
