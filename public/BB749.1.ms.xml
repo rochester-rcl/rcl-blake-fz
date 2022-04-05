@@ -1063,7 +1063,7 @@
                 </zone>
             </phystext>
         </desc>
-        <desc id="bb749.1.ms.05" dbit="BB749.1.6+7">
+        <desc id="bb749.1.ms.05" dbi="BB749.1.6+7.MS">
             <objtitle>
                 <objnumber code="A5">Object 5</objnumber>
                 <objcode code="B5">(Bentley 749.5)</objcode>
