@@ -42,24 +42,24 @@ export function Space(props) {
 }
 
 export function Gap(props) {
-  const { textRef, gap } = props;
+  const { textRef, gap, medium } = props;
   const extent = parseInt(gap.extent, 10) || "1";
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
   return (
-    <tspan textDecoration="line-through">
+    <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"} textDecoration="line-through">
       <Space n={extent} direction="horizontal" size={size} />
     </tspan>
   );
 }
 
 export function Subst(props) {
-  const { textRef, subst } = props;
+  const { textRef, subst, medium } = props;
   const { del, add } = subst;
   if (!del || !add) {
     return null;
   }
   return (
-    <tspan>
+    <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
       <Del del={del} textRef={textRef} />
       <Add add={add} textRef={textRef} />
     </tspan>
@@ -72,12 +72,12 @@ export function Choice(props) {
 }
 
 export function Catchword(props) {
-  const { catchword } = props;
-  return <tspan>{catchword ? catchword["#text"] : ""}</tspan>;
+  const { catchword, medium } = props;
+  return <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>{catchword ? catchword["#text"] : ""}</tspan>;
 }
 
 export function Hi(props) {
-  const { hi } = props;
+  const { hi, medium } = props;
   let rendType =
     hi.attributes && hi.attributes.rend ? hi.attributes.rend : null;
 
@@ -86,12 +86,23 @@ export function Hi(props) {
       return null;
     }
     if (rendType === "u") {
-      return <tspan textDecoration="underline">{text}</tspan>;
+      return (
+        <tspan
+          fill={medium ? MEDIUM_COLOR[medium] : "#fff"}
+          textDecoration="underline"
+        >
+          {text}
+        </tspan>
+      );
     }
     if (rendType === "i") {
-      return <tspan fontStyle="italic">{text}</tspan>;
+      return (
+        <tspan fontStyle="italic" fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
+          {text}
+        </tspan>
+      );
     }
-    return <tspan>{text}</tspan>;
+    return <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>{text}</tspan>;
   }
 
   return <tspan>{renderHi(hi["#text"])}</tspan>;
@@ -184,7 +195,11 @@ function sortLinePropsByTextPosition(line) {
   let l = [];
   for (const key in line) {
     let { rawText } = line;
-    if (line[key].constructor.name === "Array") {
+    if (
+      line[key] &&
+      line[key].constructor &&
+      line[key].constructor.name === "Array"
+    ) {
       for (let val of line[key]) {
         if (typeof val === "string") {
           l.push([
@@ -214,8 +229,18 @@ function sortLinePropsByTextPosition(line) {
       }
     }
   }
-  return l.sort((a, b) => a[1].textPosition - b[1].textPosition);
+  return l.sort((a, b) => {
+    if (a[1] && b[1]) {
+      return a[1].textPosition - b[1].textPosition;
+    } else {
+      return -1;
+    }
+  });
 }
+
+const MEDIUM_COLOR = {
+  pencil: "#94a2add1",
+};
 
 function FormattedLine(props) {
   const { line, textRef, zoneRoi } = props;
@@ -224,37 +249,47 @@ function FormattedLine(props) {
     return null;
   }
 
+  let { medium } = line;
+
   const l = sortLinePropsByTextPosition(line);
   const components = l.map(([key, val]) => {
     if (key === "del") {
       return <Del key={shortid.generate()} del={val} textRef={textRef} />;
     }
     if (key === "add") {
-      return <Add add={val} textRef={textRef} />;
+      return <Add add={val} textRef={textRef} medium={medium} />;
     }
     if (key === "gap") {
       return <Gap gap={val} textRef={textRef} />;
     }
     if (key === "subst") {
-      return <Subst subst={val} textRef={textRef} />;
+      return <Subst subst={val} textRef={textRef} medium={medium} />;
     }
     if (key === "hi") {
-      return <Hi hi={val} textRef={textRef} />;
+      return <Hi hi={val} textRef={textRef} medium={medium} />;
     }
     if (key === "choice") {
-      return <Choice choice={val} textRef={textRef} />;
+      return <Choice choice={val} textRef={textRef} medium={medium} />;
     }
     if (key === "catchword") {
-      return <Catchword catchword={val} textRef={textRef} zoneRoi={zoneRoi} />;
+      return <Catchword catchword={val} textRef={textRef} zoneRoi={zoneRoi} medium={medium} />;
     }
     if (key === "space") {
-      return <Space n={val.space.extent} />
+      return <Space n={val.space.extent} />;
     }
     if (key === "physnumber") {
-      return <tspan>{val["#text"]}</tspan>;
+      return (
+        <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
+          {val["#text"]}
+        </tspan>
+      );
     }
     if (key === "text" || key === "physnumber") {
-      return <tspan>{val.textContent}</tspan>;
+      return (
+        <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
+          {val.textContent}
+        </tspan>
+      );
     }
     return null;
   });

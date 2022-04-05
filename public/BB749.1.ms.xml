@@ -879,27 +879,21 @@
             </phystext>
         </desc>
         
-        
-        
-        
         <desc id="bb749.1.ms.04" dbi="BB749.1.4+5.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A4">Object 4 </objnumber>
-                    <objcode code="B4">(Bentley 749.4) </objcode>
+                    <objnumber code="A4">Object 4</objnumber>
+                    <objcode code="B4">(Bentley 749.4)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
-                <windowsize width="500" height="615"/>
+                <objsize>29.6 x 22.2cm</objsize>
+                <windowsize width="500" height="615"></windowsize>
             </physdesc>
-            <phystext> 
-                
-                <zone type="original" >
-                    <zone type="page-left" >
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.04" justify="left" indent="5"><physnumber>(4)</physnumber></l></texthead>
-                        
+            <phystext>
+                <zone type="original">
+                    <zone type="page-left" points="1420,495 1410,375 1735,375 1740,510 2510,520 2545,4110 2400,4105 2370,4015 675,3995 625,495">
+                        <texthead justify="left"><l n="bb749.1.ms.04" justify="left" indent="5">(<physnumber>4</physnumber>)</l></texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left">foolishness,&#8212;and that if the gospel be hid, it is hid to</l>
                             <l n="bb749.1.ms.04" justify="left">them that are lost." The consequence of your unbelief</l>
@@ -944,16 +938,13 @@
                             <l n="bb749.1.ms.04" justify="left"><choice><orig>dence</orig><reg>evidence</reg></choice>.   You hold it impossible that the Bible can be the</l>
                             <l n="bb749.1.ms.04" justify="left">Word of God, because it is therein said, that the <choice><orig>Israel-</orig><reg type="split_word">Israelites</reg></choice></l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.04" indent="25"><catchword><choice><orig>ites</orig><reg>Israelites</reg></choice></catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.04" indent="25"><catchword><choice><orig>ites</orig><reg>Israelites</reg></choice></catchword></l>
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right" >
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.1" justify="left" indent="5"><physnumber>(5)</physnumber></l></texthead>
-                        
+                    <zone type="page-right" points="2820,475 3605,490 3625,365 3925,370 3950,490 4700,500 4750,4045 4625,4050 4610,3965 3905,3970 3880,4065 3710,4070 3690,3990 2850,3980">
                         <lg justify="left">
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>ites</orig><reg>Israelites</reg></choice> destroyed the Canaanites by the express command</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>ites</orig><reg type="split_word">Israelites</reg></choice> destroyed the Canaanites by the express command</l>
                             <l n="bb749.1.ms.04" justify="left">of God: and to believe the Bible to be true, we must,</l>
                             <l n="bb749.1.ms.04" justify="left">you affirm, unbelieve all our belief of the moral justice</l>
                             <l n="bb749.1.ms.04" justify="left">of God; for wherein, you ask, could crying or smiling</l>
@@ -973,7 +964,7 @@
                             <l n="bb749.1.ms.04" justify="left">crying or smiling infants of the Canaanites.&#8212;Why do</l>
                             <l n="bb749.1.ms.04" justify="left">you not maintain it to be repugnant to his moral justice,</l>
                             <l n="bb749.1.ms.04" justify="left">that he should suffer crying or smiling infants to be <choice><orig>swal-</orig><reg type="split_word">swallowed</reg></choice></l>
-                            <l n="bb749.1.ms.04" justify="left"><choice><orig>lowed</orig><reg>swallowed</reg></choice> up by an earthquake, drowned by an inundation,</l>
+                            <l n="bb749.1.ms.04" justify="left"><choice><orig>lowed</orig><reg type="split_word">swallowed</reg></choice> up by an earthquake, drowned by an inundation,</l>
                             <l n="bb749.1.ms.04" justify="left">consumed by a fire, starved by famine, or destroyed by</l>
                             <l n="bb749.1.ms.04" justify="left">a pestilence? The Word of God is in perfect harmony</l>
                             <l n="bb749.1.ms.04" justify="left">with his work; crying or smiling infants are subjected to</l>
@@ -996,107 +987,112 @@
                             <l n="bb749.1.ms.04" justify="left">Not in the magnitude of the evil&#8212;not in the subjects of</l>
                             <l n="bb749.1.ms.04" justify="left">sufferance&#8212;not in the author of it&#8212;for my philosophy,</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.04" justify="left" indent="12">B3<space extent="11"/><catchword>at</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.04" justify="left" indent="12">B3<space extent="11"/><catchword>at</catchword></l>
+                        </textfoot>
                     </zone>
-                    </zone>
-
-                
+                </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1">
-                       
-                            <lg justify="left">
-                                <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
-                                <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="illegible"/> they will <delSpan spanto="A1" rend="overstrike"/>always be found</l>
-                                <l n="bb749.1.ms.04.03" justify="left">to be neither cold nor hot &#38; will<anchor xml:id="A1"/> be spewed out. the Man</l>
-                                <l n="bb749.1.ms.04.04" justify="left">who pretends to be a modest <space extent="4"/> enquirer into the</l>
-                                <l n="bb749.1.ms.04.05" justify="left">truth of</l>
-                                <l n="bb749.1.ms.04.06" justify="left">a self <choice><orig>evi-</orig><reg type="split_word">evident</reg></choice></l>
-                                <l n="bb749.1.ms.04.07" justify="left"><choice><orig>dent</orig><reg>evident</reg></choice> thing</l>
-                                <l n="bb749.1.ms.04.08" justify="left">is a Knave</l>
-                                <l n="bb749.1.ms.04.09" justify="left">The truth</l>
-                                <l n="bb749.1.ms.04.10" justify="left">&#38; certainty</l>
-                                <l n="bb749.1.ms.04.11" justify="left">of Virtue</l>
-                                <l n="bb749.1.ms.04.12" justify="left">&#38; Honesty</l>
-                                <l n="bb749.1.ms.04.13" justify="left">i.e Inspiration</l>
-                                <l n="bb749.1.ms.04.14" justify="left">needs no one</l>
-                                <l n="bb749.1.ms.04.15" justify="left">to prove it</l>
-                                <l n="bb749.1.ms.04.16" justify="left">it is Evident</l>
-                                <l n="bb749.1.ms.04.17" justify="left">as the Sun</l>
-                                <l n="bb749.1.ms.04.18" justify="left">&#38; Moon</l>
-                                <l n="bb749.1.ms.04.19" justify="left"><gap type="cancellation" extent="5" unit="line"/></l>
-                            </lg>
+                    <zone type="marginalia-1" points="2675,525 1760,495 1750,380 1425,380 1445,515 625,510 675,3990 2380,4020 2695,4350 2230,4455 2270,4590 135,4590 105,15 2655,45">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
+                            <l n="bb749.1.ms.04.02" justify="left">is false. as to<gap reason="illegible"/> they will <delSpan spanto="A1" rend="overstrike"/>always be found</l>
+                            <l n="bb749.1.ms.04.03" justify="left">to be neither cold nor hot &#38; will <anchor xml:id="A1"/>be spewed out. the Man</l>
+                            <l n="bb749.1.ms.04.04" justify="left">who pretends to be a modest <space extent="4"/> enquirer into the</l>
+                            <l n="bb749.1.ms.04.05" justify="left">truth of</l>
+                            <l n="bb749.1.ms.04.06" justify="left">a self
+                                <choice>
+                                    <orig>evi-</orig>
+                                    <reg type="split_word">evident</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.04.07" justify="left">
+                                <choice>
+                                    <orig>dent</orig>
+                                    <reg type="split_word">evident</reg>
+                                </choice>
+                                thing</l>
+                            <l n="bb749.1.ms.04.08" justify="left">is a Knave</l>
+                            <l n="bb749.1.ms.04.09" justify="left">The truth</l>
+                            <l n="bb749.1.ms.04.10" justify="left">&#38; certainty</l>
+                            <l n="bb749.1.ms.04.11" justify="left">of Virtue</l>
+                            <l n="bb749.1.ms.04.12" justify="left">&#48; Honesty</l>
+                            <l n="bb749.1.ms.04.13" justify="left">i.e. Inspiration</l>
+                            <l n="bb749.1.ms.04.14" justify="left">needs no one</l>
+                            <l n="bb749.1.ms.04.15" justify="left">to prove it</l>
+                            <l n="bb749.1.ms.04.16" justify="left">it is Evident</l>
+                            <l n="bb749.1.ms.04.17" justify="left">as the Sun</l>
+                            <l n="bb749.1.ms.04.18" justify="left">&#38; Moon</l>
+                            <l n="bb749.1.ms.04.19" justify="left"><gap type="cancellation" extent="5" unit="line"/></l>
+                        </lg>
+                        <lg justify="left">
+                            <l n="bb749.1.ms.04.20" justify="left">He who stands</l>
+                            <l n="bb749.1.ms.04.21" justify="left">doubting of</l>
+                            <l n="bb749.1.ms.04.22" justify="left">what he intends</l>
+                            <l n="bb749.1.ms.04.23" justify="left">whether it is</l>
+                            <l n="bb749.1.ms.04.24" justify="left">Virtuous or</l>
+                            <l n="bb749.1.ms.04.25" justify="left">Vicious knows</l>
+                            <l n="bb749.1.ms.04.26" justify="left">not what</l>
+                            <l n="bb749.1.ms.04.27" justify="left">Virtue means. no man can do a Vicious action &#38;</l>
+                            <l n="bb749.1.ms.04.28" justify="left">think it to be Virtuous. no man can take darkness</l>
+                            <l n="bb749.1.ms.04.29" justify="left">for light. he may pretend to do so &#38; may pretend to</l>
+                            <l n="bb749.1.ms.04.30" justify="left">be a modest Enquirer. but he is a Knave</l>
+                        </lg>
                     </zone>
-                        
-                        <zone type="marginalia-2">
-                           
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.04.01" justify="left">He who stands</l>
-                                    <l n="bb749.1.ms.04.02" justify="left">doubting of</l>
-                                    <l n="bb749.1.ms.04.03" justify="left">what he intends</l>
-                                    <l n="bb749.1.ms.04.04" justify="left">whether it is</l>
-                                    <l n="bb749.1.ms.04.05" justify="left">Virtuous or</l>
-                                    <l n="bb749.1.ms.04.06" justify="left">Vicious knows</l>
-                                    <l n="bb749.1.ms.04.07" justify="left">not what</l>
-                                    <l n="bb749.1.ms.04.08" justify="left">Virtue means. no man can do a Vicious action &#38; </l>
-                                    <l n="bb749.1.ms.04.09" justify="left">think it to be Virtuous. no man can take darkness</l>
-                                    <l n="bb749.1.ms.04.10" justify="left">for light. he may pretend to do so &#38; may pretend to</l>
-                                    <l n="bb749.1.ms.04.11" justify="left">be a modest Enquirer. but he is a Knave</l>
-                                    
-                                </lg>
-                            </zone>
-               
-                        
-                        
-          
-                    <zone type="marginalia-3">
-                    
-                            <lg justify="left">
-                                <l n="bb749.1.ms.04.01" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
-                                <l n="bb749.1.ms.04.02" justify="left">of the Wickedness of the Israelites in <choice><orig>murderng</orig><reg>murdering</reg></choice> so many thousands under</l>
-                                <l n="bb749.1.ms.04.03" justify="left">pretence of a command from God is altogether Abominable &#38; <choice><orig>Blasphmous</orig><reg>Blasphemous</reg></choice></l>
-                                <l n="bb749.1.ms.04.04" justify="left">Wherefore did</l>
-                                <l n="bb749.1.ms.04.05" justify="left">Christ come</l>
-                                <l n="bb749.1.ms.04.06" justify="left">was it not</l>
-                                <l n="bb749.1.ms.04.07" justify="left">to abolish</l>
-                                <l n="bb749.1.ms.04.08" justify="left">the Jewish</l>
-                                <l n="bb749.1.ms.04.09" justify="left">Imposture</l>
-                                <l n="bb749.1.ms.04.10" justify="left">Was not</l>
-                                <l n="bb749.1.ms.04.11" justify="left">Christ</l>
-                                <l n="bb749.1.ms.04.12" justify="left"><choice><orig>marterd</orig><reg>martyred</reg></choice></l>
-                                <l n="bb749.1.ms.04.13" justify="left">because he</l>
-                                <l n="bb749.1.ms.04.14" justify="left">taught that</l>
-                                <l n="bb749.1.ms.04.15" justify="left">God loved</l>
-                                <l n="bb749.1.ms.04.16" justify="left">all Men,</l>
-                                <l n="bb749.1.ms.04.17" justify="left">&#38; was their</l>
-                                <l n="bb749.1.ms.04.18" justify="left">father &#38;</l>
-                                <l n="bb749.1.ms.04.19" justify="left"><choice><orig>forbad</orig><reg>forbade</reg></choice> all</l>
-                                <l n="bb749.1.ms.04.20" justify="left">contention</l>
-                                <l n="bb749.1.ms.04.21" justify="left">for Worldly</l>
-                                <l n="bb749.1.ms.04.22" justify="left">prosperity</l>
-                                <l n="bb749.1.ms.04.23" justify="left">in opposition</l>
-                                <l n="bb749.1.ms.04.24" justify="left">to the Jewish</l>
-                                <l n="bb749.1.ms.04.25" justify="left">Scriptures</l>
-                                <l n="bb749.1.ms.04.26" justify="left">which are</l>
-                                <l n="bb749.1.ms.04.27" justify="left">only an</l>
-                                <l n="bb749.1.ms.04.28" justify="left">Example</l>
-                                <l n="bb749.1.ms.04.29" justify="left">of the wickedness</l>
-                                <l n="bb749.1.ms.04.30" justify="left">&#38; deceit of</l>
-                                <l n="bb749.1.ms.04.31" justify="left">the Jews &#38;</l>
-                                <l n="bb749.1.ms.04.32" justify="left">were written</l>
-                                <l n="bb749.1.ms.04.33" justify="left">as an Example of the possibility of Human Beastliness</l>
-                                <l n="bb749.1.ms.04.34" justify="left">in all its branches. Christ died as an Unbeliever &#38;</l>
-                                <l n="bb749.1.ms.04.35" justify="left">if the Bishops had their will so would Paine <add type="insertion" place="supralinear">see page 1</add> but</l>
-                                <l n="bb749.1.ms.04.36" justify="left">he who speaks a word against the Son of man shall be forgiven</l>
-                                <l n="bb749.1.ms.04.37" justify="left">let the Bishop prove that <del type="erasure">the</del> <space extent="4" unit="character"/>he has not spoken against</l>
-                            </lg>
-     
+                    <zone type="marginalia-2" points="2670,4625 2760,3970 3690,3990 3915,3975 3915,3980 4580,3975 4735,4080 4715,435 3655,385 3605,435 2725,445 2715,65 5285,50 5320,4650">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.04.31" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
+                            <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in <unclear resp="KS">murdering</unclear> so many thousands under</l>
+                            <l n="bb749.1.ms.04.33" justify="left">pretence of a command from God is altogether Abominable &#38; Blasphemous</l>
+                            <l n="bb749.1.ms.04.34" justify="left">Wherefore did</l>
+                            <l n="bb749.1.ms.04.35" justify="left">Christ come</l>
+                            <l n="bb749.1.ms.04.36" justify="left">was it not</l>
+                            <l n="bb749.1.ms.04.37" justify="left">to abolish</l>
+                            <l n="bb749.1.ms.04.38" justify="left">the Jewish</l>
+                            <l n="bb749.1.ms.04.39" justify="left">Imposture</l>
+                            <l n="bb749.1.ms.04.40" justify="left">Was not</l>
+                            <l n="bb749.1.ms.04.41" justify="left">Christ</l>
+                            <l n="bb749.1.ms.04.42" justify="left">
+                                <choice>
+                                    <orig>marterd</orig>
+                                    <reg>martyred</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.04.43" justify="left">because he</l>
+                            <l n="bb749.1.ms.04.44" justify="left">taught that</l>
+                            <l n="bb749.1.ms.04.45" justify="left">God loved</l>
+                            <l n="bb749.1.ms.04.46" justify="left">all Men,</l>
+                            <l n="bb749.1.ms.04.47" justify="left">&#38; was their</l>
+                            <l n="bb749.1.ms.04.48" justify="left">father &#38;</l>
+                            <l n="bb749.1.ms.04.49" justify="left">
+                                <choice>
+                                    <orig>forbad</orig>
+                                    <reg>forbade</reg>
+                                </choice>
+                                all</l>
+                            <l n="bb749.1.ms.04.50" justify="left">contention</l>
+                            <l n="bb749.1.ms.04.51" justify="left">for Worldy</l>
+                            <l n="bb749.1.ms.04.52" justify="left">prosperity</l>
+                            <l n="bb749.1.ms.04.53" justify="left">in opposition</l>
+                            <l n="bb749.1.ms.04.54" justify="left">to the Jewish</l>
+                            <l n="bb749.1.ms.04.55" justify="left">Scriptures</l>
+                            <l n="bb749.1.ms.04.56" justify="left">which are</l>
+                            <l n="bb749.1.ms.04.57" justify="left">only an</l>
+                            <l n="bb749.1.ms.04.58" justify="left">Example</l>
+                            <l n="bb749.1.ms.04.59" justify="left">of the wickedness</l>
+                            <l n="bb749.1.ms.04.60" justify="left">&#38; deceit of</l>
+                            <l n="bb749.1.ms.04.61" justify="left">the Jews &#38;</l>
+                            <l n="bb749.1.ms.04.62" justify="left">were written</l>
+                            <l n="bb749.1.ms.04.63" justify="left">as an Example of the possibility of Human Beastliness</l>
+                            <l n="bb749.1.ms.04.64" justify="left">in all its branches. Christ died as an Unbeliever &#38;</l>
+                            <l n="bb749.1.ms.04.65" justify="left">if the Bishops had their will so would Paine 
+                                <add type="instertion" place="supralinear">see page 1</add> but</l>
+                            <l n="bb749.1.ms.04.66" justify="left">he who speaks a word against the Son of man shall be forgiven</l>
+                            <l n="bb749.1.ms.04.67" justify="left">let the Bishop prove that <del type="erasure">the</del>
+                                <space extent="4" unit="character"/>he has not spoken against</l>
+                        </lg>
                     </zone>
-                    
                 </zone>
             </phystext>
         </desc>
-        
         
         <desc id="bb749.1.ms.05" dbi="BB749.1.6+7.MS">
             <objtitle>
@@ -3190,10 +3186,11 @@
                       
                     <zone type="marginalia-1" points="2942,3847 2947,4509 5569,4509 5550,3838">
                             <lg justify="left">
-                                <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
-                                <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
-                                <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
-                            
+                                <handShift medium="pencil">
+                                    <l n="bb749.1.ms.15.01" justify="left">There are no Proofs that Matthew the Earliest</l>
+                                    <l n="bb749.1.ms.15.02" justify="left">of all the Writings of the New Testament was written</l>
+                                    <l n="bb749.1.ms.15.03" justify="left">within the First Century See p 94 &#38; 95</l>
+                                </handShift>
                             </lg>
                         </zone>
                     </zone>
