@@ -175,21 +175,21 @@
         </source>
         
         
-        <desc id="bb749.1.ms.01" dbi="BB749.1.titlepg-v+preface.MS">
-            <objtitle>
-                <title type="transcribed">Books Owned, Watson </title>, <objid>
+        <desc id="bb.749.1.ms.01" dbi="BB749.1.titlepg-v+preface.MS">
+            <obtitle>
+                <title type="transcribed">Books Owned, Watson</title>
+                <objid>
                     <objnumber code="A1">Object 1</objnumber>
-                    <objcode code="B1">(Bentley 749.1) </objcode>
+                    <objcode coe="B1">(Bentley 749.1)</objcode>
                 </objid>
-            </objtitle>
+            </obtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
-                <windowsize width="500" height="615"/>
+                <objsize>29.6 x 22.2cm</objsize>
+                <windowsize width="500" height="615"></windowsize>
             </physdesc>
-      <phystext> 
-                
-           <zone type="original">
-               <zone type="page-right" points="4880,4150 4870,635 2954,630 2967,4153">            
+            <phystext>
+                <zone type="original">
+                    <zone type="page-right" points="4882,450 4882,4175 2950,4187 2969,468">
                         <lg justify="left">
                             <l n="bb749.1.ms.01" justify="left"><hr width="20" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.01" justify="left" indent="8">THIS edition of the Apology for</l>
@@ -204,7 +204,7 @@
                             <l n="bb749.1.ms.01" justify="left">might, if generally distributed, be efficacious in</l>
                             <l n="bb749.1.ms.01" justify="left">stopping that torrent of infidelity which endangers</l>
                             <l n="bb749.1.ms.01" justify="left">alike the future happiness of individuals, and the</l>
-                            <l n="bb749.1.ms.01" justify="left">present safety of <hi rend="u">all christian states.</hi> Whatever</l>
+                            <l n="bb749.1.ms.01" justify="left">present safety of all christian states. Whatever</l>
                             <l n="bb749.1.ms.01" justify="left">weight there may be in this their opinion of the</l>
                             <l n="bb749.1.ms.01" justify="left">utility of publishing a cheap edition of this work,</l>
                             <l n="bb749.1.ms.01" justify="left">I have great pleasure in complying with their</l>
@@ -220,70 +220,68 @@
                             <l n="bb749.1.ms.01" justify="left">matter of surprise that many profligate, many</l>
                             <l n="bb749.1.ms.01" justify="left">thoughtless persons should listen with greediness to</l>
                             <l n="bb749.1.ms.01" justify="left">whatever tends to free them from it's influence.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.01" justify="left">Calgarth Park,</l>
                             <l n="bb749.1.ms.01" justify="left"><hi rend="i">May</hi> 10, 1796.</l>
-                          </lg>
+                        </lg>
                     </zone>
-               
-               </zone>
-                    <zone type="Blake">
-                     
-                        <zone type="marginalia-1" points="2620,40 2690,4535 20,4540 110,10">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.01.01" justify="left" indent="3">Notes on the B of L's Apology for the Bible</l>
-                                <l n="bb749.1.ms.01.02" justify="left" indent="6">by William Blake</l>
-                                <l n="bb749.1.ms.01.03" justify="left" indent="2">To defend the Bible in this year 1798</l>
-                                <vspace extent="1"/>
-                                <l n="bb749.1.ms.01.04" justify="left">would cost a man his life</l>
-                                <l n="bb749.1.ms.01.05" justify="left"><del type="overstrike">The Beast &#38; the Whore rule without control<gap extent="1"/></del></l>
-                                <l n="bb749.1.ms.01.06" justify="left">It is an easy matter for a Bishop to triumph</l>
-                                <l n="bb749.1.ms.01.07" justify="left">over <choice><orig>Paines</orig><reg>Paine's</reg></choice> attack but is is not so easy</l>
-                                <l n="bb749.1.ms.01.08" justify="left">for one who loves the Bible</l>
-                                <l n="bb749.1.ms.01.09" justify="left">The Perversions of <choice><orig>Christs</orig><reg>Christ's</reg></choice> words &#38; acts</l>
-                                <l n="bb749.1.ms.01.10" justify="left">are attacks by Paine &#38; also the perversions</l>
-                                <l n="bb749.1.ms.01.11" justify="left">of the Bible; Who dare defend <del type="overstrike">them</del> either the</l>
-                                <l n="bb749.1.ms.01.12" justify="left">Acts of Christ or the Bible Unperverted?</l>
-                                
-                                <l n="bb749.1.ms.01.13" justify="left" indent="1">But to him who sees this mortal pilgrimage in</l>
-                                <l n="bb749.1.ms.01.14" justify="left">the light that I see it. Duty to <subst><del type="overstrike">my</del><add place="supralinear">his</add></subst> country</l>
-                                <l n="bb749.1.ms.01.15" justify="left">is the first consideration &#38; safety the last</l>
-                                <l n="bb749.1.ms.01.16" justify="left">Read patiently take not up this Book in an idle</l>
-                                <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is <del type="cancellation">most</del></l>
-                                <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
-                                <l n="bb749.1.ms.01.19" justify="left" indent="29"><add type="insertion" place="supralinear">But</add></l>
-                                <l n="bb749.1.ms.01.20" justify="left">death trifles sports of Time <add place="inline">^</add> these considerations</l>
-                                <l n="bb749.1.ms.01.21" justify="left">business of Eternity</l>
-                                <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
-                                <l n="bb749.1.ms.01.22" justify="left">this as it is what our Enemies with</l>
-                              </lg> 
-                            </zone>
-                        
-                        
-                        <zone type="marginalia-2" points="5100,535 2780,540 2805,25 5105,5">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.01.23" justify="left">Paine has not Attacked Christianity</l>
-                                    <l n="bb749.1.ms.01.24" justify="left">Watson has Defended Antichrist</l>
-                                </lg> 
-                            </zone>
-                        
-                        <zone type="underline-1" points="4390,2075 4395,2225 3795,2220 3785,2080">
-                            <lg justify = "left">
-                                <l n="bb749.1.ms.01.25" justify="left" indent="30"><hi rend='u'><gap extent="13"/></hi>
-                                </l>
-                            </lg>
-                        </zone>
-                    
-                      
-                    </zone>           
-                      
-       
+                </zone>
+                <zone type="Blake">
+                    <zone type="marginalia-1" points="2607,25 2638,4543 38,4556 63,0">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.01.01" justify="left" indent="3">Notes on the B of L's Apology for the Bible</l>
+                            <l n="bb749.1.ms.01.02" justify="left" indent="6">by William Blake</l>
+                            <l n="bb749.1.ms.01.03" justify="left" indent="2">To defend the Bible in this year 1798</l>
+                            <vspace extent="1"/>
+                            <l n="bb749.1.ms.01.04" justify="left">would cost a man his life</l>
+                            <l n="bb749.1.ms.01.05" justify="left"><del type="overstrike">The Beast &#38; the Whore rule without control <gap extent="1"/></del></l>
+                            <l n="bb749.1.ms.01.06" justify="left">It is an easy matter for a Bishop to triumph</l>
+                            <l n="bb749.1.ms.01.07" justify="left">over
+                                <choice>
+                                    <orig>Paines</orig>
+                                    <reg>Paine's</reg>
+                                </choice>
+                                attack but is is not so easy
+                                <note>Bentley reads "it is" for "is is" (*Writings* volume 2, page 1404).</note></l>
+                            <l n="bb749.1.ms.01.08" justify="left">for one who loves the Bible</l>
+                            <l n="bb749.1.ms.01.09" justify="left">The Perversions of
+                                <choice>
+                                    <orig>Christs</orig>
+                                    <reg>Christ's</reg>
+                                </choice>
+                                words &#38; acts</l>
+                            <l n="bb749.1.ms.01.10" justify="left">are attacks by Paine &#38; also the perversions</l>
+                            <l n="bb749.1.ms.01.11" justify="left">of the Bible; Who dare defend <del type="overstrike">them</del> either the</l>
+                            <l n="bb749.1.ms.01.12" justify="left">Acts of Christ or the Bible Unperverted?</l>
+                            <l n="bb749.1.ms.01.13" justify="left" indent="1">But to him who sees this mortal pilgrimage in</l>
+                            <l n="bb749.1.ms.01.14" justify="left">the light that I see it. Duty to 
+                                <subst><del type="overstrike">my</del><add place="supralinear">his</add></subst>
+                                country</l>
+                            <l n="bb749.1.ms.01.15" justify="left">is the first consideration &#38; safety the last</l>
+                            <l n="bb749.1.ms.01.16" justify="left">Read patiently take not up this Book in an idle</l>
+                            <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <del type="cancellation">most</del></l>
+                            <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
+                            <l n="bb749.1.ms.01.19" justify="left">death trifles sports of Time <add place="inline">^</add>
+                                <add place="supralinear">But</add> these considerations</l>
+                            <l n="bb749.1.ms.01.20" justify="left">business of Eternity</l>
+                            <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
+                            <l n="bb749.1.ms.01.22" justify="left">this as it is what our Enemies with</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-2" points="5044,25 5032,525 2813,550 2813,25">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.01.23" justify="left">Paine has not Attacked Christianity</l>
+                            <l n="bb749.1.ms.01.24" justify="left">Watson has Defended Antichrist</l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-1" points="3679,2055 4396,2069 4396,2227 3686,2207">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.01.25" justify="left" indent="30"><hi rend="u"><gap extent="13" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
+                </zone>
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.02" dbi="BB749.1.publeaf+1.MS">
             <objtitle>
                 <objid>
