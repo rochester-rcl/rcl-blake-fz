@@ -175,17 +175,17 @@
         </source>
         
         
-        <desc id="bb.749.1.ms.01" dbi="BB749.1.titlepg-v+preface.MS">
-            <obtitle>
+        <desc id="bb749.1.ms.01" dbi="BB749.1.titlepg-v+preface.MS">
+            <objtitle>
                 <title type="transcribed">Books Owned, Watson</title>
                 <objid>
                     <objnumber code="A1">Object 1</objnumber>
-                    <objcode coe="B1">(Bentley 749.1)</objcode>
+                    <objcode code="B1">(Bentley 749.1)</objcode>
                 </objid>
-            </obtitle>
+            </objtitle>
             <physdesc>
                 <objsize>29.6 x 22.2cm</objsize>
-                <windowsize width="500" height="615"></windowsize>
+                <windowsize width="500" height="615"/>
             </physdesc>
             <phystext>
                 <zone type="original">
