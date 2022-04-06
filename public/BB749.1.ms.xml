@@ -3164,7 +3164,7 @@
                 
                 <zone type="original">
                     
-                    <zone type="page-left" points="573,437 2573,455 2573,4055 573,4046">>
+                    <zone type="page-left" points="555,373 2527,363 2564,4028 600,4018">
                         
                         <texthead justify="left"><l n="bb749.1.ms.16" justify="left" indent="5"><physnumber>(34)</physnumber></l></texthead>
                         
@@ -3217,7 +3217,7 @@
                         <textfoot><l n="bb749.1.ms.16" indent="25"><catchword>believe</catchword></l></textfoot>
                     </zone>
                     
-                    <zone type="page-right" points="4671,4064 2782,4058 2782,254 4677,258">
+                    <zone type="page-right" points="2782,273 4682,273 4673,4028 2764,4018">
                         
                         <texthead justify="left"><l n="bb749.1.ms.1" justify="left" indent="5"><physnumber>(35)</physnumber></l></texthead>
                         
@@ -3274,8 +3274,10 @@
                     
                     
                         
-                   <zone type="marginalia-1" points="53,123 2513,106 2490,516 590,536 576,1706 76,1716">
-                            <lg justify="left">
+
+
+                    <zone type="marginalia-1" points="91,1718 582,1718 573,564 2491,555 2491,82 82,137">
+                        <lg justify="left"><!--<handShift medium="pencil"/>-->
                                 <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that there is a God of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
                                 <l n="bb749.1.ms.16.03" justify="left">World</l>
@@ -3291,7 +3293,7 @@
                     
                     
                     
-                    <zone type="marginalia-2" points="5266,3183 5246,4243 4606,4233 4670,3193">
+                    <zone type="marginalia-2" points="4663,3227 5264,3218 5236,4245 4582,4245">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.16.01" justify="left">Who gave them</l>
                                     <l n="bb749.1.ms.16.02" justify="left">the Name of</l>
