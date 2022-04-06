@@ -4147,7 +4147,7 @@
                         
                         <textfoot indent="10"><catchword>subject</catchword></textfoot>
                        </zone>
-                    </zone>
+                    
                     
                 <zone type="page-right" lry="4118" lrx="4855" uly="281" ulx="2900"> <!--points="4835,295 4830,4115 2875,4105 2875,295"-->
                         
@@ -4201,7 +4201,7 @@
                         <textfoot indent="10"><catchword>class</catchword></textfoot>
                         
                     </zone>
-            
+                </zone>
                 
                 
                 
