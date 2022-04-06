@@ -650,7 +650,7 @@
                   <l n="bb749.1.ms.03" justify="left">"that the preaching of the cross is to them that perish</l>
                </lg>
                <textfoot justify="left">
-                  <l n="bb749.1.ms.03" justify="left" indent="25">B <physnumber>2</physnumber><space extent="20" unit="character"/><catchword>foolish-</catchword></l>
+                  <l n="bb749.1.ms.03" justify="left" indent="25">B<physnumber>2</physnumber><space extent="20" unit="character"/><catchword>foolish-</catchword></l>
                </textfoot>
             </zone>
          </zone>
@@ -817,7 +817,7 @@
                   <l n="bb749.1.ms.03.71" justify="left">Paine is either a Devil or an Inspired man. Men who</l>
                   <l n="bb749.1.ms.03.72" justify="left">give themselves to their Energetic Genius in the manner</l>
                   <l n="bb749.1.ms.03.73" justify="left">that Paine does <subst><del type="overwrite">is</del><add>are</add></subst> 
-                     no <subst><del type="overstrike"/><add type="insertion" place="supralinear">Examiners</add> If they are not</subst></l>
+                     no <gap reason="cancellation" extent="12" unit="character"/><add type="insertion" place="supralinear">Examiners</add> If they are not/l>
                   <l n="bb749.1.ms.03.74" justify="left">determinately wrong they must be Right or the Bible</l>
                </lg>
             </zone>
