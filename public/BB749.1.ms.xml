@@ -4149,7 +4149,7 @@
                        </zone>
                     </zone>
                     
-                    <zone type="page-right" points="4835,295 4830,4115 2875,4105 2875,295">
+                <zone type="page-right" lry="4118" lrx="4855" uly="281" ulx="2900"> <!--points="4835,295 4830,4115 2875,4105 2875,295"-->
                         
                         <texthead justify="left"><l n="bb749.1.ms.22" justify="left" indent="5"><physnumber>(119)</physnumber></l></texthead>
                         <lg justify="left">
