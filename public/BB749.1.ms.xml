@@ -1298,24 +1298,23 @@
                 </zone>
             </phystext>
         </desc>
-        <desc id="bb749.1.ms.06" dbi="BB749.1.8+9.MS">
+        <desc id="bb749.1.ms.06" dbi="BB749.1.8+9">
             <objtitle>
-               <objid>
-                    <objnumber code="A6">Object 6 </objnumber>
+                <objid>
+                    <objnumber code="A6">Object 6</objnumber>
                     <objcode code="B6">(Bentley 749.6)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
-            <phystext> 
-                
+            <phystext>
                 <zone type="original">
-                    <zone type="page-left">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.06" justify="left" indent="5"><physnumber>(8)</physnumber></l></texthead>
-                        
+                    <zone type="page-left" points="2806,533 2836,4086 956,4033 933,536">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.06" justify="left" indent="5">(<physnumber>8</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.06" justify="left">should have had colloquial intercourse with our first <choice><orig>pa-</orig><reg type="split_word">parents</reg></choice></l>
                             <l n="bb749.1.ms.06" justify="left"><choice><orig>rents</orig><reg>parents</reg></choice>; that he should have contracted a kind of <choice><orig>friend-</orig><reg type="split_word">friendship</reg></choice></l>
@@ -1360,14 +1359,14 @@
                             <l n="bb749.1.ms.06" justify="left">that instruction has been forgotten, (for all men have</l>
                             <l n="bb749.1.ms.06" justify="left">known something of God from tradition,) I cannot but</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.06" indent="25"><catchword>admire</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.06" justify="left" indent="25"><catchword>admire</catchword></l> 
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.06" justify="left" indent="5"><physnumber>(9)</physnumber></l></texthead>
-                        
+                    <zone type="page-right" points="4983,493 5040,3810 3170,3796 3136,503">
+                        <texthead justify="left">
+                            <l n="bb.749.1.ms.06" justify="left" indent="5">(<physnumber>9</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.06" justify="left">admire the wisdom and goodness of the Supreme Being,</l>
                             <l n="bb749.1.ms.06" justify="left">in having let himself down to our apprehensions; in <choice><orig>hav-</orig><reg type="split_word">having</reg></choice></l>
@@ -1410,160 +1409,152 @@
                             <l n="bb749.1.ms.06" justify="left">to no prejudices, actuated by no bad designs, not</l>
                             <l n="bb749.1.ms.06" justify="left">liable to have abuse retorted upon you with success.</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.06" justify="left" indent="5">B5<catchword>LET-</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.06" justify="left" indent="5">B<physnumber>5</physnumber><catchword>LET-</catchword></l>
+                        </textfoot>
                     </zone>
                 </zone>
-                
-                
                 <zone type="Blake">
-                    
-                    <zone type="marginalia">
-                       
-                            <lg justify="left">
-                                <l n="bb749.1.ms.06.01" justify="left">That God does &#38; always did converse with honest Men Paine</l>
-                                <l n="bb749.1.ms.06.02" justify="left">never denies. he only denies that God conversed with</l>
-                                <l n="bb749.1.ms.06.03" justify="left">Murderers &#38; Revengers such as the Jews were. &#38; of</l>
-                                <l n="bb749.1.ms.06.04" justify="left">course he</l>
-                                <l n="bb749.1.ms.06.05" justify="left">holds that</l>
-                                <l n="bb749.1.ms.06.06" justify="left">the Jews <choice><orig>con</orig><reg type="split_word">conversed</reg></choice></l>
-                                <l n="bb749.1.ms.06.07" justify="left"><choice><orig>versed</orig><reg>conversed</reg></choice> with</l>
-                                <l n="bb749.1.ms.06.08" justify="left"><add type="insertion" place="supralinear">State</add></l>
-                                <l n="bb749.1.ms.06.09" justify="left">their own <del type="strikethrough">self</del></l>
-                                <l n="bb749.1.ms.06.10" justify="left"><add type="insertion" place="supralinear">Religion</add></l>
-                                <l n="bb749.1.ms.06.11" justify="left"><del type="strikethrough">will</del> which</l>
-                                <l n="bb749.1.ms.06.12" justify="left">they <choice><orig>calld</orig><reg>called</reg></choice></l>
-                                <l n="bb749.1.ms.06.13" justify="left">God &#38;</l>
-                                <l n="bb749.1.ms.06.14" justify="left">so were liars</l>
-                                <l n="bb749.1.ms.06.15" justify="left">as Christ</l>
-                                <l n="bb749.1.ms.06.16" justify="left">says</l>
-                                <l n="bb749.1.ms.06.17" justify="left"><hr width="6" align="left"/></l>
-                            </lg>
-                        
+                    <zone type="marginalia-1" points="2903,70 2900,543 926,526 946,1936 363,1960 366,93">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left">That God does &#38; always did converse with honest Men Paine</l>
+                            <l n="bb749.1.ms.06.01" justify="left">never denies. he only denies that God conversed with</l>
+                            <l n="bb749.1.ms.06.01" justify="left">Murderers &#38; Revengers such as the Jews were. &#38; of</l>
+                            <l n="bb749.1.ms.06.01" justify="left">course he</l>
+                            <l n="bb749.1.ms.06.01" justify="left">holds that</l>
+                            <l n="bb749.1.ms.06.01" justify="left">the Jews 
+                                <choice>
+                                    <orig>con</orig>
+                                    <reg type="split_word">conversed</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.06.01" justify="left">
+                                <choice>
+                                    <orig>versed</orig>
+                                    <reg type="split_word">conversed</reg>
+                                </choice> with</l>
+                            <l n="bb749.1.ms.06.01" justify="left"><add type="insertion" place="supralinear">Religion</add></l>
+                            <l n="bb749.1.ms.06.01" justify="left"><del type="strikethrough">will</del> which</l>
+                            <l n="bb749.1.ms.06.01" justify="left">they 
+                                <choice>
+                                    <orig>calld</orig>
+                                    <reg>called</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.06.01" justify="left">God &#38;</l>
+                            <l n="bb749.1.ms.06.01" justify="left">so were liars</l>
+                            <l n="bb749.1.ms.06.01" justify="left">as Christ</l>
+                            <l n="bb749.1.ms.06.01" justify="left">says</l>
+                            <l n="bb749.1.ms.06.01" justify="left"><hr width="6" align="left"/></l>
+                        </lg>
                     </zone>
-                    
-                        <zone type="marginalia">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="12"/></hi></l>
-                                <l n="bb749.1.ms.06.02" justify="left"><hi rend="u"><gap extent="12"/></hi></l>
-                            </lg>
-                        </zone>
-                        
-                        <zone type="marginalia">
-                         
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.06.01" justify="left">That the Jews</l>
-                                    <l n="bb749.1.ms.06.02" justify="left">assumed a right</l>
-                                    <l n="bb749.1.ms.06.03" justify="left"><add type="insertion" place="interlinear">Exclusively</add></l>
-                                    <l n="bb749.1.ms.06.04" justify="left">to the benefits</l>
-                                    <l n="bb749.1.ms.06.05" justify="left">of God. will</l>
-                                    <l n="bb749.1.ms.06.06" justify="left">be a lasting</l>
-                                    <l n="bb749.1.ms.06.07" justify="left">witness against</l>
-                                    <l n="bb749.1.ms.06.08" justify="left">them, &#38; the</l>
-                                    <l n="bb749.1.ms.06.09" justify="left">same will it</l>
-                                    <l n="bb749.1.ms.06.10" justify="left">be <del type="cancellation">of</del> against</l>
-                                    <l n="bb749.1.ms.06.11" justify="left">Christains</l>
-                                    <l n="bb749.1.ms.06.12" justify="left"><hr width="6" align="left"/></l>
-                                </lg>
-                        </zone>
-                            
-                            <zone type="marginalia">
-                                
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.06.01" justify="left">Read the Edda</l>
-                                    <l n="bb749.1.ms.06.02" justify="left">of Iceland</l>
-                                    <l n="bb749.1.ms.06.03" justify="left">the Songs of</l>
-                                    <l n="bb749.1.ms.06.04" justify="left">Fingal the</l>
-                                    <l n="bb749.1.ms.06.05" justify="left">accounts of</l>
-                                    <l n="bb749.1.ms.06.06" justify="left">North American Savages (as they are <choice><orig>calld</orig><reg>called</reg></choice> Likewise Read Homers<note>Bentley (*Writings* volume 2, page 1413) reads "Read" as "read".</note></l>
-                                    <l n="bb749.1.ms.06.07" justify="left">Iliad. he was certainly a Savage. in the Bishops sense He</l>
-                                    <l n="bb749.1.ms.06.08" justify="left">knew nothing of God. in the Bishops sense of the word &#38;</l>
-                                    <l n="bb749.1.ms.06.09" justify="left">yet he was no fool</l>
-                                    
-                                </lg>
-                            </zone>
-                            
-                        
-                    
-                    <zone type="marginalia">
-                      
-                            <lg justify="left">
-                                <l n="bb749.1.ms.06.01" justify="left" indent="7"><add type="insertion" place="supralinear">Peculiar</add></l>
-                                <l n="bb749.1.ms.06.02" justify="left">The Bible or Word of God, Exclusive of Conscience or</l>
-                                <l n="bb749.1.ms.06.03" justify="left">the Word of God Universal, is that Abomination which</l>
-                                <l n="bb749.1.ms.06.04" justify="left">like the Jewish ceremonies is for ever removed &#38; henceforth</l>
-                                <l n="bb749.1.ms.06.05" justify="left">every man may converse with</l>
-                                <l n="bb749.1.ms.06.06" justify="left">God &#38; be a</l>
-                                <l n="bb749.1.ms.06.07" justify="left">King &#38; Priest</l>
-                                <l n="bb749.1.ms.06.08" justify="left">in his own</l>
-                                <l n="bb749.1.ms.06.09" justify="left" indent="2">house</l>
-                                <l n="bb749.1.ms.06.10" justify="left"><hr width="5" align="left"/></l>
-                            </lg>
+                    <zone type="marginalia-2" points="370,2086 940,2073 950,3366 363,3370">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left">That the Jews</l>
+                            <l n="bb749.1.ms.06.01" justify="left">assumed a right</l>
+                            <l n="bb749.1.ms.06.01" justify="left"><add type="insertion" place="interlinear">Exclusively</add></l>
+                            <l n="bb749.1.ms.06.01" justify="left">to the benefits</l>
+                            <l n="bb749.1.ms.06.01" justify="left">of God. will</l>
+                            <l n="bb749.1.ms.06.01" justify="left">be a lasting</l>
+                            <l n="bb749.1.ms.06.01" justify="left">witness against</l>
+                            <l n="bb749.1.ms.06.01" justify="left">them, &#38; the</l>
+                            <l n="bb749.1.ms.06.01" justify="left">same will it</l>
+                            <l n="bb749.1.ms.06.01" justify="left">be <del type="cancellation">of</del> against</l>
+                            <l n="bb749.1.ms.06.01" justify="left">Christians</l>
+                            <l n="bb749.1.ms.06.01" justify="left"><hr width="6" align="left"/></l>
+                        </lg>
                     </zone>
-                        
-                        <zone type="marginalia">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.06.01" justify="left" indent="10"><hi rend="u"><gap extent="12"/></hi></l>
-                                <l n="bb749.1.ms.06.02" justify="left" indent="5"><hi rend="u"><gap extent="10"/></hi></l>
-                                <vspace extent="16"/>
-                                <l n="bb749.1.ms.06.03" justify="left" indent="20"><hi rend="u"><gap extent="5"/></hi></l>
-                                <l n="bb749.1.ms.06.04" justify="left"><hi rend="u"><gap extent="20"/></hi></l>
-                            </lg>
-                        </zone>
-                    
-                        
-                        <zone type="marginalia">
-                           
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.06.01" justify="left">It is strange</l>
-                                    <l n="bb749.1.ms.06.02" justify="left">that God should</l>
-                                    <l n="bb749.1.ms.06.03" justify="left">speak to man</l>
-                                    <l n="bb749.1.ms.06.04" justify="left">formerly &#38; not</l>
-                                    <l n="bb749.1.ms.06.05" justify="left">now. because</l>
-                                    <l n="bb749.1.ms.06.06" justify="left">it is not true</l>
-                                    <l n="bb749.1.ms.06.07" justify="left">but the <choice><orig>Strange</orig><reg type="split_word">Strangeness</reg></choice></l>
-                                    <l n="bb749.1.ms.06.08" justify="left"><choice><orig>ness</orig><reg>Strangeness</reg></choice> of Sun</l>
-                                    <l n="bb749.1.ms.06.09" justify="left">Moon or Stars</l>
-                                    <l n="bb749.1.ms.06.10" justify="left">is Strange on</l>
-                                    <l n="bb749.1.ms.06.11" justify="left">a contrary</l>
-                                    <l n="bb749.1.ms.06.12" justify="left">account</l>
-                                    <vspace extent="1"/>
-                                    <l n="bb749.1.ms.06.13" justify="left">The Bible tells</l>
-                                    <l n="bb749.1.ms.06.14" justify="left">me that the</l>
-                                    <l n="bb749.1.ms.06.15" justify="left">plan of Providence</l>
-                                    <l n="bb749.1.ms.06.16" justify="left">was Subverted</l>
-                                    <l n="bb749.1.ms.06.17" justify="left">at the Fall</l>
-                                    <l n="bb749.1.ms.06.18" justify="left">of Adam &#38;</l>
-                                    <l n="bb749.1.ms.06.19" justify="left">that it was not</l>
-                                    <l n="bb749.1.ms.06.20" justify="left">restored till <del type="strikethrough">we</del></l>
-                                    <l n="bb749.1.ms.06.21" justify="left"><del type="strikethrough">in</del> Christ <gap extent="3"/> </l><!-- fix this gap, maybe talk about this margin at weekly meeting -->
-                                    <l n="bb749.1.ms.06.22" justify="left"><gap extent="6"/></l>
-                                    <l n="bb749.1.ms.06.23" justify="left"><hr width="6" align="left"/></l>
-                                </lg>
-                            
-                        </zone>
-                            <zone type="marginalia">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.06.01" justify="left">Is not this</l>
-                                    <l n="bb749.1.ms.06.02" justify="left">Illiberal</l>
-                                    <l n="bb749.1.ms.06.03" justify="left">has not the</l>
-                                    <l n="bb749.1.ms.06.04" justify="left">Bishop given</l>
-                                    <l n="bb749.1.ms.06.05" justify="left">himself the lie in the moment the first words were out</l>
-                                    <l n="bb749.1.ms.06.06" justify="left">of his mouth Can any man who writes <!-- It looks like Blake just kind of crossed out the typographic catchword --> so pretend</l>
-                                    <l n="bb749.1.ms.06.07" justify="left">that he is in a good <choice><orig>humour</orig><reg>humor</reg></choice>. Is not this the Bishops</l>
-                                    <l n="bb749.1.ms.06.08" justify="left">cloven foot. has he not <choice><orig>spoild</orig><reg>spoiled</reg><reg>spoilt</reg></choice> the hasty pudding</l>
-                                </lg>
-                            </zone>
-                            
-                        </zone>
-                        
-                   
-                    
-               
+                    <zone type="marginalia-3" points="360,3410 943,3420 946,4036 2880,4086 2893,4533 386,4580">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left">Read the Edda</l>
+                            <l n="bb749.1.ms.06.01" justify="left">of Iceland</l>
+                            <l n="bb749.1.ms.06.01" justify="left">the Songs of</l>
+                            <l n="bb749.1.ms.06.01" justify="left">Fingal the</l>
+                            <l n="bb749.1.ms.06.01" justify="left">accounts of</l>
+                            <l n="bb749.1.ms.06.01" justify="left">North American Savages (as they are
+                                <choice>
+                                    <orig>calld</orig>
+                                    <reg>called</reg>
+                                </choice>
+                                Likewise Read Homers
+                                <note>Bentley reads "Read" as "read" (*Writings* volume 2, page 1413).</note></l>
+                            <l n="bb749.1.ms.06.01" justify="left">Iliad. he was certainly a Savage. in the Bishops sense He</l>
+                            <l n="bb749.1.ms.06.01" justify="left">knew nothing of God. in the Bishops sense of the word &#38;</l>
+                            <l n="bb749.1.ms.06.01" justify="left">yet he was no fool</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-4" points="5566,993 5006,990 4993,490 3053,480 3013,30 5566,23">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left" indent="7"><add type="insertion" place="supralinear">Peculiar</add></l>
+                            <l n="bb749.1.ms.06.01" justify="left">The Bible or Word of God, Exclusive of Conscience or</l>
+                            <l n="bb749.1.ms.06.01" justify="left">the Word of God Universal, is that Abomination which</l>
+                            <l n="bb749.1.ms.06.01" justify="left">like the Jewish ceremonies is for ever removed &#38; henceforth</l>
+                            <l n="bb749.1.ms.06.01" justify="left">every man may converse with</l>
+                            <l n="bb749.1.ms.06.01" justify="left">God &#38; be a</l>
+                            <l n="bb749.1.ms.06.01" justify="left">King &#38; Priest</l>
+                            <l n="bb749.1.ms.06.01" justify="left">in his own</l>
+                            <l n="bb749.1.ms.06.01" justify="left" indent="2">house</l>
+                            <l n="bb749.1.ms.06.01" justify="left"><hr width="5" aling="left"/></l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-5" points="5576,1020 5593,2310 5013,2333 5003,1013">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left">It is strange</l>
+                            <l n="bb749.1.ms.06.01" justify="left">that God should</l>
+                            <l n="bb749.1.ms.06.01" justify="left">speak to man</l>
+                            <l n="bb749.1.ms.06.01" justify="left">formerly &#38; not</l>
+                            <l n="bb749.1.ms.06.01" justify="left">now. because</l>
+                            <l n="bb749.1.ms.06.01" justify="left">it is not true</l>
+                            <l n="bb749.1.ms.06.01" justify="left">but the
+                                <choice>
+                                    <orig>Strange</orig>
+                                    <reg type="split_word">Strangeness</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.06.01" justify="left">
+                                <choice>
+                                    <orig>ness</orig>
+                                    <reg type="split_word">Strangness</reg>
+                                </choice>
+                                of Sun</l>
+                            <l n="bb749.1.ms.06.01" justify="left">Moon or Stars</l>
+                            <l n="bb749.1.ms.06.01" justify="left">is Strange on</l>
+                            <l n="bb749.1.ms.06.01" justify="left">a contrary</l>
+                            <l n="bb749.1.ms.06.01" justify="left">account</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-6" points="5596,2336 5626,3343 5036,3363 5026,2350">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left">The Bible tells</l>
+                            <l n="bb749.1.ms.06.01" justify="left">me that the</l>
+                            <l n="bb749.1.ms.06.01" justify="left">plan of Providence</l>
+                            <l n="bb749.1.ms.06.01" justify="left">was Subverted</l>
+                            <l n="bb749.1.ms.06.01" justify="left">at the Fall</l>
+                            <l n="bb749.1.ms.06.01" justify="left">of Adam &#38;</l>
+                            <l n="bb749.1.ms.06.01" justify="left">that it was not</l>
+                            <l n="bb749.1.ms.06.01" justify="left">restored till <del type="strikethrough">we</del></l>
+                            <l n="bb749.1.ms.06.01" justify="left"><gap reason="cancellation" extent="2" unit="character"/> Christ <gap reason="cancellation" extent="3" unit="character"/></l>
+                            <l n="bb749.1.ms.06.01" justify="left"><gap reason="cancellation" extent="10" unit="character"/></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-1" points="963,3421 2813,3434 2813,3605 963,3621">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="12" unit="character"/></hi></l>
+                            <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="12" unit="character"/></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-2" points="3168,2384 5007,2384 5021,2563 3168,2563">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left" indent="10"><hi rend="u"><gap extent="12" unit="character"></gap></hi></l>
+                            <l n="bb749.1.ms.06.01" justify="left" indent="5"><hi rend="u"><gap extent="10" unit="character"></gap></hi></l>
+                        </lg>
+                    </zone>
+                    <zone type="underline-3" points="3165,3436 5026,3465 5050,3650 3163,3631">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left" indent="20"><hi rend="u"><gap extent="5" unit="character"></gap></hi></l>
+                            <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="20" unit="character"></gap></hi></l>
+                        </lg>
+                    </zone>
+                </zone>
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.07" dbi="BB749.1.10+11.MS"><!-- Hi Josh! This is the transcription of pages 10+11-->
             <objtitle>
                 <objid>
