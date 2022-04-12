@@ -2276,22 +2276,20 @@
         <desc id="bb749.1.ms.10" dbi="BB749.1.16+17.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A10">Object 10 </objnumber>
+                    <objnumber code="A10">Object 10</objnumber>
                     <objcode code="B10">(Bentley 749.10)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
-            <phystext> 
-                
+            <phystext>
                 <zone type="original">
-                    
-                    <zone type="page-left" points="2506,288 2500,4000 506,4006 506,288">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.10" justify="left" indent="5"><physnumber>(16)</physnumber></l></texthead>
-                        
+                    <zone type="page-left" points="2405,425 2465,4000 595,4040 530,465">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.10" justify="left" indent="5">(<physnumber>16</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.10" justify="left">no means admit, that these books, as to the main part of</l>
                             <l n="bb749.1.ms.10" justify="left">them, were not written by Moses; but I do contend, that</l>
@@ -2336,14 +2334,14 @@
                             <l n="bb749.1.ms.10" justify="left">book of Numbers? Or if he did not write any part of the</l>
                             <l n="bb749.1.ms.10" justify="left">book of Numbers, will it follow that he did not write</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.10" justify="left" indent="20"><catchword>any</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.10" justify="left" indent="20"><catchword>any</catchword></l>
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right" points="4909,333 4903,4045 2909,4051 2909,333">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.1" justify="left" indent="5"><physnumber>(17)</physnumber></l></texthead>
-                        
+                    <zone type="page-right" points="4840,490 2975,470 2950,3980 4835,4020">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.10" justify="left" indent="5">(<physnumber>17</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.10" justify="left">any of the other books of which he is usually reputed the</l>
                             <l n="bb749.1.ms.10" justify="left">author? And if he did write this of himself, he was <choice><orig>jus-</orig><reg type="split_word">justified</reg></choice></l>
@@ -2388,44 +2386,39 @@
                             <l n="bb749.1.ms.10" justify="left" indent="1">You need not be told that the very name of this book</l>
                             <l n="bb749.1.ms.10" justify="left">imports, in Greek, a reception of a law; and that the</l>
                         </lg>
-                        <textfoot><l n="bb749.1.ms.10" justify="left" indent="20"><catchword>Hebrew</catchword></l></textfoot>
-                    </zone>   
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.10" justify="left" indent="20"><catchword>Hebrew</catchword></l>
+                        </textfoot>
+                    </zone>
                 </zone>
-                
                 <zone type="Blake">
-                   
-                    <zone type="marginalia-1" points="2629,29 2631,462 537,487 534,1440 88,1441 111,47">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.10.01" justify="left">If historical facts can be written by inspiration <choice><orig>Miltons</orig><reg>Milton's</reg></choice> Paradise</l>
-                                <l n="bb749.1.ms.10.02" justify="left">Lost is as true as Genesis or Exodus. but the Evidence is</l>
-                                <l n="bb749.1.ms.10.03" justify="left">nothing for how can he who <space extent="6" unit="character"/> <gap type="cancellation" extent="2" unit="character"/> writes what he has</l>
-                                <l n="bb749.1.ms.10.04" justify="left">neither seen</l>
-                                <l n="bb749.1.ms.10.05" justify="left">nor heard</l>
-                                <l n="bb749.1.ms.10.06" justify="left">of be an</l>
-                                <l n="bb749.1.ms.10.07" justify="left">Evidence</l>
-                                <l n="bb749.1.ms.10.08" justify="left">of The</l>
-                                <l n="bb749.1.ms.10.09" justify="left">Truth of</l>
-                                <l n="bb749.1.ms.10.10" justify="left">his history</l>
-                            </lg> 
-                        </zone>
-                    
-                    
-                    <zone type="marginalia-2" points="5290,2515 5265,3171 4825,3181 4843,2518">
-                       
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.10.01" justify="left">Paine says</l>
-                                    <l n="bb749.1.ms.10.02" justify="left">that Kings &#38;</l>
-                                    <l n="bb749.1.ms.10.03" justify="left">Priests have</l>
-                                    <l n="bb749.1.ms.10.04" justify="left">done him</l>
-                                    <l n="bb749.1.ms.10.05" justify="left">harm from</l>
-                                    <l n="bb749.1.ms.10.06" justify="left">his birth</l>
-                                </lg> 
+                    <zone type="marginalia-1" points="2615,10 2610,420 525,460 535,1390 110,1380 90,45">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.10.01" justify="left">If historical facts can be written by inspiration Miltons Paradise</l>
+                            <l n="bb749.1.ms.10.02" justify="left">Lost is as true as Genesis or Exocuds. but the Evidence is</l>
+                            <l n="bb749.1.ms.10.03" justify="left">nothing for how can he who <space extent="6" unit="character"/><gapt type="cancellation" extent="2" unit="character"/>writes what he has</l>
+                            <l n="bb749.1.ms.10.04" justify="left">neither seen</l>
+                            <l n="bb749.1.ms.10.05" justify="left">nor heard</l>
+                            <l n="bb749.1.ms.10.06" justify="left">of be an</l>
+                            <l n="bb749.1.ms.10.07" justify="left">Evidence</l>
+                            <l n="bb749.1.ms.10.08" justify="left">of The</l>
+                            <l n="bb749.1.ms.10.09" justify="left">Truth of</l>
+                            <l n="bb749.1.ms.10.10" justify="left">his history</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-2" points="5260,2530 5280,3205 4850,3205 4855,2530">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.10.01" justify="left">Paine says</l>
+                            <l n="bb749.1.ms.10.02" justify="left">that Kings &#38;</l>
+                            <l n="bb749.1.ms.10.03" justify="left">Priests have</l>
+                            <l n="bb749.1.ms.10.04" justify="left">done him</l>
+                            <l n="bb749.1.ms.10.05" justify="left">harm from</l>
+                            <l n="bb749.1.ms.10.06" justify="left">his birth</l>
+                        </lg>
                     </zone>
                 </zone>
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.11" dbi="BB749.1.22+23.MS">
             <objtitle>
                 <objid>
