@@ -1581,27 +1581,25 @@
                 </zone>
             </phystext>
         </desc>
-        <desc id="bb749.1.ms.07" dbi="BB749.1.10+11.MS"><!-- Hi Josh! This is the transcription of pages 10+11-->
+        <desc id="bb.749.1.ms.07" dbi="BB749.1.10+11.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A7">Object 7 </objnumber>
+                    <objnumber code="A7">Object 7</objnumber>
                     <objcode code="B7">(Bentley 749.7)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
-            <phystext> 
-                
+            <phystext>
                 <zone type="original">
-                    
-                    <zone type="page-left" points="2541,4470 2513,106 59,143 59,4479"><!-- cropped -->
-                        <texthead justify="left"><l n="bb749.1.ms.07" justify="left" indent="5"><physnumber>(10)</physnumber></l></texthead>
+                    <zone type="page-left" points="2428,770 2508,4000 625,4010 555,790">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.07" justify="left" indent="5">(<physnumber>10</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
-                            <vspace extent="1"/>
-                            <l n="bb749.1.ms.07" justify="left" indent="10">LETTER II.</l>
-                            <vspace extent="1"/>
+                            <l n="bb749.1.ms.07" justify="left" indent="20">LETTER II.</l>
                             <l n="bb749.1.ms.07" justify="left">BEFORE you commence your grand attack upon the</l>
                             <l n="bb749.1.ms.07" justify="left">Bible, you wish to establish a difference between</l>
                             <l n="bb749.1.ms.07" justify="left">the evidence necessary to prove the authenticity of the</l>
@@ -1641,14 +1639,15 @@
                             <l n="bb749.1.ms.07" justify="left">Arithmetic are proved by a different kind of reasoning</l>
                             <l n="bb749.1.ms.07" justify="left">from that by which he persuades himself to believe, that</l>
                         </lg>
-                        <textfoot><l n="bb749.1.ms.07" indent="24"><catchword>there</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.07" justify="left" indent="24"><catchword>there</catchword></l>
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right" points="5146,4426 5118,62 2664,99 2664,4435">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.07" justify="left" indent="5"><physnumber>(11)</physnumber></l></texthead>
-                        
-                        <lg justify="left">                       
+                    <zone type="page-right" points="4640,390 4695,4020 2805,3995 2740,412">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.07" justify="left" indent="5">(<physnumber>11</physnumber>)</l>
+                        </texthead>
+                        <lg justify="left">
                             <l n="bb749.1.ms.07" justify="left">there was such a person as Henry III. or that there is</l>
                             <l n="bb749.1.ms.07" justify="left">such a city as Paris.</l>
                             <l n="bb749.1.ms.07" justify="left" indent="1">It may be of use, to remove this confusion in your</l>
@@ -1692,83 +1691,96 @@
                             <l n="bb749.1.ms.07" justify="left"><choice><orig>ferent</orig><reg>different</reg></choice> from what they are generally esteemed to be.</l>
                             <l n="bb749.1.ms.07" justify="left" indent="1">Had, indeed, Moses said that he wrote the five first</l>         
                         </lg>
-                        <textfoot><l n="bb749.1.ms.07" indent="14">B6<space extent="10"/><catchword>books</catchword></l></textfoot>    
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.07" justify="left" indent="14">B<physnumber>6</physnumber><space extent="10"/><catchword>books</catchword></l>
+                        </textfoot>
                     </zone>
                 </zone>
-                
-                
-                
                 <zone type="Blake">
-                 <zone type="marginalia-1" points= "2490,839 580,839 650,3889 2490,3889 2540,4469 60,4509 88,114 2523,79"><!-- marginalia 1 -->
-                            
-                            <lg justify="left">
-                                <l n="bb749.1.ms.07.01" justify="left" indent="1">The trifles which the Bishop has combated in the following</l>
-                                <l n="bb749.1.ms.07.02" justify="left">Letters are such as do nothing against Paines Arguments</l>
-                                <l n="bb749.1.ms.07.03" justify="left">none of which the Bishop has dared to Consider One</l>
-                                <l n="bb749.1.ms.07.04" justify="left">for instance which is That <space extent="5"/> the books of the</l>
-                                <l n="bb749.1.ms.07.05" justify="left">Bible were never believed willingly by any nation &#38; that</l>
-                                <l n="bb749.1.ms.07.06" justify="left">none but</l>
-                                <l n="bb749.1.ms.07.07" justify="left">designing</l>
-                                <l n="bb749.1.ms.07.08" justify="left">Villains</l>
-                                <l n="bb749.1.ms.07.09" justify="left">ever <choice><orig>preten</orig><reg type="split_word">pretended</reg></choice></l>
-                                <l n="bb749.1.ms.07.10" justify="left"><choice><orig>ded</orig><reg>pretended</reg></choice> to believe</l>
-                                <l n="bb749.1.ms.07.11" justify="left">That the Bible</l>
-                                <l n="bb749.1.ms.07.12" justify="left">is all a State</l>
-                                <l n="bb749.1.ms.07.13" justify="left">Trick <choice><orig>thro</orig><reg>through</reg></choice></l>
-                                <l n="bb749.1.ms.07.14" justify="left">which <choice><orig>tho'</orig><reg>though</reg></choice></l>
-                                <l n="bb749.1.ms.07.15" justify="left">the People</l>
-                                <l n="bb749.1.ms.07.16" justify="left">at all times</l>
-                                <l n="bb749.1.ms.07.17" justify="left">could see</l>
-                                <l n="bb749.1.ms.07.18" justify="left">they never</l>
-                                <l n="bb749.1.ms.07.19" justify="left">had. the power</l>
-                                <l n="bb749.1.ms.07.20" justify="left">to throw off</l>
-                                <l n="bb749.1.ms.07.21" justify="left">Another</l>
-                                <l n="bb749.1.ms.07.22" justify="left">Argument is</l>
-                                <l n="bb749.1.ms.07.23" justify="left">that all the</l>
-                                <l n="bb749.1.ms.07.24" justify="left">Commentators</l>
-                                <l n="bb749.1.ms.07.25" justify="left">on the Bible</l>
-                                <l n="bb749.1.ms.07.26" justify="left">are Dishonest</l>
-                                <l n="bb749.1.ms.07.27" justify="left">Designing Knaves</l>
-                                <l n="bb749.1.ms.07.28" justify="left">who in hopes</l>
-                                <l n="bb749.1.ms.07.29" justify="left">of a good living</l>
-                                <l n="bb749.1.ms.07.30" justify="left">adopt the</l>
-                                <l n="bb749.1.ms.07.31" justify="left">State religion</l>
-                                <l n="bb749.1.ms.07.32" justify="left">this he has <choice><orig>shewn</orig><reg>shown</reg></choice> with great force which calls upon</l>
-                                <l n="bb749.1.ms.07.33" justify="left">His Opponent loudly for an answer. I could name </l>
-                                <l n="bb749.1.ms.07.34" justify="left">an hundred such</l>
-                            </lg>
-                        </zone>
-                        
-                    
-                    <zone type="marginalia-2" points="4673,3900 2719,3954 2700,4509 5227,4463 5227,2518 4564,2527"><!-- marginalia 2 -->
-                                
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.07.01" justify="left">He who writes</l>
-                                    <l n="bb749.1.ms.07.02" justify="left">things for true</l>
-                                    <l n="bb749.1.ms.07.03" justify="left">which none could</l>
-                                    <l n="bb749.1.ms.07.04" justify="left">write but the</l>
-                                    <l n="bb749.1.ms.07.05" justify="left">actor. such are</l>
-                                    <l n="bb749.1.ms.07.06" justify="left">most of the acts of</l>
-                                    <l n="bb749.1.ms.07.07" justify="left">Moses. must either</l>
-                                    <l n="bb749.1.ms.07.08" justify="left">be the actor or</l>
-                                    <l n="bb749.1.ms.07.09" justify="left">a fable writer</l>
-                                    <l n="bb749.1.ms.07.10" justify="left">or a liar. If</l>
-                                    <l n="bb749.1.ms.07.11" justify="left">Moses did not</l>
-                                    <l n="bb749.1.ms.07.12" justify="left">write the</l>
-                                    <l n="bb749.1.ms.07.13" justify="left">history of his</l>
-                                    <l n="bb749.1.ms.07.14" justify="left">acts. it takes</l>
-                                    <l n="bb749.1.ms.07.15" justify="left">away the authority altogether it ceases to be history &#38; becomes</l>
-                                    <l n="bb749.1.ms.07.16" justify="left">a Poem of probable impossibilities fabricated for pleasure</l>
-                                    <l n="bb749.1.ms.07.17" justify="left">as moderns say but I say by Inspiration</l>
-                                </lg>
-               
-                        </zone>
+                    <zone type="marginalia-1" points="2475,115 2475,770 558,797 619,4025 2485,4005 2491,4359 25,4453 45,115">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.07.01">The trifles which the Bishop has combated in the following</l>
+                            <l n="bb749.1.ms.07.02">Letters are such as do nothing against Paines Arguments</l>
+                            <l n="bb749.1.ms.07.03">none of which the Bishop has dared to Consider One</l>
+                            <l n="bb749.1.ms.07.04">for instance which is That <space extent="5"/>the books of the</l>
+                            <l n="bb749.1.ms.07.05">Bible were never believed willing by any nation &#38; that</l>
+                            <l n="bb749.1.ms.07.06">none but</l>
+                            <l n="bb749.1.ms.07.07">designing</l>
+                            <l n="bb749.1.ms.07.08">Villains</l>
+                            <l n="bb749.1.ms.07.09">ever
+                                <choice>
+                                    <orig>preten</orig>
+                                    <reg type="split_word">pretended</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.07.10">
+                                <choice>
+                                    <orig>ded</orig>
+                                    <reg type="split_word">pretended</reg>
+                                </choice>
+                                to believe</l>
+                            <l n="bb749.1.ms.07.11">That the Bible</l>
+                            <l n="bb749.1.ms.07.12">is all a State</l>
+                            <l n="bb749.1.ms.07.13">Trick
+                                <choice>
+                                    <orig>thoro</orig>
+                                    <reg>through</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.07.14">which
+                                <choice>
+                                    <orig>tho'</orig>
+                                    <reg>though</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.07.15">the People</l>
+                            <l n="bb749.1.ms.07.16">at all times</l>
+                            <l n="bb749.1.ms.07.17">could see</l>
+                            <l n="bb749.1.ms.07.18">they never</l>
+                            <l n="bb749.1.ms.07.19">had. the power</l>
+                            <l n="bb749.1.ms.07.20">to throw off</l>
+                            <l n="bb749.1.ms.07.21">Another</l>
+                            <l n="bb749.1.ms.07.22">Argument is</l>
+                            <l n="bb749.1.ms.07.23">that all the</l>
+                            <l n="bb749.1.ms.07.24">Commentators</l>
+                            <l n="bb749.1.ms.07.25">on the Bible</l>
+                            <l n="bb749.1.ms.07.26">are Dishonest</l>
+                            <l n="bb749.1.ms.07.27">Designing Knaves</l>
+                            <l n="bb749.1.ms.07.28">who in hopes</l>
+                            <l n="bb749.1.ms.07.29">of a good living</l>
+                            <l n="bb749.1.ms.07.30">adopt the</l>
+                            <l n="bb749.1.ms.07.31">State religion</l>
+                            <l n="bb749.1.ms.07.32">this he has
+                                <choice>
+                                    <orig>shewn</orig>
+                                    <reg>shown</reg>
+                                </choice>
+                                with great force which calls upon</l>
+                            <l n="bb749.1.ms.07.33">His Opponent loudly for an answer. I could name</l>
+                            <l n="bb749.1.ms.07.34">an hundred such</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-2" points="5220,2530 5225,4405 2734,4418 2710,4000 4723,4024 4685,2520">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.07.01">He who writes</l>
+                            <l n="bb749.1.ms.07.02">things for true</l>
+                            <l n="bb749.1.ms.07.03">which none could</l>
+                            <l n="bb749.1.ms.07.04">write but the</l>
+                            <l n="bb749.1.ms.07.05">actor. such are</l>
+                            <l n="bb749.1.ms.07.06">most of the acts of</l>
+                            <l n="bb749.1.ms.07.07">Moses. must either</l>
+                            <l n="bb749.1.ms.07.08">be the actor or</l>
+                            <l n="bb749.1.ms.07.09">a fable writer</l>
+                            <l n="bb749.1.ms.07.10">or a liar. If</l>
+                            <l n="bb749.1.ms.07.11">Moses did not</l>
+                            <l n="bb749.1.ms.07.12">write the</l>
+                            <l n="bb749.1.ms.07.13">history of his</l>
+                            <l n="bb749.1.ms.07.14">acts. it takes</l>
+                            <l n="bb749.1.ms.07.15">away the authority altogether it ceases to be history &#38; becomes</l>
+                            <l n="bb749.1.ms.07.16">a Poem of probable impossibilities fabricated for pleasure</l>
+                            <l n="bb749.1.ms.07.17">as moderns say but I say by Inspiration</l>
+                        </lg>
+                    </zone>
                 </zone>
-                
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.08" dbi="BB749.1.12+13.MS">
             <objtitle>
                 <objid>
