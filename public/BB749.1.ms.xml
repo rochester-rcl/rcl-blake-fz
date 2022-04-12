@@ -1065,8 +1065,10 @@
         </desc>
         <desc id="bb749.1.ms.05" dbi="BB749.1.6+7.MS">
             <objtitle>
-                <objnumber code="A5">Object 5</objnumber>
-                <objcode code="B5">(Bentley 749.5)</objcode>
+                <objid>
+                    <objnumber code="A5">Object 5</objnumber>
+                    <objcode code="B5">(Bentley 749.5)</objcode>
+                </objid>
             </objtitle>
             <physdesc>
                 <objsize>29.66 x 22.2cm</objsize>
@@ -1075,7 +1077,9 @@
             <phystext>
                 <zone type="original">
                     <zone type="page-left" points="2547,364 2606,4076 677,4070 700,364">
-                        <texthead justify="left"><l n="bb749.1.ms.05" justify="left" indent="5">(<physnumber>6</physnumber>)</l></texthead>
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.05" justify="left" indent="5">(<physnumber>6</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.05" justify="left">at least, instructs me to believe, that God not only <choice><orig>pri-</orig><reg type="split_word">primarily</reg></choice></l>
                             <l n="bb749.1.ms.05" justify="left"><choice><orig>marily</orig><reg>primarily</reg></choice> formed, but that he hath through all ages <choice><orig>execu-</orig><reg type="split_word">executed</reg></choice></l>
@@ -1532,6 +1536,28 @@
                             <l n="bb749.1.ms.06.01" justify="left">restored till <del type="strikethrough">we</del></l>
                             <l n="bb749.1.ms.06.01" justify="left"><gap reason="cancellation" extent="2" unit="character"/> Christ <gap reason="cancellation" extent="3" unit="character"/></l>
                             <l n="bb749.1.ms.06.01" justify="left"><gap reason="cancellation" extent="10" unit="character"/></l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-7" points="5050,3826 5050,3373 5620,3360 5566,4370 3080,4406 3093,3803">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.06.01" justify="left">Is not this</l>
+                            <l n="bb749.1.ms.06.01" justify="left">Illiberal</l>
+                            <l n="bb749.1.ms.06.01" justify="left">has not the</l>
+                            <l n="bb749.1.ms.06.01" justify="left">Bishop given</l>
+                            <l n="bb749.1.ms.06.01" justify="left">himself the lie in the moment the first words were out</l>
+                            <l n="bb749.1.ms.06.01" justify="left">of his mouth Can any man who writes so pretend</l>
+                            <l n="bb749.1.ms.06.01" justify="left">that he is in a good
+                                <choice>
+                                    <orig>humour</orig>
+                                    <reg>humor</reg>
+                                </choice>.
+                                Is not this the Bishops</l>
+                            <l n="bb749.1.ms.06.01" justify="left">cloven foot. has he not
+                                <choice>
+                                    <orig>spoild</orig>
+                                    <reg>spoiled</reg>
+                                </choice>
+                                the hasty pudding</l>
                         </lg>
                     </zone>
                     <zone type="underline-1" points="963,3421 2813,3434 2813,3605 963,3621">
