@@ -1784,20 +1784,20 @@
         <desc id="bb749.1.ms.08" dbi="BB749.1.12+13.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A8">Object 8 </objnumber>
+                    <objnumber code="A8">Object 8</objnumber>
                     <objcode code="B8">(Bentley 749.8)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
             <phystext>
-                
                 <zone type="original">
-                    
-                    <zone type="page-left" points="605,322 2571,317 2577,4067 605,4067">
-                        <texthead justify="left"><l n="bb749.1.ms.08" justify="left" indent="5"><physnumber>(12)</physnumber></l></texthead>
+                    <zone type="page-left" points="633,473 2493,467 2540,4015 665,4000">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.08" justify="left" indent="5">(<physnumber>12</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.08" justify="left">books of the Bible; and had Joshua and Samuel said that</l>
                             <l n="bb749.1.ms.08" justify="left">they wrote the books which are respectively attributed to</l>
@@ -1842,11 +1842,14 @@
                             <l n="bb749.1.ms.08" justify="left">did as great: whilst modern deists deny the fact of Jesus</l>
                             <l n="bb749.1.ms.08" justify="left">having ever wrought a miracle. And they have some</l>
                         </lg>
-                        <textfoot n="bb749.1.ms.08" indent="10" justify="left"><catchword>reason</catchword></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.08" justify="left" indent="10"><catchword>reason</catchword></l>
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right" points="2878,310 4844,305 4850,4055 2878,4055">
-                        <texthead justify="left"><l n="bb749.1.ms.08" justify="left" indent="5"><physnumber>(13)</physnumber></l></texthead>
+                    <zone type="page-right" points="4853,473 4840,4040 2967,4013 2960,473">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.08" justify="left" indent="5">(<physnumber>13</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.08" justify="left">reason for this proceeding; they are sensible that the <choice><orig>gos-</orig><reg type="split_word">gospel</reg></choice></l>
                             <l n="bb749.1.ms.08" justify="left"><choice><orig>pel</orig><reg>gospel</reg></choice> miracles are so different, in all their circumstances,</l>
@@ -1857,7 +1860,6 @@
                             <l n="bb749.1.ms.08" justify="left">the credibility of a miracle.&#8212;This, though it has been</l>
                             <l n="bb749.1.ms.08" justify="left">an hundred times refuted, is still insisted upon, as if it's truth</l>
                             <l n="bb749.1.ms.08" justify="left">had never been questioned, and could not be disproved.</l>
-                            
                             <l n="bb749.1.ms.08" justify="left" indent="1">You "proceed to examine the authenticity of the <choice><orig>Bi-</orig><reg type="split_word">Bible</reg></choice></l>
                             <l n="bb749.1.ms.08" justify="left"><choice><orig>ble</orig><reg>Bible</reg></choice>; and you begin, you say, with what are called the</l>
                             <l n="bb749.1.ms.08" justify="left">five books of Moses, Genesis, Exodus, Leviticus, <choice><orig>Num-</orig><reg type="split_word">Numbers</reg></choice></l>
@@ -1891,120 +1893,148 @@
                             <l n="bb749.1.ms.08" justify="left">has had some patrons before you; the merit or the <choice><orig>deme-</orig><reg type="split_word">demerit</reg></choice></l>
                             <l n="bb749.1.ms.08" justify="left"><choice><orig>rit</orig><reg>demerit</reg></choice>, the sagacity or the temerity of having asserted, that</l>
                         </lg>
-                        <textfoot n="bb749.1.ms.08" indent="10" justify="left"><catchword>Moses</catchword></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.08" justify="left" indent="10"><catchword>Moses</catchword></l>
+                        </textfoot>
                     </zone>
-                    
                 </zone>
-                
-                <zone type="Blake">  
-                    <zone type="marginalia-1" points="2672,50 2645,478 678,500 678,2083 67,2083 72,33">
-                      
-                            <lg justify="left">
-                                <l n="bb749.1.ms.08.01" indent="1">If Paine means that a history <choice><orig>tho</orig><reg>though</reg></choice> True in itself is False When it</l>
-                                <l n="bb749.1.ms.08.02">is attributed to a wrong author, he's a fool. But he says that Moses</l>
-                                <l n="bb749.1.ms.08.03">being proved not the author of that <space extent="6"/>history which is written in</l>
-                                <l n="bb749.1.ms.08.04">his name &#38;</l>
-                                <l n="bb749.1.ms.08.05">in which he says</l>
-                                <l n="bb749.1.ms.08.06">I did so &#38; so</l>
-                                <l n="bb749.1.ms.08.07">Undermines the</l>
-                                <l n="bb749.1.ms.08.08">veracity <choice><orig>intirely</orig><reg>entirely</reg></choice></l>
-                                <l n="bb749.1.ms.08.09">the writer says</l>
-                                <l n="bb749.1.ms.08.10">he is Moses if</l>
-                                <l n="bb749.1.ms.08.11">this be proved</l>
-                                <l n="bb749.1.ms.08.12">false the history</l>
-                                <l n="bb749.1.ms.08.13">is false Deut XXXI</l>
-                                <l n="bb749.1.ms.08.14">v24 But perhaps</l>
-                                <l n="bb749.1.ms.08.15">Moses is not the</l>
-                                <l n="bb749.1.ms.08.16">author &#38; then</l>
-                                <l n="bb749.1.ms.08.17">the Bishop loses</l>
-                                <l n="bb749.1.ms.08.18">his Author</l>
-                                <l n="bb749.1.ms.08.19"><hr width="7" align="left"/></l>
-                            </lg>
-                        
-                        <zone type="marginalia-2"  points="55,2118 673,2091 673,3382 64,3391">
-                            
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.08.01" indent="1">Jesus could</l>
-                                    <l n="bb749.1.ms.08.02">not do miracles</l>
-                                    <l n="bb749.1.ms.08.03">where unbelief</l>
-                                    <l n="bb749.1.ms.08.04"><choice><orig>hinderd</orig><reg>hindered</reg></choice> hence</l>
-                                    <l n="bb749.1.ms.08.05">we must <choice><orig>con</orig><reg type="split_word">conclude</reg></choice></l>
-                                    <l n="bb749.1.ms.08.06"><choice><orig>clude</orig><reg>conclude</reg></choice> that the</l>
-                                    <l n="bb749.1.ms.08.07">man who holds</l>
-                                    <l n="bb749.1.ms.08.08">miracles to be</l>
-                                    <l n="bb749.1.ms.08.09">ceased puts it</l>
-                                    <l n="bb749.1.ms.08.10">out of his own</l>
-                                    <l n="bb749.1.ms.08.11">power to ever</l>
-                                    <l n="bb749.1.ms.08.12">witness one</l>
-                                </lg>
-                            </zone>
-                        <zone type="marginalia-3" points="109,3400 664,3409 678,3972 2606,4000 2583,4555 117,4517">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.08.01" indent="1">The manner</l>
-                                    <l n="bb749.1.ms.08.02">of a miracle</l>
-                                    <l n="bb749.1.ms.08.03">being <choice><orig>performd</orig><reg type="split_word">performed</reg></choice></l>
-                                    <l n="bb749.1.ms.08.04">is in modern</l>
-                                    <l n="bb749.1.ms.08.05">times <choice><orig>considerd</orig><reg type="split_word">considered</reg></choice></l>
-                                    <l n="bb749.1.ms.08.06">as an arbitrary command of the agent upon the patient</l>
-                                    <l n="bb749.1.ms.08.07">but this is an impossibility not a miracle neither did Jesus</l>
-                                    <l n="bb749.1.ms.08.08">ever do such a miracle. Is it a greater miracle to feed</l>
-                                    <l n="bb749.1.ms.08.09">five thousand men with five loaves than to overthrow all</l>
-                                </lg>
-                            </zone>
-                        </zone>
+                <zone type="Blake">
+                    <zone type="marginalia-1" points="2640,45 2635,460 635,480 635,2060 70,2070 60,40">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.08.01" justify="left" indent="1">If Paine means that a history
+                                <choice>
+                                    <orig>tho</orig>
+                                    <reg>though</reg>
+                                </choice>
+                                True in itself is False When it</l>
+                            <l n="bb749.1.ms.08.02" justify="left">is attributed to a wrong author, he's a fool. But he says that Moses</l>
+                            <l n="bb749.1.ms.08.03" justify="left">being proved not the author of that <space extent="6"/>history which is written in</l>
+                            <l n="bb749.1.ms.08.04" justify="left">his name &#38;</l>
+                            <l n="bb749.1.ms.08.05" justify="left">in which he says</l>
+                            <l n="bb749.1.ms.08.06" justify="left">I did so &#38; so</l>
+                            <l n="bb749.1.ms.08.07" justify="left">Undermines the</l>
+                            <l n="bb749.1.ms.08.08" justify="left">veracity
+                                <choice>
+                                    <orig>intirely</orig>
+                                    <reg>entirely</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.08.09" justify="left">the writer says</l>
+                            <l n="bb749.1.ms.08.10" justify="left">he is Moses if</l>
+                            <l n="bb749.1.ms.08.11" justify="left">this be proved</l>
+                            <l n="bb749.1.ms.08.12" justify="left">false the history</l>
+                            <l n="bb749.1.ms.08.13" justify="left">is false Deut XXXI</l>
+                            <l n="bb749.1.ms.08.14" justify="left">v24 But perhaps</l>
+                            <l n="bb749.1.ms.08.15" justify="left">Moses is not the</l>
+                            <l n="bb749.1.ms.08.16" justify="left">author &#38; then</l>
+                            <l n="bb749.1.ms.08.17" justify="left">the Bishop loses</l>
+                            <l n="bb749.1.ms.08.18" justify="left">his Author</l>
+                            <l n="bb749.1.ms.08.19" justify="left"><hr width="7" align="left"/></l>
+                        </lg>
                     </zone>
-                    
-                    
-                <zone type="marginalia-4" points="4767,3989 2767,3983 2778,4511 5283,4439 5266,34 2733,39 2733,450 4711,450">
-                      
-                            <lg justify="left">
-                                <l n="bb749.1.ms.08.01">the armies of Europe with a small panphlet look over the</l>
-                                <l n="bb749.1.ms.08.02">events of your own life &#38; if you do not find that you have</l>
-                                <l n="bb749.1.ms.08.03">both done such miracles <space extent="5" unit="character"/>&#38; lived by such you do</l>
-                                <l n="bb749.1.ms.08.04">not see</l>
-                                <l n="bb749.1.ms.08.05">as I do</l>
-                                <l n="bb749.1.ms.08.06">True I</l>
-                                <l n="bb749.1.ms.08.07">cannot do</l>
-                                <l n="bb749.1.ms.08.08">a miracle</l>
-                                <l n="bb749.1.ms.08.09"><choice><orig>thro</orig><reg>through</reg></choice> <choice><orig>experi</orig><reg type="split_word">experiment</reg></choice></l>
-                                <l n="bb749.1.ms.08.10"><choice><orig>ment</orig><reg>experiment</reg></choice> &#38; to</l>
-                                <l n="bb749.1.ms.08.11">domineer</l>
-                                <l n="bb749.1.ms.08.12">over &#38; prove</l>
-                                <l n="bb749.1.ms.08.13">to others</l>
-                                <l n="bb749.1.ms.08.14">my superior</l>
-                                <l n="bb749.1.ms.08.15">power as</l>
-                                <l n="bb749.1.ms.08.16">neither</l>
-                                <l n="bb749.1.ms.08.17">could Christ</l>
-                                <l n="bb749.1.ms.08.18">But I can</l>
-                                <l n="bb749.1.ms.08.19">&#38; do work</l>
-                                <l n="bb749.1.ms.08.20">such as both</l>
-                                <l n="bb749.1.ms.08.21">astonish &#38;</l>
-                                <l n="bb749.1.ms.08.22">comfort me</l>
-                                <l n="bb749.1.ms.08.23">&#38; mine</l>
-                                <l n="bb749.1.ms.08.24">How can</l>
-                                <l n="bb749.1.ms.08.25">Paine the</l>
-                                <l n="bb749.1.ms.08.26">worker of</l>
-                                <l n="bb749.1.ms.08.27">miracles</l>
-                                <l n="bb749.1.ms.08.28">ever doubt</l>
-                                <l n="bb749.1.ms.08.29"><choice><orig>Christs</orig><reg>Christ's</reg></choice></l>
-                                <l n="bb749.1.ms.08.30">in the above</l>
-                                <l n="bb749.1.ms.08.31">sense of the</l>
-                                <l n="bb749.1.ms.08.32">word miracle</l>
-                                <l n="bb749.1.ms.08.33">But how</l>
-                                <l n="bb749.1.ms.08.34">can Watson</l>
-                                <l n="bb749.1.ms.08.35">ever believe</l>
-                                <l n="bb749.1.ms.08.36">the above sense of a miracle who considers it as an arbitrary</l>
-                                <l n="bb749.1.ms.08.37">act of the agent upon an unbelieving patient whereas the</l>
-                                <l n="bb749.1.ms.08.38">Gospel says that Christ could not do a miracle because of</l>
-                                <l n="bb749.1.ms.08.39">Unbelief</l>
-                            </lg>
-                            
-                 
+                    <zone type="marginalia-2" points="115,2080 630,2075 655,4010 2620,4015 2630,4505 95,4460">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.08.01" justify="left">Jesus could</l>
+                            <l n="bb749.1.ms.08.02" justify="left">not do miracles</l>
+                            <l n="bb749.1.ms.08.03" justify="left">where unbelief</l>
+                            <l n="bb749.1.ms.08.04" justify="left">
+                                <choice>
+                                    <orig>hinderd</orig>
+                                    <reg>hindered</reg>
+                                </choice>
+                                hence</l>
+                            <l n="bb749.1.ms.08.05" justify="left">we must
+                                <choice>
+                                    <orig>con</orig>
+                                    <reg type="split_word">conclude</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.08.06" justify="left">
+                                <choice>
+                                    <orig>clude</orig>
+                                    <reg type="split_word">conclude</reg>
+                                </choice>
+                                that the</l>
+                            <l n="bb749.1.ms.08.07" justify="left">man who holds</l>
+                            <l n="bb749.1.ms.08.08" justify="left">miracles to be</l>
+                            <l n="bb749.1.ms.08.09" justify="left">ceased puts it</l>
+                            <l n="bb749.1.ms.08.10" justify="left">out of his own</l>
+                            <l n="bb749.1.ms.08.11" justify="left">power to ever</l>
+                            <l n="bb749.1.ms.08.12" justify="left">witness one</l>
+                        </lg>
+                        <lg justify="left">
+                            <l n="bb749.1.ms.08.13" justify="left">The manner</l>
+                            <l n="bb749.1.ms.08.14" justify="left">of a miracle</l>
+                            <l n="bb749.1.ms.08.15" justify="left">being
+                                <choice>
+                                    <orig>performd</orig>
+                                    <reg>performed</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.08.16" justify="left">is in modern</l>
+                            <l n="bb749.1.ms.08.17" justify="left">times consid<unclear resp="KS">ered</unclear></l>
+                            <l n="bb749.1.ms.08.18" justify="left">as an arbitrary command of the agent upon the patient</l>
+                            <l n="bb749.1.ms.08.19" justify="left">but this is an impossibility not a miracle niether did Jesus</l>
+                            <l n="bb749.1.ms.08.20" justify="left">ever do such a miracle. Is it a greater miracle to feed</l>
+                            <l n="bb749.1.ms.08.21" justify="left">five thousand men with five loaves than to overthrow all</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-3" points="2760,460 4860,480 4825,4045 2770,4005 2775,4490 5305,4480 5285,30 2765,40">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.08.01" justify="left">the armies of Europe with a small pamphlet look over the</l>
+                            <l n="bb749.1.ms.08.02" justify="left">events of your own life &#38; if you do not find that you have</l>
+                            <l n="bb749.1.ms.08.03" justify="left">both done such miracles <space extent="5" unit="character"/>&#38; lived by such you do</l>
+                            <l n="bb749.1.ms.08.04" justify="left">not see</l>
+                            <l n="bb749.1.ms.08.05" justify="left">as I do</l>
+                            <l n="bb749.1.ms.08.06" justify="left">True I</l>
+                            <l n="bb749.1.ms.08.07" justify="left">cannot do</l>
+                            <l n="bb749.1.ms.08.08" justify="left">a miracle</l>
+                            <l n="bb749.1.ms.08.09" justify="left">
+                                <choice>
+                                    <orig>thro</orig>
+                                    <reg>through</reg>
+                                </choice>
+                                <choice>
+                                    <orig>experi</orig>
+                                    <reg type="split_word">experiment</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.08.10" justify="left">
+                                <choice>
+                                    <orig>ment</orig>
+                                    <reg type="split_word">experiment</reg>
+                                </choice>
+                                &#38; to</l>
+                            <l n="bb749.1.ms.08.11" justify="left">domineer</l>
+                            <l n="bb749.1.ms.08.12" justify="left">over &#38; prove</l>
+                            <l n="bb749.1.ms.08.13" justify="left">to others</l>
+                            <l n="bb749.1.ms.08.14" justify="left">my superior</l>
+                            <l n="bb749.1.ms.08.15" justify="left">power as</l>
+                            <l n="bb749.1.ms.08.16" justify="left">neither</l>
+                            <l n="bb749.1.ms.08.17" justify="left">could Christ</l>
+                            <l n="bb749.1.ms.08.18" justify="left">But I can</l>
+                            <l n="bb749.1.ms.08.19" justify="left">&#38; do work</l>
+                            <l n="bb749.1.ms.08.20" justify="left">such as both</l>
+                            <l n="bb749.1.ms.08.21" justify="left">astonish &#38;</l>
+                            <l n="bb749.1.ms.08.22" justify="left">comfort me</l>
+                            <l n="bb749.1.ms.08.23" justify="left">&#38; mine</l>
+                            <l n="bb749.1.ms.08.24" justify="left">How can</l>
+                            <l n="bb749.1.ms.08.25" justify="left">Paine the</l>
+                            <l n="bb749.1.ms.08.26" justify="left">worker of</l>
+                            <l n="bb749.1.ms.08.27" justify="left">miracles</l>
+                            <l n="bb749.1.ms.08.28" justify="left">ever doubt</l>
+                            <l n="bb749.1.ms.08.29" justify="left">Christs</l>
+                            <l n="bb749.1.ms.08.30" justify="left">in the above</l>
+                            <l n="bb749.1.ms.08.31" justify="left">sense of the</l>
+                            <l n="bb749.1.ms.08.32" justify="left">word miracle</l>
+                            <l n="bb749.1.ms.08.33" justify="left">But how</l>
+                            <l n="bb749.1.ms.08.34" justify="left">can Watson</l>
+                            <l n="bb749.1.ms.08.35" justify="left">ever believe</l>
+                            <l n="bb749.1.ms.08.36" justify="left">the above sense of a miracle who considers it as an arbitrary</l>
+                            <l n="bb749.1.ms.08.37" justify="left">act of the agent upon an unbelieving patient whereas the</l>
+                            <l n="bb749.1.ms.08.38" justify="left">Gospel says that Christ could not do a miracle because of</l>
+                            <l n="bb749.1.ms.08.39" justify="left">Unbelief</l>
+                        </lg>
+                    </zone>
                 </zone>
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.09" dbi="BB749.1.14+15.MS">
             <objtitle>
                <objid>
