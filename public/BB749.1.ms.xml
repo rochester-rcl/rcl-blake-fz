@@ -2869,8 +2869,9 @@
                 
                 <zone type="Blake">
                     <zone type="marginalia-1" points="1646,60 1606,293 386,306 400,66">
-                       
+                        <lg justify="left">
                                 <l n="bb749.1.ms.13.01" justify="left">is the Source of all Cruelty</l>
+                        </lg>
                     </zone>   
                 </zone>
                 
