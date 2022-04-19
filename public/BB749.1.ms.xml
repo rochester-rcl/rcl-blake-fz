@@ -230,7 +230,7 @@
                     <zone type="marginalia-1" points="2607,25 2638,4543 38,4556 63,0">
                         <lg justify="left">
                             <l n="bb749.1.ms.01.01" justify="left" indent="5">Notes on the B of L's Apology for the Bible</l>
-                            <l n="bb749.1.ms.01.02" justify="left" indent="10">by William Blake</l>
+                            <l n="bb749.1.ms.01.02" justify="left" indent="15">by William Blake</l>
                             <l n="bb749.1.ms.01.03" justify="left" indent="3">To defend the Bible in this year 1798</l>
                             <vspace extent="1"/>
                             <l n="bb749.1.ms.01.04" justify="left">would cost a man his life</l>
@@ -259,13 +259,13 @@
                             <l n="bb749.1.ms.01.11" justify="left">of the Bible; Who dare defend <del type="overstrike">them</del> either the
                                 <note>Bentley reads "Dare" for "dare" (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.12" justify="left">Acts of Christ or the Bible Unperverted?</l>
-                            <l n="bb749.1.ms.01.13" justify="left" indent="2">But to him who sees this mortal pilgrimage in</l>
+                            <l n="bb749.1.ms.01.13" justify="left" indent="3">But to him who sees this mortal pilgrimage in</l>
                             <l n="bb749.1.ms.01.14" justify="left">the light that I see it. Duty to 
                                 <subst><del type="overstrike">my</del><add place="supralinear">his</add></subst>
                                 country</l>
                             <l n="bb749.1.ms.01.15" justify="left">is the first consideration &#38; safety the last</l>
-                            <l n="bb749.1.ms.01.16" justify="left" indent="2">Read patiently take not up this Book in an idle</l>
-                            <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <gap type="cancellation" extent="4" unit="character"/></l>
+                            <l n="bb749.1.ms.01.16" justify="left" indent="3">Read patiently take not up this Book in an idle</l>
+                            <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <gap reason="cancellation" extent="4" unit="character"/></l>
                             <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
                             <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="inline">^</add>
                                 <add place="supralinear">But</add> these considerations</l>
