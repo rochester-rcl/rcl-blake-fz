@@ -2584,21 +2584,20 @@
         <desc id="bb749.1.ms.12" dbi="BB749.1.24+25.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A12">Object 12 </objnumber>
+                    <objnumber code="A12">Object 12</objnumber>
                     <objcode code="B12">(Bentley 749.12)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
-            <phystext> 
-                
-                <zone type="original"><!-- new co-ordinates nov 2020-->
-                    <zone type="page-left" points="885,4025 2792,4022 2808,304 883,304">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.1" justify="left" indent="5"><physnumber>(24)</physnumber></l></texthead>
-                        
+            <phystext>
+                <zone type="original">
+                    <zone type="page-left" points="2776,316 2810,4043 903,4056 860,333">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.1" justify="left" indent="5">(<physnumber>24</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.12" justify="left">and you will there meet with abundant testimony to the</l>
                             <l n="bb749.1.ms.12" justify="left">truth of all the principal facts recorded in Genesis. The</l>
@@ -2642,16 +2641,15 @@
                             <l n="bb749.1.ms.12" justify="left">that, had I no other proof of the authenticity of Genesis,</l>
                             <l n="bb749.1.ms.12" justify="left">I should consider this as sufficient. But without the aid</l>
                             <l n="bb749.1.ms.12" justify="left">of learning, any man who can barely read his Bible,</l>
-                            
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.12" indent="25"><catchword>and</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.12" indent="25"><catchword>and</catchword></l>
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right" points="3222,4044 5070,4059 5104,297 3179,297">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.1" justify="left" indent="5"><physnumber>(25)</physnumber></l></texthead>
-                        
+                    <zone type="page-right" points="5055,345 5075,4065 3210,4060 3160,355">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.1" justify="left" indent="5">(<physnumber>25</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.12" justify="left">and has but heard of such people as the <hi rend="i">Assyrians,</hi> the</l>
                             <l n="bb749.1.ms.12" justify="left"><hi rend="i">Elamites,</hi> the <hi rend="i">Lydians</hi>, the <hi rend="i">Medes</hi>, the <hi rend="i">Ionians,</hi> the <choice><orig><hi rend="i">Thra-</hi></orig><reg type="split_word">Thrachians</reg></choice></l>
@@ -2696,42 +2694,33 @@
                             <l n="bb749.1.ms.12" justify="left">by the vicious instrumentality of their women, had <choice><orig>se-</orig><reg type="split_word">seduced</reg></choice></l>
                             <l n="bb749.1.ms.12" justify="left"><choice><orig>duced</orig><reg>seduced</reg></choice> a part of the Israelites to idolatry; to the impure</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.12" justify="left" indent="12">C<space extent="11"/><catchword>worship</catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.12" justify="left" indent="12">C<space extent="11"/><catchword>worship</catchword></l>
+                        </textfoot>
                     </zone>
                 </zone>
-                
                 <zone type="Blake">
-                    
-                    
-                    <zone type="marginalia-1" points="5082,3922 5548,3917 5548,3166 5091,3168">
-                                <lg justify="left">
-                                    <l n="bb749.1.ms.12.01" justify="left">All Penal</l>
-                                    <l n="bb749.1.ms.12.02" justify="left">Laws court</l>
-                                    <l n="bb749.1.ms.12.03" justify="left">Transgression</l>
-                                    <l n="bb749.1.ms.12.04" justify="left">&#38; therefore</l>
-                                    <l n="bb749.1.ms.12.05" justify="left">are cruelty</l>
-                                    <l n="bb749.1.ms.12.06" justify="left">&#38; Murder</l>
-                                </lg>
-                            </zone>
-                       
-                        
-                <zone type="marginalia-2" points="5566,4029 2959,4022 2970,4618 5562,4637">
-                            <lg justify="left">
-                                <l n="bb749.1.ms.12.01" justify="left" indent="1">The laws of the Jews were (both ceremonial &#38; real) the basest</l>
-                                <l n="bb749.1.ms.12.02" justify="left">&#38; most oppressive of human codes. &#38; being like all other codes given</l>
-                                <l n="bb749.1.ms.12.03" justify="left">under pretence of divine command were what Christ pronounced them</l>
-                                <l n="bb749.1.ms.12.04" justify="left">the Abomination that maketh desolate, i.e State Religion which</l>
-                            </lg>
-                        </zone>
-                        
-     
-                    
+                    <zone type="marginalia-1" points="5535,3170 5540,3925 5075,3935 5090,3185">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.12.01" justify="left">All Penal</l>
+                            <l n="bb749.1.ms.12.02" justify="left">Laws court</l>
+                            <l n="bb749.1.ms.12.03" justify="left">Transgression</l>
+                            <l n="bb749.1.ms.12.04" justify="left">&#38; therefore</l>
+                            <l n="bb749.1.ms.12.05" justify="left">are cruelty</l>
+                            <l n="bb749.1.ms.12.06" justify="left">&#38; Murder</l>
+                        </lg>
+                    </zone>
+                    <zone type="marginalia-2" points="2920,4070 5575,4065 5575,4610 2915,4580">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.12.01" justify="left" indent="1">The laws of the Jews were (both ceremonial &#38; real) the basest</l>
+                            <l n="bb749.1.ms.12.02" justify="left">&#38; most oppressive of human codes. &#38; being like all other codes given</l>
+                            <l n="bb749.1.ms.12.03" justify="left">under pretence of divine command were what Christ pronounced them</l>
+                            <l n="bb749.1.ms.12.04" justify="left">the Abomination that maketh desolate, i.e State Religion which</l>
+                        </lg>
+                    </zone>
                 </zone>
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.13" dbi="BB749.1.26+27.MS">
             <objtitle>
                 <objid>
