@@ -2421,29 +2421,23 @@
         <desc id="bb749.1.ms.11" dbi="BB749.1.22+23.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A11">Object 11 </objnumber>
+                    <objnumber code="A11">Object 11</objnumber>
                     <objcode code="B11">(Bentley 749.11)</objcode>
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6x22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>
                 <windowsize width="500" height="615"/>
             </physdesc>
-            <phystext> 
-                
+            <phystext>
                 <zone type="original">
-                    
-                    <zone type="page-left" points="770,4111 2788,4105 2794,370 767,364">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.11" justify="left" indent="5"><physnumber>(22)</physnumber></l></texthead>
-                        
-                        <vspace extent="1"/>
-                        
+                    <zone type="page-left" points="865,630 2720,610 2740,3980 850,4005">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.11" justify="left" indent="5">(<physnumber>22</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.11" justify="left" indent="4">LETTER III.</l>
-                            
                             <vspace extent="1"/>
-                            
                             <l n="bb749.1.ms.11" justify="left">HAVING done with what you call the grammatical</l>
                             <l n="bb749.1.ms.11" justify="left" indent="1">evidence that Moses was not the author of the</l>
                             <l n="bb749.1.ms.11" justify="left">books attributed to him, you come to your historical and</l>
@@ -2483,15 +2477,15 @@
                             <l n="bb749.1.ms.11" justify="left">Abram pursued them, the enemies of Lot, to Dan. Now</l>
                             <l n="bb749.1.ms.11" justify="left">a river was full as likely as a town to stop a pursuit.</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.11" justify="left" indent="10"><catchword><hi rend="i">Lot,</hi></catchword></l></textfoot>
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.11" justify="left" indent="10"><catchword><hi rend="i">Lot,</hi></catchword></l>
+                        </textfoot>
                     </zone>
-                    
-                    <zone type="page-right" points="3068,4068 5086,4062 5092,327 3065,321">
-                        
-                        <texthead justify="left"><l n="bb749.1.ms.11" justify="left" indent="5"><physnumber>(23)</physnumber></l></texthead>
-                        
-                        <lg justify="left">                           
+                    <zone type="page-right" points="5075,315 5100,4045 3180,4040 3130,325">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.11" justify="left" indent="5">(<physnumber>23</physnumber>)</l>
+                        </texthead>
+                        <lg justify="left">
                             <l n="bb749.1.ms.11" justify="left"><hi rend="i">Lot</hi>, we know, was settled in the plain of <hi rend="i">Jordan;</hi> and</l>
                             <l n="bb749.1.ms.11" justify="left">Jordan, we know, was composed of the united streams of</l>
                             <l n="bb749.1.ms.11" justify="left">two rivers, called <hi rend="i">Jor</hi> and <hi rend="i">Dan.</hi></l>
@@ -2535,68 +2529,58 @@
                             <l n="bb749.1.ms.11" justify="left">has it, and so excellent that no person ought to be <choice><orig>with-</orig><reg type="split_word">without</reg></choice></l>
                             <l n="bb749.1.ms.11" justify="left"><choice><orig>out</orig><reg>without</reg></choice> it&#8212;Grotius on the truth of the christian religion---</l>
                         </lg>
-                        
-                        <textfoot><l n="bb749.1.ms.11" justify="left" indent="25"><catchword>and</catchword></l></textfoot>
-                        
+                        <textfoot justify="left">
+                            <l n="bb749.1.ms.11" justify="left" indent="25"><catchword>and</catchword></l>
+                        </textfoot>
                     </zone>
-                    
                 </zone>
-                
                 <zone type="Blake">
-                    
-                    <zone type="marginalia-1" points="470,64 2912,47 2906,712 994,735 912,3947 2859,3947 2865,4617 447,4623">
-                       
-                            <lg justify="left">
-                                <l n="bb749.1.ms.11.01" justify="left"><add type="insertion" place="supralinear">books in the</add></l>
-                                <l n="bb749.1.ms.11.02" justify="left">I cannot concieve the Divinity of the <add type="insertion" place="inline">^</add> Bible to consist</l>
-                                <l n="bb749.1.ms.11.03" justify="left">either in who they were written by or at what time or</l>
-                                <l n="bb749.1.ms.11.04" justify="left">in the historical evidence <space extent="5"/> which may be all</l>
-                                <l n="bb749.1.ms.11.05" justify="left">false in the eyes of one man &#38; true in the eyes of another</l>
-                                <l n="bb749.1.ms.11.06" justify="left">but in the</l>
-                                <l n="bb749.1.ms.11.07" justify="left">Sentiments</l>
-                                <l n="bb749.1.ms.11.08" justify="left">&#38; Examples</l>
-                                <l n="bb749.1.ms.11.09" justify="left">which <choice><orig>whe-</orig><reg type="split_word">whether</reg></choice></l>
-                                <l n="bb749.1.ms.11.10" justify="left"><choice><orig>ther</orig><reg>whether</reg></choice> true</l>
-                                <l n="bb749.1.ms.11.11" justify="left">or Parabolic</l>
-                                <l n="bb749.1.ms.11.12" justify="left">are Equally</l>
-                                <l n="bb749.1.ms.11.13" justify="left">useful as</l>
-                                <l n="bb749.1.ms.11.14" justify="left">Examples</l>
-                                <l n="bb749.1.ms.11.15" justify="left">given to</l>
-                                <l n="bb749.1.ms.11.16" justify="left">us of the</l>
-                                <l n="bb749.1.ms.11.17" justify="left">perverseness</l>
-                                <l n="bb749.1.ms.11.18" justify="left">of some</l>
-                                <l n="bb749.1.ms.11.19" justify="left">&#38; its <choice><orig>conse</orig><reg type="split_word">consequent</reg></choice></l>
-                                <l n="bb749.1.ms.11.20" justify="left"><choice><orig>quent</orig><reg>consequent</reg></choice> evil</l>
-                                <l n="bb749.1.ms.11.21" justify="left">&#38; the honesty</l>
-                                <l n="bb749.1.ms.11.22" justify="left">of others &#38;</l>
-                                <l n="bb749.1.ms.11.23" justify="left">its <choice><orig>conse</orig><reg type="split_word">consequent</reg></choice></l>
-                                <l n="bb749.1.ms.11.24" justify="left"><choice><orig>quent</orig><reg>consequent</reg></choice> good</l>
-                                <l n="bb749.1.ms.11.25" justify="left">This sense</l>
-                                <l n="bb749.1.ms.11.26" justify="left">of the Bible</l>
-                                <l n="bb749.1.ms.11.27" justify="left">is equally</l>
-                                <l n="bb749.1.ms.11.28" justify="left">true to all</l>
-                                <l n="bb749.1.ms.11.29" justify="left">&#38; equally</l>
-                                <l n="bb749.1.ms.11.30" justify="left">plain to</l>
-                                <l n="bb749.1.ms.11.31" justify="left">all. none</l>
-                                <l n="bb749.1.ms.11.32" justify="left">can doubt</l>
-                                <l n="bb749.1.ms.11.33" justify="left">the <choice><orig>im</orig><reg type="split_word">impression</reg></choice></l>
-                                <l n="bb749.1.ms.11.34" justify="left"><choice><orig>pression</orig><reg>impression</reg></choice></l>
-                                <l n="bb749.1.ms.11.35" justify="left">which he</l>
-                                <l n="bb749.1.ms.11.36" justify="left">recieves from a book Examples. If he is good</l>
-                                <l n="bb749.1.ms.11.37" justify="left">he will abhor wickedness in David or Abraham if he</l>
-                                <l n="bb749.1.ms.11.38" justify="left">is wicked he will make their wickedness an excuse</l>
-                                <l n="bb749.1.ms.11.39" justify="left">for his &#38; so he would do by any other book</l>
-                            </lg> 
-                        
-                    </zone>                   
-                    
+                    <zone type="marginalia-1" points="2855,640 845,620 850,4000 2840,3985 2840,4535 450,4590 415,70 2870,25">
+                        <lg justify="left">
+                            <l n="bb749.1.ms.11.01" justify="left"><add type="insertion" place="supralinear">books in the</add></l>
+                            <l n="bb749.1.ms.11.02" justify="left">I cannot concieve the Divinity of the <add type="insertion" place="inline">^</add> Bible to consist</l>
+                            <l n="bb749.1.ms.11.03" justify="left">either in who they were written by or at what time or</l>
+                            <l n="bb749.1.ms.11.04" justify="left">in the historical evidence <space extent="5"/> which may be all</l>
+                            <l n="bb749.1.ms.11.05" justify="left">false in the eyes of one man &#38; true in the eyes of another</l>
+                            <l n="bb749.1.ms.11.06" justify="left">but in the</l>
+                            <l n="bb749.1.ms.11.07" justify="left">Sentiments</l>
+                            <l n="bb749.1.ms.11.08" justify="left">&#38; Examples</l>
+                            <l n="bb749.1.ms.11.09" justify="left">which <choice><orig>whe-</orig><reg type="split_word">whether</reg></choice></l>
+                            <l n="bb749.1.ms.11.10" justify="left"><choice><orig>ther</orig><reg>whether</reg></choice> true</l>
+                            <l n="bb749.1.ms.11.11" justify="left">or Parabolic</l>
+                            <l n="bb749.1.ms.11.12" justify="left">are Equally</l>
+                            <l n="bb749.1.ms.11.13" justify="left">useful as</l>
+                            <l n="bb749.1.ms.11.14" justify="left">Examples</l>
+                            <l n="bb749.1.ms.11.15" justify="left">given to</l>
+                            <l n="bb749.1.ms.11.16" justify="left">us of the</l>
+                            <l n="bb749.1.ms.11.17" justify="left">perverseness</l>
+                            <l n="bb749.1.ms.11.18" justify="left">of some</l>
+                            <l n="bb749.1.ms.11.19" justify="left">&#38; its <choice><orig>conse</orig><reg type="split_word">consequent</reg></choice></l>
+                            <l n="bb749.1.ms.11.20" justify="left"><choice><orig>quent</orig><reg>consequent</reg></choice> evil</l>
+                            <l n="bb749.1.ms.11.21" justify="left">&#38; the honesty</l>
+                            <l n="bb749.1.ms.11.22" justify="left">of others &#38;</l>
+                            <l n="bb749.1.ms.11.23" justify="left">its <choice><orig>conse</orig><reg type="split_word">consequent</reg></choice></l>
+                            <l n="bb749.1.ms.11.24" justify="left"><choice><orig>quent</orig><reg>consequent</reg></choice> good</l>
+                            <l n="bb749.1.ms.11.25" justify="left">This sense</l>
+                            <l n="bb749.1.ms.11.26" justify="left">of the Bible</l>
+                            <l n="bb749.1.ms.11.27" justify="left">is equally</l>
+                            <l n="bb749.1.ms.11.28" justify="left">true to all</l>
+                            <l n="bb749.1.ms.11.29" justify="left">&#38; equally</l>
+                            <l n="bb749.1.ms.11.30" justify="left">plain to</l>
+                            <l n="bb749.1.ms.11.31" justify="left">all. none</l>
+                            <l n="bb749.1.ms.11.32" justify="left">can doubt</l>
+                            <l n="bb749.1.ms.11.33" justify="left">the <choice><orig>im</orig><reg type="split_word">impression</reg></choice></l>
+                            <l n="bb749.1.ms.11.34" justify="left"><choice><orig>pression</orig><reg>impression</reg></choice></l>
+                            <l n="bb749.1.ms.11.35" justify="left">which he</l>
+                            <l n="bb749.1.ms.11.36" justify="left">recieves from a book Examples. If he is good</l>
+                            <l n="bb749.1.ms.11.37" justify="left">he will abhor wickedness in David or Abraham if he</l>
+                            <l n="bb749.1.ms.11.38" justify="left">is wicked he will make their wickedness an excuse</l>
+                            <l n="bb749.1.ms.11.39" justify="left">for his &#38; so he would do by any other book</l>
+                        </lg>
+                    </zone>
                 </zone>
-                
-                
             </phystext>
         </desc>
-        
-        
         <desc id="bb749.1.ms.12" dbi="BB749.1.24+25.MS">
             <objtitle>
                 <objid>
