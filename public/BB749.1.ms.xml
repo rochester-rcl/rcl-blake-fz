@@ -230,7 +230,7 @@
                     <zone type="marginalia-1" points="2607,25 2638,4543 38,4556 63,0">
                         <lg justify="left">
                             <l n="bb749.1.ms.01.01" justify="left" indent="5">Notes on the B of L's Apology for the Bible</l>
-                            <l n="bb749.1.ms.01.02" justify="left" indent="10">by William Blake</l>
+                            <l n="bb749.1.ms.01.02" justify="left" indent="15">by William Blake</l>
                             <l n="bb749.1.ms.01.03" justify="left" indent="3">To defend the Bible in this year 1798</l>
                             <vspace extent="1"/>
                             <l n="bb749.1.ms.01.04" justify="left">would cost a man his life</l>
@@ -259,15 +259,15 @@
                             <l n="bb749.1.ms.01.11" justify="left">of the Bible; Who dare defend <del type="overstrike">them</del> either the
                                 <note>Bentley reads "Dare" for "dare" (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.12" justify="left">Acts of Christ or the Bible Unperverted?</l>
-                            <l n="bb749.1.ms.01.13" justify="left" indent="2">But to him who sees this mortal pilgrimage in</l>
+                            <l n="bb749.1.ms.01.13" justify="left" indent="3">But to him who sees this mortal pilgrimage in</l>
                             <l n="bb749.1.ms.01.14" justify="left">the light that I see it. Duty to 
                                 <subst><del type="overstrike">my</del><add place="supralinear">his</add></subst>
                                 country</l>
                             <l n="bb749.1.ms.01.15" justify="left">is the first consideration &#38; safety the last</l>
-                            <l n="bb749.1.ms.01.16" justify="left" indent="2">Read patiently take not up this Book in an idle</l>
-                            <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <gap type="cancellation" extent="4" unit="character"/></l>
+                            <l n="bb749.1.ms.01.16" justify="left" indent="3">Read patiently take not up this Book in an idle</l>
+                            <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <gap reason="cancellation" extent="4" unit="character"/></l>
                             <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
-                            <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="inline">^</add>
+                            <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="infralinear">^</add>
                                 <add place="supralinear">But</add> these considerations</l>
                             <l n="bb749.1.ms.01.20" justify="left">business of Eternity</l>
                             <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
@@ -301,7 +301,7 @@
             </physdesc>
             <phystext>   
                 <zone type="original">
-                    <zone type="page-left" points="2447,429 2480,4005 655,4005 608,418">
+                    <zone type="page-left" points="605,425 2627,445 2636,4036 645,4030">
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left" indent="3"><hi rend="i">Lately Published, Price Two Shillings,</hi></l>
                             <vspace extent="1"/>
@@ -354,7 +354,7 @@
                             <l n="bb749.1.ms.02" justify="left">in June, 1791. Price 1s.</l>
                         </lg>
                     </zone>
-                    <zone type="page-right" points="4741,738 4741,4105 2885,4111 2885,755">
+                    <zone type="page-right" points="4725,1035 4730,4100 2845,4060 2855,1050">
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left"><hr width="22" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.02" justify="left" indent="20">LETTER I.</l>
@@ -401,7 +401,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2503,32 2503,374 246,385 249,32">
+                    <zone type="marginalia-1" points="2500,55 2505,365 240,395 235,55">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Read the XXIII
                                 <choice>
@@ -412,7 +412,7 @@
                             <l n="bb749.1.ms.02.02" justify="left">Paines hatred of Priests if you dare</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-2" points="640,3075 665,4025 1890,4015 1889,4203 132,4207 121,3078">
+                    <zone type="marginalia-2" points="625,3070 640,4050 1910,4030 1900,4215 160,4210 165,3080">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">God made</l>
                             <l n="bb749.1.ms.02.02" justify="left">Man happy</l>
@@ -431,7 +431,7 @@
                                 "was the chapel of Blake's early patron A.S. Mathew" (*Writings* volume 2, page 1405).</note>
                         </lg>
                     </zone>
-                    <zone type="marginalia-3" points="5335,10 5374,749 4771,692 4685,482 2771,492 2771,10">
+                    <zone type="marginalia-3" points="5350,40 5365,730 4710,715 4720,480 2780,500 2770,35">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">If this first Letter is written without Railing &#38; Illiberality</l>
                             <l n="bb749.1.ms.02.02" justify="left">I have never read one that is. To me it is all Daggers &#38;</l>
@@ -440,7 +440,7 @@
                             <l n="bb749.1.ms.02.05" justify="left">Dissimulation</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-4" points="4714,585 4724,1064 3389,1060 3382,960 2781,967 2774,549">
+                    <zone type="marginalia-4" points="4720,490 4710,1035 2755,1030 2745,495">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
                             <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops <space extent="5"/>If such is the</l>
@@ -452,7 +452,7 @@
                                 </choice></l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-5" points="5403,746 5360,1364 4742,1385 4750,692">
+                    <zone type="marginalia-5" points="5370,745 5350,1370 4745,1365 4740,735">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">I have not the Charity</l>
                             <l n="bb749.1.ms.02.02" justify="left">for the Bishop that</l>
@@ -462,26 +462,26 @@
                             <l n="bb749.1.ms.02.06" justify="left">trickster</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-6" points="5353,1503 5364,1828 4725,1821 4750,1492">
+                    <zone type="marginalia-6" points="5380,1505 5385,1855 4720,1840 4735,1490">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Dishonest</l>
                             <l n="bb749.1.ms.02.02" justify="left">Misrepresentation</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-7" points="5257,1932 5246,2260 4767,2239 4778,1914">
+                    <zone type="marginalia-7" points="5260,1940 5225,2225 4755,2215 4770,1930">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left" indent="1">Priestly</l>
                             <l n="bb749.1.ms.02.02" justify="left">Impudence</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-8" points="5353,2421 5346,2832 4767,2824 4764,2424">
+                    <zone type="marginalia-8" points="5345,2400 5310,2810 4765,2820 4760,2405">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Contemptible</l>
                             <l n="bb749.1.ms.02.02" justify="left">Falsehood &#38;</l>
                             <l n="bb749.1.ms.02.03" justify="left">Detraction</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-9" points="5392,2978 5392,3760 4732,3749 4721,2989">
+                    <zone type="marginalia-9" points="4760,2965 4715,3755 5375,3775 5380,2975">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Presumptuous</l>
                             <l n="bb749.1.ms.02.02" justify="left">Murderer
@@ -492,7 +492,7 @@
                             <l n="bb749.1.ms.02.06" justify="left">has preserved him</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-10" points="3846,4078 4482,4067 4949,4114 4935,4014 5292,4017 5285,4610 2785,4603 2792,3996">
+                    <zone type="marginalia-10" points="2785,4055 5305,4095 5290,4600 2775,4585">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left" indent="1">
                                 <choice>
