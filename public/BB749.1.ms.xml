@@ -2978,7 +2978,7 @@
                 <zone type="Blake">
                     
                     
-                    <zone type="marginalia-1" points="5090,1170 5570,1180 5580,2780 5110,2790">   <!--"5067,2793 5607,2786 5560,1193 5060,1193"-->
+                    <zone type="marginalia-1" points="5160,1180 5570,1180 5580,2780 5180,2790">  
                                 <lg justify="left">
                                     <l n="bb749.1.ms.14.01" justify="left">Hundreds or</l>
                                     <l n="bb749.1.ms.14.02" justify="left">Thousands</l>
@@ -2993,7 +2993,7 @@
                                     <l n="bb749.1.ms.14.11" justify="left">Knew Better</l> 
                                 </lg> 
                             </zone>
-                    <zone type="marginalia-2" points="5573,2916 5633,4147 3040,4207 3020,3887 5113,3933 5073,2940">
+                    <zone type="marginalia-2" points="5170,2910 5590,2940 5630,4160 3050,4190 3000,3830 5190,3920">
                                 <lg justify="left">
                                     <l n="bb749.1.ms.14.01" justify="left">as if</l>
                                     <l n="bb749.1.ms.14.02" justify="left">Reasoning</l>
