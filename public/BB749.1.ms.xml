@@ -3189,7 +3189,7 @@
                             <l n="bb749.1.ms.16" justify="left">other cases left them wholly to themselves: in like <choice><orig>man-</orig><reg type="split_word">manner</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>ner</orig><reg>manner</reg></choice>, he has interposed his more immediate assistance, (and</l>
                             <l n="bb749.1.ms.16" justify="left">notified it to them, as they did to the world,) in the <choice><orig><hi rend="i">re-</hi></orig><reg type="split_word"><hi rend="i">recording</hi></reg></choice></l>
-                            <l n="bb749.1.ms.16" justify="left"><choice><orig><hi rend="i">cording</hi></orig><reg><hi rend="i">recording</hi></reg></choice> of these revelations; so far as that was necessary,</l>
+                            <l n="bb749.1.ms.16" justify="left"><choice><orig><hi rend="i">cording</hi></orig><reg type="split-word"><hi rend="i">recording</hi></reg></choice> of these revelations; so far as that was necessary,</l>
                             <l n="bb749.1.ms.16" justify="left">amidst the common (but from hence termed <hi rend="i">sacred)</hi> <choice><orig>his-</orig><reg type="split_word">history</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>tory</orig><reg>history</reg></choice> of those times; and mixed with various other <choice><orig>occur-</orig><reg type="split_word">occurrences</reg></choice></l>
                             <l n="bb749.1.ms.16" justify="left"><choice><orig>rences</orig><reg>occurrences</reg></choice>; in which the historian's own natural <choice><orig>qualifica-</orig><reg type="split_word">qualifications</reg></choice></l>
@@ -3224,7 +3224,7 @@
                             
                         </lg>
                         
-                        <textfoot><l n="bb749.1.ms.16" indent="25"><catchword>believe</catchword></l></textfoot>
+                        <textfoot><l n="bb749.1.ms.16" indent="50"><catchword>believe</catchword></l></textfoot>
                     </zone>
                     
                     <zone type="page-right" points="2782,273 4682,273 4673,4028 2764,4018">
@@ -3276,7 +3276,7 @@
                             <l n="bb749.1.ms.16" justify="left">you conclude without authority. I need not here <choice><orig>re-</orig><reg type="split_word">repeat</reg></choice></l>                       
                         </lg>
                         
-                        <textfoot><l n="bb749.1.ms.16" justify="left" indent="12">C6<space extent="11"/><catchword>peat</catchword></l></textfoot>
+                        <textfoot><l n="bb749.1.ms.16" justify="left" indent="30">C6<space extent="20"/><catchword>peat</catchword></l></textfoot>
                     </zone>
                 </zone>
                 
@@ -3288,7 +3288,7 @@
 
                     <zone type="marginalia-1" points="91,1718 582,1718 573,564 2491,555 2491,82 82,137">
                         <lg justify="left"><!--<handShift medium="pencil"/>-->
-                                <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that there is a God of</l>
+                                <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that thereisaGod of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
                                 <l n="bb749.1.ms.16.03" justify="left">World</l>
                                 <l n="bb749.1.ms.16.04" justify="left">as God</l>
