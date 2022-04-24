@@ -19,6 +19,7 @@ const BackgroundColors = {
 
 const TextColors = {
   add: "#168bc1",
+  unclear: "#e085c2",
 };
 
 const Backgrounds = {
@@ -46,7 +47,10 @@ export function Gap(props) {
   const extent = parseInt(gap.extent, 10) || "1";
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
   return (
-    <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"} textDecoration="line-through">
+    <tspan
+      fill={medium ? MEDIUM_COLOR[medium] : "#fff"}
+      textDecoration="line-through"
+    >
       <Space n={extent} direction="horizontal" size={size} />
     </tspan>
   );
@@ -73,7 +77,16 @@ export function Choice(props) {
 
 export function Catchword(props) {
   const { catchword, medium } = props;
-  return <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>{catchword ? catchword["#text"] : ""}</tspan>;
+  return (
+    <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
+      {catchword ? catchword["#text"] : ""}
+    </tspan>
+  );
+}
+
+export function Unclear(props) {
+  const { unclear } = props;
+  return <tspan fill={TextColors.unclear}>{unclear["#text"]}</tspan>;
 }
 
 export function Hi(props) {
@@ -268,11 +281,21 @@ function FormattedLine(props) {
     if (key === "hi") {
       return <Hi hi={val} textRef={textRef} medium={medium} />;
     }
+    if (key === "unclear") {
+      return <Unclear unclear={val} textRef={textRef} medium={medium} />;
+    }
     if (key === "choice") {
       return <Choice choice={val} textRef={textRef} medium={medium} />;
     }
     if (key === "catchword") {
-      return <Catchword catchword={val} textRef={textRef} zoneRoi={zoneRoi} medium={medium} />;
+      return (
+        <Catchword
+          catchword={val}
+          textRef={textRef}
+          zoneRoi={zoneRoi}
+          medium={medium}
+        />
+      );
     }
     if (key === "space") {
       return <Space n={val.space.extent} />;
