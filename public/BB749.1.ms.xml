@@ -184,7 +184,7 @@
                 </objid>
             </objtitle>
             <physdesc>
-                <objsize>29.6 x 22.2cm</objsize>
+                <objsize>29.6 x 22.2cm</objsize>u
                 <windowsize width="500" height="615"/>
             </physdesc>
             <phystext>
@@ -549,7 +549,7 @@
       <phystext>
          <zone type="original">
             <zone type="page-left" points="2520,360 2535,4100 2325,4105 2290,4000 635,4045 610,380">
-               <texthead justify="left">
+               <texthead justify="left" indent="25">
                   <l n="bb749.1.ms.03" justify="left">(<physnumber>2</physnumber>)</l>
                </texthead>
                <lg justify="left">
@@ -603,7 +603,7 @@
             </zone>
             <zone type="page-right" points="4735,340 4685,4090 2840,4015 2835,355">
                <texthead justify="left">
-                  <l n="bb749.1.ms.03" justify="left">(<physnumber>3</physnumber>)</l>
+                  <l n="bb749.1.ms.03" justify="left" indent="25">(<physnumber>3</physnumber>)</l>
                </texthead>
                <lg justify="left">
                   <l n="bb749.1.ms.03" justify="left">from thence follow, that he will, in obeying the dictates</l>
@@ -700,7 +700,7 @@
                <lg justify="left">
                   <l n="bb749.1.ms.03.30" justify="left">Conscience in those that have it is unequivocal, it is the voice</l>
                   <l n="bb749.1.ms.03.31" justify="left">of God Our judgment of right &#38; wrong is Reason I believe</l>
-                  <l n="bb749.1.ms.03.32" justify="left">that the Bishop laught
+                  <l n="bb749.1.ms.03.32" justify="left">that the Bishop
                      <choice>
                         <orig>laught</orig>
                         <reg>laughed</reg>
