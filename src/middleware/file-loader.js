@@ -265,6 +265,7 @@ function formatZone(xml, obj) {
   let lg = [];
   const zones = [];
   let columns;
+  let textHead = null;
   if (xml.hasChildNodes()) {
     let children = Array.from(xml.childNodes);
     children.forEach((child, index) => {
@@ -277,6 +278,27 @@ function formatZone(xml, obj) {
         let { l } = textFoot;
         if (l) {
           lg[lg.length - 1].l.push(textFoot.l);
+        }
+      }
+
+      if (child.nodeName === "texthead") {
+        let th = xmlToJson(child);
+        if (
+          th.l &&
+          th.l["#text"] &&
+          th.l["#text"].constructor.name === "Array" &&
+          th.l["#text"].length === 2 &&
+          th.l.physnumber
+        ) {
+          let thl = {
+            ...th.l,
+            ["#text"]: `${th.l["#text"][0]}${th.l.physnumber["#text"]}${th.l["#text"][1]}`,
+          };
+          delete thl.physnumber;
+          th.l = thl;
+          textHead = th;
+        } else {
+          textHead = th;
         }
       }
 
@@ -305,6 +327,12 @@ function formatZone(xml, obj) {
       obj[nodeName].zones = zones;
     });
   }
+  if (textHead && lg.length) {
+    if (textHead.l) {
+      lg[0].l.splice(0, 0, textHead.l);
+    }
+  }
+
   obj[nodeName].lg = lg;
   obj[nodeName].columns = columns;
   if (xml.attributes) {
