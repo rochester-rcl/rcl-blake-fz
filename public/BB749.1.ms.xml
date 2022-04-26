@@ -3332,7 +3332,7 @@
             <phystext> 
                 
                 <zone type="original">
-                    <zone type="page-left" points="3020,280 3010,4120 860,4100 870,270">
+                    <zone type="page-left" points="860,360 2800,340 2940,4120 1000,4110">
                         
                         <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(36)</physnumber></l></texthead>   
                         <lg justify="left">
@@ -3385,7 +3385,7 @@
                         
                     </zone>
           
-                    <zone type="page-right" points="5280,300 5270,4140 3120,4120 3130,290">
+                    <zone type="page-right" points="3190,320 5110,320 5160,4050 3240,4030">
                         
                         <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(37)</physnumber></l></texthead>   
                         <lg justify="left">
