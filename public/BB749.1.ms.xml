@@ -4105,7 +4105,7 @@
                 <zone type="original">
                     <zone type="page-left" points="2415,325 2410,4145 455,4135 455,325">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.22" justify="left" indent="5"><physnumber>(118)</physnumber></l></texthead>
+                        <texthead justify="left"><l n="bb749.1.ms.22" justify="left" indent="30"><physnumber>(118)</physnumber></l></texthead>
                         
                         <lg justify="left">
                             <l n="bb749.1.ms.22" justify="left" indent="1">What a blessing is it to beings, with such limited</l>
@@ -4154,13 +4154,13 @@
                             
                         </lg>
                         
-                        <textfoot indent="10"><catchword>subject</catchword></textfoot>
+                        <textfoot indent="50"><catchword>subject</catchword></textfoot>
                        </zone>
                     
                     
                     <zone type="page-right" points="2846,318 4846,318 4882,4173 2864,4155">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.22" justify="left" indent="5"><physnumber>(119)</physnumber></l></texthead>
+                        <texthead justify="left"><l n="bb749.1.ms.22" justify="left" indent="30"><physnumber>(119)</physnumber></l></texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.22" justify="left">subject of religion; having been engaged from their</l>
                             <l n="bb749.1.ms.22" justify="left">youth in struggling for worldly distinction, or <choice><orig>per-</orig><reg type="split_word">perplexed</reg></choice></l>
@@ -4207,7 +4207,7 @@
                             <l n="bb749.1.ms.22" justify="left"><choice><orig>dom</orig><reg>kingdom</reg></choice>. I consider the influence of the example of this</l>
                         </lg>
                         
-                        <textfoot indent="10"><catchword>class</catchword></textfoot>
+                        <textfoot indent="50"><catchword>class</catchword></textfoot>
                         
                     </zone>
                 </zone>
@@ -4252,7 +4252,7 @@
                     
                     <zone type="marginalia-3" points="2927,91 5273,64 5255,300 2936,282">
                             <lg justify="left">
-                                <l n="bb749.1.ms.22.01" justify="left">For who is really Righteous<!--<unclear resp="OS">R</unclear>ighteous--> It is all Pretension<!--P<unclear resp="OS">r</unclear>etension</l>--></l>
+                                <l n="bb749.1.ms.22.01" justify="left">For who is really Righteous<!--<unclear resp="OS">R</unclear>ighteous--> It is all Pretension<!--P<unclear resp="OS">r</unclear>etension--></l>
                             </lg>
                         </zone>
                          
