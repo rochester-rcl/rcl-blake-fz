@@ -337,9 +337,11 @@ export default class OpenSeadragonViewer extends Component {
       }
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
-      
+      if(p1.x > p2.x) {
+        p.reverse();
+      }
       return (
-        <g key={`group-${idx}`}>
+         l ? <g key={`group-${idx}`}>
           <path
             key={id}
             id={`text-path-line-${id}`}
@@ -358,7 +360,7 @@ export default class OpenSeadragonViewer extends Component {
               <FormatLine line={line} textRef={textRef} zoneRoi={roi} />
             </textPath>
           </text>
-        </g>
+        </g> : null
       );
     });
   }

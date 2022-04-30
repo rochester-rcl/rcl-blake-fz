@@ -42,6 +42,7 @@ export function Space(props) {
   }
 }
 
+// TODO - render reason attribute
 export function Gap(props) {
   const { textRef, gap, medium } = props;
   const extent = parseInt(gap.extent, 10) || "1";
