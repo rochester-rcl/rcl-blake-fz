@@ -16,7 +16,7 @@ import shortid from "shortid";
 
 // utils
 import { getBounds, pointsToNumbers } from "../utils/data-utils";
-import { computeScanlineFill, getLineHeight } from "../utils/geometry";
+import { computeScanlineFill } from "../utils/geometry";
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
 import { FormatLine, Background, FormatTextFoot } from "./SvgTextFormat";
@@ -304,8 +304,6 @@ export default class OpenSeadragonViewer extends Component {
   getTextPath(points, zone, roi) {
     const { drawBackgrounds } = this.state;
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
-    let lineHeight = getLineHeight(points, nLines);
-    lineHeight = this.viewport.imageToViewportCoordinates(0, lineHeight).y;
     const fill = computeScanlineFill(points, nLines);
     const viewportPoints = fill.map((l) =>
       this.convertImageToViewportPoints(l, false)
@@ -326,15 +324,10 @@ export default class OpenSeadragonViewer extends Component {
     }
 
     const { l } = zone.lg[0];
-    let lh = 0;
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];
       const [p1, p2] = p;
-      const w = p2.x - p1.x;
-      if (!lh) {
-        lh = viewportPoints[idx + 1][0].y - p1.y;
-      }
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
       if(p1.x > p2.x) {
@@ -354,7 +347,7 @@ export default class OpenSeadragonViewer extends Component {
             textAnchor={"start"}
             fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
             ref={(ref) => this.setTextRefs(ref, textRefId)}
-            style={{ fontSize: "0.001em", fill: "#ccc" }}
+            style={{ fontSize: "0.0009em", fill: "#ccc" }}
           >
             <textPath href={`#text-path-line-${id}`}>
               <FormatLine line={line} textRef={textRef} zoneRoi={roi} />
