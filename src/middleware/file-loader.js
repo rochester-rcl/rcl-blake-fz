@@ -276,9 +276,10 @@ function formatZone(xml, obj) {
       if (child.nodeName === "textfoot" && lg.length) {
         let textFoot = xmlToJson(child);
         let { l } = textFoot;
-        if (l) {
-          lg[lg.length - 1].l.push(textFoot.l);
+        if (!l) {
+          l = { ...textFoot };
         }
+        lg[lg.length - 1].l.push(l);
       }
 
       if (child.nodeName === "texthead") {
