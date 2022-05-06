@@ -3286,7 +3286,7 @@
                         
 
 
-                    <zone type="marginalia-1" points="192,208 182,1818 673,1818 646,654 2573,609 2636,172">
+                    <zone type="marginalia-1" points="82,81 82,1727 582,1737 546,563 2491,554 2555,81">
                         <lg justify="left"><!--<handShift medium="pencil"/>-->
                                 <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that thereisaGod of</l>
                                 <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
@@ -3334,7 +3334,7 @@
                 <zone type="original">
                     <zone type="page-left" points="860,360 2800,340 2940,4120 1000,4110">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(36)</physnumber></l></texthead>   
+                        <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="20"><physnumber>(36)</physnumber></l></texthead>   
                         <lg justify="left">
                             <l n="bb749.1.ms.17" justify="left">peat what I have said upon the fallacy of your <choice><orig>conclu-</orig><reg type="split_word">conclusion</reg></choice></l>
                             <l n="bb749.1.ms.17" justify="left"><choice><orig>sion</orig><reg type="split_word">conclusion</reg></choice>; and as to your proving that the books were not</l>
@@ -3387,7 +3387,7 @@
           
                     <zone type="page-right" points="3190,320 5110,320 5160,4050 3240,4030">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="5"><physnumber>(37)</physnumber></l></texthead>   
+                        <texthead justify="left"><l n="bb749.1.ms.17" justify="left" indent="20"><physnumber>(37)</physnumber></l></texthead>   
                         <lg justify="left">
                             <l n="bb749.1.ms.17" justify="left">the books of the New Testament by the persons to whom</l>
                             <l n="bb749.1.ms.17" justify="left">they are usually acribed."&#8212;I have produced this <choice><orig>pas-</orig><reg type="split_word">passage</reg></choice></l>
@@ -3473,7 +3473,7 @@
                 <zone type="original">
                     <zone type="page-left" points="2488,297 2497,4051 533,4060 524,297">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(48)</physnumber></l></texthead>   
+                        <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="20"><physnumber>(48)</physnumber></l></texthead>   
                         <lg justify="left">
                             <l n="bb749.1.ms.18" justify="left"><choice><orig>terity</orig><reg type="split_word">posterity</reg></choice> of Abraham to be his peculiar people&#8212;who</l>
                             <l n="bb749.1.ms.18" justify="left">redeemed that people from Egyptian bondage by a <choice><orig>mira-</orig><reg type="split_word">miraculous</reg></choice></l>
@@ -3525,7 +3525,7 @@
                     
                     <zone type="page-right" points="4593,301 4602,4055 2638,4064 2629,301">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(49)</physnumber></l></texthead>   
+                        <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="20"><physnumber>(49)</physnumber></l></texthead>   
                         <lg justify="left">
                             <l n="bb749.1.ms.18" justify="left">kingdoms, to "the story of the knight<choice><orig>knight<orig><reg>night</reg></orig></orig>reg></choice>of the burning</l>
                             <l n="bb749.1.ms.18" justify="left">mountain, the story of Cinderilla, &#38;c." I may have</l>
@@ -3625,7 +3625,7 @@
                 <zone type="original">
                     <zone type="page-left" points="784,4050 2706,4055 2689,311 784,333">
                         
-                        <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="5"><physnumber>(94)</physnumber></l></texthead>
+                        <texthead justify="left"><l n="bb749.1.ms.18" justify="left" indent="20"><physnumber>(94)</physnumber></l></texthead>
                         <vspace extent="1"/>
                         <lg justify="left">
                             <l n="bb749.1.ms.19" justify="left">the New Testament, consists of twenty-seven different</l>
@@ -3676,7 +3676,7 @@
                     </zone>
                     <zone type="page-right" points="3074,4010 5074,4010 5074,310 3064,320">
                   
-                        <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="5"><physnumber>(95)</physnumber></l></texthead>
+                        <texthead justify="left"><l n="bb749.1.ms.19" justify="left" indent="20"><physnumber>(95)</physnumber></l></texthead>
                          <vspace extent="1"/>                      
                         <lg justify="left">
                             <l n="bb749.1.ms.19" justify="left">not suppose, that the other books of the New <choice><orig>Testa-</orig><reg type="split_word">Testament</reg></choice></l>
