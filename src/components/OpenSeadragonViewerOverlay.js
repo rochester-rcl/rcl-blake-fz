@@ -333,6 +333,7 @@ export default class OpenSeadragonViewer extends Component {
       if(p1.x > p2.x) {
         p.reverse();
       }
+      
       return (
          l ? <g key={`group-${idx}`}>
           <path

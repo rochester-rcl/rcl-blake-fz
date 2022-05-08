@@ -288,6 +288,9 @@ function FormattedLine(props) {
     if (key === "choice") {
       return <Choice choice={val} textRef={textRef} medium={medium} />;
     }
+    if (key === "hr") {
+      return <HR textRef={textRef} hr={val.hr} />;
+    }
     if (key === "catchword") {
       return (
         <Catchword
@@ -340,6 +343,13 @@ function GapBackground(props) {
   );
 }
 
+function getTextRefBox(textRef) {
+  const bbox = textRef.getBBox();
+  return { x: bbox.x, y: bbox.y, w: bbox.width, h: bbox.height };
+}
+
+// TODO refactor to work properly - if there are duplicate words in textContent it won't work
+
 function computeTextPosition(text, textRef) {
   try {
     const { textContent } = textRef;
@@ -354,6 +364,18 @@ function computeTextPosition(text, textRef) {
   }
 }
 
+function HR(props) {
+  let { textRef, hr } = props;
+  let { width } = hr;
+  const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
+  return (
+    <tspan textDecoration="line-through">
+      <Space n={width} direction="horizontal" size={size} />
+    </tspan>
+  );
+}
+
+// TODO may need to redo background algorithm
 export function Background(props) {
   const { previousNode, line, textRef } = props;
   if (!line) {
@@ -397,7 +419,10 @@ export function Background(props) {
               // see p. 17 zone marginalia-1
               const Component = Backgrounds[prop.nodeType];
               const text = prop["#text"] || "";
-              const pos = computeTextPosition(text, textRef);
+              let pos = computeTextPosition(text, textRef);
+              if (!pos) {
+                pos = getTextRefBox(textRef);
+              }
               return (
                 <Component
                   key={`text-${pos ? pos.x : shortid.generate()}-${
@@ -405,6 +430,7 @@ export function Background(props) {
                   }`}
                   {...pos}
                   node={prop}
+                  line={line}
                 />
               );
             }

@@ -61,7 +61,6 @@ function xmlToJson(xml) {
     // do attributes
     let nodeName = xml.nodeName;
     obj.nodeType = nodeName;
-
     if (xml.hasChildNodes()) {
       if (nodeName === "handShift") {
         let elements = [];
