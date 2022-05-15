@@ -61,6 +61,7 @@ export default class OpenSeadragonViewer extends Component {
     this.rotateRight = this.rotateRight.bind(this);
     this.handleZoom = this.handleZoom.bind(this);
     this.handleRotate = this.handleRotate.bind(this);
+    this.getTextPath = this.getTextPath.bind(this);
     this.convertImageToViewportPoints =
       this.convertImageToViewportPoints.bind(this);
     this.setTextRefs = this.setTextRefs.bind(this);
@@ -328,12 +329,12 @@ export default class OpenSeadragonViewer extends Component {
       const id = shortid.generate();
       const line = l[idx];
       const [p1, p2] = p;
+      let fontSize = this.viewport.imageToViewportCoordinates(16, 16).x;
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
       if(p1.x > p2.x) {
         p.reverse();
       }
-      
       return (
          l ? <g key={`group-${idx}`}>
           <path
@@ -348,7 +349,7 @@ export default class OpenSeadragonViewer extends Component {
             textAnchor={"start"}
             fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
             ref={(ref) => this.setTextRefs(ref, textRefId)}
-            style={{ fontSize: "0.0009em", fill: "#ccc" }}
+            style={{ fontSize: `${fontSize * 4}px` , fill: "#ccc" }}
           >
             <textPath href={`#text-path-line-${id}`}>
               <FormatLine line={line} textRef={textRef} zoneRoi={roi} />

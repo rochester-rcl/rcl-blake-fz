@@ -350,10 +350,14 @@ function getTextRefBox(textRef) {
 
 // TODO refactor to work properly - if there are duplicate words in textContent it won't work
 
-function computeTextPosition(text, textRef) {
+function computeTextPosition(text, textRef, node) {
   try {
     const { textContent } = textRef;
-    const { y, height } = textRef.getBBox();
+    const { x, y, height } = textRef.getBBox();
+    if (node && node.textPosition !== undefined) {
+      let extent = textRef.getExtentOfChar(text[0]).width;
+      return { x: x + extent * node.textPosition, y, w: extent * text.length, h: height };
+    }
     const start = textContent.indexOf(text);
     const end = textContent.indexOf(text) + text.length - 1;
     const p1 = textRef.getStartPositionOfChar(start);
@@ -449,7 +453,7 @@ export function Background(props) {
             }, "");
           }
 
-          let pos = computeTextPosition(text, textRef);
+          let pos = computeTextPosition(text, textRef, node);
           if (pos) {
             return <Component {...pos} node={node} textRef={textRef} />;
           } else {
@@ -461,7 +465,7 @@ export function Background(props) {
                   : typeof previousNode === "object"
                   ? previousNode["#text"]
                   : "";
-              const offset = computeTextPosition(prevText, textRef);
+              const offset = computeTextPosition(prevText, textRef, node);
               if (offset) {
                 return (
                   <Component
