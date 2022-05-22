@@ -4287,7 +4287,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="644,317 2683,326 2683,3682 641,3679">
+                    <zone type="page-left" points="600,3960 2650,3990 2710,320 690,320">
                         
                         <texthead justify="left"><l n="bb749.1.ms.23" justify="left" indent="5"><physnumber>(120)</physnumber></l></texthead>
                         
@@ -4341,14 +4341,14 @@
                 <zone type="Blake">
                 
                         
-                    <zone type="marginalia-1" points="382,144 2748,158 2751,544 389,527">
+                    <zone type="marginalia-1" points="460,110 290,550 2640,520 2780,120">
                             <lg justify="left">
                                 <l n="bb749.1.ms.23.01" justify="left">It appears to me Now that Tom Paine is a</l>
                                 <l n="bb749.1.ms.23.02" justify="left">better Christian than the Bishop</l>
                             </lg>
                         </zone>
                         
-                    <zone type="marginalia-2" points="283,3943 2818,3982 2844,4504 292,4430">
+                    <zone type="marginalia-2" points="320,3950 2860,3970 2860,4460 320,4440">
                             <lg justify="left">
                                 <l n="bb749.1.ms.23.01" justify="left">I have read this Book with attention &#38; find that the Bishop</l>
                                 <l n="bb749.1.ms.23.02" justify="left">has only hurt Paines heel while Paine has broken his head</l>
