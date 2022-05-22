@@ -495,13 +495,18 @@ export function FormatTextFoot(props) {
 }
 
 export function FormatLine(props) {
-  const { line, textRef, zoneRoi } = props;
+  const { line, textRef, zoneRoi, textLength } = props;
   const attributes = getAttributes(line && line.attributes);
   if (typeof line === "string") {
     return <tspan>{line}</tspan>;
   }
+
+  let computedTextLength = textRef && textRef.textLength.baseVal.value;
+
+  let isOutside = computedTextLength > textLength;
+
   return (
-    <tspan>
+    <tspan textLength={isOutside ? textLength : undefined}>
       {attributes.map((attribute) => (
         <FormattedAttribute
           key={attribute[0]}

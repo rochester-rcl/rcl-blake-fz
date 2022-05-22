@@ -1,7 +1,8 @@
 // Polygon scanline filling algorithm based on https://www.geeksforgeeks.org/scan-line-polygon-filling-using-opengl-c/
-export function computeScanlineFill(points, nLines) {
-  const [minHeight, maxHeight, p] = minMax(points, 1);
-  const lineHeight = Math.ceil((maxHeight - minHeight) / nLines / 1.1);
+export function computeScanlineFill(points, nLines, padding) {
+  let [minHeight, maxHeight, p] = minMax(points, 1);
+  p = p.map(point => point.map(val => val + padding || 0))
+  const lineHeight = Math.ceil((maxHeight - minHeight) / nLines);
   const edgeTable = [];
   const activeEdgeTuple = {
     edgeBucketCount: 0,

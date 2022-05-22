@@ -16,7 +16,7 @@ import shortid from "shortid";
 
 // utils
 import { getBounds, pointsToNumbers } from "../utils/data-utils";
-import { computeScanlineFill } from "../utils/geometry";
+import { computeScanlineFill, minMax } from "../utils/geometry";
 // Components
 import { FZZoneView } from "./FZTextViewSvg";
 import { FormatLine, Background, FormatTextFoot } from "./SvgTextFormat";
@@ -62,6 +62,8 @@ export default class OpenSeadragonViewer extends Component {
     this.handleZoom = this.handleZoom.bind(this);
     this.handleRotate = this.handleRotate.bind(this);
     this.getTextPath = this.getTextPath.bind(this);
+    this.getFontSize = this.getFontSize.bind(this);
+    this.getZoneFontSize = this.getZoneFontSize.bind(this);
     this.convertImageToViewportPoints =
       this.convertImageToViewportPoints.bind(this);
     this.setTextRefs = this.setTextRefs.bind(this);
@@ -302,13 +304,26 @@ export default class OpenSeadragonViewer extends Component {
     }
   }
 
+  getFontSize(textRef, width) {
+    if (!textRef) {
+      return null;
+    }
+    let tw = textRef.getComputedTextLength();
+    let wScale = width / tw;
+    let fs = tw / textRef.textContent.length;
+    return fs * wScale;
+  }
+
   getTextPath(points, zone, roi) {
     const { drawBackgrounds } = this.state;
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
-    const fill = computeScanlineFill(points, nLines);
+    const fill = computeScanlineFill(points, nLines, 100);
     const viewportPoints = fill.map((l) =>
       this.convertImageToViewportPoints(l, false)
     );
+
+    const defaultFontSize = this.viewport.imageToViewportCoordinates(80, 80).x;
+    
     if (nLines === 0) {
       return viewportPoints.map((p, idx) => {
         const id = shortid.generate();
@@ -323,20 +338,19 @@ export default class OpenSeadragonViewer extends Component {
         );
       });
     }
-
     const { l } = zone.lg[0];
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];
       const [p1, p2] = p;
-      let fontSize = this.viewport.imageToViewportCoordinates(16, 16).x;
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
-      if(p1.x > p2.x) {
+       
+      if (p1.x > p2.x) {
         p.reverse();
       }
-      return (
-         l ? <g key={`group-${idx}`}>
+      return l ? (
+        <g key={`group-${idx}`}>
           <path
             key={id}
             id={`text-path-line-${id}`}
@@ -346,18 +360,31 @@ export default class OpenSeadragonViewer extends Component {
             <Background textRef={textRef} line={line} />
           ) : null}
           <text
-            textAnchor={"start"}
             fontFamily='"Lato", "Helvetica Neue", "Arial", "sans-serif"'
             ref={(ref) => this.setTextRefs(ref, textRefId)}
-            style={{ fontSize: `${fontSize * 4}px` , fill: "#ccc" }}
+            style={{
+              fontSize: `${defaultFontSize}px`,
+              fill: "#ccc"
+            }}
           >
             <textPath href={`#text-path-line-${id}`}>
-              <FormatLine line={line} textRef={textRef} zoneRoi={roi} />
+              <FormatLine line={line} textRef={textRef} zoneRoi={roi} textLength={(p2.x - p1.x) + 100} />
             </textPath>
           </text>
-        </g> : null
-      );
+        </g>
+      ) : null;
     });
+  }
+
+  getZoneFontSize(points, zone) {
+    let [minX, maxX] = minMax(points, 0);
+    let w = this.viewport.imageToViewportCoordinates(Math.abs(maxX - minX), 0).x;
+    let fontSizes = zone.lg[0].l.map((l, idx) => {
+      let textRef = this.textRefs[`${zone.id}-${idx}`];
+      return this.getFontSize(textRef, w);
+    });
+    let sorted = fontSizes.sort((a, b) => a - b);
+    return sorted[sorted.length / 2];
   }
 
   renderOverlays() {
