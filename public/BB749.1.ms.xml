@@ -192,7 +192,6 @@
                     <zone type="page-right" points="4890,630 4882,4175 2950,4187 2950,625">
                         <lg justify="left">
                             <l n="bb749.1.ms.01" justify="left"><hr width="50" align="left" indent="1"/></l>
-                            <l n="bb749.1.ms.01" justify="left"><hr width="50" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.01" justify="left" indent="10">THIS edition of the Apology for</l>
                             <l n="bb749.1.ms.01" justify="left">the Bible is published, in compliance with the</l>
                             <l n="bb749.1.ms.01" justify="left">earnest solicitations of many serious persons of all</l>
@@ -359,8 +358,6 @@
                     </zone>
                     <zone type="page-right" points="4725,1035 4730,4100 2845,4060 2855,1050">
                         <lg justify="left">
-                            <l n="bb749.1.ms.02" justify="left"><hr width="22" align="left" indent="1"/></l>
-                            <l n="bb749.1.ms.02" justify="left" indent="20">LETTER I.</l>
                             <l n="bb749.1.ms.02" justify="left" indent="5">SIR,</l>
                             <l n="bb749.1.ms.02" justify="left">I HAVE lately met with a book of your's, entitled&#8212;</l>
                             <l n="bb749.1.ms.02" justify="left">THE AGE OF REASON, part the second, being an</l>
@@ -447,10 +444,11 @@
                     </zone>
                     <zone type="marginalia-4" points="4720,490 4710,1035 2755,1030 2745,495">
                         <lg justify="left">
+                            <l n="bb749.1.ms.02" justify="left"><hr width="45" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.02.01" justify="left">Achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
-                            <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops <space extent="5"/>If such is the</l>
+                            <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops LETTER I. If such is the</l>
                             <l n="bb749.1.ms.02.03" justify="left">characteristic of a modern polite gentleman we may</l>
-                            <l n="bb749.1.ms.02.04" justify="left" indent="5">hope to see Christs discourses
+                            <l n="bb749.1.ms.02.04" justify="left" indent="5">SIR, <space extent="10" unit="character"></space>hope to see Christs discourses
                                 <choice>
                                     <orig>Expung'd</orig>
                                     <reg>Expunged</reg>
