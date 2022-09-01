@@ -191,14 +191,15 @@
                 <zone type="original">
                     <zone type="page-right" points="4890,630 4882,4175 2950,4187 2950,625">
                         <lg justify="left">
-                            <l n="bb749.1.ms.01" justify="left"><hr width="20" align="left" indent="1"/></l>
+                            <l n="bb749.1.ms.01" justify="left"><hr width="50" align="left" indent="1"/></l>
+                            <l n="bb749.1.ms.01" justify="left"><hr width="50" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.01" justify="left" indent="10">THIS edition of the Apology for</l>
                             <l n="bb749.1.ms.01" justify="left">the Bible is published, in compliance with the</l>
                             <l n="bb749.1.ms.01" justify="left">earnest solicitations of many serious persons of all</l>
                             <l n="bb749.1.ms.01" justify="left">ranks. They have remarked to me, that the <choice><orig>deis-</orig><reg type="split_word">deistical</reg></choice></l>
-                            <l n="bb749.1.ms.01" justify="left"><choice><orig>tical</orig><reg>deistical</reg></choice> writings of Mr. Paine are circulated, with</l>
+                            <l n="bb749.1.ms.01" justify="left"><choice><orig>tical</orig><reg type="split_word">deistical</reg></choice> writings of Mr. Paine are circulated, with</l>
                             <l n="bb749.1.ms.01" justify="left">great and pernicious industry, amongst the <choice><orig>un-</orig><reg type="split_word">unlearned</reg></choice></l>
-                            <l n="bb749.1.ms.01" justify="left"><choice><reg>unlearned</reg><orig>learned</orig></choice> part of the community, especially in large</l>
+                            <l n="bb749.1.ms.01" justify="left"><choice><orig>learned</orig><reg type="split_word">unlearned</reg></choice> part of the community, especially in large</l>
                             <l n="bb749.1.ms.01" justify="left">manufacturing towns; and they have been pleased</l>
                             <l n="bb749.1.ms.01" justify="left">to think, that this <choice><orig>Defence</orig><reg>Defense</reg></choice> of Revealed Religion</l>
                             <l n="bb749.1.ms.01" justify="left">might, if generally distributed, be efficacious in</l>
@@ -209,13 +210,13 @@
                             <l n="bb749.1.ms.01" justify="left">utility of publishing a cheap edition of this work,</l>
                             <l n="bb749.1.ms.01" justify="left">I have great pleasure in complying with their</l>
                             <l n="bb749.1.ms.01" justify="left">wishes. Books in support of religion are, in <choice><orig>ge-</orig><reg type="split_word">general</reg></choice></l>
-                            <l n="bb749.1.ms.01" justify="left"><choice><orig>neral</orig><reg>general</reg></choice>, read with less eagerness, and remembered</l>
-                            <l n="bb749.1.ms.01" justify="left">with greater difficulty, than those are which <choice><orig>favour</orig><reg>favor</reg></choice></l>
+                            <l n="bb749.1.ms.01" justify="left"><choice><orig>neral</orig><reg type="split_word">general</reg></choice>, read with less eagerness, and remembered</l>
+                            <l n="bb749.1.ms.01" justify="left">with greater difficulty, than those are which<choice><orig>favour</orig><reg>favor</reg></choice></l>
                             <l n="bb749.1.ms.01" justify="left">infidelity; and the reason is obvious&#8212;men readily</l>
                             <l n="bb749.1.ms.01" justify="left">believe what they wish, and the christian religion</l>
                             <l n="bb749.1.ms.01" justify="left">being opposite to fraudulent dealings in our <choice><orig>inter-</orig><reg type="split_word">intercourse</reg></choice></l>
-                            <l n="bb749.1.ms.01" justify="left"><choice><orig>course</orig><reg>intercourse</reg></choice> with others, to intemperance in the <choice><orig>gratifi-</orig><reg type="split_word">gratification</reg></choice></l>
-                            <l n="bb749.1.ms.01" justify="left"><choice><orig>cation</orig><reg>gratification</reg></choice> of our own appetites, to all the sins, crimes,</l>
+                            <l n="bb749.1.ms.01" justify="left"><choice><orig>course</orig><reg type="split_word">intercourse</reg></choice> with others, to intemperance in the <choice><orig>gratifi-</orig><reg type="split_word">gratification</reg></choice></l>
+                            <l n="bb749.1.ms.01" justify="left"><choice><orig>cation</orig><reg type="split_word">gratification</reg></choice> of our own appetites, to all the sins, crimes,</l>
                             <l n="bb749.1.ms.01" justify="left">and vices which men are prone to, it cannot be a</l>
                             <l n="bb749.1.ms.01" justify="left">matter of surprise that many profligate, many</l>
                             <l n="bb749.1.ms.01" justify="left">thoughtless persons should listen with greediness to</l>
@@ -242,7 +243,7 @@
                                     <reg>Paine's</reg>
                                 </choice>
                                 attack but is is not so easy
-                                <note>Bentley reads "it is" for "is is" (*Writings* volume 2, page 1404).</note></l>
+                                <note>Bentley (*Writings* volume 2, page 1404) and Erdman (611) read "it is" for "is is".</note></l>
                             <l n="bb749.1.ms.01.08" justify="left">for one who loves the Bible</l>
                             <l n="bb749.1.ms.01.09" justify="left">The Perversions of
                                 <choice>
@@ -255,7 +256,8 @@
                                     <orig>attackd</orig>
                                     <reg>attacked</reg>
                                 </choice>
-                                by Paine &#38; also the perversions</l>
+                                by Paine &#38; also the perversions
+                            <note>Bentley reads "attacked" for "attackd" (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.11" justify="left">of the Bible; Who dare defend <del type="overstrike">them</del> either the
                                 <note>Bentley reads "Dare" for "dare" (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.12" justify="left">Acts of Christ or the Bible Unperverted?</l>
@@ -268,7 +270,8 @@
                             <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <gap reason="cancellation" extent="4" unit="character"/></l>
                             <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
                             <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="infralinear">^</add>
-                                <add place="supralinear">But</add> these considerations</l>
+                                <add place="supralinear">But</add> these considerations
+                                <note>Bentley notes that the words "are the" have been omitted here (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.20" justify="left">business of Eternity</l>
                             <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
                             <l n="bb749.1.ms.01.22" justify="left">this as it is what our Enemies wish</l>
@@ -496,12 +499,7 @@
                     </zone>
                     <zone type="marginalia-10" points="2785,4055 5305,4095 5290,4600 2775,4585">
                         <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left" indent="1">
-                                <choice>
-                                    <orig>M<hi rend="superscript">r</hi></orig>
-                                    <reg>Mr</reg>
-                                </choice>
-                                Paine has not extinguished &#38; cannot Extinguish Moral</l>
+                            <l n="bb749.1.ms.02.01" justify="left" indent="1">M<hi rend="superscript">r</hi> Paine has not extinguished &#38; cannot Extinguish Moral</l>
                             <l n="bb749.1.ms.02.02" justify="left">rectitude. he has Extinguished Superstition which took the</l>
                             <l n="bb749.1.ms.02.03" justify="left">Place of Moral Rectitude what has Moral Rectitude to do</l>
                             <l n="bb749.1.ms.02.04" justify="left">with Opinions concerning historical fact</l>
