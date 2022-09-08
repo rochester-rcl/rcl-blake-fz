@@ -915,7 +915,7 @@
                     </zone>
                     <zone type="page-right" points="4740,485 4740,4065 2830,4035 2815,490">
                         <texthead justify="left">
-                            <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>4</physnumber>)</l>
+                            <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>5</physnumber>)</l>
                         </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left"><choice><orig>ites</orig><reg type="split_word">Israelites</reg></choice> destroyed the Canaanites by the express command</l>
@@ -1019,8 +1019,9 @@
                     <zone type="marginalia-2" points="2670,4625 2760,3970 3690,3990 3915,3975 3915,3980 4580,3975 4735,4080 4715,435 3655,385 3605,435 2725,445 2715,65 5285,50 5320,4650">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.31" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
-                            <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in <unclear resp="KS">murdering</unclear> so many thousands under</l>
-                            <l n="bb749.1.ms.04.33" justify="left">pretence of a command from God is altogether Abominable &#38; Blasphemous</l>
+                            <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in murd<unclear resp="KS">ering</unclear> so many thousands under</l>
+                            <l n="bb749.1.ms.04.33" justify="left">pretence of a command from God is altogether Abominable &#38; Blasphemous
+                                <note>Erdman reads a period  after "Blasphemous" (614).</note></l>
                             <l n="bb749.1.ms.04.34" justify="left">Wherefore did</l>
                             <l n="bb749.1.ms.04.35" justify="left">Christ come</l>
                             <l n="bb749.1.ms.04.36" justify="left">was it not</l>
@@ -1029,15 +1030,11 @@
                             <l n="bb749.1.ms.04.39" justify="left">Imposture</l>
                             <l n="bb749.1.ms.04.40" justify="left">Was not</l>
                             <l n="bb749.1.ms.04.41" justify="left">Christ</l>
-                            <l n="bb749.1.ms.04.42" justify="left">
-                                <choice>
-                                    <orig>marterd</orig>
-                                    <reg>martyred</reg>
-                                </choice></l>
+                            <l n="bb749.1.ms.04.42" justify="left">mur<unclear resp="KS">dered</unclear></l>
                             <l n="bb749.1.ms.04.43" justify="left">because he</l>
                             <l n="bb749.1.ms.04.44" justify="left">taught that</l>
                             <l n="bb749.1.ms.04.45" justify="left">God loved</l>
-                            <l n="bb749.1.ms.04.46" justify="left">all Men,</l>
+                            <l n="bb749.1.ms.04.46" justify="left">all Men</l>
                             <l n="bb749.1.ms.04.47" justify="left">&#38; was their</l>
                             <l n="bb749.1.ms.04.48" justify="left">father &#38;</l>
                             <l n="bb749.1.ms.04.49" justify="left">
@@ -1060,11 +1057,12 @@
                             <l n="bb749.1.ms.04.61" justify="left">the Jews &#38;</l>
                             <l n="bb749.1.ms.04.62" justify="left">were written</l>
                             <l n="bb749.1.ms.04.63" justify="left">as an Example of the possibility of Human Beastliness</l>
-                            <l n="bb749.1.ms.04.64" justify="left">in all its branches. Christ died as an Unbeliever &#38;</l>
+                            <l n="bb749.1.ms.04.64" justify="left">in all its branches. Christ died as an Unbeliever &#38;
+                                <note>Erdman reads a period after "Unbeliever" (614).</note></l>
                             <l n="bb749.1.ms.04.65" justify="left">if the Bishops had their will so would Paine 
                                 <add type="instertion" place="supralinear">see page 1</add> but</l>
                             <l n="bb749.1.ms.04.66" justify="left">he who speaks a word against the Son of man shall be forgiven</l>
-                            <l n="bb749.1.ms.04.67" justify="left">let the Bishop prove that <del type="erasure">the</del>
+                            <l n="bb749.1.ms.04.67" justify="left">let the Bishop prove that <del type="overstrike">the</del>
                                 <space extent="4" unit="character"/>he has not spoken against</l>
                         </lg>
                     </zone>
