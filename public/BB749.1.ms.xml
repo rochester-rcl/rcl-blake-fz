@@ -221,8 +221,8 @@
                             <l n="bb749.1.ms.01" justify="left">thoughtless persons should listen with greediness to</l>
                             <l n="bb749.1.ms.01" justify="left">whatever tends to free them from it's influence.</l>
                             <vspace extent="1"/>
-                            <l n="bb749.1.ms.01" justify="left">Calgarth Park,</l>
-                            <l n="bb749.1.ms.01" justify="left"><hi rend="i">May</hi> 10, 1796.</l>
+                            <l n="bb749.1.ms.01" justify="left" indent="5">Calgarth Park,</l>
+                            <l n="bb749.1.ms.01" justify="left" indent="5"><hi rend="i">May</hi> 10, 1796.</l>
                         </lg>
                     </zone>
                 </zone>
@@ -914,6 +914,9 @@
                         </textfoot>
                     </zone>
                     <zone type="page-right" points="4740,485 4740,4065 2830,4035 2815,490">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>4</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left"><choice><orig>ites</orig><reg type="split_word">Israelites</reg></choice> destroyed the Canaanites by the express command</l>
                             <l n="bb749.1.ms.04" justify="left">of God: and to believe the Bible to be true, we must,</l>
@@ -967,8 +970,9 @@
                     <zone type="marginalia-1" points="2675,525 1760,495 1765,490 1435,495 1445,515 625,510 675,3990 2380,4020 2695,4350 2230,4455 2270,4590 135,4590 105,15 2655,45">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
-                            <l n="bb749.1.ms.04.02" justify="left">is false. as to<gap reason="cancellation" extent="15" unit="character"/> they will <del type="overstrike">always be found</del></l>
-                            <l n="bb749.1.ms.04.03" justify="left"><del type="overstrike"><hi rend="underscore">to be ne</hi>ither cold nor hot &#38; will</del> be spewed out. the Man</l>
+                            <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="cancellation" extent="18" unit="character"/> they will <del type="overstrike">always be found</del></l>
+                            <l n="bb749.1.ms.04.03" justify="left"><del type="overstrike"><hi rend="underscore">to be ne</hi>ither cold nor hot &#38; will</del> be spewed out. the Man
+                                <note>Erdman reads the as "The" (613).</note></l>
                             <l n="bb749.1.ms.04.04" justify="left">who pretends to be a modest <space extent="4"/> enquirer into the</l>
                             <l n="bb749.1.ms.04.05" justify="left">truth of</l>
                             <l n="bb749.1.ms.04.06" justify="left">a self
@@ -986,7 +990,7 @@
                             <l n="bb749.1.ms.04.09" justify="left">The truth</l>
                             <l n="bb749.1.ms.04.10" justify="left">&#38; certainty</l>
                             <l n="bb749.1.ms.04.11" justify="left">of Virtue</l>
-                            <l n="bb749.1.ms.04.12" justify="left">&#48; Honesty</l>
+                            <l n="bb749.1.ms.04.12" justify="left">&#38; Honesty</l>
                             <l n="bb749.1.ms.04.13" justify="left">i.e. Inspiration</l>
                             <l n="bb749.1.ms.04.14" justify="left">needs no one</l>
                             <l n="bb749.1.ms.04.15" justify="left">to prove it</l>
@@ -998,8 +1002,6 @@
                             <l n="bb749.1.ms.04.19" justify="left"><gap type="cancellation" extent="15" unit=" character"/></l>
                             <l n="bb749.1.ms.04.19" justify="left"><gap type="cancellation" extent="15" unit=" character"/></l>
                             <l n="bb749.1.ms.04.19" justify="left"><gap type="cancellation" extent="15" unit=" character"/></l>
-                        </lg>
-                        <lg justify="left">
                             <l n="bb749.1.ms.04.20" justify="left">He who stands</l>
                             <l n="bb749.1.ms.04.21" justify="left">doubting of</l>
                             <l n="bb749.1.ms.04.22" justify="left">what he intends</l>
@@ -1010,7 +1012,8 @@
                             <l n="bb749.1.ms.04.27" justify="left">Virtue means. no man can do a Vicious action &#38;</l>
                             <l n="bb749.1.ms.04.28" justify="left">think it to be Virtuous. no man can take darkness</l>
                             <l n="bb749.1.ms.04.29" justify="left">for light. he may pretend to do so &#38; may pretend to</l>
-                            <l n="bb749.1.ms.04.30" justify="left">be a modest Enquirer. but he is a Knave</l>
+                            <l n="bb749.1.ms.04.30" justify="left">be a modest Enquirer. but he is a Knave
+                                <note>Erdman reads "he" as an overwrite of "It" (614).</note></l>
                         </lg>
                     </zone>
                     <zone type="marginalia-2" points="2670,4625 2760,3970 3690,3990 3915,3975 3915,3980 4580,3975 4735,4080 4715,435 3655,385 3605,435 2725,445 2715,65 5285,50 5320,4650">
