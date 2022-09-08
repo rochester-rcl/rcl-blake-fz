@@ -683,7 +683,8 @@
                   <l n="bb749.1.ms.03.17" justify="left">are to expect</l>
                   <l n="bb749.1.ms.03.18" justify="left">crimes from</l>
                   <l n="bb749.1.ms.03.19" justify="left">Paine &#38; his</l>
-                  <l n="bb749.1.ms.03.20" justify="left">followers, are</l>
+                  <l n="bb749.1.ms.03.20" justify="left">followers, are
+                    <note>Erdman reads the mark after the word "followers" as a period (612).</note></l>
                   <l n="bb749.1.ms.03.21" justify="left">we to believe</l>
                   <l n="bb749.1.ms.03.22" justify="left">that Bishops</l>
                   <l n="bb749.1.ms.03.23" justify="left">do not Rail</l>
@@ -696,7 +697,7 @@
             </zone>
             <zone type="marginalia-3" points="120,4190 2670,4170 2655,4675 110,4645">
                <lg justify="left">
-                  <l n="bb749.1.ms.03.29" justify="left"><hr width="19" aling="left" indent="2"/></l>
+                  <l n="bb749.1.ms.03.29" justify="left"><hr width="40" align="left" indent="2"/></l>
                   <l n="bb749.1.ms.03.30" justify="left">Conscience in those that have it is unequivocal, it is the voice</l>
                   <l n="bb749.1.ms.03.31" justify="left">of God Our judgment of right &#38; wrong is Reason I believe</l>
                   <l n="bb749.1.ms.03.32" justify="left">that the Bishop
@@ -704,18 +705,18 @@
                         <orig>laught</orig>
                         <reg>laughed</reg>
                      </choice>
-                     at the Bible in his <choice><orig>slieve</orig><reg>sleeve</reg></choice> &#38; so did</l>
-                  <l n="bb749.1.ms.03.33" justify="left" indent="30"><unclear resp="KS">Locke</unclear></l>
+                     at the Bible in his 
+                      <choice>
+                          <orig>slieve</orig>
+                          <reg>sleeve</reg>
+                      </choice> 
+                      &#38; so did</l>
+                  <l n="bb749.1.ms.03.33" justify="left" indent="20"><unclear resp="KS">Locke</unclear></l>
                </lg>
             </zone>
             <zone type="marginalia-4" points="2515,3380 2705,3435 2700,3725 2525,3700">
                <lg justify="left">
-                  <l n="bb749.1.ms.03.34" justify="left">
-                     <choice>
-                        <orig>Vertue</orig>
-                        <reg>Virtue</reg>
-                     </choice>
-                  <note>Bentley reads Vertue as "Virtue" (*Writings* volume 2, page 1407).</note></l>
+                  <l n="bb749.1.ms.03.34" justify="left">Virtue</l>
                   <l n="bb749.1.ms.03.35" justify="left">is not</l>
                   <l n="bb749.1.ms.03.36" justify="left">Opinion</l>
                </lg>
@@ -728,7 +729,8 @@
                         <orig>nothng</orig>
                         <reg>nothing</reg>
                      </choice>
-                     about it</l>
+                     about it
+                    <note>Bentley (*Writings* volume 2, page 1408) and Erdman (613) read nothng as "nothing".</note></l>
                </lg>
             </zone>
             <zone type="marginalia-6" points="4680,355 5210,365 5190,805 4740,795">
@@ -741,7 +743,8 @@
             </zone>
             <zone type="marginalia-7" points="4765,900 4730,1245 5285,1235 5285,905">
                <lg justify="left">
-                  <l n="bb749.1.ms.03.41" justify="left">Contemptible</l>
+                  <l n="bb749.1.ms.03.41" justify="left">Contemptible
+                    <note>Bentley notes that "Contemptible" is "written later with a blacker ink" (*Writings* volume 2, page 1408).</note></l>
                   <l n="bb749.1.ms.03.42" justify="left">
                      <choice>
                         <orig>Falshood</orig>
@@ -779,15 +782,16 @@
             <zone type="marginalia-9" points="4710,2095 5245,2120 5320,3670 4680,3710">
                <lg justify="left">
                   <l n="bb749.1.ms.03.53" justify="left">Opinion is one</l>
-                  <l n="bb749.1.ms.03.54" justify="left">thing.
+                  <l n="bb749.1.ms.03.54" justify="left">Thing.
                      <choice>
                         <orig>Princip</orig>
-                        <reg type="unclear">Principle</reg>
-                     </choice></l>
+                        <reg>Principle</reg>
+                     </choice>
+                    <note> Bentley reads Princip as "Principle" (*Writings* volume 2, page 1408).</note></l>
                   <l n="bb749.1.ms.03.55" justify="left">another. No</l>
                   <l n="bb749.1.ms.03.56" justify="left">Man chan change</l>
-                  <l n="bb749.1.ms.03.57" justify="left">his Principles,</l>
-                  <l n="bb749.1.ms.03.58" justify="left">Every man</l>
+                  <l n="bb749.1.ms.03.57" justify="left">his Principles</l>
+                  <l n="bb749.1.ms.03.58" justify="left">Every Man</l>
                   <l n="bb749.1.ms.03.59" justify="left">changes his</l>
                   <l n="bb749.1.ms.03.60" justify="left">opinions. He</l>
                   <l n="bb749.1.ms.03.61" justify="left">who supposes that</l>
