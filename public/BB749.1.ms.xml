@@ -204,7 +204,7 @@
                             <l n="bb749.1.ms.01" justify="left">might, if generally distributed, be efficacious in</l>
                             <l n="bb749.1.ms.01" justify="left">stopping that torrent of infidelity which endangers</l>
                             <l n="bb749.1.ms.01" justify="left">alike the future happiness of individuals, and the</l>
-                            <l n="bb749.1.ms.01" justify="left">present safety of all christian states. Whatever</l>
+                            <l n="bb749.1.ms.01" justify="left">present safety of <hi rend="underscore">all christian states.</hi> Whatever</l>
                             <l n="bb749.1.ms.01" justify="left">weight there may be in this their opinion of the</l>
                             <l n="bb749.1.ms.01" justify="left">utility of publishing a cheap edition of this work,</l>
                             <l n="bb749.1.ms.01" justify="left">I have great pleasure in complying with their</l>
@@ -283,11 +283,6 @@
                             <l n="bb749.1.ms.01.02" justify="left">Watson has Defended Antichrist</l>
                         </lg>
                     </zone>
-                    <zone type="underline-1" points="3679,2055 4396,2069 4396,2227 3686,2207">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.01.01" justify="left" indent="30"><hi rend="u"><gap extent="13" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
                 </zone>
             </phystext>
         </desc>
@@ -344,7 +339,7 @@
                             <l n="bb749.1.ms.02" justify="left">4l. per Hundred.</l>
                             <vspace extent="1"/>
                             <l n="bb749.1.ms.02" justify="left">7. The WISDOM and GOODNES of GOD, in having made</l>
-                            <l n="bb749.1.ms.02" justify="left">both RICH and POOR: a SERMON, preached before the</l>
+                            <l n="bb749.1.ms.02" justify="left">bot<hi rend="underscore">h RICH and POOR:</hi> a SERMON, preached before the</l>
                             <l n="bb749.1.ms.02" justify="left">Stewards of the WESTMINSTER DISPENSARY, at the</l>
                             <l n="bb749.1.ms.02" justify="left">Anniversay Meeting in Charlotte-street Chapel; with an</l>
                             <l n="bb749.1.ms.02" justify="left">Appendix, containing REFLECTIONS on the present State</l>
@@ -366,25 +361,25 @@
                             <l n="bb749.1.ms.02" justify="left">owe to society, to trouble you and the world with some</l>
                             <l n="bb749.1.ms.02" justify="left">observations on so extraordinary a performance. <choice><orig>Extra-</orig><reg type="split_word">Extraordinary</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>ordinary</orig><reg>Extraordinary</reg></choice> I esteem it; not from any novelty in the <choice><orig>objec-</orig><reg type="split_word">objections</reg></choice></l>
-                            <l n="bb749.1.ms.02" justify="left"><choice><orig>tions</orig><reg>objections</reg></choice> which you have produced against revealed religion,</l>
-                            <l n="bb749.1.ms.02" justify="left">(for I find little or no novelty in them,) but from the zeal</l>
+                            <l n="bb749.1.ms.02" justify="left"><choice><orig>tions</orig><reg>objections</reg></choice> which you <hi rend="underscore">have produced against revealed</hi> religion,</l>
+                            <l n="bb749.1.ms.02" justify="left">(for I <hi rend="underscore">find little or no novelty in them</hi>,) but from the zeal</l>
                             <l n="bb749.1.ms.02" justify="left">with which you <choice><orig>labour</orig><reg>labor</reg></choice> to disseminate your opinions, and</l>
                             <l n="bb749.1.ms.02" justify="left">from the confidence with which you esteem them true.</l>
                             <l n="bb749.1.ms.02" justify="left">You perceive, by this, that I give you credit for your</l>
-                            <l n="bb749.1.ms.02" justify="left">sincerity, how much soever I may question your wisdom,</l> 
+                            <l n="bb749.1.ms.02" justify="left">sincerity, <hi rend="underscore">how much soever I may question your wisdom,</hi></l> 
                             <l n="bb749.1.ms.02" justify="left">in writing in such a manner on such a subject: and I have</l>
                             <l n="bb749.1.ms.02" justify="left">no reluctance in acknowledging, that you possess a <choice><orig>con-</orig><reg type="split_word">considerable</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>siderable</orig><reg>considerable</reg></choice> share of energy of language, and acuteness of</l>
                             <l n="bb749.1.ms.02" justify="left">investigation; though I must be allowed to lament, that</l>
-                            <l n="bb749.1.ms.02" justify="left">these talents have not been applied in a manner more <choice><orig>use-</orig><reg type="split_word">useful</reg></choice></l>
-                            <l n="bb749.1.ms.02" justify="left"><choice><orig>ful</orig><reg>useful</reg></choice> to human kind, and more creditable to yourself.</l>
+                            <l n="bb749.1.ms.02" justify="left">these tal<hi rend="underscore">ents have not been applied in a manner more <choice><orig>use-</orig><reg type="split_word">useful</reg></choice></hi></l>
+                            <l n="bb749.1.ms.02" justify="left"><hi rend="underscore"><choice><orig>ful</orig><reg>useful</reg></choice> to human kind, and more creditable to yourself.</hi></l>
                             <l n="bb749.1.ms.02" justify="left" indent="1">I begin with your preface. You therein state&#8212; that you</l>
                             <l n="bb749.1.ms.02" justify="left">had long had an intention of publishing your thoughts <choice><orig>up-</orig><reg type="split_word">upon</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>on</orig><reg>upon</reg></choice> religion, but that you had originally reserved it to a </l>
                             <l n="bb749.1.ms.02" justify="left">later period in life.&#8212;I hope there is no want of charity</l>
                             <l n="bb749.1.ms.02" justify="left">in saying, that it would have been fortunate for the <choice><orig>chris-</orig><reg type="split_word">christian</reg></choice></l>
-                            <l n="bb749.1.ms.02" justify="left"><choice><orig>tian</orig><reg>christian</reg></choice> world, had your life been terminated before you had</l>
-                            <l n="bb749.1.ms.02" justify="left">fulfilled your intention. In accomplishing your purpose</l>
+                            <l n="bb749.1.ms.02" justify="left"><choice><orig>tian</orig><reg>christian</reg></choice> wor<hi rend="underescore">ld, had your life been terminated before you had</hi></l>
+                            <l n="bb749.1.ms.02" justify="left">f<hi rend="underscore">ulfilled your intention.</hi> In accomplishing your purpose</l>
                             <l n="bb749.1.ms.02" justify="left">you will have unsettled the faith of thousands; rooted</l>
                             <l n="bb749.1.ms.02" justify="left">from the minds of the unhappy virtuous all their <choice><orig>comfort-</orig><reg type="split_word">comfortable</reg></choice></l>
                             <l n="bb749.1.ms.02" justify="left"><choice><orig>able</orig><reg>comfortable</reg></choice> assurance of a future recompense; have annihilated</l>
@@ -499,38 +494,6 @@
                             <l n="bb749.1.ms.02.04" justify="left">with Opinions concerning historical fact</l>
                         </lg>
                     </zone>
-                    <zone type="underline-1" points="1421,3324 1410,3239 853,3239 857,3342">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left"><hi rend="u"><gap extent="13" unit="character"></gap></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-2" points="3392,1657 4428,1667 4425,1764 3392,1764">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left" indent="10"><hi rend="u"><gap extent="20" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-3" points="3085,1742 4146,1753 4128,1846 3074,1849">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left" indent="4"><hi rend="u"><gap extent="20" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-4" points="3164,2071 4714,2082 4721,2203 3174,2192">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left" indent="6"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-5" points="4721,2499 4725,2707 2889,2689 2903,2571 3049,2578 3046,2471">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left" indent="5"><hi rend="u"><gap extent="26" unit="character"/></hi></l>
-                            <l n="bb749.1.ms.02.02" justify="left"><hi rend="u"><gap extent="30" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-6" points="4703,3092 4700,3185 3639,3189 3649,3282 2892,3264 2878,3157 3014,3146 3024,3053">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.02.01" justify="left" indent="4"><hi rend="u"><gap extent="28" unit="character"/></hi></l>
-                            <l n="bb749.1.ms.02.02" justify="left"><hi rend="u"><gap extent="13" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
                 </zone>
             </phystext>
         </desc>
@@ -559,9 +522,9 @@
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>tine</orig><reg type="split_word">guillotine</reg></choice>-massacres to that cause. Men's minds were not <choice><orig>pre-</orig><reg type="split_word">prepared</reg></choice></l>
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>pared</orig><reg type="split_word">prepared</reg></choice>, as you suppose, for the commission of all manner</l>
                   <l n="bb749.1.ms.03" justify="left">of crimes, by any doctrines of the church of Rome, <choice><orig>cor-</orig><reg type="split_word">corrupted</reg></choice></l>
-                  <l n="bb749.1.ms.03" justify="left"><choice><orig>rupted</orig><reg type="split_word">corrupted</reg></choice> as I esteem it, but by their not thoroughly <choice><orig>believ-</orig><reg type="split_word">believing</reg></choice></l>
-                  <l n="bb749.1.ms.03" justify="left"><choice><orig>ing</orig><reg type="split_word">believing</reg></choice> even that religion. What may not society expect</l>
-                  <l n="bb749.1.ms.03" justify="left">from those, who shall imbibe the principles of your book?</l>
+                  <l n="bb749.1.ms.03" justify="left"><choice><orig>rupted</orig><reg type="split_word">corrupted</reg></choice> as I esteem it, bu<hi rend="underscore">t by their not thoroughly </hi><choice><orig>believ-</orig><reg type="split_word">believing</reg></choice></l>
+                  <l n="bb749.1.ms.03" justify="left"><choice><orig>ing</orig><reg type="split_word">believing</reg></choice> <hi rend="underscore">even that re</hi>ligion. <hi rend="underscore">What may not society expect</hi></l>
+                  <l n="bb749.1.ms.03" justify="left"><hi rend="underscore">from those, who shall imbibe the principles of your book?</hi></l>
                   <l n="bb749.1.ms.03" justify="left" indent="3">A fever, which you and those about you expected</l>
                   <l n="bb749.1.ms.03" justify="left">would prove mortal, made you remember, with renewed</l>
                   <l n="bb749.1.ms.03" justify="left">satisfaction, that you had written the former part of</l>
@@ -571,11 +534,11 @@
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>cerity</orig><reg type="split_word">sincerity</reg></choice> of your persuasion, but I cannot admit it to be any</l>
                   <l n="bb749.1.ms.03" justify="left">proof of the truth of your principles. What is conscience?</l>
                   <l n="bb749.1.ms.03" justify="left">Is it, as has been thought, an internal monitor implanted</l>
-                  <l n="bb749.1.ms.03" justify="left">in us by the Supreme Being, and dictating to us, on all</l>
-                  <l n="bb749.1.ms.03" justify="left">occasions, what is right or wrong? Or is it merely our</l>
+                  <l n="bb749.1.ms.03" justify="left">in us by the Sup<hi rend="underscore">reme Being, a</hi>nd dictating to us, on all</l>
+                  <l n="bb749.1.ms.03" justify="left">occasions, what is <hi rend="underscore">right or wrong? Or is it merel</hi>y our</l>
                   <l n="bb749.1.ms.03" justify="left">own judgment of the moral rectitude or turpitude of our</l>
-                  <l n="bb749.1.ms.03" justify="left">own actions? I take the word (with Mr. Locke) in the</l>
-                  <l n="bb749.1.ms.03" justify="left">latter, as in the only intelligible sense. Now who sees</l>
+                  <l n="bb749.1.ms.03" justify="left">own actions? I ta<hi rend="underscore">ke the word (</hi>with Mr. Locke) in the</l>
+                  <l n="bb749.1.ms.03" justify="left">latter, <hi rend="underscore">as in the only intelligible</hi> sense. Now who sees</l>
                   <l n="bb749.1.ms.03" justify="left">not that our judgments of virtue and vice, right and</l>
                   <l n="bb749.1.ms.03" justify="left">wrong, are not always formed from an enlightened and</l>
                   <l n="bb749.1.ms.03" justify="left">dispassionate use of our reason, in the investigation of</l>
@@ -606,13 +569,13 @@
                </texthead>
                <lg justify="left">
                   <l n="bb749.1.ms.03" justify="left">from thence follow, that he will, in obeying the dictates</l>
-                  <l n="bb749.1.ms.03" justify="left">of his conscience, on all occasions act right. An <choice><orig>inqui-</orig><reg type="split_word">inquisitor</reg></choice></l>
+                  <l n="bb749.1.ms.03" justify="left">of his conscience,<handShift medium="pencil">x</handShift><hi rend="underscore">on all occasions act right</hi>. An <choice><orig>inqui-</orig><reg type="split_word">inquisitor</reg></choice></l>
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>sitor</orig><reg>inquisitor</reg></choice>, who burns jews and heretics; a Robespierre, who</l>
                   <l n="bb749.1.ms.03" justify="left">massacres innocent and harmless women; a robber, who</l>
                   <l n="bb749.1.ms.03" justify="left">thinks that all things ought to be in common, and that a</l>
                   <l n="bb749.1.ms.03" justify="left">state of property is an unjust infringement of natural <choice><orig>li-</orig><reg type="split_word">liberty</reg></choice></l>
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>berty</orig><reg type="split_word">liberty</reg></choice>:&#8212;these, and a thousand perpetrators of different</l>
-                  <l n="bb749.1.ms.03" justify="left">crimes, may all follow the dictates of conscience; and</l>
+                  <l n="bb749.1.ms.03" justify="left">crimes, may all follow <hi rend="underscore">the dictates of conscience</hi>; and</l>
                   <l n="bb749.1.ms.03" justify="left">may, at the real or supposed approach of death, <choice><orig>remem-</orig><reg type="split_word">remember</reg></choice></l>
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>ber</orig><reg type="split_word">remember</reg></choice> "with renewed satisfaction" the worst of their <choice><orig>trans-</orig><reg type="split_word">transactions</reg></choice></l>
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>actions</orig><reg type="split_word">transactions</reg></choice>, and experience, without dismay, "a <choice><orig>conscien-</orig><reg type="split_word">conscientious</reg></choice></l>
@@ -818,31 +781,6 @@
                   <l n="bb749.1.ms.03.73" justify="left">that Paine does <subst><del type="overwrite">is</del><add>are</add></subst> 
                      no <gap reason="cancellation" extent="12" unit="character"/><add type="insertion" place="supralinear">Examiners</add> If they are not</l>
                   <l n="bb749.1.ms.03.74" justify="left">determinately wrong they must be Right or the Bible</l>
-               </lg>
-            </zone>
-            <zone type="underline-1" points="615,995 2515,975 2520,1230 625,1280">
-               <lg justify="left">
-                  <l n="bb749.1.ms.03.76" justify="left"><hi rend="u"><space extent="24" unit="character"/></hi></l>
-                  <l n="bb749.1.ms.03.77" justify="left"><hi rend="u"><space extent="36" unit="character"/></hi></l>
-                  <l n="bb749.1.ms.03.78" justify="left"><hi rend="u"><space extent="51" unit="character"/></hi></l>
-               </lg>
-            </zone>
-            <zone type="underline-2" points="620,2010 2520,1980 2525,2435 615,2430">
-               <lg justify="left">
-                  <l n="bb749.1.ms.03.79" justify="left"><hi rend="u"><space extent="14" unit="character"/></hi></l>
-                  <l n="bb749.1.ms.03.80" justify="left"><hi rend="u"><space extent="29" unit="character"/></hi></l>
-                  <l n="bb749.1.ms.03.81" justify="left"><hi rend="u"><space extent="14" unit="character"/></hi></l>
-                  <l n="bb749.1.ms.03.82" justify="left"><hi rend="u"><space extent="24" unit="character"/></hi></l>
-               </lg>
-            </zone>
-            <zone type="underline-3" points="3435,550 4355,570 4340,675 3450,670">
-               <lg justify="left">
-                  <l n="bb749.1.ms.03.83" justify="left"><hi rend="u"><space extent="27" unit="character"/></hi></l>
-               </lg>
-            </zone>
-            <zone type="underline-4" points="3625,1040 4560,1080 4535,1195 3595,1165">
-               <lg justify="left">
-               <l n="bb749.1.ms.03.84" justify="left"><hi rend="u"><space extent="23" unit="character"/></hi></l>
                </lg>
             </zone>
          </zone>
@@ -1115,8 +1053,8 @@
                             <l n="bb749.1.ms.05" justify="left">infants; devourers of human flesh; addicted to unnatural</l>
                             <l n="bb749.1.ms.05" justify="left">lust; immersed in the filthiness of all manner of vice.</l>
                             <l n="bb749.1.ms.05" justify="left">Now, I think, it will be impossible to prove, that it was</l>
-                            <l n="bb749.1.ms.05" justify="left">a proceeding contrary to God's moral justice, to <choice><orig>exter-</orig><reg type="split_word">exterminate</reg></choice></l>
-                            <l n="bb749.1.ms.05" justify="left"><choice><orig>minate</orig><reg>exterminate</reg></choice> so wicked a people. He made the Israelites the</l>
+                            <l n="bb749.1.ms.05" justify="left">a proc<hi rend="underscore">eeding contrary to God's moral justice, to </hi><choice><orig>exter-</orig><reg type="split_word">exterminate</reg></choice></l>
+                            <l n="bb749.1.ms.05" justify="left"><choice><orig>minate</orig><reg>exterminate</reg></choice><hi rend="underscore"> so wicked a peopl</hi>e. He made the Israelites the</l>
                             <l n="bb749.1.ms.05" justify="left">executors of his vengeance; and, in doing this, he</l>
                             <l n="bb749.1.ms.05" justify="left">gave such an evident and terrible proof of his <choice><orig>abomina-</orig><reg type="split_word">abomination</reg></choice></l>
                             <l n="bb749.1.ms.05" justify="left"><choice><orig>tion</orig><reg>abomination</reg></choice> of vice, as could not fail to strike the surrounding</l>
@@ -1294,17 +1232,6 @@
                                     <reg>shown</reg>
                                 </choice>
                                 the contrary</l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-1" points="683,2605 2553,2629 2571,2829 694,2829">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.05.71" justify="left" indent="5"><hi rend="u"><gap extent="24"/></hi></l>
-                            <l n="bb749.1.ms.05.72" justify="left" indent="5"><hi rend="u"><gap extent ="12"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-2" points="2918,2311 4771,2329 4777,2441 2930,2435">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.05.73" justify="left"><hi rend="u"><gap extent="30"/></hi></l>
                         </lg>
                     </zone>
                 </zone>
@@ -1566,24 +1493,6 @@
                                     <reg>spoiled</reg>
                                 </choice>
                                 the hasty pudding</l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-1" points="963,3421 2813,3434 2813,3605 963,3621">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="12" unit="character"/></hi></l>
-                            <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="12" unit="character"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-2" points="3168,2384 5007,2384 5021,2563 3168,2563">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.06.01" justify="left" indent="10"><hi rend="u"><gap extent="12" unit="character"></gap></hi></l>
-                            <l n="bb749.1.ms.06.01" justify="left" indent="5"><hi rend="u"><gap extent="10" unit="character"></gap></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-3" points="3165,3436 5026,3465 5050,3650 3163,3631">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.06.01" justify="left" indent="20"><hi rend="u"><gap extent="5" unit="character"></gap></hi></l>
-                            <l n="bb749.1.ms.06.01" justify="left"><hi rend="u"><gap extent="20" unit="character"></gap></hi></l>
                         </lg>
                     </zone>
                 </zone>
@@ -2266,16 +2175,6 @@
                             <l n="bb749.1.ms.09.04" justify="left">none but the actor could tell, if it is True Moses &#38; none</l>
                             <l n="bb749.1.ms.09.05" justify="left">but he could write it unless we allow it to be Poetry &#38; that</l>
                             <l n="bb749.1.ms.09.06" justify="left">poetry inspired</l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-1" points="4375,3220 4815,3235 4830,3365 4390,3350">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.09.01" justify="left" indent="32"><hi rend="u"><gap extent="6"/></hi></l>
-                        </lg>
-                    </zone>
-                    <zone type="underline-2" points="3835,3565 4615,3570 4620,3695 3850,3710">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.09.01" justify="left" indent="20"><hi rend="u"><gap extent="6"/></hi></l>
                         </lg>
                     </zone>
                 </zone>
@@ -3675,16 +3574,6 @@
                             <l n="bb749.1.ms.19.01" justify="left">A:D:150</l>
                         </lg>
                     </zone>                    
-                    <zone type="underline-1" points="4291,3020 4300,3137 5095,3125 5091,3012">
-                    <lg justify="left">
-                        <l n="bb749.1.ms.21.01" indent="15"><hi rend="u"><space extent="20" unit="character"/></hi></l>
-                    </lg>
-                </zone>            
-                <zone type="underline-2" points="3579,3612 3512,3816 5083,3779 5079,3600">
-                <lg justify="left">
-                    <l n="bb749.1.ms.21.01" indent="9"><hi rend="u"><space extent="29" unit="character"/></hi></l>
-                </lg>
-            </zone>
                     <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
                         <lg justify="left">
                             <l n="bb749.1.ms.19.01" justify="left">This is No</l>
@@ -3830,13 +3719,6 @@
                             <l n="bb749.1.ms.20.11" justify="left">&#38;Nero</l>
                         </lg> 
                     </zone>
-                    <zone type="underline-1" points="4918,2304 4922,2569 2952,2578 2952,2304"><!-- underline 3 lines -->
-                        <lg justify="left">
-                            <l n="bb749.1.ms.20.01" justify="left" indent="2"><hi rend="u"><space extent="26" unit="character"/></hi></l>
-                            <vspace extent="1"/>
-                            <l n="bb749.1.ms.20.02" justify="left"><hi rend="u"><space extent="5" unit="character"/></hi></l>
-                        </lg>
-                    </zone> 
                     <zone type="marginalia-2" points="3016,2406 3246,2946 2770,2986 2766,2400">
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">O Fool</l>
@@ -3984,12 +3866,6 @@
                     </zone>                  
                 </zone>             
                 <zone type="Blake">                 
-                    <zone type="underline-1" points="4986,2257 3088,2269 3097,2468 4292,2450 4281,2376 4994,2376">
-                        <lg justify="left">
-                            <l n="bb749.1.ms.21.01" indent="17"><hi rend="u"><space extent="4" unit="character"/></hi></l>
-                            <l n="bb749.1.ms.21.02"><hi rend="u"><space extent="14" unit="character"/></hi></l>
-                        </lg>
-                    </zone> 
                     <zone type="marginalia-1" points="5015,2194 5013,3013 5436,3015 5413,2189">
                         <lg justify="left">
                             <l n="bb749.1.ms.21.01">O how</l>
