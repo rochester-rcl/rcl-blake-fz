@@ -510,7 +510,7 @@
       </physdesc>
       <phystext>
          <zone type="original">
-            <zone type="page-left" points="2520,360 2535,4100 2325,4105 2290,4000 635,4045 610,380">
+             <zone type="page-left" points="605,510 2495,485 2515,4020 640,4040">
                <texthead justify="left" indent="25">
                   <l n="bb749.1.ms.03" justify="left" indent="25">(<physnumber>2</physnumber>)</l>
                </texthead>
@@ -563,7 +563,7 @@
                   <l n="bb749.1.ms.03" justify="left" indent="9"><space extent="20" unit="character"/><catchword>from</catchword></l>
                </textfoot>
             </zone>
-            <zone type="page-right" points="4735,340 4685,4090 2840,4015 2835,355">
+             <zone type="page-right" points="4705,485 4680,4010 2810,3985 2830,460">
                <texthead justify="left">
                   <l n="bb749.1.ms.03" justify="left" indent="25">(<physnumber>3</physnumber>)</l>
                </texthead>
@@ -617,13 +617,13 @@
             </zone>
          </zone>
          <zone type="Blake">
-            <zone type="marginalia-1" points="185,65 2660,110 2675,385 150,410">
+             <zone type="marginalia-1" points="2645,100 2660,385 170,390 170,110">
                <lg justify="left">
                   <l n="bb749.1.ms.03.01" justify="left" indent="2">To what does the Bishop attribute the English Crusade against</l>
                   <l n="bb749.1.ms.03.02" justify="left">France. is it not to State Religion. blush for shame</l>
                </lg>
             </zone>
-            <zone type="marginalia-2" points="610,895 645,4055 2240,4010 2260,4150 90,4165 55,905">
+             <zone type="marginalia-2" points="70,885 570,885 615,4050 2210,4030 2215,4170 60,4175">
                <lg justify="left">
                   <l n="bb749.1.ms.03.03" justify="left">Folly &#38;</l>
                   <l n="bb749.1.ms.03.04" justify="left">Impudence!</l>
@@ -659,7 +659,7 @@
                   <l n="bb749.1.ms.03.28" justify="left">would be as good an inquisitor as any other Priest</l>
                </lg>
             </zone>
-            <zone type="marginalia-3" points="120,4190 2670,4170 2655,4675 110,4645">
+             <zone type="marginalia-3" points="2665,4185 2680,4650 95,4660 100,4195">
                <lg justify="left">
                   <l n="bb749.1.ms.03.29" justify="left"><hr width="45" align="left" indent="2"/></l>
                   <l n="bb749.1.ms.03.30" justify="left">Conscience in those that have it is unequivocal, it is the voice</l>
@@ -678,14 +678,14 @@
                   <l n="bb749.1.ms.03.33" justify="left" indent="20"><unclear resp="KS">Locke</unclear></l>
                </lg>
             </zone>
-            <zone type="marginalia-4" points="2515,3380 2705,3435 2700,3725 2525,3700">
+             <zone type="marginalia-4" points="2725,3390 2725,3730 2530,3730 2530,3395">
                <lg justify="left">
                   <l n="bb749.1.ms.03.34" justify="left">Virtue</l>
                   <l n="bb749.1.ms.03.35" justify="left">is not</l>
                   <l n="bb749.1.ms.03.36" justify="left">Opinion</l>
                </lg>
             </zone>
-            <zone type="marginalia-5" points="2760,40 5220,30 5125,365 2740,380">
+             <zone type="marginalia-5" points="5165,105 5155,375 2785,380 2800,100">
                <lg justify="left">
                   <l n="bb749.1.ms.03.37" justify="left">If Conscience is not a Criterion of Moral Rectitude What is it?</l>
                   <l n="bb749.1.ms.03.38" justify="left">He who thinks that Honesty is changeable knows
@@ -697,7 +697,7 @@
                     <note>Bentley (*Writings* volume 2, page 1408) and Erdman (613) read nothng as "nothing".</note></l>
                </lg>
             </zone>
-            <zone type="marginalia-6" points="4680,355 5210,365 5190,805 4740,795">
+             <zone type="marginalia-6" points="5200,410 5200,815 4725,825 4720,395">
                <lg justify="left">
                   <l n="bb749.1.ms.03.37" justify="left">x</l>
                   <l n="bb749.1.ms.03.38" justify="left">Always, or</l>
@@ -705,7 +705,7 @@
                   <l n="bb749.1.ms.03.40" justify="left">false</l>
                </lg>
             </zone>
-            <zone type="marginalia-7" points="4765,900 4730,1245 5285,1235 5285,905">
+             <zone type="marginalia-7" points="5265,895 5275,1225 4730,1220 4735,890">
                <lg justify="left">
                   <l n="bb749.1.ms.03.41" justify="left">Contemptible
                     <note>Bentley notes that "Contemptible" is "written later with a blacker ink" (*Writings* volume 2, page 1408).</note></l>
@@ -718,7 +718,7 @@
                   <l n="bb749.1.ms.03.44" justify="left"><hr width="6" align="left"/></l>
                </lg>
             </zone>
-            <zone type="marginalia-8" points="4725,1240 5330,1245 5320,2070 4730,2105">
+             <zone type="marginalia-8" points="5310,1255 5285,2105 4720,2095 4725,1260">
                <lg justify="left">
                   <l n="bb749.1.ms.03.45" justify="left">Virtue &#38; honesty</l>
                   <l n="bb749.1.ms.03.46" justify="left">or the dictates</l>
@@ -743,7 +743,7 @@
                   <l n="bb749.1.ms.03.52" justify="left"><hr width="4" align="left"/></l>
                </lg>
             </zone>
-            <zone type="marginalia-9" points="4710,2095 5245,2120 5320,3670 4680,3710">
+             <zone type="marginalia-9" points="5310,2130 5310,3725 4725,3730 4715,2125">
                <lg justify="left">
                   <l n="bb749.1.ms.03.53" justify="left">Opinion is one</l>
                   <l n="bb749.1.ms.03.54" justify="left">Thing.
@@ -768,13 +768,13 @@
                   <l n="bb749.1.ms.03.68" justify="left"><hr width="7" align="left"/></l>
                </lg>
             </zone>
-            <zone type="marginalia-10" points="4695,3695 5255,3720 5275,4040 4700,4045">
+             <zone type="marginalia-10" points="5310,3760 5310,4050 4705,4055 4710,3755">
                <lg justify="left">
                   <l n="bb749.1.ms.03.69" justify="left">Serpentine</l>
                   <l n="bb749.1.ms.03.70" justify="left">Dissimulation</l>
                </lg>
             </zone>
-            <zone type="marginalia-11" points="5280,4075 2790,4005 2765,4580 5275,4590">
+             <zone type="marginalia-11" points="2790,4060 5235,4080 5240,4555 2795,4555">
                <lg justify="left">
                   <l n="bb749.1.ms.03.71" justify="left">Paine is either a Devil or an Inspired man. Men who</l>
                   <l n="bb749.1.ms.03.72" justify="left">give themselves to their Energetic Genius in the manner</l>
