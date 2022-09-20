@@ -510,7 +510,7 @@
       </physdesc>
       <phystext>
          <zone type="original">
-             <zone type="page-left" points="605,510 2495,485 2515,4020 640,4040">
+             <zone type="page-left" points="2495,465 2495,3995 655,4030 630,495">
                <texthead justify="left" indent="25">
                   <l n="bb749.1.ms.03" justify="left" indent="25">(<physnumber>2</physnumber>)</l>
                </texthead>
@@ -623,7 +623,7 @@
                   <l n="bb749.1.ms.03.02" justify="left">France. is it not to State Religion. blush for shame</l>
                </lg>
             </zone>
-             <zone type="marginalia-2" points="70,885 570,885 615,4050 2210,4030 2215,4170 60,4175">
+             <zone type="marginalia-2" points="45,880 625,865 620,4040 2365,4025 2370,4180 20,4190">
                <lg justify="left">
                   <l n="bb749.1.ms.03.03" justify="left">Folly &#38;</l>
                   <l n="bb749.1.ms.03.04" justify="left">Impudence!</l>
@@ -659,7 +659,7 @@
                   <l n="bb749.1.ms.03.28" justify="left">would be as good an inquisitor as any other Priest</l>
                </lg>
             </zone>
-             <zone type="marginalia-3" points="2665,4185 2680,4650 95,4660 100,4195">
+             <zone type="marginalia-3" points="2660,4650 2670,4215 40,4205 40,4655">
                <lg justify="left">
                   <l n="bb749.1.ms.03.29" justify="left"><hr width="45" align="left" indent="2"/></l>
                   <l n="bb749.1.ms.03.30" justify="left">Conscience in those that have it is unequivocal, it is the voice</l>
