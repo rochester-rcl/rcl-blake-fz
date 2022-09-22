@@ -905,7 +905,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2635,30 2645,525 585,460 670,4035 2640,4045 2640,4650 30,4660 25,30">
+                    <zone type="marginalia-1" points="2635,30 2645,525 625,465 670,4035 2640,4045 2640,4650 30,4660 25,30">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
                             <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="cancellation" extent="18" unit="character"/> they will <del type="overstrike">always be found</del></l>
