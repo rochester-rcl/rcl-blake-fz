@@ -1019,7 +1019,7 @@
                 <zone type="original">
                     <zone type="page-left" points="2560,455 2585,4055 715,4075 690,450">
                         <texthead justify="left">
-                            <l n="bb749.1.ms.05" justify="left" indent="25">(<physnumber>6</physnumber>)</l>
+                            <l n="bb749.1.ms.05" justify="left" indent="25">( <physnumber>6</physnumber> )</l>
                         </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.05" justify="left">at least, instructs me to believe, that God not only <choice><orig>pri-</orig><reg type="split_word">primarily</reg></choice></l>
@@ -1068,9 +1068,6 @@
                         <textfoot><l n="bb749.1.ms.05" indent="25"><catchword>men,</catchword></l></textfoot>
                     </zone>
                     <zone type="page-right" points="4730,520 4795,3990 2930,3975 2895,540">
-                        <texthead justify="left">
-                            <l n="bb749.1.ms.05" justify="left" indent="25">(<physnumber>7</physnumber>)</l>
-                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.05" justify="left">men, not destitute of talents, should be desirous of <choice><orig>un-</orig><reg type="split_word">undermining</reg></choice></l>
                             <l n="bb749.1.ms.05" justify="left"><choice><orig>dermining</orig><reg>undermining</reg></choice> the authority of revealed religion, and <choice><orig>stu-</orig><reg type="split_word">studious</reg></choice></l>
