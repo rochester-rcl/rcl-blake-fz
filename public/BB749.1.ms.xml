@@ -800,9 +800,6 @@
             <phystext>
                 <zone type="original">
                     <zone type="page-left" points="655,480 2525,525 2545,4010 690,4005">
-                        <texthead justify="left">
-                            <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>4</physnumber>)</l>
-                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left">foolishness,&#8212;and that if the gospel be hid, it is hid to</l>
                             <l n="bb749.1.ms.04" justify="left">them that are lost." The consequence of your unbelief</l>
@@ -911,7 +908,7 @@
                             <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="cancellation" extent="18" unit="character"/> they will <del type="overstrike">always be found</del></l>
                             <l n="bb749.1.ms.04.03" justify="left"><del type="overstrike"><hi rend="underscore">to be ne</hi>ither cold nor hot &#38; will</del> be spewed out. the Man
                                 <note>Erdman reads the as "The" (613).</note></l>
-                            <l n="bb749.1.ms.04.04" justify="left">who pretends to be a modest (<physnumber>4</physnumber>) enquirer into the</l>
+                            <l n="bb749.1.ms.04.04" justify="left">who pretends to be a modest ( <physnumber>4</physnumber> ) enquirer into the</l>
                             <l n="bb749.1.ms.04.05" justify="left">truth of</l>
                             <l n="bb749.1.ms.04.06" justify="left">a self
                                 <choice>
