@@ -799,7 +799,10 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="2610,525 2550,4070 665,4025 620,510">
+                    <zone type="page-left" points="655,480 2525,525 2545,4010 690,4005">
+                        <texthead justify="left">
+                            <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>4</physnumber>)</l>
+                        </texthead>
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left">foolishness,&#8212;and that if the gospel be hid, it is hid to</l>
                             <l n="bb749.1.ms.04" justify="left">them that are lost." The consequence of your unbelief</l>
@@ -848,7 +851,7 @@
                             <l n="bb749.1.ms.04" indent="25"><catchword><choice><orig>ites</orig><reg>Israelites</reg></choice></catchword></l>
                         </textfoot>
                     </zone>
-                    <zone type="page-right" points="4740,485 4740,4065 2830,4035 2815,490">
+                    <zone type="page-right" points="4695,495 4725,3985 2860,3970 2845,500">
                         <texthead justify="left">
                             <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>5</physnumber>)</l>
                         </texthead>
@@ -902,7 +905,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2675,525 1760,495 1765,490 1435,495 1445,515 625,510 675,3990 2380,4020 2695,4350 2230,4455 2270,4590 135,4590 105,15 2655,45">
+                    <zone type="marginalia-1" points="2635,30 2645,525 585,460 670,4035 2640,4045 2640,4650 30,4660 25,30">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
                             <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="cancellation" extent="18" unit="character"/> they will <del type="overstrike">always be found</del></l>
@@ -951,7 +954,7 @@
                                 <note>Erdman reads "he" as an overwrite of "It" (614).</note></l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-2" points="2670,4625 2760,3970 3690,3990 3915,3975 3915,3980 4580,3975 4735,4080 4715,435 3655,385 3605,435 2725,445 2715,65 5285,50 5320,4650">
+                    <zone type="marginalia-2" points="5310,4665 2700,4645 2700,3990 4745,4015 4735,475 2685,480 2665,50 5300,35">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.31" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
                             <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in murd<unclear resp="KS">ering</unclear> so many thousands under</l>
