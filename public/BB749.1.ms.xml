@@ -991,11 +991,12 @@
                             <l n="bb749.1.ms.04.60" justify="left">&#38; deceit of</l>
                             <l n="bb749.1.ms.04.61" justify="left">the Jews &#38;</l>
                             <l n="bb749.1.ms.04.62" justify="left">were written</l>
+                            <l n="bb749.1.ms.04.62" justify="left"></l>
                             <l n="bb749.1.ms.04.63" justify="left">as an Example of the possibility of Human Beastliness</l>
                             <l n="bb749.1.ms.04.64" justify="left">in all its branches. Christ died as an Unbeliever &#38;
                                 <note>Erdman reads a period after "Unbeliever" (614).</note></l>
                             <l n="bb749.1.ms.04.65" justify="left" indent="40"><add type="instertion" place="supralinear">see page 1</add></l>
-                            <l n="bb749.1.ms.04.65" justify="left">if the Bishops had their will so would Paine but</l>
+                            <l n="bb749.1.ms.04.65" justify="left">if the Bishops had their will so would Paine <space extent="5"/>but</l>
                             <l n="bb749.1.ms.04.66" justify="left">he who speaks a word against the Son of man shall be forgiven</l>
                             <l n="bb749.1.ms.04.67" justify="left">let the Bishop prove that <del type="overstrike">the</del>
                                 <space extent="4" unit="character"/>he has not spoken against</l>
@@ -1369,6 +1370,8 @@
                                     <orig>versed</orig>
                                     <reg type="split_word">conversed</reg>
                                 </choice> with</l>
+                            <l n="bb749.1.ms.06.01" justify="left" indent="5"><add type="insertion" place="supralinear">Sta<unclear resp="ks">te</unclear></add></l>
+                            <l n="bb749.1.ms.06.01" justify="left">their own <del type="strikethrough">self</del></l>
                             <l n="bb749.1.ms.06.01" justify="left"><add type="insertion" place="supralinear">Religion</add></l>
                             <l n="bb749.1.ms.06.01" justify="left"><del type="strikethrough">will</del> which</l>
                             <l n="bb749.1.ms.06.01" justify="left">they 
@@ -1392,7 +1395,8 @@
                             <l n="bb749.1.ms.06.01" justify="left">of God. will</l>
                             <l n="bb749.1.ms.06.01" justify="left">be a lasting</l>
                             <l n="bb749.1.ms.06.01" justify="left">witness against</l>
-                            <l n="bb749.1.ms.06.01" justify="left">them, &#38; the</l>
+                            <l n="bb749.1.ms.06.01" justify="left">them, &#38; the
+                                <note>Erdman reads a period after "them" (615).</note></l>
                             <l n="bb749.1.ms.06.01" justify="left">same will it</l>
                             <l n="bb749.1.ms.06.01" justify="left">be <del type="cancellation">of</del> against</l>
                             <l n="bb749.1.ms.06.01" justify="left">Christians</l>
@@ -1410,7 +1414,7 @@
                                 <choice>
                                     <orig>calld</orig>
                                     <reg>called</reg>
-                                </choice>
+                                </choice>)
                                 Likewise Read Homers
                                 <note>Bentley reads "Read" as "read" (*Writings* volume 2, page 1413).</note></l>
                             <l n="bb749.1.ms.06.01" justify="left">Iliad. he was certainly a Savage. in the Bishops sense He</l>
@@ -1424,7 +1428,7 @@
                             <l n="bb749.1.ms.06.01" justify="left">The Bible or Word of God, Exclusive of Conscience or</l>
                             <l n="bb749.1.ms.06.01" justify="left">the Word of God Universal, is that Abomination which</l>
                             <l n="bb749.1.ms.06.01" justify="left">like the Jewish ceremonies is for ever removed &#38; henceforth</l>
-                            <l n="bb749.1.ms.06.01" justify="left">every man may converse with</l>
+                            <l n="bb749.1.ms.06.01" justify="left" indent="50">every man may converse with</l>
                             <l n="bb749.1.ms.06.01" justify="left">God &#38; be a</l>
                             <l n="bb749.1.ms.06.01" justify="left">King &#38; Priest</l>
                             <l n="bb749.1.ms.06.01" justify="left">in his own</l>
