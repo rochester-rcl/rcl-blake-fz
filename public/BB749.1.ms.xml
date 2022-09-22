@@ -957,7 +957,7 @@
                             <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in murd<unclear resp="KS">ering</unclear> so many thousands under</l>
                             <l n="bb749.1.ms.04.33" justify="left">pretence of a command from God is altogether Abominable &#38; Blasphemous
                                 <note>Erdman reads a period  after "Blasphemous" (614).</note></l>
-                            <l n="bb749.1.ms.04.34" justify="left" indent="50">Wherefore did</l>
+                            <l n="bb749.1.ms.04.34" justify="left" indent="60">Wherefore did</l>
                             <l n="bb749.1.ms.04.35" justify="left">Christ come</l>
                             <l n="bb749.1.ms.04.36" justify="left">was it not</l>
                             <l n="bb749.1.ms.04.37" justify="left">to abolish</l>
@@ -1017,7 +1017,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="2547,364 2606,4076 677,4070 700,364">
+                    <zone type="page-left" points="2560,455 2585,4055 715,4075 690,450">
                         <texthead justify="left">
                             <l n="bb749.1.ms.05" justify="left" indent="25">(<physnumber>6</physnumber>)</l>
                         </texthead>
@@ -1067,7 +1067,7 @@
                         </lg>
                         <textfoot><l n="bb749.1.ms.05" indent="25"><catchword>men,</catchword></l></textfoot>
                     </zone>
-                    <zone type="page-right" points="3683,364 3983,364 4000,505 4747,517 4835,4076 2941,4076 2883,523 3688,482">
+                    <zone type="page-right" points="4730,520 4795,3990 2930,3975 2895,540">
                         <texthead justify="left">
                             <l n="bb749.1.ms.05" justify="left" indent="25">(<physnumber>7</physnumber>)</l>
                         </texthead>
@@ -1121,13 +1121,13 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2659,47 2683,358 200,358 200,35">
+                    <zone type="marginalia-1" points="95,10 2650,40 2655,375 110,355">
                         <lg justify="left">
                             <l n="bb749.1.ms.05.01" justify="left">the Holy Ghost who in Paine strives with Christendom</l>
                             <l n="bb749.1.ms.05.02" justify="left">as in Christ he strove with the Jews</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-2" points="182,427 688,429 689,1915 153,1942">
+                    <zone type="marginalia-2" points="25,425 670,430 680,2510 20,2515">
                         <lg justify="left">
                             <l n="bb749.1.ms.05.03" justify="left">The Bible says</l>
                             <l n="bb749.1.ms.05.04" justify="left">that God formed</l>
@@ -1148,10 +1148,6 @@
                             <l n="bb749.1.ms.05.14" justify="left">who has the</l>
                             <l n="bb749.1.ms.05.15" justify="left">power of the</l>
                             <l n="bb749.1.ms.05.16" justify="left">air</l>
-                        </lg>
-                    </zone>
-                    <zone type="marginalia-3" points="168,1931 695,1921 679,2526 168,2536">
-                        <lg justify="left">
                             <l n="bb749.1.ms.05.17" justify="left">Natural Religion</l>
                             <l n="bb749.1.ms.05.18" justify="left">is the voice of</l>
                             <l n="bb749.1.ms.05.19" justify="left">God &#38; not</l>
@@ -1161,7 +1157,7 @@
                             <l n="bb749.1.ms.05.23" justify="left"><hr width="7" align="left"/></l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-4" points="677,3517 694,2535 153,2529 159,3529">
+                    <zone type="marginalia-3" points="15,2565 680,2555 685,3650 25,3660">
                         <lg justify="left">
                             <l n="bb749.1.ms.05.24" justify="left">Horrible</l>
                             <l n="bb749.1.ms.05.25" justify="left">the Bishop</l>
@@ -1173,7 +1169,7 @@
                             <l n="bb749.1.ms.05.31" justify="left">one nation</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-5" points="4824,3088 4741,523 4006,505 3971,364 3694,364 3647,482 2771,547 2747,11 5312,52 5335,3082">
+                    <zone type="marginalia-4" points="5385,40 5400,3080 4810,3085 4755,500 2690,505 2685,25">
                         <lg justify="left">
                             <l n="bb749.1.ms.05.32" justify="left">There is vast difference between an accident brought on by a mans own</l>
                             <l n="bb749.1.ms.05.33" justify="left">carlessness &#38; a destruction from the designs of another. The Earthquakes</l>
@@ -1216,7 +1212,7 @@
                             <l n="bb749.1.ms.05.59" justify="left"><hr width="5" align="left"/></l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-6" points="4834,4061 4822,3094 5395,3094 5378,4472 2678,4455 2678,4000">
+                    <zone type="marginalia-5" points="4835,4015 4810,3110 5410,3105 5415,4580 2630,4610 2630,3990">
                         <lg justify="left">
                             <l n="bb749.1.ms.05.60" justify="left">That mankind</l>
                             <l n="bb749.1.ms.05.61" justify="left">are in a less</l>
