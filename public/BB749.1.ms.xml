@@ -957,7 +957,7 @@
                             <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in murd<unclear resp="KS">ering</unclear> so many thousands under</l>
                             <l n="bb749.1.ms.04.33" justify="left">pretence of a command from God is altogether Abominable &#38; Blasphemous
                                 <note>Erdman reads a period  after "Blasphemous" (614).</note></l>
-                            <l n="bb749.1.ms.04.34" justify="left">Wherefore did</l>
+                            <l n="bb749.1.ms.04.34" justify="left" indent="50">Wherefore did</l>
                             <l n="bb749.1.ms.04.35" justify="left">Christ come</l>
                             <l n="bb749.1.ms.04.36" justify="left">was it not</l>
                             <l n="bb749.1.ms.04.37" justify="left">to abolish</l>
@@ -995,7 +995,7 @@
                             <l n="bb749.1.ms.04.64" justify="left">in all its branches. Christ died as an Unbeliever &#38;
                                 <note>Erdman reads a period after "Unbeliever" (614).</note></l>
                             <l n="bb749.1.ms.04.65" justify="left">if the Bishops had their will so would Paine 
-                                <add type="instertion" place="supralinear">see page 1</add> but</l>
+                                <add type="insertion" place="supralinear">see page 1</add> but</l>
                             <l n="bb749.1.ms.04.66" justify="left">he who speaks a word against the Son of man shall be forgiven</l>
                             <l n="bb749.1.ms.04.67" justify="left">let the Bishop prove that <del type="overstrike">the</del>
                                 <space extent="4" unit="character"/>he has not spoken against</l>
@@ -1124,7 +1124,7 @@
                     <zone type="marginalia-1" points="2659,47 2683,358 200,358 200,35">
                         <lg justify="left">
                             <l n="bb749.1.ms.05.01" justify="left">the Holy Ghost who in Paine strives with Christendom</l>
-                            <l n="bb749.1.ms.05.02" justify="left">as in the Christ he strove with the Jews</l>
+                            <l n="bb749.1.ms.05.02" justify="left">as in Christ he strove with the Jews</l>
                         </lg>
                     </zone>
                     <zone type="marginalia-2" points="182,427 688,429 689,1915 153,1942">
@@ -1178,14 +1178,20 @@
                             <l n="bb749.1.ms.05.32" justify="left">There is vast difference between an accident brought on by a mans own</l>
                             <l n="bb749.1.ms.05.33" justify="left">carlessness &#38; a destruction from the designs of another. The Earthquakes</l>
                             <l n="bb749.1.ms.05.34" justify="left">at Lisbon &#38; <hi rend="superscript">c</hi> 
-                                were the Natural result of Sin but the distruction of the</l>
-                            <l n="bb749.1.ms.05.35" justify="left">Canaanites by Joshua<space extent="5"/>was the Unnatural design of</l>
-                            <l n="bb749.1.ms.05.36" justify="left">wicked men/</l>
-                            <l n="bb749.1.ms.05.37" justify="left" indent="5">To</l>
+                                were the Natural result of Sin but the 
+                                <choice>
+                                    <orig>distruction</orig>
+                                    <reg>destruction</reg>
+                                </choice>
+                                    of the
+                            <note>Bentley reads Sin as "Si" and a comma after the word (*Writings* volume 2, page 1412). Erdman reads a period after "Sin" and reads distruction as "destruction" (615).</note></l>
+                            <l n="bb749.1.ms.05.35" justify="left">Canaanites by Joshua   ( <physnumber>7</physnumber> ) was the Unnatural design of</l>
+                            <l n="bb749.1.ms.05.36" justify="left">wicked men/To</l>
                             <l n="bb749.1.ms.05.38" justify="left">Extirpate a</l>
                             <l n="bb749.1.ms.05.39" justify="left">nation by means</l>
                             <l n="bb749.1.ms.05.40" justify="left">of another</l>
-                            <l n="bb749.1.ms.05.41" justify="left">ation is as</l>
+                            <l n="bb749.1.ms.05.41" justify="left">nation is as
+                                <note>Bentley omits the word "nation" from his reading (*Writings* volume 2, page 1412).</note></l>
                             <l n="bb749.1.ms.05.42" justify="left">wicked as to</l>
                             <l n="bb749.1.ms.05.43" justify="left">destroy an</l>
                             <l n="bb749.1.ms.05.44" justify="left">individual by</l>
@@ -1224,7 +1230,7 @@
                                 let all their works witness</l>
                             <l n="bb749.1.ms.05.69" justify="left">ine <del type="overstrike">the Deists</del>
                                 says that Christianity put a stop to improvement
-                                <note>Bentley assumes "ine" belongs to the word "Paine," obscured by the fold (*Writings* volume 2, page 1412).</note></l>
+                                <note> Erdman (615) and Bentley assume "ine" belongs to the word "Paine," obscured by the fold (*Writings* volume 2, page 1412).</note></l>
                             <l n="bb749.1.ms.05.70" justify="left">&#38; the Bishop has not 
                                 <choice>
                                     <orig>shewn</orig>
