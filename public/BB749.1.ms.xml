@@ -1489,7 +1489,7 @@
                                     <reg>humor</reg>
                                 </choice>.
                                 Is not this the Bishops</l>
-                            <l n="bb749.1.ms.06.01" justify="left">cloven foot. has he not
+                            <l n="bb749.1.ms.06.01" justify="left" indent="5">cloven foot. has he not
                                 <choice>
                                     <orig>spoild</orig>
                                     <reg>spoiled</reg>
@@ -1895,7 +1895,7 @@
                             <l n="bb749.1.ms.08.01" justify="left">the armies of Europe with a small pamphlet look over the</l>
                             <l n="bb749.1.ms.08.02" justify="left">events of your own life &#38; if you do not find that you have</l>
                             <l n="bb749.1.ms.08.03" justify="left">both done such miracles <space extent="5" unit="character"/>&#38; lived by such you do</l>
-                            <l n="bb749.1.ms.08.04" justify="left">not see</l>
+                            <l n="bb749.1.ms.08.04" justify="left" indent="45">not see</l>
                             <l n="bb749.1.ms.08.05" justify="left">as I do</l>
                             <l n="bb749.1.ms.08.06" justify="left">True I</l>
                             <l n="bb749.1.ms.08.07" justify="left">cannot do</l>
@@ -2117,7 +2117,7 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.09.01" justify="left">Nothing can be more contemptible than to suppose</l>
                             <l n="bb749.1.ms.09.02" justify="left">Public RECORDS to be True Read them &#38;</l>
-                            <l n="bb749.1.ms.09.03" justify="left">Judge if you</l>
+                            <l n="bb749.1.ms.09.03" justify="left" indent="45">Judge if you</l>
                             <l n="bb749.1.ms.09.04" justify="left">are not</l>
                             <l n="bb749.1.ms.09.05" justify="left">a Fool</l>
                         </lg>
@@ -3573,7 +3573,7 @@
                             <l n="bb749.1.ms.19.01" justify="left">This is No</l>
                             <l n="bb749.1.ms.19.02" justify="left">Certain</l>
                             <l n="bb749.1.ms.19.03" justify="left">Fact</l>
-                            <l n="bb749.1.ms.19.04" justify="left">Presumption is no Proof</l>
+                            <l n="bb749.1.ms.19.04" justify="left" indent="30">Presumption is no Proof</l>
                         </lg>
                     </zone>
                 </zone>                      
