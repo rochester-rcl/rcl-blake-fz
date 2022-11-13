@@ -40,10 +40,10 @@ function getTextPosition(xml, nodeKey, textKey) {
       if (node.nodeName === nodeKey) {
         let t = Array.from(node.childNodes).find((c) => c.nodeName === textKey);
         if (t) {
-          text += t.textContent;
+          text += ` ${t.textContent.trim()}`;
         }
       } else {
-        text += node.textContent;
+        text += ` ${node.textContent.trim()}`;
       }
     }
     // get text index based on all previous nodes

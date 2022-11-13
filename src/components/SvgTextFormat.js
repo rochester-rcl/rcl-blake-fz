@@ -455,6 +455,7 @@ export function Background(props) {
 
           let pos = computeTextPosition(text, textRef, node);
           if (pos) {
+            
             return <Component {...pos} node={node} textRef={textRef} />;
           } else {
             // node has no text position i.e. a gap, try to get the offset from the previous node
