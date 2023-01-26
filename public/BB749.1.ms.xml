@@ -2788,7 +2788,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="1720,450 1710,80 270,100 300,480">
+                    <zone type="marginalia-1" points="1740,70 1740,340 170,340 100,70">
                         <lg justify="left">
                             <l n="bb749.1.ms.13.01" justify="left">is the Source of all Cruelty</l>
                         </lg>
@@ -2935,7 +2935,7 @@
                             <l n="bb749.1.ms.14.04" justify="left">Consequence</l>
                             <l n="bb749.1.ms.14.05" justify="left">to a Question</l>
                             <l n="bb749.1.ms.14.06" justify="left">Downright</l>
-                            <l n="bb749.1.ms.14.07" justify="left" indent="35">Plain</l>
+                            <l n="bb749.1.ms.14.07" justify="left" indent="55">Plain</l>
                             <l n="bb749.1.ms.14.08" justify="left">Truth is something but Reasoning is Nothing</l>
                         </lg> 
                     </zone>
@@ -3193,15 +3193,25 @@
                 <zone type="Blake">
                     <zone type="marginalia-1" points="82,81 82,1727 582,1737 546,563 2491,554 2555,81">
                         <lg justify="left">
-                            <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that thereisaGod of</l>
-                            <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/> <choice><orig>Worshipd</orig><reg>Worshiped</reg></choice> in this</l>
-                            <l n="bb749.1.ms.16.03" justify="left">World</l>
-                            <l n="bb749.1.ms.16.04" justify="left">as God</l>
-                            <l n="bb749.1.ms.16.05" justify="left">&#38; Set</l>
-                            <l n="bb749.1.ms.16.06" justify="left">above</l>
-                            <l n="bb749.1.ms.16.07" justify="left">all that</l>
-                            <l n="bb749.1.ms.16.08" justify="left">is <choice><orig>calld</orig><reg>called</reg></choice></l>
-                            <l n="bb749.1.ms.16.09" justify="left">God</l>
+                            <handShift medium="pencil">
+                                <l n="bb749.1.ms.16.01" justify="left" indent="1">They seem to Forget that thereisaGod of</l>
+                                <l n="bb749.1.ms.16.02" justify="left">This World, A God <space extent="5"/>
+                                    <choice>
+                                        <orig>Worshipd</orig>
+                                        <reg>Worshiped</reg>
+                                    </choice> in this</l>
+                                <l n="bb749.1.ms.16.03" justify="left">World</l>
+                                <l n="bb749.1.ms.16.04" justify="left">as God</l>
+                                <l n="bb749.1.ms.16.05" justify="left">&#38; Set</l>
+                                <l n="bb749.1.ms.16.06" justify="left">above</l>
+                                <l n="bb749.1.ms.16.07" justify="left">all that</l>
+                                <l n="bb749.1.ms.16.08" justify="left">is 
+                                    <choice>
+                                        <orig>calld</orig>
+                                        <reg>called</reg>
+                                    </choice></l>
+                                <l n="bb749.1.ms.16.09" justify="left">God</l>
+                            </handShift>
                         </lg>
                     </zone>
                     <zone type="marginalia-2" points="4663,3227 5264,3218 5236,4245 4582,4245">
@@ -3341,9 +3351,11 @@
                         <l n="bb749.1.ms.17.01" justify="left">Hartley</l>
                         <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
                         <l n="bb749.1.ms.17.03" justify="left">Judgement</l>
-                        <l n="bb749.1.ms.17.04" justify="left">then Judgement</l>
+                        <l n="bb749.1.ms.17.04" justify="left">then Judgement
+                            <note>Bentley reads "Then" for "then" (*Writings* volume 2, page 1421).</note></l>
                         <l n="bb749.1.ms.17.05" justify="left">was a Fool</l>
-                        <l n="bb749.1.ms.17.06" justify="left">what Nonsense</l>
+                        <l n="bb749.1.ms.17.06" justify="left">what Nonsense
+                            <note>Bentley reads "What" for "what" (*Writings* volume 2, page 1421).</note></l>
                     </lg>                       
                 </zone>              
             </zone>          
@@ -3611,15 +3623,19 @@
                 <zone type="Blake">                   
                     <zone type="marginalia-1" points="5063,2617 5428,2612 5427,2786 5062,2790">                       
                         <lg justify="left" >
-                            <l n="bb749.1.ms.19.01" justify="left">A:D:150</l>
+                            <handShift medium="pencil">
+                                <l n="bb749.1.ms.19.01" justify="left">A:D:150</l>
+                            </handShift>
                         </lg>
                     </zone>                    
                     <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
                         <lg justify="left">
-                            <l n="bb749.1.ms.19.01" justify="left">This is No</l>
-                            <l n="bb749.1.ms.19.02" justify="left">Certain</l>
-                            <l n="bb749.1.ms.19.03" justify="left">Fact</l>
-                            <l n="bb749.1.ms.19.04" justify="left" indent="20">Presumption is no Proof</l>
+                            <handShift medium="pencil">
+                                <l n="bb749.1.ms.19.01" justify="left">This is No</l>
+                                <l n="bb749.1.ms.19.02" justify="left">Certain</l>
+                                <l n="bb749.1.ms.19.03" justify="left">Fact</l>
+                                <l n="bb749.1.ms.19.04" justify="left" indent="20">Presumption is no Proof</l>
+                            </handShift>
                         </lg>
                     </zone>
                 </zone>                      
@@ -3747,7 +3763,7 @@
                     <zone type="marginalia-1" points="39,3935 512,3955 515,2081 49,2088">
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">The Gospel</l>
-                            <l n="bb749.1.ms.20.02" justify="left">is Forgiv<unclear>ene</unclear>ss</l>
+                            <l n="bb749.1.ms.20.02" justify="left">is Forgiv<unclear resp="KS">ene</unclear>ss</l>
                             <l n="bb749.1.ms.20.03" justify="left">of Sins &#38;</l>
                             <l n="bb749.1.ms.20.04" justify="left">has No</l>
                             <l n="bb749.1.ms.20.05" justify="left">Moral</l>
@@ -3761,9 +3777,9 @@
                     </zone>
                     <zone type="marginalia-2" points="3016,2406 3246,2946 2770,2986 2766,2400">
                         <lg justify="left">
-                            <l n="bb749.1.ms.20.01" justify="left">O Fool</l>
+                            <l n="bb749.1.ms.20.01" justify="left">OFool</l>
                             <l n="bb749.1.ms.20.02" justify="left">Slight</l>
-                            <l n="bb749.1.ms.20.03" justify="left">Hypo<unclear>cri</unclear>te</l>
+                            <l n="bb749.1.ms.20.03" justify="left">Hypo<unclear resp="KS">cri</unclear>te</l>
                             <l n="bb749.1.ms.20.04" justify="left">&#38; Villain</l>
                         </lg> 
                     </zone>
@@ -3777,7 +3793,8 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">Yes I</l> 
                             <l n="bb749.1.ms.20.02" justify="left">have no</l>
-                            <l n="bb749.1.ms.20.03" justify="left">doubt he</l>
+                            <l n="bb749.1.ms.20.03" justify="left">Doubt he
+                                <note>Bentley reads "doubt" for "Doubt" (*Writings* volume 2, page 1423).</note></l>
                             <l n="bb749.1.ms.20.04" justify="left">Did</l>
                         </lg> 
                     </zone>
@@ -4046,7 +4063,7 @@
                             <l n="bb749.1.ms.22.02" justify="left">to Do Good</l>
                             <l n="bb749.1.ms.22.03" justify="left">or to do Evil</l>
                             <l n="bb749.1.ms.22.04" justify="left">who Dare
-                                <note>Bentley (*Writings* volume 2, page 1423) reads "Who" for "who".</note></l>
+                                <note>Bentley reads "Who" for "who"(*Writings* volume 2, page 1423).</note></l>
                             <l n="bb749.1.ms.22.05" justify="left">to Judge</l>
                             <l n="bb749.1.ms.22.06" justify="left">but God</l>
                             <l n="bb749.1.ms.22.07" justify="left">alone</l>
@@ -4055,7 +4072,7 @@
                     <zone type="marginalia-2" points="45,4420 2550,4450 2545,4085 470,4120 465,2915 55,2940">
                         <lg justify="left">
                             <l n="bb749.1.ms.22.01" justify="left">Who does</l>
-                            <l n="bb749.1.ms.22.02" justify="left">the Bis<unclear resp="OS">h</unclear>op</l>
+                            <l n="bb749.1.ms.22.02" justify="left">the Bishop</l>
                             <l n="bb749.1.ms.22.03" justify="left">call Bad</l>
                             <l n="bb749.1.ms.22.04" justify="left">Men</l>
                             <l n="bb749.1.ms.22.05" justify="left">Are they</l>
@@ -4063,8 +4080,9 @@
                             <l n="bb749.1.ms.22.07" justify="left">&#38; Sinners</l>
                             <l n="bb749.1.ms.22.08" justify="left">that Christ</l>
                             <l n="bb749.1.ms.22.09" justify="left">loved to</l>
-                            <l n="bb749.1.ms.22.10" justify="left">associate with Does God Love the Rig<unclear resp="OS">h</unclear>teous according</l>
-                            <l n="bb749.1.ms.22.11" justify="left">to the Gospel or does he <unclear resp="OS">c</unclear>ast them off</l>
+                            <l n="bb749.1.ms.22.10" justify="left">associate with Does God Love the R<unclear resp="KS">ighteous</unclear> according</l>
+                            <l n="bb749.1.ms.22.11" justify="left">to the Gospel or does he not cast them off
+                                <note>Bentley reads "does he cast them off" (*Writings* volume 2, page 1423).</note></l>
                         </lg>
                     </zone>
                     <zone type="marginalia-3" points="2927,91 5273,64 5255,300 2936,282">
@@ -4146,7 +4164,11 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.23.01" justify="left">I have read this Book with attention &#38; find that the Bishop</l>
                             <l n="bb749.1.ms.23.02" justify="left">has only hurt Paines heel while Paine has broken his head</l>
-                            <l n="bb749.1.ms.23.03" justify="left">the Bishop has not <choice><orig>answerd</orig><reg>answered</reg></choice> one of Paines grand objections</l>
+                            <l n="bb749.1.ms.23.03" justify="left">the Bishop has not 
+                                <choice>
+                                    <orig>answerd</orig>
+                                    <reg>answered</reg>
+                                </choice> one of Paines grand objections</l>
                         </lg>
                     </zone>    
                 </zone>  
