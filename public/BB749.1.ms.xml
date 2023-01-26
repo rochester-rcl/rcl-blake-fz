@@ -2312,10 +2312,12 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.10.01" justify="left">If historical facts can be written by inspiration Miltons Paradise</l>
                             <l n="bb749.1.ms.10.02" justify="left">Lost is as true as Genesis or Exodus. but the Evidence is</l>
-                            <l n="bb749.1.ms.10.03" justify="left">nothing for how can he who <space extent="6" unit="character"/><gapt type="cancellation" extent="2" unit="character"/>writes what he has</l>
+                                <note>Bentley reads the period as a semi-colon (*Writings* volume 2, page 1418).</note>
+                            <l n="bb749.1.ms.10.03" justify="left">nothing for how can he who <space extent="6" unit="character"/><gap type="cancellation" extent="2" unit="character"/>writes what he has</l>
                             <l n="bb749.1.ms.10.04" justify="left">neither seen</l>
                             <l n="bb749.1.ms.10.05" justify="left">nor heard</l>
                             <l n="bb749.1.ms.10.06" justify="left">of. be an</l>
+                                <note>Bentley does not read a period after "of" (*Writings* volume 2, page 1418).</note>
                             <l n="bb749.1.ms.10.07" justify="left">Evidence</l>
                             <l n="bb749.1.ms.10.08" justify="left">of The</l>
                             <l n="bb749.1.ms.10.09" justify="left">Truth of</l>
@@ -2451,7 +2453,7 @@
                 <zone type="Blake">
                     <zone type="marginalia-1" points="2855,640 845,620 850,4000 2840,3985 2840,4535 450,4590 415,70 2870,25">
                         <lg justify="left">
-                            <l n="bb749.1.ms.11.01" justify="left"><add type="insertion" place="supralinear">books in the</add></l>
+                            <l n="bb749.1.ms.11.01" justify="left" indent="35"><add type="insertion" place="supralinear">books in the</add></l>
                             <l n="bb749.1.ms.11.02" justify="left">I cannot concieve the Divinity of the <add type="insertion" place="inline">^</add> Bible to consist</l>
                             <l n="bb749.1.ms.11.03" justify="left">either in who they were written by or at what time or</l>
                             <l n="bb749.1.ms.11.04" justify="left">in the historical evidence (<physnumber>22</physnumber>) which may be all</l>
@@ -2459,8 +2461,16 @@
                             <l n="bb749.1.ms.11.06" justify="left">but in the</l>
                             <l n="bb749.1.ms.11.07" justify="left">Sentiments</l>
                             <l n="bb749.1.ms.11.08" justify="left">&#38; Examples</l>
-                            <l n="bb749.1.ms.11.09" justify="left">which <choice><orig>whe-</orig><reg type="split_word">whether</reg></choice></l>
-                            <l n="bb749.1.ms.11.10" justify="left"><choice><orig>ther</orig><reg>whether</reg></choice> true</l>
+                            <l n="bb749.1.ms.11.09" justify="left">which 
+                                <choice>
+                                    <orig>whe-</orig>
+                                    <reg type="split_word">whether</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.11.10" justify="left">
+                                <choice>
+                                    <orig>ther</orig>
+                                    <reg>whether</reg>
+                                </choice> true</l>
                             <l n="bb749.1.ms.11.11" justify="left">or Parabolic</l>
                             <l n="bb749.1.ms.11.12" justify="left">are Equally</l>
                             <l n="bb749.1.ms.11.13" justify="left">useful as</l>
@@ -2469,12 +2479,28 @@
                             <l n="bb749.1.ms.11.16" justify="left">us of the</l>
                             <l n="bb749.1.ms.11.17" justify="left">perverseness</l>
                             <l n="bb749.1.ms.11.18" justify="left">of some</l>
-                            <l n="bb749.1.ms.11.19" justify="left">&#38; its <choice><orig>conse</orig><reg type="split_word">consequent</reg></choice></l>
-                            <l n="bb749.1.ms.11.20" justify="left"><choice><orig>quent</orig><reg>consequent</reg></choice> evil</l>
+                            <l n="bb749.1.ms.11.19" justify="left">&#38; its 
+                                <choice>
+                                    <orig>conse</orig>
+                                    <reg type="split_word">consequent</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.11.20" justify="left">
+                                <choice>
+                                    <orig>quent</orig>
+                                    <reg>consequent</reg>
+                                </choice> evil</l>
                             <l n="bb749.1.ms.11.21" justify="left">&#38; the honesty</l>
                             <l n="bb749.1.ms.11.22" justify="left">of others &#38;</l>
-                            <l n="bb749.1.ms.11.23" justify="left">its <choice><orig>conse</orig><reg type="split_word">consequent</reg></choice></l>
-                            <l n="bb749.1.ms.11.24" justify="left"><choice><orig>quent</orig><reg>consequent</reg></choice> good</l>
+                            <l n="bb749.1.ms.11.23" justify="left">its 
+                                <choice>
+                                    <orig>conse</orig>
+                                    <reg type="split_word">consequent</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.11.24" justify="left">
+                                <choice>
+                                    <orig>quent</orig>
+                                    <reg>consequent</reg>
+                                </choice> good</l>
                             <l n="bb749.1.ms.11.25" justify="left">This sense</l>
                             <l n="bb749.1.ms.11.26" justify="left">of the Bible</l>
                             <l n="bb749.1.ms.11.27" justify="left">is equally</l>
@@ -2483,8 +2509,16 @@
                             <l n="bb749.1.ms.11.30" justify="left">plain to</l>
                             <l n="bb749.1.ms.11.31" justify="left">all. none</l>
                             <l n="bb749.1.ms.11.32" justify="left">can doubt</l>
-                            <l n="bb749.1.ms.11.33" justify="left">the <choice><orig>im</orig><reg type="split_word">impression</reg></choice></l>
-                            <l n="bb749.1.ms.11.34" justify="left"><choice><orig>pression</orig><reg>impression</reg></choice></l>
+                            <l n="bb749.1.ms.11.33" justify="left">the 
+                                <choice>
+                                    <orig>im</orig>
+                                    <reg type="split_word">impression</reg>
+                                </choice></l>
+                            <l n="bb749.1.ms.11.34" justify="left">
+                                <choice>
+                                    <orig>pression</orig>
+                                    <reg>impression</reg>
+                                </choice></l>
                             <l n="bb749.1.ms.11.35" justify="left">which he</l>
                             <l n="bb749.1.ms.11.36" justify="left">recieves from a book Examples. If he is good</l>
                             <l n="bb749.1.ms.11.37" justify="left">he will abhor wickedness in David or Abraham if he</l>
@@ -2629,7 +2663,7 @@
                             <l n="bb749.1.ms.12.01" justify="left" indent="1">The laws of the Jews were (both ceremonial &#38; real) the basest</l>
                             <l n="bb749.1.ms.12.02" justify="left">&#38; most oppressive of human codes. &#38; being like all other codes given</l>
                             <l n="bb749.1.ms.12.03" justify="left">under pretence of divine command were what Christ pronounced them</l>
-                            <l n="bb749.1.ms.12.04" justify="left">the Abomination that maketh desolate, i.e State Religion which</l>
+                            <l n="bb749.1.ms.12.04" justify="left">The Abomination that maketh desolate, i.e State Religion which</l>
                         </lg>
                     </zone>
                 </zone>
@@ -2638,7 +2672,7 @@
         <desc id="bb749.1.ms.13" dbi="BB749.1.26+27.MS">
             <objtitle>
                 <objid>
-                    <objnumber code="A13">Object 13 </objnumber>
+                    <objnumber code="A13">Object 13</objnumber>
                     <objcode code="B13">(Bentley 749.13)</objcode>
                 </objid>
             </objtitle>
@@ -2754,7 +2788,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="1646,60 1606,293 386,306 400,66">
+                    <zone type="marginalia-1" points="1720,450 1710,80 270,100 300,480">
                         <lg justify="left">
                             <l n="bb749.1.ms.13.01" justify="left">is the Source of all Cruelty</l>
                         </lg>
@@ -2882,7 +2916,7 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.14.01" justify="left">Hundreds or</l>
                             <l n="bb749.1.ms.14.02" justify="left">Thousands</l>
-                            <l n="bb749.1.ms.14.03" justify="left">of Year<unclear resp="OS">s</unclear><note></note></l>
+                            <l n="bb749.1.ms.14.03" justify="left">of Year<unclear resp="OS">s</unclear></l>
                             <l n="bb749.1.ms.14.04" justify="left">O very fine</l>
                             <l n="bb749.1.ms.14.05" justify="left">Records</l>
                             <l n="bb749.1.ms.14.06" justify="left">as if he</l>
@@ -4011,7 +4045,8 @@
                             <l n="bb749.1.ms.22.01" justify="left">Do or Act</l>
                             <l n="bb749.1.ms.22.02" justify="left">to Do Good</l>
                             <l n="bb749.1.ms.22.03" justify="left">or to do Evil</l>
-                            <l n="bb749.1.ms.22.04" justify="left">who Dare<note>Bentley (*Writings* volume 2, page 1423) reads "Who" for "who".</note></l>
+                            <l n="bb749.1.ms.22.04" justify="left">who Dare
+                                <note>Bentley (*Writings* volume 2, page 1423) reads "Who" for "who".</note></l>
                             <l n="bb749.1.ms.22.05" justify="left">to Judge</l>
                             <l n="bb749.1.ms.22.06" justify="left">but God</l>
                             <l n="bb749.1.ms.22.07" justify="left">alone</l>
