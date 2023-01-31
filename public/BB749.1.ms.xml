@@ -256,8 +256,8 @@
                             <l n="bb749.1.ms.01.16" justify="left" indent="3">Read patiently take not up this Book in an idle</l>
                             <l n="bb749.1.ms.01.17" justify="left">hour the consideration of these things is the <gap reason="cancellation" extent="4" unit="character"/></l>
                             <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
-                            <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="infralinear">^</add>
-                                <add place="supralinear">But</add> these considerations
+                            <l n="bb749.1.ms.01.19" justify="left" indent="40"><add place="supralinear">But</add></l>
+                            <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="infralinear">^</add>these considerations
                                 <note>Bentley notes that the words "are the" have been omitted here (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.20" justify="left">business of Eternity</l>
                             <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
@@ -4063,7 +4063,7 @@
                             <l n="bb749.1.ms.22.03" justify="left">call Bad</l>
                             <l n="bb749.1.ms.22.04" justify="left">Men</l>
                             <l n="bb749.1.ms.22.05" justify="left">Are they</l>
-                            <l n="bb749.1.ms.22.06" justify="left">the Publica<unclear resp="OS">ns</unclear></l>
+                            <l n="bb749.1.ms.22.06" justify="left">the Public<unclear resp="KS">ans</unclear></l>
                             <l n="bb749.1.ms.22.07" justify="left">&#38; Sinners</l>
                             <l n="bb749.1.ms.22.08" justify="left">that Christ</l>
                             <l n="bb749.1.ms.22.09" justify="left">loved to</l>
@@ -4143,7 +4143,7 @@
                     <zone type="marginalia-1" points="2843,73 2833,453 373,436 373,43">
                         <lg justify="left">
                             <l n="bb749.1.ms.23.01" justify="left">It appears to me Now that Tom Paine is a</l>
-                            <l n="bb749.1.ms.23" justify="left" indent="25">(<physnumber>120</physnumber>)</l>
+                            <l n="bb749.1.ms.23" justify="left" indent="30">(<physnumber>120</physnumber>)</l>
                             <l n="bb749.1.ms.23.02" justify="left">better Christian than the Bishop</l>
                         </lg>
                     </zone>                      
