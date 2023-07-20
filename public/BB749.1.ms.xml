@@ -3601,9 +3601,7 @@
                 <zone type="Blake">                   
                     <zone type="marginalia-1" points="5063,2617 5428,2612 5427,2786 5062,2790">                       
                         <lg justify="left" >
-                            <handShift medium="pencil">
-                                <l n="bb749.1.ms.19.01" justify="left">A:D:150</l>
-                            </handShift>
+                            <l n="bb749.1.ms.19.01" justify="left"><hi rend="handshift">A:D:150</hi></l>
                         </lg>
                     </zone>                    
                     <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
