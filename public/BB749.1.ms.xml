@@ -339,7 +339,7 @@
                             <l n="bb749.1.ms.02" justify="left">in June, 1791. Price 1s.</l>
                         </lg>
                     </zone>
-                    <zone type="page-right" points="4725,1035 4730,4100 2845,4060 2855,1050">
+                    <zone type="page-right" points="4765,1095 4720,4160 2690,4160 2690,1060">
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left">I HAVE lately met with a book of your's, entitled&#8212;</l>
                             <l n="bb749.1.ms.02" justify="left">THE AGE OF REASON, part the second, being an</l>
@@ -430,7 +430,7 @@
                             <l n="bb749.1.ms.02.01" justify="left">Achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
                             <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops LETTER I. If such is the</l>
                             <l n="bb749.1.ms.02.03" justify="left">characteristic of a modern polite gentleman we may</l>
-                            <l n="bb749.1.ms.02.04" justify="left" indent="5">SIR,<space extent="10" unit="character"/> hope to see Christs discourses<choice><orig>Expung'd</orig><reg>Expunged</reg></choice></l>
+                            <l n="bb749.1.ms.02.04" justify="left" indent="5">SIR, <space extent="10" unit="character"/>hope to see Christs discourses<choice><orig>Expung'd</orig><reg>Expunged</reg></choice></l>
                         </lg>
                     </zone>
                     <zone type="marginalia-5" points="5370,745 5350,1370 4745,1365 4740,735">
@@ -462,7 +462,7 @@
                             <l n="bb749.1.ms.02.03" justify="left">Detraction</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-9" points="4760,2965 4715,3755 5375,3775 5380,2975">
+                    <zone type="marginalia-9" points="5410,2925 5420,3945 4732,3927 4745,2915">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Presumptuous</l>
                             <l n="bb749.1.ms.02.02" justify="left">Murderer
@@ -473,7 +473,7 @@
                             <l n="bb749.1.ms.02.06" justify="left">has preserved him</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-10" points="2785,4055 5305,4095 5290,4600 2775,4585">
+                    <zone type="marginalia-10" points="5355,4185 5395,4650 2690,4665 2680,4175">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left" indent="1">M<hi rend="superscript">r</hi> Paine has not extinguished &#38; cannot Extinguish Moral</l>
                             <l n="bb749.1.ms.02.02" justify="left">rectitude. he has Extinguished Superstition which took the</l>
