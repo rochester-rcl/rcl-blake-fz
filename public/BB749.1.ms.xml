@@ -277,7 +277,7 @@
             </physdesc>
             <phystext>   
                 <zone type="original">
-                    <zone type="page-left" points="605,425 2627,445 2636,4036 645,4030">
+                    <zone type="page-left" points="2778,376 2837,4031 673,4044 614,413">
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left" indent="3"><hi rend="i">Lately Published, Price Two Shillings,</hi></l>
                             <vspace extent="1"/>
@@ -464,7 +464,7 @@
                             <l n="bb749.1.ms.02.06" justify="left">has preserved him</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-10" points="2785,4055 5305,4095 5290,4600 2775,4585">
+                    <zone type="marginalia-10" points="5355,4185 5395,4650 2690,4665 2680,4175">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left" indent="1">M<hi rend="superscript">r</hi> Paine has not extinguished &#38; cannot Extinguish Moral</l>
                             <l n="bb749.1.ms.02.02" justify="left">rectitude. he has Extinguished Superstition which took the</l>
@@ -642,17 +642,8 @@
                   <l n="bb749.1.ms.03.29" justify="left"><hr width="45" align="left" indent="2"/></l>
                   <l n="bb749.1.ms.03.30" justify="left">Conscience in those that have it is unequivocal, it is the voice</l>
                   <l n="bb749.1.ms.03.31" justify="left">of God Our judgment of right &#38; wrong is Reason I believe</l>
-                  <l n="bb749.1.ms.03.32" justify="left">that the Bishop
-                     <choice>
-                        <orig>laught</orig>
-                        <reg>laughed</reg>
-                     </choice>
-                     at the Bible in his 
-                      <choice>
-                          <orig>slieve</orig>
-                          <reg>sleeve</reg>
-                      </choice> 
-                      &#38; so did</l>
+                  <l n="bb749.1.ms.03.32" justify="left">that the Bishop <choice><orig>laught</orig><reg>laughed</reg></choice> 
+                      at the Bible in his <choice><orig>slieve</orig><reg>sleeve</reg></choice>&#38; so did</l>
                   <l n="bb749.1.ms.03.33" justify="left" indent="20"><unclear resp="KS">Locke</unclear></l>
                </lg>
             </zone>
@@ -3601,9 +3592,7 @@
                 <zone type="Blake">                   
                     <zone type="marginalia-1" points="5063,2617 5428,2612 5427,2786 5062,2790">                       
                         <lg justify="left" >
-                            <handShift medium="pencil">
-                                <l n="bb749.1.ms.19.01" justify="left">A:D:150</l>
-                            </handShift>
+                            <l n="bb749.1.ms.19.01" justify="left"><hi rend="handshift">A:D:150</hi></l>
                         </lg>
                     </zone>                    
                     <zone type="marginalia-2" points="3925,4000 3916,4237 5510,4216 5491,3514 5054,3522 5066,3952">
