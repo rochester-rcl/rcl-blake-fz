@@ -94,25 +94,16 @@
         </revisiondesc>
                 <sponsor>The Library of Congress, the University of North Carolina at Chapel Hill
                     and the University of Rochester</sponsor>
-                <funder>The National Endowment for the Humanities, 2010-2013</funder>
-                <funder>Institute for Advanced Technology in the Humanities, University of Virginia,
-                    1995-2007</funder>
-                <funder>The National Endowment for the Humanities, 2000-02</funder>
-                <funder>Paul Mellon Centre for Studies in British Art, 1997-98</funder>
-                <funder>Inso Corporation (now Enigma Corporation), software grant,
-                    1996-2006</funder>
-                <funder>Sun Microsystems, hardware and software grants, 1996-2006</funder>
-                <funder>The Getty Grant Program, 1995-98</funder> 
     </header>
     <objdesc>
         <source>
             <objdescid>
                 <objtitle>
                     <title type="transcribed">
-                        <hi rend="i">Books Owned, Watson</hi>
+                        *Books Owned, Watson*
                     </title>
                 </objtitle>
-                <origination>William Blake <role>author</role>. </origination>
+                <origination>William Blake <role>author</role> </origination>
                 <imprint>
                     <publisher>Not Published</publisher>
                     <pubplace>London?</pubplace>
