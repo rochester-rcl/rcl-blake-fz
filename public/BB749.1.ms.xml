@@ -768,7 +768,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="655,480 2525,525 2545,4010 690,4005">
+                    <zone type="page-left" points="620,4065 2601,4091 2560,470 600,455">
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left">foolishness,&#8212;and that if the gospel be hid, it is hid to</l>
                             <l n="bb749.1.ms.04" justify="left">them that are lost." The consequence of your unbelief</l>
@@ -817,7 +817,7 @@
                             <l n="bb749.1.ms.04" indent="25"><catchword><choice><orig>ites</orig><reg>Israelites</reg></choice></catchword></l>
                         </textfoot>
                     </zone>
-                    <zone type="page-right" points="4695,495 4725,3985 2860,3970 2845,500">
+                    <zone type="page-right" points="4773,392 4809,4019 2773,3973 2782,437">
                         <texthead justify="left">
                             <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>5</physnumber>)</l>
                         </texthead>
@@ -871,7 +871,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2635,30 2635,455 560,445 585,4045 2640,4045 2640,4650 30,4660 25,30">
+                    <zone type="marginalia-1" points="655,4073 2655,4127 2637,4600 109,4627 146,55 2637,46 2646,491 637,500">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
                             <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="cancellation" extent="18" unit="character"/> they will <del type="overstrike">always be found</del></l>
@@ -920,7 +920,7 @@
                                 <note>Erdman reads "he" as an overwrite of "It" (614).</note></l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-2" points="5310,4665 2700,4645 2700,3990 4745,4015 4735,475 2685,480 2665,50 5300,35">
+                    <zone type="marginalia-2" points="2754,4000 2709,4600 5309,4672 5282,45 2745,27 2745,482 4800,436 4791,4054">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.31" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
                             <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in murd<unclear resp="KS">ering</unclear> so many thousands under</l>
