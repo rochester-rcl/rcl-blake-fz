@@ -4,6 +4,7 @@ import shortid from "shortid";
 const DelTypes = {
   erasure: "erasure",
   overwrite: "overwrite",
+  wash: "wash",
 };
 
 const BackgroundColors = {
@@ -125,13 +126,42 @@ export function Hi(props) {
 
 export function Add(props) {
   const { add } = props;
-  if (add.attributes && add.attributes.place === "supralinear") {
-    return (
-      <tspan baselineShift="super" fill={TextColors.add}>
-        {add["#text"]}
-      </tspan>
-    );
+
+  const symbolsMap = {
+    caret: "^",
+    asterisk: "*",
+    line: "__",
+    other: ""
   }
+
+  const symbol = React.useMemo(() => {
+    if (add.attributes) {
+      return symbolsMap[add.attributes.symbol] || "";
+    }
+  }, [add.attributes]);
+
+  if (add.attributes) {
+    if (add.attributes.place === "supralinear") {
+      return (
+        <tspan baselineShift="super" fill={TextColors.add}>
+          {symbol}{add["#text"]}
+        </tspan>
+      );
+    } else if (add.attributes.place === "infralinear") {
+      return (
+        <tspan baselineShift="sub" fill={TextColors.add}>
+          {symbol}{add["#text"]}
+        </tspan>
+      );
+    } else if (add.attributes.place === "interlinear") {
+      return (
+        <tspan baselineShift="0%" fill={TextColors.add}>
+          {symbol}{add["#text"]}
+        </tspan>
+      );
+    }
+  }
+
   return (
     <tspan>
       <tspan fill={TextColors.add}>{add["#text"]}</tspan>
@@ -171,7 +201,7 @@ export function Del(props) {
 function DelBackground(props) {
   const { x, y, w, h, node } = props;
   const delType = node.attributes ? node.attributes.type : DelTypes.overwrite;
-  if (delType === DelTypes.erasure) {
+  if (delType === DelTypes.erasure || delType === DelTypes.wash) {
     return (
       <rect x={x} y={y} width={w} height={h} fill={BackgroundColors.erasure} />
     );
@@ -356,7 +386,12 @@ function computeTextPosition(text, textRef, node) {
     const { x, y, height } = textRef.getBBox();
     if (node && node.textPosition !== undefined) {
       let extent = textRef.getExtentOfChar(text[0]).width;
-      return { x: x + extent * node.textPosition, y, w: extent * text.length, h: height };
+      return {
+        x: x + extent * node.textPosition,
+        y,
+        w: extent * text.length,
+        h: height,
+      };
     }
     const start = textContent.indexOf(text);
     const end = textContent.indexOf(text) + text.length - 1;
@@ -429,9 +464,8 @@ export function Background(props) {
               }
               return (
                 <Component
-                  key={`text-${pos ? pos.x : shortid.generate()}-${
-                    pos ? pos.y : shortid.generate()
-                  }`}
+                  key={`text-${pos ? pos.x : shortid.generate()}-${pos ? pos.y : shortid.generate()
+                    }`}
                   {...pos}
                   node={prop}
                   line={line}
@@ -455,7 +489,6 @@ export function Background(props) {
 
           let pos = computeTextPosition(text, textRef, node);
           if (pos) {
-            
             return <Component {...pos} node={node} textRef={textRef} />;
           } else {
             // node has no text position i.e. a gap, try to get the offset from the previous node
@@ -464,8 +497,8 @@ export function Background(props) {
                 typeof previousNode === "string"
                   ? previousNode
                   : typeof previousNode === "object"
-                  ? previousNode["#text"]
-                  : "";
+                    ? previousNode["#text"]
+                    : "";
               const offset = computeTextPosition(prevText, textRef, node);
               if (offset) {
                 return (
