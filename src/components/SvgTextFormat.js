@@ -46,12 +46,16 @@ export function Space(props) {
 // TODO - render reason attribute
 export function Gap(props) {
   const { textRef, gap, medium } = props;
-  const extent = parseInt(gap.extent, 10) || "1";
+  const gapExtent = gap.gap && gap.gap.extent || "1";
+  const extent = parseInt(gapExtent, 10);
   const size = textRef ? textRef.getExtentOfChar(`\xa0`).width : 0;
+  const reason = gap.gap.reason;
+  const showLineThrough = reason === "cancellation" || reason === "overwrite" || reason === "erasure";
   return (
     <tspan
-      fill={medium ? MEDIUM_COLOR[medium] : "#fff"}
-      textDecoration="line-through"
+      id="gap"
+      fill={medium ? MEDIUM_COLOR[medium] : showLineThrough ? "red" : "#fff"}
+      textDecoration={showLineThrough ? "line-through" : "none"}
     >
       <Space n={extent} direction="horizontal" size={size} />
     </tspan>
@@ -74,7 +78,7 @@ export function Subst(props) {
 
 export function Choice(props) {
   const { choice } = props;
-  return <tspan>{choice.orig["#text"]}</tspan>;
+  return <tspan fill="#fff">{choice.orig["#text"]}</tspan>;
 }
 
 export function Catchword(props) {
@@ -116,6 +120,9 @@ export function Hi(props) {
           {text}
         </tspan>
       );
+    }
+    if (rendType === "handshift") {
+      return <tspan fill="brown">{text}</tspan>
     }
     return <tspan fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>{text}</tspan>;
   }
@@ -181,7 +188,7 @@ export function Add(props) {
 export function Del(props) {
   const { textRef, del } = props;
   const delType = del.attributes ? del.attributes.type : DelTypes.overwrite;
-
+  const delColor = delType === DelTypes.overwrite ? "red" : "#303030";
   function formatDel() {
     const text = del && del["#text"];
     if (!text) {
@@ -192,13 +199,13 @@ export function Del(props) {
         <FormatLine key={shortid.generate()} line={child} textRef={textRef} />
       ));
       return (
-        <tspan fill="red" textDecoration="line-through">
+        <tspan fill={delColor} textDecoration="line-through">
           {children}
         </tspan>
       );
     } else {
       return (
-        <tspan fill="red" textDecoration="line-through">
+        <tspan fill={delColor} textDecoration="line-through">
           {text}
         </tspan>
       );
@@ -369,16 +376,13 @@ function getAttributes(attributes) {
 }
 
 function GapBackground(props) {
-  const { x, y, h, textRef, node } = props;
+  // TODO figure out x position for gaps (currently starting at the beginning of the line)
+  const { x, y, h, w, textRef } = props;
   if (!textRef) {
     return null;
   }
-  const s = textRef.getExtentOfChar(`\xa0`).width;
-  const { gap } = node;
-  const extent = parseInt(gap.extent, 10);
-  const width = !isNaN(extent) ? extent * s : 0;
   return (
-    <rect x={x} y={y} width={width} height={h} fill={BackgroundColors.gap} />
+    <rect x={x} y={y} width={w} height={h} fill={BackgroundColors.gap} />
   );
 }
 
@@ -421,6 +425,15 @@ function HR(props) {
       <Space n={width} direction="horizontal" size={size} />
     </tspan>
   );
+}
+
+function computeGapPosition(textRef) {
+  let gap = textRef.querySelector("#gap");
+  if (gap) {
+    return getTextRefBox(gap)
+  } else {
+    return getTextRefBox(textRef);
+  }
 }
 
 // TODO may need to redo background algorithm
@@ -469,7 +482,11 @@ export function Background(props) {
               const text = prop["#text"] || "";
               let pos = computeTextPosition(text, textRef);
               if (!pos) {
-                pos = getTextRefBox(textRef);
+                if (prop.nodeType === "gap") {
+                  pos = computeGapPosition(textRef)
+                } else {
+                  pos = getTextRefBox(textRef);
+                }
               }
               return (
                 <Component
@@ -478,6 +495,7 @@ export function Background(props) {
                   {...pos}
                   node={prop}
                   line={line}
+                  textRef={textRef}
                 />
               );
             }
