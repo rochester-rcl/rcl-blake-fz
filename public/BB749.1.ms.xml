@@ -94,16 +94,25 @@
         </revisiondesc>
                 <sponsor>The Library of Congress, the University of North Carolina at Chapel Hill
                     and the University of Rochester</sponsor>
+                <funder>The National Endowment for the Humanities, 2010-2013</funder>
+                <funder>Institute for Advanced Technology in the Humanities, University of Virginia,
+                    1995-2007</funder>
+                <funder>The National Endowment for the Humanities, 2000-02</funder>
+                <funder>Paul Mellon Centre for Studies in British Art, 1997-98</funder>
+                <funder>Inso Corporation (now Enigma Corporation), software grant,
+                    1996-2006</funder>
+                <funder>Sun Microsystems, hardware and software grants, 1996-2006</funder>
+                <funder>The Getty Grant Program, 1995-98</funder> 
     </header>
     <objdesc>
         <source>
             <objdescid>
                 <objtitle>
                     <title type="transcribed">
-                        *Books Owned, Watson*
+                        <hi rend="i">Books Owned, Watson</hi>
                     </title>
                 </objtitle>
-                <origination>William Blake <role>author</role> </origination>
+                <origination>William Blake <role>author</role>. </origination>
                 <imprint>
                     <publisher>Not Published</publisher>
                     <pubplace>London?</pubplace>
@@ -464,7 +473,7 @@
                             <l n="bb749.1.ms.02.06" justify="left">has preserved him</l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-10" points="5355,4185 5395,4650 2690,4665 2680,4175">
+                    <zone type="marginalia-10" points="2785,4055 5305,4095 5290,4600 2775,4585">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left" indent="1">M<hi rend="superscript">r</hi> Paine has not extinguished &#38; cannot Extinguish Moral</l>
                             <l n="bb749.1.ms.02.02" justify="left">rectitude. he has Extinguished Superstition which took the</l>
@@ -643,7 +652,7 @@
                   <l n="bb749.1.ms.03.30" justify="left">Conscience in those that have it is unequivocal, it is the voice</l>
                   <l n="bb749.1.ms.03.31" justify="left">of God Our judgment of right &#38; wrong is Reason I believe</l>
                   <l n="bb749.1.ms.03.32" justify="left">that the Bishop <choice><orig>laught</orig><reg>laughed</reg></choice> 
-                      at the Bible in his <choice><orig>slieve</orig><reg>sleeve</reg></choice> &#38; so did</l>
+                      at the Bible in his <choice><orig>slieve</orig><reg>sleeve</reg></choice>&#38; so did</l>
                   <l n="bb749.1.ms.03.33" justify="left" indent="20"><unclear resp="KS">Locke</unclear></l>
                </lg>
             </zone>
@@ -768,7 +777,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="620,4065 2601,4091 2560,470 600,455">
+                    <zone type="page-left" points="655,480 2525,525 2545,4010 690,4005">
                         <lg justify="left">
                             <l n="bb749.1.ms.04" justify="left">foolishness,&#8212;and that if the gospel be hid, it is hid to</l>
                             <l n="bb749.1.ms.04" justify="left">them that are lost." The consequence of your unbelief</l>
@@ -817,7 +826,7 @@
                             <l n="bb749.1.ms.04" indent="25"><catchword><choice><orig>ites</orig><reg>Israelites</reg></choice></catchword></l>
                         </textfoot>
                     </zone>
-                    <zone type="page-right" points="4773,392 4809,4019 2773,3973 2782,437">
+                    <zone type="page-right" points="4695,495 4725,3985 2860,3970 2845,500">
                         <texthead justify="left">
                             <l n="bb749.1.ms.04" justify="left" indent="25">(<physnumber>5</physnumber>)</l>
                         </texthead>
@@ -871,7 +880,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="655,4073 2655,4127 2637,4600 109,4627 146,55 2637,46 2646,491 637,500">
+                    <zone type="marginalia-1" points="2635,30 2635,455 560,445 585,4045 2640,4045 2640,4650 30,4660 25,30">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.01" justify="left" indent="10"><add type="insertion" place="supralinear">Examiners in these points</add></l>
                             <l n="bb749.1.ms.04.02" justify="left">is false. as to <gap reason="cancellation" extent="18" unit="character"/> they will <del type="overstrike">always be found</del></l>
@@ -920,7 +929,7 @@
                                 <note>Erdman reads "he" as an overwrite of "It" (614).</note></l>
                         </lg>
                     </zone>
-                    <zone type="marginalia-2" points="2754,4000 2709,4600 5309,4672 5282,45 2745,27 2745,482 4800,436 4791,4054">
+                    <zone type="marginalia-2" points="5310,4665 2700,4645 2700,3990 4745,4015 4735,475 2685,480 2665,50 5300,35">
                         <lg justify="left">
                             <l n="bb749.1.ms.04.31" justify="left">To me who believe the Bible &#38; profess myself a Christian a defence</l>
                             <l n="bb749.1.ms.04.32" justify="left">of the Wickedness of the Israelites in murd<unclear resp="KS">ering</unclear> so many thousands under</l>
@@ -960,8 +969,6 @@
                             <l n="bb749.1.ms.04.60" justify="left">&#38; deceit of</l>
                             <l n="bb749.1.ms.04.61" justify="left">the Jews &#38;</l>
                             <l n="bb749.1.ms.04.62" justify="left">were written</l>
-                            <l n="bb749.1.ms.04.62" justify="left"></l>
-                            <l n="bb749.1.ms.04.62" justify="left"></l>
                             <l n="bb749.1.ms.04.62" justify="left"></l>
                             <l n="bb749.1.ms.04.63" justify="left">as an Example of the possibility of Human Beastliness</l>
                             <l n="bb749.1.ms.04.64" justify="left">in all its branches. Christ died as an Unbeliever &#38;
@@ -1191,8 +1198,10 @@
                             <l n="bb749.1.ms.05.65" justify="left">than they were</l>
                             <l n="bb749.1.ms.05.66" justify="left">in the time of</l>
                             <l n="bb749.1.ms.05.67" justify="left" indent="70">Homer Socrates</l>
-                            <l n="bb749.1.ms.05.68" justify="left" indent="10">Phidias, Glycon. Aristotle &#38;<hi rend="superscript">c</hi> let all their works witness</l>
-                            <l n="bb749.1.ms.05.69" justify="left">ine <del type="overstrike">the Deists</del> says that Christianity put a stop to improvement
+                            <l n="bb749.1.ms.05.68" justify="left" indent="10">Phidias, Glycon. Aristotle &#38;<hi rend="superscript">c</hi> 
+                                let all their works witness</l>
+                            <l n="bb749.1.ms.05.69" justify="left">ine <del type="overstrike">the Deists</del>
+                                says that Christianity put a stop to improvement
                                 <note> Erdman (615) and Bentley assume "ine" belongs to the word "Paine," obscured by the fold (*Writings* volume 2, page 1412).</note></l>
                             <l n="bb749.1.ms.05.70" justify="left" indent="10">&#38; the Bishop has not 
                                 <choice>
@@ -1327,7 +1336,6 @@
                             <l n="bb749.1.ms.06.01" justify="left">That God does &#38; always did converse with honest Men Paine</l>
                             <l n="bb749.1.ms.06.01" justify="left">never denies. he only denies that God conversed with</l>
                             <l n="bb749.1.ms.06.01" justify="left">Murderers &#38; Revengers such as the Jews were. &#38; of</l>
-                            <l n="bb749.1.ms.06.01" justify="left"></l>
                             <l n="bb749.1.ms.06.01" justify="left">course he</l>
                             <l n="bb749.1.ms.06.01" justify="left">holds that</l>
                             <l n="bb749.1.ms.06.01" justify="left">the Jews 

@@ -143,20 +143,29 @@ export function Add(props) {
   if (add.attributes) {
     if (add.attributes.place === "supralinear") {
       return (
-        <tspan baselineShift="super" fill={TextColors.add}>
-          {symbol}{add["#text"]}
+        <tspan fill={TextColors.add}>
+          {symbol}
+          <tspan baselineShift="super" fill={TextColors.add}>
+            {add["#text"]}
+          </tspan>
         </tspan>
       );
     } else if (add.attributes.place === "infralinear") {
       return (
-        <tspan baselineShift="sub" fill={TextColors.add}>
-          {symbol}{add["#text"]}
+        <tspan fill={TextColors.add}>
+          {symbol}
+          <tspan baselineShift="sub" fill={TextColors.add}>
+            {add["#text"]}
+          </tspan>
         </tspan>
       );
     } else if (add.attributes.place === "interlinear") {
       return (
-        <tspan baselineShift="0%" fill={TextColors.add}>
-          {symbol}{add["#text"]}
+        <tspan fill={TextColors.add}>
+          {symbol}
+          <tspan baselineShift="0%" fill={TextColors.add}>
+            {add["#text"]}
+          </tspan>
         </tspan>
       );
     }
