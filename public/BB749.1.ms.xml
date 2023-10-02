@@ -545,8 +545,10 @@
                   <l n="bb749.1.ms.03" justify="left"><choice><orig>ing</orig><reg type="split_word">reasoning</reg></choice>, or of an untruth in matters of fact. It is a maxim</l>
                   <l n="bb749.1.ms.03" justify="left">of every law, human and divine, that a man ought never</l>
                   <l n="bb749.1.ms.03" justify="left">to act in opposition to his conscience: but it will not</l>
-                  <l n="bb749.1.ms.03" justify="left" indent="30"><catchword>from</catchword></l>
-               </lg>       
+               </lg>
+               <textfoot justify="left">
+                  <l n="bb749.1.ms.03" justify="left" indent="9"><space extent="20" unit="character"/><catchword>from</catchword></l>
+               </textfoot>
             </zone>
              <zone type="page-right" points="4705,485 4680,4010 2810,3985 2830,460">
                <texthead justify="left">
