@@ -18,7 +18,6 @@ export function goToPageAction(pageIndex: Number): Object {
 }
 
 export function toggleZoneROIAction(status: boolean): Object {
-  console.log(status);
   return {
     type: ActionConstants.TOGGLE_ZONE_ROI,
     status: status,
@@ -36,6 +35,13 @@ export function setZonesAction(zoneIds: Array<string>): Object {
   return {
     type: ActionConstants.SET_CURRENT_ZONES,
     zoneIds: zoneIds,
+  }
+}
+
+export function toggleLockRotationAction(status: bool): Object {
+  return {
+    type: ActionConstants.TOGGLE_LOCK_ROTATION,
+    status: status,
   }
 }
 
