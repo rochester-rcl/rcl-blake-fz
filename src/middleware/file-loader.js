@@ -51,6 +51,19 @@ function getTextPosition(xml, nodeKey, textKey) {
   return textPosition;
 }
 
+
+function getIndex(node) {
+  let i = 0;
+  let prevNode = node.previousElementSibling;
+  while (prevNode !== null) {
+    if (prevNode && prevNode.nodeName === "l") {
+      i++;
+    }
+    prevNode = prevNode.previousElementSibling;
+  }
+  return i;
+}
+
 function xmlToJson(xml) {
   // Handshift and unclear as objects with #text instead of arrays of text
 
@@ -121,6 +134,9 @@ function xmlToJson(xml) {
             attributes[attribute.nodeName] = attribute.nodeValue;
           }
         }
+        if (nodeName === "vspace") {
+          attributes.parentIndex = getIndex(xml);
+        }
         obj[nodeName] = attributes;
       }
     }
@@ -185,6 +201,7 @@ function xmlToJson(xml) {
       }
     }
   }
+
   if (obj.nodeType === "handShift") {
     let { handShift, ...handShiftProps } = obj;
     obj = handShiftProps;
@@ -237,6 +254,7 @@ function formatLineGroup(lg, parent, index) {
       medium,
     }));
   } else {
+    // TODO figureout a way to add vspace here
     group.l = Array.from(group.l).map((line, idx) => ({
       ...line,
       rawText: lineText[idx],

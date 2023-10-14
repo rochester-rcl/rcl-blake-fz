@@ -121,6 +121,20 @@ export function Hi(props) {
         </tspan>
       );
     }
+    if (rendType === "superscript") {
+      return (
+        <tspan baselineShift="super" fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
+          {text}
+        </tspan>
+      );
+    }
+    if (rendType === "subscript") {
+      return (
+        <tspan baselineShift="sub" fill={medium ? MEDIUM_COLOR[medium] : "#fff"}>
+          {text}
+        </tspan>
+      );
+    }
     if (rendType === "handshift") {
       return <tspan fill="brown">{text}</tspan>
     }

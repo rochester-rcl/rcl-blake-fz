@@ -187,7 +187,7 @@ export function computeScanlineFill(points, nLines, padding) {
   addPointsToEdgeTable(p);
   scanlineFill();
   const output = subsampleByLineHeight();
-  return output;
+  return [output, lineHeight];
 }
 
 export function minMax(points, axis) {

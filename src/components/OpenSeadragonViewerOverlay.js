@@ -317,13 +317,38 @@ export default class OpenSeadragonViewer extends Component {
   getTextPath(points, zone, roi) {
     const { drawBackgrounds } = this.state;
     const nLines = zone.lg.reduce((a, b) => a + b.l.length, 0);
-    const fill = computeScanlineFill(points, nLines, 100);
+    const [fill, lineHeight] = computeScanlineFill(points, nLines, 100);
+    let vspace = zone.lg[0].vspace && Array.isArray(zone.lg[0].vspace) ? zone.lg[0].vspace : [zone.lg[0].vspace];
+    let l = [...zone.lg[0].l]
+
+    // add vspace to lines
+    for (let v of vspace) {
+      if (v && v.vspace && v.vspace.parentIndex !== undefined) {
+        let idx = v.vspace.parentIndex;
+
+        // add line height to points
+        let extent = v.vspace.extent || 0;
+        if (extent) {
+          // push all subsequent lines down
+          let offset = parseInt(extent * lineHeight, 10);
+          let fillIdx = idx;
+          for (let i = fillIdx; i < fill.length; i++) {
+            let fillPoints = fill[i];
+            // add vspace to fill points
+            let p = pointsToNumbers(fillPoints);
+            fill[i] = `${p[0][0]},${p[0][1] + offset} ${p[1][0]},${p[1][1] + offset}}`;
+            // TODO - do we need to add an extra line?
+          }
+        }
+      }
+    }
+
     const viewportPoints = fill.map((l) =>
       this.convertImageToViewportPoints(l, false)
     );
 
     const defaultFontSize = this.viewport.imageToViewportCoordinates(80, 80).x;
-    
+
     if (nLines === 0) {
       return viewportPoints.map((p, idx) => {
         const id = shortid.generate();
@@ -338,14 +363,14 @@ export default class OpenSeadragonViewer extends Component {
         );
       });
     }
-    const { l } = zone.lg[0];
+
     return viewportPoints.map((p, idx) => {
       const id = shortid.generate();
       const line = l[idx];
       const [p1, p2] = p;
       const textRefId = `${zone.id}-${idx}`;
       const textRef = this.textRefs[textRefId];
-       
+
       if (p1.x > p2.x) {
         p.reverse();
       }
