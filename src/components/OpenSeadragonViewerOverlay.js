@@ -337,7 +337,6 @@ export default class OpenSeadragonViewer extends Component {
             // add vspace to fill points
             let p = pointsToNumbers(fillPoints);
             fill[i] = `${p[0][0]},${p[0][1] + offset} ${p[1][0]},${p[1][1] + offset}}`;
-            // TODO - do we need to add an extra line?
           }
         }
       }
