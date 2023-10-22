@@ -248,19 +248,21 @@ function formatLineGroup(lg, parent, index) {
     let { handShift } = group;
     let medium =
       (handShift.attributes && handShift.attributes.medium) || "pencil";
-    group.l = Array.from(handShift.l).map((line, idx) => ({
+    let l = Array.isArray(handShift.l) ? handShift.l : [handShift.l];
+    group.l = Array.from(l).map((line, idx) => ({
       ...line,
       rawText: lineText[idx],
       medium,
     }));
   } else {
-    // TODO figureout a way to add vspace here
-    group.l = Array.from(group.l).map((line, idx) => ({
-      ...line,
-      rawText: lineText[idx],
-    }));
+    let l = Array.isArray(group.l) ? group.l : [group.l];
+    group.l = Array.from(l).map((line, idx) => {
+      return {
+        ...line,
+        rawText: lineText[idx],
+      }
+    });
   }
-
   return group;
 }
 
@@ -286,7 +288,7 @@ function formatZone(xml, obj) {
   if (xml.hasChildNodes()) {
     let children = Array.from(xml.childNodes);
     children.forEach((child, index) => {
-      if (child.nodeName === "lg") {
+      if (child.nodeName === "lg" || child.nodeName === "handShift") {
         lg.push(formatLineGroup(child, children, index));
       }
 

@@ -202,7 +202,7 @@ export function Add(props) {
 export function Del(props) {
   const { textRef, del } = props;
   const delType = del.attributes ? del.attributes.type : DelTypes.overwrite;
-  const delColor = delType === DelTypes.overwrite ? "red" : "#303030";
+  const delColor = delType === DelTypes.overwrite ? "red" : "#fff";
   function formatDel() {
     const text = del && del["#text"];
     if (!text) {

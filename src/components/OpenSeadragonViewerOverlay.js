@@ -81,7 +81,7 @@ export default class OpenSeadragonViewer extends Component {
       .split(" ")
       .map((coord) => coord.split(",").map((n) => parseFloat(n)))
       .reduce((a, b) => a.concat(b));
-    return coords.every((coord) => coord < 1.0);
+    return coords.every((coord) => Math.round((coord * 10)) / 10 <= 1.0);
   }
 
   initOpenSeadragon() {
@@ -320,7 +320,6 @@ export default class OpenSeadragonViewer extends Component {
     const [fill, lineHeight] = computeScanlineFill(points, nLines, 100);
     let vspace = zone.lg[0].vspace && Array.isArray(zone.lg[0].vspace) ? zone.lg[0].vspace : [zone.lg[0].vspace];
     let l = [...zone.lg[0].l]
-
     // add vspace to lines
     for (let v of vspace) {
       if (v && v.vspace && v.vspace.parentIndex !== undefined) {
