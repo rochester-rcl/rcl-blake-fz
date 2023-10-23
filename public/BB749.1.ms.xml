@@ -3352,7 +3352,7 @@
             </physdesc>
             <phystext>               
                 <zone type="original">
-                    <zone type="page-left" points="2488,297 2497,4051 533,4060 524,297">             
+                    <zone type="page-left" points="2537,281 2527,4244 573,4199 509,272">             
                        <texthead justify="left">
                            <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>48</physnumber>)</l>
                        </texthead>   
@@ -3404,7 +3404,7 @@
                             <l n="bb749.1.ms.18" justify="left" indent="20"><catchword>kingdoms,</catchword></l>
                         </textfoot>                      
                     </zone>                 
-                    <zone type="page-right" points="4593,301 4602,4055 2638,4064 2629,301">                     
+                    <zone type="page-right" points="2618,290 4582,327 4564,4245 2582,4163">                     
                         <texthead justify="left">
                             <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>49</physnumber>)</l></texthead>   
                         <lg justify="left">
@@ -3457,7 +3457,7 @@
                     </zone>
                 </zone>        
                 <zone type="Blake">                   
-                    <zone type="marginalia-1" points="527,2660 539,3527 100,3572 100,2696">
+                    <zone type="marginalia-1" points="557,2717 560,3589 10,3578 7,2696">
                         <lg justify="left">
                             <l n="bb749.1.ms.18.01" justify="left">Piety &#38;</l>
                             <l n="bb749.1.ms.18.02" justify="left">Virtue</l>
@@ -3467,13 +3467,13 @@
                             <l n="bb749.1.ms.18.06" justify="left">Bishop</l>
                         </lg> 
                     </zone>
-                    <zone type="marginalia-2" points="5160,2272 5163,3169 4551,3163 4560,2275">
+                    <zone type="marginalia-2" points="4573,2254 4564,3272 5200,3300 5209,2281">
                         <lg justify="left">
                             <l n="bb749.1.ms.18.01" justify="left">The Bishop</l>
                             <l n="bb749.1.ms.18.02" justify="left">never saw</l>
                             <l n="bb749.1.ms.18.03" justify="left">the Everlasting</l>
                             <l n="bb749.1.ms.18.04" justify="left">Gospel any</l>
-                            <l n="bb749.1.ms.18.05" justify="left">more than</l>
+                            <l n="bb749.1.ms.18.05" justify="left">mor<unclear resp="SS">e</unclear> than</l>
                             <l n="bb749.1.ms.18.06" justify="left">Tom Paine</l>
                         </lg> 
                     </zone>           
