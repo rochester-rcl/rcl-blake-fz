@@ -3630,7 +3630,7 @@
             </physdesc>
             <phystext>               
                 <zone type="original">
-                    <zone type="page-left" points="2467,4072 2488,332 527,326 528,4050">                   
+                    <zone type="page-left" points="491,4109 2500,4109 2509,246 468,282">                   
                         <texthead justify="left">
                             <l n="bb749.1.ms.20" justify="left" indent="25">(<physnumber>108</physnumber>)</l>
                         </texthead>                       
@@ -3682,7 +3682,7 @@
                             <l n="bb749.1.ms.20" justify="left" indent="20"><catchword>vain</catchword></l>
                         </textfoot>                    
                     </zone>
-                    <zone type="page-right" points="4945,4088 4956,322 2995,316 2989,4088">                       
+                    <zone type="page-right" points="4981,4136 2954,4118 2891,277 4945,282">                       
                         <texthead justify="left">
                             <l n="bb749.1.ms.1" justify="left" indent="25">(<physnumber>109</physnumber>)</l>
                         </texthead>                    
@@ -3736,7 +3736,7 @@
                     </zone>               
                 </zone>              
                 <zone type="Blake">                        
-                    <zone type="marginalia-1" points="39,3935 512,3955 515,2081 49,2088">
+                    <zone type="marginalia-1" points="12,3890 470,3880 460,2055 7,2047">
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">The Gospel</l>
                             <l n="bb749.1.ms.20.02" justify="left">is Forgiv<unclear resp="KS">ene</unclear>ss</l>
@@ -3751,7 +3751,7 @@
                             <l n="bb749.1.ms.20.11" justify="left">&#38;Nero</l>
                         </lg> 
                     </zone>
-                    <zone type="marginalia-2" points="3016,2406 3246,2946 2770,2986 2766,2400">
+                    <zone type="marginalia-2" points="2908,2254 2908,3063 2535,3063 2535,2272">
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">OFool</l>
                             <l n="bb749.1.ms.20.02" justify="left">Slight</l>
@@ -3759,13 +3759,13 @@
                             <l n="bb749.1.ms.20.04" justify="left">&#38; Villain</l>
                         </lg> 
                     </zone>
-                    <zone type="marginalia-3" points="5343,1750 5350,2196 4910,2200 4893,1740">
+                    <zone type="marginalia-3" points="4987,1707 5417,1708 5409,2218 4992,2210">
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">Well Done</l> 
                             <l n="bb749.1.ms.20.02" justify="left">Paine</l>
                         </lg>
                     </zone>            
-                    <zone type="marginalia-4" points="5328,2277 5334,2883 4939,2883 4909,2278">
+                    <zone type="marginalia-4" points="5000,2835 5400,2830 5402,2290 4995,2287">
                         <lg justify="left">
                             <l n="bb749.1.ms.20.01" justify="left">Yes I</l> 
                             <l n="bb749.1.ms.20.02" justify="left">have no</l>
