@@ -3218,7 +3218,7 @@
             </physdesc>
             <phystext> 
                 <zone type="original">
-                    <zone type="page-left" points="860,360 2800,340 2940,4120 1000,4110">
+                    <zone type="page-left" points="1030,4130 2950,4120 2770,320 860,360">
                         <texthead justify="left">
                             <l n="bb749.1.ms.17" justify="left" indent="25">(<physnumber>36</physnumber>)</l>
                         </texthead>   
@@ -3270,7 +3270,7 @@
                             <l n="bb749.1.ms.18" justify="left" indent="50"><catchword>she</catchword></l>
                         </textfoot>  
                     </zone>          
-                    <zone type="page-right" points="3190,320 5110,320 5160,4050 3240,4030">                        
+                    <zone type="page-right" points="5220,4070 5140,310 3210,310 3230,4040">                        
                         <texthead justify="left">
                             <l n="bb749.1.ms.17" justify="left" indent="25">(<physnumber>37</physnumber>)</l>
                         </texthead>   
@@ -3324,7 +3324,7 @@
                     </zone>
                 </zone>         
             <zone type="Blake">
-                <zone type="marginalia-1" points="977,1505 1011,2688 388,2688 405,1505">
+                <zone type="marginalia-1" points="310,1660 1010,1640 1090,2660 340,2690">
                     <lg justify="left">
                         <l n="bb749.1.ms.17.01" justify="left">Hartley</l>
                         <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
