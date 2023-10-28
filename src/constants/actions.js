@@ -7,3 +7,4 @@ export const TOGGLE_ZOOM_TO_ZONE: string = 'TOGGLE_ZOOM_TO_ZONE';
 export const CLEAR_ZONES: string = 'CLEAR_ZONES';
 export const TOGGLE_TRANSCRIPTION_MODE: string = 'TOGGLE_TRANSCRIPTION_MODE';
 export const TOGGLE_LOCK_ROTATION: string = 'TOGGLE_LOCK_ROTATION';
+export const SET_XML_URL = "SET_XML_URL";

@@ -20,7 +20,8 @@ const defaultState = {
   zoomToZones: false,
   lockRotation: false,
   showZoneROI: true,
-  diplomaticMode: true
+  diplomaticMode: true,
+  xmlUrl: "BB749.1.ms.xml"
 };
 
 function setZoneOptions(zones) {

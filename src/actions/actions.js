@@ -51,3 +51,10 @@ export function toggleTranscriptionModeAction(status: boolean): Object {
     status: status,
   }
 }
+
+export function onSetXmlUrl(xmlUrl) {
+  return {
+    type: ActionConstants.SET_CURRENT_PAGE,
+    xmlUrl
+  }
+}

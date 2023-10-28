@@ -1,4 +1,3 @@
-/* @flow */
 
 function getRawText(xml) {
   const getText = (node) => {

@@ -9,12 +9,12 @@ import { Button, Checkbox, Input, Label } from "semantic-ui-react";
 // Dropdown
 import FilterDropdown from "./FilterDropdown";
 
-import sleep from "../utils/sleep";
+import { LocalFileLoader } from "./LocalFileLoader";
 
 export default class FZNavigation extends Component {
   state = {
     showDropdown: false,
-    pageNo: null
+    pageNo: null,
   };
   constructor(props) {
     super(props);
@@ -69,7 +69,7 @@ export default class FZNavigation extends Component {
   handleSetPageNo = (_, { value }) => {
     this.setState({ pageNo: value });
   };
-  
+
   // TODO fix resetFilter infinite loop
   handleGoToPage(pageNo) {
     this.props.setZonesAction({ currentZones: [] });
@@ -77,7 +77,6 @@ export default class FZNavigation extends Component {
     if (this.filterRef.current) {
       this.filterRef.current.resetFilter();
     }
-
   }
 
   handleToggleTranscriptionMode(event, data) {
@@ -103,9 +102,10 @@ export default class FZNavigation extends Component {
       zoomToZones,
       lockRotation,
       diplomaticMode,
+      setXmlUrl,
     } = this.props;
     const { showDropdown } = this.state;
-    
+
     let controls = [
       {
         className: "fz-main-menu-button",
@@ -195,6 +195,16 @@ export default class FZNavigation extends Component {
           updateFilterParams={setZonesAction}
           show={showDropdown}
           ref={this.filterRef}
+        />
+        <LocalFileLoader
+          trigger={
+            <Button
+              color="grey"
+              content="Load XML"
+              className="fz-main-menu-button"
+            />
+          }
+          onLoadFiles={(files) => console.log(files)}
         />
         <Checkbox
           className="fz-toggle-transcription-mode-button"

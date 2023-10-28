@@ -24,8 +24,7 @@ import { Divider } from "semantic-ui-react";
 import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
 import createBackground from "../utils/image";
 
-// const xml = "/BB749.1.ms.xml";
-const xml = "BB749.1.ms.xml";
+
 const getImageDimensions = url => {
   return new Promise((resolve, reject) => {
     const image = new Image();
@@ -57,7 +56,8 @@ class FZContainer extends Component {
 
   componentDidMount() {
     // Call this here to load initial data
-    this.props.loadXMLAction(xml);
+    let { xmlUrl } = this.props;
+    this.props.loadXMLAction(xmlUrl);
   }
 
   updateTextDisplayAngle(angle: number): void {
@@ -106,7 +106,8 @@ class FZContainer extends Component {
       showZoneROI,
       zoomToZones,
       lockRotation,
-      diplomaticMode
+      diplomaticMode,
+      setXmlUrl
     } = this.props;
     const { textDisplayAngle } = this.state;
     if (pageObjects) {
@@ -133,6 +134,7 @@ class FZContainer extends Component {
             lockRotation={lockRotation}
             showZoneROI={showZoneROI}
             diplomaticMode={diplomaticMode}
+            setXmlUrl={setXmlUrl}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
@@ -188,7 +190,8 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
-    lockRotation: state.lockRotation
+    lockRotation: state.lockRotation,
+    xmlUrl: state.xmlUrl
   };
 }
 
