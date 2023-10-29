@@ -103,7 +103,8 @@ export default class FZNavigation extends Component {
       lockRotation,
       diplomaticMode,
       setXmlUrl,
-      setImageData
+      setImageData,
+      showDiplomaticToggle
     } = this.props;
     const { showDropdown } = this.state;
 
@@ -205,22 +206,20 @@ export default class FZNavigation extends Component {
           show={showDropdown}
           ref={this.filterRef}
         />
-        <LocalFileLoader
-          trigger={
-            <Button
-              color="grey"
-              content="Load XML"
-              className="fz-main-menu-button"
-            />
+        <LocalFileLoader onLoadFiles={onSelectFiles}>
+          {(onClick, input) =>
+            <>
+              <Button className="fz-main-menu-button" onClick={onClick} color="grey" content="Load Xml" />
+              {input}
+            </>
           }
-          onLoadFiles={onSelectFiles}
-        />
-        <Checkbox
+        </LocalFileLoader>
+        {showDiplomaticToggle ? <Checkbox
           className="fz-toggle-transcription-mode-button"
           checked={diplomaticMode}
           label="Diplomatic Transcription"
           onChange={this.handleToggleTranscriptionMode}
-        />
+        /> : null}
       </div>
     );
   }

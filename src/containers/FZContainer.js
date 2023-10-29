@@ -146,6 +146,7 @@ class FZContainer extends Component {
             diplomaticMode={diplomaticMode}
             setXmlUrl={setXmlUrl}
             setImageData={setImageData}
+            showDiplomaticToggle={false}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer

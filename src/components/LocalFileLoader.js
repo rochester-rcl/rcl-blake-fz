@@ -17,7 +17,7 @@ function getFileData(fileList) {
 }
 
 export function LocalFileLoader(props) {
-    let { onLoadFiles, trigger } = props;
+    let { onLoadFiles, children } = props;
     let inputRef = React.useRef();
 
     let onClickTrigger = React.useCallback(() => {
@@ -34,16 +34,17 @@ export function LocalFileLoader(props) {
         }
     }, []);
 
+    let inputComponent = <input
+        style={{ display: "none" }}
+        ref={inputRef}
+        type="file"
+        multiple={true}
+        onChange={onSelectFiles}
+    />
+
     return (
-        <div>
-            <div onClick={onClickTrigger}>{trigger}</div>
-            <input
-                style={{ display: "none" }}
-                ref={inputRef}
-                type="file"
-                multiple={true}
-                onChange={onSelectFiles}
-            />
-        </div>
+        <>
+            {children(onClickTrigger, inputComponent)}
+        </>
     );
 }
