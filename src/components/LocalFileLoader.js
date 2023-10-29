@@ -1,11 +1,11 @@
 import React from "react";
 
 function getFileData(fileList) {
-    let fileData = { images: [], xml: null }
+    let fileData = { images: {}, xml: null }
     for (let file of fileList) {
         if (file.type.includes("image")) {
             let url = URL.createObjectURL(file);
-            fileData.images.push({ [file.name]: url });
+            fileData.images[file.name] = url;
         }
 
         if (file.type.includes("xml")) {

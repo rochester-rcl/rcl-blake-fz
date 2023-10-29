@@ -52,9 +52,16 @@ export function toggleTranscriptionModeAction(status: boolean): Object {
   }
 }
 
-export function onSetXmlUrl(xmlUrl) {
+export function setXmlUrl(xmlUrl) {
   return {
     type: ActionConstants.SET_CURRENT_PAGE,
     xmlUrl
+  }
+}
+
+export function setImageData(imageData) {
+  return {
+    type: ActionConstants.SET_IMAGE_DATA,
+    imageData
   }
 }

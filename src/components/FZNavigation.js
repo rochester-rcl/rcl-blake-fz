@@ -103,8 +103,17 @@ export default class FZNavigation extends Component {
       lockRotation,
       diplomaticMode,
       setXmlUrl,
+      setImageData
     } = this.props;
     const { showDropdown } = this.state;
+
+    let onSelectFiles = (fileData) => {
+      let { images, xml } = fileData;
+      if (xml) {
+        setXmlUrl(xml.url)
+      }
+      setImageData(images);
+    };
 
     let controls = [
       {
@@ -204,7 +213,7 @@ export default class FZNavigation extends Component {
               className="fz-main-menu-button"
             />
           }
-          onLoadFiles={(files) => console.log(files)}
+          onLoadFiles={onSelectFiles}
         />
         <Checkbox
           className="fz-toggle-transcription-mode-button"

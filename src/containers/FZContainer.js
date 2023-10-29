@@ -86,6 +86,18 @@ class FZContainer extends Component {
     }
   }
 
+  getTileSources(currentPage, imageData) {
+    let { imageURL } = currentPage;
+    // check local image data first
+    let url = imageData[imageURL] || window.location.href + "/" + imageURL;
+    return {
+      type: "image",
+      url,
+      crossOriginPolicy: "Anonymous",
+      ajaxWithCredentials: false
+    }
+  }
+
   render() {
     const {
       pageObjects,
@@ -107,16 +119,14 @@ class FZContainer extends Component {
       zoomToZones,
       lockRotation,
       diplomaticMode,
-      setXmlUrl
+      setXmlUrl,
+      setImageData,
+      imageData
     } = this.props;
     const { textDisplayAngle } = this.state;
+    // TODO - add function to load tile sources from local uploads
     if (pageObjects) {
-      let tileSources = {
-        type: "image",
-        url: window.location.href + "/" + currentPage.imageURL,
-        crossOriginPolicy: "Anonymous",
-        ajaxWithCredentials: false
-      };
+      let tileSources = this.getTileSources(currentPage, imageData);
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -135,6 +145,7 @@ class FZContainer extends Component {
             showZoneROI={showZoneROI}
             diplomaticMode={diplomaticMode}
             setXmlUrl={setXmlUrl}
+            setImageData={setImageData}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
@@ -191,7 +202,8 @@ function mapStateToProps(state) {
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
     lockRotation: state.lockRotation,
-    xmlUrl: state.xmlUrl
+    xmlUrl: state.xmlUrl,
+    imageData: state.imageData
   };
 }
 

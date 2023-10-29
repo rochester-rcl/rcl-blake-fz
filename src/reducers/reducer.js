@@ -21,7 +21,8 @@ const defaultState = {
   lockRotation: false,
   showZoneROI: true,
   diplomaticMode: true,
-  xmlUrl: "BB749.1.ms.xml"
+  xmlUrl: "BB749.1.ms.xml",
+  imageData: {}
 };
 
 function setZoneOptions(zones) {
@@ -130,6 +131,19 @@ export default function appReducer(
         ...state,
         diplomaticMode: action.status
       };
+
+    case "SET_IMAGE_DATA":
+      return {
+        ...state,
+        imageData: action.imageData
+      }
+
+    case "SET_XML_URL":
+      return {
+        ...state,
+        xmlUrl: action.xmlUrl
+      }
+
     default:
       return state;
   }
