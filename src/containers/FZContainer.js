@@ -24,8 +24,7 @@ import { Divider } from "semantic-ui-react";
 import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
 import createBackground from "../utils/image";
 
-// const xml = "/BB749.1.ms.xml";
-const xml = "BB749.1.ms.xml";
+
 const getImageDimensions = url => {
   return new Promise((resolve, reject) => {
     const image = new Image();
@@ -57,7 +56,8 @@ class FZContainer extends Component {
 
   componentDidMount() {
     // Call this here to load initial data
-    this.props.loadXMLAction(xml);
+    let { xmlUrl } = this.props;
+    this.props.loadXMLAction(xmlUrl);
   }
 
   updateTextDisplayAngle(angle: number): void {
@@ -86,6 +86,18 @@ class FZContainer extends Component {
     }
   }
 
+  getTileSources(currentPage, imageData) {
+    let { imageURL } = currentPage;
+    // check local image data first
+    let url = imageData[imageURL] || window.location.href + "/" + imageURL;
+    return {
+      type: "image",
+      url,
+      crossOriginPolicy: "Anonymous",
+      ajaxWithCredentials: false
+    }
+  }
+
   render() {
     const {
       pageObjects,
@@ -106,16 +118,15 @@ class FZContainer extends Component {
       showZoneROI,
       zoomToZones,
       lockRotation,
-      diplomaticMode
+      diplomaticMode,
+      setXmlUrl,
+      setImageData,
+      imageData
     } = this.props;
     const { textDisplayAngle } = this.state;
+    // TODO - add function to load tile sources from local uploads
     if (pageObjects) {
-      let tileSources = {
-        type: "image",
-        url: window.location.href + "/" + currentPage.imageURL,
-        crossOriginPolicy: "Anonymous",
-        ajaxWithCredentials: false
-      };
+      let tileSources = this.getTileSources(currentPage, imageData);
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -133,6 +144,9 @@ class FZContainer extends Component {
             lockRotation={lockRotation}
             showZoneROI={showZoneROI}
             diplomaticMode={diplomaticMode}
+            setXmlUrl={setXmlUrl}
+            setImageData={setImageData}
+            showDiplomaticToggle={false}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
@@ -188,7 +202,9 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
-    lockRotation: state.lockRotation
+    lockRotation: state.lockRotation,
+    xmlUrl: state.xmlUrl,
+    imageData: state.imageData
   };
 }
 

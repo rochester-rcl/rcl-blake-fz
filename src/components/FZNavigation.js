@@ -9,12 +9,12 @@ import { Button, Checkbox, Input, Label } from "semantic-ui-react";
 // Dropdown
 import FilterDropdown from "./FilterDropdown";
 
-import sleep from "../utils/sleep";
+import { LocalFileLoader } from "./LocalFileLoader";
 
 export default class FZNavigation extends Component {
   state = {
     showDropdown: false,
-    pageNo: null
+    pageNo: null,
   };
   constructor(props) {
     super(props);
@@ -69,7 +69,7 @@ export default class FZNavigation extends Component {
   handleSetPageNo = (_, { value }) => {
     this.setState({ pageNo: value });
   };
-  
+
   // TODO fix resetFilter infinite loop
   handleGoToPage(pageNo) {
     this.props.setZonesAction({ currentZones: [] });
@@ -77,7 +77,6 @@ export default class FZNavigation extends Component {
     if (this.filterRef.current) {
       this.filterRef.current.resetFilter();
     }
-
   }
 
   handleToggleTranscriptionMode(event, data) {
@@ -103,9 +102,20 @@ export default class FZNavigation extends Component {
       zoomToZones,
       lockRotation,
       diplomaticMode,
+      setXmlUrl,
+      setImageData,
+      showDiplomaticToggle
     } = this.props;
     const { showDropdown } = this.state;
-    
+
+    let onSelectFiles = (fileData) => {
+      let { images, xml } = fileData;
+      if (xml) {
+        setXmlUrl(xml.url)
+      }
+      setImageData(images);
+    };
+
     let controls = [
       {
         className: "fz-main-menu-button",
@@ -196,12 +206,20 @@ export default class FZNavigation extends Component {
           show={showDropdown}
           ref={this.filterRef}
         />
-        <Checkbox
+        <LocalFileLoader onLoadFiles={onSelectFiles}>
+          {(onClick, input) =>
+            <>
+              <Button className="fz-main-menu-button" onClick={onClick} color="grey" content="Load Xml" />
+              {input}
+            </>
+          }
+        </LocalFileLoader>
+        {showDiplomaticToggle ? <Checkbox
           className="fz-toggle-transcription-mode-button"
           checked={diplomaticMode}
           label="Diplomatic Transcription"
           onChange={this.handleToggleTranscriptionMode}
-        />
+        /> : null}
       </div>
     );
   }

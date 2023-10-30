@@ -36,6 +36,7 @@
   display: flex;
   background: #767676;
   padding: 3px;
+  margin-right: 3px;
 }
 
 .fz-main-menu-page-selector-input input {
@@ -48,7 +49,7 @@
 }
 
 .fz-main-menu-button.active {
-  color: #E9BC47 !important;
+  color: #e9bc47 !important;
 }
 
 .fz-main-menu {
@@ -66,15 +67,13 @@
   border-bottom: 1px solid #454545;
 }
 
-
-
 .fz-filter-dropdown-toggle-container {
   display: flex;
   color: #fff;
 }
 
 .fz-filter-dropdown.active {
-  border-color: #E9BC47 !important;
+  border-color: #e9bc47 !important;
   border-bottom: 1px solid #454545 !important;
 }
 
@@ -88,7 +87,7 @@
 }
 
 .fz-filter-dropdown input {
-  color:#fff;
+  color: #fff;
 }
 
 .fz-filter-dropdown .ui.label {
@@ -98,7 +97,7 @@
 
 .fz-filter-dropdown .menu {
   background: #454545 !important;
-  border-color: #E9BC47 !important;
+  border-color: #e9bc47 !important;
 }
 
 .fz-filter-dropdown .menu .item {
@@ -189,19 +188,15 @@
 }
 
 .fz-text-display-zone {
-
 }
 
 .fz-text-display-zone.left {
-
 }
 
 .fz-text-display-zone.right {
-
 }
 
 .fz-text-display-zone.head {
-
 }
 
 .fz-text-display-zone.body {
@@ -209,7 +204,6 @@
 }
 
 .fz-text-display-zone.foot {
-
 }
 
 /** Stages **/
@@ -278,7 +272,6 @@
 }
 
 .fz-text-display-line span {
-
 }
 
 /*** Columns ***/
