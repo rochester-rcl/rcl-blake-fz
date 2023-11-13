@@ -3324,7 +3324,7 @@
                     </zone>
                 </zone>         
             <zone type="Blake">
-                <zone type="marginalia-1" points="0,3691 400,3691 391,2691 0,2700">
+                <zone type="marginalia-1" points="28,3563 473,3563 473,2727 28,2736">
                     <lg justify="left">
                         <l n="bb749.1.ms.17.01" justify="left">Hartley</l>
                         <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
@@ -3352,7 +3352,7 @@
             </physdesc>
             <phystext>               
                 <zone type="original">
-                    <zone type="page-left" points="391,82 2537,91 2537,4518 428,4527">             
+                    <zone type="page-left" points="491,290 2446,272 2473,4190 519,4181">             
                        <texthead justify="left">
                            <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>48</physnumber>)</l>
                        </texthead>   
@@ -3399,10 +3399,10 @@
                             <l n="bb749.1.ms.18" justify="left">it's divine authority. You compare the burden of <choice><orig>Baby-</orig><reg type="split_word">Babylon</reg></choice></l>
                             <l n="bb749.1.ms.18" justify="left"><choice><orig>lon</orig><reg type="split_word">Babylon</reg></choice>, the burden of Moab, the burden of Damascus, and</l>
                             <l n="bb749.1.ms.18" justify="left">the other denunciations of the prophet against cities and</l>
-                            <l n="bb749.1.ms.18" justify="left" indent="20">kingdoms,</l>
+                            <l n="bb749.1.ms.18" justify="left">kingdoms,</l>
                         </lg>
                     </zone>                 
-                    <zone type="page-right" points="2618,290 4582,327 4564,4245 2582,4163">                     
+                    <zone type="page-right" points="2691,272 4628,290 4619,4181 2628,4181">                     
                         <texthead justify="left">
                             <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>49</physnumber>)</l></texthead>   
                         <lg justify="left">
@@ -3455,7 +3455,7 @@
                     </zone>
                 </zone>        
                 <zone type="Blake">                   
-                    <zone type="marginalia-1" points="2600,109 4673,127 4700,4482 2610,4491">
+                    <zone type="marginalia-1" points="28,3563 473,3563 473,2727 28,2736">
                         <lg justify="left">
                             <l n="bb749.1.ms.18.01" justify="left">Piety &#38;</l>
                             <l n="bb749.1.ms.18.02" justify="left">Virtue</l>
@@ -3465,7 +3465,7 @@
                             <l n="bb749.1.ms.18.06" justify="left">Bishop</l>
                         </lg> 
                     </zone>
-                    <zone type="marginalia-2" points="4728,2218 5219,2236 5200,3309 4728,3309">
+                    <zone type="marginalia-2" points="4691,2227 5164,2236 5173,3209 4691,3209">
                         <lg justify="left">
                             <l n="bb749.1.ms.18.01" justify="left">The Bishop</l>
                             <l n="bb749.1.ms.18.02" justify="left">never saw</l>
