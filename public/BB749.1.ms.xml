@@ -3352,7 +3352,7 @@
             </physdesc>
             <phystext>               
                 <zone type="original">
-                    <zone type="page-left" points="36,3627 518,3609 518,2709 36,2690">             
+                    <zone type="page-left" points="527,254 2536,245 2500,4318 509,4245">             
                        <texthead justify="left">
                            <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>48</physnumber>)</l>
                        </texthead>   
@@ -3402,7 +3402,7 @@
                             <l n="bb749.1.ms.18" justify="left">kingdoms,</l>
                         </lg>
                     </zone>                 
-                    <zone type="page-right" points="527,254 2536,245 2500,4318 509,4245">                     
+                    <zone type="page-right" points="2555,236 4600,254 4546,4381 2518,4345">                     
                         <texthead justify="left">
                             <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>49</physnumber>)</l></texthead>   
                         <lg justify="left">
@@ -3455,7 +3455,7 @@
                     </zone>
                 </zone>        
                 <zone type="Blake">                   
-                    <zone type="marginalia-1" points="2555,236 4600,254 4546,4381 2518,4345">
+                    <zone type="marginalia-1" points="36,3627 518,3609 518,2709 36,2690">
                         <lg justify="left">
                             <l n="bb749.1.ms.18.01" justify="left">Piety &#38;</l>
                             <l n="bb749.1.ms.18.02" justify="left">Virtue</l>
