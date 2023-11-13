@@ -3324,7 +3324,7 @@
                     </zone>
                 </zone>         
             <zone type="Blake">
-                <zone type="marginalia-1" points="310,1660 1010,1640 1090,2660 340,2690">
+                <zone type="marginalia-1" points="0,3691 400,3691 391,2691 0,2700">
                     <lg justify="left">
                         <l n="bb749.1.ms.17.01" justify="left">Hartley</l>
                         <l n="bb749.1.ms.17.02" justify="left">a Man of</l>
@@ -3352,7 +3352,7 @@
             </physdesc>
             <phystext>               
                 <zone type="original">
-                    <zone type="page-left" points="2537,281 2527,4244 573,4199 509,272">             
+                    <zone type="page-left" points="391,82 2537,91 2537,4518 428,4527">             
                        <texthead justify="left">
                            <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>48</physnumber>)</l>
                        </texthead>   
@@ -3399,16 +3399,14 @@
                             <l n="bb749.1.ms.18" justify="left">it's divine authority. You compare the burden of <choice><orig>Baby-</orig><reg type="split_word">Babylon</reg></choice></l>
                             <l n="bb749.1.ms.18" justify="left"><choice><orig>lon</orig><reg type="split_word">Babylon</reg></choice>, the burden of Moab, the burden of Damascus, and</l>
                             <l n="bb749.1.ms.18" justify="left">the other denunciations of the prophet against cities and</l>
-                        </lg>                       
-                        <textfoot justify="left">
-                            <l n="bb749.1.ms.18" justify="left" indent="20"><catchword>kingdoms,</catchword></l>
-                        </textfoot>                      
+                            <l n="bb749.1.ms.18" justify="left" indent="20">kingdoms,</l>
+                        </lg>
                     </zone>                 
                     <zone type="page-right" points="2618,290 4582,327 4564,4245 2582,4163">                     
                         <texthead justify="left">
                             <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>49</physnumber>)</l></texthead>   
                         <lg justify="left">
-                            <l n="bb749.1.ms.18" justify="left">kingdoms, to "the story of the knight<choice><orig>knight<orig><reg>night</reg></orig></orig>reg></choice>of the burning</l>
+                            <l n="bb749.1.ms.18" justify="left">kingdoms, to "the story of the knight of the burning</l>
                             <l n="bb749.1.ms.18" justify="left">mountain, the story of Cinderilla, &#38;c." I may have</l>
                             <l n="bb749.1.ms.18" justify="left">read these stories, but I remember nothing of the subjects</l>
                             <l n="bb749.1.ms.18" justify="left">of them; I have read also Isaiah's burden of Babylon,</l>
@@ -3457,7 +3455,7 @@
                     </zone>
                 </zone>        
                 <zone type="Blake">                   
-                    <zone type="marginalia-1" points="557,2717 560,3589 10,3578 7,2696">
+                    <zone type="marginalia-1" points="2600,109 4673,127 4700,4482 2610,4491">
                         <lg justify="left">
                             <l n="bb749.1.ms.18.01" justify="left">Piety &#38;</l>
                             <l n="bb749.1.ms.18.02" justify="left">Virtue</l>
@@ -3493,7 +3491,7 @@
             </physdesc>
             <phystext>               
                <zone type="original">
-                    <zone type="page-left" points="784,4050 2706,4055 2689,311 784,333">                       
+                   <zone type="page-left" points="4728,2218 5219,2236 5200,3309 4728,3309">                       
                         <texthead justify="left">
                             <l n="bb749.1.ms.18" justify="left" indent="25">(<physnumber>94</physnumber>)</l>
                         </texthead>
