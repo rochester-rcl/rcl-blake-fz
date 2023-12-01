@@ -2328,7 +2328,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="766,581 2847,550 2846,4186 2510,4193 2494,4086 820,4083">
+                    <zone type="page-left" points="766,581 2847,550 2810,4120 2450,4140 2460,4010 830,4020">
                         <lg justify="left">
                             <l n="bb749.1.ms.11" justify="left" indent="25">LETTER III.</l>
                             <vspace extent="1"/>
@@ -2429,7 +2429,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2883,512 2864,49 300,120 400,4590 2869,4600 2870,4206 2496,4213 2483,4113 793,4110 744,506">
+                    <zone type="marginalia-1" points="2720,510 2730,110 380,130 470,4540 2800,4540 2790,4190 2380,4200 2390,4050 810,4060 744,506">
                         <lg justify="left">
                             <l n="bb749.1.ms.11.01" justify="left" indent="35"><add type="insertion" place="supralinear">books in the</add></l>
                             <l n="bb749.1.ms.11.02" justify="left">I cannot concieve the Divinity of the <add type="insertion" place="inline">^</add> Bible to consist</l>
