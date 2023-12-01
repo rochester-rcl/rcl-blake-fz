@@ -2328,7 +2328,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="865,630 2720,610 2740,3980 850,4005">
+                    <zone type="page-left" points="782,581 2863,550 2888,4112 2551,4124 2532,3987 838,3994">
                         <lg justify="left">
                             <l n="bb749.1.ms.11" justify="left" indent="25">LETTER III.</l>
                             <vspace extent="1"/>
@@ -2375,7 +2375,7 @@
                             <l n="bb749.1.ms.11" justify="left" indent="10"><catchword><hi rend="i">Lot,</hi></catchword></l>
                         </textfoot>
                     </zone>
-                    <zone type="page-right" points="5075,315 5100,4045 3180,4040 3130,325">
+                    <zone type="page-right" points="5125,306 3050,318 3082,4075 5150,4075">
                         <texthead justify="left">
                             <l n="bb749.1.ms.11" justify="left" indent="25">(<physnumber>23</physnumber>)</l>
                         </texthead>
@@ -2429,7 +2429,7 @@
                     </zone>
                 </zone>
                 <zone type="Blake">
-                    <zone type="marginalia-1" points="2855,640 845,620 850,4000 2840,3985 2840,4535 450,4590 415,70 2870,25">
+                    <zone type="marginalia-1" points="2883,512 2864,49 176,87 226,4593 2869,4600 2876,4137 2513,4156 2488,4025 794,4025 744,506">
                         <lg justify="left">
                             <l n="bb749.1.ms.11.01" justify="left" indent="35"><add type="insertion" place="supralinear">books in the</add></l>
                             <l n="bb749.1.ms.11.02" justify="left">I cannot concieve the Divinity of the <add type="insertion" place="inline">^</add> Bible to consist</l>
