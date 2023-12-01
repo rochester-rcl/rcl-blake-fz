@@ -2328,7 +2328,7 @@
             </physdesc>
             <phystext>
                 <zone type="original">
-                    <zone type="page-left" points="782,581 2863,550 2888,4112 2551,4124 2532,3987 838,3994">
+                    <zone type="page-left" points="766,581 2847,550 2846,4186 2510,4193 2494,4086 820,4083">
                         <lg justify="left">
                             <l n="bb749.1.ms.11" justify="left" indent="25">LETTER III.</l>
                             <vspace extent="1"/>
@@ -2375,7 +2375,7 @@
                             <l n="bb749.1.ms.11" justify="left" indent="10"><catchword><hi rend="i">Lot,</hi></catchword></l>
                         </textfoot>
                     </zone>
-                    <zone type="page-right" points="766,581 2847,550 2846,4186 2510,4193 2494,4086 820,4083">
+                    <zone type="page-right" points="5125,306 3050,318 3082,4075 5150,4075">
                         <texthead justify="left">
                             <l n="bb749.1.ms.11" justify="left" indent="25">(<physnumber>23</physnumber>)</l>
                         </texthead>
