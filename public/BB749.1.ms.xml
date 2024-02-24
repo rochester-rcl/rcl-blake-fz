@@ -222,7 +222,7 @@
                             <vspace extent="1"/>
                             <l n="bb749.1.ms.01.04" justify="left">would cost a man his life</l>
                             <l n="bb749.1.ms.01.05" justify="left"><del type="overstrike_pencil">The Beast &#38; the Whore rule without control</del> 
-                                <note>Bentley notes the this sentence is deleted with a pencil mark (*Writings* Volume 2, page 1404)</note>
+                                <note>Bentley notes that this sentence is deleted with a pencil mark (*Writings* Volume 2, page 1404)</note>
                                 <gap reason="cancellation" extent="3" unit="character"/></l>
                             <l n="bb749.1.ms.01.06" justify="left">It is an easy matter for a Bishop to triumph</l>
                             <l n="bb749.1.ms.01.07" justify="left">over
@@ -230,8 +230,8 @@
                                     <orig>Paines</orig>
                                     <reg>Paine's</reg>
                                 </choice>
-                                attack but is is not so easy
-                                <note>Bentley (*Writings* volume 2, page 1404) and Erdman (611) read "it is" for "is is".</note></l>
+                                attack but it is not so easy
+                                <note>Erdman (611) reads "it is" for "is is".</note></l>
                             <l n="bb749.1.ms.01.08" justify="left">for one who loves the Bible</l>
                             <l n="bb749.1.ms.01.09" justify="left">The Perversions of
                                 <choice>
@@ -259,7 +259,7 @@
                             <l n="bb749.1.ms.01.18" justify="left">whole duty of man &#38; the affairs of life &#38;</l>
                             <l n="bb749.1.ms.01.19" justify="left" indent="30"><add place="supralinear">But</add></l>
                             <l n="bb749.1.ms.01.19" justify="left">death trifles sports of time <add place="infralinear">^</add>these considerations
-                                <note>Bentley notes that the words "are the" have been omitted here (*Writings* volume 2, page 1404).</note></l>
+                                <note>Bentley notes that the words "are the" have been omitted (*Writings* volume 2, page 1404).</note></l>
                             <l n="bb749.1.ms.01.20" justify="left">business of Eternity</l>
                             <l n="bb749.1.ms.01.21" justify="left" indent="1">I have been commanded from Hell not to print</l>
                             <l n="bb749.1.ms.01.22" justify="left">this as it is what our Enemies wish</l>
@@ -409,9 +409,7 @@
                             <l n="bb749.1.ms.02.06" justify="left">innocent</l>
                             <l n="bb749.1.ms.02.07" justify="left">Poor</l>
                             <l n="bb749.1.ms.02.08" justify="left">This must</l>
-                            <l n="bb749.1.ms.02.09" justify="left">be a most wicked &#38; blasphemous book
-                            <note>Bentley alerts us that the 'Charlotte-street Chapel' referenced in the original text near this marginalia
-                                "was the chapel of Blake's early patron A.S. Mathew" (*Writings* volume 2, page 1405).</note></l>
+                            <l n="bb749.1.ms.02.09" justify="left">be a most wicked &#38; blasphemous book</l>
                         </lg>
                     </zone>
                     <zone type="marginalia-3" points="5350,40 5365,730 4710,715 4720,480 2780,500 2770,35">
@@ -419,8 +417,6 @@
                             <l n="bb749.1.ms.02.01" justify="left">If this first Letter is written without Railing &#38; Illiberality</l>
                             <l n="bb749.1.ms.02.02" justify="left">I have never read one that is. To me it is all Daggers &#38;</l>
                             <l n="bb749.1.ms.02.03" justify="left">Poison. the sting of the serpent is in every Sentence as well as</l>
-                            <l n="bb749.1.ms.02.04" justify="left"></l>
-                            <l n="bb749.1.ms.02.04" justify="left"></l>
                             <l n="bb749.1.ms.02.04" justify="left">the glittering</l>
                             <l n="bb749.1.ms.02.05" justify="left">Dissimulation</l>
                         </lg>
@@ -429,7 +425,7 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left" indent="5"><hr width="50" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.02.01" justify="left">Achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
-                            <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops LETTER I. If such is the</l>
+                            <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops If such is the</l>
                             <l n="bb749.1.ms.02.03" justify="left">characteristic of a modern polite gentleman we may</l>
                             <l n="bb749.1.ms.02.04" justify="left" indent="5">SIR,<space extent="10" unit="character"/> hope to see Christs discourses<choice><orig>Expung'd</orig><reg>Expunged</reg></choice></l>
                         </lg>
@@ -945,6 +941,7 @@
                             <l n="bb749.1.ms.04.40" justify="left">Was not</l>
                             <l n="bb749.1.ms.04.41" justify="left">Christ</l>
                             <l n="bb749.1.ms.04.42" justify="left">mur<unclear resp="KS">dered</unclear></l>
+                            <note>Bentley reads murdered as "martered" (*Writings* Volume 2, page 1410).</note>
                             <l n="bb749.1.ms.04.43" justify="left">because he</l>
                             <l n="bb749.1.ms.04.44" justify="left">taught that</l>
                             <l n="bb749.1.ms.04.45" justify="left">God loved</l>
@@ -3747,8 +3744,7 @@
                             <l n="bb749.1.ms.20.08" justify="left">belong to</l>
                             <l n="bb749.1.ms.20.09" justify="left">Plato &#38;</l>
                             <l n="bb749.1.ms.20.10" justify="left">Seneca</l>
-                            <l n="bb749.1.ms.20.11" justify="left">&#38; Nero</l> 
-                            <note>According to Bentley, this is a sentiment often conveyed in Blake's work (*Writings* Volume 2, page 1422)</note>
+                            <l n="bb749.1.ms.20.11" justify="left">&#38; Nero</l>
                         </lg> 
                     </zone>
                     <zone type="marginalia-2" points="2960,2396 2967,2983 2497,2976 2494,2389">
