@@ -1159,7 +1159,7 @@
                                 </choice>
                                     of the
                             <note>Bentley reads Sin as "Si" and a comma after the word (*Writings* volume 2, page 1412). Erdman reads a period after "Sin" and reads distruction as "destruction" (615).</note></l>
-                            <l n="bb749.1.ms.05.35" justify="left">Canaanites by Joshua   ( <physnumber>7</physnumber> ) was the Unnatural design of</l>
+                            <l n="bb749.1.ms.05.35" justify="left">Canaanites by Joshua was the Unnatural design of</l>
                             <l n="bb749.1.ms.05.36" justify="left" indent="65">wicked men/To</l>
                             <l n="bb749.1.ms.05.38" justify="left">Extirpate a</l>
                             <l n="bb749.1.ms.05.39" justify="left">nation by means</l>
@@ -1353,8 +1353,7 @@
                                 </choice> with</l>
                             <l n="bb749.1.ms.06.01" justify="left" indent="10"><add type="insertion" place="supralinear">State</add></l>
                             <l n="bb749.1.ms.06.01" justify="left">their own <del type="strikethrough">self</del></l>
-                            <l n="bb749.1.ms.06.01" justify="left"><add type="insertion" place="supralinear">Religion</add>
-                            <note>Bentley and Erdman both read Religion as "State Religion" (*Writings* volume 2, page 1413 and *The Complete Poetry and Prose of William Blake*, page 615)</note></l>
+                            <l n="bb749.1.ms.06.01" justify="left"><add type="insertion" place="supralinear">Religion</add></l>
                             <l n="bb749.1.ms.06.01" justify="left"><del type="strikethrough">will</del> which</l>
                             <l n="bb749.1.ms.06.01" justify="left">they 
                                 <choice>
@@ -1903,7 +1902,7 @@
                                 <choice>
                                     <orig>thro</orig>
                                     <reg>through</reg>
-                                </choice>
+                                </choice> 
                                 <choice>
                                     <orig>experi</orig>
                                     <reg type="split_word">experiment</reg>
