@@ -230,8 +230,7 @@
                                     <orig>Paines</orig>
                                     <reg>Paine's</reg>
                                 </choice>
-                                attack but it is not so easy
-                                <note>Erdman (611) reads "it is" for "is is".</note></l>
+                                attack but it is not so easy</l>
                             <l n="bb749.1.ms.01.08" justify="left">for one who loves the Bible</l>
                             <l n="bb749.1.ms.01.09" justify="left">The Perversions of
                                 <choice>
@@ -267,8 +266,10 @@
                     </zone>
                     <zone type="marginalia-2" points="5044,25 5032,525 2813,550 2813,25">
                         <lg justify="left">
-                            <l n="bb749.1.ms.01.01" justify="left">Paine has not Attacked Christianity</l>
-                            <l n="bb749.1.ms.01.02" justify="left">Watson has Defended Antichrist</l>
+                            <l n="bb749.1.ms.01.01" justify="left">Paine has not Attacked Christianity
+                                <note>Erdman notes a period after "Christianity" (*The Complete Poetry and Prose of William Blake*, page 612)</note></l>
+                            <l n="bb749.1.ms.01.02" justify="left">Watson has Defended Antichrist
+                                <note>Erdman notes a period after "Antichrist"(*The Complete Poetry and Prose of William Blake*, page 612)</note></l>
                         </lg>
                     </zone>
                 </zone>
@@ -425,7 +426,8 @@
                         <lg justify="left">
                             <l n="bb749.1.ms.02" justify="left" indent="5"><hr width="50" align="left" indent="1"/></l>
                             <l n="bb749.1.ms.02.01" justify="left">Achilles' wrath is blunt abuse Thersites' Sly insinuation</l>
-                            <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops If such is the</l>
+                            <l n="bb749.1.ms.02.02" justify="left">Such is the Bishops If such is the
+                                <note>Erdman reads a period after "Bishops" (*The Complete Poetry and Prose of William Blake*, page 612)</note></l>
                             <l n="bb749.1.ms.02.03" justify="left">characteristic of a modern polite gentleman we may</l>
                             <l n="bb749.1.ms.02.04" justify="left" indent="5">SIR,<space extent="10" unit="character"/> hope to see Christs discourses<choice><orig>Expung'd</orig><reg>Expunged</reg></choice></l>
                         </lg>
@@ -435,7 +437,8 @@
                             <l n="bb749.1.ms.02.01" justify="left">I have not the Charity</l>
                             <l n="bb749.1.ms.02.02" justify="left">for the Bishop that</l>
                             <l n="bb749.1.ms.02.03" justify="left">he pretends to have</l>
-                            <l n="bb749.1.ms.02.04" justify="left">for Paine I believe</l>
+                            <l n="bb749.1.ms.02.04" justify="left">for Paine I believe
+                            <note>Erdman reads a period after "Paine" (*The Complete Poetry and Prose of William Blake*, page 612) </note></l>
                             <l n="bb749.1.ms.02.05" justify="left">him to be a State</l>
                             <l n="bb749.1.ms.02.06" justify="left">trickster</l>
                         </lg>
@@ -455,7 +458,8 @@
                     <zone type="marginalia-8" points="5345,2400 5310,2810 4765,2820 4760,2405">
                         <lg justify="left">
                             <l n="bb749.1.ms.02.01" justify="left">Contemptible</l>
-                            <l n="bb749.1.ms.02.02" justify="left">Falsehood &#38;</l>
+                            <l n="bb749.1.ms.02.02" justify="left">Falsehood &#38;
+                                <note>Erdman reads "Falsehood" as "Falshood" (*The Complete Poetry and Prose of William Blake*, page 612)</note></l>
                             <l n="bb749.1.ms.02.03" justify="left">Detraction</l>
                         </lg>
                     </zone>
@@ -1197,7 +1201,8 @@
                             <l n="bb749.1.ms.05.66" justify="left">in the time of</l>
                             <l n="bb749.1.ms.05.67" justify="left" indent="70">Homer Socrates</l>
                             <l n="bb749.1.ms.05.68" justify="left" indent="10">Phidias, Glycon. Aristotle &#38;<hi rend="superscript">c</hi> 
-                                let all their works witness</l>
+                                let all their works witness
+                                <note>Erdman reads the mark after "Phidias" as a period. (*The Complete Poetry and Prose of William Blake*, page 615)</note></l>
                             <l n="bb749.1.ms.05.69" justify="left">ine <del type="overstrike">the Deists</del>
                                 says that Christianity put a stop to improvement
                                 <note> Erdman (615) and Bentley assume "ine" belongs to the word "Paine," obscured by the fold (*Writings* volume 2, page 1412).</note></l>
@@ -1349,7 +1354,7 @@
                             <l n="bb749.1.ms.06.01" justify="left" indent="10"><add type="insertion" place="supralinear">State</add></l>
                             <l n="bb749.1.ms.06.01" justify="left">their own <del type="strikethrough">self</del></l>
                             <l n="bb749.1.ms.06.01" justify="left"><add type="insertion" place="supralinear">Religion</add>
-                            <note>Bentley reads Religion as "State Religion" (*Writings* volume 2, page 1413)</note></l>
+                            <note>Bentley and Erdman both read Religion as "State Religion" (*Writings* volume 2, page 1413 and *The Complete Poetry and Prose of William Blake*, page 615)</note></l>
                             <l n="bb749.1.ms.06.01" justify="left"><del type="strikethrough">will</del> which</l>
                             <l n="bb749.1.ms.06.01" justify="left">they 
                                 <choice>
@@ -1450,7 +1455,7 @@
                             <l n="bb749.1.ms.06.01" justify="left">of Adam &#38;</l>
                             <l n="bb749.1.ms.06.01" justify="left">that it was not</l>
                             <l n="bb749.1.ms.06.01" justify="left">restored till <del type="strikethrough">we</del>
-                            <note>Bentley reads "we" as "we in" with both words deleted (*Writings* volume 2, page 1414).</note></l>
+                            <note>Bentley and Erdman both read "we" as "we in" with both words deleted (*Writings* volume 2, page 1414 and *The Complete Poetry and Prose of William Blake*, page 615).</note></l>
                             <l n="bb749.1.ms.06.01" justify="left"><gap reason="cancellation" extent="2" unit="character"/> Christ <gap reason="cancellation" extent="3" unit="character"/></l>
                             <l n="bb749.1.ms.06.01" justify="left"><gap reason="cancellation" extent="10" unit="character"/></l>
                         </lg>
@@ -1599,7 +1604,7 @@
                             <l n="bb749.1.ms.07" justify="left" indent="35">(<physnumber>10</physnumber>)</l>
                             <l n="bb749.1.ms.07.03">none of which the Bishop has dared to Consider One
                                 <note>Erdman reads a period after "Consider" (616).</note></l>
-                            <l n="bb749.1.ms.07.04">for instance which is That LETTER II. the books of the
+                            <l n="bb749.1.ms.07.04">for instance which is That the books of the
                                 <note>Erdman reads a comma after "instance" (616).</note></l>
                             <l n="bb749.1.ms.07.05">Bible were never 
                                 <choice>
@@ -1672,7 +1677,7 @@
                             <note>Bentley reads the period after "actor" as an m-dash (*Writings* volume 2, page 1415).</note></l>
                             <l n="bb749.1.ms.07.06">most of the acts of</l>
                             <l n="bb749.1.ms.07.07">Moses. must either
-                            <note>Bentley reads the period after "Moses" as an m-dash (*Writings* volume 2, page 1415).</note></l>
+                            <note>Bentley reads the mark after "Moses" as an m-dash (*Writings* volume 2, page 1415).</note></l>
                             <l n="bb749.1.ms.07.08">be the actor or</l>
                             <l n="bb749.1.ms.07.09">a fable writer</l>
                             <l n="bb749.1.ms.07.10">or a liar. If</l>
@@ -1680,7 +1685,7 @@
                             <l n="bb749.1.ms.07.12">write the</l>
                             <l n="bb749.1.ms.07.13">history of his</l>
                             <l n="bb749.1.ms.07.14">acts. it takes
-                            <note>Bentley reads the period after "acts" as a comma (*Writings* volume 2, page 1415)</note></l>
+                            <note>Bentley reads the mark after "acts" as a comma (*Writings* volume 2, page 1415)</note></l>
                             <l n="bb749.1.ms.07.15">away the authority altogether it ceases to be history &#38; becomes</l>
                             <l n="bb749.1.ms.07.16">a Poem of probable impossibilities fabricated for pleasure</l>
                             <l n="bb749.1.ms.07.17">as moderns say but I say by Inspiration</l>
@@ -1817,7 +1822,7 @@
                                 true in itself is False When it
                                 <note>Erdman (616) and Bentley (*Writings* volume 2, page 1416) read False as "false".</note></l>
                             <l n="bb749.1.ms.08.02" justify="left">is attributed to a wrong author, he's a fool. But he says that Moses
-                                <note>Erdman reads the punctuation after "author" as a period (616).</note></l>
+                                <note>Erdman reads the mark after "author" as a period (616).</note></l>
                             <l n="bb749.1.ms.08.03" justify="left">being proved not the author of that history which is written in</l>
                             <l n="bb749.1.ms.08.04" justify="left">his name &#38;</l>
                             <l n="bb749.1.ms.08.05" justify="left">in which he says</l>
@@ -2099,7 +2104,8 @@
                             <l n="bb749.1.ms.09.19" justify="left">go on So /</l>
                             <l n="bb749.1.ms.09.20" justify="left">the result is</l>
                             <l n="bb749.1.ms.09.21" justify="left">So / He never</l>
-                            <l n="bb749.1.ms.09.22" justify="left">says Such</l>
+                            <l n="bb749.1.ms.09.22" justify="left">says Such
+                            <note>Erdman reads "Such" as "such" (*The Complete Poetry and Prose of William Blake*, page 617)</note></l>
                             <l n="bb749.1.ms.09.23" justify="left">a thing shall</l>
                             <l n="bb749.1.ms.09.24" justify="left">happen let</l>
                             <l n="bb749.1.ms.09.25" justify="left">you do what</l>
@@ -2296,8 +2302,8 @@
                     <zone type="marginalia-1" points="2615,10 2610,420 525,460 535,1390 110,1380 90,45">
                         <lg justify="left">
                             <l n="bb749.1.ms.10.01" justify="left">If historical facts can be written by inspiration Miltons Paradise</l>
-                            <l n="bb749.1.ms.10.02" justify="left">Lost is as true as Genesis or Exodus. but the Evidence is</l>
-                                <note>Bentley reads the period as a semi-colon (*Writings* volume 2, page 1418).</note>
+                            <l n="bb749.1.ms.10.02" justify="left">Lost is as true as Genesis or Exodus. but the Evidence is
+                                <note>Bentley reads the mark after "Exodus" as a semi-colon (*Writings* volume 2, page 1418).</note><note>Erdman reads a period after Genesis (*The Complete Poetry and Prose of William Blake*, page 617).</note>,</l>
                             <l n="bb749.1.ms.10.03" justify="left">nothing for how can he who <space extent="6" unit="character"/><gap type="cancellation" extent="2" unit="character"/>writes what he has</l>
                             <l n="bb749.1.ms.10.04" justify="left">neither seen</l>
                             <l n="bb749.1.ms.10.05" justify="left">nor heard</l>
