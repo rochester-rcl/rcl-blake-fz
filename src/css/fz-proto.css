@@ -197,6 +197,7 @@ sub {
 }
 
 .sideways-right {
+  right: -20vw;
   transform: rotate(90deg);
 }
 

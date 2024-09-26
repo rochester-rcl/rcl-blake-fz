@@ -18,7 +18,6 @@ export function goToPageAction(pageIndex: Number): Object {
 }
 
 export function toggleZoneROIAction(status: boolean): Object {
-  console.log(status);
   return {
     type: ActionConstants.TOGGLE_ZONE_ROI,
     status: status,
@@ -39,9 +38,30 @@ export function setZonesAction(zoneIds: Array<string>): Object {
   }
 }
 
+export function toggleLockRotationAction(status: bool): Object {
+  return {
+    type: ActionConstants.TOGGLE_LOCK_ROTATION,
+    status: status,
+  }
+}
+
 export function toggleTranscriptionModeAction(status: boolean): Object {
   return {
     type: ActionConstants.TOGGLE_TRANSCRIPTION_MODE,
     status: status,
+  }
+}
+
+export function setXmlUrl(xmlUrl) {
+  return {
+    type: ActionConstants.SET_CURRENT_PAGE,
+    xmlUrl
+  }
+}
+
+export function setImageData(imageData) {
+  return {
+    type: ActionConstants.SET_IMAGE_DATA,
+    imageData
   }
 }

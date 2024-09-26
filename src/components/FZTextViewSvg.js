@@ -154,12 +154,67 @@ const FZStage = (props: Object) => {
 };
 
 export class FZZoneView extends Component {
+  state = { fontSize: null };
   constructor(props: Object) {
     super(props);
     this.renderVSpace = this.renderVSpace.bind(this);
     this.FZLineGroupView = this.FZLineGroupView.bind(this);
     this.FZDiplomaticView = this.FZDiplomaticView.bind(this);
     this.renderLine = this.renderLine.bind(this);
+    this.fontSize = 10;
+  }
+
+  componentDidMount() {
+    if (this.rectRef) {
+      // this.calculateFontSize(this.rectRef.getBoundingClientRect());
+    }
+  }
+
+  calculateFontSize(rect) {
+    const { zone } = this.props;
+    let defaultFontSize = parseInt(
+      window
+        .getComputedStyle(this.rectRef)
+        .getPropertyValue("font-size")
+        .split("px")[0],
+      10
+    );
+    let longestLine = 0;
+    let lineId = null;
+    zone.lg.forEach(lg => {
+      let lineInfo = this.calculateLongestLine(lg);
+      if (lineInfo.count > longestLine) {
+        longestLine = lineInfo.count;
+        lineId = lineInfo.id;
+      }
+    });
+    const clientLineWidth = document
+      .getElementById(lineId)
+      .getBoundingClientRect().width;
+    const clientLineFontSize = clientLineWidth / longestLine;
+    const targetFontSize = rect.width / longestLine;
+    const sf = defaultFontSize / clientLineFontSize;
+    this.setState({
+      fontSize: (targetFontSize / defaultFontSize) * sf
+    });
+  }
+
+  calculateLongestLine(lg) {
+    let longestLine = 0;
+    let lineId = null;
+    lg.l.forEach(line => {
+      const l = line.diplomatic ? line.diplomatic : line;
+      let lineCount = l.reduce((a, b) => {
+        if (typeof b === "string") {
+          return a + b.length;
+        }
+      }, 0);
+      if (lineCount > longestLine) {
+        longestLine = lineCount;
+        lineId = line.id;
+      }
+    });
+    return { id: lineId, count: longestLine };
   }
 
   renderVSpace(vSpaceExtent: number) {
@@ -169,7 +224,7 @@ export class FZZoneView extends Component {
   }
 
   FZLineGroupView(props: Object) {
-    const { diplomaticMode } = this.props;
+    const { diplomaticMode, style } = this.props;
     const { lineGroup } = props;
     const getRotation = attributes => {
       let lineGroupClass = "fz-text-display-line-group";
@@ -190,23 +245,20 @@ export class FZZoneView extends Component {
       }
     };
     return (
-      <div key={lineGroup.id} className={getRotation(lineGroup.attributes)}>
-        {/*this.renderVSpace(lineGroup.vspaceExtent).map((space, index) =>
-          <div className="vspace-line" key={index} />
-        )*/}
-        {lineGroup.lines.map(line => this.renderLine(diplomaticMode, line))}
-      </div>
+      // TODO deal with rotation here
+      lineGroup.l.map(line => this.renderLine(diplomaticMode, line))
     );
   }
 
   renderLine(mode: boolean, line: Object) {
+    const { style } = this.props;
     let indent = line => {
       if (line.attributes) {
         if (line.attributes.indent) {
           return GAP_SIZE.repeat(Number(line.attributes.indent));
         }
 
-        if (line.diplomatic.attributes) {
+        if (line.diplomatic && line.diplomatic.attributes) {
           return GAP_SIZE.repeat(Number(line.diplomatic.attributes.indent));
         }
 
@@ -214,46 +266,80 @@ export class FZZoneView extends Component {
       }
     };
     let _indent;
-    let diplomaticIndent = line.diplomatic.find(element => {
-      return element.hasOwnProperty("indent") === true;
-    });
-    let stageIndent = line.stage.indent !== undefined;
-    if (diplomaticIndent) {
-      _indent = GAP_SIZE.repeat(Number(diplomaticIndent.indent));
+    let rawIndent;
+    if (line.diplomatic) {
+      const i = line.diplomatic.find(element => {
+        return element.hasOwnProperty("indent") === true;
+      });
+      if (i) {
+        rawIndent = i.indent;
+      }
+    } else {
+      rawIndent = line.attributes.indent;
+    }
+
+    let stageIndent =
+      line.stage !== undefined && line.stage.indent !== undefined;
+    if (rawIndent) {
+      _indent = GAP_SIZE.repeat(Number(rawIndent));
     } else if (stageIndent) {
       _indent = GAP_SIZE.repeat(Number(line.stage.indent));
     } else {
       _indent = indent(line);
     }
+    const lineProps = {
+      key: line.id,
+      keyVal: line.id,
+      indent: indent,
+      style: style
+    };
     const diplomaticProps = {
       key: line.id,
       keyVal: line.id,
       diplomatic: line.diplomatic,
-      indent: indent
+      indent: indent,
+      style: style
     };
+    if (line.diplomatic) {
+      lineProps.diplomatic = line.diplomatic;
+      return mode ? (
+        this.FZDiplomaticView(lineProps)
+      ) : (
+        <FZStageView
+          key={line.id}
+          stages={line.stage.content}
+          indent={_indent}
+        />
+      );
+    } else {
+      lineProps.content = line.content;
+      return this.FZLineView(lineProps);
+    }
+  }
+
+  FZLineView(props) {
+    const { key, style, indent, content } = props;
     return (
-      <span key={line.id} className="fz-text-line-container">
-        {mode ? (
-          this.FZDiplomaticView(diplomaticProps)
-        ) : (
-          <FZStageView
-            key={line.id}
-            stages={line.stage.content}
-            indent={_indent}
-          />
-        )}
-      </span>
+      <tspan id={key} x={style.left} key={key} dy="1em" className="svg-text">
+        {typeof content === "string" ? content : null}
+      </tspan>
     );
   }
 
   FZDiplomaticView(props: Object) {
-    const { diplomatic, indent } = props;
-    return (
-      <div key={shortid.generate()} className="fz-text-display-line diplomatic">
-        {indent}
-        {formatDiplomaticText(diplomatic)}
-      </div>
-    );
+    const { diplomatic, indent, style, key } = props;
+    return diplomatic.map((val, index) => (
+      <tspan
+        id={key}
+        x={style.left}
+        key={key + index}
+        dy="1em"
+        className="svg-text"
+      >
+        {typeof val === "string" ? val : null}
+      </tspan>
+    ));
+    /*formatDiplomaticText(diplomatic)*/
   }
 
   render() {
@@ -265,24 +351,42 @@ export class FZZoneView extends Component {
       lockRotation,
       style
     } = this.props;
-
-    if (zone.lineGroups.length > 0) {
+    const { fontSize } = this.state;
+    if (zone.lg.length > 0) {
       return (
-        <div
-          style={style}
-          ref={ref => (this.zoneRef = ref)}
-          key={zone.id}
-          className={"fz-text-display-zone " + zone.type}
+        <g
+          x={style.left}
+          y={style.top}
+          width={style.width}
+          height={style.height}
         >
-          {zone.lineGroups.map(lineGroup =>
-            this.FZLineGroupView({
-              key: lineGroup.id,
-              lineGroup: lineGroup
-            })
-          )}
-        </div>
+          <rect
+            ref={ref => (this.rectRef = ref)}
+            className="zone-rect"
+            x={style.left}
+            y={style.top}
+            width={style.width}
+            height={style.height}
+          />
+          <text
+            x={style.left}
+            y={style.top}
+            width={style.width}
+            height={style.height}
+            fontSize={fontSize ? `${fontSize}em` : "inherit"}
+          >
+            {zone.lg.map(lineGroup =>
+              this.FZLineGroupView({
+                key: lineGroup.id,
+                style: style,
+                startPos: style.left,
+                lineGroup: lineGroup
+              })
+            )}
+          </text>
+        </g>
       );
-    } else if (zone.columns) {
+    } else if (zone.columns && zone.columns.cols) {
       let colClass = "fz-text-display-zone-columns ";
       if (zone.columns.orient !== undefined) colClass += zone.columns.orient;
       return (
@@ -290,7 +394,7 @@ export class FZZoneView extends Component {
           <div className={colClass}>
             {zone.columns.cols.map(column => (
               <div className="fz-text-display-zone-column">
-                {column.column.lineGroups.map(lg =>
+                {column.column.lg.map(lg =>
                   this.FZLineGroupView({
                     key: lg.id,
                     lineGroup: lg

@@ -1,6 +1,7 @@
 @import url('fz-viewer.css');
 @import url('osdviewer.css');
 @import url('fz-proto.css');
+@import url('svg.css');
 body {
   position: absolute;
   width: 100%;
@@ -8,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #1d1d1d !important;
+  background: #1e1e1e !important;
   white-space: nowrap;
 }
 

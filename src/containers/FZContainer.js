@@ -1,35 +1,103 @@
 /* @flow */
 
 // React
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Redux
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 // Actions
-import * as AppActionCreators from '../actions/actions';
-
-// XML
-import xml from '../../public/BB209.1.xml';
+import * as AppActionCreators from "../actions/actions";
 
 // Components
-import LoaderModal from '../components/LoaderModal';
-import FZNavigation from '../components/FZNavigation';
-import OpenSeadragonViewer from '../components/OpenSeadragonViewer';
-import FZTextView from '../components/FZTextView';
+import LoaderModal from "../components/LoaderModal";
+import FZNavigation from "../components/FZNavigation";
+import OpenSeadragonViewer from "../components/OpenSeadragonViewer";
+import OpenSeadragonViewerOverlay from "../components/OpenSeadragonViewerOverlay";
+import FZTextView from "../components/FZTextView";
 
 // Semantic UI
-import { Divider } from 'semantic-ui-react';
+import { Divider } from "semantic-ui-react";
 
 // utils
-import { pointsToNumbers } from '../utils/data-utils';
+import { pointsToNumbers, pointsToViewportPercent } from "../utils/data-utils";
+import createBackground from "../utils/image";
+
+
+const getImageDimensions = url => {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.src = url;
+    image.addEventListener("load", () => {
+      resolve([image.width, image.height]);
+    });
+  });
+};
+
+const background = {
+  type: "image",
+  url: createBackground("#1e1e1e" /*'#ccc'*/, [100, 100]),
+  crossOriginPolicy: "Anonymous",
+  ajaxWithCredentials: false
+};
 
 class FZContainer extends Component {
+  state = {
+    textDisplayAngle: 0,
+    background: background
+  };
+
+  constructor(props: Object) {
+    super(props);
+    this.updateTextDisplayAngle = this.updateTextDisplayAngle.bind(this);
+    this.openseadragonViewerRef = null;
+  }
+
   componentDidMount() {
     // Call this here to load initial data
-    this.props.loadXMLAction(xml);
+    let { xmlUrl } = this.props;
+    this.props.loadXMLAction(xmlUrl);
   }
+
+  updateTextDisplayAngle(angle: number): void {
+    this.setState({
+      textDisplayAngle: angle
+    });
+  }
+
+  componentDidUpdate(prevProps) {
+    const { currentPage } = this.props;
+    if (currentPage && prevProps.currentPage) {
+      if (currentPage.id !== prevProps.currentPage.id) {
+        if (currentPage.imageURL) {
+          getImageDimensions(
+            window.location.href + "/" + currentPage.imageURL
+          ).then(dim => {
+            this.setState({
+              background: {
+                ...this.state.background,
+                url: createBackground("#1e1e1e", dim)
+              }
+            });
+          });
+        }
+      }
+    }
+  }
+
+  getTileSources(currentPage, imageData) {
+    let { imageURL } = currentPage;
+    // check local image data first
+    let url = imageData[imageURL] || window.location.href + "/" + imageURL;
+    return {
+      type: "image",
+      url,
+      crossOriginPolicy: "Anonymous",
+      ajaxWithCredentials: false
+    }
+  }
+
   render() {
     const {
       pageObjects,
@@ -39,6 +107,7 @@ class FZContainer extends Component {
       toggleZoneROIAction,
       toggleZoomToZoneAction,
       toggleTranscriptionModeAction,
+      toggleLockRotationAction,
       zones,
       lineGroups,
       lines,
@@ -48,17 +117,16 @@ class FZContainer extends Component {
       setZonesAction,
       showZoneROI,
       zoomToZones,
+      lockRotation,
       diplomaticMode,
-      } = this.props;
-    
+      setXmlUrl,
+      setImageData,
+      imageData
+    } = this.props;
+    const { textDisplayAngle } = this.state;
+    // TODO - add function to load tile sources from local uploads
     if (pageObjects) {
-      let tileSources = {
-        type: 'image',
-        url: window.location.href + '/' + currentPage.imageURL,
-        crossOriginPolicy: 'Anonymous',
-        ajaxWithCredentials: false
-      }
-
+      let tileSources = this.getTileSources(currentPage, imageData);
       return (
         <div className="fz-app-container">
           <FZNavigation
@@ -69,24 +137,44 @@ class FZContainer extends Component {
             toggleZoneROIAction={toggleZoneROIAction}
             toggleZoomToZoneAction={toggleZoomToZoneAction}
             toggleTranscriptionModeAction={toggleTranscriptionModeAction}
+            toggleLockRotationAction={toggleLockRotationAction}
             zoneOptions={zoneOptions}
             setZonesAction={setZonesAction}
             zoomToZones={zoomToZones}
+            lockRotation={lockRotation}
             showZoneROI={showZoneROI}
             diplomaticMode={diplomaticMode}
+            setXmlUrl={setXmlUrl}
+            setImageData={setImageData}
+            showDiplomaticToggle={false}
           />
           <div className="fz-display-container">
             <OpenSeadragonViewer
+              key="osd-viewer"
+              ref={ref => (this.openseadragonViewerRef = ref)}
               tileSources={tileSources}
               options={{}}
-              viewerId='fz-osd-image-viewer'
-              overlays={currentZones.map((zone) => pointsToNumbers(zone.points))}
+              viewerId="fz-osd-image-viewer"
+              overlays={currentZones.map(zone => zone.points)}
+              zones={currentZones}
               zoomToZones={zoomToZones}
               showZoneROI={showZoneROI}
+              rotateCallback={this.updateTextDisplayAngle}
             />
-            <FZTextView
+            <OpenSeadragonViewerOverlay
+              key="osd-viewer-overlay"
+              tileSources={this.state.background}
+              options={{}}
+              viewerId="fz-osd-image-overlay-viewer"
+              overlays={currentZones.map(zone => zone.points)}
+              zoomToZones={zoomToZones}
+              showZoneROI={showZoneROI}
+              parentRef={this.openseadragonViewerRef}
+              rotateCallback={this.updateTextDisplayAngle}
               zones={currentZones}
               diplomaticMode={diplomaticMode}
+              displayAngle={textDisplayAngle}
+              lockRotation={lockRotation}
             />
           </div>
         </div>
@@ -95,10 +183,10 @@ class FZContainer extends Component {
       return (
         <LoaderModal
           active={true}
-          text='Loading XML'
-          className='fz-loading-screen'
+          text="Loading XML"
+          className="fz-loading-screen"
         />
-      )
+      );
     }
   }
 }
@@ -114,7 +202,10 @@ function mapStateToProps(state) {
     showZoneROI: state.showZoneROI,
     zoomToZones: state.zoomToZones,
     diplomaticMode: state.diplomaticMode,
-  }
+    lockRotation: state.lockRotation,
+    xmlUrl: state.xmlUrl,
+    imageData: state.imageData
+  };
 }
 
 function mapActionCreatorsToProps(dispatch: Object) {
